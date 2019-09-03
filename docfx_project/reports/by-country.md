@@ -1,3 +1,5 @@
 # Shipped Consignments by Destination Country
 
-![Shipped Consignments by Destination Country](../images/reports/by-country.png)
+<a href="../images/reports/by-country.png" target="_blank">
+    <img src="../images/reports/by-country.png"/>
+</a>

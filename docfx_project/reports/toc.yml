@@ -5,26 +5,26 @@
 - name: Using Reports
   href: reports.md
   items:
+    - name: Traffic Profile
+      href: ../reports/traffic-profile.md
     - name: Carrier
-      href: intro.md
-    - name: Carrier Service
-      href: intro.md
-    - name: Country
-      href: intro.md
-    - name: Performance
-      href: intro.md
+      href: ../reports/by-carrier.md
+    - name: Destination Country
+      href: ../reports/by-country.md
+    - name: Carrier Performance
+      href: ../reports/performance.md
     - name: Delivery Experience
-      href: intro.md
+      href: ../reports/experience.md                 
+    - name: Carrier Service
+      href: ../reports/by-carrier-service.md
     - name: Locations
-      href: intro.md
-    - name: Traffic Profiles
-      href: intro.md
+      href: ../reports/location-performance.md
     - name: Shipping Costs
-      href: intro.md
+      href: ../reports/costs.md
     - name: API Usage
-      href: intro.md
-    - name: Service
-      href: intro.md
+      href: ../reports/api.md
+    - name: Support
+      href: ../reports/support.md
 
 
   

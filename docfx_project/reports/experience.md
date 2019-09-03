@@ -1,3 +1,5 @@
 # Delivery Experience
 
-![Delivery Experience](../images/reports/experience.png)
+<a href="../images/reports/experience.png" target="_blank">
+    <img src="../images/reports/experience.png"/>
+</a>

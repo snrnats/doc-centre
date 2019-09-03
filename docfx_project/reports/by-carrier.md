@@ -1,3 +1,5 @@
 # Volume by Carrier
 
-![Volume by Carrier](../images/reports/by-carrier.png)
+<a href="../images/reports/by-carrier.png" target="_blank">
+    <img src="../images/reports/by-carrier.png"/>
+</a>

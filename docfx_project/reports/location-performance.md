@@ -1,3 +1,5 @@
 # Shipping Location Performance
 
-![Location Performance](../images/reports/location-performance.png)
+<a href="../images/reports/location-performance.png" target="_blank">
+    <img src="../images/reports/location-performance.png"/>
+</a>
