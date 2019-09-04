@@ -57,7 +57,7 @@ To reset a report's filters back to default, click the **Reset to Default** butt
 
 ## Visualisation Options
 
-Each visualisation has a **More Options** drop-down menu, enabling you to perform additional actions relating to its data. 
+Each visualisation has a **More Options** drop-down menu, enabling you to perform additional actions relating to its data. To access the **More Options** menu, select a visualisation and click the **More Options** button in the top-right of the panel.
 
 <a href="../images/reports/more-options.png" target="_blank">
     <img src="../images/reports/more-options.png"/>
