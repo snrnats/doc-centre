@@ -1,6 +1,6 @@
 # Volume by Carrier
 
-The **Volume by Carrier** report enables you to see a breakdown of how many consignments and packages you have shipped with each of your carriers, what percentage of your total consignments each carrier represents, and how the volume of consignments shipped with each carrier has changed over time. It comprises a table listing consignment and packages data, a pie chart showing each carrier's share of your consignments, and a chart showing shipments over time.
+The **Volume by Carrier** report enables you to see a breakdown of how many consignments and packages you have shipped with each of your carriers, what percentage of your total consignments each carrier represents, and how the volume of consignments shipped with each carrier has changed over time. It comprises a table listing consignment and packages data, a **Consignments by Carrier** pie chart showing each carrier's share of your consignments, and **Consignments Shipped by Carrier Over Time** line graph.
 
 <a href="../images/reports/by-carrier.png" target="_blank">
     <img src="../images/reports/by-carrier.png"/>
@@ -50,6 +50,16 @@ The data table has the following options available from its **More Options** men
 
 ### More Options
 
+The **Consignments by Carrier** chart has the following options available from its **More Options** menu:
+
+* [Open Comments](/reports/reports.html#open-comments)
+* [Export Data](/reports/reports.html#export-data)
+* [Show Data](/reports/reports.html#show-data)
+* [Spotlight](/reports/reports.html#spotlight)
+* [Sort Descending](/reports/reports.html#sort-descending--ascending--sort-by)
+* [Sort Ascending](/reports/reports.html#sort-descending--ascending--sort-by)
+* [Sort by](/reports/reports.html#sort-descending--ascending--sort-by) Carrier / Consignments
+
 ## Consignments Shipped by Carrier Over Time Chart
 
 <a href="../images/reports/by-carrier-over-time.png" target="_blank">
@@ -59,3 +69,10 @@ The data table has the following options available from its **More Options** men
 ### Visualisation Filters
 
 ### More Options
+
+The **Consignments Shipped by Carrier Over Time** chart has the following options available from its **More Options** menu:
+
+* [Open Comments](/reports/reports.html#open-comments)
+* [Export Data](/reports/reports.html#export-data)
+* [Show Data](/reports/reports.html#show-data)
+* [Spotlight](/reports/reports.html#spotlight)
