@@ -1,6 +1,6 @@
 # Traffic Profile
 
-The **Traffic Profile** report gives a summary of the total number of consignments that your organisation has manifested in a given timeframe. It comprises a table listing consignment and packages data, and two bar charts: **Consignment Volume Distribution by Absolute Weight** and **Consignment Volume Distribution by Volumetric Weight**.
+The **Traffic Profile** report gives a summary of the number of consignments that your organisation has manifested in a given timeframe, and the weights of the consignments manifested. It comprises a table listing consignment and packages data, and two bar charts: **Consignment Volume Distribution by Absolute Weight** and **Consignment Volume Distribution by Volumetric Weight**.
 
 <a href="../images/reports/traffic-profile.png" target="_blank">
     <img src="../images/reports/traffic-profile.png"/>
@@ -47,7 +47,7 @@ The data table has the following options available from its **More Options** men
 
 ## Consignment Volume Distribution by Absolute Weight Chart
 
-The **Consignment Volume Distribution by Absolute Weight** chart displays the weight distribution of your manifested consignments, with weight in kg on its x-axis and frequency on its y-axis. This information could be useful if you are looking for trends in the weight of the consignments you ship.
+The **Consignment Volume Distribution by Absolute Weight** chart displays the weight distribution of your manifested consignments, with weight in kg on its x-axis and frequency on its y-axis. It is intended to help you identify trends in the weights of the consignments you manifest.
 
 <a href="../images/reports/traffic-profile-weight.png" target="_blank">
     <img src="../images/reports/traffic-profile-weight.png"/>
@@ -66,7 +66,7 @@ The **Consignment Volume Distribution by Absolute Weight** chart has the followi
 
 ## Consignment Volume Distribution by Volumetric Weight Chart
 
-The **Consignment Volume Distribution by Volumetric Weight** chart displays the volumetric weight distribution of your manifested consignments, with weight in kg on its x-axis and frequency on its y-axis. This information could be useful if you are looking for trends in the weight of the consignments you ship.
+The **Consignment Volume Distribution by Volumetric Weight** chart displays the volumetric weight distribution of your manifested consignments, with weight in kg on its x-axis and frequency on its y-axis. It is intended to help you identify trends in the weights of the consignments you manifest.
 
 <a href="../images/reports/traffic-profile-vol-weight.png" target="_blank">
     <img src="../images/reports/traffic-profile-vol-weight.png"/>

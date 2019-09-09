@@ -1,6 +1,6 @@
 # Volume by Carrier
 
-The **Volume by Carrier** report enables you to see a breakdown of how many consignments and packages you have shipped with each of your carriers, what percentage of your total consignments each carrier represents, and how the volume of consignments shipped with each carrier has changed over time. It comprises a table listing consignment and packages data, a **Consignments by Carrier** pie chart showing each carrier's share of your consignments, and **Consignments Shipped by Carrier Over Time** line graph.
+The **Volume by Carrier** report enables you to see a breakdown of how many consignments and packages you have shipped with each of your carriers and how the volume of consignments shipped with each carrier has changed over time. It comprises a table listing consignment and packages data, a **Consignments by Carrier** pie chart showing each carrier's share of your consignments, and **Consignments Shipped by Carrier Over Time** line graph.
 
 <a href="../images/reports/by-carrier.png" target="_blank">
     <img src="../images/reports/by-carrier.png"/>
@@ -42,6 +42,8 @@ The data table has the following options available from its **More Options** men
 
 ## Consignments by Carrier
 
+The **Consignments by Carrier** pie chart displays each carrier's share of your total shipments.
+
 <a href="../images/reports/by-carrier-pie.png" target="_blank">
     <img src="../images/reports/by-carrier-pie.png"/>
 </a>
@@ -62,8 +64,16 @@ The **Consignments by Carrier** chart has the following options available from i
 
 ## Consignments Shipped by Carrier Over Time Chart
 
+The **Consignments Shipped by Carrier Over Time** chart shows how many shipments each of your carriers made on each day of the selected time period. You can control the time period displayed using the **Date Shipped** report filter.
+
 <a href="../images/reports/by-carrier-over-time.png" target="_blank">
     <img src="../images/reports/by-carrier-over-time.png"/>
+</a>
+
+Hover your mouse pointer over a particular day to view exact per-carrier shipment numbers for that day. 
+
+<a href="../images/reports/by-carrier-over-time-highlight.png" target="_blank">
+    <img src="../images/reports/by-carrier-over-time-highlight.png"/>
 </a>
 
 ### Visualisation Filters

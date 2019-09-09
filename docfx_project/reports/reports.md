@@ -35,7 +35,7 @@ You can combine filters in any way you choose. For example, say you want to see 
     <img src="../images/reports/by-carrier-date-filter.png"/>
     </a>
 
-3. Select the **Consignments Shipped by Carrier Over Time** chart and click the **Carrier** drop-down on the right-hand ***Filters** panel. A list of available carriers is displayed. 
+3. Select the **Consignments Shipped by Carrier Over Time** chart and click the **Carrier** drop-down on the right-hand **Filters** panel. A list of available carriers is displayed. 
 
     <a href="../images/reports/carrier-filters-panel.png" target="_blank">
     <img src="../images/reports/carrier-filters-panel.png"/>
