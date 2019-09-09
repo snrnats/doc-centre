@@ -1,6 +1,6 @@
 # API Overview
 
-The **API Overview** enables you to get an overview of your organisation's API calls, including call volume and common response codes. It comprises a data table, a **Back End Response Code** pie chart, and **API Request by Company** bar chart, and an **APi Request Over Time** line graph.
+The **API Overview** enables you to get an overview of your organisation's API calls, including call volumes and ATUs used. It comprises a data table, an **API Requests by Customer Name** bar chart, an **ATU Total Company** pie chart, and an **API Requests by IntervalDate and CustomerName** line graph. 
 
 <a href="../images/reports/api.png" target="_blank">
     <img src="../images/reports/api.png"/>
@@ -14,6 +14,8 @@ The **API Overview** report offers the following report-wide filters:
 * **Company Name** - where applicable, enables you to select only those calls that were made by a particular company within your group. You can select multiple companies if required.
 
 ## Data Table
+
+The data table displays the following information
 
 <a href="../images/reports/api-table.png" target="_blank">
     <img src="../images/reports/api-table.png"/>
@@ -29,37 +31,19 @@ The data table has the following options available from its **More Options** men
 * [Export Data](/reports/reports.html#export-data)
 * [Spotlight](/reports/reports.html#spotlight)
 
-## Back End Response Code
+## API Requests by Customer Name
 
-<a href="../images/reports/api-response-code.png" target="_blank">
-    <img src="../images/reports/api-response-code.png"/>
+The **API Requests by Customer Name** chart shows how many requests each of your companies has made, in line with any report filters you may have selected.
+
+<a href="../images/reports/api-custname.png" target="_blank">
+    <img src="../images/reports/api-custname.png"/>
 </a>
 
 ### Visualisation Filters
 
 ### More Options
 
-The **Back End Response Code** chart has the following options available from its **More Options** menu:
-
-* [Open Comments](/reports/reports.html#open-comments)
-* [Export Data](/reports/reports.html#export-data)
-* [Show Data](/reports/reports.html#show-data)
-* [Spotlight](/reports/reports.html#spotlight)
-* [Sort Descending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort Ascending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort by](/reports/reports.html#sort-descending--ascending--sort-by) BackendResponseCode / API Requests
-
-## API Request by Company
-
-<a href="../images/reports/api-by-company.png" target="_blank">
-    <img src="../images/reports/api-by-company.png"/>
-</a>
-
-### Visualisation Filters
-
-### More Options
-
-The **API Request by Company** chart has the following options available from its **More Options** menu:
+The **API Requests by Customer Name** chart has the following options available from its **More Options** menu:
 
 * [Open Comments](/reports/reports.html#open-comments)
 * [Export Data](/reports/reports.html#export-data)
@@ -69,17 +53,53 @@ The **API Request by Company** chart has the following options available from it
 * [Sort Ascending](/reports/reports.html#sort-descending--ascending--sort-by)
 * [Sort by](/reports/reports.html#sort-descending--ascending--sort-by) CustomerName / API Requests
 
-## API Request Over Time
+## ATU Total Company
 
-<a href="../images/reports/api-over-time.png" target="_blank">
-    <img src="../images/reports/api-over-time.png"/>
+The **ATU Total Company** chart shows the percentage of your total ATUs used by each of your companies.
+
+<a href="../images/reports/api-atu.png" target="_blank">
+    <img src="../images/reports/api-atu.png"/>
+</a>
+
+Hoover your mouse pointer over the chart to view the ATUs used by each individual company.
+
+<a href="../images/reports/api-atu-highlight.png" target="_blank">
+    <img src="../images/reports/api-atu-highlight.png"/>
 </a>
 
 ### Visualisation Filters
 
 ### More Options
 
-The **API Request Over Time** chart has the following options available from its **More Options** menu:
+The **ATU Total Company** chart has the following options available from its **More Options** menu:
+
+* [Open Comments](/reports/reports.html#open-comments)
+* [Export Data](/reports/reports.html#export-data)
+* [Show Data](/reports/reports.html#show-data)
+* [Spotlight](/reports/reports.html#spotlight)
+* [Sort Descending](/reports/reports.html#sort-descending--ascending--sort-by)
+* [Sort Ascending](/reports/reports.html#sort-descending--ascending--sort-by)
+* [Sort by](/reports/reports.html#sort-descending--ascending--sort-by) CustomerName / ATU Total
+
+## API Requests by IntervalDate and CustomerName
+
+The **API Requests by IntervalDate and CustomerName** chart shows how the total number of API requests made by each of your companies has changed over time. Each line represents one of your companies.
+
+<a href="../images/reports/api-requests.png" target="_blank">
+    <img src="../images/reports/api-requests.png"/>
+</a>
+
+Hover your mouse over the chart to view the total number of API requests made by each company for a given `IntervalDate`.
+
+<a href="../images/reports/api-requests-highlight.png" target="_blank">
+    <img src="../images/reports/api-requests-highlight.png"/>
+</a>
+
+### Visualisation Filters
+
+### More Options
+
+The **API Requests by IntervalDate and CustomerName** chart has the following options available from its **More Options** menu:
 
 * [Open Comments](/reports/reports.html#open-comments)
 * [Export Data](/reports/reports.html#export-data)
