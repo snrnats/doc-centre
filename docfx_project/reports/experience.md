@@ -27,6 +27,9 @@ The **Consignments by Delivery Window** pie chart shows how many of your consign
 
 ### Visualisation Filters
 
+* **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **Delivery Window** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+
 ### More Options
 
 The **Consignments by Delivery Window** chart has the following options available from its **More Options** menu:
@@ -55,6 +58,10 @@ Hover your mouse over an area of the chart to see further details.
 
 ### Visualisation Filters
 
+* **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **DeliveredOnTime** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+
 ### More Options
 
 The **Customer Promise Met** chart has the following options available from its **More Options** menu:
@@ -82,6 +89,10 @@ Hover your mouse over an area of the chart to see further details.
 </a>
 
 ### Visualisation Filters
+
+* **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **Delivery Type** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
 
 ### More Options
 
@@ -116,6 +127,9 @@ Hover your mouse over an area of the chart to see further details.
 </a>
 
 ### Visualisation Filters
+
+* **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
 
 ### More Options
 

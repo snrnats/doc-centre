@@ -33,6 +33,10 @@ Hover your mouse over the graph to see average ship time data for a specific day
 
 ### Visualisation Filters
 
+* **Average Days to Ship** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **CreatedDateOnly** ([Basic](/reports/reports.html#using-basic-filters), [Advanced](/reports/reports.html#using-advanced-filters), and [Relative Date](/reports/reports.html#using-relative-date-filters))
+* **Shipping Location** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+
 ### More Options
 
 The **Average Days from Shipping to Receipt by Carriers** chart has the following options available from its **More Options** menu:
@@ -59,6 +63,10 @@ Hover your mouse over a segment of the graph to see additional information.
 
 ### Visualisation Filters
 
+* **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **Count of ConsignmentReference** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **CreatedDateOnly** ([Basic](/reports/reports.html#using-basic-filters), [Advanced](/reports/reports.html#using-advanced-filters), and [Relative Date](/reports/reports.html#using-relative-date-filters))
+
 ### More Options
 
 The **Carrier Usage** chart has the following options available from its **More Options** menu:
@@ -77,6 +85,9 @@ The **Average Days to Ship by Shipping Location** chart shows the average time f
 </a>
 
 ### Visualisation Filters
+
+* **Average Days to Ship** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **Shipping Location** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
 
 ### More Options
 
@@ -105,6 +116,10 @@ Hover your mouse over a particular date on the chart to see how many consignment
 </a>
 
 ### Visualisation Filters
+
+* **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **Date Created** ([Basic](/reports/reports.html#using-basic-filters), [Advanced](/reports/reports.html#using-advanced-filters), and [Relative Date](/reports/reports.html#using-relative-date-filters))
+* **Shipping Location** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
 
 ### More Options
 

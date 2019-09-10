@@ -27,6 +27,9 @@ The **Delivery Failure Volumes** chart shows the total number of failed consignm
 
 ### Visualisation Filters
 
+* **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
+
 ### More Options
 
 The **Delivery Failure Volumes** chart has the following options available from its **More Options** menu:
@@ -50,6 +53,10 @@ The **Late Consignments by Destination** visualisation shows the destinations of
 If required, you can search for countries and locations using the search bar at the top of the panel.
 
 ### Visualisation Filters
+
+* **Count of ConsignmentReference** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **DestinationTownLatitude** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **DestinationTownLongitude** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
 
 ### More Options
 
@@ -75,6 +82,9 @@ Hover your mouse pointer over the chart to view the total number of that carrier
 </a>
 
 ### Visualisation Filters
+
+* **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
 
 ### More Options
 
@@ -103,6 +113,10 @@ Hover your mouse pointer over a particular point in the chart to view how many c
 </a>
 
 ### Visualisation Filters
+
+* **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **Date Delivered Only** ([Basic](/reports/reports.html#using-basic-filters), [Advanced](/reports/reports.html#using-advanced-filters), and [Relative Date](/reports/reports.html#using-relative-date-filters))
 
 ### More Options
 

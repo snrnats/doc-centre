@@ -33,6 +33,10 @@ The data table shows how many consignments and packages were shipped to each of 
 
 ### Visualisation Filters
 
+* **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **Destination Country** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **Packages** ([Numerical](/reports/reports.html#using-numerical-filters))
+
 ### More Options
 
 The data table has the following options available from its **More Options** menu:
@@ -58,6 +62,9 @@ If required, you can search for countries and locations using the search bar at 
 
 ### Visualisation Filters
 
+* **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **MapBox** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+
 ### More Options
 
 The **Consignment Volumes by Country** chart has the following options available from its **More Options** menu:
@@ -76,6 +83,8 @@ The **% of Consignment Volume by Destination Country** bar chart shows each dest
 </a>
 
 ### Visualisation Filters
+
+* **%GT Count of ConsignmentReference** ([Numerical](/reports/reports.html#using-numerical-filters))
 
 ### More Options
 

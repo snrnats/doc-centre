@@ -13,24 +13,6 @@ The **API Overview** report offers the following report-wide filters:
 * **API Calls** - enables you to select only those calls that were made within a given date range.
 * **Company Name** - where applicable, enables you to select only those calls that were made by a particular company within your group. You can select multiple companies if required.
 
-## Data Table
-
-The data table displays the following information
-
-<a href="../images/reports/api-table.png" target="_blank">
-    <img src="../images/reports/api-table.png"/>
-</a>
-
-### Visualisation Filters
-
-### More Options
-
-The data table has the following options available from its **More Options** menu:
-
-* [Open Comments](/reports/reports.html#open-comments)
-* [Export Data](/reports/reports.html#export-data)
-* [Spotlight](/reports/reports.html#spotlight)
-
 ## API Requests by Customer Name
 
 The **API Requests by Customer Name** chart shows how many requests each of your companies has made, in line with any report filters you may have selected.
@@ -40,6 +22,9 @@ The **API Requests by Customer Name** chart shows how many requests each of your
 </a>
 
 ### Visualisation Filters
+
+* **API Requests** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **CustomerName** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
 
 ### More Options
 
@@ -69,6 +54,9 @@ Hoover your mouse pointer over the chart to view the ATUs used by each individua
 
 ### Visualisation Filters
 
+* **ATU Total** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **CustomerName** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+
 ### More Options
 
 The **ATU Total Company** chart has the following options available from its **More Options** menu:
@@ -96,6 +84,10 @@ Hover your mouse over the chart to view the total number of API requests made by
 </a>
 
 ### Visualisation Filters
+
+* **API Requests** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **CustomerName** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters)
+* **IntervalDate** ([Basic](/reports/reports.html#using-basic-filters), [Advanced](/reports/reports.html#using-advanced-filters), and [Relative Date](/reports/reports.html#using-relative-date-filters))
 
 ### More Options
 

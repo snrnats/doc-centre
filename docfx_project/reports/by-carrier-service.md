@@ -33,6 +33,10 @@ Hover your mouse over the chart for more information.
 
 ### Visualisation Filters
 
+* **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **Carrier Service** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
+
 ### More Options
 
 The **Consignments by Carrier and Carrier Service** chart has the following options available from its **More Options** menu:
@@ -55,6 +59,10 @@ The **% of Total Consignments per Carrier Service** bar chart shows how many of 
 
 ### Visualisation Filters
 
+* **% of Total Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **Carrier Service** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **Number of Packages** ([Numerical](/reports/reports.html#using-numerical-filters))
+
 ### More Options
 
 The **% of Total Consignments per Carrier Service** chart has the following options available from its **More Options** menu:
@@ -76,6 +84,10 @@ The **Consignments by Shipping Location and Carrier Service** table shows how ma
 </a>
 
 ### Visualisation Filters
+
+* **Carrier Service** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **Shipping Location** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
 
 ### More Options
 

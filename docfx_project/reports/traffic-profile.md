@@ -33,6 +33,15 @@ The data table visualisation lists the following information for each carrier (w
 
 ### Visualisation Filters
 
+The data table offers the following filters:
+
+* **Average Packages Per Consignment** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **Packages** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **Average Weight, KG** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **Average Weight, Volumetric** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **Company** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+
 ### More Options
 
 The data table has the following options available from its **More Options** menu:
@@ -55,6 +64,9 @@ The **Consignment Volume Distribution by Absolute Weight** chart displays the we
 
 ### Visualisation Filters
 
+* **Count of ConsignmentReference** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **Kilograms** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+
 ### More Options
 
 The **Consignment Volume Distribution by Absolute Weight** chart has the following options available from its **More Options** menu:
@@ -73,6 +85,9 @@ The **Consignment Volume Distribution by Volumetric Weight** chart displays the 
 </a>
 
 ### Visualisation Filters
+
+* **Count of ConsignmentReference** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **Kilograms** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
 
 ### More Options
 

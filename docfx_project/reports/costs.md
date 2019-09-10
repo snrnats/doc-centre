@@ -56,6 +56,10 @@ Hover your mouse over a particular point on the chart to view that carrier's shi
 
 ### Visualisation Filters
 
+* **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **Date Shipped** ([Basic](/reports/reports.html#using-basic-filters), [Advanced](/reports/reports.html#using-advanced-filters), and [Relative Date](/reports/reports.html#using-relative-date-filters))
+* **Parcel Charges** ([Numerical](/reports/reports.html#using-numerical-filters))
+
 ### More Options
 
 The **Shipping Cost Over Time by Carrier** chart has the following options available from its **More Options** menu:
@@ -81,6 +85,9 @@ Hover your mouse over a particular point on the chart to view your total shippin
 
 ### Visualisation Filters
 
+* **Date Shipped** ([Basic](/reports/reports.html#using-basic-filters), [Advanced](/reports/reports.html#using-advanced-filters), and [Relative Date](/reports/reports.html#using-relative-date-filters))
+* **Parcel Charges** ([Numerical](/reports/reports.html#using-numerical-filters))
+
 ### More Options
 
 The **Shipping Cost Over Time** chart has the following options available from its **More Options** menu:
@@ -99,6 +106,11 @@ SEPARATE THING FOR THIS AS COMPLEX
 </a>
 
 ### Visualisation Filters
+
+* **Average Shipping Cost** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **CustomerName** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **Destination Country** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
 
 ### More Options
 

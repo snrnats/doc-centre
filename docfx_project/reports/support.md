@@ -29,6 +29,9 @@ Hover your mouse over a section of the pie chart to view the number of your tick
 
 ### Visualisation Filters
 
+* **Status** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **Tickets** ([Numerical](/reports/reports.html#using-numerical-filters))
+
 ### More Options
 
 The **Tickets by Status** chart has the following options available from its **More Options** menu:
@@ -50,6 +53,9 @@ The **Tickets Logged by Company** bar chart shows how many support tickets each 
 </a>
 
 ### Visualisation Filters
+
+* **Company Name** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **Tickets** ([Numerical](/reports/reports.html#using-numerical-filters))
 
 ### More Options
 
@@ -79,6 +85,9 @@ Hover your mouse over a section of the pie chart to view the number of open tick
 
 ### Visualisation Filters
 
+* **Priority Level** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **Tickets** ([Numerical](/reports/reports.html#using-numerical-filters))
+
 ### More Options
 
 The **Tickets by Priority Level** chart has the following options available from its **More Options** menu:
@@ -100,6 +109,10 @@ The **Tickets Logged Per Day By Company** chart shows the total number of ticket
 </a>
 
 ### Visualisation Filters
+
+* **Created Date** ([Basic](/reports/reports.html#using-basic-filters), [Advanced](/reports/reports.html#using-advanced-filters), and [Relative Date](/reports/reports.html#using-relative-date-filters))
+* **Customer Name** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **Tickets** ([Numerical](/reports/reports.html#using-numerical-filters))
 
 ### More Options
 

@@ -25,8 +25,11 @@ The data table visualisation lists the total number of packages and consignments
     <img src="../images/reports/by-carrier-data-table.png"/>
 </a>
 
-
 ### Visualisation Filters
+
+* **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **Packages** ([Numerical](/reports/reports.html#using-numerical-filters))
 
 ### More Options
 
@@ -49,6 +52,9 @@ The **Consignments by Carrier** pie chart displays each carrier's share of your 
 </a>
 
 ### Visualisation Filters
+
+* **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
 
 ### More Options
 
@@ -77,6 +83,10 @@ Hover your mouse pointer over a particular day to view exact per-carrier shipmen
 </a>
 
 ### Visualisation Filters
+
+* **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **DateShippedOnly** ([Basic](/reports/reports.html#using-basic-filters), [Advanced](/reports/reports.html#using-advanced-filters), and [Relative Date](/reports/reports.html#using-relative-date-filters))
 
 ### More Options
 
