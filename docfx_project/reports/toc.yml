@@ -1,8 +1,10 @@
 - name: Home
   href: ../index.md  
 - name: Getting Started
-  href: getting-started.md  
-- name: Using Reports
+  href: getting-started.md
+- name: Filters and Options
+  href: filters-options.md      
+- name: Reports
   href: reports.md
   items:
     - name: Traffic Profile

@@ -1,4 +1,6 @@
 - name: Getting Started
   homepage: reports/getting-started.md
+- name: Filters and Options
+  homepage: reports/filters-options.md
 - name: Reports
   homepage: reports/reports.md  

@@ -6,6 +6,10 @@ The **Shipping Costs** report gives an overview of your organisation's shipping 
     <img src="../images/reports/costs.png"/>
 </a>
 
+> <span class="note-header">Note:</span>
+>
+> All costs are presented in GBP. If GBP is not your organisation's base currency, then the app automatically converts to GBP using the current exchange rate. 
+
 ## Report Filters
 
 The **Shipping Costs** report offers the following report-wide filters:

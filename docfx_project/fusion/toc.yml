@@ -1,7 +1,9 @@
 - name: Home
   href: ../index.md
 - name: Getting Started
-  href: ../reports/getting-started.md  
+  href: ../reports/getting-started.md
+- name: Filters and Options
+  href: ../reports/filters-options.md    
 - name: Using Reports
   href: ../reports/reports.md
   items:

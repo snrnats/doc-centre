@@ -1,15 +1,19 @@
 # PRO Report Docs.
 Welcome to the documentation for SortedPRO's Power BI reporting tools. This site explains the Power BI reports available for PRO, and how to get the most out of them.
-<a href="reports/getting-started.md">
+
 ## Getting Started
-</a>
 
-Learn how to access and configure PRO reports.
-<a href="reports/reports.md">
-## Using Reports
-</a>
+Learn how to access and select PRO reports [here](reports/getting-started.md).
 
-Learn what each report does and how to use it. PRO features the following reports:
+## Filters and Options
+
+Learn how to use filters to fine-tune report data [here](reports/filters-options.md).
+
+## Reports
+
+Learn what each report does and how to use it [here](reports/reports.md). 
+
+PRO features the following reports:
 
 * [Traffic Profiles](reports/traffic-profile.md)
 * [Volumes by Carrier](reports/by-carrier.md)
