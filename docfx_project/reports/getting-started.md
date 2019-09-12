@@ -14,11 +14,19 @@ We provide each PRO customer with one Power BI Pro license, which grants them ac
 
 Click the access link to open the reports. Alternatively, you can access the reports from within Power BI by clicking **Shared with me** from the left-hand toolbar and selecting **Multi-Company Customer Report** from the list of shared reports.
 
+<a href="../images/reports/shared-with-me.png" target="_blank">
+  <img src="../images/reports/shared-with-me.png"/>
+</a>
+
 ## Viewing Reports
 
 When you open the app, the **Traffic Profile** report is displayed. To select other reports in the collection, use the tabs at the bottom of the screen.
 
-Each PRO report is a collection of data visualisations (such as charts, tables, and maps) that gives you a graphical overview of a particular aspect of your shipping performance. For example, the **Volumes by Carrier** report features a table listing how many consignments and packages each of your carriers has shipped, a pie chart showing the share of your total shipments each carrier has, and a chart showing each carrier's total shipments over time. 
+<a href="../images/reports/toolbar.png" target="_blank">
+  <img src="../images/reports/toolbar.png"/>
+</a>
+
+Each PRO report is a collection of data visualisations (such as charts, tables, and maps) that gives you an overview of a particular aspect of your shipping performance. For example, the **Volumes by Carrier** report features a table listing how many consignments and packages each of your carriers has shipped, a pie chart showing the share of your total consignments that shipped with each of your carriers, and a chart showing each carrier's total shipments over time. 
 
 <a href="../images/reports/by-carrier.png" target="_blank">
   <img src="../images/reports/by-carrier.png"/>

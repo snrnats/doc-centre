@@ -1,19 +1,19 @@
 # Filters and Options
 
-By default, reports display all available data. Filters enable you to get a more granular view of your data by selecting the specific data that you want to view. For example, you might filter the **Volumes by Carrier** report so that it only shows consignments shipped by UPS and DPD, rather than all of your carriers.
+By default, reports display all available data. Filters enable you to fine-tune the information a report displays by selecting the specific data that you want to view. For example, you might filter the **Volumes by Carrier** report so that it only takes into account consignments shipped in the last month, rather than taking all consignments into account.
 
 ## Filters
 
-The PRO reports use two types of filter, report-wide and visualisation
+You can filter reports either at a report-wide or visualisation-specific level.
 
-* **Report-wide** filters can be selected from the panel on the left-hand side. They affect all visualisations on the report.
-* **Visualisation** filters can be applied by clicking a filter and selecting options from the **Filters** panel on the right-hand side. They only apply to the selected visualisation.
+* Report-wide filters can be selected from the panel on the left-hand side. Filters selected from this panel affect all visualisations on the report.
+* Visualisation filters can be applied by clicking a filter and selecting options from the **Filters** panel on the right-hand side. Filters selected in this way only apply to the selected visualisation.
 
 > <span class="note-header">Note:</span>
 >
-> The list of filters available differs between reports and visualisations. For information on a report's specific filters, see that report's documentation page.
+> The list of filters available differs between reports. For information on a report's specific filters, see that report's documentation page in the [Reports](reports.md) section.
 
-You can combine filters in any way you choose. For example, say you want to see a graph charting how many shipments you sent with DPD and UPS between 30/07/2019 and 30/08/2019. To do this you could:
+You can combine multiple filters if you need to. For example, say you want to see a graph charting how many shipments you sent with DPD and UPS between 30/07/2019 and 30/08/2019. view this information this you could:
 
 1. Open the **Volumes by Carrier** report.
 
@@ -21,7 +21,7 @@ You can combine filters in any way you choose. For example, say you want to see 
     <img src="../images/reports/by-carrier.png"/>
     </a>
 
-2. Use the **Date Shipped** selector on the left-hand panel to select only consignments shipped between 30/07/2019 and 30/08/2019. The report filters all visualisations so that only data from between those dates is displayed.
+2. Use the **Date Shipped** selector on the left-hand panel to select only consignments shipped between 30/07/2019 and 30/08/2019. The report filters all visualisations so that only consignments shipped between those dates are taken into account.
 
     <a href="../images/reports/by-carrier-date-filter.png" target="_blank">
     <img src="../images/reports/by-carrier-date-filter.png"/>
@@ -33,7 +33,7 @@ You can combine filters in any way you choose. For example, say you want to see 
     <img src="../images/reports/carrier-filters-panel.png"/>
     </a>
 
-4. Select the carriers that you want to filter the visualisation by (in this case, UPS and DPD). The report filters the chart so that only those two carriers are displayed.
+4. Select the carriers that you want to filter the visualisation by (in this case, UPS and DPD). The report filters the chart so that it only takes into account consignments that were shipped by either UPS or DPD AND meet the existing report filter criteria (that is they were shipped between 30/07/2019 and 30/08/2019).
 
     <a href="../images/reports/filtered-carrier-chart.png" target="_blank">
     <img src="../images/reports/filtered-carrier-chart.png"/>
@@ -49,18 +49,18 @@ To reset a report's filters back to default, click the **Reset to Default** butt
 
 ### Filtering Visualisations
 
-Different visualisation fields use different types of filter, depending on the nature of the data being filtered. There are four visualisation filter types in the PRO reports:
+Each visualisation has various filterable properties. The PRO reports use four types of filter, depending on whether the property in question is a numerical field, text field, or date field:
 
-* **Numerical** - Used on numerical fields, enables you to specify a number range.
-* **Basic** - Used on text fields, enables you to select simple values (such as carrier names) from a list.
-* **Advanced** - Used on text fields, enables you to select values based on custom selection criteria.
-* **Relative Date** - Used on date fields, enables you to specify a range of dates you want to view data for.
+* **Numerical** - Used on numerical fields, enables you to specify a required number range.
+* **Basic** - Used on text fields, enables you to select simple values (such as individual carrier names) from a list.
+* **Advanced** - Used on text fields, enables you to select values based on custom selection criteria (such as selecting all carrier services that have names beginning with "UPS").
+* **Relative Date** - Used on date fields, enables you to specify a required date range.
 
 #### Using Numerical Filters
 
-Numerical filters enable you to specify a number range to a particular numerical field. Once applied, the visualisation is filtered so that it only displays records in which the value of the filtered field meets the criteria you specified. 
+Numerical filters enable you to specify a number range to a numerical field. Once applied, the visualisation is filtered so that it only takes into account records in which the value of the filtered field meets the criteria you specified. 
 
-For example, suppose that you are viewing the data table on the **Shipped Consignments by Destination Country** report, but you are only interested in countries to which you have shipped more than 1000 consignments. You could apply a numerical filter to the **Consignments** field so that the table only shows records where the value of **Consignments** (that is, the total number of consignments shipped to that particular country) was above 1000. 
+For example, suppose that you are viewing the data table on the **Shipped Consignments by Destination Country** report, but you are only interested in countries to which you have shipped more than 1000 consignments. You could apply a numerical filter to the **Consignments** field so that the table only shows country records where the value of **Consignments** (that is, the total number of consignments shipped to that particular country) was above 1000. 
 
 To apply a numerical filter to a visualisation:
 
@@ -104,7 +104,7 @@ If you wanted to modify that filter so that only countries to which you have shi
 
 #### Using Basic Filters
 
-Basic filters enable you to select discrete text values. Once applied, the visualisation is filtered so that it only displays records in which the value of the filtered field meets the criteria you specified.
+Basic filters enable you to select discrete text values. Once applied, the visualisation is filtered so that it only takes into account records in which the value of the filtered field meets the criteria you specified.
 
 For example, suppose that you are viewing the **Delivery Type by Carrier** visualisation on the **Delivery Experience** report, but you only want to view the delivery types used in shipments by DPD and UPS, rather than your entire suite of carriers. You could use basic filtering to select those two carriers specifically.
 
@@ -179,7 +179,7 @@ To apply advanced filtering to a visualisation:
 
 #### Using Relative Date Filters
 
-Relative date filtering is only available on date fields. It enables you to filter visualisations by providing a date range that is relative to the current date and time (that is, a certain period of time before or after now).
+Relative date filtering is only available on date fields. It enables you to filter visualisations by providing a date range that is relative to the current date and time.
 
 For example, suppose that you are viewing the **Consignments Shipped By Carrier Over Time** visualisation of the **Shipped Consignments by Carrier** report, but you only want to view data for the late two weeks. You could use a relative date filter on the `DateShippedOnly` field to select only those consignments that were shipped in the last two weeks.
 
@@ -196,7 +196,6 @@ To apply a relative date filter:
     <a href="../images/reports/date-filter-2.png" target="_blank">
     <img src="../images/reports/date-filter-2.png"/>
     </a>
-
 
 3. Enter your filter criteria: 
     1. Select an operator from the **Show items when the value:** drop-down menu. The available options are **Is In The Last**, **Is In This**, and **Is In The Next**.
@@ -267,4 +266,8 @@ Enables you to specify how the visualisation's data should be sorted.
 
 > <span class="note-header">Note:</span>
 >
-> Not all options are available to all visualisations. For information on a visualisation's specific options, see that report's documentation page.
+> Not all options are available to all visualisations. For information on a visualisation's specific options, see that report's documentation page in the [Reports](reports.md) section.
+
+## Next Steps
+
+For further details on the reports themselves, see the [Reports](reports.md) section.

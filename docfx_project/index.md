@@ -1,5 +1,5 @@
-# PRO Report Docs.
-Welcome to the documentation for SortedPRO's Power BI reporting tools. This site explains the Power BI reports available for PRO, and how to get the most out of them.
+# PRO Report Docs.e
+Welcome to the docs for SortedPRO's Power BI reporting app. This site explains the reports available for PRO, and how to use them.
 
 ## Getting Started
 
@@ -30,4 +30,4 @@ PRO features the following reports:
 >
 > This site explains how to access and use PRO reports in Microsoft Power BI. It does not provide general user help for Power BI. 
 > 
-> For Power BI documentation, see the [Power BI documentation portal](https://docs.microsoft.com/en-us/power-bi/#pivot=home&panel=home-all).
+> For full documentation on Power BI itself, see the [Power BI documentation portal](https://docs.microsoft.com/en-us/power-bi/#pivot=home&panel=home-all).

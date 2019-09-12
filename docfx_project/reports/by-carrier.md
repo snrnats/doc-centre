@@ -1,6 +1,8 @@
 # Volume by Carrier
 
-The **Volume by Carrier** report enables you to see a breakdown of how many consignments and packages you have shipped with each of your carriers and how the volume of consignments shipped with each carrier has changed over time. It comprises a table listing consignment and packages data, a **Consignments by Carrier** pie chart showing each carrier's share of your consignments, and **Consignments Shipped by Carrier Over Time** line graph.
+The **Volume by Carrier** report displays a breakdown of how many consignments and packages you have shipped with each of your carriers, and shows how the volume of consignments shipped with each carrier has changed over time. 
+
+It comprises a table listing consignment and packages data, a **Consignments by Carrier** pie chart showing each carrier's share of your consignments, and **Consignments Shipped by Carrier Over Time** line graph.
 
 <a href="../images/reports/by-carrier.png" target="_blank">
     <img src="../images/reports/by-carrier.png"/>
@@ -10,12 +12,12 @@ The **Volume by Carrier** report enables you to see a breakdown of how many cons
 
 The **Volume by Carrier** report offers the following report-wide filters:
 
-* **Date Shipped** - enables you to select only those consignments that were shipped within a given date range.
-* **Company Name** - where applicable, enables you to select only those consignments that were shipped by a particular company within your group. You can select multiple companies if required.
-* **Shipping Location** - where applicable, enables you to select only those consignments that were shipped from a particular shipping location.
-* **Carrier** - enables you to select only those consignments that were shipped via a particular carrier.
-* **Carrier Service** - enables you to select only those consignments that were shipped via a particular carrier service.
-* **Delivery Type** - enables you to select only those consignments that were shipped as a particular delivery type (i.e. *Delivery* or *Click and Collect*).
+* **Date Shipped** - enables you to select consignments that were shipped within a given date range.
+* **Company Name** - where applicable, enables you to select consignments that were shipped by a particular company within your group. You can select multiple companies if required.
+* **Shipping Location** - where applicable, enables you to select consignments that were shipped from a particular shipping location.
+* **Carrier** - enables you to select consignments that were shipped via a particular carrier.
+* **Carrier Service** - enables you to select consignments that were shipped via a particular carrier service.
+* **Delivery Type** - enables you to select consignments that were shipped as a particular delivery type (i.e. *Delivery* or *Click and Collect*).
 
 ## Data Table
 
@@ -45,7 +47,7 @@ The data table has the following options available from its **More Options** men
 
 ## Consignments by Carrier
 
-The **Consignments by Carrier** pie chart displays each carrier's share of your total shipments.
+The **Consignments by Carrier** pie chart displays each carrier's share of your total consignments.
 
 <a href="../images/reports/by-carrier-pie.png" target="_blank">
     <img src="../images/reports/by-carrier-pie.png"/>
