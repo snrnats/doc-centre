@@ -1,6 +1,8 @@
 # Support
 
-The **Support** report enables you to get an overview of your organisation's current and past support tickets. It comprises a **Tickets by Status** pie chart, a **Tickets Logged by Company** bar chart, a **Tickets by Priority Level**  pie chart, and a **Tickets Logged Per Day By Company** chart.
+The **Support** report enables you to get an overview of your organisation's current and past support tickets. 
+
+It comprises a **Tickets by Status** pie chart, a **Tickets Logged by Company** bar chart, a **Tickets by Priority Level**  pie chart, and a **Tickets Logged Per Day By Company** chart.
 
 <a href="../images/reports/support.png" target="_blank">
     <img src="../images/reports/support.png"/>

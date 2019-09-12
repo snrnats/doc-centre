@@ -1,6 +1,8 @@
 # Shipped Consignments by Carrier Service
 
-The **Shipped Consignments by Carrier Service** report shows a breakdown of which carrier services your consignments were allocated to. It comprises a **Consignments by Carrier and Carrier Service** bar chart, a **% of Total Consignments by Carrier Service** bar chart, and **Consignments by Shipping Location and Carrier Service** table
+The **Shipped Consignments by Carrier Service** report shows a breakdown of which carrier services your consignments were allocated to. 
+
+It comprises a **Consignments by Carrier and Carrier Service** bar chart, a **% of Total Consignments by Carrier Service** bar chart, and **Consignments by Shipping Location and Carrier Service** table
 
 <a href="../images/reports/by-carrier-service.png" target="_blank">
     <img src="../images/reports/by-carrier-service.png"/>
@@ -10,12 +12,12 @@ The **Shipped Consignments by Carrier Service** report shows a breakdown of whic
 
 The **Shipped Consignments by Carrier Service** report offers the following report-wide filters:
 
-* **Date Shipped** - enables you to select only those consignments that were shipped within a given date range.
-* **Company Name** - where applicable, enables you to select only those consignments that were shipped by a particular company within your group. You can select multiple companies if required.
-* **Shipping Location** - where applicable, enables you to select only those consignments that were shipped from a particular shipping location.
-* **Carrier** - enables you to select only those consignments that were shipped via a particular carrier.
-* **Carrier Service** - enables you to select only those consignments that were shipped via a particular carrier service.
-* **Delivery Type** - enables you to select only those consignments that were shipped as a particular delivery type (i.e. *Delivery* or *Click and Collect*).
+* **Date Shipped** - enables you to select consignments that were shipped within a given date range.
+* **Company Name** - where applicable, enables you to select consignments that were shipped by a particular company within your group. You can select multiple companies if required.
+* **Shipping Location** - where applicable, enables you to select consignments that were shipped from a particular shipping location.
+* **Carrier** - enables you to select consignments that were shipped via a particular carrier.
+* **Carrier Service** - enables you to select consignments that were shipped via a particular carrier service.
+* **Delivery Type** - enables you to select consignments that were shipped as a particular delivery type (i.e. *Delivery* or *Click and Collect*).
 
 ## Consignments by Carrier and Carrier Service
 
@@ -25,7 +27,7 @@ The **Consignments by Carrier and Carrier Service** bar chart shows how many of 
     <img src="../images/reports/by-carrier-service-by-carrier.png"/>
 </a>
 
-Hover your mouse over the chart for more information.
+Hover your mouse over the chart to see how many consignments were shipped with each carrier service.
 
 <a href="../images/reports/by-carrier-service-by-carrier-highlight.png" target="_blank">
     <img src="../images/reports/by-carrier-service-by-carrier-highlight.png"/>
@@ -51,7 +53,7 @@ The **Consignments by Carrier and Carrier Service** chart has the following opti
 
 ## % of Total Consignments per Carrier Service
 
-The **% of Total Consignments per Carrier Service** bar chart shows how many of your consignments were shipped with each carrier service. Each bar represents an individual carrier service.
+The **% of Total Consignments per Carrier Service** bar chart shows the proportion of your consignments that were shipped with each carrier service. Each bar represents an individual carrier service.
 
 <a href="../images/reports/by-carrier-service-per-carrier.png" target="_blank">
     <img src="../images/reports/by-carrier-service-per-carrier.png"/>

@@ -1,6 +1,8 @@
 # Shipping Location Performance
 
-The **Shipping Location Performance** report gives an overview of the consignment volume and shipping lead times coming through each of your shipping locations. It comprises an **Average Days from Shipping to Receipt by Carriers** line graph, a **Carrier Usage** bar chart, an **Average Days to Ship By Shipping Location** bar chart, and a **Consignments Over Time By Shipping Location** line graph.
+The **Shipping Location Performance** report gives an overview of consignment volume and shipping lead times from each of your shipping locations. 
+
+It comprises an **Average Days from Shipping to Receipt by Carriers** line graph, a **Carrier Usage** bar chart, an **Average Days to Ship By Shipping Location** bar chart, and a **Consignments Over Time By Shipping Location** line graph.
 
 <a href="../images/reports/location-performance.png" target="_blank">
     <img src="../images/reports/location-performance.png"/>
@@ -10,12 +12,12 @@ The **Shipping Location Performance** report gives an overview of the consignmen
 
 The **Shipping Location Performance** report offers the following report-wide filters:
 
-* **Date Shipped** - enables you to select only those consignments that were shipped within a given date range.
-* **Company Name** - where applicable, enables you to select only those consignments that were shipped by a particular company within your group. You can select multiple companies if required.
-* **Shipping Location** - where applicable, enables you to select only those consignments that were shipped from a particular shipping location.
-* **Carrier** - enables you to select only those consignments that were shipped via a particular carrier.
-* **Carrier Service** - enables you to select only those consignments that were shipped via a particular carrier service.
-* **Delivery Type** - enables you to select only those consignments that were shipped as a particular delivery type (i.e. *Delivery* or *Click and Collect*).
+* **Date Shipped** - enables you to select consignments that were shipped within a given date range.
+* **Company Name** - where applicable, enables you to select consignments that were shipped by a particular company within your group. You can select multiple companies if required.
+* **Shipping Location** - where applicable, enables you to select consignments that were shipped from a particular shipping location.
+* **Carrier** - enables you to select consignments that were shipped via a particular carrier.
+* **Carrier Service** - enables you to select consignments that were shipped via a particular carrier service.
+* **Delivery Type** - enables you to select consignments that were shipped as a particular delivery type (i.e. *Delivery* or *Click and Collect*).
 
 ## Average Days from Shipping to Receipt by Carriers
 
@@ -46,16 +48,15 @@ The **Average Days from Shipping to Receipt by Carriers** chart has the followin
 * [Show Data](/reports/reports.html#show-data)
 * [Spotlight](/reports/reports.html#spotlight)
 
-
 ## Carrier Usage
 
-The **Carrier Usage** chart shows how many consignments were allocated to each of your carrier on a particular day. Each bar on the graph represents a single day, and each bar segment represents the proportion of that day's consignments that were allocated to a particular carrier.
+The **Carrier Usage** chart shows how many consignments were allocated to each of your carriers on a particular day. Each bar on the graph represents a single day, and each bar segment represents the proportion of that day's consignments that were allocated to a particular carrier.
 
 <a href="../images/reports/location-performance-usage.png" target="_blank">
     <img src="../images/reports/location-performance-usage.png"/>
 </a>
 
-Hover your mouse over a segment of the graph to see additional information.
+Hover your mouse over a segment of the graph to see how many consignments were allocated to that carrier on that day.
 
 <a href="../images/reports/location-performance-usage-highlight.png" target="_blank">
     <img src="../images/reports/location-performance-usage-highlight.png"/>
@@ -109,7 +110,7 @@ The **Consignments Over Time by Shipping Location** chart shows how the number o
     <img src="../images/reports/location-performance-over-time.png"/>
 </a>
 
-Hover your mouse over a particular date on the chart to see how many consignments were shipping from each of your locations on that day.
+Hover your mouse over a particular date on the chart to see how many consignments shipped from each of your locations on that day.
 
 <a href="../images/reports/location-performance-over-time-highlight.png" target="_blank">
     <img src="../images/reports/location-performance-over-time-highlight.png"/>

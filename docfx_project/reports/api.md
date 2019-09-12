@@ -1,6 +1,8 @@
 # API Overview
 
-The **API Overview** enables you to get an overview of your organisation's API calls, including call volumes and ATUs used. It comprises a data table, an **API Requests by Customer Name** bar chart, an **ATU Total Company** pie chart, and an **API Requests by IntervalDate and CustomerName** line graph. 
+The **API Overview** enables you to get an overview of your organisation's API calls, including call volumes and ATUs used. 
+
+It comprises a data table, an **API Requests by Customer Name** bar chart, an **ATU Total Company** pie chart, and an **API Requests by IntervalDate and CustomerName** line graph. 
 
 <a href="../images/reports/api.png" target="_blank">
     <img src="../images/reports/api.png"/>
@@ -15,7 +17,7 @@ The **API Overview** report offers the following report-wide filters:
 
 ## API Requests by Customer Name
 
-The **API Requests by Customer Name** chart shows how many requests each of your companies has made, in line with any report filters you may have selected.
+The **API Requests by Customer Name** chart shows how many requests each of your companies has made.
 
 <a href="../images/reports/api-custname.png" target="_blank">
     <img src="../images/reports/api-custname.png"/>
@@ -40,13 +42,13 @@ The **API Requests by Customer Name** chart has the following options available 
 
 ## ATU Total Company
 
-The **ATU Total Company** chart shows the percentage of your total ATUs used by each of your companies.
+The **ATU Total Company** chart shows the proportion of your total ATUs usage that each of your companies has incurred.
 
 <a href="../images/reports/api-atu.png" target="_blank">
     <img src="../images/reports/api-atu.png"/>
 </a>
 
-Hoover your mouse pointer over the chart to view the ATUs used by each individual company.
+Hover your mouse pointer over the chart to view the ATUs used by each individual company.
 
 <a href="../images/reports/api-atu-highlight.png" target="_blank">
     <img src="../images/reports/api-atu-highlight.png"/>

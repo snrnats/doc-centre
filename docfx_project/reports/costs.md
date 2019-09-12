@@ -1,6 +1,8 @@
 # Shipping Costs
 
-The **Shipping Costs** report gives an overview of your organisation's shipping costs by carrier and destination. It comprises a table of data, a **Shipping Costs Over Time by Carrier** line chart, a **Shipping Costs Over Time** line chart, and an **Average Shipping Costs by Destination** table.
+The **Shipping Costs** report gives an overview of your organisation's shipping costs by carrier and destination. 
+
+It comprises a table of data, a **Shipping Costs Over Time by Carrier** line chart, a **Shipping Costs Over Time** line chart, and an **Average Shipping Costs by Destination** table.
 
 <a href="../images/reports/costs.png" target="_blank">
     <img src="../images/reports/costs.png"/>
@@ -14,12 +16,12 @@ The **Shipping Costs** report gives an overview of your organisation's shipping 
 
 The **Shipping Costs** report offers the following report-wide filters:
 
-* **Date Shipped** - enables you to select only those consignments that were shipped within a given date range.
-* **Company Name** - where applicable, enables you to select only those consignments that were shipped by a particular company within your group. You can select multiple companies if required.
-* **Shipping Location** - where applicable, enables you to select only those consignments that were shipped from a particular shipping location.
-* **Carrier** - enables you to select only those consignments that were shipped via a particular carrier.
-* **Carrier Service** - enables you to select only those consignments that were shipped via a particular carrier service.
-* **Delivery Type** - enables you to select only those consignments that were shipped as a particular delivery type (i.e. *Delivery* or *Click and Collect*).
+* **Date Shipped** - enables you to select consignments that were shipped within a given date range.
+* **Company Name** - where applicable, enables you to select consignments that were shipped by a particular company within your group. You can select multiple companies if required.
+* **Shipping Location** - where applicable, enables you to select consignments that were shipped from a particular shipping location.
+* **Carrier** - enables you to select consignments that were shipped via a particular carrier.
+* **Carrier Service** - enables you to select consignments that were shipped via a particular carrier service.
+* **Delivery Type** - enables you to select consignments that were shipped as a particular delivery type (i.e. *Delivery* or *Click and Collect*).
 
 ## Data Table
 
@@ -103,10 +105,42 @@ The **Shipping Cost Over Time** chart has the following options available from i
 
 ## Average Shipping Cost by Destination
 
-SEPARATE THING FOR THIS AS COMPLEX
+The **Average Shipping Cost by Destination** table shows your average shipping costs broken down by destination country, carrier and company.
 
 <a href="../images/reports/costs-destination.png" target="_blank">
     <img src="../images/reports/costs-destination.png"/>
+</a>
+
+By default, the chart shows each carrier's average shipping cost to each destination country. 
+
+<a href="../images/reports/costs-destination-min.png" target="_blank">
+    <img src="../images/reports/costs-destination-min.png"/>
+</a>
+
+To split this information out by which of your companies issued the consignment, click the `+` button next to the country name or click **Expand all down one level in the hierarchy** to expand all countries.
+
+<a href="../images/reports/costs-destination-expand.png" target="_blank">
+    <img src="../images/reports/costs-destination-expand.png"/>
+</a>
+
+<a href="../images/reports/costs-destination.png" target="_blank">
+    <img src="../images/reports/costs-destination.png"/>
+</a>
+
+To view average shipping costs by company rather than destination country, click **Go to the next level in the hierarchy**.
+
+<a href="../images/reports/costs-destination-next-level.png" target="_blank">
+    <img src="../images/reports/costs-destination-next-level.png"/>
+</a>
+
+<a href="../images/reports/costs-destination-company.png" target="_blank">
+    <img src="../images/reports/costs-destination-company.png"/>
+</a>
+
+To return to the table's default level (average shipping cost to each destination country), click **Drill Up**. 
+
+<a href="../images/reports/costs-destination-drill-up.png" target="_blank">
+    <img src="../images/reports/costs-destination-drill-up.png"/>
 </a>
 
 ### Visualisation Filters

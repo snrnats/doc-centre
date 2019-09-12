@@ -1,6 +1,8 @@
 # Delivery Experience
 
-The **Delivery Experience** report enables you to get an overview of the delivery windows and types requested by your customer, as well as how often your carriers were unable to meet those delivery promises. It comprises a **Consignments by Delivery Window** pie chart, a **Customer Promise Met** bar chart, a **Delivery Type by Carrier** bar chart, and a **Delivery Window by Carrier** bar chart.
+The **Delivery Experience** report enables you to get an overview of the delivery windows and types requested by your customer, as well as how often your carriers were met those delivery promises. 
+
+It comprises a **Consignments by Delivery Window** pie chart, a **Customer Promise Met** bar chart, a **Delivery Type by Carrier** bar chart, and a **Delivery Window by Carrier** bar chart.
 
 <a href="../images/reports/experience.png" target="_blank">
     <img src="../images/reports/experience.png"/>
@@ -10,16 +12,16 @@ The **Delivery Experience** report enables you to get an overview of the deliver
 
 The **Delivery Experience** report offers the following report-wide filters:
 
-* **Date Shipped** - enables you to select only those consignments that were shipped within a given date range.
-* **Company Name** - where applicable, enables you to select only those consignments that were shipped by a particular company within your group. You can select multiple companies if required.
-* **Shipping Location** - where applicable, enables you to select only those consignments that were shipped from a particular shipping location.
-* **Carrier** - enables you to select only those consignments that were shipped via a particular carrier.
-* **Carrier Service** - enables you to select only those consignments that were shipped via a particular carrier service.
-* **Delivery Type** - enables you to select only those consignments that were shipped as a particular delivery type (i.e. *Delivery* or *Click and Collect*).
+* **Date Shipped** - enables you to select consignments that were shipped within a given date range.
+* **Company Name** - where applicable, enables you to select consignments that were shipped by a particular company within your group. You can select multiple companies if required.
+* **Shipping Location** - where applicable, enables you to select consignments that were shipped from a particular shipping location.
+* **Carrier** - enables you to select consignments that were shipped via a particular carrier.
+* **Carrier Service** - enables you to select consignments that were shipped via a particular carrier service.
+* **Delivery Type** - enables you to select consignments that were shipped as a particular delivery type (i.e. *Delivery* or *Click and Collect*).
 
 ## Consignments by Delivery Window
 
-The **Consignments by Delivery Window** pie chart shows how many of your consignments were scheduled for a particular daily delivery window.
+The **Consignments by Delivery Window** pie chart shows the proportion of your consignments that were scheduled for a daily delivery window, and what delivery window they were scheduled for.
 
 <a href="../images/reports/experience-delivery-window.png" target="_blank">
     <img src="../images/reports/experience-delivery-window.png"/>
@@ -76,13 +78,13 @@ The **Customer Promise Met** chart has the following options available from its 
 
 ## Delivery Type by Carrier
 
-The **Delivery Type by Carrier** chart what proportion of each carrier's consignments used a particular delivery type (for example, *Click-and-Collect* or *Delivery*).
+The **Delivery Type by Carrier** chart shows the proportion of each carrier's consignments that used a particular delivery type (for example, *Click-and-Collect* or *Delivery*).
 
 <a href="../images/reports/experience-type-by-carrier.png" target="_blank">
     <img src="../images/reports/experience-type-by-carrier.png"/>
 </a>
 
-Hover your mouse over an area of the chart to see further details.
+Hover your mouse over an area of the chart to see the number of that carrier's consignments that were created with that delivery type.
 
 <a href="../images/reports/experience-type-by-carrier-highlight.png" target="_blank">
     <img src="../images/reports/experience-type-by-carrier-highlight.png"/>
@@ -120,7 +122,7 @@ For example, in the below chart ParcelForce had 11.54% of their shipments use an
 >
 > The **Delivery Window by Carrier** chart ignores consignments with no delivery window specified.
 
-Hover your mouse over an area of the chart to see further details.
+Hover your mouse over an area of the chart to see the number of that carrier's consignments that were assigned that delivery window.
 
 <a href="../images/reports/experience-window-highlight.png" target="_blank">
     <img src="../images/reports/experience-window-highlight.png"/>
