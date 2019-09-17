@@ -58,6 +58,10 @@ Each visualisation has various filterable properties. The PRO reports use four t
 
 #### Using Numerical Filters
 
+<a href="../images/reports/num-filter-gif.gif" target="_blank">
+    <img src="../images/reports/num-filter-gif.gif"/>
+</a>
+
 Numerical filters enable you to specify a number range to a numerical field. Once applied, the visualisation is filtered so that it only takes into account records in which the value of the filtered field meets the criteria you specified. 
 
 For example, suppose that you are viewing the data table on the **Shipped Consignments by Destination Country** report, but you are only interested in countries to which you have shipped more than 1000 consignments. You could apply a numerical filter to the **Consignments** field so that the table only shows country records where the value of **Consignments** (that is, the total number of consignments shipped to that particular country) was above 1000. 
