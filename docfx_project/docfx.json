@@ -38,6 +38,11 @@
         "files": [
           "images/**"
         ]
+      },
+      {
+        "files": [
+          "myfavicon.ico"
+        ]
       }
     ],
     "overwrite": [
@@ -53,6 +58,9 @@
     ],
     "dest": "_site",
     "globalMetadataFiles": [],
+    "globalMetadata": {
+      "_appFaviconPath": "/myfavicon.ico"
+    }, 
     "fileMetadataFiles": [],
     "template": [
       "default",

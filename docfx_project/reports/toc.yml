@@ -13,8 +13,6 @@
       href: ../reports/by-carrier.md
     - name: Destination Country
       href: ../reports/by-country.md
-    - name: Carrier Performance
-      href: ../reports/performance.md
     - name: Delivery Experience
       href: ../reports/experience.md                 
     - name: Carrier Service
