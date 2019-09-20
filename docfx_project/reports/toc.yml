@@ -4,18 +4,18 @@
   href: getting-started.md
 - name: Filters and Options
   href: filters-options.md      
-- name: Reports
+- name: Using Reports
   href: reports.md
   items:
     - name: Traffic Profile
       href: ../reports/traffic-profile.md
-    - name: Carrier
+    - name: Volume by Carrier
       href: ../reports/by-carrier.md
-    - name: Destination Country
+    - name: Volume by Country
       href: ../reports/by-country.md
     - name: Delivery Experience
       href: ../reports/experience.md                 
-    - name: Carrier Service
+    - name: Volume by Carrier Service
       href: ../reports/by-carrier-service.md
     - name: Locations
       href: ../reports/location-performance.md

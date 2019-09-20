@@ -13,11 +13,15 @@ It comprises a **Consignments by Carrier and Carrier Service** bar chart, a **% 
 The **Shipped Consignments by Carrier Service** report offers the following report-wide filters:
 
 * **Date Shipped** - enables you to select consignments that were shipped within a given date range.
-* **Company Name** - where applicable, enables you to select consignments that were shipped by a particular company within your group. You can select multiple companies if required.
+* **Company** - where applicable, enables you to select consignments that were shipped by a particular company within your group. You can select multiple companies if required.
 * **Shipping Location** - where applicable, enables you to select consignments that were shipped from a particular shipping location.
 * **Carrier** - enables you to select consignments that were shipped via a particular carrier.
 * **Carrier Service** - enables you to select consignments that were shipped via a particular carrier service.
 * **Delivery Type** - enables you to select consignments that were shipped as a particular delivery type (i.e. *Delivery* or *Click and Collect*).
+
+<a href="../images/reports/by-carrier-service-left-filter.png" target="_blank">
+    <img src="../images/reports/by-carrier-service-left-filter.png"/>
+</a>
 
 ## Consignments by Carrier and Carrier Service
 
@@ -33,7 +37,7 @@ Hover your mouse over the chart to see how many consignments were shipped with e
     <img src="../images/reports/by-carrier-service-by-carrier-highlight.png"/>
 </a>
 
-### Visualisation Filters
+### Visual Filters
 
 * **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
 * **Carrier Service** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
@@ -59,7 +63,7 @@ The **% of Total Consignments per Carrier Service** bar chart shows the proporti
     <img src="../images/reports/by-carrier-service-per-carrier.png"/>
 </a>
 
-### Visualisation Filters
+### Visual Filters
 
 * **% of Total Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
 * **Carrier Service** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
@@ -85,7 +89,7 @@ The **Consignments by Shipping Location and Carrier Service** table shows how ma
     <img src="../images/reports/by-carrier-service-location.png"/>
 </a>
 
-### Visualisation Filters
+### Visual Filters
 
 * **Carrier Service** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
 * **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))

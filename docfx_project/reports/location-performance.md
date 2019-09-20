@@ -13,11 +13,15 @@ It comprises an **Average Days from Shipping to Receipt by Carriers** line graph
 The **Shipping Location Performance** report offers the following report-wide filters:
 
 * **Date Shipped** - enables you to select consignments that were shipped within a given date range.
-* **Company Name** - where applicable, enables you to select consignments that were shipped by a particular company within your group. You can select multiple companies if required.
+* **Company** - where applicable, enables you to select consignments that were shipped by a particular company within your group. You can select multiple companies if required.
 * **Shipping Location** - where applicable, enables you to select consignments that were shipped from a particular shipping location.
 * **Carrier** - enables you to select consignments that were shipped via a particular carrier.
 * **Carrier Service** - enables you to select consignments that were shipped via a particular carrier service.
 * **Delivery Type** - enables you to select consignments that were shipped as a particular delivery type (i.e. *Delivery* or *Click and Collect*).
+
+<a href="../images/reports/location-performance-left-filter.png" target="_blank">
+    <img src="../images/reports/location-performance-left-filter.png"/>
+</a>
 
 ## Average Days from Shipping to Receipt by Carriers
 

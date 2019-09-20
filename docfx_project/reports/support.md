@@ -12,8 +12,12 @@ It comprises a **Tickets by Status** pie chart, a **Tickets Logged by Company** 
 
 The **Support** report offers the following report-wide filters:
 
-* **Support Tickets Logged** - enables you to select only those calls that were made within a given date range.
+* **Date Tickets Logged** - enables you to select only those calls that were made within a given date range.
 * **Company Name** - where applicable, enables you to select only those calls that were made by a particular company within your group. You can select multiple companies if required.
+
+<a href="../images/reports/support-left-filter.png" target="_blank">
+    <img src="../images/reports/support-left-filter.png"/>
+</a>
 
 ## Tickets by Status
 
@@ -29,7 +33,7 @@ Hover your mouse over a section of the pie chart to view the number of your tick
     <img src="../images/reports/support-by-status-highlight.png"/>
 </a>
 
-### Visualisation Filters
+### Visual Filters
 
 * **Status** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
 * **Tickets** ([Numerical](/reports/reports.html#using-numerical-filters))
@@ -54,7 +58,7 @@ The **Tickets Logged by Company** bar chart shows how many support tickets each 
     <img src="../images/reports/support-by-company.png"/>
 </a>
 
-### Visualisation Filters
+### Visual Filters
 
 * **Company Name** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
 * **Tickets** ([Numerical](/reports/reports.html#using-numerical-filters))
@@ -85,7 +89,7 @@ Hover your mouse over a section of the pie chart to view the number of open tick
     <img src="../images/reports/support-priority-highlight.png"/>
 </a>
 
-### Visualisation Filters
+### Visual Filters
 
 * **Priority Level** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
 * **Tickets** ([Numerical](/reports/reports.html#using-numerical-filters))
@@ -110,7 +114,7 @@ The **Tickets Logged Per Day By Company** chart shows the total number of ticket
     <img src="../images/reports/support-per-day.png"/>
 </a>
 
-### Visualisation Filters
+### Visual Filters
 
 * **Created Date** ([Basic](/reports/reports.html#using-basic-filters), [Advanced](/reports/reports.html#using-advanced-filters), and [Relative Date](/reports/reports.html#using-relative-date-filters))
 * **Customer Name** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))

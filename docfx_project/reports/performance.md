@@ -27,7 +27,7 @@ The **Delivery Failure Volumes** chart shows the total number of failed consignm
     <img src="../images/reports/performance-failure.png"/>
 </a>
 
-### Visualisation Filters
+### Visual Filters
 
 * **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
 * **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
@@ -46,7 +46,7 @@ The **Delivery Failure Volumes** chart has the following options available from 
 
 ## Late Consignments by Destination
 
-The **Late Consignments by Destination** visualisation shows the destinations of your late consignments, plotted on a map. Locations where late consignments occur more frequently are displayed in red.
+The **Late Consignments by Destination** visual shows the destinations of your late consignments, plotted on a map. Locations where late consignments occur more frequently are displayed in red.
 
 <a href="../images/reports/performance-late-destination.png" target="_blank">
     <img src="../images/reports/performance-late-destination.png"/>
@@ -54,7 +54,7 @@ The **Late Consignments by Destination** visualisation shows the destinations of
 
 If required, you can search for countries and locations using the search bar at the top of the panel.
 
-### Visualisation Filters
+### Visual Filters
 
 * **Count of ConsignmentReference** ([Numerical](/reports/reports.html#using-numerical-filters))
 * **DestinationTownLatitude** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
@@ -91,7 +91,7 @@ Hover your mouse pointer over the chart to view the total number of that carrier
     <img src="../images/reports/performance-success-highlight.png"/>
 </a>
 
-### Visualisation Filters
+### Visual Filters
 
 * **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
 * **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
@@ -122,7 +122,7 @@ Hover your mouse pointer over a particular point in the chart to view how many c
     <img src="../images/reports/performance-date-delivered-highlight.png"/>
 </a>
 
-### Visualisation Filters
+### Visual Filters
 
 * **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
 * **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))

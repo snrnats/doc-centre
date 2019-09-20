@@ -2,7 +2,7 @@
 
 The **API Overview** enables you to get an overview of your organisation's API calls, including call volumes and ATUs used. 
 
-It comprises a data table, an **API Requests by Customer Name** bar chart, an **ATU Total Company** pie chart, and an **API Requests by IntervalDate and CustomerName** line graph. 
+It comprises an API data table, an **API Requests by Customer Name** bar chart, an **ATU Total Company** pie chart, and an **API Requests by IntervalDate and CustomerName** line graph. 
 
 <a href="../images/reports/api.png" target="_blank">
     <img src="../images/reports/api.png"/>
@@ -12,8 +12,12 @@ It comprises a data table, an **API Requests by Customer Name** bar chart, an **
 
 The **API Overview** report offers the following report-wide filters:
 
-* **API Calls** - enables you to select only those calls that were made within a given date range.
+* **Date** - enables you to select only those calls that were made within a given date range.
 * **Company Name** - where applicable, enables you to select only those calls that were made by a particular company within your group. You can select multiple companies if required.
+
+<a href="../images/reports/api-left-filter.png" target="_blank">
+    <img src="../images/reports/api-left-filter.png"/>
+</a>
 
 ## API Requests by Customer Name
 
@@ -23,7 +27,7 @@ The **API Requests by Customer Name** chart shows how many requests each of your
     <img src="../images/reports/api-custname.png"/>
 </a>
 
-### Visualisation Filters
+### Visual Filters
 
 * **API Requests** ([Numerical](/reports/reports.html#using-numerical-filters))
 * **CustomerName** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
@@ -54,7 +58,7 @@ Hover your mouse pointer over the chart to view the ATUs used by each individual
     <img src="../images/reports/api-atu-highlight.png"/>
 </a>
 
-### Visualisation Filters
+### Visual Filters
 
 * **ATU Total** ([Numerical](/reports/reports.html#using-numerical-filters))
 * **CustomerName** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
@@ -85,7 +89,7 @@ Hover your mouse over the chart to view the total number of API requests made by
     <img src="../images/reports/api-requests-highlight.png"/>
 </a>
 
-### Visualisation Filters
+### Visual Filters
 
 * **API Requests** ([Numerical](/reports/reports.html#using-numerical-filters))
 * **CustomerName** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters)

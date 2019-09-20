@@ -2,7 +2,7 @@
 
 The **Shipping Costs** report gives an overview of your organisation's shipping costs by carrier and destination. 
 
-It comprises a table of data, a **Shipping Costs Over Time by Carrier** line chart, a **Shipping Costs Over Time** line chart, and an **Average Shipping Costs by Destination** table.
+It comprises a shipping data table, a **Shipping Costs Over Time by Carrier** line chart, a **Shipping Costs Over Time** line chart, and an **Average Shipping Costs by Destination** table.
 
 <a href="../images/reports/costs.png" target="_blank">
     <img src="../images/reports/costs.png"/>
@@ -17,15 +17,19 @@ It comprises a table of data, a **Shipping Costs Over Time by Carrier** line cha
 The **Shipping Costs** report offers the following report-wide filters:
 
 * **Date Shipped** - enables you to select consignments that were shipped within a given date range.
-* **Company Name** - where applicable, enables you to select consignments that were shipped by a particular company within your group. You can select multiple companies if required.
+* **Company** - where applicable, enables you to select consignments that were shipped by a particular company within your group. You can select multiple companies if required.
 * **Shipping Location** - where applicable, enables you to select consignments that were shipped from a particular shipping location.
 * **Carrier** - enables you to select consignments that were shipped via a particular carrier.
 * **Carrier Service** - enables you to select consignments that were shipped via a particular carrier service.
 * **Delivery Type** - enables you to select consignments that were shipped as a particular delivery type (i.e. *Delivery* or *Click and Collect*).
 
-## Data Table
+<a href="../images/reports/costs-left-filter.png" target="_blank">
+    <img src="../images/reports/costs-left-filter.png"/>
+</a>
 
-The data table shows the following:
+## Shipping Costs Table
+
+The **Shipping Costs** table shows the following:
 
 * **Total Shipping Costs**
 * **Average Shipping Cost per Consignment**
@@ -36,7 +40,7 @@ The data table shows the following:
     <img src="../images/reports/costs-table.png"/>
 </a>
 
-### Visualisation Filters
+### Visual Filters
 
 ### More Options
 
@@ -60,7 +64,7 @@ Hover your mouse over a particular point on the chart to view that carrier's shi
     <img src="../images/reports/costs-over-time-carrier-highlight.png"/>
 </a>
 
-### Visualisation Filters
+### Visual Filters
 
 * **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
 * **Date Shipped** ([Basic](/reports/reports.html#using-basic-filters), [Advanced](/reports/reports.html#using-advanced-filters), and [Relative Date](/reports/reports.html#using-relative-date-filters))
@@ -89,7 +93,7 @@ Hover your mouse over a particular point on the chart to view your total shippin
     <img src="../images/reports/costs-over-time-highlight.png"/>
 </a>
 
-### Visualisation Filters
+### Visual Filters
 
 * **Date Shipped** ([Basic](/reports/reports.html#using-basic-filters), [Advanced](/reports/reports.html#using-advanced-filters), and [Relative Date](/reports/reports.html#using-relative-date-filters))
 * **Parcel Charges** ([Numerical](/reports/reports.html#using-numerical-filters))
@@ -143,7 +147,7 @@ To return to the table's default level (average shipping cost to each destinatio
     <img src="../images/reports/costs-destination-drill-up.png"/>
 </a>
 
-### Visualisation Filters
+### Visual Filters
 
 * **Average Shipping Cost** ([Numerical](/reports/reports.html#using-numerical-filters))
 * **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))

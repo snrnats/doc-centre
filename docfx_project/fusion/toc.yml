@@ -9,15 +9,13 @@
   items:
     - name: Traffic Profile
       href: ../reports/traffic-profile.md
-    - name: Carrier
+    - name: Volume by Carrier
       href: ../reports/by-carrier.md
-    - name: Destination Country
+    - name: Volume by Country
       href: ../reports/by-country.md
-    - name: Carrier Performance
-      href: ../reports/performance.md
     - name: Delivery Experience
       href: ../reports/experience.md                 
-    - name: Carrier Service
+    - name: Volume by Carrier Service
       href: ../reports/by-carrier-service.md
     - name: Locations
       href: ../reports/location-performance.md

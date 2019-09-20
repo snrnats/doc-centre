@@ -6,24 +6,39 @@ The **Traffic Profile** report shows how many consignments that your organisatio
     <img src="../images/reports/traffic-profile.png"/>
 </a>
 
+> <span class="note-header">More Information:</span>
+> In the context of PRO, the term "consignment" refers to a collection of one or more packages that are shipped from the same origin address, to the same destination address, on behalf of the same Sorted customer, using the same carrier service, on the same day.
+>
+> A package is an item or a collection of items, wrapped or contained together for shipment. Each package can contain one or more items.
+>
+> As an example, suppose that a clothing retailer has received a customer order for a necklace, a bracelet, a coat, and a hat. As the necklace and bracelet are both physically small, the retailer elects to ship them in the same package. As such, this sales order would break down to:
+>
+> * Four items - The necklace, the bracelet, the coat, and the hat.
+> * Three packages - One containing the necklace and bracelet, one containing the coat, and one containing the hat.
+> * A single consignment corresponding to everything on the order.
+
 ## Report Filters
 
 The **Traffic Profile** report offers the following report-wide filters:
 
-* **Consignments Manifested** - enables you to select consignments that were manifested within a given date range.
-* **Company Name** - where applicable, enables you to select consignments that were manifested by a particular company within your group. You can select multiple companies if required.
+* **Date Manifested** - enables you to select consignments that were manifested within a given date range.
+* **Company** - where applicable, enables you to select consignments that were manifested by a particular company within your group. You can select multiple companies if required.
 * **Shipping Location** - where applicable, enables you to select consignments that were manifested from a particular shipping location.
 * **Carrier** - enables you to select consignments that were manifested to a particular carrier.
 * **Carrier Service** - enables you to select consignments that were manifested to a particular carrier service.
 * **Delivery Type** - enables you to select consignments that were used a particular delivery type (i.e. *Delivery* or *Click and Collect*).
 
-## Data Table
+<a href="../images/reports/traffic-profile-left-filter.png" target="_blank">
+    <img src="../images/reports/traffic-profile-left-filter.png"/>
+</a>
+
+## Consignments Table
 
 <a href="../images/reports/traffic-profile-table.png" target="_blank">
     <img src="../images/reports/traffic-profile-table.png"/>
 </a>
 
-The data table visualisation lists the following information for each carrier (with any report filters taken into account):
+The consignment data table visual lists the following information for each carrier (with any report filters taken into account):
 
 * **Consignments** - Number of consignments manifested.
 * **Packages** - Number of packages manifested.
@@ -31,7 +46,7 @@ The data table visualisation lists the following information for each carrier (w
 * **Average Weight, KG** - The average weight, in kilograms, of the consignments shipped.
 * **Average Weight, Volumetric** - The average volumetric weight of the consignments shipped.
 
-### Visualisation Filters
+### Visual Filters
 
 The data table offers the following filters:
 
@@ -56,7 +71,7 @@ The data table has the following options available from its **More Options** men
 
 ## Consignment Volume Distribution by Absolute Weight Chart
 
-The **Consignment Volume Distribution by Absolute Weight** chart displays the weight distribution of your manifested consignments. It is intended to help you identify trends in the weights of the consignments you manifest.
+The **Consignment Volume Distribution by Absolute Weight** chart displays the weight distribution of your manifested consignments. 
 
 <a href="../images/reports/traffic-profile-weight.png" target="_blank">
     <img src="../images/reports/traffic-profile-weight.png"/>
@@ -64,7 +79,7 @@ The **Consignment Volume Distribution by Absolute Weight** chart displays the we
 
 In the example above, the company in question has shipped 53,324 consignments that were between 0 and 4.75kg in weight, 10,306 parcels that were between 4.76 and 9.52 kg in weight, and so on.
 
-### Visualisation Filters
+### visual Filters
 
 * **Count of ConsignmentReference** ([Numerical](/reports/reports.html#using-numerical-filters))
 * **Kilograms** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
@@ -80,15 +95,21 @@ The **Consignment Volume Distribution by Absolute Weight** chart has the followi
 
 ## Consignment Volume Distribution by Volumetric Weight Chart
 
-The **Consignment Volume Distribution by Volumetric Weight** chart displays the volumetric weight distribution of your manifested consignments. It is intended to help you identify trends in the weights of the consignments you manifest.
+The **Consignment Volume Distribution by Volumetric Weight** chart displays the volumetric weight distribution of your manifested consignments. 
 
 <a href="../images/reports/traffic-profile-vol-weight.png" target="_blank">
     <img src="../images/reports/traffic-profile-vol-weight.png"/>
 </a>
 
+> <span class="note-header">Note:</span>
+>
+> Volumetric weight is a method of estimating a parcel's weight using its dimensions. It is usually calculated as the parcel's length x weight x height (all in cm) / 5000, although exact calculations can vary between carriers.
+> 
+> For example, a 10cm cube would have a volumetric weight of 10 x 10 x 10 / 5000 = 0.2 kg
+
 In the example above, the company in question has shipped 65,091 consignments that were between 0 and 9.26kg in volumetric weight, 7,550 parcels that were between 9.72 and 18.53 kg in volumetric weight, and so on.
 
-### Visualisation Filters
+### Visual Filters
 
 * **Count of ConsignmentReference** ([Numerical](/reports/reports.html#using-numerical-filters))
 * **Kilograms** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))

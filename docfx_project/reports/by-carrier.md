@@ -2,7 +2,7 @@
 
 The **Volume by Carrier** report displays a breakdown of how many consignments and packages you have shipped with each of your carriers, and shows how the volume of consignments shipped with each carrier has changed over time. 
 
-It comprises a table listing consignment and packages data, a **Consignments by Carrier** pie chart showing each carrier's share of your consignments, and **Consignments Shipped by Carrier Over Time** line graph.
+It comprises a consignment data table, a **Consignments by Carrier** pie chart showing each carrier's share of your consignments, and **Consignments Shipped by Carrier Over Time** line graph.
 
 <a href="../images/reports/by-carrier.png" target="_blank">
     <img src="../images/reports/by-carrier.png"/>
@@ -13,21 +13,25 @@ It comprises a table listing consignment and packages data, a **Consignments by 
 The **Volume by Carrier** report offers the following report-wide filters:
 
 * **Date Shipped** - enables you to select consignments that were shipped within a given date range.
-* **Company Name** - where applicable, enables you to select consignments that were shipped by a particular company within your group. You can select multiple companies if required.
+* **Company** - where applicable, enables you to select consignments that were shipped by a particular company within your group. You can select multiple companies if required.
 * **Shipping Location** - where applicable, enables you to select consignments that were shipped from a particular shipping location.
 * **Carrier** - enables you to select consignments that were shipped via a particular carrier.
 * **Carrier Service** - enables you to select consignments that were shipped via a particular carrier service.
 * **Delivery Type** - enables you to select consignments that were shipped as a particular delivery type (i.e. *Delivery* or *Click and Collect*).
 
-## Data Table
+<a href="../images/reports/by-carrier-left-filter.png" target="_blank">
+    <img src="../images/reports/by-carrier-left-filter.png"/>
+</a>
 
-The data table visualisation lists the total number of packages and consignments shipped for each carrier. 
+## Consignments Table
+
+The consignments table visual lists the total number of packages and consignments shipped for each carrier. 
 
 <a href="../images/reports/by-carrier-data-table.png" target="_blank">
     <img src="../images/reports/by-carrier-data-table.png"/>
 </a>
 
-### Visualisation Filters
+### Visual Filters
 
 * **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
 * **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
@@ -53,7 +57,7 @@ The **Consignments by Carrier** pie chart displays each carrier's share of your 
     <img src="../images/reports/by-carrier-pie.png"/>
 </a>
 
-### Visualisation Filters
+### Visual Filters
 
 * **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
 * **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
@@ -84,7 +88,7 @@ Hover your mouse pointer over a particular day to view exact per-carrier shipmen
     <img src="../images/reports/by-carrier-over-time-highlight.png"/>
 </a>
 
-### Visualisation Filters
+### Visual Filters
 
 * **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
 * **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))

@@ -2,7 +2,7 @@
 
 The **Shipped Consignments by Destination Country** report enables you to see the volume of consignments you have shipped to each of your destination countries. 
 
-It comprises a table listing consignment and package data, a **Consignment Volumes By Country** chart with the shipment data plotted on a map, and a **% of Consignment Volume by Destination Country** bar chart.
+It comprises a consignment data table, a **Consignment Volumes By Country** chart with the shipment data plotted on a map, and a **% of Consignment Volume by Destination Country** bar chart.
 
 <a href="../images/reports/by-country.png" target="_blank">
     <img src="../images/reports/by-country.png"/>
@@ -10,7 +10,7 @@ It comprises a table listing consignment and package data, a **Consignment Volum
 
 > <span class="note-header">Note:</span>
 >
-> In order for the data in this chart to be accurate, your consignments must have a destination country recorded. Specifically, they must have a valid `Address` object that has an `AddressType` of `Destination` and the relevant two-letter country code in the `Address.Country.IsoCode.TwoLetterCode` field.
+> In order for the data in this chart to be accurate, your consignments must have the correct destination country recorded. 
 >
 > For more information on recording consignment data in PRO, see the [Create Consignment](https://docs.electioapp.com/#/api/CreateConsignment) page of the API reference.
 
@@ -19,21 +19,25 @@ It comprises a table listing consignment and package data, a **Consignment Volum
 The **Shipped Consignments by Destination Country** report offers the following report-wide filters:
 
 * **Date Shipped** - enables you to select consignments that were shipped within a given date range.
-* **Company Name** - where applicable, enables you to select consignments that were shipped by a particular company within your group. You can select multiple companies if required.
+* **Company** - where applicable, enables you to select consignments that were shipped by a particular company within your group. You can select multiple companies if required.
 * **Shipping Location** - where applicable, enables you to select consignments that were shipped from a particular shipping location.
 * **Carrier** - enables you to select consignments that were shipped via a particular carrier.
 * **Carrier Service** - enables you to select consignments that were shipped via a particular carrier service.
 * **Delivery Type** - enables you to select consignments that were shipped as a particular delivery type (i.e. *Delivery* or *Click and Collect*).
 
-## Data Table
+<a href="../images/reports/by-country-left-filter.png" target="_blank">
+    <img src="../images/reports/by-country-left-filter.png"/>
+</a>
 
-The data table shows how many consignments and packages were shipped to each of your destination countries (with any report filters taken into account):
+## Consignments Table
+
+The consignments table shows how many consignments and packages were shipped to each of your destination countries (with any report filters taken into account):
 
 <a href="../images/reports/by-country-table.png" target="_blank">
     <img src="../images/reports/by-country-table.png"/>
 </a>
 
-### Visualisation Filters
+### Visual Filters
 
 * **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
 * **Destination Country** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
@@ -62,7 +66,7 @@ The **Consignment Volumes by Country** chart displays the countries your organis
 
 If required, you can search for countries and locations using the search bar at the top of the panel.
 
-### Visualisation Filters
+### Visual Filters
 
 * **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
 * **MapBox** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
@@ -84,7 +88,7 @@ The **% of Consignment Volume by Destination Country** bar chart shows each dest
     <img src="../images/reports/by-country-top-10.png"/>
 </a>
 
-### Visualisation Filters
+### Visual Filters
 
 * **%GT Count of ConsignmentReference** ([Numerical](/reports/reports.html#using-numerical-filters))
 

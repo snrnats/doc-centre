@@ -13,11 +13,15 @@ It comprises a **Consignments by Delivery Window** pie chart, a **Customer Promi
 The **Delivery Experience** report offers the following report-wide filters:
 
 * **Date Shipped** - enables you to select consignments that were shipped within a given date range.
-* **Company Name** - where applicable, enables you to select consignments that were shipped by a particular company within your group. You can select multiple companies if required.
+* **Company** - where applicable, enables you to select consignments that were shipped by a particular company within your group. You can select multiple companies if required.
 * **Shipping Location** - where applicable, enables you to select consignments that were shipped from a particular shipping location.
 * **Carrier** - enables you to select consignments that were shipped via a particular carrier.
 * **Carrier Service** - enables you to select consignments that were shipped via a particular carrier service.
 * **Delivery Type** - enables you to select consignments that were shipped as a particular delivery type (i.e. *Delivery* or *Click and Collect*).
+
+<a href="../images/reports/experience-left-filter.png" target="_blank">
+    <img src="../images/reports/experience-left-filter.png"/>
+</a>
 
 ## Consignments by Delivery Window
 
@@ -27,7 +31,7 @@ The **Consignments by Delivery Window** pie chart shows the proportion of your c
     <img src="../images/reports/experience-delivery-window.png"/>
 </a>
 
-### Visualisation Filters
+### Visual Filters
 
 * **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
 * **Delivery Window** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
@@ -58,7 +62,7 @@ Hover your mouse over an area of the chart to see further details.
     <img src="../images/reports/experience-promise-highlight.png"/>
 </a>
 
-### Visualisation Filters
+### Visual Filters
 
 * **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
 * **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
@@ -90,7 +94,7 @@ Hover your mouse over an area of the chart to see the number of that carrier's c
     <img src="../images/reports/experience-type-by-carrier-highlight.png"/>
 </a>
 
-### Visualisation Filters
+### Visual Filters
 
 * **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
 * **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
@@ -128,7 +132,7 @@ Hover your mouse over an area of the chart to see the number of that carrier's c
     <img src="../images/reports/experience-window-highlight.png"/>
 </a>
 
-### Visualisation Filters
+### Visual Filters
 
 * **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
 * **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))

@@ -26,17 +26,43 @@ When you open the app, the **Traffic Profile** report is displayed. To select ot
   <img src="../images/reports/toolbar.png"/>
 </a>
 
-Each PRO report is a collection of data visualisations (such as charts, tables, and maps) that gives you an overview of a particular aspect of your shipping performance. For example, the **Volumes by Carrier** report features a table listing how many consignments and packages each of your carriers has shipped, a pie chart showing the share of your total consignments that shipped with each of your carriers, and a chart showing each carrier's total shipments over time. 
+Each PRO report is a collection of data visuals (such as charts, tables, and maps) that gives you an overview of a particular aspect of your shipping performance. For example, the **Volumes by Carrier** report features a table listing how many consignments and packages each of your carriers has shipped, a pie chart showing the share of your total consignments that shipped with each of your carriers, and a chart showing each carrier's total shipments over time. 
 
 <a href="../images/reports/by-carrier.png" target="_blank">
   <img src="../images/reports/by-carrier.png"/>
 </a>
 
-These three visualisations enable you to get a picture of how much of your shipment volume each carrier is handing.
+These three visuals enable you to get a picture of how much of your shipment volume each carrier is handing.
 
-The PRO reports are dynamic, enabling you to filter the data displayed on each visualisation, and in some cases drill down to the raw data itself.
+> <span class="note-header">Note:</span>
+>
+> Sorted takes data confidentiality very seriously. Each Sorted customer can only use the app to view their own organisation's data. 
+
+### Focus mode
+
+Power BI's Focus mode enables you to expand a visual or tile to see more detail. All other visuals on the report are temporarily hidden.
+
+<a href="../images/reports/focus-before.png" target="_blank">
+  <img src="../images/reports/focus-before.png"/>
+</a>
+
+<a href="../images/reports/focus-after.png" target="_blank">
+  <img src="../images/reports/focus-after.png"/>
+</a>
+
+To open a visual in Focus mode, hover your mouse pointer over it and click the **Focus Mode** button.
+
+<a href="../images/reports/focus-mode.png" target="_blank">
+  <img src="../images/reports/focus-mode.png"/>
+</a>
+
+To return to the full report when in Focus mode, click the **Back to Report** button.
+
+<a href="../images/reports/focus-btr.png" target="_blank">
+  <img src="../images/reports/focus-btr.png"/>
+</a>
 
 ## Next Steps
 
-* For an overview of filters and visualisation options, see the [Filters and Options](filters-options.md) page.
+* For an overview of filters and visual options, see the [Filters and Options](filters-options.md) page.
 * For further details on the reports themselves, see the [Reports](reports.md) section.
