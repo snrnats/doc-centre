@@ -48,6 +48,12 @@ The **Consignments by Delivery Window** chart has the following options availabl
 * [Sort Ascending](/reports/reports.html#sort-descending--ascending--sort-by)
 * [Sort by](/reports/reports.html#sort-descending--ascending--sort-by) Delivery Window / Consignments
 
+### Viewing Data
+
+<a href="../images/reports/experience-delivery-window-data.png" target="_blank">
+    <img src="../images/reports/experience-delivery-window-data.png"/>
+</a>
+
 ## Customer Promise Met
 
 The **Customer Promise Met** chart shows the proportion of each carrier's shipments that met their delivery promise.
@@ -80,6 +86,12 @@ The **Customer Promise Met** chart has the following options available from its 
 * [Sort Ascending](/reports/reports.html#sort-descending--ascending--sort-by)
 * [Sort by](/reports/reports.html#sort-descending--ascending--sort-by) Carrier / Consignments
 
+### Viewing Data
+
+<a href="../images/reports/experience-promise-data.png" target="_blank">
+    <img src="../images/reports/experience-promise-data.png"/>
+</a>
+
 ## Delivery Type by Carrier
 
 The **Delivery Type by Carrier** chart shows the proportion of each carrier's consignments that used a particular delivery type (for example, *Click-and-Collect* or *Delivery*).
@@ -111,6 +123,12 @@ The **Delivery Type by Carrier** chart has the following options available from 
 * [Sort Descending](/reports/reports.html#sort-descending--ascending--sort-by)
 * [Sort Ascending](/reports/reports.html#sort-descending--ascending--sort-by)
 * [Sort by](/reports/reports.html#sort-descending--ascending--sort-by) Carrier / Consignments
+
+### Viewing Data
+
+<a href="../images/reports/experience-type-by-carrier-data.png" target="_blank">
+    <img src="../images/reports/experience-type-by-carrier-data.png"/>
+</a>
 
 ## Delivery Window by Carrier
 
@@ -148,3 +166,9 @@ The **Delivery Window by Carrier** chart has the following options available fro
 * [Sort Descending](/reports/reports.html#sort-descending--ascending--sort-by)
 * [Sort Ascending](/reports/reports.html#sort-descending--ascending--sort-by)
 * [Sort by](/reports/reports.html#sort-descending--ascending--sort-by) Carrier / Consignments
+
+### Viewing Data
+
+<a href="../images/reports/experience-window-data.png" target="_blank">
+    <img src="../images/reports/experience-window-data.png"/>
+</a>

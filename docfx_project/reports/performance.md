@@ -44,6 +44,12 @@ The **Delivery Failure Volumes** chart has the following options available from 
 * [Sort Ascending](/reports/reports.html#sort-descending--ascending--sort-by)
 * [Sort by](/reports/reports.html#sort-descending--ascending--sort-by) Carrier / Consignments
 
+### Viewing Data
+
+<a href="../images/reports/performance-failure-data.png" target="_blank">
+    <img src="../images/reports/performance-failure-data.png"/>
+</a>
+
 ## Late Consignments by Destination
 
 The **Late Consignments by Destination** visual shows the destinations of your late consignments, plotted on a map. Locations where late consignments occur more frequently are displayed in red.
@@ -68,6 +74,12 @@ The **Late Consignments by Destination** chart has the following options availab
 * [Export Data](/reports/reports.html#export-data)
 * [Show Data](/reports/reports.html#show-data)
 * [Spotlight](/reports/reports.html#spotlight)
+
+### Viewing Data
+
+<a href="../images/reports/performance-late-destination-data.png" target="_blank">
+    <img src="../images/reports/performance-late-destination-data.png"/>
+</a>
 
 ## Delivery Success
  
@@ -108,6 +120,12 @@ The **Delivery Success** chart has the following options available from its **Mo
 * [Sort Ascending](/reports/reports.html#sort-descending--ascending--sort-by)
 * [Sort by](/reports/reports.html#sort-descending--ascending--sort-by) Carrier / Consignments
 
+### Viewing Data
+
+<a href="../images/reports/performance-success-data.png" target="_blank">
+    <img src="../images/reports/performance-success-data.png"/>
+</a>
+
 ## Consignments by Date Delivered Only and Carrier
 
 The **Consignments by Date Delivered Only and Carrier** chart shows how many consignments were delivered per day by each carrier over time.
@@ -136,3 +154,9 @@ The **Consignments by Date Delivered Only and Carrier** chart has the following 
 * [Export Data](/reports/reports.html#export-data)
 * [Show Data](/reports/reports.html#show-data)
 * [Spotlight](/reports/reports.html#spotlight)
+
+### Viewing Data
+
+<a href="../images/reports/performance-date-delivered-data.png" target="_blank">
+    <img src="../images/reports/performance-date-delivered-data.png"/>
+</a>

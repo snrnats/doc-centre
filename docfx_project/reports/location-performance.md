@@ -52,6 +52,12 @@ The **Average Days from Shipping to Receipt by Carriers** chart has the followin
 * [Show Data](/reports/reports.html#show-data)
 * [Spotlight](/reports/reports.html#spotlight)
 
+### Viewing Data
+
+<a href="../images/reports/location-performance-ship-days-data.png" target="_blank">
+    <img src="../images/reports/location-performance-ship-days-data.png"/>
+</a>
+
 ## Carrier Usage
 
 The **Carrier Usage** chart shows how many consignments were allocated to each of your carriers on a particular day. Each bar on the graph represents a single day, and each bar segment represents the proportion of that day's consignments that were allocated to a particular carrier.
@@ -81,6 +87,12 @@ The **Carrier Usage** chart has the following options available from its **More 
 * [Show Data](/reports/reports.html#show-data)
 * [Spotlight](/reports/reports.html#spotlight)
 
+### Viewing Data
+
+<a href="../images/reports/location-performance-usage-data.png" target="_blank">
+    <img src="../images/reports/location-performance-usage-data.png"/>
+</a>
+
 ## Average Days to Ship by Shipping Location
 
 The **Average Days to Ship by Shipping Location** chart shows the average time from consignment creation to carrier receipt by shipping location. Each bar on the graph represents one of your shipping locations.
@@ -105,6 +117,12 @@ The **Average Days to Ship by Shipping Location** chart has the following option
 * [Sort Descending](/reports/reports.html#sort-descending--ascending--sort-by)
 * [Sort Ascending](/reports/reports.html#sort-descending--ascending--sort-by)
 * [Sort by](/reports/reports.html#sort-descending--ascending--sort-by) Shipping Location / Average Days to Ship
+
+### Viewing Data
+
+<a href="../images/reports/location-performance-avg-days-data.png" target="_blank">
+    <img src="../images/reports/location-performance-avg-days-data.png"/>
+</a>
 
 ## Consignments Over Time by Shipping Location
 
@@ -134,3 +152,9 @@ The **Consignments Over Time by Shipping Location** chart has the following opti
 * [Export Data](/reports/reports.html#export-data)
 * [Show Data](/reports/reports.html#show-data)
 * [Spotlight](/reports/reports.html#spotlight)
+
+### Viewing Data
+
+<a href="../images/reports/location-performance-over-time-data.png" target="_blank">
+    <img src="../images/reports/location-performance-over-time-data.png"/>
+</a>

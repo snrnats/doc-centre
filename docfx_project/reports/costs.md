@@ -79,6 +79,12 @@ The **Shipping Cost Over Time by Carrier** chart has the following options avail
 * [Show Data](/reports/reports.html#show-data)
 * [Spotlight](/reports/reports.html#spotlight)
 
+### Viewing Data
+
+<a href="../images/reports/costs-over-time-carrier-data.png" target="_blank">
+    <img src="../images/reports/costs-over-time-carrier-data.png"/>
+</a>
+
 ## Shipping Cost Over Time
 
 The **Shipping Cost Over Time** chart shows how your total daily shipping costs have changed over time.
@@ -106,6 +112,12 @@ The **Shipping Cost Over Time** chart has the following options available from i
 * [Export Data](/reports/reports.html#export-data)
 * [Show Data](/reports/reports.html#show-data)
 * [Spotlight](/reports/reports.html#spotlight)
+
+### Viewing Data
+
+<a href="../images/reports/costs-over-time-data.png" target="_blank">
+    <img src="../images/reports/costs-over-time-data.png"/>
+</a>
 
 ## Average Shipping Cost by Destination
 

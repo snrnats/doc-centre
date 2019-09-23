@@ -79,7 +79,7 @@ The **Consignment Volume Distribution by Absolute Weight** chart displays the we
 
 In the example above, the company in question has shipped 53,324 consignments that were between 0 and 4.75kg in weight, 10,306 parcels that were between 4.76 and 9.52 kg in weight, and so on.
 
-### visual Filters
+### Visual Filters
 
 * **Count of ConsignmentReference** ([Numerical](/reports/reports.html#using-numerical-filters))
 * **Kilograms** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
@@ -92,6 +92,12 @@ The **Consignment Volume Distribution by Absolute Weight** chart has the followi
 * [Export Data](/reports/reports.html#export-data)
 * [Show Data](/reports/reports.html#show-data)
 * [Spotlight](/reports/reports.html#spotlight)
+
+### Viewing Data
+
+<a href="../images/reports/traffic-profile-weight-data.png" target="_blank">
+    <img src="../images/reports/traffic-profile-weight-data.png"/>
+</a>
 
 ## Consignment Volume Distribution by Volumetric Weight Chart
 
@@ -122,3 +128,9 @@ The **Consignment Volume Distribution by Volumetric Weight** chart has the follo
 * [Export Data](/reports/reports.html#export-data)
 * [Show Data](/reports/reports.html#show-data)
 * [Spotlight](/reports/reports.html#spotlight)
+
+### Viewing Data
+
+<a href="../images/reports/traffic-profile-vol-weight-data.png" target="_blank">
+    <img src="../images/reports/traffic-profile-vol-weight-data.png"/>
+</a>

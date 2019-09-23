@@ -49,9 +49,9 @@ The data table has the following options available from its **More Options** men
 * [Sort Ascending](/reports/reports.html#sort-descending--ascending--sort-by)
 * [Sort by](/reports/reports.html#sort-descending--ascending--sort-by) Carrier / Consignments / Packages
 
-## Consignments by Carrier
+## Consignments by Carrier Name
 
-The **Consignments by Carrier** pie chart displays each carrier's share of your total consignments.
+The **Consignments by Carrier Name** pie chart displays each carrier's share of your total consignments.
 
 <a href="../images/reports/by-carrier-pie.png" target="_blank">
     <img src="../images/reports/by-carrier-pie.png"/>
@@ -64,7 +64,7 @@ The **Consignments by Carrier** pie chart displays each carrier's share of your 
 
 ### More Options
 
-The **Consignments by Carrier** chart has the following options available from its **More Options** menu:
+The **Consignments by Carrier Name** chart has the following options available from its **More Options** menu:
 
 * [Open Comments](/reports/reports.html#open-comments)
 * [Export Data](/reports/reports.html#export-data)
@@ -73,6 +73,12 @@ The **Consignments by Carrier** chart has the following options available from i
 * [Sort Descending](/reports/reports.html#sort-descending--ascending--sort-by)
 * [Sort Ascending](/reports/reports.html#sort-descending--ascending--sort-by)
 * [Sort by](/reports/reports.html#sort-descending--ascending--sort-by) Carrier / Consignments
+
+### Viewing Data
+
+<a href="../images/reports/by-carrier-pie-data.png" target="_blank">
+    <img src="../images/reports/by-carrier-pie-data.png"/>
+</a>
 
 ## Consignments Shipped by Carrier Over Time Chart
 
@@ -102,3 +108,9 @@ The **Consignments Shipped by Carrier Over Time** chart has the following option
 * [Export Data](/reports/reports.html#export-data)
 * [Show Data](/reports/reports.html#show-data)
 * [Spotlight](/reports/reports.html#spotlight)
+
+### Viewing Data
+
+<a href="../images/reports/by-carrier-over-time-data.png" target="_blank">
+    <img src="../images/reports/by-carrier-over-time-data.png"/>
+</a>

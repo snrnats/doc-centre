@@ -50,6 +50,12 @@ The **Tickets by Status** chart has the following options available from its **M
 * [Sort Ascending](/reports/reports.html#sort-descending--ascending--sort-by)
 * [Sort by](/reports/reports.html#sort-descending--ascending--sort-by) Status / Tickets
 
+### Viewing Data
+
+<a href="../images/reports/support-by-status-data.png" target="_blank">
+    <img src="../images/reports/support-by-status-data.png"/>
+</a>
+
 ## Tickets Logged by Company
 
 The **Tickets Logged by Company** bar chart shows how many support tickets each of your companies has logged.
@@ -74,6 +80,12 @@ The **Tickets Logged by Company** chart has the following options available from
 * [Sort Descending](/reports/reports.html#sort-descending--ascending--sort-by)
 * [Sort Ascending](/reports/reports.html#sort-descending--ascending--sort-by)
 * [Sort by](/reports/reports.html#sort-descending--ascending--sort-by) Company Name / Tickets
+
+### Viewing Data
+
+<a href="../images/reports/support-by-company-data.png" target="_blank">
+    <img src="../images/reports/support-by-company-data.png"/>
+</a>
 
 ## Tickets by Priority Level
 
@@ -106,6 +118,12 @@ The **Tickets by Priority Level** chart has the following options available from
 * [Sort Ascending](/reports/reports.html#sort-descending--ascending--sort-by)
 * [Sort by](/reports/reports.html#sort-descending--ascending--sort-by) Priority Level / Tickets
 
+### Viewing Data
+
+<a href="../images/reports/support-priority-data.png" target="_blank">
+    <img src="../images/reports/support-priority-data.png"/>
+</a>
+
 ## Tickets Logged Per Day By Company
 
 The **Tickets Logged Per Day By Company** chart shows the total number of tickets logged by each of your companies on any given day.
@@ -128,3 +146,9 @@ The **Tickets Logged Per Day By Company** chart has the following options availa
 * [Export Data](/reports/reports.html#export-data)
 * [Show Data](/reports/reports.html#show-data)
 * [Spotlight](/reports/reports.html#spotlight)
+
+### Viewing Data
+
+<a href="../images/reports/support-per-day-data.png" target="_blank">
+    <img src="../images/reports/support-per-day-data.png"/>
+</a>
