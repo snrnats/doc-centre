@@ -99,6 +99,8 @@ The **Consignment Volume Distribution by Absolute Weight** chart has the followi
     <img src="../images/reports/traffic-profile-weight-data.png"/>
 </a>
 
+The **Consignment Volume Distribution by Absolute Weight** chart's **Show Data** option displays a table of absolute weights in kilograms (rounded to the nearest 10 grams), and a count of how many consignments met each weight. For example, the sample image shows that the customer shipped 266 consignments with a total weight of 0.14 kg (i.e. 140 grams), and 39 consignments with a total weight of 0.25 kg (250 grams). 
+
 ## Consignment Volume Distribution by Volumetric Weight Chart
 
 The **Consignment Volume Distribution by Volumetric Weight** chart displays the volumetric weight distribution of your manifested consignments. 
@@ -134,3 +136,5 @@ The **Consignment Volume Distribution by Volumetric Weight** chart has the follo
 <a href="../images/reports/traffic-profile-vol-weight-data.png" target="_blank">
     <img src="../images/reports/traffic-profile-vol-weight-data.png"/>
 </a>
+
+The **Consignment Volume Distribution by Volumetric Weight** chart's **Show Data** option displays a table of volumetric weights in kilograms (rounded to the nearest 10 grams), and a count of how many consignments met each weight. For example, the sample image shows that the customer shipped 266 consignments with a total weight of 0.14 kg (i.e. 140 grams), and 39 consignments with a total weight of 0.25 kg (250 grams). 

@@ -80,6 +80,8 @@ The **Consignments by Carrier Name** chart has the following options available f
     <img src="../images/reports/by-carrier-pie-data.png"/>
 </a>
 
+The **Consignments by Carrier Name** chart's **Show Data** chart lists the number of consignments you have shipped with each carrier. 
+
 ## Consignments Shipped by Carrier Over Time Chart
 
 The **Consignments Shipped by Carrier Over Time** chart shows how many shipments each of your carriers made on each day of the selected time period. You can control the time period displayed using the **Date Shipped** report filter.
@@ -114,3 +116,5 @@ The **Consignments Shipped by Carrier Over Time** chart has the following option
 <a href="../images/reports/by-carrier-over-time-data.png" target="_blank">
     <img src="../images/reports/by-carrier-over-time-data.png"/>
 </a>
+
+The **Consignments Shipped by Carrier Over Time** chart's **Show Data** option shows the number of consignments that were whipped by each of your carriers on each day.

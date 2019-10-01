@@ -119,5 +119,5 @@ The **API Requests by IntervalDate and CustomerName** chart has the following op
 ### Viewing Data
 
 <a href="../images/reports/api-requests-data.png" target="_blank">
-    <img src="../images/reports/api-requests--data.png"/>
+    <img src="../images/reports/api-requests-data.png"/>
 </a>
