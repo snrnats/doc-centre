@@ -40,8 +40,6 @@ The **Shipping Costs** table shows the following:
     <img src="../images/reports/costs-table.png"/>
 </a>
 
-### Visual Filters
-
 ### More Options
 
 The data table has the following options available from its **More Options** menu:
@@ -85,6 +83,8 @@ The **Shipping Cost Over Time by Carrier** chart has the following options avail
     <img src="../images/reports/costs-over-time-carrier-data.png"/>
 </a>
 
+The **Shipping Cost Over Time by Carrier** chart's **Show Data** option shows how much money you spent with each of your carriers for each day in your dataset.
+
 ## Shipping Cost Over Time
 
 The **Shipping Cost Over Time** chart shows how your total daily shipping costs have changed over time.
@@ -118,6 +118,8 @@ The **Shipping Cost Over Time** chart has the following options available from i
 <a href="../images/reports/costs-over-time-data.png" target="_blank">
     <img src="../images/reports/costs-over-time-data.png"/>
 </a>
+
+The **Shipping Cost Over Time** chart's **Show Data** option shows you total shipping costs for each day in your dataset.
 
 ## Average Shipping Cost by Destination
 

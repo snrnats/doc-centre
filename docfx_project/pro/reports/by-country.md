@@ -86,6 +86,8 @@ The **Consignment Volumes by Country** chart has the following options available
     <img src="../images/reports/by-country-volumes-data.png"/>
 </a>
 
+The **Consignment Volumes by Country** chart's **View Data** option shows the number of consignments that you shipped to each destination country.
+
 ## % of Consignment Volume by Destination Country
 
 The **% of Consignment Volume by Destination Country** bar chart shows each destination country's share of your total shipments. Click on a bar to view the corresponding country on the **Consignment Volumes by Country** map.
@@ -115,3 +117,5 @@ The **% of Consignment Volume by Destination Country** chart has the following o
 <a href="../images/reports/by-country-top-10-data.png" target="_blank">
     <img src="../images/reports/by-country-top-10-data.png"/>
 </a>
+
+The **% of Consignment Volume by Destination Country** chart's **View Data** option shows each destination country's percentage share of your total shipments.

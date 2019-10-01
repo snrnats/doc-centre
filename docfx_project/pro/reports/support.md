@@ -56,6 +56,8 @@ The **Tickets by Status** chart has the following options available from its **M
     <img src="../images/reports/support-by-status-data.png"/>
 </a>
 
+The **Tickets by Status** chart's **Show Data** option shows how many of your support tickets are in each of the support statuses.
+
 ## Tickets Logged by Company
 
 The **Tickets Logged by Company** bar chart shows how many support tickets each of your companies has logged.
@@ -86,6 +88,8 @@ The **Tickets Logged by Company** chart has the following options available from
 <a href="../images/reports/support-by-company-data.png" target="_blank">
     <img src="../images/reports/support-by-company-data.png"/>
 </a>
+
+The **Tickets Logged by Company** chart's **Show Data** option shows how many support tickets each of your companies has logged.
 
 ## Tickets by Priority Level
 
@@ -124,6 +128,8 @@ The **Tickets by Priority Level** chart has the following options available from
     <img src="../images/reports/support-priority-data.png"/>
 </a>
 
+The **Tickets by Priority Level** chart's **Show Data** option shows the number of open tickets you have in each of the priority levels.
+
 ## Tickets Logged Per Day By Company
 
 The **Tickets Logged Per Day By Company** chart shows the total number of tickets logged by each of your companies on any given day.
@@ -152,3 +158,5 @@ The **Tickets Logged Per Day By Company** chart has the following options availa
 <a href="../images/reports/support-per-day-data.png" target="_blank">
     <img src="../images/reports/support-per-day-data.png"/>
 </a>
+
+The **Tickets Logged Per Day By Company** chart's **Show Data** option shows how many of tickets each of your companies logged on any given day.

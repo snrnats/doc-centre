@@ -50,9 +50,11 @@ The **API Requests by Company Name** chart has the following options available f
     <img src="../images/reports/api-custname-data.png"/>
 </a>
 
+The **API Requests by Company Name** chart's **Show Data** option displays the number of API requests that each of your businesses has made.
+
 ## ATU Total Company
 
-The **ATU Total Company** chart shows the proportion of your total ATUs usage that each of your companies has incurred.
+The **ATU Total Company** chart shows the proportion of your total ATU consumption that each of your companies has incurred.
 
 <a href="../images/reports/api-atu.png" target="_blank">
     <img src="../images/reports/api-atu.png"/>
@@ -86,6 +88,8 @@ The **ATU Total Company** chart has the following options available from its **M
 <a href="../images/reports/api-atu-data.png" target="_blank">
     <img src="../images/reports/api-atu-data.png"/>
 </a>
+
+The **ATU Total Company** chart's **Show Data** option displays the ATUs consumed by each of your businesses.
 
 ## API Requests by IntervalDate and CustomerName
 
@@ -121,3 +125,5 @@ The **API Requests by IntervalDate and CustomerName** chart has the following op
 <a href="../images/reports/api-requests-data.png" target="_blank">
     <img src="../images/reports/api-requests-data.png"/>
 </a>
+
+The **API Requests by IntervalDate and CustomerName** chart's **Show Data** option displays the ATUs consumed by each of your businesses, broken down by date.

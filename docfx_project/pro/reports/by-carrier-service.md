@@ -61,6 +61,8 @@ The **Consignments by Carrier and Carrier Service Name** chart has the following
     <img src="../images/reports/by-carrier-service-by-carrier-data.png"/>
 </a>
 
+The **Consignments by Carrier and Carrier Service Name** chart's **Show Data** option shows how many consignments were sent via each carrier service.
+
 ## % of Total Consignments by Carrier Service Name
 
 The **% of Total Consignments by Carrier Service Name** bar chart shows the proportion of your consignments that were shipped with each carrier service. Each bar represents an individual carrier service.
@@ -92,6 +94,8 @@ The **% of Total Consignments by Carrier Service Name** chart has the following 
 <a href="../images/reports/by-carrier-service-per-carrier-data.png" target="_blank">
     <img src="../images/reports/by-carrier-service-per-carrier-data.png"/>
 </a>
+
+The **% of Total Consignments by Carrier Service Name** chart's **Show Data** option shows what percentage of your total consignments were sent via each carrier service.
 
 ## Consignments by Shipping Location and Carrier Service
 

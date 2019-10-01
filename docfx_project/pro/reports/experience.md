@@ -54,6 +54,8 @@ The **Consignments by Delivery Window** chart has the following options availabl
     <img src="../images/reports/experience-delivery-window-data.png"/>
 </a>
 
+The **Consignments by Delivery Window** pie chart's **Show Data** option shows the number of consignments that were scheduled for each delivery window. 
+
 ## Customer Promise Met
 
 The **Customer Promise Met** chart shows the proportion of each carrier's shipments that met their delivery promise.
@@ -92,6 +94,8 @@ The **Customer Promise Met** chart has the following options available from its 
     <img src="../images/reports/experience-promise-data.png"/>
 </a>
 
+The **Customer Promise Met** chart's **Show Data** option shows the number of each carrier's shipments that arrived late, and the number that arrived on time.
+
 ## Delivery Type by Carrier
 
 The **Delivery Type by Carrier** chart shows the proportion of each carrier's consignments that used a particular delivery type (for example, *Click-and-Collect* or *Delivery*).
@@ -129,6 +133,8 @@ The **Delivery Type by Carrier** chart has the following options available from 
 <a href="../images/reports/experience-type-by-carrier-data.png" target="_blank">
     <img src="../images/reports/experience-type-by-carrier-data.png"/>
 </a>
+
+The **Delivery Type by Carrier** chart's **Show Data** option shows the number of each carrier's shipments that were sent by each available delivery method.
 
 ## Delivery Window by Carrier
 
@@ -172,3 +178,5 @@ The **Delivery Window by Carrier** chart has the following options available fro
 <a href="../images/reports/experience-window-data.png" target="_blank">
     <img src="../images/reports/experience-window-data.png"/>
 </a>
+
+The **Delivery Window by Carrier** chart's **Show Data** option shows the number of each carrier's shipments that were sent via each available delivery method.
