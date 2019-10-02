@@ -33,20 +33,28 @@ The **Consignments by Delivery Window** pie chart shows the proportion of your c
 
 ### Visual Filters
 
-* **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
-* **Delivery Window** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+* **Delivery Window** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
 
 ### More Options
 
 The **Consignments by Delivery Window** chart has the following options available from its **More Options** menu:
 
-* [Open Comments](/reports/reports.html#open-comments)
-* [Export Data](/reports/reports.html#export-data)
-* [Show Data](/reports/reports.html#show-data)
-* [Spotlight](/reports/reports.html#spotlight)
-* [Sort Descending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort Ascending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort by](/reports/reports.html#sort-descending--ascending--sort-by) Delivery Window / Consignments
+* [Open Comments](/reports/filters-options.html#open-comments)
+* [Export Data](/reports/filters-options.html#export-data)
+* [Show Data](/reports/filters-options.html#show-data)
+* [Spotlight](/reports/filters-options.html#spotlight)
+* [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Delivery Window / Consignments
+
+### Viewing Data
+
+<a href="../images/reports/experience-delivery-window-data.png" target="_blank">
+    <img src="../images/reports/experience-delivery-window-data.png"/>
+</a>
+
+The **Consignments by Delivery Window** pie chart's **Show Data** option shows the number of consignments that were scheduled for each delivery window. 
 
 ## Customer Promise Met
 
@@ -64,21 +72,29 @@ Hover your mouse over an area of the chart to see further details.
 
 ### Visual Filters
 
-* **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
-* **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
-* **DeliveredOnTime** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **Carrier** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
+* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+* **DeliveredOnTime** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
 
 ### More Options
 
 The **Customer Promise Met** chart has the following options available from its **More Options** menu:
 
-* [Open Comments](/reports/reports.html#open-comments)
-* [Export Data](/reports/reports.html#export-data)
-* [Show Data](/reports/reports.html#show-data)
-* [Spotlight](/reports/reports.html#spotlight)
-* [Sort Descending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort Ascending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort by](/reports/reports.html#sort-descending--ascending--sort-by) Carrier / Consignments
+* [Open Comments](/reports/filters-options.html#open-comments)
+* [Export Data](/reports/filters-options.html#export-data)
+* [Show Data](/reports/filters-options.html#show-data)
+* [Spotlight](/reports/filters-options.html#spotlight)
+* [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Carrier / Consignments
+
+### Viewing Data
+
+<a href="../images/reports/experience-promise-data.png" target="_blank">
+    <img src="../images/reports/experience-promise-data.png"/>
+</a>
+
+The **Customer Promise Met** chart's **Show Data** option shows the number of each carrier's shipments that arrived late, and the number that arrived on time.
 
 ## Delivery Type by Carrier
 
@@ -96,21 +112,29 @@ Hover your mouse over an area of the chart to see the number of that carrier's c
 
 ### Visual Filters
 
-* **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
-* **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
-* **Delivery Type** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **Carrier** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
+* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+* **Delivery Type** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
 
 ### More Options
 
 The **Delivery Type by Carrier** chart has the following options available from its **More Options** menu:
 
-* [Open Comments](/reports/reports.html#open-comments)
-* [Export Data](/reports/reports.html#export-data)
-* [Show Data](/reports/reports.html#show-data)
-* [Spotlight](/reports/reports.html#spotlight)
-* [Sort Descending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort Ascending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort by](/reports/reports.html#sort-descending--ascending--sort-by) Carrier / Consignments
+* [Open Comments](/reports/filters-options.html#open-comments)
+* [Export Data](/reports/filters-options.html#export-data)
+* [Show Data](/reports/filters-options.html#show-data)
+* [Spotlight](/reports/filters-options.html#spotlight)
+* [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Carrier / Consignments
+
+### Viewing Data
+
+<a href="../images/reports/experience-type-by-carrier-data.png" target="_blank">
+    <img src="../images/reports/experience-type-by-carrier-data.png"/>
+</a>
+
+The **Delivery Type by Carrier** chart's **Show Data** option shows the number of each carrier's shipments that were sent by each available delivery method.
 
 ## Delivery Window by Carrier
 
@@ -134,17 +158,25 @@ Hover your mouse over an area of the chart to see the number of that carrier's c
 
 ### Visual Filters
 
-* **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
-* **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **Carrier** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
+* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters))
 
 ### More Options
 
 The **Delivery Window by Carrier** chart has the following options available from its **More Options** menu:
 
-* [Open Comments](/reports/reports.html#open-comments)
-* [Export Data](/reports/reports.html#export-data)
-* [Show Data](/reports/reports.html#show-data)
-* [Spotlight](/reports/reports.html#spotlight)
-* [Sort Descending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort Ascending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort by](/reports/reports.html#sort-descending--ascending--sort-by) Carrier / Consignments
+* [Open Comments](/reports/filters-options.html#open-comments)
+* [Export Data](/reports/filters-options.html#export-data)
+* [Show Data](/reports/filters-options.html#show-data)
+* [Spotlight](/reports/filters-options.html#spotlight)
+* [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Carrier / Consignments
+
+### Viewing Data
+
+<a href="../images/reports/experience-window-data.png" target="_blank">
+    <img src="../images/reports/experience-window-data.png"/>
+</a>
+
+The **Delivery Window by Carrier** chart's **Show Data** option shows the number of each carrier's shipments that were sent via each available delivery method.

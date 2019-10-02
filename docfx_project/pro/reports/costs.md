@@ -40,15 +40,13 @@ The **Shipping Costs** table shows the following:
     <img src="../images/reports/costs-table.png"/>
 </a>
 
-### Visual Filters
-
 ### More Options
 
 The data table has the following options available from its **More Options** menu:
 
-* [Open Comments](/reports/reports.html#open-comments)
-* [Export Data](/reports/reports.html#export-data)
-* [Spotlight](/reports/reports.html#spotlight)
+* [Open Comments](/reports/filters-options.html#open-comments)
+* [Export Data](/reports/filters-options.html#export-data)
+* [Spotlight](/reports/filters-options.html#spotlight)
 
 ## Shipping Cost Over Time by Carrier
 
@@ -66,18 +64,26 @@ Hover your mouse over a particular point on the chart to view that carrier's shi
 
 ### Visual Filters
 
-* **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
-* **Date Shipped** ([Basic](/reports/reports.html#using-basic-filters), [Advanced](/reports/reports.html#using-advanced-filters), and [Relative Date](/reports/reports.html#using-relative-date-filters))
-* **Parcel Charges** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **Carrier** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
+* **Date Shipped** ([Basic](/reports/filters-options.html#using-basic-filters), [Advanced](/reports/filters-options.html#using-advanced-filters), and [Relative Date](/reports/filters-options.html#using-relative-date-filters))
+* **Parcel Charges** ([Numerical](/reports/filters-options.html#using-numerical-filters))
 
 ### More Options
 
 The **Shipping Cost Over Time by Carrier** chart has the following options available from its **More Options** menu:
 
-* [Open Comments](/reports/reports.html#open-comments)
-* [Export Data](/reports/reports.html#export-data)
-* [Show Data](/reports/reports.html#show-data)
-* [Spotlight](/reports/reports.html#spotlight)
+* [Open Comments](/reports/filters-options.html#open-comments)
+* [Export Data](/reports/filters-options.html#export-data)
+* [Show Data](/reports/filters-options.html#show-data)
+* [Spotlight](/reports/filters-options.html#spotlight)
+
+### Viewing Data
+
+<a href="../images/reports/costs-over-time-carrier-data.png" target="_blank">
+    <img src="../images/reports/costs-over-time-carrier-data.png"/>
+</a>
+
+The **Shipping Cost Over Time by Carrier** chart's **Show Data** option shows how much money you spent with each of your carriers for each day in your dataset.
 
 ## Shipping Cost Over Time
 
@@ -95,17 +101,25 @@ Hover your mouse over a particular point on the chart to view your total shippin
 
 ### Visual Filters
 
-* **Date Shipped** ([Basic](/reports/reports.html#using-basic-filters), [Advanced](/reports/reports.html#using-advanced-filters), and [Relative Date](/reports/reports.html#using-relative-date-filters))
-* **Parcel Charges** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **Date Shipped** ([Basic](/reports/filters-options.html#using-basic-filters), [Advanced](/reports/filters-options.html#using-advanced-filters), and [Relative Date](/reports/filters-options.html#using-relative-date-filters))
+* **Parcel Charges** ([Numerical](/reports/filters-options.html#using-numerical-filters))
 
 ### More Options
 
 The **Shipping Cost Over Time** chart has the following options available from its **More Options** menu:
 
-* [Open Comments](/reports/reports.html#open-comments)
-* [Export Data](/reports/reports.html#export-data)
-* [Show Data](/reports/reports.html#show-data)
-* [Spotlight](/reports/reports.html#spotlight)
+* [Open Comments](/reports/filters-options.html#open-comments)
+* [Export Data](/reports/filters-options.html#export-data)
+* [Show Data](/reports/filters-options.html#show-data)
+* [Spotlight](/reports/filters-options.html#spotlight)
+
+### Viewing Data
+
+<a href="../images/reports/costs-over-time-data.png" target="_blank">
+    <img src="../images/reports/costs-over-time-data.png"/>
+</a>
+
+The **Shipping Cost Over Time** chart's **Show Data** option shows you total shipping costs for each day in your dataset.
 
 ## Average Shipping Cost by Destination
 
@@ -149,19 +163,19 @@ To return to the table's default level (average shipping cost to each destinatio
 
 ### Visual Filters
 
-* **Average Shipping Cost** ([Numerical](/reports/reports.html#using-numerical-filters))
-* **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
-* **CustomerName** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
-* **Destination Country** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **Average Shipping Cost** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+* **Carrier** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
+* **CustomerName** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
+* **Destination Country** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
 
 ### More Options
 
 The **Average Shipping Cost by Destination** chart has the following options available from its **More Options** menu:
 
-* [Open Comments](/reports/reports.html#open-comments)
-* [Export Data](/reports/reports.html#export-data)
-* [Show Data](/reports/reports.html#show-data)
-* [Spotlight](/reports/reports.html#spotlight)
-* [Sort Descending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort Ascending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort by](/reports/reports.html#sort-descending--ascending--sort-by) Destination Country / Average Shipping Cost
+* [Open Comments](/reports/filters-options.html#open-comments)
+* [Export Data](/reports/filters-options.html#export-data)
+* [Show Data](/reports/filters-options.html#show-data)
+* [Spotlight](/reports/filters-options.html#spotlight)
+* [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Destination Country / Average Shipping Cost

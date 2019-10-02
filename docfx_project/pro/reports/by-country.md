@@ -39,21 +39,21 @@ The consignments table shows how many consignments and packages were shipped to 
 
 ### Visual Filters
 
-* **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
-* **Destination Country** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
-* **Packages** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+* **Destination Country** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
+* **Packages** ([Numerical](/reports/filters-options.html#using-numerical-filters))
 
 ### More Options
 
 The data table has the following options available from its **More Options** menu:
 
-* [Open Comments](/reports/reports.html#open-comments)
-* [Export Data](/reports/reports.html#export-data)
-* [Show Data](/reports/reports.html#show-data)
-* [Spotlight](/reports/reports.html#spotlight)
-* [Sort Descending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort Ascending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort by](/reports/reports.html#sort-descending--ascending--sort-by) Destination Country / Consignments / Packages
+* [Open Comments](/reports/filters-options.html#open-comments)
+* [Export Data](/reports/filters-options.html#export-data)
+* [Show Data](/reports/filters-options.html#show-data)
+* [Spotlight](/reports/filters-options.html#spotlight)
+* [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Destination Country / Consignments / Packages
 
 
 ## Consignment Volumes by Country
@@ -68,17 +68,25 @@ If required, you can search for countries and locations using the search bar at 
 
 ### Visual Filters
 
-* **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
-* **MapBox** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+* **MapBox** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
 
 ### More Options
 
 The **Consignment Volumes by Country** chart has the following options available from its **More Options** menu:
 
-* [Open Comments](/reports/reports.html#open-comments)
-* [Export Data](/reports/reports.html#export-data)
-* [Show Data](/reports/reports.html#show-data)
-* [Spotlight](/reports/reports.html#spotlight)
+* [Open Comments](/reports/filters-options.html#open-comments)
+* [Export Data](/reports/filters-options.html#export-data)
+* [Show Data](/reports/filters-options.html#show-data)
+* [Spotlight](/reports/filters-options.html#spotlight)
+
+### Viewing Data
+
+<a href="../images/reports/by-country-volumes-data.png" target="_blank">
+    <img src="../images/reports/by-country-volumes-data.png"/>
+</a>
+
+The **Consignment Volumes by Country** chart's **View Data** option shows the number of consignments that you shipped to each destination country.
 
 ## % of Consignment Volume by Destination Country
 
@@ -90,16 +98,24 @@ The **% of Consignment Volume by Destination Country** bar chart shows each dest
 
 ### Visual Filters
 
-* **%GT Count of ConsignmentReference** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **%GT Count of ConsignmentReference** ([Numerical](/reports/filters-options.html#using-numerical-filters))
 
 ### More Options
 
 The **% of Consignment Volume by Destination Country** chart has the following options available from its **More Options** menu:
 
-* [Open Comments](/reports/reports.html#open-comments)
-* [Export Data](/reports/reports.html#export-data)
-* [Show Data](/reports/reports.html#show-data)
-* [Spotlight](/reports/reports.html#spotlight)
-* [Sort Descending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort Ascending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort by](/reports/reports.html#sort-descending--ascending--sort-by) Country / %GT Count of ConsignmentReference
+* [Open Comments](/reports/filters-options.html#open-comments)
+* [Export Data](/reports/filters-options.html#export-data)
+* [Show Data](/reports/filters-options.html#show-data)
+* [Spotlight](/reports/filters-options.html#spotlight)
+* [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Country / %GT Count of ConsignmentReference
+
+### Viewing Data
+
+<a href="../images/reports/by-country-top-10-data.png" target="_blank">
+    <img src="../images/reports/by-country-top-10-data.png"/>
+</a>
+
+The **% of Consignment Volume by Destination Country** chart's **View Data** option shows each destination country's percentage share of your total shipments.

@@ -3,28 +3,28 @@ Welcome to the docs for SortedPRO's Power BI reporting app. This site explains t
 
 ## Getting Started
 
-Learn how to access and select PRO reports [here](reports/getting-started.md).
+Learn how to access and select PRO reports [here](pro/reports/getting-started.md).
 
 ## Filters and Options
 
-Learn how to use filters to fine-tune report data [here](reports/filters-options.md).
+Learn how to use filters to fine-tune report data [here](pro/reports/filters-options.md).
 
 ## Reports
 
-Learn what each report does and how to use it [here](reports/reports.md). 
+Learn what each report does and how to use it [here](pro/reports/reports.md). 
 
 PRO features the following reports:
 
-* [Traffic Profiles](reports/traffic-profile.md)
-* [Volumes by Carrier](reports/by-carrier.md)
-* [Volumes by Destination Country](reports/by-country.md)
-* [Carrier Performance](reports/performance.md)
-* [Delivery Experience](reports/experience.md)
-* [Volumes by Carrier Service](reports/by-carrier-service.md)
-* [Shipping Locations](reports/location-performance.md)
-* [Shipping Costs](reports/costs.md)
-* [API Overview](reports/api.md)
-* [Support](reports/support.md)
+* [Traffic Profiles](pro/reports/traffic-profile.md)
+* [Volumes by Carrier](pro/reports/by-carrier.md)
+* [Volumes by Destination Country](pro/reports/by-country.md)
+* [Carrier Performance](pro/reports/performance.md)
+* [Delivery Experience](pro/reports/experience.md)
+* [Volumes by Carrier Service](pro/reports/by-carrier-service.md)
+* [Shipping Locations](pro/reports/location-performance.md)
+* [Shipping Costs](pro/reports/costs.md)
+* [API Overview](pro/reports/api.md)
+* [Support](pro/reports/support.md)
 
 > <span class="note-header">Note:</span>
 >
