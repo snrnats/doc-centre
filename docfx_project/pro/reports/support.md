@@ -35,20 +35,20 @@ Hover your mouse over a section of the pie chart to view the number of your tick
 
 ### Visual Filters
 
-* **Status** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
-* **Tickets** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **Status** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
+* **Tickets** ([Numerical](/reports/filters-options.html#using-numerical-filters))
 
 ### More Options
 
 The **Tickets by Status** chart has the following options available from its **More Options** menu:
 
-* [Open Comments](/reports/reports.html#open-comments)
-* [Export Data](/reports/reports.html#export-data)
-* [Show Data](/reports/reports.html#show-data)
-* [Spotlight](/reports/reports.html#spotlight)
-* [Sort Descending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort Ascending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort by](/reports/reports.html#sort-descending--ascending--sort-by) Status / Tickets
+* [Open Comments](/reports/filters-options.html#open-comments)
+* [Export Data](/reports/filters-options.html#export-data)
+* [Show Data](/reports/filters-options.html#show-data)
+* [Spotlight](/reports/filters-options.html#spotlight)
+* [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Status / Tickets
 
 ### Viewing Data
 
@@ -68,20 +68,20 @@ The **Tickets Logged by Company** bar chart shows how many support tickets each 
 
 ### Visual Filters
 
-* **Company Name** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
-* **Tickets** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **Company Name** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
+* **Tickets** ([Numerical](/reports/filters-options.html#using-numerical-filters))
 
 ### More Options
 
 The **Tickets Logged by Company** chart has the following options available from its **More Options** menu:
 
-* [Open Comments](/reports/reports.html#open-comments)
-* [Export Data](/reports/reports.html#export-data)
-* [Show Data](/reports/reports.html#show-data)
-* [Spotlight](/reports/reports.html#spotlight)
-* [Sort Descending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort Ascending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort by](/reports/reports.html#sort-descending--ascending--sort-by) Company Name / Tickets
+* [Open Comments](/reports/filters-options.html#open-comments)
+* [Export Data](/reports/filters-options.html#export-data)
+* [Show Data](/reports/filters-options.html#show-data)
+* [Spotlight](/reports/filters-options.html#spotlight)
+* [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Company Name / Tickets
 
 ### Viewing Data
 
@@ -107,20 +107,20 @@ Hover your mouse over a section of the pie chart to view the number of open tick
 
 ### Visual Filters
 
-* **Priority Level** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
-* **Tickets** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **Priority Level** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
+* **Tickets** ([Numerical](/reports/filters-options.html#using-numerical-filters))
 
 ### More Options
 
 The **Tickets by Priority Level** chart has the following options available from its **More Options** menu:
 
-* [Open Comments](/reports/reports.html#open-comments)
-* [Export Data](/reports/reports.html#export-data)
-* [Show Data](/reports/reports.html#show-data)
-* [Spotlight](/reports/reports.html#spotlight)
-* [Sort Descending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort Ascending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort by](/reports/reports.html#sort-descending--ascending--sort-by) Priority Level / Tickets
+* [Open Comments](/reports/filters-options.html#open-comments)
+* [Export Data](/reports/filters-options.html#export-data)
+* [Show Data](/reports/filters-options.html#show-data)
+* [Spotlight](/reports/filters-options.html#spotlight)
+* [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Priority Level / Tickets
 
 ### Viewing Data
 
@@ -140,18 +140,18 @@ The **Tickets Logged Per Day By Company** chart shows the total number of ticket
 
 ### Visual Filters
 
-* **Created Date** ([Basic](/reports/reports.html#using-basic-filters), [Advanced](/reports/reports.html#using-advanced-filters), and [Relative Date](/reports/reports.html#using-relative-date-filters))
-* **Customer Name** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
-* **Tickets** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **Created Date** ([Basic](/reports/filters-options.html#using-basic-filters), [Advanced](/reports/filters-options.html#using-advanced-filters), and [Relative Date](/reports/filters-options.html#using-relative-date-filters))
+* **Customer Name** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
+* **Tickets** ([Numerical](/reports/filters-options.html#using-numerical-filters))
 
 ### More Options
 
 The **Tickets Logged Per Day By Company** chart has the following options available from its **More Options** menu:
 
-* [Open Comments](/reports/reports.html#open-comments)
-* [Export Data](/reports/reports.html#export-data)
-* [Show Data](/reports/reports.html#show-data)
-* [Spotlight](/reports/reports.html#spotlight)
+* [Open Comments](/reports/filters-options.html#open-comments)
+* [Export Data](/reports/filters-options.html#export-data)
+* [Show Data](/reports/filters-options.html#show-data)
+* [Spotlight](/reports/filters-options.html#spotlight)
 
 ### Viewing Data
 

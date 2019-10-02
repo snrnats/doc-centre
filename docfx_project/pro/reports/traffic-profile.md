@@ -50,24 +50,24 @@ The consignment data table visual lists the following information for each carri
 
 The data table offers the following filters:
 
-* **Average Packages Per Consignment** ([Numerical](/reports/reports.html#using-numerical-filters))
-* **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
-* **Packages** ([Numerical](/reports/reports.html#using-numerical-filters))
-* **Average Weight, KG** ([Numerical](/reports/reports.html#using-numerical-filters))
-* **Average Weight, Volumetric** ([Numerical](/reports/reports.html#using-numerical-filters))
-* **Company** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **Average Packages Per Consignment** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+* **Packages** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+* **Average Weight, KG** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+* **Average Weight, Volumetric** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+* **Company** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
 
 ### More Options
 
 The data table has the following options available from its **More Options** menu:
 
-* [Open Comments](/reports/reports.html#open-comments)
-* [Export Data](/reports/reports.html#export-data)
-* [Show Data](/reports/reports.html#show-data)
-* [Spotlight](/reports/reports.html#spotlight)
-* [Sort Descending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort Ascending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort by](/reports/reports.html#sort-descending--ascending--sort-by) Company / Consignments / Packages / Average Packages per Consignment / Avg Weight, Kg / Avg Weight, Volumetric
+* [Open Comments](/reports/filters-options.html#open-comments)
+* [Export Data](/reports/filters-options.html#export-data)
+* [Show Data](/reports/filters-options.html#show-data)
+* [Spotlight](/reports/filters-options.html#spotlight)
+* [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Company / Consignments / Packages / Average Packages per Consignment / Avg Weight, Kg / Avg Weight, Volumetric
 
 ## Consignment Volume Distribution by Absolute Weight Chart
 
@@ -81,17 +81,17 @@ In the example above, the company in question has shipped 53,324 consignments th
 
 ### Visual Filters
 
-* **Count of ConsignmentReference** ([Numerical](/reports/reports.html#using-numerical-filters))
-* **Kilograms** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **Count of ConsignmentReference** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+* **Kilograms** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
 
 ### More Options
 
 The **Consignment Volume Distribution by Absolute Weight** chart has the following options available from its **More Options** menu:
 
-* [Open Comments](/reports/reports.html#open-comments)
-* [Export Data](/reports/reports.html#export-data)
-* [Show Data](/reports/reports.html#show-data)
-* [Spotlight](/reports/reports.html#spotlight)
+* [Open Comments](/reports/filters-options.html#open-comments)
+* [Export Data](/reports/filters-options.html#export-data)
+* [Show Data](/reports/filters-options.html#show-data)
+* [Spotlight](/reports/filters-options.html#spotlight)
 
 ### Viewing Data
 
@@ -119,17 +119,17 @@ In the example above, the company in question has shipped 65,091 consignments th
 
 ### Visual Filters
 
-* **Count of ConsignmentReference** ([Numerical](/reports/reports.html#using-numerical-filters))
-* **Kilograms** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **Count of ConsignmentReference** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+* **Kilograms** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
 
 ### More Options
 
 The **Consignment Volume Distribution by Volumetric Weight** chart has the following options available from its **More Options** menu:
 
-* [Open Comments](/reports/reports.html#open-comments)
-* [Export Data](/reports/reports.html#export-data)
-* [Show Data](/reports/reports.html#show-data)
-* [Spotlight](/reports/reports.html#spotlight)
+* [Open Comments](/reports/filters-options.html#open-comments)
+* [Export Data](/reports/filters-options.html#export-data)
+* [Show Data](/reports/filters-options.html#show-data)
+* [Spotlight](/reports/filters-options.html#spotlight)
 
 ### Viewing Data
 

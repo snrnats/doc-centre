@@ -39,21 +39,21 @@ Hover your mouse over the chart to see how many consignments were shipped with e
 
 ### Visual Filters
 
-* **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
-* **Carrier Service** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
-* **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **Carrier** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
+* **Carrier Service** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
+* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters))
 
 ### More Options
 
 The **Consignments by Carrier and Carrier Service Name** chart has the following options available from its **More Options** menu:
 
-* [Open Comments](/reports/reports.html#open-comments)
-* [Export Data](/reports/reports.html#export-data)
-* [Show Data](/reports/reports.html#show-data)
-* [Spotlight](/reports/reports.html#spotlight)
-* [Sort Descending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort Ascending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort by](/reports/reports.html#sort-descending--ascending--sort-by) Carrier / Consignments
+* [Open Comments](/reports/filters-options.html#open-comments)
+* [Export Data](/reports/filters-options.html#export-data)
+* [Show Data](/reports/filters-options.html#show-data)
+* [Spotlight](/reports/filters-options.html#spotlight)
+* [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Carrier / Consignments
 
 ### Viewing Data
 
@@ -73,21 +73,21 @@ The **% of Total Consignments by Carrier Service Name** bar chart shows the prop
 
 ### Visual Filters
 
-* **% of Total Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
-* **Carrier Service** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
-* **Number of Packages** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **% of Total Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+* **Carrier Service** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
+* **Number of Packages** ([Numerical](/reports/filters-options.html#using-numerical-filters))
 
 ### More Options
 
 The **% of Total Consignments by Carrier Service Name** chart has the following options available from its **More Options** menu:
 
-* [Open Comments](/reports/reports.html#open-comments)
-* [Export Data](/reports/reports.html#export-data)
-* [Show Data](/reports/reports.html#show-data)
-* [Spotlight](/reports/reports.html#spotlight)
-* [Sort Descending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort Ascending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort by](/reports/reports.html#sort-descending--ascending--sort-by) Carrier Service / % of Total Consignments
+* [Open Comments](/reports/filters-options.html#open-comments)
+* [Export Data](/reports/filters-options.html#export-data)
+* [Show Data](/reports/filters-options.html#show-data)
+* [Spotlight](/reports/filters-options.html#spotlight)
+* [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Carrier Service / % of Total Consignments
 
 ### Viewing Data
 
@@ -107,18 +107,18 @@ The **Consignments by Shipping Location and Carrier Service** table shows how ma
 
 ### Visual Filters
 
-* **Carrier Service** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
-* **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
-* **Shipping Location** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **Carrier Service** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
+* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+* **Shipping Location** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
 
 ### More Options
 
 The **Consignments by Shipping Location and Carrier Service** chart has the following options available from its **More Options** menu:
 
-* [Open Comments](/reports/reports.html#open-comments)
-* [Export Data](/reports/reports.html#export-data)
-* [Show Data](/reports/reports.html#show-data)
-* [Spotlight](/reports/reports.html#spotlight)
-* [Sort Descending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort Ascending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort by](/reports/reports.html#sort-descending--ascending--sort-by) Carrier Service / Consignments
+* [Open Comments](/reports/filters-options.html#open-comments)
+* [Export Data](/reports/filters-options.html#export-data)
+* [Show Data](/reports/filters-options.html#show-data)
+* [Spotlight](/reports/filters-options.html#spotlight)
+* [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Carrier Service / Consignments

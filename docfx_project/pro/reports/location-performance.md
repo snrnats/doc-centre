@@ -39,18 +39,18 @@ Hover your mouse over the graph to see average ship time data for a specific day
 
 ### Visualisation Filters
 
-* **Average Days to Ship** ([Numerical](/reports/reports.html#using-numerical-filters))
-* **CreatedDateOnly** ([Basic](/reports/reports.html#using-basic-filters), [Advanced](/reports/reports.html#using-advanced-filters), and [Relative Date](/reports/reports.html#using-relative-date-filters))
-* **Shipping Location** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **Average Days to Ship** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+* **CreatedDateOnly** ([Basic](/reports/filters-options.html#using-basic-filters), [Advanced](/reports/filters-options.html#using-advanced-filters), and [Relative Date](/reports/filters-options.html#using-relative-date-filters))
+* **Shipping Location** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
 
 ### More Options
 
 The **Average Days from Shipping to Receipt by Carriers** chart has the following options available from its **More Options** menu:
 
-* [Open Comments](/reports/reports.html#open-comments)
-* [Export Data](/reports/reports.html#export-data)
-* [Show Data](/reports/reports.html#show-data)
-* [Spotlight](/reports/reports.html#spotlight)
+* [Open Comments](/reports/filters-options.html#open-comments)
+* [Export Data](/reports/filters-options.html#export-data)
+* [Show Data](/reports/filters-options.html#show-data)
+* [Spotlight](/reports/filters-options.html#spotlight)
 
 ### Viewing Data
 
@@ -76,18 +76,18 @@ Hover your mouse over a segment of the graph to see how many consignments were a
 
 ### Visualisation Filters
 
-* **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
-* **Count of ConsignmentReference** ([Numerical](/reports/reports.html#using-numerical-filters))
-* **CreatedDateOnly** ([Basic](/reports/reports.html#using-basic-filters), [Advanced](/reports/reports.html#using-advanced-filters), and [Relative Date](/reports/reports.html#using-relative-date-filters))
+* **Carrier** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
+* **Count of ConsignmentReference** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+* **CreatedDateOnly** ([Basic](/reports/filters-options.html#using-basic-filters), [Advanced](/reports/filters-options.html#using-advanced-filters), and [Relative Date](/reports/filters-options.html#using-relative-date-filters))
 
 ### More Options
 
 The **Carrier Usage** chart has the following options available from its **More Options** menu:
 
-* [Open Comments](/reports/reports.html#open-comments)
-* [Export Data](/reports/reports.html#export-data)
-* [Show Data](/reports/reports.html#show-data)
-* [Spotlight](/reports/reports.html#spotlight)
+* [Open Comments](/reports/filters-options.html#open-comments)
+* [Export Data](/reports/filters-options.html#export-data)
+* [Show Data](/reports/filters-options.html#show-data)
+* [Spotlight](/reports/filters-options.html#spotlight)
 
 ### Viewing Data
 
@@ -107,20 +107,20 @@ The **Average Days to Ship by Shipping Location** chart shows the average time f
 
 ### Visualisation Filters
 
-* **Average Days to Ship** ([Numerical](/reports/reports.html#using-numerical-filters))
-* **Shipping Location** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **Average Days to Ship** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+* **Shipping Location** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
 
 ### More Options
 
 The **Average Days to Ship by Shipping Location** chart has the following options available from its **More Options** menu:
 
-* [Open Comments](/reports/reports.html#open-comments)
-* [Export Data](/reports/reports.html#export-data)
-* [Show Data](/reports/reports.html#show-data)
-* [Spotlight](/reports/reports.html#spotlight)
-* [Sort Descending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort Ascending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort by](/reports/reports.html#sort-descending--ascending--sort-by) Shipping Location / Average Days to Ship
+* [Open Comments](/reports/filters-options.html#open-comments)
+* [Export Data](/reports/filters-options.html#export-data)
+* [Show Data](/reports/filters-options.html#show-data)
+* [Spotlight](/reports/filters-options.html#spotlight)
+* [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Shipping Location / Average Days to Ship
 
 ### Viewing Data
 
@@ -146,18 +146,18 @@ Hover your mouse over a particular date on the chart to see how many consignment
 
 ### Visualisation Filters
 
-* **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
-* **Date Created** ([Basic](/reports/reports.html#using-basic-filters), [Advanced](/reports/reports.html#using-advanced-filters), and [Relative Date](/reports/reports.html#using-relative-date-filters))
-* **Shipping Location** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
+* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+* **Date Created** ([Basic](/reports/filters-options.html#using-basic-filters), [Advanced](/reports/filters-options.html#using-advanced-filters), and [Relative Date](/reports/filters-options.html#using-relative-date-filters))
+* **Shipping Location** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
 
 ### More Options
 
 The **Consignments Over Time by Shipping Location** chart has the following options available from its **More Options** menu:
 
-* [Open Comments](/reports/reports.html#open-comments)
-* [Export Data](/reports/reports.html#export-data)
-* [Show Data](/reports/reports.html#show-data)
-* [Spotlight](/reports/reports.html#spotlight)
+* [Open Comments](/reports/filters-options.html#open-comments)
+* [Export Data](/reports/filters-options.html#export-data)
+* [Show Data](/reports/filters-options.html#show-data)
+* [Spotlight](/reports/filters-options.html#spotlight)
 
 ### Viewing Data
 

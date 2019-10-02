@@ -33,21 +33,21 @@ The consignments table visual lists the total number of packages and consignment
 
 ### Visual Filters
 
-* **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
-* **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
-* **Packages** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **Carrier** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
+* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+* **Packages** ([Numerical](/reports/filters-options.html#using-numerical-filters))
 
 ### More Options
 
 The data table has the following options available from its **More Options** menu:
 
-* [Open Comments](/reports/reports.html#open-comments)
-* [Export Data](/reports/reports.html#export-data)
-* [Show Data](/reports/reports.html#show-data)
-* [Spotlight](/reports/reports.html#spotlight)
-* [Sort Descending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort Ascending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort by](/reports/reports.html#sort-descending--ascending--sort-by) Carrier / Consignments / Packages
+* [Open Comments](/reports/filters-options.html#open-comments)
+* [Export Data](/reports/filters-options.html#export-data)
+* [Show Data](/reports/filters-options.html#show-data)
+* [Spotlight](/reports/filters-options.html#spotlight)
+* [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Carrier / Consignments / Packages
 
 ## Consignments by Carrier Name
 
@@ -59,20 +59,20 @@ The **Consignments by Carrier Name** pie chart displays each carrier's share of 
 
 ### Visual Filters
 
-* **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
-* **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
+* **Carrier** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
+* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters))
 
 ### More Options
 
 The **Consignments by Carrier Name** chart has the following options available from its **More Options** menu:
 
-* [Open Comments](/reports/reports.html#open-comments)
-* [Export Data](/reports/reports.html#export-data)
-* [Show Data](/reports/reports.html#show-data)
-* [Spotlight](/reports/reports.html#spotlight)
-* [Sort Descending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort Ascending](/reports/reports.html#sort-descending--ascending--sort-by)
-* [Sort by](/reports/reports.html#sort-descending--ascending--sort-by) Carrier / Consignments
+* [Open Comments](/reports/filters-options.html#open-comments)
+* [Export Data](/reports/filters-options.html#export-data)
+* [Show Data](/reports/filters-options.html#show-data)
+* [Spotlight](/reports/filters-options.html#spotlight)
+* [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Carrier / Consignments
 
 ### Viewing Data
 
@@ -98,18 +98,18 @@ Hover your mouse pointer over a particular day to view exact per-carrier shipmen
 
 ### Visual Filters
 
-* **Carrier** ([Basic](/reports/reports.html#using-basic-filters) and [Advanced](/reports/reports.html#using-advanced-filters))
-* **Consignments** ([Numerical](/reports/reports.html#using-numerical-filters))
-* **DateShippedOnly** ([Basic](/reports/reports.html#using-basic-filters), [Advanced](/reports/reports.html#using-advanced-filters), and [Relative Date](/reports/reports.html#using-relative-date-filters))
+* **Carrier** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
+* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+* **DateShippedOnly** ([Basic](/reports/filters-options.html#using-basic-filters), [Advanced](/reports/filters-options.html#using-advanced-filters), and [Relative Date](/reports/filters-options.html#using-relative-date-filters))
 
 ### More Options
 
 The **Consignments Shipped by Carrier Over Time** chart has the following options available from its **More Options** menu:
 
-* [Open Comments](/reports/reports.html#open-comments)
-* [Export Data](/reports/reports.html#export-data)
-* [Show Data](/reports/reports.html#show-data)
-* [Spotlight](/reports/reports.html#spotlight)
+* [Open Comments](/reports/filters-options.html#open-comments)
+* [Export Data](/reports/filters-options.html#export-data)
+* [Show Data](/reports/filters-options.html#show-data)
+* [Spotlight](/reports/filters-options.html#spotlight)
 
 ### Viewing Data
 
