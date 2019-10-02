@@ -38,7 +38,7 @@ The **Traffic Profile** report offers the following report-wide filters:
     <img src="../images/reports/traffic-profile-table.png"/>
 </a>
 
-The consignment data table visual lists the following information for each carrier (with any report filters taken into account):
+The consignment data table visual lists the following information for each of your companies (with any report filters taken into account):
 
 * **Consignments** - Number of consignments manifested.
 * **Packages** - Number of packages manifested.
@@ -48,9 +48,9 @@ The consignment data table visual lists the following information for each carri
 
 ### Visual Filters
 
-The data table offers the following filters:
+The consignment data table enables you to filter the companies displayed. For example, if you were to set an **Average Packages Per Consignment** filter of *less than 1.5* packages, then any companies shipping an average of 1.51 or more packages per consignment would be excluded. The following filters are available:
 
-* **Average Packages Per Consignment** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+* **Average Packages Per Consignment** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by the average number of packages shipped in each consignment. F
 * **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters))
 * **Packages** ([Numerical](/reports/filters-options.html#using-numerical-filters))
 * **Average Weight, KG** ([Numerical](/reports/filters-options.html#using-numerical-filters))
@@ -81,8 +81,7 @@ In the example above, the company in question has shipped 53,324 consignments th
 
 ### Visual Filters
 
-* **Count of ConsignmentReference** ([Numerical](/reports/filters-options.html#using-numerical-filters))
-* **Kilograms** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
+The **Consignment Volume Distribution by Absolute Weight** chart's **Kilograms** filter is a ([Numerical](/reports/filters-options.html#using-numerical-filters)) filter that enables you to limit the consignment weights displayed. For example, if you were to set the filter to *is greater than or equal 10*, then the chart would only display data for those consignments with an absolute weight of 10kg or above.
 
 ### More Options
 
@@ -119,8 +118,7 @@ In the example above, the company in question has shipped 65,091 consignments th
 
 ### Visual Filters
 
-* **Count of ConsignmentReference** ([Numerical](/reports/filters-options.html#using-numerical-filters))
-* **Kilograms** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
+The **Consignment Volume Distribution by Volumetric Weight** chart's **Kilograms** filter is a ([Numerical](/reports/filters-options.html#using-numerical-filters)) filter that enables you to limit the consignment weights displayed. For example, if you were to set the filter to *is greater than or equal 10*, then the chart would only display data for those consignments with a volumetric weight of 10kg or above.
 
 ### More Options
 
