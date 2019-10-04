@@ -33,9 +33,11 @@ The consignments table visual lists the total number of packages and consignment
 
 ### Visual Filters
 
-* **Carrier** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
-* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters))
-* **Packages** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+The consignments table enables you to apply the following filters to the list of carriers displayed:
+
+* **Carrier** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select a specific carrier or carriers to view.
+* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped. For example, if you were to filter on *is greater than 5000*, then only those carriers who had shipped 5001 or more consignments would be displayed.
+* **Packages** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of packages shipped. For example, if you were to filter on *is greater than 5000*, then only those carriers who had shipped 5001 or more packages would be displayed.
 
 ### More Options
 
@@ -59,8 +61,10 @@ The **Consignments by Carrier Name** pie chart displays each carrier's share of 
 
 ### Visual Filters
 
-* **Carrier** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
-* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+The **Consignments by Carrier Name** chart enables you to filter the data displayed in the following ways:
+
+* **Carrier** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select a specific carrier or carriers to view.
+* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped. For example, if you were to filter on *is greater than 5000*, then only those carriers who had shipped 5001 or more consignments would be displayed.
 
 ### More Options
 
@@ -98,9 +102,11 @@ Hover your mouse pointer over a particular day to view exact per-carrier shipmen
 
 ### Visual Filters
 
-* **Carrier** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
-* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters))
-* **DateShippedOnly** ([Basic](/reports/filters-options.html#using-basic-filters), [Advanced](/reports/filters-options.html#using-advanced-filters), and [Relative Date](/reports/filters-options.html#using-relative-date-filters))
+The **Consignments Shipped by Carrier Over Time** chart enables you to filter the data displayed in the following ways:
+
+* **Carrier Name** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))  - enables you to select a specific carrier or carriers to view.
+* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped on a given day. For example, if you were to filter on *is greater than 1000*, then any data points in which the carrier had shipped 1000 or fewer consignments on that day would be ignored. In this example, the y-axis of the graph is effectively skewed so that it starts at 1000 rather than 0.
+* **DateShippedOnly** ([Basic](/reports/filters-options.html#using-basic-filters), [Advanced](/reports/filters-options.html#using-advanced-filters), and [Relative Date](/reports/filters-options.html#using-relative-date-filters)) - enables you to select specific dates or date ranges to view.
 
 ### More Options
 

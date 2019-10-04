@@ -64,9 +64,11 @@ Hover your mouse over a particular point on the chart to view that carrier's shi
 
 ### Visual Filters
 
-* **Carrier** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
-* **Date Shipped** ([Basic](/reports/filters-options.html#using-basic-filters), [Advanced](/reports/filters-options.html#using-advanced-filters), and [Relative Date](/reports/filters-options.html#using-relative-date-filters))
-* **Parcel Charges** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+You can filter the data displayed on the **Shipping Cost Over Time by Carrier** table using the following filters:
+
+* **Carrier Name** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select a carrier or carriers whose services you want to view.
+* **Date Shipped** ([Basic](/reports/filters-options.html#using-basic-filters), [Advanced](/reports/filters-options.html#using-advanced-filters), and [Relative Date](/reports/filters-options.html#using-relative-date-filters)) - enables you to select specific shipped dates or date ranges to view.
+* **Parcel Charges** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by per-carrier per-day spend. For example, if you were to filter on *is greater than 10000*, then any data points in which you had spent £9999 with a particular carrier on a particular day would be ignored. In this example, the y-axis of the graph is effectively skewed so that it starts at 10000 rather than 0.
 
 ### More Options
 
@@ -101,8 +103,10 @@ Hover your mouse over a particular point on the chart to view your total shippin
 
 ### Visual Filters
 
-* **Date Shipped** ([Basic](/reports/filters-options.html#using-basic-filters), [Advanced](/reports/filters-options.html#using-advanced-filters), and [Relative Date](/reports/filters-options.html#using-relative-date-filters))
-* **Parcel Charges** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+You can filter the dates displayed on the **Shipping Cost Over Time by Carrier** table using the following filters:
+
+* **Date Shipped** ([Basic](/reports/filters-options.html#using-basic-filters), [Advanced](/reports/filters-options.html#using-advanced-filters), and [Relative Date](/reports/filters-options.html#using-relative-date-filters)) - enables you to select specific shipped dates or date ranges to view.
+* **Parcel Charges** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by total daily parcel charge. For example, if you were to filter on *is greater than 5000*, then only dates on which your total parcel charges were greater than £5000 would be displayed.
 
 ### More Options
 
@@ -163,10 +167,12 @@ To return to the table's default level (average shipping cost to each destinatio
 
 ### Visual Filters
 
-* **Average Shipping Cost** ([Numerical](/reports/filters-options.html#using-numerical-filters))
-* **Carrier** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
-* **CustomerName** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
-* **Destination Country** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
+You can filter the destination countries and carriers displayed on the **Average Shipping Cost by Destination** table using the following filters:
+
+* **Average Shipping Cost** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter carriers and countries by average shipping cost. For example, if you were to filter on *is greater than 5*, then only those records showing an average shipping cost of over £5 for that carrier would be displayed.
+* **Carrier** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select a carrier or carriers to view.
+* **Company** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - where applicable, enables you to select one or more of your companies to view shipments for.
+* **Destination Country** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select one or more destination countries to view.
 
 ### More Options
 

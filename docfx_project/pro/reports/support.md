@@ -19,7 +19,7 @@ The **Support** report offers the following report-wide filters:
     <img src="../images/reports/support-left-filter.png"/>
 </a>
 
-## Tickets by Status
+## Tickets by Ticket Status
 
 The **Tickets by Status** chat shows what proportion of your support tickets is in each of the support statuses.
 
@@ -35,8 +35,10 @@ Hover your mouse over a section of the pie chart to view the number of your tick
 
 ### Visual Filters
 
-* **Status** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
-* **Tickets** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+You can filter the ticket statuses displayed on the **Tickets by Ticket Status** chart using the following filters:
+
+* **Status** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select all tickets in a particular status. You can select multiple statuses if required.
+* **Tickets** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to select only those statuses that have a certain number of tickets in them. For example, if you were to filter on *is greater than 1000*, then any statuses in which were were fewer than 1000 tickets would be ignored.
 
 ### More Options
 
@@ -68,8 +70,10 @@ The **Tickets Logged by Company** bar chart shows how many support tickets each 
 
 ### Visual Filters
 
-* **Company Name** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
-* **Tickets** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+You can filter the companies displayed on the **Tickets Logged by Company** chart using the following filters:
+
+* **Company Name** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select one or more companies to view.
+* **Tickets** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of tickets logged by each company. For example, if you were to filter on *is greater than 1000*, then any companies that had logged 1000 or fewer tickets would be ignored.
 
 ### More Options
 
@@ -107,8 +111,10 @@ Hover your mouse over a section of the pie chart to view the number of open tick
 
 ### Visual Filters
 
-* **Priority Level** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
-* **Tickets** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+You can filter the priority levels displayed on the **Current Tickets by Priority Level** chart using the following filters:
+
+* **Priority Level** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select one or more companies to view.
+* **Tickets** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of tickets logged by at each priority level. For example, if you were to filter on *is greater than 10*, then any levels at which 10 or fewer tickets were logged would be ignored.
 
 ### More Options
 
@@ -140,9 +146,11 @@ The **Tickets Logged Per Day By Company** chart shows the total number of ticket
 
 ### Visual Filters
 
-* **Created Date** ([Basic](/reports/filters-options.html#using-basic-filters), [Advanced](/reports/filters-options.html#using-advanced-filters), and [Relative Date](/reports/filters-options.html#using-relative-date-filters))
-* **Customer Name** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
-* **Tickets** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+You can filter the data displayed on the **Tickets Logged Per Day By Company** chart using the following filters:
+
+* **Created Date** ([Basic](/reports/filters-options.html#using-basic-filters), [Advanced](/reports/filters-options.html#using-advanced-filters), and [Relative Date](/reports/filters-options.html#using-relative-date-filters)) - enables you to specify a date or date ranges to view.
+* **Customer Name** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select one or more customers.
+* **Tickets** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of tickets logged by each company on a given day. For example, if you were to filter on *is greater than 10*, then any data points in which the company had logged 10 or fewer tickets on that day would be ignored. In this example, the y-axis of the graph is effectively skewed so that it starts at 10 rather than 0.
 
 ### More Options
 

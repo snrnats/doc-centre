@@ -39,9 +39,11 @@ Hover your mouse over the chart to see how many consignments were shipped with e
 
 ### Visual Filters
 
-* **Carrier** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
-* **Carrier Service** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
-* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+You can filter the carriers and services displayed on the **Consignments by Carrier and Carrier Service Name** chart using the following filters:
+
+* **Carrier Name** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select a carrier or carriers whose services you want to view.
+* **Carrier Service Name** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select a service or services to view.
+* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter services by number of consignments shipped. For example, if you were to filter on *is greater than 5000*, then only those services with which you had shipped 5001 or more consignments would be displayed.
 
 ### More Options
 
@@ -73,9 +75,10 @@ The **% of Total Consignments by Carrier Service Name** bar chart shows the prop
 
 ### Visual Filters
 
-* **% of Total Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters))
-* **Carrier Service** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
-* **Number of Packages** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+You can filter the carrier services displayed on the **% of Total Consignments by Carrier Service Name** chart using the following filters:
+
+* **Carrier Service** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select a carrier or carriers whose services you want to view.
+* **Number of Packages** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter services by number of package shipped. For example, if you were to filter on *is greater than 5000*, then only those services with which you had shipped 5001 or more packages would be displayed.
 
 ### More Options
 
@@ -107,9 +110,11 @@ The **Consignments by Shipping Location and Carrier Service** table shows how ma
 
 ### Visual Filters
 
-* **Carrier Service** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
-* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters))
-* **Shipping Location** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
+You can filter the carrier services and delivery locations displayed on the **Consignments by Shipping Location and Carrier Service** table using the following filters:
+
+* **Carrier Service Name** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select a service or services to view.
+* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter delivery locations by number of consignments shipped. For example, if you were to filter on *is greater than 5000*, then only those locations from which you had shipped 5001 or more consignments would be displayed.
+* **Shipping Location** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select a shipping location or locations to view.
 
 ### More Options
 

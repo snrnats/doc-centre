@@ -33,8 +33,10 @@ The **Consignments by Delivery Window** pie chart shows the proportion of your c
 
 ### Visual Filters
 
-* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters))
-* **Delivery Window** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
+You can filter the delivery windows displayed on the **Consignments by Delivery Window** chart using the following filters:
+
+* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped. For example, if you were to filter on *is greater than 5000*, then only those delivery windows for which you had shipped 5001 or more consignments would be displayed.
+* **Delivery Window** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select a specific delivery window or windows to view.
 
 ### More Options
 
@@ -72,9 +74,7 @@ Hover your mouse over an area of the chart to see further details.
 
 ### Visual Filters
 
-* **Carrier** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
-* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters))
-* **DeliveredOnTime** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
+The **Carrier Name** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) filter enables you to select a carrier or carriers to view.
 
 ### More Options
 
@@ -112,9 +112,11 @@ Hover your mouse over an area of the chart to see the number of that carrier's c
 
 ### Visual Filters
 
-* **Carrier** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
-* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters))
-* **Delivery Type** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
+You can filter the carriers displayed on the **Delivery Type by Carrier** chart using the following filters:
+
+* **Carrier Name** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select a carrier or carriers to view.
+* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped. For example, if you were to filter on *is greater than 5000*, then only those carriers with which you had shipped 5001 or more consignments would be displayed.
+* **Delivery Type** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select a specific delivery type or types.
 
 ### More Options
 
@@ -158,8 +160,10 @@ Hover your mouse over an area of the chart to see the number of that carrier's c
 
 ### Visual Filters
 
-* **Carrier** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
-* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+You can filter the carriers displayed on the **Delivery Window by Carrier** chart using the following filters:
+
+* **Carrier Name** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select a carrier or carriers to view.
+* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped. For example, if you were to filter on *is greater than 5000*, then only those carriers with which you had shipped 5001 or more consignments would be displayed.
 
 ### More Options
 

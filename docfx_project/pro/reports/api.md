@@ -29,8 +29,10 @@ The **API Requests by Company Name** chart shows how many requests each of your 
 
 ### Visual Filters
 
-* **API Requests** ([Numerical](/reports/filters-options.html#using-numerical-filters))
-* **CustomerName** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
+You can filter the companies displayed on the **API Requests by Company Name** visual as follows: 
+
+* **API Requests** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of API requests made. For example, if you were to filter on *is greater than 5000000*, then only those companies who had made more than 5,000,000 API requests would be displayed.
+* **Company Name** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select one or more companies to view.
 
 ### More Options
 
@@ -68,8 +70,10 @@ Hover your mouse pointer over the chart to view the ATUs used by each individual
 
 ### Visual Filters
 
-* **ATU Total** ([Numerical](/reports/filters-options.html#using-numerical-filters))
-* **CustomerName** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
+You can filter the companies displayed on the **ATU Total Company** visual as follows: 
+
+* **ATU Total** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of ATUs consumed. For example, if you were to filter on *is greater than 5000000*, then only those companies who had made more than 5,000,000 API requests would be displayed.
+* **Customer Name** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select one or more companies to view.
 
 ### More Options
 
@@ -107,9 +111,9 @@ Hover your mouse over the chart to view the total number of API requests made by
 
 ### Visual Filters
 
-* **API Requests** ([Numerical](/reports/filters-options.html#using-numerical-filters))
-* **CustomerName** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)
-* **IntervalDate** ([Basic](/reports/filters-options.html#using-basic-filters), [Advanced](/reports/filters-options.html#using-advanced-filters), and [Relative Date](/reports/filters-options.html#using-relative-date-filters))
+* **API Requests** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of API requests made on a given day. For example, if you were to filter on *is greater than 100000*, then any data points in which the company had made 100000 or fewer API requests on that day would be ignored. In this example, the y-axis of the graph is effectively skewed so that it starts at 100000 rather than 0.
+* **Company Name** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters) - enables you to select one or more companies to view.
+* **Calendar Date** ([Basic](/reports/filters-options.html#using-basic-filters), [Advanced](/reports/filters-options.html#using-advanced-filters), and [Relative Date](/reports/filters-options.html#using-relative-date-filters)) - enables you to select specific dates or date ranges to view. 
 
 ### More Options
 

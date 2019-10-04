@@ -39,9 +39,11 @@ The consignments table shows how many consignments and packages were shipped to 
 
 ### Visual Filters
 
-* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters))
-* **Destination Country** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
-* **Packages** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+You can filter the list of countries displayed on the consignments table using the following filters:
+
+* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped. For example, if you were to filter on *is greater than 5000*, then only those countries to which you had shipped 5001 or more consignments would be displayed.
+* **Destination Country** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select a specific country or countries to view.
+* **Packages** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of packages shipped. For example, if you were to filter on *is greater than 5000*, then only those countries to which you had shipped 5001 or more packages would be displayed.
 
 ### More Options
 
@@ -68,8 +70,10 @@ If required, you can search for countries and locations using the search bar at 
 
 ### Visual Filters
 
-* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters))
-* **MapBox** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
+You can filter the countries displayed on the **Consignment Volumes by Country** chart via the following filters: 
+
+* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped. For example, if you were to filter on *is greater than 5000*, then only those countries to which you had shipped 5001 or more consignments would be displayed.
+* **MapBox** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select a specific country or countries to view.
 
 ### More Options
 
@@ -95,10 +99,6 @@ The **% of Consignment Volume by Destination Country** bar chart shows each dest
 <a href="../images/reports/by-country-top-10.png" target="_blank">
     <img src="../images/reports/by-country-top-10.png"/>
 </a>
-
-### Visual Filters
-
-* **%GT Count of ConsignmentReference** ([Numerical](/reports/filters-options.html#using-numerical-filters))
 
 ### More Options
 
