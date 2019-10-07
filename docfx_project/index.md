@@ -18,7 +18,6 @@ PRO features the following reports:
 * [Traffic Profiles](pro/reports/traffic-profile.md)
 * [Volumes by Carrier](pro/reports/by-carrier.md)
 * [Volumes by Destination Country](pro/reports/by-country.md)
-* [Carrier Performance](pro/reports/performance.md)
 * [Delivery Experience](pro/reports/experience.md)
 * [Volumes by Carrier Service](pro/reports/by-carrier-service.md)
 * [Shipping Locations](pro/reports/location-performance.md)

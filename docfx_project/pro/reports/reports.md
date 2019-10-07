@@ -5,7 +5,6 @@ PRO offers the following reports
 * [Traffic Profiles](traffic-profile.md) - Shows the number and weights of consignments and packages that your organisation is shipping.
 * [Volumes by Carrier](by-carrier.md) - Shows shipping volumes broken down by carrier.
 * [Volumes by Destination Country](by-country.md) - Shows shipping volumes broken down by destination country.
-* [Carrier Performance](performance.md) - Shows how many of each carrier's shipments were late or failed, as well as a map showing the destinations of late shipments.
 * [Delivery Experience](experience.md) - Shows delivery window and type statistics, delivery failures by carrier service, and what percentage of deliveries were on time.
 * [Volumes by Carrier Service](by-carrier-service.md) - Shows shipping volumes broken down by carrier service.
 * [Shipping Locations](location-performance.md) - Shows shipping volumes and performance for each of your organisation's shipping locations. 
