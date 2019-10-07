@@ -248,7 +248,7 @@ Enables you to save a visual's underlying data as a .CSV or .XLSX file.
 
 ### Show Data
 
-Displays the dataset that was used to generate that particular visual.
+Displays a summary of the data that was used to generate that particular visual.
 
 <a href="../images/reports/show-data.png" target="_blank">
     <img src="../images/reports/show-data.png"/>
@@ -273,6 +273,20 @@ Enables you to specify how the visual's data should be sorted.
 > <span class="note-header">Note:</span>
 >
 > Not all options are available to all visuals. For information on a visual's specific options, see that report's documentation page in the [Reports](reports.md) section.
+
+## Viewing Records
+
+Some visuals enable you to click through to view the raw records in the dataset that the visual was generated from. The **Using Reports** section explains which visuals you can view records for.
+
+<a href="../images/reports/view-records.png" target="_blank">
+    <img src="../images/reports/view-records.png"/>
+</a>
+
+To view records for a visual, right click on that visual and select **View Records** from the pop-up menu
+
+<a href="../images/reports/view-records-option.png" target="_blank">
+    <img src="../images/reports/view-records-option.png"/>
+</a>
 
 ## Next Steps
 
