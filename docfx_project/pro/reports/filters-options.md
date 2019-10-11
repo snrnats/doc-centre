@@ -1,6 +1,6 @@
 # Filters and Options
 
-By default, reports display all available data for a specific customer. Filters enable you to fine-tune the information a report displays by selecting the specific data that you want to view. For example, you might filter the **Volumes by Carrier** report so that it only takes into account consignments shipped in the last month, rather than taking all consignments into account.
+By default, reports display all available data for a specific customer. Filters enable you to fine-tune the information a report displays by selecting the specific data that you want to view. For example, you might filter a report so that it only takes into account consignments shipped in the last month, rather than taking all consignments into account.
 
 ## Filters
 
@@ -11,9 +11,9 @@ You can filter reports either at a report-wide or visual-specific level.
 
 > <span class="note-header">Note:</span>
 >
-> The list of filters available differs between reports. For information on a report's specific filters, see that report's documentation page in the [Reports](reports.md) section.
+> The list of filters available differs between reports. For information on a report's specific filters, see that report's documentation page in the [Using Reports](reports.md) section.
 
-You can combine multiple filters if you need to. For example, say you want to see a graph charting how many shipments you sent with DPD and UPS between 30/07/2019 and 30/08/2019. view this information this you could:
+You can combine multiple filters if you need to. For example, say you want to see a graph charting how many shipments you sent with DPD and UPS between 30/07/2019 and 30/08/2019. To view this information this you could:
 
 1. Open the **Volumes by Carrier** report.
 
@@ -33,7 +33,7 @@ You can combine multiple filters if you need to. For example, say you want to se
     <img src="../images/reports/carrier-filters-panel.png"/>
     </a>
 
-4. Select the carriers that you want to filter the visual by (in this case, UPS and DPD). The report filters the chart so that it only takes into account consignments that were shipped by either UPS or DPD AND meet the existing report filter criteria (that is they were shipped between 30/07/2019 and 30/08/2019).
+4. Select the carriers that you want to filter the visual by (in this case, UPS and DPD). The report filters the chart so that it only takes into account consignments that were shipped by either UPS or DPD _AND_ meet the existing report filter criteria (that is, they were shipped between 30/07/2019 and 30/08/2019).
 
     <a href="../images/reports/filtered-carrier-chart.png" target="_blank">
     <img src="../images/reports/filtered-carrier-chart.png"/>
@@ -43,7 +43,7 @@ You can combine multiple filters if you need to. For example, say you want to se
 > 
 > While the report-wide date filter affects all of the report's visuals, the visual-specific carrier filter only applies to the **Consignments Shipped by Carrier Over Time** chart.
 
-To reset a report's filters back to default, click the **Reset to Default** button on Power BI's top toolbar.
+To reset a report's filters back to default, click the **Reset to Default** button on Power BI's toolbar.
 
 <a href="../images/reports/reset-to-default.png" target="_blank">
     <img src="../images/reports/reset-to-default.png"/>
@@ -60,13 +60,13 @@ Each visual has various filterable properties. The PRO reports use four types of
 
 #### Using Numerical Filters
 
-<a href="../images/reports/num-filter-gif.gif" target="_blank">
-    <img src="../images/reports/num-filter-gif.gif"/>
-</a>
-
 Numerical filters enable you to specify a number range to a numerical field. Once applied, the visual is filtered so that it only takes into account records in which the value of the filtered field meets the criteria you specified. 
 
 For example, suppose that you are viewing the data table on the **Shipped Consignments by Destination Country** report, but you are only interested in countries to which you have shipped more than 1000 consignments. You could apply a numerical filter to the **Consignments** field so that the table only shows country records where the value of **Consignments** (that is, the total number of consignments shipped to that particular country) was above 1000. 
+
+<a href="../images/reports/num-filter-gif.gif" target="_blank">
+    <img src="../images/reports/num-filter-gif.gif"/>
+</a>
 
 To apply a numerical filter to a visual:
 
@@ -110,9 +110,13 @@ If you wanted to modify that filter so that only countries to which you have shi
 
 #### Using Basic Filters
 
-Basic filters enable you to select discrete text values. Once applied, the visual is filtered so that it only takes into account records in which the value of the filtered field meets the criteria you specified.
+Basic filters enable you to select individual text values. Once applied, the visual is filtered so that it only takes into account records in which the value of the filtered field meets the criteria you specified.
 
 For example, suppose that you are viewing the **Delivery Type by Carrier** visual on the **Delivery Experience** report, but you only want to view the delivery types used in shipments by DPD and UPS, rather than your entire suite of carriers. You could use basic filtering to select those two carriers specifically.
+
+<a href="../images/reports/basic-filter-gif.gif" target="_blank">
+    <img src="../images/reports/basic-filter-gif.gif"/>
+</a>
 
 To apply basic filtering to a visual:
 
@@ -140,6 +144,10 @@ To apply basic filtering to a visual:
 Advanced filters enable you to select all text values that meet certain criteria, rather than selecting individual values themselves.
 
 For example, suppose that you are viewing the **% of Total Consignments by Carrier Service** visual on the **Shipping Consignments by Carrier Service** report. However, rather than viewing data for all of your carrier services, you only want to view your UPS carrier services. In this case you could use an Advanced filter on the *Carrier Service* field to filter out all carrier services other than those whose names start with "UPS".
+
+<a href="../images/reports/adv-filter-gif.gif" target="_blank">
+    <img src="../images/reports/adv-filter-gif.gif"/>
+</a>
 
 To apply advanced filtering to a visual:
 
@@ -188,6 +196,10 @@ To apply advanced filtering to a visual:
 Relative date filtering is only available on date fields. It enables you to filter visuals by providing a date range that is relative to the current date and time.
 
 For example, suppose that you are viewing the **Consignments Shipped By Carrier Over Time** visual of the **Shipped Consignments by Carrier** report, but you only want to view data for the late two weeks. You could use a relative date filter on the `DateShippedOnly` field to select only those consignments that were shipped in the last two weeks.
+
+<a href="../images/reports/date-filter-gif.gif" target="_blank">
+    <img src="../images/reports/date-filter-gif.gif"/>
+</a>
 
 To apply a relative date filter:
 
@@ -248,7 +260,7 @@ Enables you to save a visual's underlying data as a .CSV or .XLSX file.
 
 ### Show Data
 
-Displays the dataset that was used to generate that particular visual.
+Displays a summary of the data that was used to generate that particular visual.
 
 <a href="../images/reports/show-data.png" target="_blank">
     <img src="../images/reports/show-data.png"/>
@@ -273,6 +285,20 @@ Enables you to specify how the visual's data should be sorted.
 > <span class="note-header">Note:</span>
 >
 > Not all options are available to all visuals. For information on a visual's specific options, see that report's documentation page in the [Reports](reports.md) section.
+
+## Viewing Records
+
+Some types of visual enable you to click through to view the raw records in the dataset that the visual was generated from. The **Using Reports** section explains which visuals you can view records for.
+
+<a href="../images/reports/view-records.png" target="_blank">
+    <img src="../images/reports/view-records.png"/>
+</a>
+
+To view records for a visual, right click on that visual and select **View Records** from the pop-up menu.
+
+<a href="../images/reports/view-records-option.png" target="_blank">
+    <img src="../images/reports/view-records-option.png"/>
+</a>
 
 ## Next Steps
 

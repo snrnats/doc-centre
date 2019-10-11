@@ -1,8 +1,8 @@
 # Delivery Experience
 
-The **Delivery Experience** report enables you to get an overview of the delivery windows and types requested by your customer, as well as how often your carriers were met those delivery promises. 
+The **Delivery Experience** report enables you to get an overview of the delivery windows and types requested by your customers, as well as how often your carriers were met those delivery promises. 
 
-It comprises a **Consignments by Delivery Window** pie chart, a **Customer Promise Met** bar chart, a **Delivery Type by Carrier** bar chart, and a **Delivery Window by Carrier** bar chart.
+It comprises a **Consignments by Delivery Window** pie chart, a **Delivery Type by Carrier** bar chart, and a **Delivery Window by Carrier** bar chart.
 
 <a href="../images/reports/experience.png" target="_blank">
     <img src="../images/reports/experience.png"/>
@@ -33,12 +33,14 @@ The **Consignments by Delivery Window** pie chart shows the proportion of your c
 
 ### Visual Filters
 
-* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters))
-* **Delivery Window** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
+You can filter the delivery windows displayed on the **Consignments by Delivery Window** chart using the following filters:
+
+* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped. For example, if you were to filter on *is greater than 5000*, then only those delivery windows for which you had shipped 5001 or more consignments would be displayed.
+* **Delivery Window** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select a specific delivery window or windows to view.
 
 ### More Options
 
-The **Consignments by Delivery Window** chart has the following options available from its **More Options** menu:
+The following options are available from the **More Options** menu:
 
 * [Open Comments](/reports/filters-options.html#open-comments)
 * [Export Data](/reports/filters-options.html#export-data)
@@ -48,6 +50,8 @@ The **Consignments by Delivery Window** chart has the following options availabl
 * [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
 * [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Delivery Window / Consignments
 
+You can also view the records that the visual's data was generated from by right-clicking on it and selecting **View Records** from the pop-up menu.
+
 ### Viewing Data
 
 <a href="../images/reports/experience-delivery-window-data.png" target="_blank">
@@ -55,46 +59,6 @@ The **Consignments by Delivery Window** chart has the following options availabl
 </a>
 
 The **Consignments by Delivery Window** pie chart's **Show Data** option shows the number of consignments that were scheduled for each delivery window. 
-
-## Customer Promise Met
-
-The **Customer Promise Met** chart shows the proportion of each carrier's shipments that met their delivery promise.
-
-<a href="../images/reports/experience-promise.png" target="_blank">
-    <img src="../images/reports/experience-promise.png"/>
-</a>
-
-Hover your mouse over an area of the chart to see further details.
-
-<a href="../images/reports/experience-promise-highlight.png" target="_blank">
-    <img src="../images/reports/experience-promise-highlight.png"/>
-</a>
-
-### Visual Filters
-
-* **Carrier** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
-* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters))
-* **DeliveredOnTime** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
-
-### More Options
-
-The **Customer Promise Met** chart has the following options available from its **More Options** menu:
-
-* [Open Comments](/reports/filters-options.html#open-comments)
-* [Export Data](/reports/filters-options.html#export-data)
-* [Show Data](/reports/filters-options.html#show-data)
-* [Spotlight](/reports/filters-options.html#spotlight)
-* [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
-* [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
-* [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Carrier / Consignments
-
-### Viewing Data
-
-<a href="../images/reports/experience-promise-data.png" target="_blank">
-    <img src="../images/reports/experience-promise-data.png"/>
-</a>
-
-The **Customer Promise Met** chart's **Show Data** option shows the number of each carrier's shipments that arrived late, and the number that arrived on time.
 
 ## Delivery Type by Carrier
 
@@ -112,13 +76,15 @@ Hover your mouse over an area of the chart to see the number of that carrier's c
 
 ### Visual Filters
 
-* **Carrier** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
-* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters))
-* **Delivery Type** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
+You can filter the carriers displayed on the **Delivery Type by Carrier** chart using the following filters:
+
+* **Carrier Name** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select a carrier or carriers to view.
+* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped. For example, if you were to filter on *is greater than 5000*, then only those carriers with which you had shipped 5001 or more consignments would be displayed.
+* **Delivery Type** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select a specific delivery type or types.
 
 ### More Options
 
-The **Delivery Type by Carrier** chart has the following options available from its **More Options** menu:
+The following options are available from the **More Options** menu:
 
 * [Open Comments](/reports/filters-options.html#open-comments)
 * [Export Data](/reports/filters-options.html#export-data)
@@ -127,6 +93,8 @@ The **Delivery Type by Carrier** chart has the following options available from 
 * [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
 * [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
 * [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Carrier / Consignments
+
+You can also view the records that the visual's data was generated from by right-clicking on it and selecting **View Records** from the pop-up menu.
 
 ### Viewing Data
 
@@ -158,12 +126,14 @@ Hover your mouse over an area of the chart to see the number of that carrier's c
 
 ### Visual Filters
 
-* **Carrier** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
-* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters))
+You can filter the carriers displayed on the **Delivery Window by Carrier** chart using the following filters:
+
+* **Carrier Name** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select a carrier or carriers to view.
+* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped. For example, if you were to filter on *is greater than 5000*, then only those carriers with which you had shipped 5001 or more consignments would be displayed.
 
 ### More Options
 
-The **Delivery Window by Carrier** chart has the following options available from its **More Options** menu:
+The following options are available from the **More Options** menu:
 
 * [Open Comments](/reports/filters-options.html#open-comments)
 * [Export Data](/reports/filters-options.html#export-data)
@@ -172,6 +142,8 @@ The **Delivery Window by Carrier** chart has the following options available fro
 * [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
 * [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
 * [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Carrier / Consignments
+
+You can also view the records that the visual's data was generated from by right-clicking on it and selecting **View Records** from the pop-up menu.
 
 ### Viewing Data
 

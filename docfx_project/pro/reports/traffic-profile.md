@@ -50,7 +50,7 @@ The consignment data table visual lists the following information for each of yo
 
 The consignment data table enables you to filter the companies displayed. For example, if you were to set an **Average Packages Per Consignment** filter of *less than 1.5* packages, then any companies shipping an average of 1.51 or more packages per consignment would be excluded. The following filters are available:
 
-* **Average Packages Per Consignment** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by the average number of packages shipped in each consignment. F
+* **Average Packages Per Consignment** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by the average number of packages shipped in each consignment.
 * **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters))
 * **Packages** ([Numerical](/reports/filters-options.html#using-numerical-filters))
 * **Average Weight, KG** ([Numerical](/reports/filters-options.html#using-numerical-filters))
@@ -59,7 +59,7 @@ The consignment data table enables you to filter the companies displayed. For ex
 
 ### More Options
 
-The data table has the following options available from its **More Options** menu:
+The following options are available from the **More Options** menu:
 
 * [Open Comments](/reports/filters-options.html#open-comments)
 * [Export Data](/reports/filters-options.html#export-data)
@@ -85,7 +85,7 @@ The **Consignment Volume Distribution by Absolute Weight** chart's **Kilograms**
 
 ### More Options
 
-The **Consignment Volume Distribution by Absolute Weight** chart has the following options available from its **More Options** menu:
+The following options are available from the **More Options** menu:
 
 * [Open Comments](/reports/filters-options.html#open-comments)
 * [Export Data](/reports/filters-options.html#export-data)
@@ -122,7 +122,7 @@ The **Consignment Volume Distribution by Volumetric Weight** chart's **Kilograms
 
 ### More Options
 
-The **Consignment Volume Distribution by Volumetric Weight** chart has the following options available from its **More Options** menu:
+The following options are available from the **More Options** menu:
 
 * [Open Comments](/reports/filters-options.html#open-comments)
 * [Export Data](/reports/filters-options.html#export-data)
