@@ -23,9 +23,9 @@ The **Shipped Consignments by Carrier Service** report offers the following repo
     <img src="../images/reports/by-carrier-service-left-filter.png"/>
 </a>
 
-## Consignments by Carrier and Carrier Service Name
+## Consignments by Carrier Name and Carrier Service Name
 
-The **Consignments by Carrier and Carrier Service Name** bar chart shows how many of your consignments were shipped with each carrier service. Each bar represents a carrier, and the bar segments represent individual services.
+The **Consignments by Carrier Name and Carrier Service Name** bar chart shows how many of your consignments were shipped with each carrier service. Each bar represents a carrier, and the bar segments represent individual services.
 
 <a href="../images/reports/by-carrier-service-by-carrier.png" target="_blank">
     <img src="../images/reports/by-carrier-service-by-carrier.png"/>
@@ -47,7 +47,7 @@ You can filter the carriers and services displayed on the **Consignments by Carr
 
 ### More Options
 
-The **Consignments by Carrier and Carrier Service Name** chart has the following options available from its **More Options** menu:
+The following options are available from the **More Options** menu:
 
 * [Open Comments](/reports/filters-options.html#open-comments)
 * [Export Data](/reports/filters-options.html#export-data)
@@ -82,7 +82,7 @@ You can filter the carrier services displayed on the **% of Total Consignments b
 
 ### More Options
 
-The **% of Total Consignments by Carrier Service Name** chart has the following options available from its **More Options** menu:
+The following options are available from the **More Options** menu:
 
 * [Open Comments](/reports/filters-options.html#open-comments)
 * [Export Data](/reports/filters-options.html#export-data)
@@ -118,7 +118,7 @@ You can filter the carrier services and delivery locations displayed on the **Co
 
 ### More Options
 
-The **Consignments by Shipping Location and Carrier Service** chart has the following options available from its **More Options** menu:
+The following options are available from the **More Options** menu:
 
 * [Open Comments](/reports/filters-options.html#open-comments)
 * [Export Data](/reports/filters-options.html#export-data)

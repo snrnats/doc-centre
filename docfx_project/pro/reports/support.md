@@ -21,7 +21,7 @@ The **Support** report offers the following report-wide filters:
 
 ## Tickets by Ticket Status
 
-The **Tickets by Status** chat shows what proportion of your support tickets is in each of the support statuses.
+The **Tickets by Ticket Status** chat shows what proportion of your support tickets is in each of the support statuses.
 
 <a href="../images/reports/support-by-status.png" target="_blank">
     <img src="../images/reports/support-by-status.png"/>
@@ -42,7 +42,7 @@ You can filter the ticket statuses displayed on the **Tickets by Ticket Status**
 
 ### More Options
 
-The **Tickets by Status** chart has the following options available from its **More Options** menu:
+The following options are available from the **More Options** menu:
 
 * [Open Comments](/reports/filters-options.html#open-comments)
 * [Export Data](/reports/filters-options.html#export-data)
@@ -51,6 +51,8 @@ The **Tickets by Status** chart has the following options available from its **M
 * [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
 * [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
 * [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Status / Tickets
+
+You can also view the records that the visual's data was generated from by right-clicking on it and selecting **View Records** from the pop-up menu.
 
 ### Viewing Data
 
@@ -77,7 +79,7 @@ You can filter the companies displayed on the **Tickets Logged by Company** char
 
 ### More Options
 
-The **Tickets Logged by Company** chart has the following options available from its **More Options** menu:
+The following options are available from the **More Options** menu:
 
 * [Open Comments](/reports/filters-options.html#open-comments)
 * [Export Data](/reports/filters-options.html#export-data)
@@ -86,6 +88,8 @@ The **Tickets Logged by Company** chart has the following options available from
 * [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
 * [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
 * [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Company Name / Tickets
+
+You can also view the records that the visual's data was generated from by right-clicking on it and selecting **View Records** from the pop-up menu.
 
 ### Viewing Data
 
@@ -118,7 +122,7 @@ You can filter the priority levels displayed on the **Current Tickets by Priorit
 
 ### More Options
 
-The **Tickets by Priority Level** chart has the following options available from its **More Options** menu:
+The following options are available from the **More Options** menu:
 
 * [Open Comments](/reports/filters-options.html#open-comments)
 * [Export Data](/reports/filters-options.html#export-data)
@@ -127,6 +131,8 @@ The **Tickets by Priority Level** chart has the following options available from
 * [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
 * [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
 * [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Priority Level / Tickets
+
+You can also view the records that the visual's data was generated from by right-clicking on it and selecting **View Records** from the pop-up menu.
 
 ### Viewing Data
 
@@ -150,11 +156,11 @@ You can filter the data displayed on the **Tickets Logged Per Day By Company** c
 
 * **Created Date** ([Basic](/reports/filters-options.html#using-basic-filters), [Advanced](/reports/filters-options.html#using-advanced-filters), and [Relative Date](/reports/filters-options.html#using-relative-date-filters)) - enables you to specify a date or date ranges to view.
 * **Customer Name** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select one or more customers.
-* **Tickets** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of tickets logged by each company on a given day. For example, if you were to filter on *is greater than 10*, then any data points in which the company had logged 10 or fewer tickets on that day would be ignored. In this example, the y-axis of the graph is effectively skewed so that it starts at 10 rather than 0.
+* **Tickets** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of tickets logged by each company on a given day. For example, if you were to filter on *is greater than 10*, then any data points in which the company in question had logged 10 or fewer tickets on that day would be ignored. In this example, the y-axis of the graph is effectively skewed so that it starts at 10 rather than 0.
 
 ### More Options
 
-The **Tickets Logged Per Day By Company** chart has the following options available from its **More Options** menu:
+The following options are available from the **More Options** menu:
 
 * [Open Comments](/reports/filters-options.html#open-comments)
 * [Export Data](/reports/filters-options.html#export-data)
@@ -167,4 +173,4 @@ The **Tickets Logged Per Day By Company** chart has the following options availa
     <img src="../images/reports/support-per-day-data.png"/>
 </a>
 
-The **Tickets Logged Per Day By Company** chart's **Show Data** option shows how many of tickets each of your companies logged on any given day.
+The **Tickets Logged Per Day By Company** chart's **Show Data** option shows how many tickets each of your companies logged on any given day.

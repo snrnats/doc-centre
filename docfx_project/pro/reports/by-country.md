@@ -47,7 +47,7 @@ You can filter the list of countries displayed on the consignments table using t
 
 ### More Options
 
-The data table has the following options available from its **More Options** menu:
+The following options are available from the **More Options** menu:
 
 * [Open Comments](/reports/filters-options.html#open-comments)
 * [Export Data](/reports/filters-options.html#export-data)
@@ -60,7 +60,7 @@ The data table has the following options available from its **More Options** men
 
 ## Consignment Volumes by Country
 
-The **Consignment Volumes by Country** chart displays the countries your organisation has shipped to on a map. The countries you ship to most frequently are displayed in blue tones, while your least frequently shipped-to countries are displayed in green tones.
+The **Consignment Volumes by Country** chart displays the countries your organisation has shipped to on a map. The countries you ship to most frequently are displayed in blue tones, while the countries you ship to least frequently are displayed in green tones.
 
 <a href="../images/reports/by-country-volumes.png" target="_blank">
     <img src="../images/reports/by-country-volumes.png"/>
@@ -77,7 +77,7 @@ You can filter the countries displayed on the **Consignment Volumes by Country**
 
 ### More Options
 
-The **Consignment Volumes by Country** chart has the following options available from its **More Options** menu:
+The following options are available from the **More Options** menu:
 
 * [Open Comments](/reports/filters-options.html#open-comments)
 * [Export Data](/reports/filters-options.html#export-data)
@@ -102,7 +102,7 @@ The **% of Consignment Volume by Destination Country** bar chart shows each dest
 
 ### More Options
 
-The **% of Consignment Volume by Destination Country** chart has the following options available from its **More Options** menu:
+The following options are available from the **More Options** menu:
 
 * [Open Comments](/reports/filters-options.html#open-comments)
 * [Export Data](/reports/filters-options.html#export-data)

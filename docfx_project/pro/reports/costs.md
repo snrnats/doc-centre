@@ -42,7 +42,7 @@ The **Shipping Costs** table shows the following:
 
 ### More Options
 
-The data table has the following options available from its **More Options** menu:
+The following options are available from the **More Options** menu:
 
 * [Open Comments](/reports/filters-options.html#open-comments)
 * [Export Data](/reports/filters-options.html#export-data)
@@ -68,11 +68,11 @@ You can filter the data displayed on the **Shipping Cost Over Time by Carrier** 
 
 * **Carrier Name** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select a carrier or carriers whose services you want to view.
 * **Date Shipped** ([Basic](/reports/filters-options.html#using-basic-filters), [Advanced](/reports/filters-options.html#using-advanced-filters), and [Relative Date](/reports/filters-options.html#using-relative-date-filters)) - enables you to select specific shipped dates or date ranges to view.
-* **Parcel Charges** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by per-carrier per-day spend. For example, if you were to filter on *is greater than 10000*, then any data points in which you had spent £9999 with a particular carrier on a particular day would be ignored. In this example, the y-axis of the graph is effectively skewed so that it starts at 10000 rather than 0.
+* **Parcel Charges** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by per-carrier per-day spend. For example, if you were to filter on *is greater than 10000*, then any data points in which you had spent £9999 or less with a particular carrier on a particular day would be ignored. In this example, the y-axis of the graph is effectively skewed so that it starts at 10000 rather than 0.
 
 ### More Options
 
-The **Shipping Cost Over Time by Carrier** chart has the following options available from its **More Options** menu:
+The following options are available from the **More Options** menu:
 
 * [Open Comments](/reports/filters-options.html#open-comments)
 * [Export Data](/reports/filters-options.html#export-data)
@@ -110,7 +110,7 @@ You can filter the dates displayed on the **Shipping Cost Over Time by Carrier**
 
 ### More Options
 
-The **Shipping Cost Over Time** chart has the following options available from its **More Options** menu:
+The following options are available from the **More Options** menu:
 
 * [Open Comments](/reports/filters-options.html#open-comments)
 * [Export Data](/reports/filters-options.html#export-data)
@@ -159,7 +159,7 @@ To view average shipping costs by company rather than destination country, click
     <img src="../images/reports/costs-destination-company.png"/>
 </a>
 
-To return to the table's default level (average shipping cost to each destination country), click **Drill Up**. 
+To return to the average shipping cost by destination country view, click **Drill Up**. 
 
 <a href="../images/reports/costs-destination-drill-up.png" target="_blank">
     <img src="../images/reports/costs-destination-drill-up.png"/>
@@ -176,7 +176,7 @@ You can filter the destination countries and carriers displayed on the **Average
 
 ### More Options
 
-The **Average Shipping Cost by Destination** chart has the following options available from its **More Options** menu:
+The following options are available from the **More Options** menu:
 
 * [Open Comments](/reports/filters-options.html#open-comments)
 * [Export Data](/reports/filters-options.html#export-data)

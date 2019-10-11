@@ -41,14 +41,13 @@ Hover your mouse over the graph to see average ship time data for a specific day
 
 You can filter the data displayed on the **Average Days from Shipping to Receipt by Carriers** table using the following filters:
 
-* **Average Days to Ship** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter delivery locations by average ship time. For example, if you were to filter on *is greater than or equal to 5*, then only those locations with an average ship time of 5 days or more would be displayed.
+* **Average Days to Ship** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter delivery locations by average ship time. For example, if you were to filter on *is greater than or equal to 0.5*, then only those locations with an average ship time of 0.5 days or more would be displayed.
 * **CreatedDateOnly** ([Basic](/reports/filters-options.html#using-basic-filters), [Advanced](/reports/filters-options.html#using-advanced-filters), and [Relative Date](/reports/filters-options.html#using-relative-date-filters)) - enables you to select specific dates or date ranges to view.
 * **Shipping Location** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select a shipping location or locations to view.
 
-
 ### More Options
 
-The **Average Days from Shipping to Receipt by Carriers** chart has the following options available from its **More Options** menu:
+The following options are available from the **More Options** menu:
 
 * [Open Comments](/reports/filters-options.html#open-comments)
 * [Export Data](/reports/filters-options.html#export-data)
@@ -87,12 +86,14 @@ You can filter the carriers displayed on the **Carrier Usage** table using the f
 
 ### More Options
 
-The **Carrier Usage** chart has the following options available from its **More Options** menu:
+The following options are available from the **More Options** menu:
 
 * [Open Comments](/reports/filters-options.html#open-comments)
 * [Export Data](/reports/filters-options.html#export-data)
 * [Show Data](/reports/filters-options.html#show-data)
 * [Spotlight](/reports/filters-options.html#spotlight)
+
+You can also view the records that the visual's data was generated from by right-clicking on it and selecting **View Records** from the pop-up menu.
 
 ### Viewing Data
 
@@ -119,7 +120,7 @@ You can filter the shipping locations displayed on the **Average Days to Ship by
 
 ### More Options
 
-The **Average Days to Ship by Shipping Location** chart has the following options available from its **More Options** menu:
+The following options are available from the **More Options** menu:
 
 * [Open Comments](/reports/filters-options.html#open-comments)
 * [Export Data](/reports/filters-options.html#export-data)
@@ -161,7 +162,7 @@ You can filter the carriers displayed on the **Consignments Over Time by Shippin
 
 ### More Options
 
-The **Consignments Over Time by Shipping Location** chart has the following options available from its **More Options** menu:
+The following options are available from the **More Options** menu:
 
 * [Open Comments](/reports/filters-options.html#open-comments)
 * [Export Data](/reports/filters-options.html#export-data)

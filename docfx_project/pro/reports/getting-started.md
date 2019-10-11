@@ -6,7 +6,7 @@ How to access the Sorted PRO reports, and select the report you need.
 
 The Sorted PRO reports are published as a self-contained Microsoft Power BI app. The app runs via the web-based Power BI Service - you don't need to install any software to view PRO reports.
 
-We provide each PRO customer with one Power BI Pro license, which grants them access to view the reports. When you sign up for the service, you'll need to give us the email address of the user you want to assign that license to. We'll then set them up and send them an access link to the reports. 
+We provide each PRO customer with one Power BI Pro license, which grants access to view the reports. When you sign up for the service, you'll need to give us the email address of the user you want to assign that license to. We'll then set them up and send them an access link to the reports. 
 
 > <span class="note-header">Note:</span>
 >
