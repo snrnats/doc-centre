@@ -4,8 +4,8 @@ The **Delivery Experience** report enables you to get an overview of the deliver
 
 It comprises a **Consignments by Delivery Window** pie chart, a **Delivery Type by Carrier** bar chart, and a **Delivery Window by Carrier** bar chart.
 
-<a href="../images/reports/experience.png" target="_blank">
-    <img src="../images/reports/experience.png"/>
+<a href="../images/reports/experience2.png" target="_blank">
+    <img src="../images/reports/experience2.png"/>
 </a>
 
 ## Report Filters
@@ -59,6 +59,49 @@ You can also view the records that the visual's data was generated from by right
 </a>
 
 The **Consignments by Delivery Window** pie chart's **Show Data** option shows the number of consignments that were scheduled for each delivery window. 
+
+## First Time Delivery %
+
+The **First Time Delivery %** chart shows the proportion of each company's shipments that were successfully delivered on the first attempt.
+
+<a href="../images/reports/experience-first.png" target="_blank">
+    <img src="../images/reports/experience-first.png"/>
+</a>
+
+Hover your mouse over an area of the chart to see further details.
+
+<a href="../images/reports/experience-first-highlight.png" target="_blank">
+    <img src="../images/reports/experience-first-highlight.png"/>
+</a>
+
+### Visual Filters
+
+You can filter the companies displayed on the **First Time Delivery %** chart using the following filters:
+
+* **Company** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))- enables you to select one or more of your companies to view shipments for.
+* **Count of ConsignmentReference** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped per company per day. For example, if you were to filter on *is greater than 1000*, then any data points in which the company had shipped 1000 or fewer consignments on that day would be ignored.
+
+### More Options
+
+The **First Time Delivery %** chart has the following options available from its **More Options** menu:
+
+* [Open Comments](/reports/filters-options.html#open-comments)
+* [Export Data](/reports/filters-options.html#export-data)
+* [Show Data](/reports/filters-options.html#show-data)
+* [Spotlight](/reports/filters-options.html#spotlight)
+* [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Carrier / Consignments
+
+You can also view the records that the visual's data was generated from by right-clicking on it and selecting **View Records** from the pop-up menu.
+
+### Viewing Data
+
+<a href="../images/reports/experience-first-data.png" target="_blank">
+    <img src="../images/reports/experience-first-data.png"/>
+</a>
+
+The **First Time Delivery %** chart's **Show Data** option shows the number of each company's shipments that were successfully delivered first time, and how many were not.
 
 ## Delivery Type by Carrier
 

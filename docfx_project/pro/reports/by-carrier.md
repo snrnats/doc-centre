@@ -90,7 +90,7 @@ You can also view the records that the visual's data was generated from by right
 
 The **Consignments by Carrier Name** chart's **Show Data** chart lists the number of consignments you have shipped with each carrier. 
 
-## Consignments Shipped by Carrier Over Time Chart
+## Consignments Shipped by Carrier Over Time
 
 The **Consignments Shipped by Carrier Over Time** chart shows how many shipments each of your carriers made on each day of the selected time period. You can control the time period displayed using the **Date Shipped** report filter.
 
