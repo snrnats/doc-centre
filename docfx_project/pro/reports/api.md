@@ -4,8 +4,8 @@ The **API Overview** enables you to get an overview of your organisation's API c
 
 It comprises an API data table, an **API Requests by Company Name** bar chart, an **ATU Total Company** pie chart, and an **API Requests by IntervalDate and CustomerName** line graph. 
 
-<a href="../images/reports/api.png" target="_blank">
-    <img src="../images/reports/api.png"/>
+<a href="../images/reports/api2.png" target="_blank">
+    <img src="../images/reports/api2.png"/>
 </a>
 
 ## Report Filters
@@ -15,16 +15,16 @@ The **API Overview** report offers the following report-wide filters:
 * **Date** - enables you to select only those calls that were made within a given date range.
 * **Company Name** - where applicable, enables you to select only those calls that were made by a particular company within your group. You can select multiple companies if required.
 
-<a href="../images/reports/api-left-filter.png" target="_blank">
-    <img src="../images/reports/api-left-filter.png"/>
+<a href="../images/reports/api-left-filter2.png" target="_blank">
+    <img src="../images/reports/api-left-filter2.png"/>
 </a>
 
 ## API Requests by Company Name
 
 The **API Requests by Company Name** chart shows how many requests each of your companies has made.
 
-<a href="../images/reports/api-custname.png" target="_blank">
-    <img src="../images/reports/api-custname.png"/>
+<a href="../images/reports/api-custname2.png" target="_blank">
+    <img src="../images/reports/api-custname2.png"/>
 </a>
 
 ### Visual Filters
@@ -103,14 +103,14 @@ The **ATU Total Company** chart's **Show Data** option displays the ATUs consume
 
 The **API Requests Over Time by Company** chart shows how the total number of API requests made by each of your companies has changed over time. Each line represents one of your companies.
 
-<a href="../images/reports/api-requests.png" target="_blank">
-    <img src="../images/reports/api-requests.png"/>
+<a href="../images/reports/api-requests2.png" target="_blank">
+    <img src="../images/reports/api-requests2.png"/>
 </a>
 
 Hover your mouse over the chart to view the total number of API requests made by each company for a given `IntervalDate`.
 
-<a href="../images/reports/api-requests-highlight.png" target="_blank">
-    <img src="../images/reports/api-requests-highlight.png"/>
+<a href="../images/reports/api-requests-highlight2.png" target="_blank">
+    <img src="../images/reports/api-requests-highlight2.png"/>
 </a>
 
 ### Visual Filters

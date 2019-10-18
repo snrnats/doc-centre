@@ -81,7 +81,7 @@ Hover your mouse over a segment of the graph to see how many consignments were a
 You can filter the carriers displayed on the **Carrier Usage** table using the following filters:
 
 * **Carrier Name** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select a carrier or carriers whose services you want to view.
-* **Count of ConsignmentReference** ([Numerical](/reports/filters-options.html#using-numerical-filters))  - enables you to filter by number of consignments shipped per carrier per day. For example, if you were to filter on *is greater than 1000*, then any data points in which the carrier had shipped 1000 or fewer consignments on that day would be ignored.
+* **Count of ConsignmentReference** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped per carrier per day. For example, if you were to filter on *is greater than 1000*, then any data points in which the carrier had shipped 1000 or fewer consignments on that day would be ignored.
 * **CreatedDateOnly** ([Basic](/reports/filters-options.html#using-basic-filters), [Advanced](/reports/filters-options.html#using-advanced-filters), and [Relative Date](/reports/filters-options.html#using-relative-date-filters)) - enables you to select specific created dates or date ranges to view.
 
 ### More Options

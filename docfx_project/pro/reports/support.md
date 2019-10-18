@@ -2,10 +2,10 @@
 
 The **Support** report enables you to get an overview of your organisation's current and past support tickets. 
 
-It comprises a **Tickets by Status** pie chart, a **Tickets Logged by Company** bar chart, a **Tickets by Priority Level**  pie chart, and a **Tickets Logged Per Day By Company** chart.
+It comprises a **Tickets by Status** pie chart, a **Tickets Logged by Company** bar chart, a **Current Tickets by Priority Level**  pie chart, and a **Tickets Logged Per Day By Company** chart.
 
-<a href="../images/reports/support.png" target="_blank">
-    <img src="../images/reports/support.png"/>
+<a href="../images/reports/support2.png" target="_blank">
+    <img src="../images/reports/support2.png"/>
 </a>
 
 ## Report Filters
@@ -15,22 +15,22 @@ The **Support** report offers the following report-wide filters:
 * **Date Tickets Logged** - enables you to select only those calls that were made within a given date range.
 * **Company Name** - where applicable, enables you to select only those calls that were made by a particular company within your group. You can select multiple companies if required.
 
-<a href="../images/reports/support-left-filter.png" target="_blank">
-    <img src="../images/reports/support-left-filter.png"/>
+<a href="../images/reports/support-left-filter2.png" target="_blank">
+    <img src="../images/reports/support-left-filter2.png"/>
 </a>
 
 ## Tickets by Ticket Status
 
 The **Tickets by Ticket Status** chat shows what proportion of your support tickets is in each of the support statuses.
 
-<a href="../images/reports/support-by-status.png" target="_blank">
-    <img src="../images/reports/support-by-status.png"/>
+<a href="../images/reports/support-by-status2.png" target="_blank">
+    <img src="../images/reports/support-by-status2.png"/>
 </a>
 
 Hover your mouse over a section of the pie chart to view the number of your tickets that are in each status.
 
-<a href="../images/reports/support-by-status-highlight.png" target="_blank">
-    <img src="../images/reports/support-by-status-highlight.png"/>
+<a href="../images/reports/support-by-status-highlight2.png" target="_blank">
+    <img src="../images/reports/support-by-status-highlight2.png"/>
 </a>
 
 ### Visual Filters
@@ -99,18 +99,18 @@ You can also view the records that the visual's data was generated from by right
 
 The **Tickets Logged by Company** chart's **Show Data** option shows how many support tickets each of your companies has logged.
 
-## Tickets by Priority Level
+## Current Tickets by Priority Level
 
-The **Tickets by Priority Level** chart shows how many of your open tickets are in each of the various priority levels.
+The **Current Tickets by Priority Level** chart shows how many of your open tickets are in each of the various priority levels.
 
-<a href="../images/reports/support-priority.png" target="_blank">
-    <img src="../images/reports/support-priority.png"/>
+<a href="../images/reports/support-priority2.png" target="_blank">
+    <img src="../images/reports/support-priority2.png"/>
 </a>
 
 Hover your mouse over a section of the pie chart to view the number of open tickets in that priority level.
 
-<a href="../images/reports/support-priority-highlight.png" target="_blank">
-    <img src="../images/reports/support-priority-highlight.png"/>
+<a href="../images/reports/support-priority-highlight2.png" target="_blank">
+    <img src="../images/reports/support-priority-highlight2.png"/>
 </a>
 
 ### Visual Filters
@@ -140,7 +140,7 @@ You can also view the records that the visual's data was generated from by right
     <img src="../images/reports/support-priority-data.png"/>
 </a>
 
-The **Tickets by Priority Level** chart's **Show Data** option shows the number of open tickets you have in each of the priority levels.
+The **Current Tickets by Priority Level** chart's **Show Data** option shows the number of open tickets you have in each of the priority levels.
 
 ## Tickets Logged Per Day By Company
 
