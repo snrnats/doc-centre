@@ -1,6 +1,6 @@
 - name: Getting Started
-  homepage: pro/reports/getting-started.md
+  homepage: reports/getting-started.md
 - name: Filters and Options
-  homepage: pro/reports/filters-options.md
+  homepage: reports/filters-options.md
 - name: Reports
-  homepage: pro/reports/reports.md  
+  homepage: reports/reports.md  

@@ -4,11 +4,11 @@
       "src": [
         {
           "files": [
-            "pro/src/**.csproj"
+            "src/**.csproj"
           ]
         }
       ],
-      "dest": "pro/api",
+      "dest": "api",
       "disableGitFeatures": false,
       "disableDefaultFilter": false
     }
@@ -17,26 +17,26 @@
     "content": [
       {
         "files": [
-          "pro/api/**.yml",
-          "pro/api/index.md"
+          "api/**.yml",
+          "api/index.md"
         ]
       },
       {
         "files": [
-          "pro/reports/**.md",
-          "pro/reports/toc.yml",
+          "reports/**.md",
+          "reports/toc.yml",
           "toc.yml",
           "*.md"
         ]
       },
       { 
-        "files": "pro/fusion/**"
+        "files": "fusion/**"
       }
     ],
     "resource": [
       {
         "files": [
-          "pro/images/**"
+          "images/**"
         ]
       },
       {
@@ -48,7 +48,7 @@
     "overwrite": [
       {
         "files": [
-          "pro/apidoc/**.md"
+          "apidoc/**.md"
         ],
         "exclude": [
           "obj/**",
