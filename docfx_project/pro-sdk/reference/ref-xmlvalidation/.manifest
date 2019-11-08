@@ -1,0 +1,10 @@
+{
+  "Sorted.PRO.SDK.XmlValidation": "Sorted.PRO.SDK.XmlValidation.yml",
+  "Sorted.PRO.SDK.XmlValidation.EmbeddedSchemaProvider": "Sorted.PRO.SDK.XmlValidation.EmbeddedSchemaProvider.yml",
+  "Sorted.PRO.SDK.XmlValidation.EmbeddedSchemaProvider.#ctor": "Sorted.PRO.SDK.XmlValidation.EmbeddedSchemaProvider.yml",
+  "Sorted.PRO.SDK.XmlValidation.EmbeddedSchemaProvider.Errors": "Sorted.PRO.SDK.XmlValidation.EmbeddedSchemaProvider.yml",
+  "Sorted.PRO.SDK.XmlValidation.EmbeddedSchemaProvider.GetEmbeddedSchemas": "Sorted.PRO.SDK.XmlValidation.EmbeddedSchemaProvider.yml",
+  "Sorted.PRO.SDK.XmlValidation.IEmbeddedSchemaProvider": "Sorted.PRO.SDK.XmlValidation.IEmbeddedSchemaProvider.yml",
+  "Sorted.PRO.SDK.XmlValidation.IEmbeddedSchemaProvider.Errors": "Sorted.PRO.SDK.XmlValidation.IEmbeddedSchemaProvider.yml",
+  "Sorted.PRO.SDK.XmlValidation.IEmbeddedSchemaProvider.GetEmbeddedSchemas": "Sorted.PRO.SDK.XmlValidation.IEmbeddedSchemaProvider.yml"
+}
