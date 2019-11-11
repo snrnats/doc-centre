@@ -29,7 +29,7 @@ items:
   assemblies:
   - Sorted.PRO.SDK.DataTypes.Consignments
   namespace: Sorted.PRO.SDK.DataTypes.Consignments
-  summary: "\nRepresents the allocation of a consignment with an MPD Carrier Service\n"
+  summary: "\nRepresents the allocation of a consignment to an MPD Carrier Service\n"
   example: []
   syntax:
     content: >-

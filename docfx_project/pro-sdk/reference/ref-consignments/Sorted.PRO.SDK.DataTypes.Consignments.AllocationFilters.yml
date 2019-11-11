@@ -26,7 +26,7 @@ items:
   assemblies:
   - Sorted.PRO.SDK.DataTypes.Consignments
   namespace: Sorted.PRO.SDK.DataTypes.Consignments
-  summary: "\nRepresents filters used to allocate consignments\n"
+  summary: "\nFilters used to allocate consignments\n"
   example: []
   syntax:
     content: >-
