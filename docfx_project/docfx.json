@@ -203,10 +203,17 @@
       },
       {
         "files": [
+          "api/articles/**.yml",
+          "api/articles/index.md"
+        ]
+      },
+      {
+        "files": [
           "reports/**.md",
           "reports/toc.yml",
           "toc.yml",
-          "*.md"
+          "*.md",
+          "api/reference/**"
         ]
       },
       {

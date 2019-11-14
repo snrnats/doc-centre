@@ -1,4 +1,6 @@
 - name: SDK
   homepage: pro-sdk/index.md
 - name: Reports
-  homepage: reports/index.md  
+  homepage: reports/index.md
+- name: API
+  homepage: api/index.md  
