@@ -39,6 +39,7 @@ items:
       <DataContractType("Allocate All Consignments With Carrier Service Request", "Used to allocate all matching consignments with the specified carrier service.")>
 
       Public Class AllocateAllConsignmentsWithCarrierServiceRequest
+
           Inherits AllocateAllConsignmentsRequest
   inheritance:
   - System.Object

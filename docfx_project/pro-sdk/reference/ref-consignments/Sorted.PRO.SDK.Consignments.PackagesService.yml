@@ -36,7 +36,9 @@ items:
     content: 'public class PackagesService : BaseService, IPackagesService'
     content.vb: >-
       Public Class PackagesService
+
           Inherits BaseService
+
           Implements IPackagesService
   inheritance:
   - System.Object

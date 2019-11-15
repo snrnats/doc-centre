@@ -42,6 +42,7 @@ items:
       <DataContractType("Create consignment request", "Used to create new consignments in Electio")>
 
       Public Class CreateConsignmentRequest
+
           Inherits BaseCreateConsignmentRequest
   inheritance:
   - System.Object

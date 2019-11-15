@@ -37,6 +37,7 @@ items:
       <DataContractType("Update Consignment Request", "Allows you to specify various properties to be updated.")>
 
       Public Class UpdateConsignmentRequest
+
           Inherits UpdateConsignmentRequestBase
   inheritance:
   - System.Object
