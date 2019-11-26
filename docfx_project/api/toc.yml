@@ -1,4 +1,51 @@
-- name: API Home
-  href: articles/index.md
-- name: API Reference
-  href: reference/toc.md
+- name: Introduction
+  href: intro.md
+- name: Allocation
+  href: dummy.md
+- name: Carrier Services
+  href: dummy.md
+- name: Carriers
+  href: dummy.md
+- name: Collection Calendar
+  href: dummy.md
+- name: Consignments
+  href: dummy.md
+- name: Customs Docs
+  href: dummy.md
+- name: Delivery Options
+  href: dummy.md
+- name: Events
+  href: dummy.md                   
+- name: Labels
+  href: labelsAPI.md
+  items:
+    - name: Get Labels
+      href: labels\getLabels.md
+    - name: Get Labels in Format
+      href: labels\getLabelsInFormat.md
+    - name: Get Package Label
+      href: labels\getPackageLabel.md
+    - name: Get Package Label in Format
+      href: labels\getPackageLabelInFormat.md                
+- name: Manifest
+  href: dummy.md
+- name: Orders
+  href: dummy.md
+- name: Package Sizes
+  href: dummy.md
+- name: Packages
+  href: dummy.md
+- name: Pickup Options
+  href: dummy.md
+- name: Quotes
+  href: dummy.md
+- name: Shipping Locations
+  href: dummy.md
+- name: Tracking
+  href: dummy.md
+- name: Accordion
+  href: accordion.md
+- name: Collapsible
+  href: collapsible.md  
+- name: Tabs
+  href: tabs.md

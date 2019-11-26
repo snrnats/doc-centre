@@ -198,7 +198,7 @@
       {
         "files": [
           "api/**.yml",
-          "api/index.md"
+          "api/**.md"
         ]
       },
       {
@@ -285,6 +285,11 @@
       {
         "files": [
           "images/**"
+        ]
+      },
+      {
+        "files": [
+          "scripts/**"
         ]
       },
       {
