@@ -51,8 +51,6 @@ electio-api-version: 1.1
 <div class="refcontainer">
 <div class="refdivider">
 
----
-
 ## Request
 
 </div>
@@ -85,15 +83,19 @@ GET https://api.electioapp.com/labels/EC-000-05B-MMA
 <div class="refcontainer">
 <div class="refdivider">
 
----
-
 ## Responses
 
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, '200')" id="defaultOpen">200 (OK)</button>
+  <button class="tablinks" onclick="openCity(event, '400')">400 (Not Found)</button>
 </div>
+
+</div>
+
+<div id="200"  class="tabcontent">
 <div class="refdivider">
 
 ### Properties
-
 <table>
     <tr>
         <td>File</td>
@@ -110,17 +112,59 @@ GET https://api.electioapp.com/labels/EC-000-05B-MMA
         <td colspan="2">The content type of the file - for example, "application/pdf".</td>    
     </tr>
 </table>    
-
 </div>
 <div class="refdivider">
 
 ### Example
-
 ```json
 {
-  "File": "SlZCRVJpMHhMalFLSmRQcjZl ... VRrNU9ERUtKU1ZGVDBZPQ==",
-  "ContentType": "application/pdf"
+"File": "SlZCRVJpMHhMalFLSmRQcjZl ... VRrNU9ERUtKU1ZGVDBZPQ==",
+"ContentType": "application/pdf"
 }
 ```
 </div>
+</div>
+
+<div id="400"  class="tabcontent">
+<div class="refdivider">
+
+### Properties
+<table>
+    <tr>
+        <td>Code</td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td colspan ="2">A base64-encoded byte array representing the file content</td>
+    </tr>
+    <tr>
+        <td>Message</td>
+        <td>string[]</td>
+    </tr>
+    <tr>
+        <td colspan ="2">A base64-encoded byte array representing the file content</td>
+    </tr>    
+    <tr>
+        <td>CorrelationId</td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td colspan="2">The content type of the file - for example, "application/pdf".</td>    
+    </tr>
+</table>    
+</div>
+<div class="refdivider">
+
+### Example
+```json
+{
+"File": "SlZCRVJpMHhMalFLSmRQcjZl ... VRrNU9ERUtKU1ZGVDBZPQ==",
+"ContentType": "application/pdf"
+}
+```
+</div>
+</div>
+
+<script src="../../scripts/tabs.js"></script>
+
 </div>
