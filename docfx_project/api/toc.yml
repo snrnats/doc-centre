@@ -45,7 +45,7 @@
   href: dummy.md
 - name: Accordion
   href: accordion.md
-- name: Collapsible
-  href: collapsible.md  
+- name: Collapse
+  href: collapse.md  
 - name: Tabs
   href: tabs.md

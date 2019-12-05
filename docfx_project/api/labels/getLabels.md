@@ -5,166 +5,135 @@ Returns labels for the specified consignment.
 `GET https://api.electioapp.com/labels/{consignmentReference}`
 
 
-<div class="refcontainer">
-<div class="refdivider">
-
-## Headers
-
-</div>
-<div class="refdivider">
-
-### Keys
-
-<table>
-    <tr>
-        <td>ocp-apim-subscription-key</td>
-        <td>Your API key. Must be provided with all requests</td>
-    </tr>
-    <tr>
-        <td>Accept</td>
-        <td>Specify what type of response you want to receive, either JSON or XML</td>
-    </tr>
-    <tr>
-        <td>Content-Type</td>
-        <td>Specify what type of content you are sending, either JSON or XML</td>
-    </tr>
-    <tr>
-        <td>electio-api-version</td>
-        <td>The version of the API to use, currently 1.1</td>
-    </tr>
-</table>
-
-</div>
-<div class="refdivider">
-
-### Example
-
-```json
-ocp-apim-subscription-key: [qwerrtyuiioop0987654321]
-content-type: application/json
-accept: application/json
-electio-api-version: 1.1
-```
-
-</div>
-</div>
-<div class="refcontainer">
-<div class="refdivider">
 
 ## Request
 
-</div>
-<div class="refdivider">
 
-### Parameters
+<div class="tab">
+    <button class="requestTabLinks" onclick="openRequestTab(event, 'headers')">Headers</button>
+    <button class="requestTabLinks" onclick="openRequestTab(event, 'path')" id="defaultRequest">Body</button>
+</div>
+
+<div id="headers"  class="requestTabContent">
+
+[!include[apiheaders](../includes/apiheaders.md)]
+
+</div>
+
+<div id="path"  class="requestTabContent">
 
 <table>
     <tr>
-        <td>Consignment Reference</td>
-        <td>string</td>
+        <th>Property</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Validation</th>
+        <th>Occurrence</th>
     </tr>
     <tr>
-        <td colspan="2">A unique identifier for a PRO consignment. Takes the format <code>EC-xxx-xxx-xxx</code>.</td>
+        <td>Code</td>
+        <td>string</td>
+        <td>The PRO error code returned. Note that this is an internal code, and not a HTTP status code</td>
+        <td>-</td>
+        <td>1</td>
     </tr>
 </table> 
 
-</div>
-<div class="refdivider">
+<div class="copyheader">
 
 ### Example
+<div class="copybutton" onclick="CopyToClipboard('requestExample')">Click to Copy</div>
+
+</div>
+
+<div id="requestExample" class="copycontent"onclick="CopyToClipboard('requestExample')">
 
 ```
 GET https://api.electioapp.com/labels/EC-000-05B-MMA
 ```
-
-</div>
 </div>
 
-<div class="refcontainer">
-<div class="refdivider">
+</div>
 
 ## Responses
 
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, '200')" id="defaultOpen">200 (OK)</button>
-  <button class="tablinks" onclick="openCity(event, '400')">400 (Not Found)</button>
+  <button class="responseTabLinks" onclick="openCity(event, '200')" id="defaultResponse">200 (OK)</button>
+  <button class="responseTabLinks" onclick="openCity(event, '400')">400 (Not Found)</button>
 </div>
 
-</div>
+<div id="200"  class="responseTabContent">
 
-<div id="200"  class="tabcontent">
-<div class="refdivider">
-
-### Properties
 <table>
     <tr>
-        <td>File</td>
-        <td>Byte[]</td>
+        <th>Property</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Occurrence</th>
     </tr>
-    <tr>
-        <td colspan ="2">A base64-encoded byte array representing the file content</td>
-    </tr>
-    <tr>
-        <td>ContentType</td>
-        <td>String</td>
-    </tr>
-    <tr>
-        <td colspan="2">The content type of the file - for example, "application/pdf".</td>    
-    </tr>
-</table>    
-</div>
-<div class="refdivider">
-
-### Example
-```json
-{
-"File": "SlZCRVJpMHhMalFLSmRQcjZl ... VRrNU9ERUtKU1ZGVDBZPQ==",
-"ContentType": "application/pdf"
-}
-```
-</div>
-</div>
-
-<div id="400"  class="tabcontent">
-<div class="refdivider">
-
-### Properties
-<table>
     <tr>
         <td>Code</td>
         <td>string</td>
+        <td>The PRO error code returned. Note that this is an internal code, and not a HTTP status code</td>
+        <td>1</td>
     </tr>
-    <tr>
-        <td colspan ="2">A base64-encoded byte array representing the file content</td>
-    </tr>
-    <tr>
-        <td>Message</td>
-        <td>string[]</td>
-    </tr>
-    <tr>
-        <td colspan ="2">A base64-encoded byte array representing the file content</td>
-    </tr>    
-    <tr>
-        <td>CorrelationId</td>
-        <td>string</td>
-    </tr>
-    <tr>
-        <td colspan="2">The content type of the file - for example, "application/pdf".</td>    
-    </tr>
-</table>    
-</div>
-<div class="refdivider">
+</table> 
 
-### Example
+<div class="copyheader">
+    
+<h3>Example</h3>
+<div class="copybutton" onclick="CopyToClipboard('200example')">Click to Copy</div>
+
+</div>
+
+<div id="200example" class="copycontent" onclick="CopyToClipboard('200example')">
+
 ```json
 {
-"File": "SlZCRVJpMHhMalFLSmRQcjZl ... VRrNU9ERUtKU1ZGVDBZPQ==",
-"ContentType": "application/pdf"
+    "File": "SlZCRVJpMHhMalFLSmRQcjZl ... VRrNU9ERUtKU1ZGVDBZPQ==",
+    "ContentType": "application/pdf"
 }
 ```
 </div>
-</div>
-
-<script src="../../scripts/tabs.js"></script>
 
 </div>
+
+<div id="400"  class="responseTabContent">
+
+<table>
+    <tr>
+        <th>Property</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Occurrence</th>
+    </tr>
+    <tr>
+        <td>Code</td>
+        <td>string</td>
+        <td>The PRO error code returned. Note that this is an internal code, and not a HTTP status code</td>
+        <td>1</td>
+    </tr>
+</table>
+
+<div class="copyheader">
+    
+<h3>Example</h3>
+<div class="copybutton" onclick="CopyToClipboard('400example')">Click to Copy</div>
+
+</div>
+
+<div id="400example" class="copycontent" onclick="CopyToClipboard('400example')">
+
+```json
+{
+  "Code": "SampleErrorCode",
+  "Message": "Item {reference} not found",
+  "CorrelationId": "f94c7dbc-c542-40b9-b6da-bd98aa110939"
+}
+```
+
+</div>
+
+<script src="../../scripts/requesttabs.js"></script>
+<script src="../../scripts/responsetabs.js"></script>
+<script src="../../scripts/copy.js"></script>
