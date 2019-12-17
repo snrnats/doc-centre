@@ -1,8 +1,8 @@
-# Title
+# Get Available MPD Carrier Services
 
-Brief description of endpoint
+Returns the available MPD Carrier Services for your subscription
 
-`Endpoint link`
+`GET https://api.electioapp.com/carrierservices`
 
 ## Request
 

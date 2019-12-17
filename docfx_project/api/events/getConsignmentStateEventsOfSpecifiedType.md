@@ -1,8 +1,8 @@
-# Title
+# Get Consignment State Events Of Specified Type
 
-Brief description of endpoint
+Returns Consignment State Events of specified type
 
-`Endpoint link`
+`POST https://api.electioapp.com/events/consignments/stateevents`
 
 ## Request
 

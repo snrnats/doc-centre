@@ -1,8 +1,8 @@
-# Title
+# Update Address on Order
 
-Brief description of endpoint
+Updates an Address on an Order
 
-`Endpoint link`
+`PUT https://api.electioapp.com/orders/{orderReference}/address`
 
 ## Request
 

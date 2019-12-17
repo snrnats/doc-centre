@@ -1,8 +1,8 @@
-# Title
+# Get Consignment
 
-Brief description of endpoint
+Retrieve the details of the specified consignment
 
-`Endpoint link`
+`GET https://api.electioapp.com/consignments/{consignmentReference}`
 
 ## Request
 

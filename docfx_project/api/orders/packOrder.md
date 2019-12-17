@@ -1,8 +1,8 @@
-# Title
+# Pack Order
 
-Brief description of endpoint
+Packs a consignment from an order
 
-`Endpoint link`
+`POST https://api.electioapp.com/orders/{orderReference}/pack`
 
 ## Request
 

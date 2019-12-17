@@ -1,6 +1,6 @@
-# Title
+# Get Consignment Events Of Specified Type
 
-Brief description of endpoint
+POST https://api.electioapp.com/events/consignments
 
 `Endpoint link`
 

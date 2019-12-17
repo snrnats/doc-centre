@@ -1,8 +1,8 @@
-# Title
+# Get Customer Manifest
 
-Brief description of endpoint
+Returns the specified manifest
 
-`Endpoint link`
+`GET https://api.electioapp.com/consignments/customer/manifest/{manifestReference}`
 
 ## Request
 

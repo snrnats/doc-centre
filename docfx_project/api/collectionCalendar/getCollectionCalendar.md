@@ -1,8 +1,8 @@
-# Title
+# Get Collection Calendar
 
-Brief description of endpoint
+Gets the collection calendar for the specified shipping location and MPD Carrier
 
-`Endpoint link`
+`GET https://api.electioapp.com/collectioncalendar/{shippingLocationReference}/{mpdCarrierReference}`
 
 ## Request
 

@@ -1,8 +1,8 @@
-# Title
+# Create Consignment
 
-Brief description of endpoint
+Create a new consignment
 
-`Endpoint link`
+`POST https://api.electioapp.com/consignments`
 
 ## Request
 

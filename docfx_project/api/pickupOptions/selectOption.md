@@ -1,8 +1,8 @@
-# Title
+# Select Option
 
-Brief description of endpoint
+Select a delivery option by reference
 
-`Endpoint link`
+`POST https://api.electioapp.com/deliveryoptions/select/{deliveryOptionReference}`
 
 ## Request
 

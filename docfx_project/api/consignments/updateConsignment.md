@@ -1,8 +1,12 @@
-# Title
+# Update Consignment
 
-Brief description of endpoint
+Updates the specified consignment. 
 
-`Endpoint link`
+`PUT https://api.electioapp.com/consignments/`
+
+> <span class="note-header">Note:</span> 
+> 
+> This method will replace any provided properties and you should therefore ensure you pass the entire consignment as you would like it to be
 
 ## Request
 

@@ -1,8 +1,8 @@
-# Title
+# Allocate With Carrier Service
 
-Brief description of endpoint
+Allocates the specified consignments with the specified carrier service
 
-`Endpoint link`
+`PUT https://api.electioapp.com/allocation/allocatewithcarrierservice`
 
 ## Request
 

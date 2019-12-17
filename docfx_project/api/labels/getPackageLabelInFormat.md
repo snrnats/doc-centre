@@ -4,138 +4,121 @@ Returns the label for the specified package in the specified format
 
 `GET https://api.electioapp.com/labels/package/{consignmentReference}/{packageReference}/{labelFormat}`
 
-
-<div class="refcontainer">
-<div class="refdivider">
-
-## Headers
-
-</div>
-<div class="refdivider">
-
-### Keys
-
-<table>
-    <tr>
-        <td>ocp-apim-subscription-key</td>
-        <td>Your API key. Must be provided with all requests</td>
-    </tr>
-    <tr>
-        <td>Accept</td>
-        <td>Specify what type of response you want to receive, either JSON or XML</td>
-    </tr>
-    <tr>
-        <td>Content-Type</td>
-        <td>Specify what type of content you are sending, either JSON or XML</td>
-    </tr>
-    <tr>
-        <td>electio-api-version</td>
-        <td>The version of the API to use, currently 1.1</td>
-    </tr>
-</table>
-
-</div>
-<div class="refdivider">
-
-### Example
-
-```json
-ocp-apim-subscription-key: [qwerrtyuiioop0987654321]
-content-type: application/json
-accept: application/json
-electio-api-version: 1.1
-```
-
-</div>
-</div>
-
-<div class="refcontainer">
-<div class="refdivider">
-
----
-
 ## Request
 
+<div class="tab">
+    <button class="requestTabLinks" onclick="openRequestTab(event, 'headers')">Headers</button>
+    <button class="requestTabLinks" onclick="openRequestTab(event, 'path')" id="defaultRequest">Path</button>
 </div>
-<div class="refdivider">
 
-### Parameters
+<div id="headers"  class="requestTabContent">
+
+[!include[apiheaders](../includes/apiheaders.md)]
+
+</div>
+
+<div id="path"  class="requestTabContent">
 
 <table>
+    <tr>
+        <th>Property</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Validation</th>
+        <th>Occurrence</th>
+    </tr>
     <tr>
         <td>Consignment Reference</td>
         <td>string</td>
-    </tr>
-    <tr>
-        <td colspan="2">A unique identifier for a PRO consignment. Takes the format <code>EC-xxx-xxx-xxx</code>.</td>
+        <td>A unique identifier for a PRO consignment </td>
+        <td>Must be in the format <code>EC-xxx-xxx-xxx</code></td>
+        <td>1</td>
     </tr>
     <tr>
         <td>Package Reference</td>
         <td>string</td>
-    </tr>
-    <tr>
-        <td colspan="2">A unique identifier for a PRO package. Takes the format <code>EP-xxx-xxx-xxx</code>.</td> 
-    </tr>
+        <td>A unique identifier for a PRO package </td>
+        <td>Must be in the format <code>EP-xxx-xxx-xxx</code></td>
+        <td>1</td>
+    </tr> 
     <tr>
         <td>Label Format</td>
         <td>string</td>
-    </tr>
-    <tr>
-        <td colspan="2">The label format required. This must be one of PRO's supported formats: PDF, PNG, ZPL or ZPLII.</td> 
-    </tr>      
+        <td>The label format required</td>
+        <td>Must be one of PRO's supported formats: PDF, PNG, ZPL or ZPLII</td>
+        <td>1</td>
+    </tr>       
 </table> 
 
-</div>
-<div class="refdivider">
+<div class="copyheader">
 
 ### Example
+<div class="copybutton" onclick="CopyToClipboard('requestExample')">Click to Copy</div>
+
+</div>
+
+<div id="requestExample" class="copycontent"onclick="CopyToClipboard('requestExample')">
 
 ```
 GET https://api.electioapp.com/labels/EC-000-05B-MMA/EP-000-05E-ETQ/pdf
 ```
-
-</div>
 </div>
 
-<div class="refcontainer">
-<div class="refdivider">
-
----
+</div>
 
 ## Responses
 
+<div class="tab">
+  <button class="responseTabLinks" onclick="openCity(event, '200')" id="defaultResponse">200 (OK)</button>
+  <button class="responseTabLinks" onclick="openCity(event, '404')">404 (Not Found)</button>
 </div>
-<div class="refdivider">
 
-### Properties
+<div id="200"  class="responseTabContent">
 
 <table>
     <tr>
-        <td>File</td>
-        <td>Byte[]</td>
+        <th>Property</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Occurrence</th>
     </tr>
     <tr>
-        <td colspan ="2">A base64-encoded byte array representing the file content</td>
+        <td>File</td>
+        <td>Byte[]</td>
+        <td>A base64-encoded byte array representing the file content</td>
+        <td>1</td>
     </tr>
     <tr>
         <td>ContentType</td>
-        <td>String</td>
-    </tr>
-    <tr>
-        <td colspan="2">The content type of the file - for example, "application/pdf".</td>    
-    </tr>
-</table>   
+        <td>string</td>
+        <td>The content type of the file - for example, "application/pdf".</td>
+        <td>1</td>
+    </tr>    
+</table> 
+
+<div class="copyheader">
+    
+<h3>Example</h3>
+<div class="copybutton" onclick="CopyToClipboard('200example')">Click to Copy</div>
 
 </div>
-<div class="refdivider">
 
-### Example
+<div id="200example" class="copycontent" onclick="CopyToClipboard('200example')">
 
 ```json
 {
-  "File": "SlZCRVJpMHhMalFLSmRQcjZl ... VRrNU9ERUtKU1ZGVDBZPQ==",
-  "ContentType": "application/pdf"
+    "File": "SlZCRVJpMHhMalFLSmRQcjZl ... VRrNU9ERUtKU1ZGVDBZPQ==",
+    "ContentType": "application/pdf"
 }
 ```
 </div>
+
 </div>
+
+<div id="404"  class="responseTabContent">
+
+[!include[404Content](../includes/404Content.md)]
+
+</div>
+
+[!include[scripts](../includes/scripts.md)]

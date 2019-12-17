@@ -1,8 +1,8 @@
-# Title
+# Set Not Ready to Ship
 
-Brief description of endpoint
+Sets the specified consignments as 'Allocated' from 'Ready to Ship'
 
-`Endpoint link`
+`PUT https://api.electioapp.com/consignments/setnotreadytoship`
 
 ## Request
 

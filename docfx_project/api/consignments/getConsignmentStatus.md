@@ -1,8 +1,8 @@
-# Title
+# Get Consignment Status
 
-Brief description of endpoint
+Returns the status of the specified consignment
 
-`Endpoint link`
+`GET https://api.electioapp.com/consignments/{consignmentReference}/status`
 
 ## Request
 

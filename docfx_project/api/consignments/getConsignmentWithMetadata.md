@@ -1,8 +1,8 @@
-# Title
+# Get Consignment With Metadata
 
-Brief description of endpoint
+Returns the consignment including associated metadata
 
-`Endpoint link`
+`GET https://api.electioapp.com/consignments/getconsignmentwithmetadata/{consignmentReference}`
 
 ## Request
 

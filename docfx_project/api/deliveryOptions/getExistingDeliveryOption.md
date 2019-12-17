@@ -1,8 +1,8 @@
-# Title
+# Get Existing Delivery Option
 
-Brief description of endpoint
+Returns the details of an existing delivery option
 
-`Endpoint link`
+`GET https://api.electioapp.com/deliveryoptions/details/{deliveryOptionReference}`
 
 ## Request
 

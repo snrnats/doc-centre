@@ -1,8 +1,8 @@
-# Title
+# Add Address to Order
 
-Brief description of endpoint
+Adds an Address to an Order
 
-`Endpoint link`
+`POST https://api.electioapp.com/orders/{orderReference}/address`
 
 ## Request
 

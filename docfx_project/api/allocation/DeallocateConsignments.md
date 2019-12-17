@@ -1,8 +1,8 @@
-# Title
+# Deallocate Consignments
 
-Brief description of endpoint
+Deallocates the specified consignments
 
-`Endpoint link`
+`PUT https://api.electioapp.com/consignments/deallocatelist`
 
 ## Request
 

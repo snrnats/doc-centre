@@ -1,8 +1,8 @@
-# Title
+# Manifest Consignments
 
-Brief description of endpoint
+Manifests the specified consignments
 
-`Endpoint link`
+`PUT https://api.electioapp.com/consignments/manifest`
 
 ## Request
 

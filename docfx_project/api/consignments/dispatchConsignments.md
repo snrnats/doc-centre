@@ -1,8 +1,8 @@
-# Title
+# Dispatch Consignments
 
-Brief description of endpoint
+Dispatches the specified consignments
 
-`Endpoint link`
+`PUT https://api.electioapp.com/consignments/Dispatch`
 
 ## Request
 

@@ -1,8 +1,8 @@
-# Title
+# Allocate Consignment With Service Group
 
-Brief description of endpoint
+Allocates the specified consignment with the specified Carrier Service Group
 
-`Endpoint link`
+`PUT https://api.electioapp.com/allocation/{consignmentReference}/allocatewithservicegroup/{mpdCarrierServiceGroupReference}`
 
 ## Request
 

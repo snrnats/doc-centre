@@ -1,8 +1,8 @@
-# Title
+# Get Customs Documents
 
-Brief description of endpoint
+Returns all customs documents for the specified consignment
 
-`Endpoint link`
+`GET https://api.electioapp.com/consignments/docs/{consignmentReference}`
 
 ## Request
 

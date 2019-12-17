@@ -1,8 +1,8 @@
-# Title
+# Get Carriers
 
-Brief description of endpoint
+Returns all Carriers
 
-`Endpoint link`
+`GET https://api.electioapp.com/carriers/getcarriers`
 
 ## Request
 

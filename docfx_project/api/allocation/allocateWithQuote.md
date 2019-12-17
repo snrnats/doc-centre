@@ -1,8 +1,8 @@
-# Title
+# Allocate With Quote
 
-Brief description of endpoint
+Allocates the consignment with the specified quote
 
-`Endpoint link`
+`PUT https://api.electioapp.com/allocation/{consignmentReference}/allocatewithquote/{quoteReference}`
 
 ## Request
 

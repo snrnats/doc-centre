@@ -1,8 +1,10 @@
-# Title
+# Search Consignments
 
-Brief description of endpoint
+Search for matching consignments
 
-`Endpoint link`
+```
+GET https://api.electioapp.com/consignments/{take}/{skip}?startFrom=date&endAt=date&pageSize=int&startPage=int&createdDateFrom=date&createdDateTo=date&scheduledDeliveryDateFrom=date&scheduledDeliveryDateTo=date&shippedDateFrom=date&shippedDateTo=date&shippingDateFrom=date&shippingDateTo=date&requestedDeliveryDateFrom=date&requestedDeliveryDateTo=date&reference=string&referenceProvidedByCustomer=string&trackingReference=string&state=string&weightInGramsFrom=int&weightInGramsTo=int&carrierService=string&source=string&postCode=string&valueFrom=decimal&valueTo=decimal&labelsPrinted=boolean&searchTerm=string&stateAttribute=string&shippingLocationReference=string&destinationCountryCode=string&destinationRegion=string&packageNumber=string&consignmentNumber=string&creference=string&preference=string`
+```
 
 ## Request
 

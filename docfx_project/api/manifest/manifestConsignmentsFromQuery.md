@@ -1,8 +1,8 @@
-# Title
+# Manifest Consignments From Query
 
-Brief description of endpoint
+Manifests all consignments that match the given criteria
 
-`Endpoint link`
+`POST https://api.electioapp.com/consignments/manifestFromQuery`
 
 ## Request
 

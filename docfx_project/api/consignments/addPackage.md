@@ -1,8 +1,8 @@
-# Title
+# Add Package
 
-Brief description of endpoint
+Add a new package to an existing consignment
 
-`Endpoint link`
+`POST https://api.electioapp.com/consignments/{consignmentReference}/addpackage`
 
 ## Request
 

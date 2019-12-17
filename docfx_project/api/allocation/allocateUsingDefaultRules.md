@@ -1,8 +1,8 @@
-# Title
+# Allocate Using Default Rules
 
-Brief description of endpoint
+Allocates the specified consignments using your default rules
 
-`Endpoint link`
+`PUT https://api.electioapp.com/allocation/allocate`
 
 ## Request
 

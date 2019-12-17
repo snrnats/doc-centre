@@ -1,8 +1,8 @@
-# Title
+# Deallocate Consignment
 
-Brief description of endpoint
+Deallocates the specified consignment. Note: the consignment must be in an allocated state for this to be successful.
 
-`Endpoint link`
+`PUT https://api.electioapp.com/consignments/{consignmentReference}/deallocate`
 
 ## Request
 

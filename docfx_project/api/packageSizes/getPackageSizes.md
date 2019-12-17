@@ -1,8 +1,8 @@
-# Title
+# Get Package Sizes
 
-Brief description of endpoint
+Returns your custom package sizes
 
-`Endpoint link`
+`GET https://api.electioapp.com/packagesizes`
 
 ## Request
 

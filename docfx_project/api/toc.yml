@@ -1,21 +1,101 @@
 - name: Introduction
   href: intro.md
 - name: Allocation
-  href: dummy.md
+  href: allocationAPI.md
+  items:
+    - name: Allocate Consignment
+      href: allocation\allocateConsignment.md
+    - name: Allocate Consignment With Service Group
+      href: allocation\allocateConsignmentWithServiceGroup.md
+    - name: Allocate Using Default Rules
+      href: allocation\allocateUsingDefaultRules.md
+    - name: Allocate With Carrier Service
+      href: allocation\allocateWithCarrierService.md
+    - name: Allocate With Quote
+      href: allocation\allocateWithQuote.md   
+    - name: Deallocate Consignment
+      href: allocation\deallocateConsignment.md 
+    - name: Deallocate Consignments
+      href: allocation\deallocateConsignments.md               
 - name: Carrier Services
-  href: dummy.md
+  href: carrierServicesAPI.md
+  items:
+    - name: Get Available MPD Carrier Services
+      href: carrierServices\GetAvailableMPDCarrierServices.md
 - name: Carriers
-  href: dummy.md
+  href: carriersAPI.md
+  items:
+    - name: Get Carriers
+      href: carriers\getCarriers.md
+    - name: Get MPD Carrier Services For Subscription
+      href: carriers\getMPDCarrierServicesforSubscription.md
 - name: Collection Calendar
-  href: dummy.md
+  href: collectionCalendarAPI.md
+  items:
+    - name: Get Collection Calendar
+      href: collectionCalendar\getCollectionCalendar.md
 - name: Consignments
-  href: dummy.md
+  href: consignmentsAPI.md
+  items:
+    - name: Add Package
+      href: consignments\addPackage.md
+    - name: Cancel Consignment
+      href: consignments\cancelConsignment.md
+    - name: Cancel Consignments
+      href: consignments\cancelConsignments.md
+    - name: Create Consignment
+      href: consignments\createConsignment.md
+    - name: Dispatch Consignments
+      href: consignments\dispatchConsignments.md
+    - name: Get Consignment
+      href: consignments\getConsignment.md
+    - name: Get Consignment Status
+      href: consignments\getConsignmentStatus.md
+    - name: Get Consignment with Metadata
+      href: consignments\getConsignmentWithMetadata.md
+    - name: Get Consignments References
+      href: consignments\getConsignmentsReferences.md
+    - name: Get Customer Manifest
+      href: consignments\getCustomerManifest.md
+    - name: Get Customer Manifests
+      href: consignments\getCustomerManifests.md
+    - name: Search Consignments
+      href: consignments\searchConsignments.md
+    - name: Set Not Ready to Ship
+      href: consignments\setNotReadyToShip.md
+    - name: Set Ready to Ship
+      href: consignments\setReadyToShip.md
+    - name: Update Consignment
+      href: consignments\updateConsignment.md
 - name: Customs Docs
-  href: dummy.md
+  href: customsDocsAPI.md
+  items:
+    - name: Get Commercial Invoice
+      href: customsDocs\getCommercialInvoice.md
+    - name: Get Customs Document
+      href: customsDocs\getCustomsDocument.md
+    - name: Get Customs Documents
+      href: customsDocs\getCustomsDocuments.md  
 - name: Delivery Options
-  href: dummy.md
+  href: deliveryOptionsAPI.md
+  items:
+    - name: Delivery Option Summary
+      href: deliveryOptions\deliveryOptionSummary.md
+    - name: Delivery Options
+      href: deliveryOptions\deliveryOptions.md
+    - name: Get Existing Delivery Option
+      href: deliveryOptions\getExistingDeliveryOption.md
+    - name: Select Delivery Option as an Order
+      href: deliveryOptions\selectDeliveryOptionAsAnOrder.md
+    - name: Select Option
+      href: deliveryOptions\selectOption.md               
 - name: Events
-  href: dummy.md                   
+  href: eventsAPI.md
+  items:
+    - name: Get Consignment Events Of Specified Type
+      href: events\getConsignmentEventsOfSpecifiedType.md
+    - name: Get Consignment State Events Of Specified Type
+      href: events\getConsignmentStateEventsOfSpecifiedType.md                  
 - name: Labels
   href: labelsAPI.md
   items:
@@ -26,17 +106,50 @@
     - name: Get Package Label
       href: labels\getPackageLabel.md
     - name: Get Package Label in Format
-      href: labels\getPackageLabelInFormat.md                
+      href: labels\getPackageLabelInFormat.md                      
 - name: Manifest
-  href: dummy.md
+  href: manifestAPI.md
+  items:
+    - name: Manifest Consignments
+      href: manifest\manifestConsignments.md
+    - name: Manifest Consignments From Query
+      href: manifest\manifestConsignmentsFromQuery.md       
 - name: Orders
-  href: dummy.md
+  href: ordersAPI.md
+  items: 
+    - name: Add Address to Order
+      href: orders\addAddressToOrder.md
+    - name: Create Order
+      href: orders\createOrder.md
+    - name: Get Order
+      href: orders\getOrder.md
+    - name: Pack Order
+      href: orders\packOrder.md
+    - name: Select Delivery Option as an Order
+      href: orders\selectDeliveryOptionAsAnOrder.md
+    - name: Update Address on Order
+      href: orders\updateAddressOnOrder.md
+    - name: Update Order
+      href: orders\updateOrder.md                                 
 - name: Package Sizes
-  href: dummy.md
+  href: packageSizesAPI.md
+  items:
+    - name: Get Package Sizes
+      href: packageSizes\getPackageSizes.md
 - name: Packages
-  href: dummy.md
+  href: packagesAPI.md
+  items:
+    - name: Delete Package  
+      href: packages\deletePackage.md
 - name: Pickup Options
-  href: dummy.md
+  href: pickupOptions.md
+  items:
+    - name: Pickup Options
+      href: pickupOptions\pickupOptions.md
+    - name: Reserve Pickup Option
+      href: pickupOptions\reservePickupOption.md
+    - name: Select Option
+      href: pickupOptions\selectOption.md                      
 - name: Quotes
   href: dummy.md
 - name: Shipping Locations

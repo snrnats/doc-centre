@@ -1,8 +1,8 @@
-# Title
+# Create Order
 
-Brief description of endpoint
+Creates an order
 
-`Endpoint link`
+`POST https://api.electioapp.com/orders`
 
 ## Request
 

@@ -1,8 +1,8 @@
-# Title
+# Get Commercial Invoice
 
-Brief description of endpoint
+Returns the commercial invoice for the specified consignment
 
-`Endpoint link`
+`GET https://api.electioapp.com/consignments/docs/commercialinvoice/{consignmentReference}`
 
 ## Request
 

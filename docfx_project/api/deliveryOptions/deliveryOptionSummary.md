@@ -1,8 +1,8 @@
-# Title
+# Delivery Option Summary
 
-Brief description of endpoint
+Return a summary of delivery options matching the request details
 
-`Endpoint link`
+`POST https://api.electioapp.com/deliveryoptions/summary`
 
 ## Request
 

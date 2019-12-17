@@ -1,8 +1,8 @@
-# Title
+# Get Order
 
-Brief description of endpoint
+Retrieve the details of the specified order
 
-`Endpoint link`
+`GET https://api.electioapp.com/orders/{orderReference}`
 
 ## Request
 

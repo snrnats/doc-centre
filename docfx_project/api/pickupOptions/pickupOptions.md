@@ -1,8 +1,8 @@
-# Title
+# Pickup Options
 
-Brief description of endpoint
+Returns pickup options matching the request details
 
-`Endpoint link`
+`POST https://api.electioapp.com/deliveryoptions/pickupoptions/`
 
 ## Request
 

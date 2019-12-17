@@ -1,8 +1,8 @@
-# Title
+# Cancel Consignments
 
-Brief description of endpoint
+Cancels the specified consignments
 
-`Endpoint link`
+`PUT https://api.electioapp.com/consignments/cancellist`
 
 ## Request
 

@@ -1,8 +1,8 @@
-# Title
+# Reserve Pickup Option
 
-Brief description of endpoint
+Reserves a specified pickup option
 
-`Endpoint link`
+`POST https://api.electioapp.com/deliveryoptions/reserve/{pickupOptionReference}`
 
 ## Request
 

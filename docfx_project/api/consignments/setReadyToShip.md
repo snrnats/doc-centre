@@ -1,8 +1,8 @@
-# Title
+# Set Ready to Ship
 
-Brief description of endpoint
+Sets the specified consignments as 'Ready to Ship'. Only applicable to consignments in an 'Allocated' state.
 
-`Endpoint link`
+`PUT https://api.electioapp.com/consignments/setreadytoship`
 
 ## Request
 

@@ -1,8 +1,8 @@
-# Title
+# Get Customer Manifests
 
-Brief description of endpoint
+Returns all customer manifests with an optional shipping location query string parameter
 
-`Endpoint link`
+`GET https://api.electioapp.com/consignments/customer/manifests?shippingLocationReference=string`
 
 ## Request
 

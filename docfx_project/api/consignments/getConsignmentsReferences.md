@@ -1,8 +1,8 @@
-# Title
+# Get Consignments References
 
-Brief description of endpoint
+Returns a list of consignment references based off search criteria
 
-`Endpoint link`
+`GET https://api.electioapp.com/consignments/getConsignmentReferences`
 
 ## Request
 
