@@ -151,14 +151,27 @@
     - name: Select Option
       href: pickupOptions\selectOption.md                      
 - name: Quotes
-  href: dummy.md
+  href: quotesAPI.md
+  items:
+    - name: Get Quotes
+      href: quotes\getQuotes.md
+    - name: Get Quotes by Consignment Reference
+      href: quotes\getQuotesByConsignmentReference.md
+    - name: Get Service Group Quotes
+      href: quotes\getServiceGroupQuotes.md
 - name: Shipping Locations
-  href: dummy.md
+  href: shippingLocationsAPI.md
+  items:
+    - name: Get Assigned Shipping Locations
+      href: shippingLocations\getAssignedShippingLocations.md
+    - name: Get Shipping Locations
+      href: shippingLocations\getShippingLocations.md    
 - name: Tracking
-  href: dummy.md
-- name: Accordion
-  href: accordion.md
-- name: Collapse
-  href: collapse.md  
-- name: Tabs
-  href: tabs.md
+  href: trackingAPI.md
+  items:
+    - name: Get Events Per Package
+      href: tracking\getEventsPerPackage.md
+    - name: Get Tracking Events
+      href: tracking\getTrackingEvents.md
+    - name: Post Tracking Events
+      href: tracking\postTrackingEvents.md               
