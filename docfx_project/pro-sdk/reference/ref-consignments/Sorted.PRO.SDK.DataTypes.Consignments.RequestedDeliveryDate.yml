@@ -33,6 +33,7 @@ items:
       <DataContractType("Requested Delivery Date", "A requested delivery date.")>
 
       Public Class RequestedDeliveryDate
+
           Inherits RequestedDeliveryDateBase
   inheritance:
   - System.Object

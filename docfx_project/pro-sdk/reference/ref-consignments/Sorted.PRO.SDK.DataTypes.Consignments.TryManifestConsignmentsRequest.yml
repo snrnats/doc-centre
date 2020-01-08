@@ -39,6 +39,7 @@ items:
       <DataContractType("Try Manifest Consignments Request", "Used to provide details of consignments to be manifested and an indicator of how errors are to be handling.")>
 
       Public Class TryManifestConsignmentsRequest
+
           Inherits ManifestConsignmentsRequest
   inheritance:
   - System.Object

@@ -60,6 +60,7 @@ items:
       <DataContractType("Consignment", "Details of an existing consignment")>
 
       Public NotInheritable Class Consignment
+
           Inherits ConsignmentBase
   seealso:
   - linkId: Sorted.PRO.SDK.DataTypes.Consignments.ConsignmentBase

@@ -43,7 +43,9 @@ items:
       <DataContractType("Address", "Details of an address")>
 
       Public NotInheritable Class Address
+
           Inherits Address
+
           Implements ICacheable, ICacheable(Of Object)
   inheritance:
   - System.Object

@@ -49,7 +49,9 @@ items:
     content: 'public class ConsignmentAllocationService : BaseService, IConsignmentAllocationService'
     content.vb: >-
       Public Class ConsignmentAllocationService
+
           Inherits BaseService
+
           Implements IConsignmentAllocationService
   seealso:
   - linkId: Sorted.PRO.SDK.Services.BaseService
@@ -558,7 +560,6 @@ items:
     parameters:
     - id: request
       type: Sorted.PRO.SDK.DataTypes.Consignments.AllocateConsignmentsWithServiceFiltersRequest
-      description: The allocate with service filters request object.
     return:
       type: System.Collections.Generic.List{Sorted.PRO.SDK.DataTypes.Consignments.AllocationSummary}
       description: "\nDetails of the service(s) that the consignments were allocated to.\n"
