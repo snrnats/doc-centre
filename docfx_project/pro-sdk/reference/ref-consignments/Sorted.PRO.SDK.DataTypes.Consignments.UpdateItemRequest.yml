@@ -39,7 +39,6 @@ items:
       <DataContractType("Update item request", "Used to update an item")>
 
       Public Class UpdateItemRequest
-
           Inherits BaseItem
   inheritance:
   - System.Object

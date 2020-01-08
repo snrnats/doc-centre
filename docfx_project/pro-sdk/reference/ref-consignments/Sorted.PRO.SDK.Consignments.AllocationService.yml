@@ -38,9 +38,7 @@ items:
     content: 'public class AllocationService : BaseService, IAllocationService'
     content.vb: >-
       Public Class AllocationService
-
           Inherits BaseService
-
           Implements IAllocationService
   inheritance:
   - System.Object

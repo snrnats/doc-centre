@@ -39,7 +39,6 @@ items:
       <DataContractType("UpdatePackageRequest", "Used for creating and updating packages")>
 
       Public Class UpdatePackageRequest
-
           Inherits BasePackage
   inheritance:
   - System.Object

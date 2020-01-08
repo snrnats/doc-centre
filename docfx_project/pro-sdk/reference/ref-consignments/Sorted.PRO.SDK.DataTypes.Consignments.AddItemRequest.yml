@@ -40,7 +40,6 @@ items:
       <DataContractType("Add Item Request", "Represents a request to add an item to an existing package.")>
 
       Public Class AddItemRequest
-
           Inherits BaseItem
   inheritance:
   - System.Object

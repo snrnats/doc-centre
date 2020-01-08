@@ -38,7 +38,6 @@ items:
       <DataContractType("Delivery Window", "Represents the window during which delivery will occur.")>
 
       Public Class DeliveryWindow
-
           Inherits WindowBase
   inheritance:
   - System.Object

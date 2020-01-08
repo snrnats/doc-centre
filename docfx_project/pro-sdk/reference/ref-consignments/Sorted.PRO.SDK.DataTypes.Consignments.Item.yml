@@ -40,7 +40,6 @@ items:
       <DataContractType("Item", "Details of the items contained within a package")>
 
       Public Class Item
-
           Inherits BaseItem
   inheritance:
   - System.Object

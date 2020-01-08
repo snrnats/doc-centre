@@ -42,7 +42,6 @@ items:
       <DataContractType("Package", "Represents the contents of a consignment")>
 
       Public NotInheritable Class Package
-
           Inherits BasePackage
   inheritance:
   - System.Object

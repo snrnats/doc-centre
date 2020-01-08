@@ -40,9 +40,7 @@ items:
     content: 'public class ItemsService : BaseService, IItemsService'
     content.vb: >-
       Public Class ItemsService
-
           Inherits BaseService
-
           Implements IItemsService
   inheritance:
   - System.Object
@@ -595,6 +593,7 @@ items:
       description: The request.
     return:
       type: System.Threading.Tasks.Task
+      description: ''
     content.vb: Public Function SetCustomerProvidedReferenceViaLabelBarCodeAsync(labelBarCode As String, request As ReferenceProvidedByCustomerRequest) As Task
   overload: Sorted.PRO.SDK.Consignments.ItemsService.SetCustomerProvidedReferenceViaLabelBarCodeAsync*
   implements:

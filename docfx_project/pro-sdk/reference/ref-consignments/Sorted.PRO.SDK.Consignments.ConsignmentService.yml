@@ -90,9 +90,7 @@ items:
     content: 'public class ConsignmentService : BaseService, IConsignmentService'
     content.vb: >-
       Public Class ConsignmentService
-
           Inherits BaseService
-
           Implements IConsignmentService
   seealso:
   - linkId: Sorted.PRO.SDK.Services.BaseService
@@ -847,6 +845,7 @@ items:
       description: A <xref href="Sorted.PRO.SDK.DataTypes.Consignments.ManifestConsignmentsRequest" data-throw-if-not-resolved="false"></xref> containing the list of consignment references
     return:
       type: System.Collections.Generic.List{Sorted.PRO.SDK.Shared.WithMessage{System.String}}
+      description: ''
     content.vb: >-
       <ApiEndpoint("Manifest Consignments", "Manifests the specified consignments.", "Manifest", GetType(ManifestConsignmentsRequest), Nothing, "/consignments/manifest", "PUT", New HttpStatusCode() {HttpStatusCode.OK, HttpStatusCode.Accepted, HttpStatusCode.NotFound})>
 
@@ -903,6 +902,7 @@ items:
       description: A <xref href="Sorted.PRO.SDK.DataTypes.Consignments.DispatchConsignmentsRequest" data-throw-if-not-resolved="false"></xref> containing the list of consignment references
     return:
       type: System.Collections.Generic.List{Sorted.PRO.SDK.DataTypes.Consignments.DispatchResponse}
+      description: ''
     content.vb: >-
       <ApiEndpoint("Dispatch Consignments", "Dispatches the specified consignments.", "Consignments", GetType(DispatchConsignmentsRequest), Nothing, "/consignments/Dispatch", "PUT", New HttpStatusCode() {HttpStatusCode.OK, HttpStatusCode.Accepted, HttpStatusCode.NotFound})>
 

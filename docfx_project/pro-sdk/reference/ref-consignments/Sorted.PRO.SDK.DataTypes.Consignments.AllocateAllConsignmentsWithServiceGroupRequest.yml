@@ -39,7 +39,6 @@ items:
       <DataContractType("Allocate All Consignments With Service Group Request", "Contains details of consignments to be allocated with a specified service group.")>
 
       Public Class AllocateAllConsignmentsWithServiceGroupRequest
-
           Inherits AllocateAllConsignmentsRequest
   inheritance:
   - System.Object
