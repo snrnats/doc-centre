@@ -1,3 +1,3 @@
-# About PRO's APIs
+# Article Index Page
 
-Here's some info about PRO's APIs
+Here's some more info about PRO's APIs
