@@ -1,5 +1,10 @@
 - name: Introduction
   href: intro.md
+- name: Call Flows
+  href: flows/flows.md
+  items:
+    - name: Classic Flow
+      href: flows\classic_flow.md 
 - name: Allocation
   href: allocationAPI.md
   items:

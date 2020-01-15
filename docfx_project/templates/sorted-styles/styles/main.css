@@ -58,11 +58,9 @@ h1, .h1, h2, .h2{
 
 h3, .h3, h4, .h4 {
     font-family: 'Circular Pro Book', 'Segoe UI', Tahoma, Helvetica, sans-serif;
-    font-size: 1.2em;
-    display: inline;
-    margin-left: 0;
+    font-size: 1.3em;
+    margin: 25px 0 15px 0;
     font-weight: 700;  
-
 }
 
 p {
@@ -133,7 +131,7 @@ pre code {
 blockquote {
     font-size: 16px;
     width: 100%;
-    margin: 15px auto 20px auto;
+    margin: 22px auto;
     color: #605d58;
     padding:20px 80px 15px 30px;
     border-left:4px solid #ff055e;
@@ -157,14 +155,13 @@ span.note-header {
     font-weight: bold;
 }
 
-ol {
-    margin-top: 10px;
-    padding-left: 16px;
+ol, ul {
+    margin: 12px 0 15px 0;
+    padding-left: 32px;
 }
 
-ul {
-    margin-top: 10px;
-    padding-left: 20px;
+ol li, ul li {
+    margin: 0 0 5px 0;
 }
 
 ol ol, ul ol {
@@ -338,6 +335,10 @@ article img {
     margin-bottom: 15px;
 }
 
+img.noborder {
+    border: none;
+}
+
 .affix ul > li.active > a {
     color: #ff055e;
 }
@@ -423,6 +424,29 @@ ul.level1 {
     display: none;
     padding: 16px 12px;
     border: 2px solid #ddd;
+  }
+
+  button.staticTabButton {
+    margin-top: 10px;
+    padding: 7px 16px;
+    background-color: #ddd;
+    color: #404040
+  }
+
+  .tab button.staticTabButton:hover {
+    background-color: #ddd;
+    cursor: default;
+  }
+
+  .staticTabContent {
+    display: block;
+    padding: 0;
+    border: 2px solid #ddd;
+    margin-bottom: 20px;
+  }
+
+  .requestTabContent pre, .responseTabContent pre, .staticTabContent pre {
+    margin: 0;
   }
 
   /* Collapse styles*/
@@ -516,4 +540,26 @@ div.copyheader {
 
 div.table-responsive {
     padding: 0;
+}
+
+table.flowTable {
+    width: 100%;
+    table-layout: fixed;
+    margin: 10px 0 20px 0;
+}
+
+table.flowTable tr td {
+    width: 50%;
+    background-color: #fff;
+    padding: 10px;
+}
+
+table.flowTable tr td pre  {
+    margin: 0;
+    padding: 10px;
+}
+
+table.flowTable tr th  {
+    background-color: #fafafa;
+    padding: 10px;
 }
