@@ -1,21 +1,3 @@
-> Example Tags array
-
-```json
-"Tags": [
-   "Flammables",
-   "Oil",
-   "Alcohol"
-]
-```
-
-```xml
-<Tags>
-   <Tag>Flammables</Tag>
-   <Tag>Oil</Tag>
-   <Tag>Alcohol</Tag>
-</Tags>
-```
-
 Allocation tags enable you to filter out carrier services that would not be suitable for a particular consignment. Tagged shipments can only be allocated to those carrier services that have a matching tag. You can still allocate untagged shipments to a carrier service that has tags.
 
 To associate tags with carrier services, use the **Settings > [Carrier Services](https://www.electioapp.com/Configuration/carrierservices/) > [select carrier service] > Allocation Rules > Allocation Filtering Tags** panel of the SortedPRO UI.
@@ -43,4 +25,21 @@ This configuration would produce the following results:
 
 ### Example
 
-The example to the right shows a `tags` property for a consignment that contains flammable materials, oil and alcohol.
+The example shows a `tags` property for a consignment that contains flammable materials, oil and alcohol.
+
+<div class="tab">
+    <button class="staticTabButton">Example Tags array</button>
+    <div class="copybutton" onclick="CopyToClipboard('tagsExample')">Click to Copy</div>
+</div>
+
+<div id="tagsExample" class="staticTabContent" onclick="CopyToClipboard('tagsExample')">
+
+```json
+"Tags": [
+   "Flammables",
+   "Oil",
+   "Alcohol"
+]
+```
+
+</div>

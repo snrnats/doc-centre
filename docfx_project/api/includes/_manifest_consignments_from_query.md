@@ -1,7 +1,9 @@
 <div class="tab">
     <button class="staticTabButton">Manifest Consignments From Query Endpoint</button>
+    <div class="copybutton" onclick="CopyToClipboard('ManifestQueryEndpoint')">Click to Copy</div>
 </div>
-<div class="staticTabContent">
+
+<div id="ManifestQueryEndpoint" class="staticTabContent" onclick="CopyToClipboard('ManifestQueryEndpoint')">
 
 ```
 PUT https://api.electioapp.com/consignments/manifestFromQuery
@@ -33,8 +35,10 @@ The example shows a request to manifest all consignments that are allocated to C
 
 <div class="tab">
     <button class="staticTabButton">Example Manifest Consignments From Query Request</button>
+    <div class="copybutton" onclick="CopyToClipboard('ManifestQueryRequest')">Click to Copy</div>
 </div>
-<div class="staticTabContent"> 
+
+<div id="ManifestQueryRequest" class="staticTabContent" onclick="CopyToClipboard('ManifestQueryRequest')">
 
 ```json
 {
@@ -54,8 +58,10 @@ The example shows a request to manifest all consignments that are allocated to C
 
 <div class="tab">
     <button class="staticTabButton">Example Manifest Consignments From Query Response</button>
+    <div class="copybutton" onclick="CopyToClipboard('ManifestQueryResponse')">Click to Copy</div>
 </div>
-<div class="staticTabContent"> 
+
+<div id="ManifestQueryResponse" class="staticTabContent" onclick="CopyToClipboard('ManifestQueryResponse')">
 
 ```json
 {

@@ -1,7 +1,9 @@
 <div class="tab">
     <button class="staticTabButton">Allocate Consignment With Service Group Endpoint</button>
+    <div class="copybutton" onclick="CopyToClipboard('allocationUSGEndpoint')">Click to Copy</div>
 </div>
-<div class="staticTabContent">
+
+<div id="allocationUSGEndpoint" class="staticTabContent" onclick="CopyToClipboard('allocationUSGEndpoint')">
 
 ```
 PUT https://api.electioapp.com/allocation/{consignmentReference}/allocatewithservicegroup/{mpdCarrierServiceGroupReference}
@@ -29,8 +31,10 @@ The example shows a request to allocate a consignment with a `{consignmentRefere
 
 <div class="tab">
     <button class="staticTabButton">Example Allocate Consignment With Service Group Request</button>
+    <div class="copybutton" onclick="CopyToClipboard('allocationUSGRequest')">Click to Copy</div>
 </div>
-<div class="staticTabContent">
+
+<div id="allocationUSGRequest" class="staticTabContent" onclick="CopyToClipboard('allocationUSGRequest')">
 
 ```
 PUT https://api.electioapp.com/allocation/EC-000-05B-MMA/allocatewithservicegroup/valuableGoods

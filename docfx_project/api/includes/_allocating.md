@@ -1,7 +1,9 @@
 <div class="tab">
     <button class="staticTabButton">Allocation Endpoints</button>
+    <div class="copybutton" onclick="CopyToClipboard('allocationEndpoints')">Click to Copy</div>
 </div>
-<div class="staticTabContent">
+
+<div id="allocationEndpoints" class="staticTabContent" onclick="CopyToClipboard('allocationEndpoints')">
 
    ```
    PUT https://api.electioapp.com/allocation/allocate
@@ -32,12 +34,14 @@ All allocation endpoints return an Allocation Summary, either singularly or (whe
 In the example, a consignment with a `{consignmentReference}` of _EC-000-05B-MMA_ has been allocated to a (dummy) carrier service called _Carrier X Next Day Super_.
 
 > <span class="note-header">Note:</span>
->  Allocation tags enable you to filter the list of available carrier services on a per-consignment basis, no matter which allocation endpoint you use in your integration. For more information on using allocation tags, see the <strong><a href="#tags">Tags</a></strong> section. 
+>  Allocation tags enable you to filter the list of available carrier services on a per-consignment basis, no matter which allocation endpoint you use in your integration. For more information on using allocation tags, see the <strong><a href="/api/flows/moreInfo.html#tags">Tags</a></strong> section of the <strong>More Information</strong> page. 
 
 <div class="tab">
     <button class="staticTabButton">Example Allocation Summary</button>
+    <div class="copybutton" onclick="CopyToClipboard('allocationSummary')">Click to Copy</div>
 </div>
-<div class="staticTabContent">
+
+<div id="allocationSummary" class="staticTabContent" onclick="CopyToClipboard('allocationSummary')">
 
 ```json
 [
@@ -73,5 +77,3 @@ In the example, a consignment with a `{consignmentReference}` of _EC-000-05B-MMA
 ]
 ```
 </div>
-
-[!include[scripts](../includes/scripts.md)]

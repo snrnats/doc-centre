@@ -1,13 +1,14 @@
 <div class="tab">
     <button class="staticTabButton">Create Consignment Endpoint</button>
+    <div class="copybutton" onclick="CopyToClipboard('createConEndpoint')">Click to Copy</div>
 </div>
-<div id="apikeyexample" class="staticTabContent">
 
-   ```
-   POST https://api.electioapp.com/consignments
-   ```
+<div id="createConEndpoint" class="staticTabContent" onclick="CopyToClipboard('createConEndpoint')">
 
-</div>   
+```
+POST https://api.electioapp.com/consignments
+```
+</div>
 
 The first step toward manifesting a consignment is to create that consignment in SortedPRO. 
 
@@ -38,12 +39,12 @@ However, there are lots of other properties you can send when creating a consign
 * Shipping and delivery dates.
 * Customs documentation.
 * The consignment's direction of travel.
-* Metadata. PRO metadata enables you to us custom fields to record additional data about a consignment. For more information on using metadata in PRO, see the **[Metadata](#metadata)** section.
-* Tags. Allocation tags enable you to filter the list of carrier services that a particular consignment could be allocated to. For more information on allocation tags, see the **[Tags](#tags)** section.
+* Metadata. PRO metadata enables you to record additional data about a consignment in custom fields. For more information on using metadata in PRO, see the **[Metadata](/api/flows/moreInfo.html#metadata)** section of the **More Information** page.
+* Tags. Allocation tags enable you to filter the list of carrier services that a particular consignment could be allocated to. For more information on allocation tags, see the **[Tags](/api/flows/moreInfo.html#tags)** section of the **More Information** page.
 
 Either the consignment's `origin` address, its `destination` address, or both, must include a valid <code>ShippingLocationReference</code>. For information on how to obtain a list of your organisation's shipping locations, see the <strong><a href="https://docs.electioapp.com/#/api/GetShippingLocations">Get Shipping Locations</a></strong> page of the API reference.
 
-To edit an existing consignment, use the **[Update Consignments](https://docs.electioapp.com/#/api/UpdateConsignment)** endpoint. For more information on updating consignments, see the [Updating Consignments](#updating-consignments) section.
+To edit an existing order, use the **[Update Orders](https://docs.electioapp.com/#/api/UpdateOrder)** endpoint. For more information on updating orders, see the **[Updating Orders](/api/flows/moreInfo.html#updating-orders)** section of the **More Information** page.
 
 > <span class="note-header">More Information:</span>
 >  For full reference information on the <strong>Create Consignment</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/CreateConsignment">Create Consignment</a></strong> page of the API reference.
@@ -54,8 +55,10 @@ These examples show the creation of a fairly standard consignment. In this case,
 
 <div class="tab">
     <button class="staticTabButton">Request Example</button>
+    <div class="copybutton" onclick="CopyToClipboard('createConRequest')">Click to Copy</div>
 </div>
-<div id="apikeyexample" class="staticTabContent">
+
+<div id="createConRequest" class="staticTabContent" onclick="CopyToClipboard('createConRequest')">
 
 ```json
 {
@@ -223,8 +226,10 @@ After receiving the request, PRO returns a `{consignmentReference}` of _EC-000-0
 
 <div class="tab">
     <button class="staticTabButton">Request Example</button>
+    <div class="copybutton" onclick="CopyToClipboard('createConResponse')">Click to Copy</div>
 </div>
-<div id="apikeyexample" class="staticTabContent">
+
+<div id="createConResponse" class="staticTabContent" onclick="CopyToClipboard('createConResponse')">
 
 ```json
 [
@@ -235,6 +240,3 @@ After receiving the request, PRO returns a `{consignmentReference}` of _EC-000-0
 ]
 ```
 </div>
-
-
-[!include[scripts](../includes/scripts.md)]

@@ -1,81 +1,111 @@
-# PRO Call Flows
+# Order Flex Flow
 
-Ready to get started with SortedPRO? This guide explains some common use cases for PRO's APIs, helping you to see what PRO can do for your business. 
+<p>
+   <a href="../../images/Flow4.png" target="_blank" >
+      <img src="../../images/Flow4.png" class="noborder"/>
+   </a>
+</p>
 
-We will cover:
+The **Order Flex** flow enables you to process customer orders comprising items that will ship from different physical locations.
 
-* [Creating and manifesting a consignment with the Classic flow](#classic-flow)
-   
-   A simple flow to create a consignment, allocate it to a carrier service using criteria of your choosing, retrieve delivery labels, and confirm the delivery with the carrier. 
+The **Order Flex** flow is useful to your business if:
 
-* [Offering and using delivery options with the Consumer Options flow](#consumer-options-flow) 
+* You operate multiple warehouses / fulfilment centres, or run a customer marketplace.
+* You use drop ship vending.
+* You use a static delivery promise (e.g. Order by 5pm to get next day delivery).
 
-   Used when you want to present delivery options to your customer at point of purchase. PRO creates and allocates consignments based on the options the customer selects.
+There are five steps to the flow:
 
-* [Offering and using pickup options with the Consumer Options Pickup flow](#consumer-options-pickup-flow)
+<table class="flowTable">
+   <tr>
+      <th>Step</th>
+      <th>Endpoints Used</th>
+   </tr>
+   <tr>
+      <td>1. <strong>Create order</strong> - Use the <a href="https://docs.electioapp.com/#/api/CreateOrder">Create Order</a> endpoint to record the customer's order in PRO.</td>
+      <td><pre>POST https://api.electioapp.com/orders</pre></td>
+   </tr>
+   <tr>
+      <td>2. <strong>Pack order</strong> - Use the <a href="https://docs.electioapp.com/#/api/PackOrder">Pack Order</a> endpoint to create one or more consignments from the order.</td>
+      <td><pre>POST https://api.electioapp.com/orders/{orderReference}/pack</pre></td>
+   </tr>
+   <tr>
+      <td>3. <strong>Allocate the consignment</strong> - Use one of PRO's <a href="https://docs.electioapp.com/#/api/AllocateConsignment">Allocation</a> endpoints to select the carrier service that your consignment will use. You can nominate a specific service, ask PRO to determine the best service to use from a pre-defined group, or allocate based on pre-set allocation rules.</td>
+      <td><pre>PUT https://api.electioapp.com/allocation/allocate
+PUT https://api.electioapp.com/allocation/{consignmentReference}/allocatewithservicegroup/{mpdCarrierServiceGroupReference}
+PUT https://api.electioapp.com/allocation/allocatewithcarrierservice</pre></td>
+   </tr>
+   <tr>
+      <td>4. <strong>Get the consignment's labels</strong> - Use the <a href="https://docs.electioapp.com/#/api/GetLabelsinFormat">Get Labels In Format</a> endpoint to get the delivery label for your consignment.</td>
+      <td><pre>GET https://api.electioapp.com/labels/{consignmentReference}/{labelFormat}</pre></td>
+   </tr>
+   <tr>
+      <td>5. <strong>Manifest the consignment</strong> - Use the <a href="https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery">Manifest Consignments from Query</a> endpoint to confirm the consignment with the selected carrier. At this point, the consignment is ready to ship.</td>
+      <td><pre>POST https://api.electioapp.com/consignments/manifestFromQuery</pre></td>
+   </tr>         
+ </table>   
 
-   Similar to the **Consumer Options** flow, but used when offering delivery to a pickup/drop-off (PUDO) location rather than home delivery. 
+This section gives more detail on each step of the flow and provides worked examples. 
 
-* [Creating a pack order flow from a PRO order with the Order Flex flow](#order-flex-flow)
+---
 
-   Used when you can't guarantee that all parts of a customer's order will be picked, packed and dispatched from the same place at the same time. PRO can generate multiple consignments from a single customer order where required.
+## Step 1: Creating the Order
 
-* [Using delivery options to create a pack order flow with the Consumer Options Flex flow](#consumer-options-flex-flow)
+[!include[_create_orders](../includes/_create_orders.md)]
 
-   Used when you can't guarantee that all parts of a customer's order will be picked, packed and dispatched from the same place at the same time, and you want to present delivery options to your customer at point of purchase.
+---
 
-* [Obtaining and selecting delivery quotes with the Quotes flow](#quotes-flow)
+## Step 2: Packing the Order
 
-   Used to obtain a full list of potential delivery services for a consignment. Often used to validate a consignment's detail or to enable a customer service operator to get quotes for a customer manually and act on the customer's response.
+[!include[_pack_orders](../includes/_pack_orders.md)]
 
-<aside class="note">
-  This guide is intended as a primer for PRO. If you're already familiar with the basics of PRO, or you just need reference info for PRO's APIs, see the <a href="https://docs.electioapp.com/#/api">API reference</a>.
+---
 
-  Sample requests and responses are available in both <strong>JSON</strong> and <strong>XML</strong>. To switch between the two, use the tabs at the top of the right-hand panel.
-</aside>
+## Step 3: Allocating the Consignment
 
-## Authentication
+[!include[_allocating](../includes/_allocating.md)]
 
-> Example Authentication Header
 
-```
-ocp-apim-subscription-key: [qwerrtyuiioop0987654321]
+You'll need to allocate all of the consignments packed from your order. Bear in mind that <strong><a href="https://docs.electioapp.com/#/api/AllocateUsingDefaultRules">Allocate Using Default Rules</a></strong> and <strong><a href="https://docs.electioapp.com/#/api/AllocateWithCarrierService">Allocate With Carrier Service</a></strong> enable you to allocate multiple consignments at once, but you can only allocate one consignment at a time via <strong><a href="https://docs.electioapp.com/#/api/AllocateConsignmentWithServiceGroup">Allocate Consignment With Service Group</a></strong>. If you allocate via <strong>Allocate Consignment With Service Group</strong> you'll need to make one API call per consignment on the order.
 
-```
+---
 
-You will need to provide a valid API key in every API call you make to SortedPRO. When a new user account is created, PRO generates a unique API key and allocates it to the new user. To view your API key:
+## Step 3a: Allocating using Default Rules
 
-1. Log in to the PRO dashboard and select **Settings > Users & Roles > [User Accounts](https://www.electioapp.com/Company/UserAccounts)** to display the **User Accounts** page. A list of the user accounts that you have access to is displayed.
-2. Click the **Edit User** button for your account to display your account details.
-3. Click **Show API Key**. PRO prompts you to re-enter your UI password.
-4. Enter your password and click **Retrieve API Key** to display your API key.
+[!include[_allocate_using_default_rules](../includes/_allocate_using_default_rules.md)]
 
-To use your API key, include it in an `ocp-apim-subscription-key` header when making calls to PRO. If you make an API call to PRO without including an API key, then PRO returns an error with a status code of _401 (Unauthorized)_.
+---
 
-## Specifying Request / Response Format
+## Step 3b: Allocating from a Service Group
 
-> Example Content Type / Accept Headers
+[!include[_allocate_with_service_group](../includes/_allocate_with_service_group.md)]
 
-```json
-content-type: application/json
-accept: application/json
-```
+---
 
-```xml
-content-type: application/xml
-accept: application/xml
-```
+## Step 3c: Allocating to a Specific Carrier Service
 
-PRO's APIs support both JSON and XML content types. PRO expects `application/json` data by default, but you can specify which content type you are sending for each API request if required. To do so, pass a `content-type` header with a value of `application/json`, `text/xml` or `application/xml` (as applicable) in your request. All other content types are invalid.
+[!include[_allocate_with_carrier_service](../includes/_allocate_with_carrier_service.md)]
 
-You can also specify the content type that you want PRO to use in API responses. To do so, pass an `accept` header with a value of `application/json`, `text/xml`, or `application/xml` in your request. If you don't pass an `accept` header then PRO responds with `application/json`.
+---
 
-## Specifying API version
+## Step 4: Getting Package Labels
 
-> Example API Version Header
+[!include[_get_labels_in_format](../includes/_get_labels_in_format.md)]
 
-```
-electio-api-version: 1.1
-```
+> <span class="note-header">Note:</span>
+> You'll need to make one <strong>Get Labels</strong> call per consignment on the order.
 
-You should include an `electio-api-version` header specifying the API version to use in all PRO API calls. The current version is _1.1_.
+---
+
+## Step 5: Manifesting a Consignment
+
+[!include[_manifest_consignments_from_query](../includes/_manifest_consignments_from_query.md)]
+
+> <span class="note-header">Note:</span>
+> You'll need to manifest all the consignments on the order.
+
+### Next Steps
+
+Finished! The next section explains a similar process, whereby the order is generated from delivery options that the customer selects rather than created up front.
+
+[!include[scripts](../includes/scripts.md)]

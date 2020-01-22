@@ -1,81 +1,66 @@
-# PRO Call Flows
+# Consumer Options Pickup Flow
 
-Ready to get started with SortedPRO? This guide explains some common use cases for PRO's APIs, helping you to see what PRO can do for your business. 
+<p>
+   <a href="../../images/Flow3.png" target="_blank" >
+      <img src="../../images/Flow3.png" class="noborder"/>
+   </a>
+</p>
 
-We will cover:
+The **Consumer Options** flow can also be used to power Pick Up / Drop-Off (PUDO) services. By integrating PRO's **Pickup Options** endpoint, you can build click-and-collect functionality that lets your customers select a pickup location and timeslot for their consignment.
 
-* [Creating and manifesting a consignment with the Classic flow](#classic-flow)
-   
-   A simple flow to create a consignment, allocate it to a carrier service using criteria of your choosing, retrieve delivery labels, and confirm the delivery with the carrier. 
+There are four steps to the flow:
 
-* [Offering and using delivery options with the Consumer Options flow](#consumer-options-flow) 
+<table class="flowTable">
+   <tr>
+      <th>Step</th>
+      <th>Endpoints Used</th>
+   </tr>
+   <tr>
+      <td>1. <strong>Get pickup options</strong> - Use the <a href="https://docs.electioapp.com/#/api/PickupOptions">Pickup Options</a> endpoint to request a list of available delivery locations and timeslots for the (as yet uncreated) consignment that the customer's order will generate.</td>
+      <td><pre>POST https://api.electioapp.com/deliveryoptions/pickupoptions/</pre></td>
+   </tr>
+   <tr>
+      <td>2. <strong>Select delivery option</strong> - Use the <a href="https://docs.electioapp.com/#/api/SelectOption">Select Option</a> endpoint to tell PRO which option the customer selected. At this point, PRO has all the information it needs to create and allocate a consignment.
+      <td><pre>POST https://api.electioapp.com/deliveryoptions/select/{deliveryOptionReference}</pre></td>
+   </tr>
+   <tr>
+      <td>3. <strong>Get the consignment's labels</strong> - Use the <a href="https://docs.electioapp.com/#/api/GetLabelsinFormat">Get Labels In Format</a> endpoint to get the delivery label for your consignment.</td>
+      <td><pre>GET https://api.electioapp.com/labels/{consignmentReference}/{labelFormat}</pre></td>
+   </tr>
+   <tr>
+      <td>4. <strong>Manifest the consignment</strong> - Use the <a href="https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery">Manifest Consignments from Query</a> endpoint to confirm the consignment with the selected carrier. At this point, the consignment is ready to ship.</td>
+      <td><pre>POST https://api.electioapp.com/consignments/manifestFromQuery</pre></td>
+   </tr>         
+ </table>
 
-   Used when you want to present delivery options to your customer at point of purchase. PRO creates and allocates consignments based on the options the customer selects.
+This section gives more detail on each step of the flow and provides worked examples. 
 
-* [Offering and using pickup options with the Consumer Options Pickup flow](#consumer-options-pickup-flow)
+---
 
-   Similar to the **Consumer Options** flow, but used when offering delivery to a pickup/drop-off (PUDO) location rather than home delivery. 
+## Step 1: Getting Pickup Options
 
-* [Creating a pack order flow from a PRO order with the Order Flex flow](#order-flex-flow)
+[!include[_get_pickup_options](../includes/_get_pickup_options.md)]
 
-   Used when you can't guarantee that all parts of a customer's order will be picked, packed and dispatched from the same place at the same time. PRO can generate multiple consignments from a single customer order where required.
+---
 
-* [Using delivery options to create a pack order flow with the Consumer Options Flex flow](#consumer-options-flex-flow)
+## Step 2: Selecting a Delivery Option
 
-   Used when you can't guarantee that all parts of a customer's order will be picked, packed and dispatched from the same place at the same time, and you want to present delivery options to your customer at point of purchase.
+[!include[_select_option](../includes/_select_option.md)]
 
-* [Obtaining and selecting delivery quotes with the Quotes flow](#quotes-flow)
+---
 
-   Used to obtain a full list of potential delivery services for a consignment. Often used to validate a consignment's detail or to enable a customer service operator to get quotes for a customer manually and act on the customer's response.
+## Step 3: Getting a Package Label
 
-<aside class="note">
-  This guide is intended as a primer for PRO. If you're already familiar with the basics of PRO, or you just need reference info for PRO's APIs, see the <a href="https://docs.electioapp.com/#/api">API reference</a>.
+[!include[_get_labels_in_format](../includes/_get_labels_in_format.md)]
 
-  Sample requests and responses are available in both <strong>JSON</strong> and <strong>XML</strong>. To switch between the two, use the tabs at the top of the right-hand panel.
-</aside>
+---
 
-## Authentication
+## Step 4: Manifesting the Consignment
 
-> Example Authentication Header
+[!include[_manifest_consignments_from_query](../includes/_manifest_consignments_from_query.md)]
 
-```
-ocp-apim-subscription-key: [qwerrtyuiioop0987654321]
+### Next Steps
 
-```
+Read on to learn how to use delivery options to fulfil multiple-consignment orders.
 
-You will need to provide a valid API key in every API call you make to SortedPRO. When a new user account is created, PRO generates a unique API key and allocates it to the new user. To view your API key:
-
-1. Log in to the PRO dashboard and select **Settings > Users & Roles > [User Accounts](https://www.electioapp.com/Company/UserAccounts)** to display the **User Accounts** page. A list of the user accounts that you have access to is displayed.
-2. Click the **Edit User** button for your account to display your account details.
-3. Click **Show API Key**. PRO prompts you to re-enter your UI password.
-4. Enter your password and click **Retrieve API Key** to display your API key.
-
-To use your API key, include it in an `ocp-apim-subscription-key` header when making calls to PRO. If you make an API call to PRO without including an API key, then PRO returns an error with a status code of _401 (Unauthorized)_.
-
-## Specifying Request / Response Format
-
-> Example Content Type / Accept Headers
-
-```json
-content-type: application/json
-accept: application/json
-```
-
-```xml
-content-type: application/xml
-accept: application/xml
-```
-
-PRO's APIs support both JSON and XML content types. PRO expects `application/json` data by default, but you can specify which content type you are sending for each API request if required. To do so, pass a `content-type` header with a value of `application/json`, `text/xml` or `application/xml` (as applicable) in your request. All other content types are invalid.
-
-You can also specify the content type that you want PRO to use in API responses. To do so, pass an `accept` header with a value of `application/json`, `text/xml`, or `application/xml` in your request. If you don't pass an `accept` header then PRO responds with `application/json`.
-
-## Specifying API version
-
-> Example API Version Header
-
-```
-electio-api-version: 1.1
-```
-
-You should include an `electio-api-version` header specifying the API version to use in all PRO API calls. The current version is _1.1_.
+[!include[scripts](../includes/scripts.md)]

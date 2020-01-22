@@ -1,7 +1,9 @@
 <div class="tab">
     <button class="staticTabButton">Get Labels in Format Endpoint</button>
+    <div class="copybutton" onclick="CopyToClipboard('GLFEndpoint')">Click to Copy</div>
 </div>
-<div class="staticTabContent">
+
+<div id="GLFEndpoint" class="staticTabContent" onclick="CopyToClipboard('GLFEndpoint')">
 
 ```
 GET https://api.electioapp.com/labels/{consignmentReference}/{labelFormat}
@@ -25,8 +27,10 @@ You would next need to decode the file's Base64 in order to view the label itsel
 
 <div class="tab">
     <button class="staticTabButton">Example Get Labels in Format Request</button>
+    <div class="copybutton" onclick="CopyToClipboard('GLFRequest')">Click to Copy</div>
 </div>
-<div class="staticTabContent">
+
+<div id="GLFRequest" class="staticTabContent" onclick="CopyToClipboard('GLFRequest')">
 
 ```
 GET https://api.electioapp.com/labels/EC-000-05B-MMA/pdf
@@ -36,8 +40,10 @@ GET https://api.electioapp.com/labels/EC-000-05B-MMA/pdf
 
 <div class="tab">
     <button class="staticTabButton">Example Get Labels in Format Response</button>
+    <div class="copybutton" onclick="CopyToClipboard('GLFResponse')">Click to Copy</div>
 </div>
-<div class="staticTabContent">
+
+<div id="GLFResponse" class="staticTabContent" onclick="CopyToClipboard('GLFResponse')">
 
 ```json
 {

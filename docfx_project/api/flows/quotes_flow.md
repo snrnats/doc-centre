@@ -1,81 +1,84 @@
-# PRO Call Flows
+# Quotes Flow
 
-Ready to get started with SortedPRO? This guide explains some common use cases for PRO's APIs, helping you to see what PRO can do for your business. 
+<p>
+   <a href="../../images/Flow1.png" target="_blank" >
+      <img src="../../images/Flow1.png" class="noborder"/>
+   </a>
+</p>
 
-We will cover:
+The **Quotes** flow is intended as a back-end customer service integration to help you resolve delivery issues that require manual intervention. In this flow, a consignment is created and then allocated to a carrier service based on a specific quote for that consignment.
 
-* [Creating and manifesting a consignment with the Classic flow](#classic-flow)
-   
-   A simple flow to create a consignment, allocate it to a carrier service using criteria of your choosing, retrieve delivery labels, and confirm the delivery with the carrier. 
+The **Quotes** flow is useful to your business for:
 
-* [Offering and using delivery options with the Consumer Options flow](#consumer-options-flow) 
+* Customer contact centre use. 
+* In store delivery booking.
+* ERP workflows (e.g. SAP, Oracle).
 
-   Used when you want to present delivery options to your customer at point of purchase. PRO creates and allocates consignments based on the options the customer selects.
+There are five steps to the flow:
 
-* [Offering and using pickup options with the Consumer Options Pickup flow](#consumer-options-pickup-flow)
+<table class="flowTable">
+   <tr>
+      <th>Step</th>
+      <th>Endpoints Used</th>
+   </tr>
+   <tr>
+      <td>1. <strong>Create the consignment</strong> - Use the <a href="https://docs.electioapp.com/#/api/CreateConsignment">Create Consignment</a> endpoint to record the details of your new consignment.</td>
+      <td><pre>POST https://api.electioapp.com/consignments</pre></td>
+   </tr>
+   <tr>
+      <td>2. <strong>Get quotes for the consignment</strong> - Use the <a href="https://docs.electioapp.com/#/api/GetQuotesbyConsignmentReference">Get Quotes by Consignment Reference</a> endpoint to get delivery quotes for the consignment.</td>
+      <td><pre>GET https://api.electioapp.com/quotes/consignment/{consignmentReference}</pre></td>
+   </tr>
+   <tr>
+      <td>3. <strong>Select a quote</strong> - Use the <a href="https://docs.electioapp.com/#/api/AllocateWithQuote">Allocate With Quote</a> endpoint to select one of the returned quotes.</td>
+      <td><pre>PUT https://api.electioapp.com/allocation/{consignmentReference}/allocatewithquote/{quoteReference}</pre></td>
+   </tr>   
+   <tr>
+      <td>4. <strong>Get the consignment's labels</strong> - Use the <a href="https://docs.electioapp.com/#/api/GetLabelsinFormat">Get Labels In Format</a> endpoint to get the delivery label for your consignment.</td>
+      <td><pre>GET https://api.electioapp.com/labels/{consignmentReference}/{labelFormat}</pre></td>
+   </tr>
+   <tr>
+      <td>5. <strong>Manifest the consignment</strong> - Use the <a href="https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery">Manifest Consignments from Query</a> endpoint to confirm the consignment with the selected carrier. At this point, the consignment is ready to ship.</td>
+      <td><pre>POST https://api.electioapp.com/consignments/manifestFromQuery</pre></td>
+   </tr>         
+ </table> 
 
-   Similar to the **Consumer Options** flow, but used when offering delivery to a pickup/drop-off (PUDO) location rather than home delivery. 
+1. **Create the consignment** - Use the [Create Consignment](https://docs.electioapp.com/#/api/CreateConsignment) endpoint to record the details of a new consignment.
+2. **Get quotes for the consignment** - Use the [Get Quotes by Consignment Reference](https://docs.electioapp.com/#/api/GetQuotesbyConsignmentReference) endpoint to get delivery quotes for the consignment.
+3. **Select a quote** - Use the [Allocate With Quote](https://docs.electioapp.com/#/api/AllocateWithQuote) endpoint to select one of the returned quotes.
+4. **Get the consignment's labels** - Use the [Get Labels in Format](https://docs.electioapp.com/#/api/GetLabelsinFormat) endpoint to get the delivery label for your consignment.
+5. **Manifest the consignment** - Use the [Manifest Consignments from Query](https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery) endpoint to confirm the consignment with the selected carrier. At this point, the consignment is ready to ship.
 
-* [Creating a pack order flow from a PRO order with the Order Flex flow](#order-flex-flow)
+This section gives more detail on each step of the flow and provides worked examples. 
 
-   Used when you can't guarantee that all parts of a customer's order will be picked, packed and dispatched from the same place at the same time. PRO can generate multiple consignments from a single customer order where required.
+---
 
-* [Using delivery options to create a pack order flow with the Consumer Options Flex flow](#consumer-options-flex-flow)
+## Step 1: Creating Consignments
 
-   Used when you can't guarantee that all parts of a customer's order will be picked, packed and dispatched from the same place at the same time, and you want to present delivery options to your customer at point of purchase.
+[!include[_create_consignments](../includes/_create_consignments.md)]
 
-* [Obtaining and selecting delivery quotes with the Quotes flow](#quotes-flow)
+---
 
-   Used to obtain a full list of potential delivery services for a consignment. Often used to validate a consignment's detail or to enable a customer service operator to get quotes for a customer manually and act on the customer's response.
+## Step 2: Getting Quotes by Consignment Reference
 
-<aside class="note">
-  This guide is intended as a primer for PRO. If you're already familiar with the basics of PRO, or you just need reference info for PRO's APIs, see the <a href="https://docs.electioapp.com/#/api">API reference</a>.
+[!include[_get_quotes_by_con_ref](../includes/_get_quotes_by_con_ref.md)]
 
-  Sample requests and responses are available in both <strong>JSON</strong> and <strong>XML</strong>. To switch between the two, use the tabs at the top of the right-hand panel.
-</aside>
+---
 
-## Authentication
+## Step 3: Selecting a Quote
 
-> Example Authentication Header
+[!include[_allocate_with_quote](../includes/_allocate_with_quote.md)]
 
-```
-ocp-apim-subscription-key: [qwerrtyuiioop0987654321]
+---
 
-```
+## Step 4: Getting Consignment Labels
 
-You will need to provide a valid API key in every API call you make to SortedPRO. When a new user account is created, PRO generates a unique API key and allocates it to the new user. To view your API key:
+[!include[_get_labels_in_format](../includes/_get_labels_in_format.md)]
 
-1. Log in to the PRO dashboard and select **Settings > Users & Roles > [User Accounts](https://www.electioapp.com/Company/UserAccounts)** to display the **User Accounts** page. A list of the user accounts that you have access to is displayed.
-2. Click the **Edit User** button for your account to display your account details.
-3. Click **Show API Key**. PRO prompts you to re-enter your UI password.
-4. Enter your password and click **Retrieve API Key** to display your API key.
+---
 
-To use your API key, include it in an `ocp-apim-subscription-key` header when making calls to PRO. If you make an API call to PRO without including an API key, then PRO returns an error with a status code of _401 (Unauthorized)_.
+## Step 5: Manifesting a Consignment
 
-## Specifying Request / Response Format
+[!include[_manifest_consignments_from_query](../includes/_manifest_consignments_from_query.md)]
 
-> Example Content Type / Accept Headers
-
-```json
-content-type: application/json
-accept: application/json
-```
-
-```xml
-content-type: application/xml
-accept: application/xml
-```
-
-PRO's APIs support both JSON and XML content types. PRO expects `application/json` data by default, but you can specify which content type you are sending for each API request if required. To do so, pass a `content-type` header with a value of `application/json`, `text/xml` or `application/xml` (as applicable) in your request. All other content types are invalid.
-
-You can also specify the content type that you want PRO to use in API responses. To do so, pass an `accept` header with a value of `application/json`, `text/xml`, or `application/xml` in your request. If you don't pass an `accept` header then PRO responds with `application/json`.
-
-## Specifying API version
-
-> Example API Version Header
-
-```
-electio-api-version: 1.1
-```
-
-You should include an `electio-api-version` header specifying the API version to use in all PRO API calls. The current version is _1.1_.
+[!include[scripts](../includes/scripts.md)]

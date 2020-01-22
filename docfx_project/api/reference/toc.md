@@ -1,5 +1,0 @@
-# [Labels API](labelsAPI.md)
-## [Get Labels](getLabels.md)
-## [Get Labels in Format](getLabelsInFormat.md)
-## [Get Package Label](getPackageLabel.md)
-## [Get Package Label in Format](getPackageLabelInFormat.md)

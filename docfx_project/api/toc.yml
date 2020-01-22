@@ -5,6 +5,18 @@
   items:
     - name: Classic Flow
       href: flows\classic_flow.md 
+    - name: Consumer Options Flow
+      href: flows\consumer_options_flow.md
+    - name: Consumer Options Pickup Flow
+      href: flows\consumer_options_pickup_flow.md
+    - name: Order Flex Flow
+      href: flows\order_flex_flow.md
+    - name: Consumer Options Flex Flow
+      href: flows\consumer_options_flex_flow.md
+    - name: Quotes Flow
+      href: flows\quotes_flow.md
+    - name: More Information
+      href: flows\moreInfo.md              
 - name: Allocation
   href: allocationAPI.md
   items:
@@ -179,4 +191,4 @@
     - name: Get Tracking Events
       href: tracking\getTrackingEvents.md
     - name: Post Tracking Events
-      href: tracking\postTrackingEvents.md               
+      href: tracking\postTrackingEvents.md           

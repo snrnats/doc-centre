@@ -184,6 +184,11 @@ pre {
     margin: 20px 0 25px 0;
     border: none;
 }
+
+hr {
+    margin: 30px 0;
+}
+
 .navbar-inverse {
     background-color: #fff;
     border-bottom: solid 3px #e7e7e7;
@@ -445,6 +450,11 @@ ul.level1 {
     margin-bottom: 20px;
   }
 
+  .staticTabContent:hover {
+    cursor: pointer;
+    border: 2px solid #999;
+  }
+
   .requestTabContent pre, .responseTabContent pre, .staticTabContent pre {
     margin: 0;
   }
@@ -497,7 +507,7 @@ ul.level1 {
     font-size: 12px;
     cursor: pointer;
     margin: 0;
-    padding: 5px 0;
+    padding: 20px 5px 0px 0px;
     display: inline;
     float: right;
 }

@@ -1,7 +1,9 @@
 <div class="tab">
     <button class="staticTabButton">Allocate With Carrier Service Endpoint</button>
+    <div class="copybutton" onclick="CopyToClipboard('allocationUCSEndpoint')">Click to Copy</div>
 </div>
-<div class="staticTabContent">
+
+<div id="allocationUCSEndpoint" class="staticTabContent" onclick="CopyToClipboard('allocationUCSEndpoint')">
 
 ```
 PUT https://api.electioapp.com/allocation/allocatewithcarrierservice
@@ -26,8 +28,10 @@ The example shows a request to allocate three consignments to a carrier service 
 
 <div class="tab">
     <button class="staticTabButton">Example Allocate With Carrier Service Request</button>
+    <div class="copybutton" onclick="CopyToClipboard('allocationUCSRequest')">Click to Copy</div>
 </div>
-<div class="staticTabContent">
+
+<div id="allocationUCSRequest" class="staticTabContent" onclick="CopyToClipboard('allocationUCSRequest')">
 
 ```json
 PUT https://api.electioapp.com/allocation/allocatewithcarrierservice
