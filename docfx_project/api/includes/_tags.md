@@ -23,7 +23,7 @@ This configuration would produce the following results:
 * **Consignment tagged with** `Alcohol`**,** `Flammables`**, and** `Oil` - No services are returned
 
 
-### Example
+### Tags Example
 
 The example shows a `tags` property for a consignment that contains flammable materials, oil and alcohol.
 

@@ -61,7 +61,7 @@ Each `{PickupOptions}` object contains details of a particular pickup option tha
 > <span class="note-header">More Information:</span>
 >  For full reference information on the <strong>Pickup Options</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/PickupOptions">Pickup Options</a></strong> page of the API reference.
 
-### Example
+### Pickup Options Example
 
 The example shows a request to get no more than 10 pickup options for a fairly standard consignment, all within 1km of the recipient's location. 
 

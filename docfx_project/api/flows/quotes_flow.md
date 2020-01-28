@@ -16,39 +16,12 @@ The **Quotes** flow is useful to your business for:
 
 There are five steps to the flow:
 
-<table class="flowTable">
-   <tr>
-      <th>Step</th>
-      <th>Endpoints Used</th>
-   </tr>
-   <tr>
-      <td>1. <strong>Create the consignment</strong> - Use the <a href="https://docs.electioapp.com/#/api/CreateConsignment">Create Consignment</a> endpoint to record the details of your new consignment.</td>
-      <td><pre>POST https://api.electioapp.com/consignments</pre></td>
-   </tr>
-   <tr>
-      <td>2. <strong>Get quotes for the consignment</strong> - Use the <a href="https://docs.electioapp.com/#/api/GetQuotesbyConsignmentReference">Get Quotes by Consignment Reference</a> endpoint to get delivery quotes for the consignment.</td>
-      <td><pre>GET https://api.electioapp.com/quotes/consignment/{consignmentReference}</pre></td>
-   </tr>
-   <tr>
-      <td>3. <strong>Select a quote</strong> - Use the <a href="https://docs.electioapp.com/#/api/AllocateWithQuote">Allocate With Quote</a> endpoint to select one of the returned quotes.</td>
-      <td><pre>PUT https://api.electioapp.com/allocation/{consignmentReference}/allocatewithquote/{quoteReference}</pre></td>
-   </tr>   
-   <tr>
-      <td>4. <strong>Get the consignment's labels</strong> - Use the <a href="https://docs.electioapp.com/#/api/GetLabelsinFormat">Get Labels In Format</a> endpoint to get the delivery label for your consignment.</td>
-      <td><pre>GET https://api.electioapp.com/labels/{consignmentReference}/{labelFormat}</pre></td>
-   </tr>
-   <tr>
-      <td>5. <strong>Manifest the consignment</strong> - Use the <a href="https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery">Manifest Consignments from Query</a> endpoint to confirm the consignment with the selected carrier. At this point, the consignment is ready to ship.</td>
-      <td><pre>POST https://api.electioapp.com/consignments/manifestFromQuery</pre></td>
-   </tr>         
- </table> 
-
 1. **Create the consignment** - Use the [Create Consignment](https://docs.electioapp.com/#/api/CreateConsignment) endpoint to record the details of a new consignment.
 2. **Get quotes for the consignment** - Use the [Get Quotes by Consignment Reference](https://docs.electioapp.com/#/api/GetQuotesbyConsignmentReference) endpoint to get delivery quotes for the consignment.
 3. **Select a quote** - Use the [Allocate With Quote](https://docs.electioapp.com/#/api/AllocateWithQuote) endpoint to select one of the returned quotes.
 4. **Get the consignment's labels** - Use the [Get Labels in Format](https://docs.electioapp.com/#/api/GetLabelsinFormat) endpoint to get the delivery label for your consignment.
 5. **Manifest the consignment** - Use the [Manifest Consignments from Query](https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery) endpoint to confirm the consignment with the selected carrier. At this point, the consignment is ready to ship.
-
+ 
 This section gives more detail on each step of the flow and provides worked examples. 
 
 ---

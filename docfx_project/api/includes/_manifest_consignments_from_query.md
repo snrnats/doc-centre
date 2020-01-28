@@ -29,7 +29,7 @@ Once PRO has attempted to add the consignments to the manifest queue, the **Mani
 > <span class="note-header">Note:</span>
 >  For full reference information on the <strong>Manifest Consignments From Query</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery">Manifest Consignments From Query</a></strong> page of the API Reference. 
 
-### Examples
+### Manifest Consignments From Query Example
 
 The example shows a request to manifest all consignments that are allocated to Carrier X, shipping from a location with the `ShippingLocationReference` _Location1_, and have already had their labels printed. The response indicates that PRO found 10 consignments meeting these criteria, and that all 10 were successfully queued for manifest.
 

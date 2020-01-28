@@ -43,7 +43,7 @@ To make a **Pack Order** request, send a GET request to `https://api.electioapp.
 
 Once SortedPRO has received a **Pack Order** request, it creates the consignment and returns the relevant `{consignmentReference}`.
 
-### Example
+### Pack Order Example
 
 The example shows a **Pack Order** request to create a consignment with one package containing a single item from order _EO-000-002-0TT_. PRO creates the consignment and responds with a `{consignmentReference}` of _EC-000-05B-MQ4_.
 

@@ -18,38 +18,12 @@ The **Consumer Options Flex** flow is useful to your business if:
 
 There are six steps to the flow:
 
-<table class="flowTable">
-   <tr>
-      <th>Step</th>
-      <th>Endpoints Used</th>
-   </tr>
-   <tr>
-      <td>1. <strong>Get delivery options</strong> - Use the <a href="https://docs.electioapp.com/#/api/DeliveryOptions">Delivery Options</a> endpoint to request a list of available delivery options for the (as yet uncreated) consignment that the customer's order will generate.</td>
-      <td><pre>POST https://api.electioapp.com/deliveryoptions</pre></td>
-   </tr>
-   <tr>
-      <td>2. <strong>Select option as an order</strong>- Use the <a href="https://docs.electioapp.com/#/api/SelectDeliveryOptionasanOrder">Select Delivery Option as an Order</a> endpoint to generate an order from the selected delivery option. </td>
-      <td><pre>POST https://api.electioapp.com/deliveryoptions/selectorder</pre></td>
-   </tr>
-   <tr>
-      <td>3. <strong>Pack order</strong> - Use the <a href="https://docs.electioapp.com/#/api/PackOrder">Pack Order</a> endpoint to create one or more consignments from the order.</td>
-      <td><pre>POST https://api.electioapp.com/orders/{orderReference}/pack</pre></td>
-   </tr>   
-   <tr>
-      <td>4. <strong>Allocate the consignment</strong> - Use one of PRO's <a href="https://docs.electioapp.com/#/api/AllocateConsignment">Allocation</a> endpoints to select the carrier service that your consignment will use. You can nominate a specific service, ask PRO to determine the best service to use from a pre-defined group, or allocate based on pre-set allocation rules.</td>
-      <td><pre>PUT https://api.electioapp.com/allocation/allocate
-PUT https://api.electioapp.com/allocation/{consignmentReference}/allocatewithservicegroup/{mpdCarrierServiceGroupReference}
-PUT https://api.electioapp.com/allocation/allocatewithcarrierservice</pre></td>
-   </tr>
-   <tr>
-      <td>5. <strong>Get the consignment's labels</strong> - Use the <a href="https://docs.electioapp.com/#/api/GetLabelsinFormat">Get Labels In Format</a> endpoint to get the delivery label for your consignment.</td>
-      <td><pre>GET https://api.electioapp.com/labels/{consignmentReference}/{labelFormat}</pre></td>
-   </tr>
-   <tr>
-      <td>6. <strong>Manifest the consignment</strong> - Use the <a href="https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery">Manifest Consignments from Query</a> endpoint to confirm the consignment with the selected carrier. At this point, the consignment is ready to ship.</td>
-      <td><pre>POST https://api.electioapp.com/consignments/manifestFromQuery</pre></td>
-   </tr>         
- </table>
+1. **Get delivery options** - Use the [Delivery Options](https://docs.electioapp.com/#/api/DeliveryOptions) endpoint to request a list of available delivery options for the (as yet uncreated) consignment that the customer's purchase will generate.
+2. **Select option as an order** -- Use the [Select Delivery Option as an Order](https://docs.electioapp.com/#/api/SelectDeliveryOptionasanOrder) to generate an order from the selected delivery option. 
+3. **Pack the order** - Use the [Pack Order](https://docs.electioapp.com/#/api/PackOrder) endpoint to create one or more consignments from the order.
+4. **Allocate the consignments** - Use one of PRO's [Allocation](https://docs.electioapp.com/#/api/AllocateConsignment) endpoints to select the carrier service that your consignments will use. You can select a specific service, ask PRO to determine the best service to use from a pre-defined group of services, or allocate based on pre-set allocation rules.
+5. **Get the consignment's labels** - Use the [Get Labels in Format](https://docs.electioapp.com/#/api/GetLabelsinFormat) endpoint to get the delivery label for your consignment.
+6. **Manifest the consignments** - Use the [Manifest Consignments from Query](https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery) endpoint to confirm the consignment with the selected carrier. At this point, the consignment is ready to ship.
 
 This section gives more detail on each step of the flow and provides worked examples. 
 

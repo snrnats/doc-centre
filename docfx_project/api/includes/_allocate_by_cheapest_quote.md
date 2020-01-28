@@ -13,7 +13,7 @@ PUT https://api.electioapp.com/allocation/EC-000-05A-Z6S/allocatewithcheapestquo
 ```
 ### Example
 
-The example to the right shows a request to allocate a consignment with a `{consignmentReference}` of _EC-000-05A-Z6S_ via the **Allocate Consignment** endpoint. 
+The example shows a request to allocate a consignment with a `{consignmentReference}` of _EC-000-05A-Z6S_ via the **Allocate Consignment** endpoint. 
 
 <aside class="note">
   For full reference information on the <strong>Allocate Consignment</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/AllocateConsignment">Allocate Consignment</a></strong> page of the API reference. 

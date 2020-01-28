@@ -20,7 +20,7 @@ Each `{Quote}` object contains details on carrier service, dates, addresses, and
 > <span class="note-header">Note:</span>
 >  For full reference information on the <strong>Get Quotes by Consignment Reference</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/GetQuotesbyConsignmentReference">Get Quotes by Consignment Reference</a></strong> page of the API reference.
 
-### Example
+### Get Quotes By Consignment Reference Example
 
 The example shows a **Get Quotes by Consignment Reference** request and its accompanying response. In this case, SortedPRO has returned two quotes for the service. The next step in the process is to select one of those quotes.
 

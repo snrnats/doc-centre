@@ -16,34 +16,11 @@ The **Order Flex** flow is useful to your business if:
 
 There are five steps to the flow:
 
-<table class="flowTable">
-   <tr>
-      <th>Step</th>
-      <th>Endpoints Used</th>
-   </tr>
-   <tr>
-      <td>1. <strong>Create order</strong> - Use the <a href="https://docs.electioapp.com/#/api/CreateOrder">Create Order</a> endpoint to record the customer's order in PRO.</td>
-      <td><pre>POST https://api.electioapp.com/orders</pre></td>
-   </tr>
-   <tr>
-      <td>2. <strong>Pack order</strong> - Use the <a href="https://docs.electioapp.com/#/api/PackOrder">Pack Order</a> endpoint to create one or more consignments from the order.</td>
-      <td><pre>POST https://api.electioapp.com/orders/{orderReference}/pack</pre></td>
-   </tr>
-   <tr>
-      <td>3. <strong>Allocate the consignment</strong> - Use one of PRO's <a href="https://docs.electioapp.com/#/api/AllocateConsignment">Allocation</a> endpoints to select the carrier service that your consignment will use. You can nominate a specific service, ask PRO to determine the best service to use from a pre-defined group, or allocate based on pre-set allocation rules.</td>
-      <td><pre>PUT https://api.electioapp.com/allocation/allocate
-PUT https://api.electioapp.com/allocation/{consignmentReference}/allocatewithservicegroup/{mpdCarrierServiceGroupReference}
-PUT https://api.electioapp.com/allocation/allocatewithcarrierservice</pre></td>
-   </tr>
-   <tr>
-      <td>4. <strong>Get the consignment's labels</strong> - Use the <a href="https://docs.electioapp.com/#/api/GetLabelsinFormat">Get Labels In Format</a> endpoint to get the delivery label for your consignment.</td>
-      <td><pre>GET https://api.electioapp.com/labels/{consignmentReference}/{labelFormat}</pre></td>
-   </tr>
-   <tr>
-      <td>5. <strong>Manifest the consignment</strong> - Use the <a href="https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery">Manifest Consignments from Query</a> endpoint to confirm the consignment with the selected carrier. At this point, the consignment is ready to ship.</td>
-      <td><pre>POST https://api.electioapp.com/consignments/manifestFromQuery</pre></td>
-   </tr>         
- </table>   
+1. **Create order** - Use the [Create Order](https://docs.electioapp.com/#/api/CreateOrder) endpoint to record the customer's order in PRO.
+2. **Pack order** - Use the [Pack Order](https://docs.electioapp.com/#/api/PackOrder) endpoint to create one or more consignments from the order.
+3. **Allocate the consignments** - Use one of PRO's [Allocation](https://docs.electioapp.com/#/api/AllocateConsignment) endpoints to select the carrier service that your consignments will use. You can select a specific service, ask PRO to determine the best service to use from a pre-defined group, or allocate based on pre-set allocation rules.
+4. **Get delivery labels** - Use the [Get Labels in Format](https://docs.electioapp.com/#/api/GetLabelsinFormat) endpoint to get the delivery label for your consignments.
+5. **Manifest the consignments** - Use the [Manifest Consignments from Query](https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery) endpoint to confirm the consignments with the selected carrier. At this point, the consignments are ready to ship.
 
 This section gives more detail on each step of the flow and provides worked examples. 
 

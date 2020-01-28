@@ -33,7 +33,7 @@ To edit an existing order, use the **[Update Orders](https://docs.electioapp.com
 > <span class="note-header">Note:</span>
 >  For full reference information on the <strong>Create Order</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/CreateOrder">Create Order</a></strong> page of the API reference.
 
-### Example
+### Create Order Example
 
 The example shows the creation of a fairly standard order. In this case, we have an outbound order comprising a single package with a single item inside it.
 

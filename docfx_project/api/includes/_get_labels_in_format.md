@@ -19,7 +19,7 @@ The **Get Labels in Format** endpoint takes a `{consignmentReference}` and `{lab
 > <span class="note-header">Note:</span>
 >  For full reference information on the <strong>Get Labels in Format</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/GetLabelsinFormat">Get Labels in Format</a></strong> page of the API reference. 
   
-### Examples
+### Get Labels in Format Example
 
 The example shows a request to get PDF labels for a consignment with a `{consignmentReference}` of _EC-000-05B-MMA_. The file data in the response has been truncated for clarity.
 
@@ -47,7 +47,7 @@ GET https://api.electioapp.com/labels/EC-000-05B-MMA/pdf
 
 ```json
 {
-  "File": "SlZCRVJpMHhMalFLSmRQcjZ ... [truncated for brevity] ... TVRrNU9ERUtKU1ZGVDBZPQ==",
+  "File": "SlZCRVJpMHhMalFLSmRQcjZ ... TVRrNU9ERUtKU1ZGVDBZPQ==",
   "ContentType": "application/pdf"
 }
 ```

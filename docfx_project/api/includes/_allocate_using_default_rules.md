@@ -25,7 +25,7 @@ Once the request is received, SortedPRO takes each consignment in turn and alloc
 > <span class="note-header">Note:</span>
 >  For full reference information on the <strong>Allocate Using Default Rules</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/AllocateUsingDefaultRules">Allocate Using Default Rules</a></strong> page of the API reference. 
 
-### Example
+### Allocate Using Default Rules Example
 
 The example shows a request to allocate three consignments via default rules. 
 

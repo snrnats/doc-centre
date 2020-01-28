@@ -51,7 +51,7 @@ The **Delivery Options** endpoint returns an array of `{DeliveryOptions}` object
 > <span class="note-header">Note:</span>
 >  For full reference information on the <strong>Delivery Options</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/DeliveryOptions">Delivery Options</a></strong> page of the API reference.
 
-### Example
+### Get Delivery Options Example
 
 The example shows a request to get delivery options for a fairly standard consignment. The API has returned two delivery options, both for Carrier X: one with an `{estimatedDeliveryDate}` of _2019-06-19_ and one with an `{estimatedDeliveryDate}` of _2019-06-20_.
 

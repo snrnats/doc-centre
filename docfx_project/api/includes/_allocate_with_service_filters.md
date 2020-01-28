@@ -61,4 +61,4 @@ PUT https://api.electioapp.com/allocation/allocateConsignmentsWithServiceFilters
 
 ### Example
 
-The example to the right shows a request to allocate three consignments to an outbound, drop-off carrier service.
+The example shows a request to allocate three consignments to an outbound, drop-off carrier service.

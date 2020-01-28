@@ -120,4 +120,4 @@ Once PRO has received the request and attempted to manifest the consignments, th
 
 ### Examples
 
-The example to the right shows a request to manifest three consignments. The response indicates that all three consignments were successfully manifested.
+The example shows a request to manifest three consignments. The response indicates that all three consignments were successfully manifested.

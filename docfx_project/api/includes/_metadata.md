@@ -12,7 +12,7 @@ Metadata values can be stored in the following fields:
 
 Each metadata object can contain multiple data items, but can only contain one data item of each type. For example, a `MetaData` array containing a `StringValue` and a `BoolValue` would be valid, but a `MetaData` array containing two `StringValue` keys would not.
 
-### Example
+### Metadata Example
 
 The example shows a `MetaData` array that is being used to store a consignment's picking data. The `StringValue` property is being used to record the name of the picker, and the `DateTimeValue` is being used to record the date and time that the consignment was picked.
 

@@ -30,7 +30,7 @@ The structure of the **Update Consignment** request is identical to that of the 
   For full reference information on the <strong>Update Consignment</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/UpdateConsignment">Update Consignment</a></strong> page of the API reference.
 </aside>
 
-### Example
+### Update Consignments Example
 
 The example shows an  **Update Consignment** request for a single shipment that has a `{ConsignmentReference}` of _EC-000-087-01A_.  
 

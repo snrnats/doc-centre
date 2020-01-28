@@ -21,7 +21,7 @@ The **Allocate With Quote** endpoint takes the `{consignmentReference}` of the c
 > <span class="note-header">Note:</span>
 >  For full reference information on the <strong>Allocate With Quote</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/AllocateWithQuote">Allocate With Quote</a></strong> page of the API reference.
 
-### Example
+### Allocate With Quote Example
 
 The example shows a request to allocate a consignment with a `{consignmentReference}` of _EC-000-05B-N40_ to the carrier service associated with a quote that has the `{quoteReference}` _112236d5-4460-492f-a6bd-aa3f00f62dfb_.
 

@@ -49,7 +49,7 @@ To edit an existing order, use the **[Update Orders](https://docs.electioapp.com
 > <span class="note-header">More Information:</span>
 >  For full reference information on the <strong>Create Consignment</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/CreateConsignment">Create Consignment</a></strong> page of the API reference.
 
-### Examples
+###  Create Consignments Example
 
 These examples show the creation of a fairly standard consignment. In this case, we have an outbound consignment comprising a single package with a single item inside it.
 

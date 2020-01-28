@@ -93,6 +93,7 @@ a {
 
 article a{
     text-decoration: underline;
+    font-weight: bold;
 }
 
 code {
@@ -377,14 +378,11 @@ ul.level1 {
 }
 
 .sidefilter {
-    background-color: #f8f8f8;
+    background-color: #fff;
+    border-left: none;
     border-top: none;
-    border-left: 1px solid #b7b7b7;
-    border-bottom: 1px solid #b7b7b7;
-    border-right: 1px solid #b7b7b7;        
-    z-index: 1000;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;    
+    border-bottom: none;
+    border-right: 1px solid #e7e7e7;
 }
 
 .toc-filter {
@@ -572,4 +570,49 @@ table.flowTable tr td pre  {
 table.flowTable tr th  {
     background-color: #fafafa;
     padding: 10px;
+}
+
+/*Menu Buttons*/
+
+div.button1{
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.15em solid #404040;
+    margin:0 0.5em 1em 0.5em;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#404040;
+    text-align:center;
+    transition: all 0.2s;
+    width: 20%;
+    max-height: 130px;
+    }
+    div.button1:hover{
+    color:#ff055e;
+    background-color:#FFFFFF;
+    }
+    @media all and (max-width:30em){
+     div.button1{
+     display:block;
+     margin:0.4em auto;
+     }
+    }
+
+div.button-container, div.header-container {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+div.header-container {
+    padding: 30px 0;
+}
+
+h1#big-header{
+    font-size: 5em;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }

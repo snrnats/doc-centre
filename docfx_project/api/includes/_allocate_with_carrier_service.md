@@ -22,7 +22,7 @@ If PRO is unable to allocate the consignment to the specified carrier service, i
 > <span class="note-header">Note:</span>
 >  For full reference information on the <strong>Allocate With Carrier Service</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/AllocateWithCarrierService">Allocate With Carrier Service</a></strong> page of the API reference. 
 
-### Example
+### Allocate With Carrier Service Example
 
 The example shows a request to allocate three consignments to a carrier service with an `{MpdCarrierServiceReference}` of _Example-Carrier-Service_ .
 

@@ -25,7 +25,7 @@ The `{mpdCarrierServiceGroupReference}` is a unique identifier for each carrier 
 > For full reference information on the <strong>Allocate Consignment With Service Group</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/AllocateConsignmentWithServiceGroup">Allocate Consignment With Service Group</a></strong> page of the API reference. 
 
 
-### Example
+### Allocate With Service Group Example
 
 The example shows a request to allocate a consignment with a `{consignmentReference}` of _EC-000-05B-MMA_ to a carrier service within a group named `valuableGoods`.
 

@@ -37,6 +37,6 @@ The **Get Labels** endpoint takes a `{consignmentReference}` as a path parameter
 
 ### Examples
 
-The example to the right shows a request to get labels for a consignment with a `{consignmentReference}` of _EC-000-05A-Z6S_. The file data in the response has been truncated for clarity.
+The example shows a request to get labels for a consignment with a `{consignmentReference}` of _EC-000-05A-Z6S_. The file data in the response has been truncated for clarity.
 
 You would next need to decode the file's Base64 in order to view the label itself. If you are unsure how to do so, see the **[MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding)** for more information.

@@ -31,7 +31,7 @@ The structure of the **Update Order** request is identical to that of the **Crea
   For full reference information on the <strong>Update Order</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/UpdateOrder">Update Order</a></strong> page of the API reference.
 </aside>
 
-### Example
+### Update Orders Example
 
 The example shows an  **Update Order** request for a single shipment that has a `{OrderReference}` of _EC-000-087-01A_.  
 

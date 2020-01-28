@@ -18,7 +18,7 @@ Once it has received the **Select Delivery Option as an Order** request, PRO use
 > <span class="note-header">Note:</span>
 >  For full reference information on the <strong>Select Delivery Option as an Order</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/SelectDeliveryOptionasanOrder">Select Delivery Option as an Order</a></strong> page of the API reference.
 
-### Example
+### Select Option As Order Example
 
 The example shows a request to select a delivery option that has a `{Reference}` of _EDO-000-6DX-6XP_ as an order. PRO takes that delivery option's details and creates an order with an `{orderReference}` of _EO-000-002-0TT_.
 
