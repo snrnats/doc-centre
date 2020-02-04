@@ -1,8 +1,8 @@
 # Allocate Using Default Rules
 
-Allocates the specified consignments using your default rules
-
 `PUT https://api.electioapp.com/allocation/allocate`
+
+Allocates one or more consignments to the cheapest eligible carrier service.
 
 ## Request
 
@@ -133,6 +133,19 @@ Allocates the specified consignments using your default rules
 [!include[404Content](../includes/404Content.md)]
 
 </div>
+
+</div>
+
+## More Information
+
+The **Allocate Using Default Rules** endpoint uses Carrier Service Rules to determine which carrier services are eligible for a particular consignment. Carrier Service Rules enable you to configure business rules - such as physical package size, consignment value, and geographical availability - against individual carrier services. You can configure them via the  <a href="https://www.electioapp.com/Configuration/EditCarrierService/acceptanceTestCarrier_f8fe"><strong>Manage Carrier Service Rules</strong></a> page of the PRO UI. 
+
+> <span class="note-header">Note:</span>
+> For more information on configuring allocation rules, see the _Configure Allocation Rules_ section of the PRO Admin Portal User Guide.
+
+The **Allocate Using Default Rules** endpoint can be used to allocate multiple consignments simultaneously. The request body can contain an array of one or more `{consignmentReference}`s to be allocated. 
+
+Once the request is received, SortedPRO takes each consignment in turn and allocates it to the cheapest eligible carrier, based on your default rules. It then returns an array of Allocation Summaries, one for each allocated consignment. 
 
 <!-- Include for tab and copy scripts. DO NOT DELETE THE BELOW -->
 

@@ -1,6 +1,5 @@
 - name: Reports
-  homepage: reports/index.md
-- name: API Call Flows
-  href: api/flows/
-  homepage: api/flows/flows.md
+  href: reports/index.md
+- name: API Help
+  href: api/intro.md
 

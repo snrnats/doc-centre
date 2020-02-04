@@ -1,8 +1,8 @@
 # Allocate With Quote
 
-Allocates the consignment with the specified quote
-
 `PUT https://api.electioapp.com/allocation/{consignmentReference}/allocatewithquote/{quoteReference}`
+
+Allocates an individual consignment to the carrier service returned by the supplied quote. 
 
 ## Request
 
@@ -133,6 +133,14 @@ Allocates the consignment with the specified quote
 [!include[404Content](../includes/404Content.md)]
 
 </div>
+
+</div>
+
+## More Information
+
+The **Allocate With Quote** endpoint takes the `{consignmentReference}` of the consignment you want to allocate and the `{quoteReference}` of a particular quote. Once the request is received PRO attempts to allocate the consignment to the carrier service specified in the quote, and returns an Allocation Summary.
+
+You can get quote details via SortedPRO's Quotes API. For more information on PRO's quote endpoints (<strong><a href="https://docs.electioapp.com/#/api/GetQuotes">Get Quotes</a></strong>, <strong><a href="https://docs.electioapp.com/#/api/GetQuotesbyConsignmentReference">Get Quotes by Consignment Reference</a></strong>, and <strong><a href="https://docs.electioapp.com/#/api/GetServiceGroupQuotes">Get Service Group Quotes</a></strong>), see the API reference.
 
 <!-- Include for tab and copy scripts. DO NOT DELETE THE BELOW -->
 

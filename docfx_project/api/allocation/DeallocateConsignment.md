@@ -1,8 +1,8 @@
 # Deallocate Consignment
 
-Deallocates the specified consignment. Note: the consignment must be in an allocated state for this to be successful.
-
 `PUT https://api.electioapp.com/consignments/{consignmentReference}/deallocate`
+
+Deallocates the specified consignment.
 
 ## Request
 
@@ -133,6 +133,12 @@ Deallocates the specified consignment. Note: the consignment must be in an alloc
 [!include[404Content](../includes/404Content.md)]
 
 </div>
+
+</div>
+
+## More Information
+
+The **Deallocate Consignment** endpoint changes a consignment's `ConsignmentStatus` from _Allocated_ to _Unallocated_. It does not have any effect on unallocated consignments.
 
 <!-- Include for tab and copy scripts. DO NOT DELETE THE BELOW -->
 

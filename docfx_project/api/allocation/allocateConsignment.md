@@ -1,8 +1,8 @@
 # Allocate Consignment
 
-Allocates the specified consignment using default rules
-
 `PUT https://api.electioapp.com/allocation/{consignmentReference}/allocatewithcheapestquote`
+
+Allocates a single consignment to the cheapest eligible carrier service.
 
 ## Request
 
@@ -133,6 +133,15 @@ Allocates the specified consignment using default rules
 [!include[404Content](../includes/404Content.md)]
 
 </div>
+
+</div>
+
+## More Information
+
+The **Allocate Consignment** endpoint uses Carrier Service Rules to determine which carrier services are eligible for a particular consignment. Carrier Service Rules enable you to configure business rules - such as physical package size, consignment value, and geographical availability - against individual carrier services. You can configure them via the  <a href="https://www.electioapp.com/Configuration/EditCarrierService/acceptanceTestCarrier_f8fe"><strong>Manage Carrier Service Rules</strong></a> page of the PRO UI. 
+
+> <span class="note-header">Note:</span>
+> For more information on configuring allocation rules, see the _Configure Allocation Rules_ section of the PRO Admin Portal User Guide.
 
 <!-- Include for tab and copy scripts. DO NOT DELETE THE BELOW -->
 

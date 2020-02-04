@@ -96,6 +96,10 @@ article a{
     font-weight: bold;
 }
 
+.highlight {
+    background-color: yellow;
+}
+
 code {
     font-size: 16px;
     color: #261c4c;

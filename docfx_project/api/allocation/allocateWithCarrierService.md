@@ -1,8 +1,8 @@
 # Allocate With Carrier Service
 
-Allocates the specified consignments with the specified carrier service
-
 `PUT https://api.electioapp.com/allocation/allocatewithcarrierservice`
+
+Allocates one or more consignments to the specified carrier service.
 
 ## Request
 
@@ -133,6 +133,16 @@ Allocates the specified consignments with the specified carrier service
 [!include[404Content](../includes/404Content.md)]
 
 </div>
+
+</div>
+
+## More Information
+
+The **Allocate With Carrier Service** request body contains an array of one or more `{consignmentReference}`s to be allocated and the `{MpdCarrierServiceReference}` of the carrier service that they should be allocated to. 
+
+Once the request is received, SortedPRO attempts to allocate the consignments to the specified carrier service. It then returns an array of Allocation Summaries, one for each allocated consignment. 
+
+If PRO is unable to allocate the consignment to the specified carrier service, it puts the consignment into a state of _Allocation Failed_ and takes no further action. For information on dealing with failed allocations, see the _Manage NOT SHIPPED Consignments_ section of the PRO UI User Manual.
 
 <!-- Include for tab and copy scripts. DO NOT DELETE THE BELOW -->
 
