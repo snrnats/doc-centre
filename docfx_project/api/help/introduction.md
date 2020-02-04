@@ -65,4 +65,6 @@ You should include an `electio-api-version` header specifying the API version to
 
 </div>   
 
-[!include[scripts](../includes/scripts.md)]
+<script src="../../scripts/requesttabs.js"></script>
+<script src="../../scripts/responsetabs.js"></script>
+<script src="../../scripts/copy.js"></script>

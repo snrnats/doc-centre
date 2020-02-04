@@ -1,8 +1,8 @@
 # Quotes Flow
 
 <p>
-   <a href="../../images/Flow1.png" target="_blank" >
-      <img src="../../images/Flow1.png" class="noborder"/>
+   <a href="../../../images/Flow1.png" target="_blank" >
+      <img src="../../../images/Flow1.png" class="noborder"/>
    </a>
 </p>
 
@@ -28,30 +28,30 @@ This section gives more detail on each step of the flow and provides worked exam
 
 ## Step 1: Creating Consignments
 
-[!include[_create_consignments](../includes/_create_consignments.md)]
+[!include[_create_consignments](../../includes/_create_consignments.md)]
 
 ---
 
 ## Step 2: Getting Quotes by Consignment Reference
 
-[!include[_get_quotes_by_con_ref](../includes/_get_quotes_by_con_ref.md)]
+[!include[_get_quotes_by_con_ref](../../includes/_get_quotes_by_con_ref.md)]
 
 ---
 
 ## Step 3: Selecting a Quote
 
-[!include[_allocate_with_quote](../includes/_allocate_with_quote.md)]
+[!include[_allocate_with_quote](../../includes/_allocate_with_quote.md)]
 
 ---
 
 ## Step 4: Getting Consignment Labels
 
-[!include[_get_labels_in_format](../includes/_get_labels_in_format.md)]
+[!include[_get_labels_in_format](../../includes/_get_labels_in_format.md)]
 
 ---
 
 ## Step 5: Manifesting a Consignment
 
-[!include[_manifest_consignments_from_query](../includes/_manifest_consignments_from_query.md)]
+[!include[_manifest_consignments_from_query](../../includes/_manifest_consignments_from_query.md)]
 
-[!include[scripts](../includes/scripts.md)]
+[!include[scripts](../../includes/scripts.md)]
