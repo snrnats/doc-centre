@@ -19,21 +19,22 @@
   href: creating_new_consignments.md
 - name: Managing Existing Consignments
   href: managing_existing_consignments.md
+- name: Creating New Orders
+  href: creating_new_orders.md
+- name: Managing Existing Orders
+  href: managing_existing_orders.md  
+- name: Managing Quotes
+  href: managing_quotes.md
+- name: Selecting Delivery and Pickup Options
+  href: selecting_delivery_and_pickup_options.md         
 - name: Allocating Consignments to Carriers
   href: allocating_consignments_to_carriers.md
 - name: Getting Labels
   href: getting_labels.md
+- name: Getting Customs Docs and Invoices
+  href: getting_customs_docs_and_invoices.md  
 - name: Manifesting Consignments
   href: manifesting_consignments.md
-- name: Selecting Delivery and Pickup Options
-  href: selecting_delivery_and_pickup_options.md
-- name: Creating New Orders
-  href: creating_new_orders.md
-- name: Managing Existing Orders
-  href: managing_existing_orders.md
 - name: Tracking Consignments
   href: tracking_consignments.md
-- name: Getting Customs Docs and Invoices
-  href: getting_customs_docs_and_invoices.md
-- name: Managing Quotes
-  href: managing_quotes.md            
+       
