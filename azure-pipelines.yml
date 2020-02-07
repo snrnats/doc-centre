@@ -21,7 +21,7 @@ stages:
           curl -L $(docfx_url) --output docfx.zip
         displayName: 'Get DocFX'
       - script: |
-          unzip docfx.zip -d docfx
+          unzip -o docfx.zip -d ./docfx
         displayName: 'Unzip'
       - script: |
           mono ./docfx/docfx.exe ./docfx_project/docfx.json
