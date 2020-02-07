@@ -62,5 +62,5 @@ stages:
         inputs:
           authToken: $(NETLIFY_ACCESS_TOKEN)
           siteId: $(NETLIFY_SITE_ID)
-          sourceDirectory: '$(System.ArtifactsDirectory)'
+          sourceDirectory: '$(System.ArtifactsDirectory)/docfx_project/_site/'
           isValidationOnly: false
