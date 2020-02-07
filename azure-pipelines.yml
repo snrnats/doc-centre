@@ -62,5 +62,5 @@ stages:
         inputs:
           authToken: $(NETLIFY_ACCESS_TOKEN)
           siteId: $(NETLIFY_SITE_ID)
-          sourceDirectory: '$(System.ArtifactsDirectory)/drop/web/public'
+          sourceDirectory: '$(System.ArtifactsDirectory)'
           isValidationOnly: false
