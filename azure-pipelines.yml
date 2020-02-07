@@ -1,0 +1,26 @@
+trigger:
+  branches:
+    include:
+    - develop/*
+
+variables:
+  - name: pool
+    value: linux-agents-standard
+  - group: DocFXSettings 
+
+stages:
+  - stage: Build
+    jobs:
+    - job: "BuildAndPublish"
+      pool:
+        name: $(pool)
+      steps:
+      - script: |
+          curl -L $(docfx_url) --output docfx.zip
+        displayName: 'Get DocFX'
+      - script: |
+          unzip docfx.zip -d docfx
+        displayName: 'Unzip'
+      - script: |
+          mono ./docfx/docfx.exe ./docfx_project/docfx.json
+        displayName: 'Mono Build'
