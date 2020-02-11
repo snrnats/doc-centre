@@ -1,8 +1,8 @@
 # Classic Flow
 
 <p>
-   <a href="../../images/Flow1.png" target="_blank" >
-      <img src="../../images/Flow1.png" class="noborder"/>
+   <a href="../../../images/Flow1.png" target="_blank" >
+      <img src="../../../images/Flow1.png" class="noborder"/>
    </a>
 </p>
 
@@ -27,46 +27,46 @@ This section gives more detail on each step of the flow and provides worked exam
 
 ## Step 1: Creating Consignments
 
-[!include[_create_consignments](../includes/_create_consignments.md)]
+[!include[_create_consignments](../../includes/_create_consignments.md)]
 
 ---
 
 ## Step 2: Allocating Consignments
 
-[!include[_allocating](../includes/_allocating.md)]
+[!include[_allocating](../../includes/_allocating.md)]
 
 ---
 
 ## Step 2a: Allocating using Default Rules
 
-[!include[_allocate_using_default_rules](../includes/_allocate_using_default_rules.md)]
+[!include[_allocate_using_default_rules](../../includes/_allocate_using_default_rules.md)]
 
 ---
 
 ## Step 2b: Allocating from a Service Group
 
-[!include[_allocate_with_service_group](../includes/_allocate_with_service_group.md)]
+[!include[_allocate_with_service_group](../../includes/_allocate_with_service_group.md)]
 
 ---
 
 ## Step 2c: Allocating to a Specific Carrier Service
 
-[!include[_allocate_with_carrier_service](../includes/_allocate_with_carrier_service.md)]
+[!include[_allocate_with_carrier_service](../../includes/_allocate_with_carrier_service.md)]
 
 ---
 
 ## Step 3: Getting Package Labels
 
-[!include[_get_labels_in_format](../includes/_get_labels_in_format.md)]
+[!include[_get_labels_in_format](../../includes/_get_labels_in_format.md)]
 
 ---
 
 ## Step 4: Manifesting a Consignment
 
-[!include[_manifest_consignments_from_query](../includes/_manifest_consignments_from_query.md)]
+[!include[_manifest_consignments_from_query](../../includes/_manifest_consignments_from_query.md)]
 
 ## Next Steps
 
 And we're done! Read on to learn how to allocate consignments based on options presented to the customer at point of purchase, and deal with orders that may require multiple consignments to fulfil. 
 
-[!include[scripts](../includes/scripts.md)]
+[!include[scripts](../../includes/scripts.md)]

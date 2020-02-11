@@ -1,0 +1,14 @@
+# Managing Quotes
+
+Get Quotes
+
+Get Quotes by Consignment Reference
+
+Get Service Group Quotes
+
+Allocate With Quote
+
+
+<script src="../../scripts/requesttabs.js"></script>
+<script src="../../scripts/responsetabs.js"></script>
+<script src="../../scripts/copy.js"></script>

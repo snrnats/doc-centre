@@ -16,11 +16,11 @@ To use your API key, include it in an `ocp-apim-subscription-key` header when ma
 </div>
 <div id="apikeyexample" class="staticTabContent">
 
-   ```
-   ocp-apim-subscription-key: [qwerrtyuiioop0987654321]
-   ```
+```
+ocp-apim-subscription-key: [qwerrtyuiioop0987654321]
+```
 
-</div>   
+</div>
 
 ## Specifying Request / Response Format
 
@@ -48,6 +48,7 @@ accept: application/json
 content-type: application/xml
 accept: application/xml
 ```
+
 </div>
 
 ## Specifying API version
@@ -59,10 +60,11 @@ You should include an `electio-api-version` header specifying the API version to
 </div>
 <div id="apikeyexample" class="staticTabContent">
 
-   ```
-   electio-api-version: 1.1
-   ```
+```
+electio-api-version: 1.1
+```
 
-</div>   
+</div>
 
-[!include[scripts](../includes/scripts.md)]
+<script src="../../scripts/requesttabs.js"></script>
+<script src="../../scripts/copy.js"></script>
