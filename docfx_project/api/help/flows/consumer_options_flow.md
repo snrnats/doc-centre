@@ -1,8 +1,8 @@
 # Consumer Options Flow
 
 <p>
-   <a href="../../images/Flow2.png" target="_blank" >
-      <img src="../../images/Flow2.png" class="noborder"/>
+   <a href="../../../images/Flow2.png" target="_blank" >
+      <img src="../../../images/Flow2.png" class="noborder"/>
    </a>
 </p>
 
@@ -27,28 +27,28 @@ This section gives more detail on each step of the flow and provides worked exam
 
 ## Step 1: Getting Delivery Options
 
-[!include[_getting_delivery_options](../includes/_getting_delivery_options.md)]
+[!include[_getting_delivery_options](../../includes/_getting_delivery_options.md)]
 
 ---
 
 ## Step 2: Selecting a Delivery Option
 
-[!include[_select_option](../includes/_select_option.md)]
+[!include[_select_option](../../includes/_select_option.md)]
 
 ---
 
 ## Step 3: Getting a Package Label
 
-[!include[_get_labels_in_format](../includes/_get_labels_in_format.md)]
+[!include[_get_labels_in_format](../../includes/_get_labels_in_format.md)]
 
 ---
 
 ## Step 4: Manifesting the Consignment
 
-[!include[_manifest_consignments_from_query](../includes/_manifest_consignments_from_query.md)]
+[!include[_manifest_consignments_from_query](../../includes/_manifest_consignments_from_query.md)]
 
 ## Next Steps
 
 The next section explains a similar call flow that enables you to offer pickup options (aka click-and-collect) rather than home delivery timeslots.
 
-[!include[scripts](../includes/scripts.md)]
+[!include[scripts](../../includes/scripts.md)]

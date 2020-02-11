@@ -1,0 +1,14 @@
+steps:
+- task: CopyFiles@2
+  displayName: 'Copy output directory'
+  inputs:
+    sourceFolder: '$(System.DefaultWorkingDirectory)'
+    contents: |
+      docfx_project/_site/**
+    targetFolder: '$(Build.ArtifactStagingDirectory)'
+    overWrite: true
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish'
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: 'drop'

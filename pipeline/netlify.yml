@@ -1,0 +1,7 @@
+steps:
+- task: Bash@3
+  displayName: 'Install Netlify CLI'
+  inputs:
+    targetType: inline
+    script: |
+      sudo npm install netlify-cli@$(netlify-cli-version) -g

@@ -3,8 +3,8 @@
     "content": [
       {
         "files": [
-          "api/flows/**.yml",
-          "api/flows/**.md"
+          "api/help/**.yml",
+          "api/help/**.md"
         ]
       },
       {

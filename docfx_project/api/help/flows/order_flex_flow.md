@@ -1,8 +1,8 @@
 # Order Flex Flow
 
 <p>
-   <a href="../../images/Flow4.png" target="_blank" >
-      <img src="../../images/Flow4.png" class="noborder"/>
+   <a href="../../../images/Flow4.png" target="_blank" >
+      <img src="../../../images/Flow4.png" class="noborder"/>
    </a>
 </p>
 
@@ -28,19 +28,19 @@ This section gives more detail on each step of the flow and provides worked exam
 
 ## Step 1: Creating the Order
 
-[!include[_create_orders](../includes/_create_orders.md)]
+[!include[_create_orders](../../includes/_create_orders.md)]
 
 ---
 
 ## Step 2: Packing the Order
 
-[!include[_pack_orders](../includes/_pack_orders.md)]
+[!include[_pack_orders](../../includes/_pack_orders.md)]
 
 ---
 
 ## Step 3: Allocating the Consignment
 
-[!include[_allocating](../includes/_allocating.md)]
+[!include[_allocating](../../includes/_allocating.md)]
 
 
 You'll need to allocate all of the consignments packed from your order. Bear in mind that <strong><a href="https://docs.electioapp.com/#/api/AllocateUsingDefaultRules">Allocate Using Default Rules</a></strong> and <strong><a href="https://docs.electioapp.com/#/api/AllocateWithCarrierService">Allocate With Carrier Service</a></strong> enable you to allocate multiple consignments at once, but you can only allocate one consignment at a time via <strong><a href="https://docs.electioapp.com/#/api/AllocateConsignmentWithServiceGroup">Allocate Consignment With Service Group</a></strong>. If you allocate via <strong>Allocate Consignment With Service Group</strong> you'll need to make one API call per consignment on the order.
@@ -49,25 +49,25 @@ You'll need to allocate all of the consignments packed from your order. Bear in 
 
 ## Step 3a: Allocating using Default Rules
 
-[!include[_allocate_using_default_rules](../includes/_allocate_using_default_rules.md)]
+[!include[_allocate_using_default_rules](../../includes/_allocate_using_default_rules.md)]
 
 ---
 
 ## Step 3b: Allocating from a Service Group
 
-[!include[_allocate_with_service_group](../includes/_allocate_with_service_group.md)]
+[!include[_allocate_with_service_group](../../includes/_allocate_with_service_group.md)]
 
 ---
 
 ## Step 3c: Allocating to a Specific Carrier Service
 
-[!include[_allocate_with_carrier_service](../includes/_allocate_with_carrier_service.md)]
+[!include[_allocate_with_carrier_service](../../includes/_allocate_with_carrier_service.md)]
 
 ---
 
 ## Step 4: Getting Package Labels
 
-[!include[_get_labels_in_format](../includes/_get_labels_in_format.md)]
+[!include[_get_labels_in_format](../../includes/_get_labels_in_format.md)]
 
 > <span class="note-header">Note:</span>
 > You'll need to make one <strong>Get Labels</strong> call per consignment on the order.
@@ -76,7 +76,7 @@ You'll need to allocate all of the consignments packed from your order. Bear in 
 
 ## Step 5: Manifesting a Consignment
 
-[!include[_manifest_consignments_from_query](../includes/_manifest_consignments_from_query.md)]
+[!include[_manifest_consignments_from_query](../../includes/_manifest_consignments_from_query.md)]
 
 > <span class="note-header">Note:</span>
 > You'll need to manifest all the consignments on the order.
@@ -85,4 +85,4 @@ You'll need to allocate all of the consignments packed from your order. Bear in 
 
 Finished! The next section explains a similar process, whereby the order is generated from delivery options that the customer selects rather than created up front.
 
-[!include[scripts](../includes/scripts.md)]
+[!include[scripts](../../includes/scripts.md)]
