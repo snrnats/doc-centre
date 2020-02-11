@@ -22,7 +22,7 @@ stages:
       - template: pipeline/docfx.yml
       - template: pipeline/publish.yml
   - stage: Deploy
-    condition: eq(variables['Build.SourceBranch'], $(deploy-branch))
+    condition: eq(variables['Build.SourceBranch'], '$(deploy-branch)')
     jobs:
     - job: Deploy
       pool:
