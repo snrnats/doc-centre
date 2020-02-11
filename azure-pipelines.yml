@@ -8,6 +8,8 @@ variables:
     value: linux-agents-standard
   - name: netlify-cli-version
     value: '2.12.0'
+  - name: deploy-branch
+    value: refs/heads/develop/pipeline
   - group: DocFXSettings 
 
 stages:
@@ -17,50 +19,14 @@ stages:
       pool:
         name: $(pool)
       steps:
-      - script: |
-          curl -L $(docfx_url) --output docfx.zip
-        displayName: 'Get DocFX'
-      - script: |
-          unzip -o docfx.zip -d ./docfx
-        displayName: 'Unzip'
-      - script: |
-          mono ./docfx/docfx.exe ./docfx_project/docfx.json
-        displayName: 'Mono Build'
-      - task: CopyFiles@2
-        displayName: 'Copy output directory'
-        inputs:
-          sourceFolder: '$(System.DefaultWorkingDirectory)'
-          contents: |
-            docfx_project/_site/**
-          targetFolder: '$(Build.ArtifactStagingDirectory)'
-          overWrite: true
-      - task: PublishBuildArtifacts@1
-        displayName: 'Publish'
-        inputs:
-          pathtoPublish: '$(Build.ArtifactStagingDirectory)'
-          artifactName: 'drop'
+      - template: pipeline/docfx.yml
+      - template: pipeline/publish.yml
   - stage: Deploy
-    condition: eq(variables['Build.SourceBranch'], 'refs/heads/develop/pipeline')
+    condition: eq(variables['Build.SourceBranch'], $(deploy-branch))
     jobs:
     - job: Deploy
       pool:
         name: $(pool)
       steps:
-      - task: Bash@3
-        displayName: 'Install Netlify CLI'
-        inputs:
-          targetType: inline
-          script: |
-            sudo npm install netlify-cli@$(netlify-cli-version) -g
-      - task: DownloadBuildArtifacts@0
-        inputs:
-          buildType: 'current'
-          artifactName: drop
-          downloadPath: '$(System.ArtifactsDirectory)'
-      - task: deploy@1
-        displayName: 'Deploy to Netlify'
-        inputs:
-          authToken: $(NETLIFY_ACCESS_TOKEN)
-          siteId: $(NETLIFY_SITE_ID)
-          sourceDirectory: '$(System.ArtifactsDirectory)/drop/docfx_project/_site/'
-          isValidationOnly: false
+      - template: pipeline/netlify.yml
+      - template: pipeline/deploy.yml
