@@ -22,7 +22,7 @@ stages:
       - template: pipeline/docfx.yml
       - template: pipeline/publish.yml
   - stage: Deploy
-    condition: eq(variables['Build.SourceBranch'], 'refs/heads/master')
+    condition: eq(variables['Build.SourceBranch'], 'refs/heads/develop/internal')
     jobs:
     - job: Deploy
       pool:
