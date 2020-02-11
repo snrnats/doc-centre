@@ -176,9 +176,9 @@ You can also generate consignments from pickup options. The process is the same 
 
 > <span class="note-header">More Information:</span>
 >
-> * For a full user guide on working with delivery and pickup options, see the  <a href="selecting_delivery_and_pickup_options.html">Selecting Delivery and Pickup Options</a> page.
+> * For a full user guide on working with delivery and pickup options, see the  <a href="/api/help/selecting_delivery_and_pickup_options.html">Selecting Delivery and Pickup Options</a> page.
 > * For reference information on the Delivery Options and Pickup Options APIs, see the <a href="https://docs.electioapp.com/#/api/DeliveryOptions">API reference</a>.
-> * For worked examples showing consignments being created from delivery options, see the <a href="flows/consumer_options_flow.html">Consumer Options</a> and <a href="flows/consumer_options_pickup_flow.html">Consumer Options Pickup</a> call flow documents.
+> * For worked examples showing consignments being created from delivery options, see the <a href="/api/help/flows/consumer_options_flow.html">Consumer Options</a> and <a href="/api/help/flows/consumer_options_pickup_flow.html">Consumer Options Pickup</a> call flow documents.
 
 ## Creating Consignments from Orders
 
@@ -198,15 +198,15 @@ To create a consignment in this way, you'll need to make two API calls:
 
 > <span class="note-header">More Information:</span>
 >
-> * For a full user guide on working with orders, see the <a href="creating_new_orders.html">Creating New Orders</a> and <a href="managing_existing_orders.html">Managing Existing Orders</a> page.
+> * For a full user guide on working with orders, see the <a href="/api/help/creating_new_orders.html">Creating New Orders</a> and <a href="/api/help/managing_existing_orders.html">Managing Existing Orders</a> page.
 > * For reference information on the Orders API, see the <a href="https://docs.electioapp.com/#/api/CreateOrder">API reference</a>.
-> * For worked examples showing consignments being created from orders, see the <a href="flows/order_flex_flow.html">Order Flex</a> and <a href="flows/consumer_options_flex_flow.html">Consumer Options Flex</a> call flow documents.
+> * For worked examples showing consignments being created from orders, see the <a href="/api/help/flows/order_flex_flow.html">Order Flex</a> and <a href="/api/help/flows/consumer_options_flex_flow.html">Consumer Options Flex</a> call flow documents.
 
 ## Next Steps
 
-* Learn how to work with existing consignments at the [Managing Existing Consignments](managing_existing_consignments.html) page
-* Learn how to allocate consignments at the [Allocating Consignments to Carriers](allocating_consignments_to_carriers.html) page.
-* Learn how to get and print delivery labels at the [Getting Labels](getting_labels.html) page
+* Learn how to work with existing consignments at the [Managing Existing Consignments](/api/help/managing_existing_consignments.html) page
+* Learn how to allocate consignments at the [Allocating Consignments to Carriers](/api/help/allocating_consignments_to_carriers.html) page.
+* Learn how to get and print delivery labels at the [Getting Labels](/api/help/getting_labels.html) page
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>
