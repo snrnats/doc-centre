@@ -9,7 +9,7 @@ variables:
   - name: netlify-cli-version
     value: '2.12.0'
   - name: deploy-branch
-    value: refs/heads/develop/pipeline
+    value: 'refs/heads/develop/pipeline'
   - group: DocFXSettings 
 
 stages:
