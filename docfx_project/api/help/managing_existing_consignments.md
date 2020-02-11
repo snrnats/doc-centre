@@ -211,11 +211,46 @@ To make a **Get Consignment Status** request, send a `GET` request to `https://a
 
 ### Searching For Consignments
 
-As well as endpoints that return data based on a `consignmentReference`, PRO also enables you to search for consignments that meet a particular set of criteria. PRO has two search endpoints:
+As well as endpoints that return data based on a `consignmentReference`, PRO also enables you to search for consignments that meet a particular set of criteria. PRO has two search endpoints, **Get Consignments References** and **Search Consignments**. 
 
-* 
+Both of these endpoints enable you to specify consignment parameters in your request, and return any consignments that meet those parameters. The difference between the two lies in what is returned: **Get Consignments References** returns only the `consignmentReference`s of any consignments that meet the criteria, while **Search Consignments** returns a summary of each matching consignment. **Search Consignments** also includes a paging feature that enables you to specify how many results you want PRO to return, and to skip over a specified number of results.
 
-Get Consignment References
+To call **Get Consignments References**, send a `GET` request to `https://api.electioapp.com/consignments/getConsignmentReferences?{property}={value}`, where `{property}` is the name of the consignment property you want to search on and `{value}` is its associated value. You can separate additional properties using the `&` operator. PRO then returns the `consignmentReferences` of any consignments that meet all the criteria that you specify.
+
+**Get Consignments References Example**
+
+The example below shows a request for all inbound consignments in an _Allocated_ state. PRO has returned two consignments.
+
+<div class="tab">
+    <button class="staticTabButton">Get Consignments References Request Example</button>
+    <div class="copybutton" onclick="CopyToClipboard('getConRefsRequest')">Click to Copy</div>
+</div>
+
+<div id="getConRefsRequest" class="staticTabContent" onclick="CopyToClipboard('getConRefsRequest')">
+
+```
+
+https://api.electioapp.com/consignments/getConsignmentReferences?State=Allocated&Direction=Inbound
+
+```
+</div>
+
+<div class="tab">
+    <button class="staticTabButton">Get Consignments References Response Example</button>
+    <div class="copybutton" onclick="CopyToClipboard('getConRefsResponse')">Click to Copy</div>
+</div>
+
+<div id="getConRefsResponse" class="staticTabContent" onclick="CopyToClipboard('getConRefsResponse')">
+
+```json
+
+[
+    "EC-000-05C-VQ4",
+    "EC-000-05C-VQ3"
+]
+
+```
+</div>
 
 Search Consignments
 
