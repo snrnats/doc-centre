@@ -1,3 +1,3 @@
-cd ..\..\Repos\doc-centre & set PATH=%PATH%;C:\docfx\ 
+cd ..\doc-centre & set PATH=%PATH%;C:\docfx\ 
 
 docfx docfx_project/docfx.json & docfx serve docfx_project/_site
