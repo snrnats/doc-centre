@@ -1,14 +1,8 @@
-# Managing Existing Consignments
-
-Once you've created your consignments, you'll probably want to keep an eye on them! This page explains how you can use PRO's APIs to retrieve consignment data and update or delete your consignments. 
-
----
-
-## Getting Consignment Data
+# Getting Consignment Data
 
 PRO offers several endpoints that return consignment data. Some of these endpoints return information on a specific consignment, while some are "search" endpoints that return the details of those consignments that meet a particular set of criteria.
 
-### Getting Data For a Specific Consignment
+## Getting Data For a Specific Consignment
 
 Perhaps the most straightforward way of getting PRO consignment data is to use the **Get Consignment** endpoint. This endpoint takes the `consignmentReference` of the consignment you want to view as a path parameter, and returns full details for the specified consignment. The information returned is structured in a broadly similar way to a **Create Consignment** request, but can also (where applicable) include additional information, including:
 
@@ -20,7 +14,7 @@ Perhaps the most straightforward way of getting PRO consignment data is to use t
 
 To call **Get Consignment**, sent a `GET` request to `https://api.electioapp.com/consignments/{consignmentReference}`.
 
-**Example Get Consignment Response**
+### Example Get Consignment Response
 
 The example below shows a simple **Get Consignment** request for an unallocated consignment that contains just package and address details. For an example of a full **Get Consignment** request, see the [Get Consignment](https://docs.electioapp.com/#/api/GetConsignment) API reference.
 
@@ -181,7 +175,7 @@ In addition to the **Get Consignment** endpoint, PRO also offers the **Get Consi
 
 To call **Get Consignment With Metadata**, send a `GET` request to `https://api.electioapp.com/consignments/getconsignmentwithmetadata/{consignmentReference}`.
 
-### Checking a Consignment's Status
+## Checking a Consignment's Status
 
 If you only need to check a consignment's status, you could use the **Get Consignment Status** endpoint instead of **Get Consignment**. **Get Consignment Status** takes a `consignmentReference` as a path parameter, and returns only the consignment's current status and expected delivery date. Although **Get Consignment** returns both status and delivery date, it also returns a great deal of other information, which may not be useful if you simply want to check a consignment's progress.
 
@@ -209,11 +203,13 @@ To make a **Get Consignment Status** request, send a `GET` request to `https://a
 ```
 </div>
 
-### Searching For Consignments
+## Searching For Consignments
 
 As well as endpoints that return data based on a `consignmentReference`, PRO also enables you to search for consignments that meet a particular set of criteria. PRO has two search endpoints, **Get Consignments References** and **Search Consignments**. 
 
 Both of these endpoints enable you to specify consignment parameters in your request, and return any consignments that meet those parameters. The difference between the two lies in what is returned: **Get Consignments References** returns only the `consignmentReference`s of any consignments that meet the criteria, while **Search Consignments** returns a summary of each matching consignment. **Search Consignments** also includes a paging feature that enables you to specify how many results you want PRO to return, and to skip over a specified number of results. <span class="highlight">TECHNICALLY THE PAGESIZE AND STARTPAGE PROPERTIES ARE SUPPOSED TO ENABLE PAGING ACROSS BOTH OF THESE ENDPOINTS BUT I CAN'T GET THEM TO WORK AT ALL</span>
+
+### Using Get Consignments References
 
 To call **Get Consignments References**, send a `GET` request to `https://api.electioapp.com/consignments/getConsignmentReferences?{property}={value}`, where `{property}` is the name of the consignment property you want to search on and `{value}` is its associated value. You can separate additional properties using the `&` operator. PRO then returns the `consignmentReferences` of any consignments that meet all the criteria that you specify.
 
@@ -221,7 +217,7 @@ To call **Get Consignments References**, send a `GET` request to `https://api.el
 >
 > For a full list of search properties accepted by the **Get Consignments References** endpoint, see the <a href="https://docs.electioapp.com/#/api/GetConsignmentsReferences">API reference</a>
 
-**Get Consignments References Example**
+### Get Consignments References Example
 
 The example below shows a request for all inbound consignments in an _Allocated_ state. PRO has returned two consignments.
 
@@ -256,6 +252,7 @@ https://api.electioapp.com/consignments/getConsignmentReferences?State=Allocated
 ```
 </div>
 
+### Using Search Consignments
 
 To call **Search Consignments**, send a `GET` request to `https://api.electioapp.com/consignments/{take}/{skip}?{property}={value}`, where:
 
@@ -285,7 +282,7 @@ The **Search Consignments** endpoint returns a summary of each consignment that 
 >
 > For full reference information on the **Search Consignments** endpoint, see the <a href="https://docs.electioapp.com/#/api/SearchConsignments">API reference</a>. 
 
-**Get Consignments References Example**
+### Search Consignments Example
 
 The example below shows a request for all inbound consignments in an _Allocated_ state, with a potential maximum of 100 results returned and none skipped. PRO has returned a summary of two consignments.
 
@@ -426,23 +423,6 @@ https://apis.electioapp.com/consignments/100/0/?State=Allocated&Direction=Inboun
 
 ```
 </div>
-
-## Updating Consignments
-
-Update Consignment
-
-Add Package
-
-Delete Package
-
-## Cancelling Consignments
-
-Cancel Consignment
-
-Cancel Consignments
-
-
-
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>

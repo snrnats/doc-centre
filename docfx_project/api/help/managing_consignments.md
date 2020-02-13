@@ -1,12 +1,5 @@
-# Managing Existing Orders
+# Managing Consignments
 
-Update Address on Order
-
-Add Address to 
-
-Get Order
-
-Update Order
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>

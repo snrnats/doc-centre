@@ -1,12 +1,6 @@
-# Managing Existing Orders
+# Packing Orders
 
-Update Address on Order
-
-Add Address to 
-
-Get Order
-
-Update Order
+Pack Order
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>

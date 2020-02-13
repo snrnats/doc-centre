@@ -1,12 +1,6 @@
-# Managing Existing Orders
+# Getting Pickup Options
 
-Update Address on Order
-
-Add Address to 
-
-Get Order
-
-Update Order
+Pickup Options
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>

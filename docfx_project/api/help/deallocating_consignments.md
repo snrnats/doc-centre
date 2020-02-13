@@ -1,12 +1,9 @@
-# Managing Existing Orders
+# Deallocating Consignments
 
-Update Address on Order
+Deallocate Consignment
 
-Add Address to 
+Deallocate Consignments
 
-Get Order
-
-Update Order
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>

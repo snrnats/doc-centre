@@ -1,12 +1,10 @@
-# Managing Existing Orders
+# Getting Delivery Options
 
-Update Address on Order
+Delivery Options
 
-Add Address to 
+Delivery Option Summary
 
-Get Order
-
-Update Order
+Get Existing Delivery Option
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>

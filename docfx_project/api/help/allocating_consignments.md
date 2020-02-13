@@ -1,12 +1,15 @@
-# Managing Existing Orders
+# Allocating Consignments
 
-Update Address on Order
+Allocate With Carrier Service
 
-Add Address to 
+Allocate With Service Group
 
-Get Order
+Allocate Consignment
 
-Update Order
+Allocate Using Default Rules
+
+Allocate With Quote
+
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>

@@ -1,12 +1,10 @@
-# Managing Existing Orders
+# Selecting Options
 
-Update Address on Order
+Select Option
 
-Add Address to 
+Reserve Pickup Option
 
-Get Order
-
-Update Order
+Select delivery option as an order
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>

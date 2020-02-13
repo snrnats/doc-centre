@@ -1,12 +1,10 @@
-# Managing Existing Orders
+# Viewing Available Carrier Services
 
-Update Address on Order
+Get available MPD carrier servs
 
-Add Address to 
+Get Carriers
 
-Get Order
-
-Update Order
+Get MPD Carrier Servs for Subscription
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>
