@@ -1,6 +1,8 @@
 # Getting Consignment Data
 
-PRO offers several endpoints that return consignment data. Some of these endpoints return information on a specific consignment, while some are "search" endpoints that return the details of those consignments that meet a particular set of criteria.
+PRO offers several endpoints that return consignment data. This page explains how to fetch data on an individual consignment, and how to search for consignments that meet a particular set of criteria.
+
+---
 
 ## Getting Data For a Specific Consignment
 
@@ -175,7 +177,7 @@ In addition to the **Get Consignment** endpoint, PRO also offers the **Get Consi
 
 To call **Get Consignment With Metadata**, send a `GET` request to `https://api.electioapp.com/consignments/getconsignmentwithmetadata/{consignmentReference}`.
 
-## Checking a Consignment's Status
+### Checking a Consignment's Status
 
 If you only need to check a consignment's status, you could use the **Get Consignment Status** endpoint instead of **Get Consignment**. **Get Consignment Status** takes a `consignmentReference` as a path parameter, and returns only the consignment's current status and expected delivery date. Although **Get Consignment** returns both status and delivery date, it also returns a great deal of other information, which may not be useful if you simply want to check a consignment's progress.
 
@@ -205,9 +207,11 @@ To make a **Get Consignment Status** request, send a `GET` request to `https://a
 
 ## Searching For Consignments
 
-As well as endpoints that return data based on a `consignmentReference`, PRO also enables you to search for consignments that meet a particular set of criteria. PRO has two search endpoints, **Get Consignments References** and **Search Consignments**. 
+As well as endpoints that return data based on a `consignmentReference`, PRO also enables you to search for consignments that meet a particular set of criteria. PRO has two search endpoints: **Get Consignments References** and **Search Consignments**. Both of these endpoints enable you to specify consignment parameters in your request, and return any consignments that meet those parameters. 
 
-Both of these endpoints enable you to specify consignment parameters in your request, and return any consignments that meet those parameters. The difference between the two lies in what is returned: **Get Consignments References** returns only the `consignmentReference`s of any consignments that meet the criteria, while **Search Consignments** returns a summary of each matching consignment. **Search Consignments** also includes a paging feature that enables you to specify how many results you want PRO to return, and to skip over a specified number of results. <span class="highlight">TECHNICALLY THE PAGESIZE AND STARTPAGE PROPERTIES ARE SUPPOSED TO ENABLE PAGING ACROSS BOTH OF THESE ENDPOINTS BUT I CAN'T GET THEM TO WORK AT ALL</span>
+The two search endpoints differ in their responses: **Get Consignments References** returns only the `consignmentReference`s of any consignments that meet the criteria, while **Search Consignments** returns a summary of each matching consignment. **Search Consignments** also includes a paging feature that enables you to specify how many results you want PRO to return, and to skip over a specified number of results. 
+
+<span class="highlight">TECHNICALLY THE PAGESIZE AND STARTPAGE PROPERTIES ARE SUPPOSED TO ENABLE PAGING ACROSS BOTH OF THESE ENDPOINTS BUT I CAN'T GET THEM TO WORK AT ALL</span>
 
 ### Using Get Consignments References
 
@@ -263,9 +267,12 @@ To call **Search Consignments**, send a `GET` request to `https://api.electioapp
 
 As with the **Get Consignments References** API, you can add additional search properties and values, as long as each property/value pair is separated by an `&` operator.
 
-The `{take}` and `{skip}` values can be used to drive paging functions in systems that present a list of consignments to the user. For example, suppose that you have 100 active consignments in an _Allocated_  state. A call to `GET https://api.electioapp.com/consignments/100/0?&State=Allocated` would return all of those consignments, as a `{take}` value of _100_ and a `{skip}` value of _0_ means that the API will return up to 100 results without skipping over any.
 
-However, suppose that you want to split the list up into two groups of 50 (for example, because you are using the data to populate a list in a system whose UI only enables you to display 50 results at any one time). In this case, you would populate the first page of results with a call to `GET https://api.electioapp.com/consignments/50/0?&State=Allocated` (max. 50 results, none skipped). If the user elects to view the second page, you would call `GET https://api.electioapp.com/consignments/50/50?&State=Allocated`. The API would again return 50 results, but would skip over the first 50 in the list (i.e. those results that were displayed on the first page) and instead return results 51-100. 
+> <span class="note-header">Note:</span>
+>
+> The `{take}` and `{skip}` values can be used to drive paging functions in systems that present a list of consignments to the user. For example, suppose that you have 100 active consignments in an _Allocated_  state. A call to `GET https://api.electioapp.com/consignments/100/0?&State=Allocated` would return all of those consignments, as a `{take}` value of _100_ and a `{skip}` value of _0_ means that the API will return up to 100 results without skipping over any.
+>
+> However, suppose that you want to split the list up into two groups of 50 (for example, because you are using the data to populate a list in a system whose UI only enables you to display 50 results at any one time). In this case, you would populate the first page of results with a call to `GET https://api.electioapp.com/consignments/50/0?&State=Allocated` (max. 50 results, none skipped). If the user elects to view the second page, you would call `GET https://api.electioapp.com/consignments/50/50?&State=Allocated`. The API would again return 50 results, but would skip over the first 50 in the list (i.e. those results that were displayed on the first page) and instead return results 51-100. 
 
 The **Search Consignments** endpoint returns a summary of each consignment that meets the request criteria. The summary object contains the following:
 
@@ -423,6 +430,12 @@ https://apis.electioapp.com/consignments/100/0/?State=Allocated&Direction=Inboun
 
 ```
 </div>
+
+## Next Steps
+
+* Learn how to allocate consignments at the [Allocating Consignments to Carriers](/api/help/allocating_consignments_to_carriers.html) page.
+* Learn how to get and print delivery labels at the [Getting Labels](/api/help/getting_labels.html) page.
+* Learn how to add consignments to a carrier manifest at the [Manifesting Consignments](/api/help/manifesting_consignments.html) page.
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>
