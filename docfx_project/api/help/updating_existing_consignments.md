@@ -240,6 +240,14 @@ For an example of a more detailed **Add Package** request, see the [API referenc
 
 ## Deleting Packages
 
+You can delete a package from its associated consignment using the **Delete Package** endpoint. To call **Delete Package**, send a `DELETE` request to `https://api.electioapp.com/packages/{packageReference}`. PRO deletes the supplied package, and returns a code 200 response with no body.
+
+> <span class="note-header">Note:</span>
+>
+> You can only delete packages from consignments that are in a status of either _Unallocated_ or _Allocation Failed_. If you need to add a package to a consignment that has been allocated, you will need to first deallocate that consignment. For more information on deallocating consignments, see [LINK HERE].
+>
+> You cannot delete the last package in a consignment. If you attempt to do so, PRO returns an error.
+
 ## Next Steps
 
 * Learn how to allocate consignments at the [Allocating Consignments to Carriers](/api/help/allocating_consignments_to_carriers.html) page.
