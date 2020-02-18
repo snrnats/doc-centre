@@ -2,6 +2,15 @@
 
 This page explains how to cancel consignments in PRO, both individually and in bulk. <span class="highlight">At what point are Cancelled consignments removed from the system?</span>
 
+> <span class="note-header">Note:</span>
+>
+> You can only cancel consignments that are **not** in one of the following states:
+>
+> * In Transit - Waiting 
+> * Partially Delivered 
+> * Delivered 
+> * Delivery Failed
+
 ---
 
 ## Cancelling Individual Consignments
