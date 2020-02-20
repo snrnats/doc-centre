@@ -72,4 +72,6 @@
 - name: Managing Quotes
   href: managing_quotes.md
 - name: Consignment States
-  href: consignment_states.md  
+  href: consignment_states.md
+- name: Glossary
+  href: glossary.md
