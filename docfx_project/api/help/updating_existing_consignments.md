@@ -159,6 +159,10 @@ To call **Add Package**, send a `POST` request to `https://api.electioapp.com/co
 
 Once it receives the request, PRO adds a new package with the supplied details to the specified consignment, and returns the full package object. Note that this object now includes the package's `Reference`. A package reference is a unique identifier for each package in PRO, and takes the format _EP-xxx-xxx-xxx_. 
 
+> <span class="note-header">More Information:</span>
+>
+> For full reference information on the **Add Package** endpoint, see the <a href="https://docs.electioapp.com/#/api/AddPackage">API reference</a>.
+
 ### Add Package Example
 
 The below example shows a simple package object being added to a consignment. PRO creates the package and returns the full package object, including a newly-generated `Reference` of _EP-000-05F-0CY_.
@@ -242,11 +246,13 @@ For an example of a more detailed **Add Package** request, see the [API referenc
 
 You can delete a package from its associated consignment using the **Delete Package** endpoint. To call **Delete Package**, send a `DELETE` request to `https://api.electioapp.com/packages/{packageReference}`. PRO deletes the supplied package, and returns a code 200 response with no body.
 
-> <span class="note-header">Note:</span>
+You can only delete packages from consignments that are in a status of either _Unallocated_ or _Allocation Failed_. If you need to add a package to a consignment that has been allocated, you will need to first deallocate that consignment. For more information on deallocating consignments, see [LINK HERE].
+
+You cannot delete the last package in a consignment. If you attempt to do so, PRO returns an error.
+
+> <span class="note-header">More Information:</span>
 >
-> You can only delete packages from consignments that are in a status of either _Unallocated_ or _Allocation Failed_. If you need to add a package to a consignment that has been allocated, you will need to first deallocate that consignment. For more information on deallocating consignments, see [LINK HERE].
->
-> You cannot delete the last package in a consignment. If you attempt to do so, PRO returns an error.
+> For full reference information on the **Delete Package** endpoint, see the <a href="https://docs.electioapp.com/#/api/DeletePackage">API reference</a>.
 
 ## Next Steps
 

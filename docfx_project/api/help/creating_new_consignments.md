@@ -4,24 +4,6 @@ In order for SortedPRO to manage a consignment, you'll need to record the detail
 
 ---
 
-## What Is A Consignment?
-
-In the context of PRO, the term **"consignment"** refers to a collection of one or more packages that are shipped from the same origin address, to the same destination address, on behalf of the same Sorted customer, using the same carrier service, on the same day.
-
-A **package** is an **item** or a collection of items, wrapped or contained together for shipment. Each package can contain one or more items.
-
-As an example, suppose that a clothing retailer has received a customer order for a necklace, a bracelet, a coat, and a hat. As the necklace and bracelet are both physically small, the retailer elects to ship them in the same package. As such, this sales order would break down to:
-
-* Four items - The necklace, the bracelet, the coat, and the hat.
-* Three packages - One containing the necklace and bracelet, one containing the coat, and one containing the hat.
-* A single consignment corresponding to everything on the order.
-
-<p>
-   <a href="../../images/consignment-diagram.png" target="_blank" >
-      <img src="../../images/consignment-diagram.png" class="noborder"/>
-   </a>
-</p>
-
 ## Creating a Consignment Via The Consignments API
 
 Perhaps the simplest way to record consignment details in PRO is to use the **Create Consignment** API endpoint. **Create Consignment** enables you to send consignment details directly to PRO, from which PRO creates the consignment record and returns a unique `{consignmentReference}`.

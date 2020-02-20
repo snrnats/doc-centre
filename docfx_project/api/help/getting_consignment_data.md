@@ -16,6 +16,10 @@ Perhaps the most straightforward way of getting PRO consignment data is to use t
 
 To call **Get Consignment**, sent a `GET` request to `https://api.electioapp.com/consignments/{consignmentReference}`.
 
+> <span class="note-header">More Information:</span>
+>
+> For full reference information on the **Get Consignment** endpoint, see the <a href="https://docs.electioapp.com/#/api/GetConsignment">API reference</a>.
+
 ### Example Get Consignment Response
 
 The example below shows a simple **Get Consignment** request for an unallocated consignment that contains just package and address details. For an example of a full **Get Consignment** request, see the [Get Consignment](https://docs.electioapp.com/#/api/GetConsignment) API reference.
