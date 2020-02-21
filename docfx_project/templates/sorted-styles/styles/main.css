@@ -110,6 +110,11 @@ code {
     font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
 }
 
+table code {
+    overflow-x: visible;
+    word-break: normal;
+}
+
 pre {
     font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
     font-size: 13px;
@@ -340,9 +345,8 @@ article span.small.pull-right {
     }
 }
 
-article img {
+.article img {
     border: 1px solid #ccc;
-    margin-bottom: 15px;
 }
 
 img.noborder {
@@ -554,7 +558,7 @@ div.table-responsive {
     padding: 0;
 }
 
-table.flowTable {
+table.flowTable, table.endpointTable {
     width: 100%;
     table-layout: fixed;
     margin: 10px 0 20px 0;
