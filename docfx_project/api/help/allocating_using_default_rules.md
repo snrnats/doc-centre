@@ -1,24 +1,10 @@
 # Allocate Using Default Rules
 
-<div class="tab">
-    <button class="staticTabButton">Allocation Using Default Rules Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard('allocationUDREndpoint')">Click to Copy</div>
-</div>
+To page explains how to configure custom allocation rules and use the **[Allocate Using Default Rules](https://docs.electioapp.com/#/api/AllocateUsingDefaultRules)**  and [Allocate Consignment](https://docs.electioapp.com/#/api/AllocateConsignment) endpoints to allocate consignments based on those rules.
 
-<div id="allocationUDREndpoint" class="staticTabContent" onclick="CopyToClipboard('allocationUDREndpoint')">
+---
 
-```
-PUT https://api.electioapp.com/allocation/allocate
-```
-
-</div>
-
-To allocate one or more consignments based on your organisation's custom allocation rules, use the **[Allocate Using Default Rules](https://docs.electioapp.com/#/api/AllocateUsingDefaultRules)** endpoint.
-
-> <span class="note-header">Note:</span>
-> PRO allocation rules enable you to configure business rules - such as physical package size, consignment value, and geographical availability - against individual carrier services. You can configure them via the  <a href="https://www.electioapp.com/Configuration/EditCarrierService/acceptanceTestCarrier_f8fe"><strong>Manage Carrier Service Rules</strong></a> page of the PRO UI. 
->  
-> For more information on configuring allocation rules, see the _Configure Allocation Rules_ section of the PRO Admin Portal User Guide.
+## Allocating Multiple Consignments Using Allocation Rules
 
 The **Allocate Using Default Rules** endpoint can be used to allocate multiple consignments simultaneously. The request body can contain an array of one or more `{consignmentReference}`s to be allocated. 
 
@@ -51,6 +37,9 @@ PUT https://api.electioapp.com/allocation/allocate
 ```
 
 </div>
+
+## Allocating a Single Consignment Using Allocation Rules
+
 
 
 <script src="../../scripts/requesttabs.js"></script>

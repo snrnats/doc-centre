@@ -1,6 +1,6 @@
 # Allocating Consignments To Carriers
 
-Once you've created a consignment, you'll need to allocate it to a carrier service. This section explains how to view available carrier services and the various methods you can use to allocate consignments to those services.
+Once you've created a consignment, you'll need to allocate it to a carrier service. This section explains how to configure allocation rules that PRO can use when selecting carrier services, and the various methods you can use to allocate consignments to those services.
 
 ---
 
@@ -60,37 +60,52 @@ PRO offers the following allocation endpoints:
     </tr>            
 </table>
 
-## Filtering Carrier Services
+## What Is An Allocation Rule?
 
-Allocation tags enable you to filter the list of available carrier services on a per-consignment basis, no matter which allocation endpoint you use in your integration. They are generally used as a means of excluding carrier services that would not be suitable for a particular consignment. 
+When you make an allocation request for a consignment, PRO uses its allocation rules to ascertain which carrier services are eligible to ship that consignment and which are not. Allocation rules are optional criteria that define the consignments that a particular carrier service is eligible to take. You can specify the following:
 
-Tagged shipments can only be allocated to those carrier services that have a matching tag. You can still allocate untagged shipments to a carrier service that has tags.
+* Maximum and minimum dimensions and weight 
+* Maximum monetary value
+* Excluded UK postcode areas
+* Excluded countries 
+* Allocation tags
 
-To associate tags with carrier services, use the **Settings > [Carrier Services](https://www.electioapp.com/Configuration/carrierservices/) > [select carrier service] > Allocation Rules > Allocation Filtering Tags** panel of the SortedPRO UI.
+For example, you could specify that a particular carrier service should only be allocated consignments that weigh between 1-25 Kg. Subsequently, PRO would not consider this service when allocating a consignment with a weight of 30Kg. 
+
+### Configuring Allocation Rules
+
+Allocation rules must be configured in the PRO UI. To configure allocation rules:
+
+1. Log in to the PRO UI and open the [Carrier Services](https://www.electioapp.com/Configuration/carrierservices/) page (**Settings** > **Carrier Services**) to display a list of available carrier services.
+  ![carrier-services-screen](../../images/carrier-services-screen.png)
+2. Select the carrier service you want to configure rules for and then click **Allocation Rules** to display the **Manage Carrier Service Rules** page.
+3. If required, enter maximum dimensions or weights. To do so:
+    1. In the **Dimensions** panel, click **Add** on the rule you want to set up (one of **Allowed Weight**, **Allowed Girth**, or **Allowed Length**). PRO displays editable range fields.
+    2. Enter the range values for the rule.
+    3. Click **Save** to confirm your changes. PRO displays your new rule under the relevant field. You can edit your new rule using the range boxes, or click **Remove** to remove it altogether.
+4. If required, enter an **Allowed Compensation Value**. This is the maximum monetary consignment value that the service can take.
+5. If required, add an allocation tag by entering the tag name into the **Allocation Filtering Tags** field and clicking **Add**. PRO will only allocate those consignments that have a corresponding value in their `tags` property to the carrier service.
+    > <span class="note-header">More Information:</span>
+    >
+    > For more information on how allocation tags work, see [What Is An Allocation Tag?](#what-is-an-allocation-tag).
+
+6. If required, enter a postcode restriction. To do so, enter the **area**, **disctrict**, **sector**, and/or **unit** 
+
+## What Is An Allocation Tag?
+
+Allocation tags enable you to filter the list of available carrier services on a per-consignment basis, no matter which allocation endpoint you use in your integration. They are generally used as a flexible means of excluding carrier services that would not be suitable for a particular consignment. 
+
+Tagged consignments can only be allocated to those carrier services that have a matching tag. You can still allocate untagged shipments to a carrier service that has tags.
 
 For example, a retailer might use the UI to add a `Flammables` tag to all the carrier services that they wanted to use for flammable products. They would then add the `Flammables` tag to all consignments containing flammable products. PRO would only allocate those consignments tagged as `Flammables` to a consignment in the pre-approved `Flammables` list.
 
-### Scenarios
+### Configuring Allocation Tags
 
-Suppose that you set your carrier services up in the following way:
+To associate tags with carrier services, use the **Settings > [Carrier Services](https://www.electioapp.com/Configuration/carrierservices/) > [select carrier service] > Allocation Rules > Allocation Filtering Tags** panel of the PRO UI.
 
-* You tag Carrier Service A with `Alcohol`
-* You tag Carrier Service B with `Flammables`
-* You tag Carrier Service C with `Alcohol` and `Flammables`
-* You tag Carrier Service D with `Oil`
-* You don't add any tags to Carrier Service E
+To tag a consignment, add the required tag into the shipment's `tags` property, either at creation or via the [Update Consignment](https://docs.electioapp.com/#/api/UpdateConsignment) endpoint. The `tags` property is a simple array listing all the tags that apply to the shipment.
 
-This configuration would produce the following results:
-
-* **Consignment with no tags** - A B C D and E are returned
-* **Consignment tagged with** `Alcohol` - A and C are returned
-* **Consignment tagged with** `Flammables` - B and C are returned
-* **Consignment tagged with** `Alcohol` **and** `Flammables` - C is returned
-* **Consignment tagged with** `Alcohol`**,** `Flammables`**, and** `Oil` - No services are returned
-
-### Tags Example
-
-The example shows a `tags` property for a consignment that contains flammable materials, oil and alcohol.
+The code sample below shows a `tags` property for a consignment that contains flammable materials, oil and alcohol.
 
 <div class="tab">
     <button class="staticTabButton">Example Tags array</button>
@@ -108,6 +123,24 @@ The example shows a `tags` property for a consignment that contains flammable ma
 ```
 
 </div>
+
+### Tags Example
+
+Suppose that you set your carrier services up in the following way:
+
+* You tag Carrier Service A with `Alcohol`
+* You tag Carrier Service B with `Flammables`
+* You tag Carrier Service C with `Alcohol` and `Flammables`
+* You tag Carrier Service D with `Oil`
+* You don't add any tags to Carrier Service E
+
+This configuration would produce the following results:
+
+* **Consignment with no tags** - A B C D and E are returned
+* **Consignment tagged with** `Alcohol` - A and C are returned
+* **Consignment tagged with** `Flammables` - B and C are returned
+* **Consignment tagged with** `Alcohol` **and** `Flammables` - C is returned
+* **Consignment tagged with** `Alcohol`**,** `Flammables`**, and** `Oil` - No services are returned
 
 ## After Allocation
 

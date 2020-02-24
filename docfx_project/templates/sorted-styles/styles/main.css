@@ -175,7 +175,7 @@ ol li, ul li {
 }
 
 ol ol, ul ol {
-    list-style-type: lower-roman;
+    list-style-type: lower-alpha;
     margin-top: 0;
     margin-bottom: 10px;
 }
