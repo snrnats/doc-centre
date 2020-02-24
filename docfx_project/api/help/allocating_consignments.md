@@ -19,13 +19,21 @@ PRO offers the following allocation endpoints:
         <th width="12%">API Reference</th>
     </tr>
     <tr>
+        <td>
+            <p><a href="/api/help/allocating_using_default_allocation_rules.html">Allocate Using Default Rules</a></p>
+            <p><pre>PUT https://api.electioapp.com/allocation/allocate</pre></p>
+        </td>
+        <td>Allocates one or more consignments based on your organisation's custom allocation rules</td>
+        <td><a href="https://docs.electioapp.com/#/api/AllocateUsingDefaultRules">Link</a></td>                
+    </tr>
+    <tr>
         <td width="55%">
-            <p><a href="/api/help/allocating_to_the_cheapest_quote.html">Allocate Consignment</a></p> 
+            <p><a href="/api/help/allocating_using_default_allocation_rules.html">Allocate Consignment</a></p> 
             <p><pre>PUT https://api.electioapp.com/allocation/{consignmentReference}/allocatewithcheapestquote</pre></p>
         </td>
         <td width="33%">Allocates a single consignment to the cheapest available carrier service</td>
         <td width="12%"><a href="https://docs.electioapp.com/#/api/AllocateConsignment">Link</a></td>                
-    </tr>
+    </tr>        
     <tr>
         <td>
             <p><a href="/api/help/allocating_via_service_group.html">Allocate Consignment With Service Group</a></p>
@@ -33,14 +41,6 @@ PRO offers the following allocation endpoints:
         </td>
         <td>Allocates a consignment to the cheapest available carrier service in a particular carrier service group</td>
         <td><a href="https://docs.electioapp.com/#/api/AllocateConsignmentWithServiceGroup">Link</a></td>               
-    </tr>
-    <tr>
-        <td>
-            <p><a href="/api/help/allocating_using_default_rules.html">Allocate Using Default Rules</a></p>
-            <p><pre>PUT https://api.electioapp.com/allocation/allocate</pre></p>
-        </td>
-        <td>Allocates one or more consignments based on your organisation's custom allocation rules</td>
-        <td><a href="https://docs.electioapp.com/#/api/AllocateUsingDefaultRules">Link</a></td>                
     </tr>
     <tr>
         <td>
@@ -68,7 +68,7 @@ When you make an allocation request for a consignment, PRO uses its allocation r
 * Maximum monetary value
 * Excluded UK postcode areas
 * Excluded countries 
-* Allocation tags
+* Allocation tags. 
 
 For example, you could specify that a particular carrier service should only be allocated consignments that weigh between 1-25 Kg. Subsequently, PRO would not consider this service when allocating a consignment with a weight of 30Kg. 
 
@@ -77,23 +77,66 @@ For example, you could specify that a particular carrier service should only be 
 Allocation rules must be configured in the PRO UI. To configure allocation rules:
 
 1. Log in to the PRO UI and open the [Carrier Services](https://www.electioapp.com/Configuration/carrierservices/) page (**Settings** > **Carrier Services**) to display a list of available carrier services.
-  ![carrier-services-screen](../../images/carrier-services-screen.png)
+  
+    ![carrier-services-screen](../../images/carrier-services-screen.png)
+
 2. Select the carrier service you want to configure rules for and then click **Allocation Rules** to display the **Manage Carrier Service Rules** page.
+  
+    ![carrier-service-rules-page](../../images/carrier-service-rules-page.png)
+
 3. If required, enter maximum dimensions or weights. To do so:
     1. In the **Dimensions** panel, click **Add** on the rule you want to set up (one of **Allowed Weight**, **Allowed Girth**, or **Allowed Length**). PRO displays editable range fields.
+      
+        ![dimensions-fields](../../images/dimensions-fields.png)
+
     2. Enter the range values for the rule.
-    3. Click **Save** to confirm your changes. PRO displays your new rule under the relevant field. You can edit your new rule using the range boxes, or click **Remove** to remove it altogether.
+    3. Click **Save** to confirm your changes. PRO displays your new rule under the relevant field. 
+      
+        ![dimensions-rule](../../images/dimensions-rule.png)
+
+        You can edit your new rule using the range boxes, or click **Remove** to remove it altogether.
+      
 4. If required, enter an **Allowed Compensation Value**. This is the maximum monetary consignment value that the service can take.
 5. If required, add an allocation tag by entering the tag name into the **Allocation Filtering Tags** field and clicking **Add**. PRO will only allocate those consignments that have a corresponding value in their `tags` property to the carrier service.
+
+    ![tags](../../images/tags.png)
+
+    To remove a tag from a carrier service, click the **x** on its icon. 
+
     > <span class="note-header">More Information:</span>
     >
     > For more information on how allocation tags work, see [What Is An Allocation Tag?](#what-is-an-allocation-tag).
 
-6. If required, enter a postcode restriction. To do so, enter the **area**, **disctrict**, **sector**, and/or **unit** 
+6. If required, enter a UK postcode restriction. To do so, enter the postcode **area**, **district**, **sector**, and/or **unit** you want to restrict delivery to into the fields on the **Geographic Availability** panel and then click the **Add** button. PRO displays the restricted postcode area in the panel.
+
+    ![postcodes](../../images/postcodes.png)    
+
+    To remove a restriction, click **Remove**.
+
+    > <span class="note-header">Note:</span>
+    >
+    > The **Geographic Availability** fields enable you to be flexible when restricting postcodes for a carrier service. For example, if you wanted to prevent a carrier service from being allocated to any consignments bound for the specific postcode _M2 6LW_, you would enter the following:
+    >
+    > * **area** - _M_
+    > * **district** - _2_
+    > * **sector** - _6_
+    > * **unit** - _LW_
+    >
+    > However, if you wanted to prevent the service from being allocated to any consignments bound for the entire _M2_ postcode area, you could simple enter _M_ into the **area** field and _2_ into the **district** field, and leave the more specific fields blank.
+    >
+    > For more information on UK postcode structures, see [this article](https://en.wikipedia.org/wiki/Postcodes_in_the_United_Kingdom#Formatting).
+
+7. If required, enter international delivery restrictions. To do so, start typing the name of the country you want to restrict delivery to into the **Add Another Country** field, and then click **Add** on the relevant country.
+
+    ![lux](../../images/lux.png)    
+
+    To remove a country from the list, click its **remove** button.
+
+8. Click **Save** to save your changes and finish setting up allocation rules.
 
 ## What Is An Allocation Tag?
 
-Allocation tags enable you to filter the list of available carrier services on a per-consignment basis, no matter which allocation endpoint you use in your integration. They are generally used as a flexible means of excluding carrier services that would not be suitable for a particular consignment. 
+Allocation tags are a type of allocation rule that enables you to filter the list of available carrier services on a per-consignment basis, no matter which allocation endpoint you use in your integration. They are generally used as a flexible means of excluding carrier services that would not be suitable for a particular consignment. 
 
 Tagged consignments can only be allocated to those carrier services that have a matching tag. You can still allocate untagged shipments to a carrier service that has tags.
 
@@ -101,7 +144,7 @@ For example, a retailer might use the UI to add a `Flammables` tag to all the ca
 
 ### Configuring Allocation Tags
 
-To associate tags with carrier services, use the **Settings > [Carrier Services](https://www.electioapp.com/Configuration/carrierservices/) > [select carrier service] > Allocation Rules > Allocation Filtering Tags** panel of the PRO UI.
+To associate tags with carrier services, use the **Settings > [Carrier Services](https://www.electioapp.com/Configuration/carrierservices/) > [select carrier service] > Allocation Rules > Allocation Filtering Tags** panel of the PRO UI, as detailed in [Configuring Allocation Rules](#configuring-allocation-rules).
 
 To tag a consignment, add the required tag into the shipment's `tags` property, either at creation or via the [Update Consignment](https://docs.electioapp.com/#/api/UpdateConsignment) endpoint. The `tags` property is a simple array listing all the tags that apply to the shipment.
 
@@ -144,7 +187,7 @@ This configuration would produce the following results:
 
 ## After Allocation
 
-Once allocated, the consignment's status changes to _Allocated_, enabling you to retrieve its package labels and (where applicable) customs documentation. All allocation endpoints also return an Allocation Summary, either singularly or (where multiple consignments have been allocated at once) in an array. 
+Once allocated to a suitable carrier service, the consignment's status changes to _Allocated_, enabling you to retrieve its package labels and (where applicable) customs documentation. All allocation endpoints also return an Allocation Summary, either singularly or (where multiple consignments have been allocated at once) in an array. 
 
 The Allocation Summary contains links to the consignment resource that was allocated, a summary of the carrier service that the consignment was allocated to, a link to the relevant package labels, and a `ConsignmentLegs` array indicating how many legs the shipment will need. Where a shipment would need multiple legs to complete, the `ConsignmentLegs` array shows tracking details for each individual leg.
 
