@@ -1,14 +1,24 @@
 # Allocate Using Default Allocation Rules
 
-To page explains how to configure custom allocation rules and use the **[Allocate Using Default Rules](https://docs.electioapp.com/#/api/AllocateUsingDefaultRules)**  and [Allocate Consignment](https://docs.electioapp.com/#/api/AllocateConsignment) endpoints to allocate consignments based on those rules.
+To page explains how to use the **[Allocate Using Default Rules](https://docs.electioapp.com/#/api/AllocateUsingDefaultRules)**  and [Allocate Consignment](https://docs.electioapp.com/#/api/AllocateConsignment) endpoints to allocate consignments based on your pre-defined allocation rules.
 
 ---
 
-## Allocating Multiple Consignments Using Allocation Rules
+## Overview
 
-The **Allocate Using Default Rules** endpoint can be used to allocate multiple consignments simultaneously. The request body can contain an array of one or more `{consignmentReference}`s to be allocated. 
+The **Allocate Using Default Rules** and **Allocate Consignments** endpoints enable you to allocate consignments to the cheapest available carrier service. PRO selects a service for you when you use these endpoints, rather than requiring you to select a service or service group manually.
 
-Once the request is received, SortedPRO takes each consignment in turn and allocates it to the cheapest eligible carrier, based on your default rules. It then returns an array of Allocation Summaries, one for each allocated consignment. 
+PRO uses the following selection process when allocating via these endpoints:
+
+1. **Who can deliver?** - First, PRO compiles a list of all carrier services that could potentially take the consignment (that is, configured and enabled services that ship to the delivery address and could meet any specified delivery promise).
+2. **Who meets the allocation rules?** - Next, PRO creates a final shortlist of carrier services by eliminating any services that do not meet your organisation's own allocation rules. For information on using allocation rules, see the [What Is An Allocation Rule?](/api/help/allocating_consignments.html#what-is-an-allocation-rule) section of the [Allocating Consignments](/api/help/allocating_consignments.html) page.
+3. **Who is cheapest?** - Finally, PRO allocates the consignment to the cheapest service on the shortlist.
+
+## Allocating Multiple Consignments At Once
+
+The **Allocate Using Default Rules** endpoint enables you to allocate multiple consignments to the cheapest eligible carrier service in one request. The request body should contain an array of one or more `{consignmentReference}`s to be allocated. 
+
+Once the request is received, SortedPRO takes each consignment in turn and allocates it to the cheapest eligible carrier, as per the process detailed in the [Overview](#overview). It then returns an array of Allocation Summaries, one for each allocated consignment. 
 
 > <span class="note-header">Note:</span>
 >  For full reference information on the <strong>Allocate Using Default Rules</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/AllocateUsingDefaultRules">Allocate Using Default Rules</a></strong> page of the API reference. 
@@ -38,16 +48,11 @@ PUT https://api.electioapp.com/allocation/allocate
 
 </div>
 
-## Allocating a Single Consignment Using Allocation Rules
+## Allocating a Single Consignment
 
-> Allocate Consignment Endpoint
-```
-PUT https://api.electioapp.com/allocation/{consignmentReference}/allocatewithcheapestquote
-```
+The **[Allocate Consignment](https://docs.electioapp.com/#/api/AllocateConsignment)** endpoint allocates a single consignment to the cheapest eligible carrier service, taking the `{consignmentReference}` of that service as a path parameter. 
 
-To allocate a single consignment to the cheapest available carrier service, use the **[Allocate Consignment](https://docs.electioapp.com/#/api/AllocateConsignment)** endpoint. Once the **Allocate Consignment** request is received and validated, SortedPRO checks for quotes to ship the consignment in question, and allocates the consignment to the cheapest service. 
-
-This endpoint takes a `{consignmentReference}` as a path parameter, and returns an Allocation Summary.
+Once the request is received, SortedPRO uses the process detailed in the [Overview](#overview) to determine the appropriate service and allocate the consignment. It then returns an Allocation Summary. 
 
 > Example Allocate Consignment Request
 ```

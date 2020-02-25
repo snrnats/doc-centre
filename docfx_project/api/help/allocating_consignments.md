@@ -6,9 +6,13 @@ Once you've created a consignment, you'll need to allocate it to a carrier servi
 
 ## What Is Allocation?
 
-In the context of SortedPRO, **allocation** is the process of selecting the carrier service that will be used to deliver a consignment. When a consignment is allocated to a carrier service, its status changes to _Allocated_, enabling you to retrieve its package labels and (where applicable) customs documentation. Allocation is a key part of all PRO workflows, as a consignment cannot be shipped if it has not previously been allocated to a suitable carrier service.
+In the context of SortedPRO, **allocation** is the process of selecting the carrier service that will be used to deliver a consignment. Allocation is a key part of all PRO workflows, as a consignment cannot be shipped if it has not previously been allocated to a suitable carrier service.
 
-To allocate a consignment in PRO, you'll need to call one of PRO's allocation endpoints. You can specify a carrier service to allocate to, allocate based on a quote you received, or have PRO choose a carrier service for you based on your existing business rules.
+> <span class="note=header">Note:</span>
+>
+> You can only allocate consignments that are in a consignment state of either _Unallocated_ or _Allocation Failed_. If you attempt to allocate a consignment that is not in one of those states, PRO returns an error.
+
+To allocate a consignment in PRO, you'll need to call one of PRO's allocation endpoints. You can specify a carrier service to allocate to, allocate based on a quote you received, or have PRO select the cheapest eligible carrier service for you. Whichever endpoint you use, PRO uses pre-defined allocation rules to ensure that your consignment is allocated to a suitable carrier service.
 
 PRO offers the following allocation endpoints:
 
@@ -59,6 +63,12 @@ PRO offers the following allocation endpoints:
         <td><a href="https://docs.electioapp.com/#/api/AllocateConsignmentWithServiceGroup">Link</a></td>                
     </tr>            
 </table>
+
+> <span class="note-header">More Information:</span>
+>
+> For detailed information on using each of PRO's allocation endpoints, click the endpoint names in the table above. 
+
+When a consignment is allocated to a carrier service, its status changes to _Allocated_, enabling you to retrieve its package labels and (where applicable) customs documentation. PRO also returns an Allocation Summary, confirming the service that the consignment was allocated to and (where applicable) providing tracking details.
 
 ## What Is An Allocation Rule?
 
