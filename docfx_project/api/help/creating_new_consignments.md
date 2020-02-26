@@ -50,10 +50,10 @@ The example below shows a simple **Create Consignments** request containing just
 
 <div class="tab">
     <button class="staticTabButton">Request Example</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'createConResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'createConRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="createConResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'createConResponse')">
+<div id="createConRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'createConRequest')">
 
 ```json
 {
