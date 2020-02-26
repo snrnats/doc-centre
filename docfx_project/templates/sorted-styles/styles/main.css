@@ -67,6 +67,10 @@ p {
     margin: 0 0 15px 0; 
 }
 
+.breadcrumb li > a {
+    color: #666;
+}
+
 article h1 {
     font-size: 2.4em;
     display: inline-block;
@@ -93,11 +97,23 @@ button,
 a {
   color: #ff055e;
   cursor: pointer;
+  font-weight: normal;
+}
+
+a:hover,
+a:focus,
+a:visited,
+a:active {
+    color: #ff055e;
+    text-decoration: underline;
+}
+
+.sidetoc a {
+    font-weight: bold;
 }
 
 article a{
     text-decoration: underline;
-    font-weight: bold;
 }
 
 code {
@@ -119,14 +135,6 @@ pre {
 
 pre code {
     white-space: pre;  
-}
-
-.toc .nav > li.active > a {
-    color: #ff055e;
-}
-
-.toc .nav > li.active > a:hover {
-    color: #404040
 }
 
 .affix > ul > li.active > a, .affix > ul > li.active > a:before {
@@ -195,30 +203,47 @@ hr {
 }
 
 .navbar-inverse {
-    background-color: #fff;
-    border-bottom: solid 3px #e7e7e7;
+    background-color: #494B52;
+    border-bottom: 0 none;
 }
 
-.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
-    color: #ff055e;
-    background-color: transparent;
+.navbar-inverse 
+.navbar-nav>.active>a, 
+.navbar-inverse .navbar-nav>.active>a:focus, 
+.navbar-inverse .navbar-nav>.active>a:hover {
+    color: #fff;
+    background-color: transparent;/*
+    border-bottom: solid 2px #ff055e;
     font-weight: bold;
     padding: 0 0 4px 0;
-    margin: 19px 15px 11px 15px;
+    margin: 19px 15px 11px 15px;*/
 }
 
-.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
-    color: #ff055e;
-    background-color: transparent;
+.navbar-inverse .navbar-nav>li>a:focus, 
+.navbar-inverse .navbar-nav>li>a:hover {
+    /*background-color: transparent;*/
 }
 
 .navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-text {
-    color: #333;
+    color: #FFF;
     margin-top: 4px;
 }
 
 .navbar-inverse .navbar-brand {
     padding-top: 6px;
+}
+
+.navbar-nav li {
+    margin: 0 0 0 15px;
+}
+
+.navbar-nav li:hover {
+    border-bottom: 2px #FFF solid;
+}
+
+.navbar-nav li.active,
+.navbar-nav li.active:hover {
+    border-bottom: 2px #ff055e solid;
 }
 
 .replaced-svg {
@@ -228,13 +253,14 @@ hr {
 }
 
 .navbar {
-    height: 52px;
+    padding: 1px;
+    min-height: 58px;
 }
 
 .subnav {
-    font-size: 10pt;
+    font-size: 11pt;
     height: 40px;
-    border-bottom: solid 1px #b7b7b7;    
+    border-bottom: 0 none;
 }
 
 
@@ -355,7 +381,7 @@ img.noborder {
 
 .sidetoc {
     background-color: #fff;
-    border-left: none;
+    border: 0 none;
 }
 
 div.toc {
@@ -373,25 +399,34 @@ ul.level1 {
 }
 
 .toc .nav > li.active > a {
-    color: #ff055e;
+    color: #000000;
 }
 
-.toc .level1 > li {
-    padding: 5px 0;
-    margin-top: 5px;
+.toc .nav > li.active > a:hover {
+    color: #000000;
+}
+
+.toc .level1 > li,
+.toc .level1 > li > a {
+    margin-bottom: 0.2em;
+}
+
+.toc .level2 > li > a:hover {
+    text-decoration: underline;;
 }
 
 .sidefilter {
     background-color: #fff;
-    border-left: none;
-    border-top: none;
-    border-bottom: none;
-    border-right: 1px solid #e7e7e7;
+    border: 0 none;
 }
 
 .toc-filter {
     border: 1px solid #b7b7b7;
     
+}
+
+.sideaffix > div.contribution > ul > li > a.contribution-link:hover {
+    text-decoration: underline;
 }
 
 /*Tab styles*/
@@ -619,4 +654,9 @@ h1#big-header{
     font-size: 5em;
     margin-top: 40px;
     margin-bottom: 40px;
+}
+
+/* syntax highlighting */
+.hljs-emphasis, .hljs-quote, .hljs-string, .hljs-strong, .hljs-template-variable, .hljs-variable {
+    color: #ff055e;
 }
