@@ -4,24 +4,6 @@ In order for SortedPRO to manage a consignment, you'll need to record the detail
 
 ---
 
-## What Is A Consignment?
-
-In the context of PRO, the term **"consignment"** refers to a collection of one or more packages that are shipped from the same origin address, to the same destination address, on behalf of the same Sorted customer, using the same carrier service, on the same day.
-
-A **package** is an **item** or a collection of items, wrapped or contained together for shipment. Each package can contain one or more items.
-
-As an example, suppose that a clothing retailer has received a customer order for a necklace, a bracelet, a coat, and a hat. As the necklace and bracelet are both physically small, the retailer elects to ship them in the same package. As such, this sales order would break down to:
-
-* Four items - The necklace, the bracelet, the coat, and the hat.
-* Three packages - One containing the necklace and bracelet, one containing the coat, and one containing the hat.
-* A single consignment corresponding to everything on the order.
-
-<p>
-   <a href="../../images/consignment-diagram.png" target="_blank" >
-      <img src="../../images/consignment-diagram.png" class="noborder"/>
-   </a>
-</p>
-
 ## Creating a Consignment Via The Consignments API
 
 Perhaps the simplest way to record consignment details in PRO is to use the **Create Consignment** API endpoint. **Create Consignment** enables you to send consignment details directly to PRO, from which PRO creates the consignment record and returns a unique `{consignmentReference}`.
@@ -176,9 +158,9 @@ You can also generate consignments from pickup options. The process is the same 
 
 > <span class="note-header">More Information:</span>
 >
-> * For a full user guide on working with delivery and pickup options, see the  <a href="selecting_delivery_and_pickup_options.html">Selecting Delivery and Pickup Options</a> page.
+> * For a full user guide on working with delivery and pickup options, see the  <a href="/api/help/selecting_delivery_and_pickup_options.html">Selecting Delivery and Pickup Options</a> page.
 > * For reference information on the Delivery Options and Pickup Options APIs, see the <a href="https://docs.electioapp.com/#/api/DeliveryOptions">API reference</a>.
-> * For worked examples showing consignments being created from delivery options, see the <a href="flows/consumer_options_flow.html">Consumer Options</a> and <a href="flows/consumer_options_pickup_flow.html">Consumer Options Pickup</a> call flow documents.
+> * For worked examples showing consignments being created from delivery options, see the <a href="/api/help/flows/consumer_options_flow.html">Consumer Options</a> and <a href="/api/help/flows/consumer_options_pickup_flow.html">Consumer Options Pickup</a> call flow documents.
 
 ## Creating Consignments from Orders
 
@@ -198,15 +180,15 @@ To create a consignment in this way, you'll need to make two API calls:
 
 > <span class="note-header">More Information:</span>
 >
-> * For a full user guide on working with orders, see the <a href="creating_new_orders.html">Creating New Orders</a> and <a href="managing_existing_orders.html">Managing Existing Orders</a> page.
+> * For a full user guide on working with orders, see the <a href="/api/help/creating_new_orders.html">Creating New Orders</a> and <a href="/api/help/managing_existing_orders.html">Managing Existing Orders</a> page.
 > * For reference information on the Orders API, see the <a href="https://docs.electioapp.com/#/api/CreateOrder">API reference</a>.
-> * For worked examples showing consignments being created from orders, see the <a href="flows/order_flex_flow.html">Order Flex</a> and <a href="flows/consumer_options_flex_flow.html">Consumer Options Flex</a> call flow documents.
+> * For worked examples showing consignments being created from orders, see the <a href="/api/help/flows/order_flex_flow.html">Order Flex</a> and <a href="/api/help/flows/consumer_options_flex_flow.html">Consumer Options Flex</a> call flow documents.
 
 ## Next Steps
 
-* Learn how to work with existing consignments at the [Managing Existing Consignments](managing_existing_consignments.html) page
-* Learn how to allocate consignments at the [Allocating Consignments to Carriers](allocating_consignments_to_carriers.html) page.
-* Learn how to get and print delivery labels at the [Getting Labels](getting_labels.html) page
+* Learn how to work with existing consignments at the [Managing Existing Consignments](/api/help/managing_existing_consignments.html) page
+* Learn how to allocate consignments at the [Allocating Consignments to Carriers](/api/help/allocating_consignments_to_carriers.html) page.
+* Learn how to get and print delivery labels at the [Getting Labels](/api/help/getting_labels.html) page
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>
