@@ -386,6 +386,7 @@ img.noborder {
 .sidetoc {
     background-color: #fff;
     border: 0 none;
+    top: 155px;
 }
 
 div.toc {
@@ -422,11 +423,12 @@ ul.level1 {
 .sidefilter {
     background-color: #fff;
     border: 0 none;
+    top: 102px;
 }
 
 .toc-filter {
     border: 1px solid #b7b7b7;
-    
+    border-radius: 0px;
 }
 
 .sideaffix > div.contribution > ul > li > a.contribution-link:hover {
