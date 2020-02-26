@@ -1,17 +1,10 @@
 # Allocating To A Specific Carrier Service
 
-<div class="tab">
-    <button class="staticTabButton">Allocate With Carrier Service Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard('allocationUCSEndpoint')">Click to Copy</div>
-</div>
+Want to specify the carrier service that should take your consignment? This page explains how to allocate consignments to services manually
 
-<div id="allocationUCSEndpoint" class="staticTabContent" onclick="CopyToClipboard('allocationUCSEndpoint')">
+---
 
-```
-PUT https://api.electioapp.com/allocation/allocatewithcarrierservice
-```
-
-</div>
+## Allocating To A Carrier Service Manually
 
 To allocate one or more consignments to a specific carrier service, use the **[Allocate With Carrier Service](https://docs.electioapp.com/#/api/AllocateWithCarrierService)** endpoint. 
 

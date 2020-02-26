@@ -29,8 +29,6 @@
 - name: Allocating Consignments
   href: allocating_consignments.md
   items:
-  - name: Viewing Available Carrier Services
-    href: viewing_available_carrier_services.md
   - name: Allocating Using Default Allocation Rules
     href: allocating_using_default_allocation_rules.md
   - name: Allocating Via Service Group
