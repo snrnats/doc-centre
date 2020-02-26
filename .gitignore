@@ -1,5 +1,4 @@
 [Bb]uild/
 [Dd]ocfx/
-Dockerfile
 docfx.zip
 .DS_Store
