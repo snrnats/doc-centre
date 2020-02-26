@@ -28,11 +28,11 @@
 <div class="copyheader">
     
 <h3>Example</h3>
-<div class="copybutton" onclick="CopyToClipboard('400example')">Click to Copy</div>
+<div class="copybutton" onclick="CopyToClipboard(this, '400example')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 
 </div>
 
-<div id="400example" class="copycontent" onclick="CopyToClipboard('400example')">
+<div id="400example" class="copycontent" onclick="CopyToClipboard(this, '400example')">
 
 ```json
 {

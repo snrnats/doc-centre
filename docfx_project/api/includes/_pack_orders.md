@@ -1,9 +1,9 @@
 <div class="tab">
     <button class="staticTabButton">Pack Order Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard('packOrderEndpoint')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'packOrderEndpoint')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="packOrderEndpoint" class="staticTabContent" onclick="CopyToClipboard('packOrderEndpoint')">
+<div id="packOrderEndpoint" class="staticTabContent" onclick="CopyToClipboard(this, 'packOrderEndpoint')">
 
    ```
    POST https://api.electioapp.com/orders/{orderReference}/pack
@@ -49,10 +49,10 @@ The example shows a **Pack Order** request to create a consignment with one pack
 
 <div class="tab">
     <button class="staticTabButton">Example Pack Order Request</button>
-    <div class="copybutton" onclick="CopyToClipboard('packOrderRequest')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'packOrderRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="packOrderRequest" class="staticTabContent" onclick="CopyToClipboard('packOrderRequest')">
+<div id="packOrderRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'packOrderRequest')">
 
   ```json
   {
@@ -93,10 +93,10 @@ The example shows a **Pack Order** request to create a consignment with one pack
 
 <div class="tab">
     <button class="staticTabButton">Example Pack Order Response</button>
-    <div class="copybutton" onclick="CopyToClipboard('packOrderResponse')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'packOrderResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="packOrderResponse" class="staticTabContent" onclick="CopyToClipboard('packOrderResponse')">
+<div id="packOrderResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'packOrderResponse')">
 
 ```json
 {

@@ -35,10 +35,10 @@ This example shows three consignments being cancelled at once via **Cancel Consi
 
 <div class="tab">
     <button class="staticTabButton">Example Cancel Consignments Request</button>
-    <div class="copybutton" onclick="CopyToClipboard('cancelConsRequest')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'cancelConsRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="cancelConsRequest" class="staticTabContent" onclick="CopyToClipboard('cancelConsRequest')">
+<div id="cancelConsRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'cancelConsRequest')">
 
 ```json
 [
@@ -51,10 +51,10 @@ This example shows three consignments being cancelled at once via **Cancel Consi
 
 <div class="tab">
     <button class="staticTabButton">Example Cancel Consignments Response</button>
-    <div class="copybutton" onclick="CopyToClipboard('cancelConsResponse')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'cancelConsResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="cancelConsResponse" class="staticTabContent" onclick="CopyToClipboard('cancelConsResponse')">
+<div id="cancelConsResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'cancelConsResponse')">
 
 ```json
 [

@@ -1,9 +1,9 @@
 <div class="tab">
     <button class="staticTabButton">Get Quotes by Consignment Reference Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard('quoteConRefEndpoint')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'quoteConRefEndpoint')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="quoteConRefEndpoint" class="staticTabContent" onclick="CopyToClipboard('quoteConRefEndpoint')">
+<div id="quoteConRefEndpoint" class="staticTabContent" onclick="CopyToClipboard(this, 'quoteConRefEndpoint')">
 
 ```
 GET https://api.electioapp.com/quotes/consignment/{consignmentReference}
@@ -26,10 +26,10 @@ The example shows a **Get Quotes by Consignment Reference** request and its acco
 
 <div class="tab">
     <button class="staticTabButton">Example Get Quotes by Consignment Reference Request</button>
-    <div class="copybutton" onclick="CopyToClipboard('quoteConRefRequest')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'quoteConRefRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="quoteConRefRequest" class="staticTabContent" onclick="CopyToClipboard('quoteConRefRequest')">
+<div id="quoteConRefRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'quoteConRefRequest')">
 
 ```
 https://api.electioapp.com/quotes/consignment/EC-000-05B-1CM
@@ -39,10 +39,10 @@ https://api.electioapp.com/quotes/consignment/EC-000-05B-1CM
 
 <div class="tab">
     <button class="staticTabButton">Example Get Quotes by Consignment Reference Response</button>
-    <div class="copybutton" onclick="CopyToClipboard('quoteConRefResponse')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'quoteConRefResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="quoteConRefResponse" class="staticTabContent" onclick="CopyToClipboard('quoteConRefResponse')">
+<div id="quoteConRefResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'quoteConRefResponse')">
 
 ```json
 {

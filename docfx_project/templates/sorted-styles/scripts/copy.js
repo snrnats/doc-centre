@@ -1,3 +1,4 @@
+//sorted styles
 function CopyToClipboard(containerid) {
     if (window.getSelection) {
         if (window.getSelection().empty) { // Chrome
@@ -19,5 +20,13 @@ function CopyToClipboard(containerid) {
         range.selectNode(document.getElementById(containerid));
         window.getSelection().addRange(range);
         document.execCommand("copy");
+    }
+}
+
+function ClearSelection() {
+    if (window.getSelection) {
+        window.getSelection().removeAllRanges();
+    } else if (document.selection) {
+        document.selection.empty();
     }
 }

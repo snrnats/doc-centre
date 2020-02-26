@@ -40,11 +40,11 @@ Gets the document of the requested type
 <div class="copyheader">
 
 ### Example
-<div class="copybutton" onclick="CopyToClipboard('pathExample')">Click to Copy</div>
+<div class="copybutton" onclick="CopyToClipboard(this, 'pathExample')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 
 </div>
 
-<div id="pathExample" class="copycontent"onclick="CopyToClipboard('pathExample')">
+<div id="pathExample" class="copycontent"onclick="CopyToClipboard(this, 'pathExample')">
 
 ```
 [Example endpoint path in here]
@@ -75,11 +75,11 @@ Gets the document of the requested type
 <div class="copyheader">
 
 ### Example
-<div class="copybutton" onclick="CopyToClipboard('bodyExample')">Click to Copy</div>
+<div class="copybutton" onclick="CopyToClipboard(this, 'bodyExample')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 
 </div>
 
-<div id="bodyExample" class="copycontent"onclick="CopyToClipboard('bodyExample')">
+<div id="bodyExample" class="copycontent"onclick="CopyToClipboard(this, 'bodyExample')">
 
 ```
 [Example request body in here]
@@ -115,11 +115,11 @@ Gets the document of the requested type
 <div class="copyheader">
     
 <h3>Example</h3>
-<div class="copybutton" onclick="CopyToClipboard('200example')">Click to Copy</div>
+<div class="copybutton" onclick="CopyToClipboard(this, '200example')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 
 </div>
 
-<div id="200example" class="copycontent" onclick="CopyToClipboard('200example')">
+<div id="200example" class="copycontent" onclick="CopyToClipboard(this, '200example')">
 
 ```
 [Example 200 response]

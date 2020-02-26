@@ -162,10 +162,10 @@ The code sample below shows a `tags` property for a consignment that contains fl
 
 <div class="tab">
     <button class="staticTabButton">Example Tags array</button>
-    <div class="copybutton" onclick="CopyToClipboard('tagsExample')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'tagsExample')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="tagsExample" class="staticTabContent" onclick="CopyToClipboard('tagsExample')">
+<div id="tagsExample" class="staticTabContent" onclick="CopyToClipboard(this, 'tagsExample')">
 
 ```json
 "Tags": [
@@ -207,10 +207,10 @@ In the example, a consignment with a `{consignmentReference}` of _EC-000-05B-MMA
 
 <div class="tab">
     <button class="staticTabButton">Example Allocation Summary</button>
-    <div class="copybutton" onclick="CopyToClipboard('allocationSummary')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'allocationSummary')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="allocationSummary" class="staticTabContent" onclick="CopyToClipboard('allocationSummary')">
+<div id="allocationSummary" class="staticTabContent" onclick="CopyToClipboard(this, 'allocationSummary')">
 
 ```json
 [

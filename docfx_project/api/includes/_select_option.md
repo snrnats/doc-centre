@@ -1,9 +1,9 @@
 <div class="tab">
     <button class="staticTabButton">Select Option Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard('selectOptionEndpoint')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'selectOptionEndpoint')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="selectOptionEndpoint" class="staticTabContent" onclick="CopyToClipboard('selectOptionEndpoint')">
+<div id="selectOptionEndpoint" class="staticTabContent" onclick="CopyToClipboard(this, 'selectOptionEndpoint')">
 
    ```
    POST https://api.electioapp.com/deliveryoptions/select/{deliveryOptionReference}
@@ -26,10 +26,10 @@ The example shows a request to select a delivery option that has a `{deliveryOpt
 
 <div class="tab">
     <button class="staticTabButton">Example Select Option Request</button>
-    <div class="copybutton" onclick="CopyToClipboard('selectOptionRequest')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'selectOptionRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="selectOptionRequest" class="staticTabContent" onclick="CopyToClipboard('selectOptionRequest')">
+<div id="selectOptionRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'selectOptionRequest')">
 
    ```
    POST https://api.electioapp.com/deliveryoptions/select/EDO-000-6DX-6XP
@@ -39,10 +39,10 @@ The example shows a request to select a delivery option that has a `{deliveryOpt
 
 <div class="tab">
     <button class="staticTabButton">Example Select Option Response</button>
-    <div class="copybutton" onclick="CopyToClipboard('selectOptionResponse')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'selectOptionResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="selectOptionResponse" class="staticTabContent" onclick="CopyToClipboard('selectOptionResponse')">
+<div id="selectOptionResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'selectOptionResponse')">
 
 ```json
 {

@@ -18,10 +18,10 @@ The example shows a `MetaData` array that is being used to store a consignment's
 
 <div class="tab">
     <button class="staticTabButton">Example MetaData array</button>
-    <div class="copybutton" onclick="CopyToClipboard('metadataExample')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'metadataExample')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="metadataExample" class="staticTabContent" onclick="CopyToClipboard('metadataExample')">
+<div id="metadataExample" class="staticTabContent" onclick="CopyToClipboard(this, 'metadataExample')">
 
 ```json
 "MetaData": [

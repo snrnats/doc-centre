@@ -1,9 +1,9 @@
 <div class="tab">
     <button class="staticTabButton">Create Order Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard('createOrderEndpoint')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'createOrderEndpoint')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="createOrderEndpoint" class="staticTabContent" onclick="CopyToClipboard('createOrderEndpoint')">
+<div id="createOrderEndpoint" class="staticTabContent" onclick="CopyToClipboard(this, 'createOrderEndpoint')">
 
    ```
    POST https://api.electioapp.com/orders
@@ -39,10 +39,10 @@ The example shows the creation of a fairly standard order. In this case, we have
 
 <div class="tab">
     <button class="staticTabButton">Example Create Order Request</button>
-    <div class="copybutton" onclick="CopyToClipboard('createOrderRequest')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'createOrderRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="createOrderRequest" class="staticTabContent" onclick="CopyToClipboard('createOrderRequest')">
+<div id="createOrderRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'createOrderRequest')">
 
 ```json
 {
@@ -217,10 +217,10 @@ The example shows the creation of a fairly standard order. In this case, we have
 
 <div class="tab">
     <button class="staticTabButton">Example Create Order Response</button>
-    <div class="copybutton" onclick="CopyToClipboard('createOrderResponse')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'createOrderResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="createOrderResponse" class="staticTabContent" onclick="CopyToClipboard('createOrderResponse')">
+<div id="createOrderResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'createOrderResponse')">
 
 ```json
 [

@@ -29,10 +29,10 @@ The example shows a `tags` property for a consignment that contains flammable ma
 
 <div class="tab">
     <button class="staticTabButton">Example Tags array</button>
-    <div class="copybutton" onclick="CopyToClipboard('tagsExample')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'tagsExample')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="tagsExample" class="staticTabContent" onclick="CopyToClipboard('tagsExample')">
+<div id="tagsExample" class="staticTabContent" onclick="CopyToClipboard(this, 'tagsExample')">
 
 ```json
 "Tags": [

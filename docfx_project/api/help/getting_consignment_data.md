@@ -26,10 +26,10 @@ The example below shows a simple **Get Consignment** request for an unallocated 
 
 <div class="tab">
     <button class="staticTabButton">Get Consignment Response Example</button>
-    <div class="copybutton" onclick="CopyToClipboard('getConResponse')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'getConResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="getConResponse" class="staticTabContent" onclick="CopyToClipboard('getConResponse')">
+<div id="getConResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'getConResponse')">
 
 ```json
 {
@@ -189,10 +189,10 @@ To make a **Get Consignment Status** request, send a `GET` request to `https://a
 
 <div class="tab">
     <button class="staticTabButton">Get Consignment Status Response Example</button>
-    <div class="copybutton" onclick="CopyToClipboard('getConStatResponse')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'getConStatResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="getConStatResponse" class="staticTabContent" onclick="CopyToClipboard('getConStatResponse')">
+<div id="getConStatResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'getConStatResponse')">
 
 ```json
 
@@ -231,10 +231,10 @@ The example below shows a request for all inbound consignments in an _Allocated_
 
 <div class="tab">
     <button class="staticTabButton">Get Consignments References Request Example</button>
-    <div class="copybutton" onclick="CopyToClipboard('getConRefsRequest')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'getConRefsRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="getConRefsRequest" class="staticTabContent" onclick="CopyToClipboard('getConRefsRequest')">
+<div id="getConRefsRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'getConRefsRequest')">
 
 ```
 
@@ -245,10 +245,10 @@ https://api.electioapp.com/consignments/getConsignmentReferences?State=Allocated
 
 <div class="tab">
     <button class="staticTabButton">Get Consignments References Response Example</button>
-    <div class="copybutton" onclick="CopyToClipboard('getConRefsResponse')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'getConRefsResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="getConRefsResponse" class="staticTabContent" onclick="CopyToClipboard('getConRefsResponse')">
+<div id="getConRefsResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'getConRefsResponse')">
 
 ```json
 
@@ -299,10 +299,10 @@ The example below shows a request for all inbound consignments in an _Allocated_
 
 <div class="tab">
     <button class="staticTabButton">Search Consignments Request Example</button>
-    <div class="copybutton" onclick="CopyToClipboard('searchConsRequest')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'searchConsRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="searchConsRequest" class="staticTabContent" onclick="CopyToClipboard('searchConsRequest')">
+<div id="searchConsRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'searchConsRequest')">
 
 ```
 
@@ -313,10 +313,10 @@ https://apis.electioapp.com/consignments/100/0/?State=Allocated&Direction=Inboun
 
 <div class="tab">
     <button class="staticTabButton">Search Consignments Response Example</button>
-    <div class="copybutton" onclick="CopyToClipboard('searchConsResponse')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'searchConsResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="searchConsResponse" class="staticTabContent" onclick="CopyToClipboard('searchConsResponse')">
+<div id="searchConsResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'searchConsResponse')">
 
 ```json
 
