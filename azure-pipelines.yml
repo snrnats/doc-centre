@@ -27,10 +27,10 @@ stages:
     pool:
       name: $(pool)
     steps:
-    - template: templates/gitversion.yml
-    - template: templates/docker.yml
-    - template: templates/helm.yml
-    - template: templates/publish.yml
+    - template: pipeline/templates/gitversion.yml
+    - template: pipeline/templates/docker.yml
+    - template: pipeline/templates/helm.yml
+    - template: pipeline/templates/publish.yml
 - stage: NetlifyBuild
   jobs:
   - job: "BuildAndPublish"
