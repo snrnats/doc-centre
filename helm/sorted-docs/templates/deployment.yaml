@@ -17,6 +17,8 @@ spec:
         app.kubernetes.io/name: {{ .Values.serviceName }}
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
+      imagePullSecrets:
+        - name: {{ .Values.image.pullSecret }}
       containers:
       - name: {{ .Chart.Name }}
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
@@ -41,5 +43,3 @@ spec:
         env:
         - name: DOCFX_SOURCE_BRANCH_NAME
           value: master
-        imagePullSecrets:
-        - name: {{ .Values.image.pullSecret }}
