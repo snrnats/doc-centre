@@ -52,11 +52,11 @@ PUT https://api.electioapp.com/allocation/EC-000-05B-N40/allocatewithquote/11223
         "ApiLinks": [
             {
                 "Rel": "detail",
-                "Href": "https://apisandbox.electioapp.com/consignments/EC-000-05B-N40"
+                "Href": "https://api.electioapp.com/consignments/EC-000-05B-N40"
             },
             {
                 "Rel": "label",
-                "Href": "https://apisandbox.electioapp.com/labels/EC-000-05B-N40"
+                "Href": "https://api.electioapp.com/labels/EC-000-05B-N40"
             }
         ],
         "Description": "Consignment EC-000-05B-N40 has been successfully allocated with UPS STANDARD (Delivery Confirmation Signature Required) for shipping on 18/06/2019 17:00:00 +00:00",

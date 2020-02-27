@@ -362,7 +362,7 @@ https://apis.electioapp.com/consignments/100/0/?State=Allocated&Direction=Inboun
             },
             "ApiLink": {
                 "Rel": "detail",
-                "Href": "https://apisandbox.electioapp.com/consignments/EC-000-05C-VQ4"
+                "Href": "https://api.electioapp.com/consignments/EC-000-05C-VQ4"
             },
             "FailedManifestMessage": null,
             "FailedManifestTimeStamp": null,
@@ -415,7 +415,7 @@ https://apis.electioapp.com/consignments/100/0/?State=Allocated&Direction=Inboun
             },
             "ApiLink": {
                 "Rel": "detail",
-                "Href": "https://apisandbox.electioapp.com/consignments/EC-000-05C-VQ3"
+                "Href": "https://api.electioapp.com/consignments/EC-000-05C-VQ3"
             },
             "FailedManifestMessage": null,
             "FailedManifestTimeStamp": null,

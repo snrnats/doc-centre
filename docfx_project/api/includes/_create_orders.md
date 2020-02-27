@@ -226,7 +226,7 @@ The example shows the creation of a fairly standard order. In this case, we have
 [
   {
     "Rel": "Order",
-    "Href": "https://apisandbox.electioapp.com/orders/EO-000-002-0TS"
+    "Href": "https://api.electioapp.com/orders/EO-000-002-0TS"
   }
 ]
 ```

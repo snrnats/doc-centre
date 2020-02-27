@@ -50,11 +50,11 @@ The example shows a request to select a delivery option that has a `{deliveryOpt
     "ApiLinks": [
         {
             "Rel": "detail",
-            "Href": "https://apisandbox.electioapp.com/consignments/EC-000-05B-MMQ"
+            "Href": "https://api.electioapp.com/consignments/EC-000-05B-MMQ"
         },
         {
             "Rel": "label",
-            "Href": "https://apisandbox.electioapp.com/labels/EC-000-05B-MMQ"
+            "Href": "https://api.electioapp.com/labels/EC-000-05B-MMQ"
         }
     ],
     "Description": "Consignment EC-000-05B-MMQ has been successfully allocated with Carrier X Tracked 48 Signed For for shipping on 17/06/2019 00:00:00 +00:00",
