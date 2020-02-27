@@ -27,7 +27,7 @@ ingress:
     nginx.ingress.kubernetes.io/proxy-body-size: 1m
     kubernetes.io/ingress.class: nginx
   hosts:
-   - host: ""
+   - host: "docs-feature.sorted.com"
      paths:
       - /pro/?(.*)
   tls:
