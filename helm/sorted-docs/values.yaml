@@ -29,6 +29,7 @@ ingress:
       paths:
        - /
     - host: docs-feature.sorted.com
+      paths:
        - /pro
   tls:
   - secretName: sorted-wildcard-cert
