@@ -1,9 +1,9 @@
 <div class="tab">
     <button class="staticTabButton">Create Consignment Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard('createConEndpoint')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'createConEndpoint')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="createConEndpoint" class="staticTabContent" onclick="CopyToClipboard('createConEndpoint')">
+<div id="createConEndpoint" class="staticTabContent" onclick="CopyToClipboard(this, 'createConEndpoint')">
 
 ```
 POST https://api.electioapp.com/consignments
@@ -55,10 +55,10 @@ These examples show the creation of a fairly standard consignment. In this case,
 
 <div class="tab">
     <button class="staticTabButton">Request Example</button>
-    <div class="copybutton" onclick="CopyToClipboard('createConRequest')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'createConRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="createConRequest" class="staticTabContent" onclick="CopyToClipboard('createConRequest')">
+<div id="createConRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'createConRequest')">
 
 ```json
 {
@@ -226,10 +226,10 @@ After receiving the request, PRO returns a `{consignmentReference}` of _EC-000-0
 
 <div class="tab">
     <button class="staticTabButton">Request Example</button>
-    <div class="copybutton" onclick="CopyToClipboard('createConResponse')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'createConResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="createConResponse" class="staticTabContent" onclick="CopyToClipboard('createConResponse')">
+<div id="createConResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'createConResponse')">
 
 ```json
 [

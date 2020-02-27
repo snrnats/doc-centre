@@ -2,10 +2,10 @@
 
 <div class="tab">
     <button class="staticTabButton">Pickup Options Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard('pickupOptionsEndpoint')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'pickupOptionsEndpoint')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="pickupOptionsEndpoint" class="staticTabContent" onclick="CopyToClipboard('pickupOptionsEndpoint')">
+<div id="pickupOptionsEndpoint" class="staticTabContent" onclick="CopyToClipboard(this, 'pickupOptionsEndpoint')">
 
    ```
    POST https://api.electioapp.com/deliveryoptions/pickupoptions/
@@ -69,10 +69,10 @@ The example shows a request to get no more than 10 pickup options for a fairly s
 
 <div class="tab">
     <button class="staticTabButton">Example Pickup Options Request</button>
-    <div class="copybutton" onclick="CopyToClipboard('pickupOptionsRequest')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'pickupOptionsRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="pickupOptionsRequest" class="staticTabContent" onclick="CopyToClipboard('pickupOptionsRequest')">
+<div id="pickupOptionsRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'pickupOptionsRequest')">
 
 ```json
 {
@@ -235,10 +235,10 @@ The example shows a request to get no more than 10 pickup options for a fairly s
 
 <div class="tab">
     <button class="staticTabButton">Example Pickup Options Response</button>
-    <div class="copybutton" onclick="CopyToClipboard('pickupOptionsResponse')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'pickupOptionsResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="pickupOptionsResponse" class="staticTabContent" onclick="CopyToClipboard('pickupOptionsResponse')">
+<div id="pickupOptionsResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'pickupOptionsResponse')">
 
 ```json
 {

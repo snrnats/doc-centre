@@ -39,11 +39,11 @@ Returns labels for the specified consignment.
 <div class="copyheader">
 
 ### Example
-<div class="copybutton" onclick="CopyToClipboard('requestExample')">Click to Copy</div>
+<div class="copybutton" onclick="CopyToClipboard(this, 'requestExample')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 
 </div>
 
-<div id="requestExample" class="copycontent"onclick="CopyToClipboard('requestExample')">
+<div id="requestExample" class="copycontent"onclick="CopyToClipboard(this, 'requestExample')">
 
 ```
 GET https://api.electioapp.com/labels/EC-000-05B-MMA
@@ -85,11 +85,11 @@ GET https://api.electioapp.com/labels/EC-000-05B-MMA
 <div class="copyheader">
     
 <h3>Example</h3>
-<div class="copybutton" onclick="CopyToClipboard('200example')">Click to Copy</div>
+<div class="copybutton" onclick="CopyToClipboard(this, '200example')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 
 </div>
 
-<div id="200example" class="copycontent" onclick="CopyToClipboard('200example')">
+<div id="200example" class="copycontent" onclick="CopyToClipboard(this, '200example')">
 
 ```json
 {

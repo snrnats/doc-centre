@@ -1,0 +1,10 @@
+.git
+Dockerfile
+readme.md
+serve.sh
+build.sh
+azure-pipelines.yml
+/pipeline
+/pipeline/*
+/_exported_templates
+/_exported_templates/*

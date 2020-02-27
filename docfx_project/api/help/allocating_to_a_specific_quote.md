@@ -2,10 +2,10 @@
 
 <div class="tab">
     <button class="staticTabButton">Allocate With Quote Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard('allocateWithQuoteEndpoint')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'allocateWithQuoteEndpoint')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="allocateWithQuoteEndpoint" class="staticTabContent" onclick="CopyToClipboard('allocateWithQuoteEndpoint')">
+<div id="allocateWithQuoteEndpoint" class="staticTabContent" onclick="CopyToClipboard(this, 'allocateWithQuoteEndpoint')">
 
 ```
 PUT https://api.electioapp.com/allocation/{consignmentReference}/allocatewithquote/{quoteReference}
@@ -29,10 +29,10 @@ The example shows a request to allocate a consignment with a `{consignmentRefere
 
 <div class="tab">
     <button class="staticTabButton">Example Allocate With Quote Request</button>
-    <div class="copybutton" onclick="CopyToClipboard('allocateWithQuoteRequest')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'allocateWithQuoteRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="allocateWithQuoteRequest" class="staticTabContent" onclick="CopyToClipboard('allocateWithQuoteRequest')">
+<div id="allocateWithQuoteRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'allocateWithQuoteRequest')">
 
 ```
 PUT https://api.electioapp.com/allocation/EC-000-05B-N40/allocatewithquote/112236d5-4460-492f-a6bd-aa3f00f62dfb
@@ -42,10 +42,10 @@ PUT https://api.electioapp.com/allocation/EC-000-05B-N40/allocatewithquote/11223
 
 <div class="tab">
     <button class="staticTabButton">Example Allocate With Quote Response</button>
-    <div class="copybutton" onclick="CopyToClipboard('allocateWithQuoteResponse')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'allocateWithQuoteResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="allocateWithQuoteResponse" class="staticTabContent" onclick="CopyToClipboard('allocateWithQuoteResponse')">
+<div id="allocateWithQuoteResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'allocateWithQuoteResponse')">
 
 ```json
 [

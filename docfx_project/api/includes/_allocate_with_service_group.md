@@ -1,9 +1,9 @@
 <div class="tab">
     <button class="staticTabButton">Allocate Consignment With Service Group Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard('allocationUSGEndpoint')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'allocationUSGEndpoint')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="allocationUSGEndpoint" class="staticTabContent" onclick="CopyToClipboard('allocationUSGEndpoint')">
+<div id="allocationUSGEndpoint" class="staticTabContent" onclick="CopyToClipboard(this, 'allocationUSGEndpoint')">
 
 ```
 PUT https://api.electioapp.com/allocation/{consignmentReference}/allocatewithservicegroup/{mpdCarrierServiceGroupReference}
@@ -31,10 +31,10 @@ The example shows a request to allocate a consignment with a `{consignmentRefere
 
 <div class="tab">
     <button class="staticTabButton">Example Allocate Consignment With Service Group Request</button>
-    <div class="copybutton" onclick="CopyToClipboard('allocationUSGRequest')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'allocationUSGRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="allocationUSGRequest" class="staticTabContent" onclick="CopyToClipboard('allocationUSGRequest')">
+<div id="allocationUSGRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'allocationUSGRequest')">
 
 ```
 PUT https://api.electioapp.com/allocation/EC-000-05B-MMA/allocatewithservicegroup/valuableGoods

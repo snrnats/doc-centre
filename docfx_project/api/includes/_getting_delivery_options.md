@@ -1,9 +1,9 @@
 <div class="tab">
     <button class="staticTabButton">Delivery Options Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard('DelOptionsEndpoint')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'DelOptionsEndpoint')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="DelOptionsEndpoint" class="staticTabContent" onclick="CopyToClipboard('DelOptionsEndpoint')">
+<div id="DelOptionsEndpoint" class="staticTabContent" onclick="CopyToClipboard(this, 'DelOptionsEndpoint')">
 
    ```
    POST https://api.electioapp.com/deliveryoptions
@@ -57,10 +57,10 @@ The example shows a request to get delivery options for a fairly standard consig
 
 <div class="tab">
     <button class="staticTabButton">Example Delivery Options Request</button>
-    <div class="copybutton" onclick="CopyToClipboard('DelOptionsRequest')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'DelOptionsRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="DelOptionsRequest" class="staticTabContent" onclick="CopyToClipboard('DelOptionsRequest')">
+<div id="DelOptionsRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'DelOptionsRequest')">
 
 ```json
 {  
@@ -222,10 +222,10 @@ The example shows a request to get delivery options for a fairly standard consig
 
 <div class="tab">
     <button class="staticTabButton">Example Delivery Options Response</button>
-    <div class="copybutton" onclick="CopyToClipboard('DelOptionsResponse')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'DelOptionsResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="DelOptionsResponse" class="staticTabContent" onclick="CopyToClipboard('DelOptionsResponse')">
+<div id="DelOptionsResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'DelOptionsResponse')">
 
 ```json
 {

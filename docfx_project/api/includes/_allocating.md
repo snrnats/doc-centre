@@ -1,9 +1,9 @@
 <div class="tab">
     <button class="staticTabButton">Allocation Endpoints</button>
-    <div class="copybutton" onclick="CopyToClipboard('allocationEndpoints')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'allocationEndpoints')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="allocationEndpoints" class="staticTabContent" onclick="CopyToClipboard('allocationEndpoints')">
+<div id="allocationEndpoints" class="staticTabContent" onclick="CopyToClipboard(this, 'allocationEndpoints')">
 
    ```
    PUT https://api.electioapp.com/allocation/allocate
@@ -38,10 +38,10 @@ In the example, a consignment with a `{consignmentReference}` of _EC-000-05B-MMA
 
 <div class="tab">
     <button class="staticTabButton">Example Allocation Summary</button>
-    <div class="copybutton" onclick="CopyToClipboard('allocationSummary')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'allocationSummary')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="allocationSummary" class="staticTabContent" onclick="CopyToClipboard('allocationSummary')">
+<div id="allocationSummary" class="staticTabContent" onclick="CopyToClipboard(this, 'allocationSummary')">
 
 ```json
 [

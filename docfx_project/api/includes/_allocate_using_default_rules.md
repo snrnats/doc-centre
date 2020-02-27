@@ -1,9 +1,9 @@
 <div class="tab">
     <button class="staticTabButton">Allocation Using Default Rules Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard('allocationUDREndpoint')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'allocationUDREndpoint')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="allocationUDREndpoint" class="staticTabContent" onclick="CopyToClipboard('allocationUDREndpoint')">
+<div id="allocationUDREndpoint" class="staticTabContent" onclick="CopyToClipboard(this, 'allocationUDREndpoint')">
 
 ```
 PUT https://api.electioapp.com/allocation/allocate
@@ -31,10 +31,10 @@ The example shows a request to allocate three consignments via default rules.
 
 <div class="tab">
     <button class="staticTabButton">Example Allocate Using Default Rules Request</button>
-    <div class="copybutton" onclick="CopyToClipboard('allocationUDRRequest')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'allocationUDRRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="allocationUDRRequest" class="staticTabContent" onclick="CopyToClipboard('allocationUDRRequest')">
+<div id="allocationUDRRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'allocationUDRRequest')">
 
 ```json
 PUT https://api.electioapp.com/allocation/allocate

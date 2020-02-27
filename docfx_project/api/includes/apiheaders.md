@@ -24,11 +24,11 @@
 <div class="copyheader">
     
 <h3>Example</h3>
-<div class="copybutton" onclick="CopyToClipboard('headerExample')">Click to Copy</div>
+<div class="copybutton" onclick="CopyToClipboard(this, 'headerExample')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 
 </div>
 
-<div id="headerExample" class="copycontent" onclick="CopyToClipboard('headerExample')">
+<div id="headerExample" class="copycontent" onclick="CopyToClipboard(this, 'headerExample')">
 
 ```json
 ocp-apim-subscription-key: [qwerrtyuiioop0987654321]

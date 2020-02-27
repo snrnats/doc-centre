@@ -1,9 +1,9 @@
 <div class="tab">
     <button class="staticTabButton">Update Consignment Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard('updateConsEndpoint')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'updateConsEndpoint')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="updateConsEndpoint" class="staticTabContent" onclick="CopyToClipboard('updateConsEndpoint')">
+<div id="updateConsEndpoint" class="staticTabContent" onclick="CopyToClipboard(this, 'updateConsEndpoint')">
 
 ```
 PUT https://api.electioapp.com/consignments/
@@ -36,10 +36,10 @@ The example shows an  **Update Consignment** request for a single shipment that 
 
 <div class="tab">
     <button class="staticTabButton">Example Update Consignment Request</button>
-    <div class="copybutton" onclick="CopyToClipboard('updateConsRequest')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'updateConsRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="updateConsRequest" class="staticTabContent" onclick="CopyToClipboard('updateConsRequest')">
+<div id="updateConsRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'updateConsRequest')">
 
 ```json
 {
@@ -212,10 +212,10 @@ The example shows an  **Update Consignment** request for a single shipment that 
 
 <div class="tab">
     <button class="staticTabButton">Example Update Consignment Response</button>
-    <div class="copybutton" onclick="CopyToClipboard('updateConsResponse')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'updateConsResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="updateConsResponse" class="staticTabContent" onclick="CopyToClipboard('updateConsResponse')">
+<div id="updateConsResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'updateConsResponse')">
 
 ```json
 [

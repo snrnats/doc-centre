@@ -1,0 +1,32 @@
+trigger:
+  branches:
+    include:
+    - master
+    - feature/*
+    - develop/*
+
+variables:
+  - name: pool
+    value: linux-agents-standard
+  - name: netlify-cli-version
+    value: '2.12.0'
+  - group: DocFXSettings 
+
+stages:
+  - stage: Build
+    jobs:
+    - job: "BuildAndPublish"
+      pool:
+        name: $(pool)
+      steps:
+      - template: pipeline/docfx.yml
+      - template: pipeline/publish.yml
+  - stage: Deploy
+    condition: eq(variables['Build.SourceBranch'], 'refs/heads/develop/internal')
+    jobs:
+    - job: Deploy
+      pool:
+        name: $(pool)
+      steps:
+      - template: pipeline/netlify.yml
+      - template: pipeline/deploy.yml

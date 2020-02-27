@@ -50,10 +50,10 @@ The example below shows a simple **Create Consignments** request containing just
 
 <div class="tab">
     <button class="staticTabButton">Request Example</button>
-    <div class="copybutton" onclick="CopyToClipboard('createConResponse')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'createConRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="createConResponse" class="staticTabContent" onclick="CopyToClipboard('createConResponse')">
+<div id="createConRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'createConRequest')">
 
 ```json
 {
@@ -121,10 +121,10 @@ In the example below, PRO has returned a `{consignmentReference}` of _EC-000-05B
 
 <div class="tab">
     <button class="staticTabButton">Response Example</button>
-    <div class="copybutton" onclick="CopyToClipboard('createConResponse')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'createConResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="createConResponse" class="staticTabContent" onclick="CopyToClipboard('createConResponse')">
+<div id="createConResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'createConResponse')">
 
 ```json
 [

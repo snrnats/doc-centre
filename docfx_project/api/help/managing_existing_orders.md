@@ -10,10 +10,10 @@ Update Order
 
 <div class="tab">
     <button class="staticTabButton">Update Order Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard('updateOrdEndpoint')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'updateOrdEndpoint')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="updateOrdEndpoint" class="staticTabContent" onclick="CopyToClipboard('updateOrdEndpoint')">
+<div id="updateOrdEndpoint" class="staticTabContent" onclick="CopyToClipboard(this, 'updateOrdEndpoint')">
 
 ```
 PUT https://api.electioapp.com/orders/{orderReference}
@@ -47,10 +47,10 @@ The example shows an  **Update Order** request for a single shipment that has a 
 
 <div class="tab">
     <button class="staticTabButton">Example Update Order Request</button>
-    <div class="copybutton" onclick="CopyToClipboard('updateOrdRequest')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'updateOrdRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="updateOrdRequest" class="staticTabContent" onclick="CopyToClipboard('updateOrdRequest')">
+<div id="updateOrdRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'updateOrdRequest')">
 
 ```
 PUT https://api.electioapp.com/orders/EC-000-087-01A
@@ -153,10 +153,10 @@ PUT https://api.electioapp.com/orders/EC-000-087-01A
 
 <div class="tab">
     <button class="staticTabButton">Example Update Order Response</button>
-    <div class="copybutton" onclick="CopyToClipboard('updateOrdResponse')">Click to Copy</div>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'updateOrdResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="updateOrdResponse" class="staticTabContent" onclick="CopyToClipboard('updateOrdResponse')">
+<div id="updateOrdResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'updateOrdResponse')">
 
 ```json
 [
