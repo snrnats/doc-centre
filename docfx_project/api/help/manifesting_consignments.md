@@ -8,11 +8,32 @@
 
 ## Manifesting Consignments
 
-> Manifest Consignments Endpoint
-```
-PUT https://api.electioapp.com/consignments/manifest
-```
-> Example Manifest Consignment Request
+Once you've created a consignment, allocated it to a carrier service and printed labels for it, you're ready to manifest it. To manifest a consignment, use the **[Manifest Consignments](https://docs.electioapp.com/#/api/ManifestConsignments)** endpoint. `PUT https://api.electioapp.com/consignments/manifest`
+
+> <span class="note-header">Note:</span>
+>
+>  In the context of SortedPRO, the term "manifest" refers to advising the carrier of all the consignments/packages to be collected from the shipper.
+
+The **Manifest Consignments** endpoint can be used to manifest multiple consignments at once. The request should contain an array of `{consignmentReference}`s, corresponding to the consignments to be manifested. 
+
+All the consignments you provide in the request should be in a state of either _Allocated_ or _Manifest Failed_. If you attempt to manifest a consignment that is not in one of these states then PRO returns an error.
+
+Once PRO has received the request and attempted to manifest the consignments, the **Manifest Consignments** endpoint returns an array of messages indicating whether each individual consignment was successfully manifested or not.
+
+> <span class="note-header">Note:</span>
+>
+>  For full reference information on the <strong>Manifest Consignments</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/ManifestConsignments">Manifest Consignments</a></strong> page of the API Reference. 
+
+### Examples
+
+The example shows a request to manifest three consignments. The response indicates that all three consignments were successfully manifested.
+
+<div class="tab">
+    <button class="staticTabButton">Example Manifest Consignment Request</button>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'manifestConsRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+</div>
+
+<div id="manifestConsRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'manifestConsRequest')">
 
 ```json
 {
@@ -24,7 +45,14 @@ PUT https://api.electioapp.com/consignments/manifest
 }
 ```
 
-> Example Manifest Consignment Response
+</div>
+
+<div class="tab">
+    <button class="staticTabButton">Example Manifest Consignment Response</button>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'manifestConsResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+</div>
+
+<div id="manifestConsResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'manifestConsResponse')">
 
 ```json
 [
@@ -63,26 +91,7 @@ PUT https://api.electioapp.com/consignments/manifest
   }
 ]
 ```
-
-Once you've created a consignment, allocated it to a carrier service and printed labels for it, you're ready to manifest it. To manifest a consignment, use the **[Manifest Consignments](https://docs.electioapp.com/#/api/ManifestConsignments)** endpoint.
-
-<aside class="info">
-  In the context of SortedPRO, the term "manifest" refers to advising the carrier of all the consignments/packages to be collected from the shipper.
-</aside>
-
-The **Manifest Consignments** endpoint can be used to manifest multiple consignments at once. The request should contain an array of `{consignmentReference}`s, corresponding to the consignments to be manifested. 
-
-All the consignments you provide in the request should be in a state of either _Allocated_ or _Manifest Failed_. If you attempt to manifest a consignment that is not in one of these states then PRO returns an error.
-
-Once PRO has received the request and attempted to manifest the consignments, the **Manifest Consignments** endpoint returns an array of messages indicating whether each individual consignment was successfully manifested or not.
-
-<aside class="note">
-  For full reference information on the <strong>Manifest Consignments</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/ManifestConsignments">Manifest Consignments</a></strong> page of the API Reference. 
-</aside>
-
-### Examples
-
-The example shows a request to manifest three consignments. The response indicates that all three consignments were successfully manifested.
+</div>
 
 ## Manifesting Consignments by Query
 
