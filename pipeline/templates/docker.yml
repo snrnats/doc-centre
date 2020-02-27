@@ -1,0 +1,16 @@
+steps:
+  - script: |
+      docker build -t $(imageName):$(buildVersion) \
+      --build-arg ENVIRONMENT="$(ENVIRONMENT)" \
+      $(Build.SourcesDirectory)
+    displayName: 'Docker Build'
+  - script: |
+      docker tag $(imageName):$(buildVersion) $(ACR_SERVER)/$(imageName):$(buildVersion)
+    displayName: 'Tag Docker Image'
+  - task: Docker@2
+    inputs:
+      containerRegistry: "SortedGroupDevContainerRegistry"
+      repository: $(imageName)
+      command: "push"
+      tags: "$(buildVersion)"
+    displayName: 'Docker Push'

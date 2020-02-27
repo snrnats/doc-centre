@@ -33,4 +33,4 @@ ingress:
   tls:
   - secretName: ""
     hosts:
-     - ""
+     - "docs-feature.sorted.com"
