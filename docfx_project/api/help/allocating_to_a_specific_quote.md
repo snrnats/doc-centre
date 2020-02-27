@@ -1,26 +1,28 @@
 # Allocating To A Specific Quote
 
-<div class="tab">
-    <button class="staticTabButton">Allocate With Quote Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'allocateWithQuoteEndpoint')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+Obtaining quotes to carry an individual consignment and then allocating to the most suitable response is a key part of many customer service workflows in PRO. This page explains how to use the **Allocate With Quote** endpoint to select a quote.
 
-<div id="allocateWithQuoteEndpoint" class="staticTabContent" onclick="CopyToClipboard(this, 'allocateWithQuoteEndpoint')">
+---
 
-```
-PUT https://api.electioapp.com/allocation/{consignmentReference}/allocatewithquote/{quoteReference}
-```
+## Quotes Overview
 
-</div>  
+In PRO, delivery quotes are generally used outside of a "regular" consignment allocation workflow, as a means of managing consignments that require manual intervention. For example, your customer service teams might want to get quotes for an expedited delivery on a consignment that was missed by a carrier and so did not meet its delivery promise. 
 
-To allocate an individual consignment based on a specific delivery quote from a carrier, use the **[Allocate With Quote](https://docs.electioapp.com/#/api/AllocateWithQuote)** endpoint. To call **Allocate With Quote**...
+PRO's Quotes API enables you to get delivery quotes for both uncreated and existing consignments. All Quotes endpoints return one or more `Quote` objects, of which each represents an offer for carriage of a consignment with a specific carrier service. Each quote can be uniquely identified by a `{quoteReference}`, which is used when selecting a quote via the **Allocate With Quote** endpoint.
 
-> <span class="note-header">Note:</span>
->  You can get quote details via SortedPRO's Quotes API. For more information on PRO's quote endpoints (<strong><a href="https://docs.electioapp.com/#/api/GetQuotes">Get Quotes</a></strong>, <strong><a href="https://docs.electioapp.com/#/api/GetQuotesbyConsignmentReference">Get Quotes by Consignment Reference</a></strong>, and <strong><a href="https://docs.electioapp.com/#/api/GetServiceGroupQuotes">Get Service Group Quotes</a></strong>), see the API reference.
+> <span class="note-header">More Information:</span>
+>
+> * For a full user guide on working with quotes, see the <a href="/api/help/managing_quotes.html">Managing Quotes</a> page.
+> * For reference information on the Quotes API, see the <a href="https://docs.electioapp.com/#/api/GetQuotes">API reference</a>.
+> * For worked examples showing a consignment being allocated from a quote, see the <a href="/api/help/flows/quotes_flow.html">Quotes</a> call flow page.
 
-The **Allocate With Quote** endpoint takes the `{consignmentReference}` of the consignment you want to allocate and the `{quoteReference}` of a particular quote. Once the request is received PRO attempts to allocate the consignment to the carrier service specified in the quote, and returns an Allocation Summary.
+## Using Allocate With Quote
 
-> <span class="note-header">Note:</span>
+The **Allocate With Quote** endpoint enables you to allocate an individual consignment based on a specific delivery quote from a carrier. To call **Allocate With Quote**, send a `PUT` request to `https://api.electioapp.com/allocation/{consignmentReference}/allocatewithquote/{quoteReference}`, where `{consignmentReference}` corresponds to the consignment you want to allocate and `{quoteReference}` is the quote you want to select.
+
+Once the request is received PRO attempts to allocate the consignment to the carrier service specified in the quote (as denoted by the `{MpdCarrierService}` and `MpdCarrierServiceReference` fields contained within the `Quote` object), and returns an Allocation Summary.
+
+> <span class="note-header">More Information:</span>
 >  For full reference information on the <strong>Allocate With Quote</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/AllocateWithQuote">Allocate With Quote</a></strong> page of the API reference.
 
 ### Allocate With Quote Example
@@ -38,51 +40,13 @@ The example shows a request to allocate a consignment with a `{consignmentRefere
 PUT https://api.electioapp.com/allocation/EC-000-05B-N40/allocatewithquote/112236d5-4460-492f-a6bd-aa3f00f62dfb
 ```
 
-</div>  
+</div>   
 
-<div class="tab">
-    <button class="staticTabButton">Example Allocate With Quote Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'allocateWithQuoteResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+## Next Steps
 
-<div id="allocateWithQuoteResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'allocateWithQuoteResponse')">
-
-```json
-[
-    {
-        "StatusCode": 200,
-        "ApiLinks": [
-            {
-                "Rel": "detail",
-                "Href": "https://apisandbox.electioapp.com/consignments/EC-000-05B-N40"
-            },
-            {
-                "Rel": "label",
-                "Href": "https://apisandbox.electioapp.com/labels/EC-000-05B-N40"
-            }
-        ],
-        "Description": "Consignment EC-000-05B-N40 has been successfully allocated with UPS STANDARD (Delivery Confirmation Signature Required) for shipping on 18/06/2019 17:00:00 +00:00",
-        "ConsignmentLegs": [
-            {
-                "Leg": 1,
-                "TrackingReferences": [
-                    "1Z9A80W5DK96293164"
-                ],
-                "CarrierReference": "UPS",
-                "CarrierServiceReference": null,
-                "CarrierName": "UPS"
-            }
-        ],
-        "CarrierReference": "UPS",
-        "CarrierName": "UPS",
-        "CarrierServiceReference": "EDC5_UPSHSTDCS",
-        "CarrierServiceName": "UPS STANDARD (Delivery Confirmation Signature Required)"
-    }
-]
-```
-
-</div>  
-
+* Learn about alternative methods of allocating consignments at the [Allocating Consignments](/api/help/allocating_consignments.html) page.
+* Learn how to get and print delivery labels at the [Getting Labels](/api/help/getting_labels.html) page.
+* Learn how to add consignments to a carrier manifest at the [Manifesting Consignments](/api/help/manifesting_consignments.html) page.
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>

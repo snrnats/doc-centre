@@ -1,14 +1,12 @@
 # Manifesting Consignments
 
-Get Customer Manifest
 
-Get Customer Manifests
 
-Set Ready To Ship
+---
 
-Set Not Ready To Ship
+## Overview
 
-Manifest Consignments
+## Manifesting Consignments
 
 > Manifest Consignments Endpoint
 ```
@@ -24,16 +22,6 @@ PUT https://api.electioapp.com/consignments/manifest
     "EC-000-A04-0DV"
   ]
 }
-```
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<ManifestConsignmentsRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://electioapp.com/schemas/v1.1/MPD.Electio.SDK.DataTypes.Consignments">
-  <ConsignmentReferences>
-    <string>EC-000-05A-Z6S</string>
-    <string>EC-000-083-45D</string>
-    <string>EC-000-A04-0DV</string>
-  </ConsignmentReferences>
-</ManifestConsignmentsRequest>
 ```
 
 > Example Manifest Consignment Response
@@ -75,44 +63,6 @@ PUT https://api.electioapp.com/consignments/manifest
   }
 ]
 ```
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<ArrayOfWithMessageOfString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <WithMessageOfString>
-    <IsSuccess xmlns="http://electioapp.com/schemas/v1.1/MPD.Electio.SDK.DataTypes.Consignments">true</IsSuccess>
-    <Message xmlns="http://electioapp.com/schemas/v1.1/MPD.Electio.SDK.DataTypes.Consignments">Consignment EC-000-002-5FG has been manifested successfully.</Message>
-    <Data xmlns="http://electioapp.com/schemas/v1.1/MPD.Electio.SDK.DataTypes.Consignments">EC-000-002-5FG</Data>
-    <ApiLinks xmlns="http://electioapp.com/schemas/v1.1/MPD.Electio.SDK.DataTypes.Consignments">
-      <ApiLink>
-        <Rel xmlns="http://electioapp.com/schemas/v1.1/MPD.Electio.SDK.DataTypes.Common">Link</Rel>
-        <Href xmlns="http://electioapp.com/schemas/v1.1/MPD.Electio.SDK.DataTypes.Common">https://api.electioapp.com/consignments/EC-000-002-5FG</Href>
-      </ApiLink>
-    </ApiLinks>
-  </WithMessageOfString>
-  <WithMessageOfString>
-    <IsSuccess xmlns="http://electioapp.com/schemas/v1.1/MPD.Electio.SDK.DataTypes.Consignments">true</IsSuccess>
-    <Message xmlns="http://electioapp.com/schemas/v1.1/MPD.Electio.SDK.DataTypes.Consignments">Consignment EC-000-002-5FG has been manifested successfully.</Message>
-    <Data xmlns="http://electioapp.com/schemas/v1.1/MPD.Electio.SDK.DataTypes.Consignments">EC-000-002-5FG</Data>
-    <ApiLinks xmlns="http://electioapp.com/schemas/v1.1/MPD.Electio.SDK.DataTypes.Consignments">
-      <ApiLink>
-        <Rel xmlns="http://electioapp.com/schemas/v1.1/MPD.Electio.SDK.DataTypes.Common">Link</Rel>
-        <Href xmlns="http://electioapp.com/schemas/v1.1/MPD.Electio.SDK.DataTypes.Common">https://api.electioapp.com/consignments/EC-000-002-5FG</Href>
-      </ApiLink>
-    </ApiLinks>
-  </WithMessageOfString>
-  <WithMessageOfString>
-    <IsSuccess xmlns="http://electioapp.com/schemas/v1.1/MPD.Electio.SDK.DataTypes.Consignments">true</IsSuccess>
-    <Message xmlns="http://electioapp.com/schemas/v1.1/MPD.Electio.SDK.DataTypes.Consignments">Consignment EC-000-002-5FG has been manifested successfully.</Message>
-    <Data xmlns="http://electioapp.com/schemas/v1.1/MPD.Electio.SDK.DataTypes.Consignments">EC-000-002-5FG</Data>
-    <ApiLinks xmlns="http://electioapp.com/schemas/v1.1/MPD.Electio.SDK.DataTypes.Consignments">
-      <ApiLink>
-        <Rel xmlns="http://electioapp.com/schemas/v1.1/MPD.Electio.SDK.DataTypes.Common">Link</Rel>
-        <Href xmlns="http://electioapp.com/schemas/v1.1/MPD.Electio.SDK.DataTypes.Common">https://api.electioapp.com/consignments/EC-000-002-5FG</Href>
-      </ApiLink>
-    </ApiLinks>
-  </WithMessageOfString>    
-</ArrayOfWithMessageOfString>
-```
 
 Once you've created a consignment, allocated it to a carrier service and printed labels for it, you're ready to manifest it. To manifest a consignment, use the **[Manifest Consignments](https://docs.electioapp.com/#/api/ManifestConsignments)** endpoint.
 
@@ -133,6 +83,8 @@ Once PRO has received the request and attempted to manifest the consignments, th
 ### Examples
 
 The example shows a request to manifest three consignments. The response indicates that all three consignments were successfully manifested.
+
+## Manifesting Consignments by Query
 
 Manifest Consignments From Query
 
@@ -208,6 +160,24 @@ The example shows a request to manifest all consignments that are allocated to C
 ```
 
 </div>
+
+## Getting Manifests
+
+Get Customer Manifest
+
+Get Customer Manifests
+
+## Setting a Consignment as Ready to Ship
+
+Set Ready To Ship
+
+Set Not Ready To Ship
+
+## Next Steps
+
+* Learn how to track consignments via PRO's APIs at the [Tracking Consignments](/api/help/tracking_consignments.html) page.
+* Learn how to get and print delivery labels at the [Getting Labels](/api/help/getting_labels.html) page.
+* Learn how to deallocate a consignment at the [Deallocating Consignments](/api/help/deallocating_consignments.html)page.
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>

@@ -59,6 +59,11 @@ PUT https://api.electioapp.com/allocation/allocatewithcarrierservice
 
 </div>
 
+## Next Steps
+
+* Learn about alternative methods of allocating consignments at the [Allocating Consignments](/api/help/allocating_consignments.html) page.
+* Learn how to get and print delivery labels at the [Getting Labels](/api/help/getting_labels.html) page.
+* Learn how to add consignments to a carrier manifest at the [Manifesting Consignments](/api/help/manifesting_consignments.html) page.
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>
