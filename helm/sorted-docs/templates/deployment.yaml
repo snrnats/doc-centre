@@ -38,8 +38,8 @@ spec:
             scheme: HTTP
           initialDelaySeconds: 20
           periodSeconds: 5
-      env:
-      - name: DOCFX_SOURCE_BRANCH_NAME
-        value: master
-      imagePullSecrets:
-      - name: {{ .Values.image.pullSecret }}
+        env:
+        - name: DOCFX_SOURCE_BRANCH_NAME
+          value: master
+        imagePullSecrets:
+        - name: {{ .Values.image.pullSecret }}
