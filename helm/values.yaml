@@ -1,0 +1,36 @@
+serviceName: sorted-docs
+replicaCount: 1
+namespace: feature
+
+image:
+  repository: ""
+  tag: latest
+  pullPolicy: ifNotPresent
+  pullSecret: ""
+
+service:
+  name: sorted-docs
+  type: ClusterIP
+  port: 80
+
+container:
+  port: 80
+
+ingress:
+  enabled: true
+  annotations:
+    nginx.ingress.kubernetes.io/add-base-url: "true"
+    nginx.ingress.kubernetes.io/app-root: "/pro"
+    nginx.ingress.kubernetes.io/use-regex: true
+    nginx.ingress.kubernetes.io/rewrite-target: $1
+    nginx.ingress.kubernetes.io/auth-tls-secret: ""
+    nginx.ingress.kubernetes.io/proxy-body-size: 1m
+    kubernetes.io/ingress.class: nginx
+  hosts:
+   - host: ""
+     paths:
+      - /pro/?(.*)
+  tls:
+  - secretName: ""
+    hosts:
+     - ""
