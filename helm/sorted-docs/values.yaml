@@ -23,7 +23,7 @@ ingress:
     nginx.ingress.kubernetes.io/app-root: /pro
     nginx.ingress.kubernetes.io/use-regex: "true"
     nginx.ingress.kubernetes.io/rewrite-target: /$1
-    nginx.ingress.kubernetes.io/auth-tls-secret: cert
+    nginx.ingress.kubernetes.io/auth-tls-secret: sorted-wildcard-cert
     nginx.ingress.kubernetes.io/proxy-body-size: 5m
     kubernetes.io/ingress.class: nginx
   hosts:
@@ -31,6 +31,6 @@ ingress:
       paths:
        - /pro/?(.*)
   tls:
-  - secretName: cert
+  - secretName: sorted-wildcard-cert
     hosts:
      - docs-feature.sorted.com
