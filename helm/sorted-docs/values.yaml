@@ -23,14 +23,10 @@ ingress:
   annotations:
     pro:
       kubernetes.io/ingress.class: nginx
-      nginx.ingress.kubernetes.io/rewrite-target: /
       nginx.ingress.kubernetes.io/auth-tls-secret: feature/sorted-wildcard-cert
-      nginx.ingress.kubernetes.io/proxy-body-size: 1m
   hosts:
     pro:
       - host: docs-feature.sorted.com
-        paths:
-        - /
   tls:
   - secretName: sorted-wildcard-cert
     hosts:
