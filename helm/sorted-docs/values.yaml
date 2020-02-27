@@ -3,10 +3,10 @@ replicaCount: 1
 namespace: feature
 
 image:
-  repository: ""
-  tag: latest
-  pullPolicy: ifNotPresent
-  pullSecret: ""
+  repository: repo
+  tag: latest # overridden on deployment
+  pullPolicy: IfNotPresent
+  pullSecret: pullSecret
 
 service:
   name: sorted-docs
@@ -20,17 +20,17 @@ ingress:
   enabled: true
   annotations:
     nginx.ingress.kubernetes.io/add-base-url: "true"
-    nginx.ingress.kubernetes.io/app-root: "/pro"
-    nginx.ingress.kubernetes.io/use-regex: true
-    nginx.ingress.kubernetes.io/rewrite-target: $1
-    nginx.ingress.kubernetes.io/auth-tls-secret: ""
-    nginx.ingress.kubernetes.io/proxy-body-size: 1m
+    nginx.ingress.kubernetes.io/app-root: /pro
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    nginx.ingress.kubernetes.io/auth-tls-secret: cert
+    nginx.ingress.kubernetes.io/proxy-body-size: 5m
     kubernetes.io/ingress.class: nginx
   hosts:
-   - host: "docs-feature.sorted.com"
-     paths:
-      - /pro/?(.*)
+    - host: docs-feature.sorted.com
+      paths:
+       - /pro/?(.*)
   tls:
-  - secretName: ""
+  - secretName: cert
     hosts:
-     - "docs-feature.sorted.com"
+     - docs-feature.sorted.com
