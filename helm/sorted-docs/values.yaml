@@ -17,20 +17,21 @@ container:
   port: 80
 
 ingress:
+  names:
+    pro: sorted-docs
   enabled: true
   annotations:
-    kubernetes.io/ingress.class: nginx
-    nginx.ingress.kubernetes.io/add-base-url: "true"
-    nginx.ingress.kubernetes.io/rewrite-target: /
-    nginx.ingress.kubernetes.io/auth-tls-secret: sorted-wildcard-cert
-    nginx.ingress.kubernetes.io/proxy-body-size: 1m
+    pro:
+      kubernetes.io/ingress.class: nginx
+      nginx.ingress.kubernetes.io/rewrite-target: /pro/$1
+      nginx.ingress.kubernetes.io/auth-tls-secret: sorted-wildcard-cert
+      nginx.ingress.kubernetes.io/proxy-body-size: 1m
   hosts:
-    - host: docs-feature.sorted.com
-      paths:
-       - /
-    - host: docs-feature.sorted.com
-      paths:
-       - /pro
+    pro:
+      - host: docs-feature.sorted.com
+        paths:
+        - /pro
+        - /pro/?(.*)
   tls:
   - secretName: sorted-wildcard-cert
     hosts:
