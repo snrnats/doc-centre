@@ -2,6 +2,7 @@
   href: pro/api/help/  
   homepage: pro/api/help/introduction.md
 - name: PRO Reports
+  href: pro/reports/
   homepage: pro/reports/index.md
 - name: REACT 
   href: https://docs.sorted.com/react/
