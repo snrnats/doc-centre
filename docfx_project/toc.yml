@@ -1,5 +1,0 @@
-- name: Reports
-  homepage: reports/index.md
-- name: API Help
-  href: api/help/
-  homepage: api/help/introduction.md

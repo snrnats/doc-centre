@@ -1,30 +1,30 @@
 {
   "build": {
-    "content": [
-      {
+    "content": [{
         "files": [
-          "api/help/**.yml",
-          "api/help/**.md"
+          "pro/api/help/**.yml",
+          "pro/api/help/**.md",
+          "pro/toc.yml",
+          "pro/index.md"
         ]
       },
       {
         "files": [
-          "reports/**.md",
-          "reports/toc.yml",
+          "pro/reports/**.md",
+          "pro/reports/toc.yml",
           "toc.yml",
           "*.md"
         ]
       }
     ],
-    "resource": [
-      {
+    "resource": [{
         "files": [
-          "images/**"
+          "pro/images/**"
         ]
       },
       {
         "files": [
-          "scripts/**"
+          "pro/scripts/**"
         ]
       },
       {
@@ -33,17 +33,15 @@
         ]
       }
     ],
-    "overwrite": [
-      {
-        "files": [
-          "apidoc/**.md"
-        ],
-        "exclude": [
-          "obj/**",
-          "_site/**"
-        ]
-      }
-    ],
+    "overwrite": [{
+      "files": [
+        "pro/apidoc/**.md"
+      ],
+      "exclude": [
+        "obj/**",
+        "_site/**"
+      ]
+    }],
     "dest": "_site",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
