@@ -9,7 +9,7 @@
 </style>
 
 <div class="header-container">
-    <h1 id="big-header" class="text--underlined text--header"><span>SortedPRO Docs</span></h1>
+    <h1 id="big-header" class="text--underlined text--header"><span>SortedPRO </span><span>Docs</span></h1>
     <p class="text--center">
         Help and support for SortedPRO
     </p>
