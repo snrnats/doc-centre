@@ -6,6 +6,10 @@
     .sideaffix {
         display: none;
     }
+
+    .subnav {
+        display: none !important;
+    }
 </style>
 
 <div class="header-container">
@@ -15,6 +19,20 @@
     </p>
 </div>
 <div class="button-container">
-    <a href="/pro/reports/index.html"><div class="homepage-container"><h2>Reports</h2><p>About PRO's PowerBI reports</p></div></a>
-    <a href="/pro/api/help/introduction.html"><div class="homepage-container"><h2>API Help</h2><p>Call flows, user guides, and more</p></div></a>
+    <a href="/pro/api/help/introduction.html">
+        <div class="homepage-container">
+            <h2>API Help</h2>
+            <p>
+                Call flows, user guides, and more.
+            </p>
+        </div>
+    </a>
+    <a href="/pro/reports/index.html">
+        <div class="homepage-container">
+            <h2>Reports</h2>
+            <p>
+                About PRO's PowerBI reports.
+            </p>
+        </div>
+    </a>
 </div>

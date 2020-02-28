@@ -1,8 +1,8 @@
-- name: PRO Reports
-  homepage: pro/reports/index.md
 - name: PRO API Help  
   href: pro/api/help/  
   homepage: pro/api/help/introduction.md
+- name: PRO Reports
+  homepage: pro/reports/index.md
 - name: REACT 
   href: https://docs.sorted.com/react/
  

@@ -746,6 +746,14 @@ div.button1:hover {
     width: 100%;
 }
 
+@media all and (max-width: 768px) {
+    .button-container {
+        grid-template-columns: unset;
+        grid-gap: unset;
+        margin: unset;
+    }
+}
+
 .button-container a,
 .button-container a:hover,
 .button-container a:visited {
@@ -789,15 +797,17 @@ div.button1:hover {
     display: none !important;
 }
 
-/*div.button-container, */
 div.header-container {
     display: inline-block;
     width: 100%;
     text-align: center;
+    padding: 30px 0;
 }
 
-div.header-container {
-    padding: 30px 0;
+@media all and (max-width: 768px) {
+    div.header-container {
+        padding: 5px 0;
+    }
 }
 
 .text--header {
@@ -821,6 +831,13 @@ div.header-container {
     background-color: #ff055e;
 }
 
+@media all and (max-width: 762px) {
+    .text--underlined span:before {
+        height: 4px;
+        bottom: 10px;
+    }
+}
+
 .text--center {
     text-align: center;
 }
@@ -836,6 +853,13 @@ h1#big-header {
     font-size: 5em;
     margin-top: 40px;
     margin-bottom: 40px;
+}
+
+@media all and (max-width: 768px) {
+    h1#big-header {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
 }
 
 /* syntax highlighting */
