@@ -2,18 +2,20 @@
 
 <div class="subnav navbar navbar-default custom">
     <div class="row row-nomargin">
-    <div class="container hide-when-search col-md-6" id="breadcrumb">
-        <ul class="breadcrumb">
-        <li>{{_tocTitle}}</li>
-        </ul>
-        
-    </div>
-    <div class="col-md-6 theme-selector-nav">
-        <span class="theme-selector-title">Theme:</span>
-        <select id="theme-switcher">
-            <option value="dark">Dark</option>
-            <option value="light">Light</option>
-        </select>
-    </div>
+        <div class="hide-when-search col-md-6" id="breadcrumb">
+            <div class="col-md-6">
+                <ul class="breadcrumb">
+                <li>{{_tocTitle}}</li>
+                </ul>
+                
+            </div>
+        </div>
+        <div class="col-md-6 theme-selector-nav">
+            <span class="theme-selector-title">Theme:</span>
+            <select id="theme-switcher">
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
+            </select>
+        </div>
     </div>
 </div>
