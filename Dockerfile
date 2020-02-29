@@ -1,11 +1,10 @@
 FROM mono:6.8.0.96 as build
 
-
 WORKDIR /build
 
 RUN curl -L https://github.com/dotnet/docfx/releases/download/v2.49/docfx.zip --output docfx.zip
 RUN apt update
-RUN apt install zip unzip
+RUN apt install zip unzip git -y
 RUN unzip -o docfx.zip -d ./docfx
 
 COPY . ./source

@@ -556,6 +556,7 @@ ul.level1 {
 
 .sideaffix>div.contribution>ul>li>a.contribution-link:hover {
     text-decoration: underline;
+    background-color: var(--colour-background);
 }
 
 /*Tab styles*/
