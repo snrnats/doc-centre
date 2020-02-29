@@ -277,6 +277,16 @@ hr {
     margin: 30px 0;
 }
 
+.sidenav, .fixed_header, .toc {
+    background-color: var(--colour-background);
+}
+
+@media only screen and (max-width: 768px) {
+    .sidenav {
+        margin-top: 25px;
+    }
+}
+
 .theme-selector-nav {
     margin-top: 5px;
     text-align: right;
@@ -287,9 +297,9 @@ hr {
 }
 
 @media all and (max-width: 768px) {
-    .theme-selector-nav {
-        text-align: center;
-    }
+    /* .theme-selector-nav {
+        display: none;
+    } */
 }
 
 .navbar-inverse {
@@ -1023,4 +1033,9 @@ pre {
 
 #search-query.form-control:hover {
     border: 1px solid var(--colour-main);
+}
+
+.row-nomargin {
+    margin-left: 0;
+    margin-right: 0;
 }
