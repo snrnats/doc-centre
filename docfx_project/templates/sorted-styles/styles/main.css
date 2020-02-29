@@ -1,3 +1,10 @@
+:root {
+    --colour-dark: #404040;
+    --colour-main: #ff055e;
+    --colour-light-grey-1: #eee;
+    --colour-light-grey-2: #ddd;
+}
+
 @font-face {
     font-family: 'Circular Pro Book';
     src: url("../fonts/Book/lineto-circular-pro-book.eot?") format("embedded-opentype");
@@ -883,4 +890,54 @@ pre {
 .hljs-selector-pseudo,
 .hljs-title {
     color: #ff055e;
+}
+
+/* search */
+#search-results>.search-list,
+#search-results .item-title > a {
+    font-family: "Circular Pro Black";
+    color: var(--colour-dark);
+}
+
+.sr-item>.item-href {
+    color: var(--colour-main);
+}
+
+.pagination>.active>a {
+    background-color: var(--colour-main);
+    border-color: var(--colour-main);
+}
+
+/*.pagination>.active>a,*/
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
+    background-color: var(--colour-dark);
+    border-color: var(--colour-dark);
+}
+
+.pagination>li>a {
+    color: var(--colour-main);
+}
+
+.pagination>li>a:focus,
+.pagination>li>a:hover,
+.pagination>li>span:focus,
+.pagination>li>span:hover {
+    z-index: 2;
+    color: var(--colour-dark);
+    background-color: var(--colour-light-grey-1);
+    border-color: var(--colour-light-grey-2);
+}
+
+.mark, mark {
+    padding: unset;
+    background-color: var(--colour-light-grey-1);
+    border-radius: 3px;
+}
+
+#search-query.form-control:hover {
+    border: 1px solid var(--colour-main);
 }
