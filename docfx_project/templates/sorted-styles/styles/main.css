@@ -277,6 +277,21 @@ hr {
     margin: 30px 0;
 }
 
+.theme-selector-nav {
+    margin-top: 5px;
+    text-align: right;
+}
+
+.theme-selector-title {
+    margin-top: 7px;
+}
+
+@media all and (max-width: 768px) {
+    .theme-selector-nav {
+        text-align: center;
+    }
+}
+
 .navbar-inverse {
     background-color: var(--colour-top-nav);
     border-bottom: 0 none;
@@ -999,6 +1014,11 @@ pre {
     padding: unset;
     background-color: var(--colour-search-highlight);
     border-radius: 3px;
+}
+
+#search-query.form-control {
+    background-color: var(--colour-light-1);
+    border: 0px none;
 }
 
 #search-query.form-control:hover {

@@ -2,13 +2,6 @@
 
 <div class="hidden-sm col-md-2" role="complementary">
   <div class="sideaffix">
-    <div class="theme-switch-field">
-      <p>Theme</p>
-      <select id="theme-switcher">
-        <option value="dark">Dark</option>
-        <option value="light">Light</option>
-      </select>
-    </div>
     {{^_disableContribution}}
     <div class="contribution">
       <ul class="nav">

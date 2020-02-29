@@ -1,0 +1,18 @@
+{{!Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.}}
+
+<div class="subnav navbar navbar-default custom">
+  <div class="container hide-when-search col-md-6" id="breadcrumb">
+    <ul class="breadcrumb">
+      <li>{{_tocTitle}}</li>
+    </ul>
+    
+  </div>
+  <div class="col-md-6 theme-selector-nav">
+    <span class="theme-selector-title">Theme:</span>
+    <select id="theme-switcher">
+        <option value="dark">Dark</option>
+        <option value="light">Light</option>
+    </select>
+  </div>
+
+</div>
