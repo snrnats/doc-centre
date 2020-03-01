@@ -19,14 +19,16 @@
     --colour-grey-4: #ccc;
     --colour-highlight: yellow;
     --colour-success: #128712;
-    --colour-background: #212121; /* #282828; */
+    --colour-background: #171717;
     --colour-nav-background: #303030;
     --colour-top-nav: #181818;
     --colour-top-nav-link: #fff;
     --colour-tab-active: #333;
-    --colour-tab-background: #0d0d0d;
+    --colour-tab-background: #2e2e2e;
     --colour-code-base: #ccc;
     --colour-code-highlight-1: #ff055e;
     --colour-code-highlight-2: #ddd;
     --colour-search-highlight: #ccc;
+    --colour-tab-header: #242424;
+    --colour-tab-border: #454545;
 }

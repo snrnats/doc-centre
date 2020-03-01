@@ -270,7 +270,6 @@ ul pre {
 
 pre {
     margin: 20px 0 25px 0;
-    border: none;
 }
 
 hr {
@@ -589,10 +588,10 @@ ul.level1 {
 /* Style the tab */
 .tab {
     overflow: hidden;
-    border: 1px solid var(--colour-light-grey-1);
+    border: 1px solid var(--colour-tab-border);
     border-bottom: 0 none;
     width: auto;
-    background-color: var(--colour-light-3);
+    background-color: var(--colour-tab-header);
     position: relative;
 }
 
@@ -629,7 +628,7 @@ ul.level1 {
 .responseTabContent {
     display: none;
     padding: 16px 12px;
-    border: 1px solid var(--colour-light-grey-1);
+    border: 1px solid var(--colour-tab-border);
     background-color: var(--colour-tab-background);
 }
 
@@ -643,7 +642,7 @@ button.staticTabButton {
 .staticTabContent {
     display: block;
     padding: 0;
-    border: 1px solid var(--colour-light-grey-1);
+    border: 1px solid var(--colour-tab-border);
     margin-bottom: 20px;
 }
 
@@ -969,6 +968,7 @@ h1#big-header {
 
 pre {
     background-color: var(--colour-tab-background);
+    border: 0 none;
 }
 
 .hljs-attr,
