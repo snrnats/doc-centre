@@ -1,3 +1,4 @@
+name: "Sorted PRO Docs"
 trigger:
   branches:
     include:
@@ -10,23 +11,40 @@ variables:
     value: linux-agents-standard
   - name: netlify-cli-version
     value: '2.12.0'
-  - group: DocFXSettings 
+  - group: DocFXSettings
+  - group: AzureContainerRegistry-SortedGroup
+  - name: imageName
+    value: sorted.docs
+  - name: KubernetesClusterConnection
+    value: sorted-pro-aks-dev-02
+  - name: chartPath
+    value: helm/sorted-docs 
 
 stages:
-  - stage: Build
-    jobs:
-    - job: "BuildAndPublish"
-      pool:
-        name: $(pool)
-      steps:
-      - template: pipeline/docfx.yml
-      - template: pipeline/publish.yml
-  - stage: Deploy
-    condition: eq(variables['Build.SourceBranch'], 'refs/heads/master')
-    jobs:
-    - job: Deploy
-      pool:
-        name: $(pool)
-      steps:
-      - template: pipeline/netlify.yml
-      - template: pipeline/deploy.yml
+- stage: DockerBuild
+  jobs:
+  - job: "Prepare"
+    pool:
+      name: $(pool)
+    steps:
+    - template: pipeline/templates/gitversion.yml
+    - template: pipeline/templates/docker.yml
+    - template: pipeline/templates/helm.yml
+    - template: pipeline/templates/publish.yml
+# - stage: NetlifyBuild
+#   jobs:
+#   - job: "BuildAndPublish"
+#     pool:
+#       name: $(pool)
+#     steps:
+#     - template: pipeline/docfx.yml
+#     - template: pipeline/publish.yml
+- stage: Deploy
+  condition: eq(variables['Build.SourceBranch'], 'refs/heads/develop/internal')
+  jobs:
+  - job: Deploy
+    pool:
+      name: $(pool)
+    steps:
+    - template: pipeline/netlify.yml
+    - template: pipeline/deploy.yml

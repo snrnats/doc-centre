@@ -1,0 +1,19 @@
+!.git 
+#docfx requires the line above for contribute link
+
+Dockerfile
+readme.md
+serve.sh
+serve.ps1
+build.sh
+azure-pipelines.yml
+/pipeline
+/pipeline/*
+/helm
+/helm/*
+/_exported_templates
+/_exported_templates/*
+docfx_project/_site/
+docfx_project/_site/*
+docfx_project/obj/
+docfx_project/obj/*

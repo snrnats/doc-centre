@@ -1,0 +1,33 @@
+serviceName: sorted-docs
+replicaCount: 1
+namespace: feature
+
+image:
+  repository: repo
+  tag: latest # overridden on deployment
+  pullPolicy: IfNotPresent
+  pullSecret: pullSecret
+
+service:
+  name: sorted-docs
+  type: ClusterIP
+  port: 80
+
+container:
+  port: 80
+
+ingress:
+  names:
+    pro: sorted-docs
+  enabled: true
+  annotations:
+    pro:
+      kubernetes.io/ingress.class: nginx
+      nginx.ingress.kubernetes.io/auth-tls-secret: feature/sorted-wildcard-cert
+  hosts:
+    pro:
+      - host: docs-feature.sorted.com
+  tls:
+  - secretName: sorted-wildcard-cert
+    hosts:
+     - docs-feature.sorted.com

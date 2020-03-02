@@ -6,12 +6,33 @@
     .sideaffix {
         display: none;
     }
+
+    .subnav {
+        display: none !important;
+    }
 </style>
 
 <div class="header-container">
-    <h1 id="big-header">PRO Docs</h1>
+    <h1 id="big-header" class="text--underlined text--header"><span>Sorted </span><span>Docs</span></h1>
+    <p class="text--center">
+        Help and support for SortedPRO and SortedREACT.
+    </p>
 </div>
 <div class="button-container">
-    <a href="/reports/index.html"><div class="button1"><h2>Reports</h2><p>About PRO's PowerBI reports</p></div></a>
-    <a href="/api/help/introduction.html"><div class="button1"><h2>API Help</h2><p>Call flows, user guides, and more</p></div></a>
+    <a href="/pro/">
+        <div class="homepage-container">
+            <h2><span>Sorted</span><span>PRO</span></h2>
+            <p>
+                Documentation and user guides for SortedPRO
+            </p>
+        </div>
+    </a>
+    <a href="/react">
+        <div class="homepage-container">
+            <h2><span>Sorted</span><span>REACT<span></h2>
+            <p>
+                Documentation and user guides for SortedREACT
+            </p>
+        </div>
+    </a>
 </div>
