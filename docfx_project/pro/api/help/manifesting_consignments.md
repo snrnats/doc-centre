@@ -1,24 +1,41 @@
 # Manifesting Consignments
 
-
+Once you've created a consignment and allocated it to a carrier service, you're ready to manifest it. This page explains how to manifest consignments, how to view existing customer manifests, and how to set a consignment as ready to ship.
 
 ---
 
-## Overview
+## Manifesting Overview
+
+In the context of SortedPRO, the term **manifesting** refers to advising the carrier that the consignment in question needs to be collected from the shipper. It is the final step of most PRO workflows.
+
+You can only manifest consignments that are in a state of either _Allocated_ or _Manifest Failed_. If you attempt to manifest a consignment that is not in one of these states then PRO returns an error.
+
+PRO has two manifest endpoints: 
+
+* **Manifest Consignments** enables you to manifest multiple consignments at once by providing a list of `{consignmentReference}`s. 
+* **Manifest Consignments From Query** enables you to manifest all consignments that meet a specified set of search criteria.
+
+Manifesting a consignment changes its state to _Manifested_. At this point the carrier is aware of the consignment, and will collect it unless otherwise advised. In order to prevent the consignment being shipped, you would need to either cancel or deallocate it. 
+
+> <span class="note-header">More Information:</span>
+>
+> For more information on cancelling consignments, see the [Cancelling Consignments](/pro/api/help/cancelling_consignments.html) page.
+>
+> For more information on deallocating consignments, see the [Deallocating Consignments](/pro/api/help/deallocating_consignments.html) page.
+
+At this point, you should also look to print labels for the consignment, if you have not already done so. See [Getting Labels](/pro/api/help/cancelling_consignments.html) for an explanation of how to retrieve package labels.
+
+> <span class="note-header">More Information:</span>
+>
+> For worked examples showing consignments being manifested, see any of the flows in the [Example Call Flows](/pro/api/help/flows.html) section.
 
 ## Manifesting Consignments
 
-Once you've created a consignment, allocated it to a carrier service and printed labels for it, you're ready to manifest it. To manifest a consignment, use the **[Manifest Consignments](https://docs.electioapp.com/#/api/ManifestConsignments)** endpoint. `PUT https://api.electioapp.com/consignments/manifest`
+Perhaps the simplest way to manifest consignments in PRO is to use the **Manifest Consignment** endpoint. **Manifest Consignment** enables you to manifest multiple consignments at once by providing their unique references
 
-> <span class="note-header">Note:</span>
->
->  In the context of SortedPRO, the term "manifest" refers to advising the carrier of all the consignments/packages to be collected from the shipper.
+To call **Manifest Consignments**, send a `PUT` request to `https://api.electioapp.com/consignments/manifest`. The body of the request should contain a `ConsignmentReferences` list. 
 
-The **Manifest Consignments** endpoint can be used to manifest multiple consignments at once. The request should contain an array of `{consignmentReference}`s, corresponding to the consignments to be manifested. 
-
-All the consignments you provide in the request should be in a state of either _Allocated_ or _Manifest Failed_. If you attempt to manifest a consignment that is not in one of these states then PRO returns an error.
-
-Once PRO has received the request and attempted to manifest the consignments, the **Manifest Consignments** endpoint returns an array of messages indicating whether each individual consignment was successfully manifested or not.
+Once PRO has received the request, it attempts to manifest the consignments listed in the request. The system then returns an array of messages indicating whether each individual consignment was successfully manifested.
 
 > <span class="note-header">Note:</span>
 >
@@ -93,28 +110,9 @@ The example shows a request to manifest three consignments. The response indicat
 ```
 </div>
 
-## Manifesting Consignments by Query
+## Manifesting Consignments Using A Query
 
-Manifest Consignments From Query
-
-<div class="tab">
-    <button class="staticTabButton">Manifest Consignments From Query Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'ManifestQueryEndpoint')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="ManifestQueryEndpoint" class="staticTabContent" onclick="CopyToClipboard(this, 'ManifestQueryEndpoint')">
-
-```
-PUT https://api.electioapp.com/consignments/manifestFromQuery
-```
-</div>
-
-Once you've created a consignment, allocated it to a carrier service and printed labels for it, you're ready to manifest it. To manifest a consignment, use the **[Manifest Consignments From Query](https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery)** endpoint.
-
-> <span class="note-header">More Information:</span>
->  In the context of SortedPRO, the term "manifest" refers to advising the carrier that the consignment in question needs to be collected from the shipper.
-
-The **Manifest Consignments From Query** endpoint enables you to use a query to select consignments to be manifested. You can select consignments via the following criteria:
+The **Manifest Consignments From Query** endpoint enables you to use a query to select consignments to be manifested. You can select consignments via the following criteria: PUT https://api.electioapp.com/consignments/manifestFromQuery
 
 * `ShippingLocationReference` - The shipping location that the consignment will ship from. For information on how to obtain a list of your organisation's shipping locations and their references, see the [Get Shipping Locations](https://docs.electioapp.com/#/api/GetShippingLocations) page of the API reference.
 * `States` - The state that the consignments should be in. All the consignments you provide in the request should be in a state of either _Allocated_ or _Manifest Failed_. If you attempt to manifest a consignment that is not in one of these states then PRO returns an error.
