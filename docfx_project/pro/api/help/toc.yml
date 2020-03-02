@@ -42,7 +42,16 @@
 - name: Getting Labels
   href: getting_labels.md
 - name: Manifesting Consignments
-  href: manifesting_consignments.md  
+  href: manifesting_consignments.md
+- name: Managing Orders
+  href: managing_orders.md 
+  items:
+  - name: Creating New Orders
+    href: creating_new_orders.md   
+  - name: Managing Existing Orders
+    href: managing_existing_orders.md
+  - name: Packing Orders
+    href: packing_orders.md    
 - name: Using Delivery and Pickup Options
   href: using_delivery_and_pickup_options.md
   items:
@@ -52,15 +61,6 @@
     href: getting_pickup_options.md 
   - name: Selecting Options
     href: selecting_options.md
-- name: Managing Orders
-  href: managing_orders.md 
-  items:
-  - name: Creating New Orders
-    href: creating_new_orders.md   
-  - name: Managing Existing Orders
-    href: managing_existing_orders.md
-  - name: Packing Orders
-    href: packing_orders.md
 - name: Tracking Consignments
   href: tracking_consignments.md  
 - name: Getting Customs Docs and Invoices

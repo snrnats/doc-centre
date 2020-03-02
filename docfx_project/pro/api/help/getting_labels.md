@@ -45,12 +45,20 @@ All Labels API endpoints return labels objects. The labels object has two proper
 
 The below example shows a typical label object.
 
+<div class="tab">
+    <button class="staticTabButton">Example Tags array</button>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'labelExample')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+</div>
+
+<div id="labelExample" class="staticTabContent" onclick="CopyToClipboard(this, 'labelExample')">
+
 ```json
 {
   "File": "SlZCRVJpMHhMalFLSmRQcjZl ... VRrNU9ERUtKU1ZGVDBZPQ==",
   "ContentType": "application/pdf"
 }
 ```
+</div>
 
 ## Using the Label Data
 
