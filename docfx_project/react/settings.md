@@ -1,20 +1,6 @@
----
-title: Settings
-slug: "/settings/"
-member: "UI Help"
-order: 3
-description: "How to configure REACT's settings."
-keywords: "settings, setup, config, configuration, api key, apikey, carrier connector, connector, label, labels, state label, state labels, sftp account, custom, customise, customize, brand, branding"
----
+# Settings
 
 This page explains how to use the pages in the REACT UI's **Settings** section to set up API keys, SFTP accounts, carrier connectors and custom state labels. 
-
-### On This Page
-
-* [Setting up API Keys](https://docs.sorted.com/react/settings/#setting-up-api-keys)
-* [Setting up SFTP Accounts](https://docs.sorted.com/react/settings/#setting-up-sftp-accounts)
-* [Setting up Carrier Connectors](https://docs.sorted.com/react/settings/#setting-up-carrier-connectors)
-* [Setting up Custom State Labels](https://docs.sorted.com/react/settings/#setting-up-custom-state-labels)
 
 > <span class="note-header">Note:</span>
 >

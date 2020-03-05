@@ -1,20 +1,6 @@
----
-title: Calculated Events
-slug: "/calc-events/"
-member: "Integration Guide"
-order: 7
-description: "An introduction to REACT's calculated events."
-keywords: "calculated, events, calculate, calc, event, state, status, ai, predict, predictive, late, missing, trackable, is_late, may_be_missing, hours_late"
----
+# Calculated Events
+
 REACT's Calculated Events feature helps you to stay on top of shipments that may have gone missing, or which have passed their delivery promise date. This page explains the shipment properties that REACT can calculate, how calculated events work, and how best to use calculated events
-
-### On This Page
-
-* [What is a Calculated Event?](https://docs.sorted.com/react/calc-events/#what-is-a-calculated-event)
-* [May Be Missing](https://docs.sorted.com/react/calc-events/#may-be-missing)
-* [Late](https://docs.sorted.com/react/calc-events/#late)
-* [Final States](https://docs.sorted.com/react/calc-events/#final-states)
-* [Using Calculated Properties](https://docs.sorted.com/react/calc-events/#using-calculated-properties)
 
 ---
 

@@ -1,20 +1,6 @@
----
-title: Managing Webhooks
-slug: "/managing-webhooks/"
-member: "UI Help"
-order: 2
-description: "Creating and managing webhooks and shipment filters."
-keywords: "webhooks, web, hooks, filters, shipment, state, setup, config, updates, updating, set up, callback, notifications, configuration, configuring, webhok, payload, shipment filter, filter, push"
----
+# Managing Webhooks
+
 SortedREACT uses webhooks to notify you of shipment events. This page explains how REACT webhooks work, how you can control them using shipment filters, and how to set webhooks and shipment filters up in the UI.
-
-### On This Page
-
-* [What is a Webhook?](https://docs.sorted.com/react/managing-webhooks/#what-is-a-webhook)
-* [Webhooks in REACT](https://docs.sorted.com/react/managing-webhooks/#webhooks-in-react)
-* [Managing Your Shipment Filters](https://docs.sorted.com/react/managing-webhooks/#managing-your-shipment-filters)
-* [Managing Your Webhooks](https://docs.sorted.com/react/managing-webhooks/#managing-your-webhooks)
-* [Example Configuration](https://docs.sorted.com/react/managing-webhooks/#example-configuration)
 
 ---
 

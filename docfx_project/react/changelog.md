@@ -1,11 +1,4 @@
----
-title: What's New
-slug: "/changelog/"
-member: "Reference Info"
-order: 2
-description: "List of changes and and updates to REACT."
-keywords: "Change, log, release, notes, release notes, change log, changes, chnage, relese, modification, enhancement, enhancements, defect, bug, fix, fixes, fixed, known, issues, added, removed"
----
+# What's New
 
 Stay up to date with changes and enhancements to REACT.
 

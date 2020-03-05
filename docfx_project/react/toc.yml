@@ -1,7 +1,7 @@
 - name: REACT Overview
   href: overview.md 
 - name: Quick Start
-  href: quick_start.md
+  href: quick-start.md
 - name: Managing Webhooks
   href: managing-webhooks.md
 - name: Settings

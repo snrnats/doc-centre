@@ -1,20 +1,6 @@
----
-title: Monitoring Shipments
-slug: "/monitoring-shipments/"
-member: "UI Help"
-order: 5
-description: "How to monitor REACT shipments via the UI dashboards."
-keywords: "shipment, monitor, monitoring, shipments, UI, dashboard, dashboards, overview, view, viewing, dahsboard, dashboard, details, drill down, drilling down, location, export, exporting, csv, "
----
+# Monitoring Shipments
 
 REACT's dashboards make keeping track of your shipment performance easy. This page explains how to use REACT's **States** and **All Shipments** dashboards to get timely information on how your shipments are progressing, and to spot potential problems.
-
-### On This Page
-
-* [Viewing an Overview of Your Shipments](https://docs.sorted.com/react/monitoring-shipments/#viewing-an-overview-of-your-shipments)
-* [Viewing Individual Shipments](https://docs.sorted.com/react/monitoring-shipments/#viewing-individual-shipments)
-* [Searching For and Filtering Dashboard Data](https://docs.sorted.com/react/monitoring-shipments/#searching-for-and-filtering-dashboard-data)
-* [User Access](https://docs.sorted.com/react/monitoring-shipments/#user-access)
 
 ---
 

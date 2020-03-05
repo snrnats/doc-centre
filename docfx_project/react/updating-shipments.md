@@ -1,18 +1,6 @@
----
-title: Updating Shipments
-slug: "/updating-shipments/"
-member: "Integration Guide"
-order: 4
-description: "How to update and delete shipments in REACT."
-keywords: "shipment, update, updating, shipments, delete, deleting, updating shipments, deleting shipments, put, amending, amendments, revising, revisions"
----
+# Updating Shipments
 
 This page explains how to use REACT's **Update Shipment** and **Delete Shipment** endpoints to keep your registered shipment data up to date.
-
-### On This Page
-
-* [Updating Shipments](https://docs.sorted.com/react/updating-shipments/#updating-shipments)
-* [Deleting Shipments](https://docs.sorted.com/react/updating-shipments/#deleting-shipments)
 
 ---
 

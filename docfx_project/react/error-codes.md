@@ -1,13 +1,8 @@
----
-title: Error Codes
-slug: "/error-codes/"
-member: "Integration Guide"
-order: 5
-description: "Lists REACT error codes and potential fixes."
-keywords: "error, errors, error codes, problem, troubleshooting, fail, failure, code, codes, http, fix, resolution, fixes, resolve, resolving, invalid, duplicate, missing, parameter, range, value"
----
+# Error Codes
 
 This page lists the errors that REACT's APIs can return and suggests potential fixes. For an explanation of the structure of the error response itself, see the [REACT Error Structure](https://docs.sorted.com/react/error-codes/#react-error-structure) section.
+
+---
 
 ## 400 - Validation Error
 

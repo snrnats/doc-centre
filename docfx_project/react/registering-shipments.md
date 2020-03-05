@@ -1,20 +1,6 @@
----
-title: Registering Shipments
-slug: "/registering-shipments/"
-member: "Integration Guide"
-order: 2
-description: "How to register REACT shipments via API and SFTP."
-keywords: "shipment, register, registering, shipments, API, SFTP, registration, add, adding, upload, uploading, integration, integration guide, extra information, extra, information, file structure, structure, references, carrier details, dates, addresses, consumer info, custom metadata, shipment types"
----
+# Registering Shipments
 
 SortedREACT can only work with the shipments you register. This page explains how to register shipment details using the Shipments API and REACT's SFTP bulk upload service, and how to get the most out of REACT by registering additional shipment information.
-
-### On This Page
-
-* [Registering Shipments by API](https://docs.sorted.com/react/registering-shipments/#registering-shipments-by-api)
-* [Registering Shipments by SFTP](https://docs.sorted.com/react/registering-shipments/#registering-shipments-by-sftp)
-* [Registering Extra Shipment Information](https://docs.sorted.com/react/registering-shipments/#registering-extra-shipment-information)
-* [CSV File Structure](https://docs.sorted.com/react/registering-shipments/#csv-file-structure)
 
 ---
 

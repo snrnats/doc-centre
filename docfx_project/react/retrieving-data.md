@@ -1,22 +1,6 @@
----
-title: Retrieving Shipment and Event Data
-slug: "/retrieving-data/"
-member: "Integration Guide"
-order: 3
-description: "How to retrieve shipment and event data via REACT's APIs."
-keywords: "shipment, retrieve, retrieving, shipments, API, get, data, information, getting, fetch, fetching, recall, recalling, info, apis, tracking, events, paging, results, endpoint, endpoints"
----
+# Retrieving Shipment and Event Data
 
 SortedREACT's APIs can retrieve shipment, event, and tracking information, enabling you to embed live shipment tracking into your websites and apps. This page explains the endpoints you can use to get this information, and the format in which the information is returned.
-
-### On This Page
-
-* [Tracking in REACT](https://docs.sorted.com/react/retrieving-data/#tracking-in-react)
-* [Retrieving Shipments](https://docs.sorted.com/react/retrieving-data/#retrieving-shipments)
-* [Retrieving Tracking Events](https://docs.sorted.com/react/retrieving-data/#retrieving-tracking-events)
-* [Retrieving Events](https://docs.sorted.com/react/retrieving-data/#retrieving-events)
-* [Retrieving Shipment State History](https://docs.sorted.com/react/retrieving-data/#retrieving-shipment-state-history)
-* [Paging Results](https://docs.sorted.com/react/retrieving-data/#paging-results)
 
 ---
 

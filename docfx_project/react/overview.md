@@ -1,23 +1,8 @@
----
-title: REACT Overview
-slug: "/overview/"
-member: "Getting Started"
-order: 1
-description: "A quick introduction to REACT."
-keywords: "overview, introduction, intro, how react works, lifecycle, components, user management, user, management, getting started, getting, started"
----
+# REACT Overview
 
 Welcome to SortedREACT! Here you'll find a brief overview of REACT's component parts and what you can do with them.
 
 If you just want to get started with the system, check out the [Quick Start](https://docs.sorted.com/react/quick-start/) guide.
-
-### On This Page
-
-* [Introduction to REACT](https://docs.sorted.com/react/overview/#introduction-to-react)
-* [REACT Components](https://docs.sorted.com/react/overview/#react-components)
-* [Integrating with REACT](https://docs.sorted.com/react/overview/#integrating-with-react)
-* [Webhooks and Shipment Filters](https://docs.sorted.com/react/overview/#webhooks-and-shipment-filters)
-* [UI](https://docs.sorted.com/react/overview/#ui)
 
 ---
 

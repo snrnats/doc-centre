@@ -1,11 +1,4 @@
----
-title: Glossary
-slug: "/glossary/"
-member: "Reference Info"
-order: 9
-description: "A glossary of REACT terms."
-keywords: "glossary, terms, words, dictionary, lexicon, definition, define, defnition "
----
+# Glossary
 
 <div class="table-1">
 

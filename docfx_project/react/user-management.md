@@ -1,19 +1,6 @@
----
-title: User Management
-slug: "/user-management/"
-member: "UI Help"
-order: 4
-description: "How to add and remove REACT users."
-keywords: "user, users, user management, adding, removing, management, staff, people, permissions, invitations, invites, invite, invitation"
----
+# User Management
 
 REACT's **Account** page enables you to manage the users associated with your organisation's REACT account. This page explains how to invite new users, how to define user permissions, and how to revoke user access.
-
-### On This Page
-
-* [Inviting New Users](https://docs.sorted.com/react/user-management/#inviting-new-users)
-* [Removing Users](https://docs.sorted.com/react/user-management/#removing-users)
-* [User Roles](https://docs.sorted.com/react/user-management/#user-roles)
 
 ---
 ## Inviting New Users

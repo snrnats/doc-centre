@@ -1,19 +1,6 @@
----
-title: Configuring Notifications
-slug: "/notifications/"
-member: "UI Help"
-order: 6
-description: "Learn how to configure email and SMS notifications in REACT."
-keywords: "notification, notifications, email, SMS, text, sendgrid, twilio, postmark, mail, alert, alerts, configuring, config, setup, set up"
----
+# Configuring Notifications
 
 REACT's **Notifications Info** UI page enables you to set up automated email and SMS delivery notifications for your customers without any development work. To configure notifications, you'll need to set up an account with one of REACT's compatible email or SMS providers, give REACT your account details, and configure the details of the notification itself.
-
-### On This Page
-
-* [Setting up Notification Connectors](https://docs.sorted.com/react/notifications/#setting-up-notification-connectors)
-* [Creating Notifications](https://docs.sorted.com/react/notifications/#creating-notifications)
-* [User Access](https://docs.sorted.com/react/notifications/#user-access)
 
 ---
 

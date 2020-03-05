@@ -1,26 +1,10 @@
----
-title: Creating Tracking Pages
-slug: "/tracking-pages/"
-member: "UI Help"
-order: 5
-description: "Using REACT's Tracking Page function to build branded tracking pages."
-keywords: "tracking, shipping, shipment, track, page, pages, tracking page"
----
+# Creating Tracking Pages
 
 REACT's handy **Create Tracking Page** feature enables you to build branded shipment tracking pages in minutes, with no coding required. This page explains how REACT tracking pages work, how to set up new pages, and how to manage your existing pages.
 
-### On This Page
-
-* [Creating New Tracking Pages](https://docs.sorted.com/react/tracking-pages/#creating-new-tracking-pages)
-* [Configuring General Page Details](https://docs.sorted.com/react/tracking-pages/#configuring-general-page-details)
-* [Configuring the Nav Bar](https://docs.sorted.com/react/tracking-pages/#configuring-the-nav-bar)
-* [Configuring Page Layout](https://docs.sorted.com/react/tracking-pages/#configuring-page-layout)
-* [Publishing Your Page](https://docs.sorted.com/react/tracking-pages/#publishing-your-page)
-* [Managing Existing Pages](https://docs.sorted.com/react/tracking-pages/#managing-existing-pages)
-* [Configuring Fonts](https://docs.sorted.com/react/tracking-pages/#configuring-fonts)
-* [User Access](https://docs.sorted.com/react/tracking-pages/#user-access)
-
 ---
+
+## What Is A Tracking Page?
 
 A REACT tracking page is a customisable microsite, hosted by Sorted, that displays status and event information about an individual shipment. Your customers can track their order simply by visiting the link that corresponds to their shipment. 
 
