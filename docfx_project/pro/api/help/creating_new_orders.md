@@ -162,6 +162,12 @@ You can also generate orders from pickup options. The process is the same as tha
 > * For reference information on the Delivery Options and Pickup Options APIs, see the <a href="https://docs.electioapp.com/#/api/DeliveryOptions">API reference</a>.
 > * For worked examples showing an order being created from delivery options, see the <a href="/pro/api/help/flows/consumer_options_flex_flow.html">Consumer Options Flex</a> example call flow.
 
+## Next Steps
+
+* Learn how to work with existing orders at the [Managing Existing Orders](/pro/api/help/managing_existing_orders.html) page.
+* Learn now to pack orders into consignments at the [Creating Consignments From Orders](/pro/api/help/packing_orders.html) page.
+* Learn how to retrieve delivery options at the [Getting Delivery Options](/pro/api/help/getting_delivery_options.html) page.
+
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>
 <script src="../../scripts/copy.js"></script>
