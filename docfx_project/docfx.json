@@ -11,8 +11,7 @@
       {
         "files": [
           "react/**.md",
-          "react/**.yml",
-          "react/images/**"
+          "react/**.yml"
         ]
       },      
       {
@@ -35,6 +34,7 @@
     "resource": [{
         "files": [
           "pro/images/**",
+          "react/images/**",
           "images/**"
         ]
       },
