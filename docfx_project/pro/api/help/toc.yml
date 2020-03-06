@@ -50,7 +50,7 @@
     href: creating_new_orders.md   
   - name: Managing Existing Orders
     href: managing_existing_orders.md
-  - name: Packing Orders
+  - name: Creating Consignments From Orders
     href: packing_orders.md    
 - name: Using Delivery and Pickup Options
   href: using_delivery_and_pickup_options.md

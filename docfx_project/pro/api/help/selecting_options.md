@@ -84,23 +84,18 @@ The example shows a request to select a delivery option that has a `{deliveryOpt
 
 Reserve Pickup Option
 
-Select delivery option as an order
+## Creating Orders From Delivery Options
 
-<div class="tab">
-    <button class="staticTabButton">Select Delivery Option as an Order Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'optAsOrderEndpoint')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+The **Select Delivery Option As An Order** endpoint enables you to take a delivery option and generate an order from it. To call **Select Delivery Option As An Order**, send a `POST` request to `https://api.electioapp.com/deliveryoptions/selectorder`. 
 
-<div id="optAsOrderEndpoint" class="staticTabContent" onclick="CopyToClipboard(this, 'optAsOrderEndpoint')">
+The body of the request should contain the `Reference` of the delivery option you want to select. If required, you can also specify an `OrderReferenceProvidedByCustomer` and metadata to be added to the generated order.
 
-  ```
-  POST https://api.electioapp.com/deliveryoptions/selectorder
-  ```
+> <span class="highlight">
+>
+> This section assumes that you have already received options for a particular delivery. For more information on requesting delivery options, see the [Getting Delivery Options](/pro/api/)
 
-</div>     
-
-Once the customer has selected an available delivery option, you'll need to record their choice in SortedPRO via the **[Select Delivery Option as an Order](https://docs.electioapp.com/#/api/SelectDeliveryOptionasanOrder)** endpoint. This endpoint takes the `{Reference}` of the selected option as a path parameter.
-
+Once the customer has selected an available delivery option, you'll need to record their choice in SortedPRO via the **[Select Delivery Option as an Order](https://docs.electioapp.com/#/api/SelectDeliveryOptionasanOrder)** endpoint. This endpoint takes the `{Reference}` of the selected option as a path parameter. POST https://api.electioapp.com/deliveryoptions/selectorder
+ 
 Once it has received the **Select Delivery Option as an Order** request, PRO uses the details of the selected option to create an order and returns an object containing the associated `{orderReference}`. The reference will come in useful in the next step, when we pack the order into consignments.
 
 > <span class="note-header">Note:</span>
