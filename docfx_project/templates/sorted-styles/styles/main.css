@@ -1087,3 +1087,9 @@ mark {
 .table-bordered>thead>tr>th {
     border-bottom: 1px solid var(--colour-table-border);
 }
+
+@media screen and (max-width: 767px) {
+    .table-responsive {
+        border: 0px none;
+    }    
+}
