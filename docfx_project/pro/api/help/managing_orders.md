@@ -28,7 +28,11 @@ Suppose that a clothing retailer has received a customer order for a necklace, a
 
 In this example, you would need to run **Pack Order** twice - once for each consignment.
 
-<span class="highlight">GRAPHIC IN HERE</span>
+<p>
+   <a href="../../images/order-diagram.png" target="_blank" >
+      <img src="../../images/order-diagram.png" class="noborder"/>
+   </a>
+</p>
 
 ## Orders Section Contents
 
