@@ -18,7 +18,7 @@ Currently, you can only provide one tracking reference in the `tracking_referenc
 >
 > As with other REACT APIs, you'll need to include JSON `Content-Type` and `Accept` headers and a valid API key in order to use the **Register Shipments** endpoint. You can get an API key from the **Settings > API Keys** page of the REACT UI. 
 >
-> For more information on obtaining an API key, see the [Getting an API Key](https://docs.sorted.com/react/quick-start/#registering-a-shipment) section of the Quick Start guide.
+> For more information on obtaining an API key, see the [Getting an API Key](/react/quick-start.html/#registering-a-shipment) section of the Quick Start guide.
 
 **Examples**
 
@@ -73,7 +73,7 @@ When REACT receives the request, it creates a new shipment record and returns a 
 
 And that's it! REACT will look out for the tracking reference you provided in the carrier data it receives from its carrier connectors, and will update the shipment's information as new events come in. You can use the carrier tracking reference or `{id}` to get updates on the shipment using REACT's APIs. The newly-registered shipment can also trigger any webhooks you have configured.
 
-REACT assigns an initial shipment state of *Registered* to all newly-registered shipments. For a full list of REACT shipment states, see the [Shipment States](https://docs.sorted.com/react/shipment-states/) page.
+REACT assigns an initial shipment state of *Registered* to all newly-registered shipments. For a full list of REACT shipment states, see the [Shipment States](/react/shipment-states.html/) page.
 
 ## Registering Shipments by SFTP
 
@@ -97,7 +97,7 @@ The shipment data you want to upload should be stored in either a JSON or CSV fi
 
 > <span class="note-header">More Information:</span>
 >
-> For more information on representing shipment data in CSV format, see the [CSV File Structure](https://docs.sorted.com/react/registering-shipments#csv-file-structure) section.
+> For more information on representing shipment data in CSV format, see the [CSV File Structure](/react/registering-shipments.html#csv-file-structure) section.
 >
 > For more information on the data structure of the **Register Shipments** requests, see the [API Reference](https://docs.sorted.com/react/api/#RegisterShipments). 
 
@@ -413,16 +413,10 @@ The following examples represent the same data structure:
 
 <span class="text--caption text--center">The same shipment data represented in JSON and CSV formats.</span>
 
-### Downloadable CSV File
-
-Click the button below to download an example CSV file showing a detailed shipment registration.
-
-<a className="button button--grey-outline" href="shipments-1-valid.csv">Example CSV file</a><br/><br/> 
-
 ## Next Steps
 
 Learn more about integrating with REACT:
 
-* [Retrieving Shipment and Event Data](https://docs.sorted.com/react/retrieving-data/)
-* [Updating Shipments](https://docs.sorted.com/react/updating-shipments/)
-* [Error Codes](https://docs.sorted.com/react/error-codes/)
+* [Retrieving Shipment and Event Data](/react/retrieving-data.html)
+* [Updating Shipments](/react/updating-shipments.html)
+* [Error Codes](/react/error-codes.html)

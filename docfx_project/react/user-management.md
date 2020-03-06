@@ -134,6 +134,6 @@ The table below shows what each user role can view and edit within the REACT UI.
 
 Learn more about the REACT UI:
 
-* [Monitoring Shipments](https://docs.sorted.com/react/monitoring-shipments/)
-* [Managing Webhooks](https://docs.sorted.com/react/managing-webhooks/)
-* [Settings](https://docs.sorted.com/react/settings/)
+* [Monitoring Shipments](/react/monitoring-shipments.html)
+* [Managing Webhooks](/react/managing-webhooks.html)
+* [Settings](/react/settings.html)

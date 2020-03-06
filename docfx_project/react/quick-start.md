@@ -1,6 +1,6 @@
 # Quick Start
 
-Ready to get started with SortedREACT? This guide explains how to set up [real-time shipment tracking](https://docs.sorted.com/react/quick-start/#setting-up-tracking) and configure [shipment state monitoring](https://docs.sorted.com/react/quick-start/#setting-up-webhooks) via webhooks.
+Ready to get started with SortedREACT? This guide explains how to set up [real-time shipment tracking](/react/quick-start.html/#setting-up-tracking) and configure [shipment state monitoring](/react/quick-start.html/#setting-up-webhooks) via webhooks.
 
 ---
 ## Setting up Tracking
@@ -91,7 +91,7 @@ The `id` is particularly important - this is a REACT-generated identifier for th
 >
 > For a full list of the properties REACT accepts when creating a shipment, check the [API Reference](https://docs.sorted.com/react/api/#RegisterShipments).
 >
-> For more information on registering shipments, see the [Registering Shipments](https://docs.sorted.com/react/registering-shipments/) page.
+> For more information on registering shipments, see the [Registering Shipments](/react/registering-shipments.html) page.
 
 ### Setting up Carrier Connectors
 
@@ -115,14 +115,14 @@ Once the connector is set up, REACT keeps you in the loop by automatically acces
 
 ### Getting Tracking Events
 
-Once you've registered your shipments, your customers will probably want to see how they're getting on. One way to track a shipment in REACT is via the [Get Tracking Events by Shipment ID](https://docs.sorted.com/react/api/#GetTrackingEventsbyShipmentID) endpoint. Send a <span class="text--blue text--bold">GET</span> request to `https://api.sorted.com/react/tracking/search?shipment_id={id}`, where `{id}` is the shipment `id` you obtained when registering the shipment. Don't forget to include your [API key](https://docs.sorted.com/react/quick-start/#getting-an-api-key).
+Once you've registered your shipments, your customers will probably want to see how they're getting on. One way to track a shipment in REACT is via the [Get Tracking Events by Shipment ID](https://docs.sorted.com/react/api/#GetTrackingEventsbyShipmentID) endpoint. Send a <span class="text--blue text--bold">GET</span> request to `https://api.sorted.com/react/tracking/search?shipment_id={id}`, where `{id}` is the shipment `id` you obtained when registering the shipment. Don't forget to include your [API key](/react/quick-start.html/#getting-an-api-key).
 
 This endpoint returns a [Shipment Tracking Events](https://docs.sorted.com/react/api/#GetTrackingEventsbyShipmentID) response, which includes an
 array of all the tracking events that have been logged for that shipment. You can embed this data into your website or app, enabling you to serve real-time tracking information to your customers without directing them away from your site.
 
 > <span class="note-header">More Information:</span>
 >
-> For more information on retrieving shipment and tracking data from REACT, see the [Retrieving Shipment and Event Data](https://docs.sorted.com/react/retrieving-data/) page.
+> For more information on retrieving shipment and tracking data from REACT, see the [Retrieving Shipment and Event Data](/react/retrieving-data.html/) page.
 
 ## Setting Up Webhooks
 
@@ -208,13 +208,13 @@ And we're done! Every time a shipment falls into a state of **Delivered To Neigh
 
 The next steps are up to you. Following our example, you might integrate the webhook payload with your SMS gateway. However, you can use the data from REACT webhooks in any way you choose. The possibilities are limitless!
 
-For more information on creating and maintaining shipment filters and webhooks, see the [Managing Webhooks](https://docs.sorted.com/react/managing-webhooks/) page.
+For more information on creating and maintaining shipment filters and webhooks, see the [Managing Webhooks](/react/managing-webhooks.html/) page.
 
 ## Next Steps
 
 We've barely scratched the surface of what you can do with REACT. Read on for more info:
 
-* [REACT Overview](https://docs.sorted.com/react/overview/)
-* [Registering Shipments](https://docs.sorted.com/react/registering-shipments/)
-* [Managing Webhooks](https://docs.sorted.com/react/managing-webhooks/)
-* [Retrieving Shipment and Event Data](https://docs.sorted.com/react/retrieving-data/)
+* [REACT Overview](/react/overview.html)
+* [Registering Shipments](/react/registering-shipments.html)
+* [Managing Webhooks](/react/managing-webhooks.html)
+* [Retrieving Shipment and Event Data](/react/retrieving-data.html)

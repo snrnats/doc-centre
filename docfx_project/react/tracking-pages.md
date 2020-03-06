@@ -253,6 +253,6 @@ Admin and Marketing users can view, edit and delete tracking pages. Dashboard us
 ## Next Steps
 
 Learn more about the REACT UI:
-* [Monitoring Shipments](/react/monitoring-shipments.html/)
+* [Monitoring Shipments](/react/monitoring-shipments.html)
 * [Settings](/react/settings.html)
 * [User Management](/react/user-management.html)

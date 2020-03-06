@@ -72,4 +72,4 @@ This table displays available REACT shipment states and indicates which carriers
 >
 > The **Carriers with Mapped Events** column displays the carriers that have a tracking event mapped for each shipment state. If a carrier does not have an event mapped for a particular state then shipments with that carrier can never assume that state, because the carrier does not have any events that correspond to it.
 > 
-> You should bear this information in mind when setting up shipment filters, in order to avoid setting up a filter for an state that your carriers do not use. For more information on configuring shipment filters, see [Managing Your Shipment Filters](https://docs.sorted.com/react/managing-webhooks/#managing-your-shipment-filters). 
+> You should bear this information in mind when setting up shipment filters, in order to avoid setting up a filter for an state that your carriers do not use. For more information on configuring shipment filters, see [Managing Your Shipment Filters](/react/managing-webhooks.html#managing-your-shipment-filters). 
