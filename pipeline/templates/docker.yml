@@ -2,6 +2,7 @@ steps:
   - script: |
       docker build -t $(imageName):$(buildVersion) \
       --build-arg ENVIRONMENT="$(ENVIRONMENT)" \
+      --build-arg AUTH_TOKEN="$(AUTH_TOKEN)" \
       $(Build.SourcesDirectory)
     displayName: 'Docker Build'
   - script: |
