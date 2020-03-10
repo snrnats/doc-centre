@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <LangVersion>8</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="HtmlAgilityPack" Version="1.11.17" />
+      <PackageReference Include="Microsoft.DocAsCode.Build.Common" Version="2.48.1" />
+      <PackageReference Include="Microsoft.DocAsCode.Build.ConceptualDocuments" Version="2.48.1" />
+      <PackageReference Include="Microsoft.DocAsCode.Build.Engine" Version="2.48.1" />
+      <PackageReference Include="Microsoft.DocAsCode.Plugins" Version="2.48.1" />
+    </ItemGroup>
+
+</Project>

@@ -50,7 +50,7 @@
       "default",
       "templates/sorted-styles"
     ],
-    "postProcessors": [ "ExtractSearchIndex" ],
+    "postProcessors": [ "ExtractSearchIndex", "AuthorsProcessor" ],
     "markdownEngineName": "markdig",
     "noLangKeyword": false,
     "keepFileLink": false,

@@ -2,3 +2,6 @@
 [Dd]ocfx/
 docfx.zip
 .DS_Store
+.idea/
+bin/
+obj/
