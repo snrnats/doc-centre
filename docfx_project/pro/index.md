@@ -10,6 +10,10 @@
     .subnav {
         display: none !important;
     }
+
+    .page-stats {
+        display: none !important;
+    }
 </style>
 
 <div class="header-container">
