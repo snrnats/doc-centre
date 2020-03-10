@@ -4,7 +4,7 @@ This page explains how to use the pages in the REACT UI's **Settings** section t
 
 > <span class="note-header">Note:</span>
 >
-> The **Settings** section also features webhook and shipment filter setup pages. These pages are covered in detail on the [Managing Webhooks](/react/managing-webhooks.html) page.
+> The **Settings** section also features webhook and shipment filter setup pages. These pages are covered in detail on the [Managing Webhooks](/react/help/managing-webhooks.html) page.
 
 ---
 
@@ -86,7 +86,7 @@ REACT only allows one SFTP account per organisation. If you attempt to create a 
 
 > <span class="note-header">More Information:</span>
 >
-> For more information on uploading shipment data to REACT via SFTP, see the [Registering Shipments by SFTP](/react/registering-shipments.html#registering-shipments-by-sftp) section of the **Registering Shipments** page.
+> For more information on uploading shipment data to REACT via SFTP, see the [Registering Shipments by SFTP](/react/help/registering-shipments.html#registering-shipments-by-sftp) section of the **Registering Shipments** page.
 
 ### User Access
 
@@ -202,6 +202,6 @@ Admin and Marketing users can view, edit and delete custom state labels. Dashboa
 
 Learn more about the REACT UI:
 
-* [Monitoring Shipments](/react/monitoring-shipments.html)
-* [Managing Webhooks](/react/managing-webhooks.html)
-* [User Management](/react/user-management.html)
+* [Monitoring Shipments](/react/help/monitoring-shipments.html)
+* [Managing Webhooks](/react/help/managing-webhooks.html)
+* [User Management](/react/help/user-management.html)

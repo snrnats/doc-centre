@@ -16,7 +16,7 @@ REACT has three APIs that enable you to retrieve information.
 >
 > All REACT APIs require you to include JSON `Content-Type` and `Accept` headers and a valid API key as request headers. You can get an API key from the **Settings > API Keys** page of the REACT UI.
 >
-> For more information on obtaining an API key, see the [Getting an API Key](/react/quick-start.html/#registering-a-shipment) section of the Quick Start guide.
+> For more information on obtaining an API key, see the [Getting an API Key](/react/help/quick-start.html/#registering-a-shipment) section of the Quick Start guide.
 
 ## Retrieving Shipments
 
@@ -51,7 +51,7 @@ To use the **Get Shipments** endpoint, send a <span class="text--blue text--bold
 
 > <span class="note-header">Note:</span>
 >
-> You can only retrieve shipments by `custom_references` if you have previously registered that information for the relevant shipments. For more information on registering shipment information, see the [Registering Shipments](/react/registering-shipments.html) page.
+> You can only retrieve shipments by `custom_references` if you have previously registered that information for the relevant shipments. For more information on registering shipment information, see the [Registering Shipments](/react/help/registering-shipments.html) page.
 
 None of the search parameters are mandatory in themselves, but at least one search parameter must be provided. If you do not provide at least one search parameter, then REACT returns a validation error. 
 
@@ -76,15 +76,15 @@ Where a valid request is made but no matching shipments are found, REACT returns
 
 <span class="text--caption text--center">Response from Shipment API with no matching shipments found.</span>
 
-As with all REACT APIs, the **Get Shipments** endpoint retrieves a maximum of 200 records with any single request. Where more than 200 records exist, paging links to the next and previous set of results, as well as the first and last set of results, are returned. The `page` parameter enables you to request a particular page of results. See the [Paging Results](/react/retrieving-data.html/#paging-results) section for more information on paging in REACT's APIs.
+As with all REACT APIs, the **Get Shipments** endpoint retrieves a maximum of 200 records with any single request. Where more than 200 records exist, paging links to the next and previous set of results, as well as the first and last set of results, are returned. The `page` parameter enables you to request a particular page of results. See the [Paging Results](/react/help/retrieving-data.html/#paging-results) section for more information on paging in REACT's APIs.
 
 ### The Shipment Resource
 
-Both Get Shipments endpoints return **Shipment** resources. The **Shipment** resource contains the information provided when the shipment was registered. For more information on the information that REACT accepts when registering a shipment, see the [Registering Shipments](/react/registering-shipments.html) doc page and the [Register Shipments API reference](https://docs.sorted.com/react/api/#RegisterShipments).
+Both Get Shipments endpoints return **Shipment** resources. The **Shipment** resource contains the information provided when the shipment was registered. For more information on the information that REACT accepts when registering a shipment, see the [Registering Shipments](/react/help/registering-shipments.html) doc page and the [Register Shipments API reference](https://docs.sorted.com/react/api/#RegisterShipments).
 
 As well as the shipment's registration information, the **Shipment** resource contains some REACT-generated properties that could be particularly useful when embedding tracking pages on your website or app:
 
-* `shipment.shipment_state.state` - Contains the shipment's current REACT shipment state. REACT uses carrier tracking events to calculate this value. For a full list of available REACT shipment states, see the [Shipment States](/react/shipment-states.html) page.
+* `shipment.shipment_state.state` - Contains the shipment's current REACT shipment state. REACT uses carrier tracking events to calculate this value. For a full list of available REACT shipment states, see the [Shipment States](/react/help/shipment-states.html) page.
 * `shipment.shipment_state.state_label` - Contains the customer-facing label for the shipment's current state. You can customise shipment state labels using the **Custom State Labels** UI page. If you have not set a custom label up for the shipment state then this field contains the default label text.
    > <span class="note-header">Note:</span>
    >
@@ -153,7 +153,7 @@ REACT events are not the same as carrier tracking events. REACT uses events to t
 
 > <span class="note-header">Note:</span>
 > 
-> The Events API returns the same data as REACT's webhooks. You may want to consider implementing webhooks rather than integrating Events endpoints, as webhooks enable REACT to send event data proactively rather than requiring you to make a request. For more information on implementing webhooks, see the [Managing Webhooks](/react/managing-webhooks.html) page.
+> The Events API returns the same data as REACT's webhooks. You may want to consider implementing webhooks rather than integrating Events endpoints, as webhooks enable REACT to send event data proactively rather than requiring you to make a request. For more information on implementing webhooks, see the [Managing Webhooks](/react/help/managing-webhooks.html) page.
 
 ### The Get Shipment Events Endpoint
 
@@ -177,7 +177,7 @@ None of the search parameters are mandatory in themselves, but at least one sear
 
 The timestamp parameters must be provided in pairs. If you provide a `start` value with no corresponding `end` value (or vice versa), then REACT returns a validation error. Timestamps should be provided as UTC time.
 
-As with all REACT APIs, the **Get Shipment Events** endpoint retrieves a maximum of 200 records with any single request. Where more than 200 records exist, paging links to the next and previous set of results, as well as the first and last set of results, are returned. See the [Paging Results](/react/retrieving-data.html#paging-results) section for more information on paging in REACT's APIs.
+As with all REACT APIs, the **Get Shipment Events** endpoint retrieves a maximum of 200 records with any single request. Where more than 200 records exist, paging links to the next and previous set of results, as well as the first and last set of results, are returned. See the [Paging Results](/react/help/retrieving-data.html#paging-results) section for more information on paging in REACT's APIs.
 
 If REACT finds shipments that meet your criteria, but those shipments do not have associated events, then the Events API returns a response containing shipment details only. This feature enables you to distinguish between a _404 Not Found_ response in which data matching the supplied details could not be found, and a _200 OK_ response in which a matching shipment was found but that shipment did not contain any event data.
 
@@ -246,7 +246,7 @@ The **Get Shipment States History** endpoint returns a **Shipment State Events**
 * **Label** - The custom label corresponding to that shipment state, where applicable.
    > <span class="note-header">More Information:</span>
    >
-   > Custom shipment state labels enable you to explain shipment states to your customers in your brand's own tone of voice. For more information on setting up custom shipment state labels, see the [Setting up Custom State Labels](/react/settings.html#setting-up-custom-state-labels) section of the **Settings** page.
+   > Custom shipment state labels enable you to explain shipment states to your customers in your brand's own tone of voice. For more information on setting up custom shipment state labels, see the [Setting up Custom State Labels](/react/help/settings.html#setting-up-custom-state-labels) section of the **Settings** page.
 * **Timestamp** - The date and time at which the shipment assumed the state in question.
 
 The following example shows the **Shipment State Events** resource for a shipment that has gone from *Dispatched* to *In Transit* to *Delivered*, with accompanying timestamps and custom labels.  
@@ -324,6 +324,6 @@ This paging format is used across all of REACT's APIs.
 
 Learn more about integrating with REACT:
 
-* [Registering Shipments](/react/registering-shipments.html)
-* [Updating Shipments](/react/updating-shipments.html)
-* [Error Codes](/react/error-codes.html)
+* [Registering Shipments](/react/help/registering-shipments.html)
+* [Updating Shipments](/react/help/updating-shipments.html)
+* [Error Codes](/react/help/error-codes.html)

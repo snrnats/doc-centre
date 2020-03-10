@@ -16,7 +16,7 @@ You can create as many tracking page layouts as you need. For example, a shoe re
 
 > <span class="note-header">Note:</span>
 >
-> This page explains how to set up tracking pages using REACT's **Create Tracking Page** UI option. It does not cover integrating your own websites or apps with REACT's tracking API. For information on using REACT to power tracking within your own websites or apps, see the [Retrieving Shipment and Event Data](/react/retrieving-data.html) page.
+> This page explains how to set up tracking pages using REACT's **Create Tracking Page** UI option. It does not cover integrating your own websites or apps with REACT's tracking API. For information on using REACT to power tracking within your own websites or apps, see the [Retrieving Shipment and Event Data](/react/help/retrieving-data.html) page.
 
 ## Creating New Tracking Pages
 
@@ -56,7 +56,7 @@ To configure general page details:
      >
      > Choose your page's **Title** carefully, as you can't update it once you've saved the page. Note that you can't have two pages with the same **Title**.
      >
-     > For more information on how your customers can access tracking pages once they are published, see the [Publishing Your Page](/react/tracking-pages.html/#publishing-your-page) section.
+     > For more information on how your customers can access tracking pages once they are published, see the [Publishing Your Page](/react/help/tracking-pages.html/#publishing-your-page) section.
      
 2. Select a **Favicon** by clicking the **Upload** button and selecting an image from the dialog box. There is no size limit on this individual image, but your page cannot exceed more than 5MB of images in total.
 3. Enter the **Font Name** of the default font that REACT should use on the page. If you do not specify a custom font, REACT uses its default font for your page.
@@ -65,7 +65,7 @@ To configure general page details:
    In general, you should link to the "regular" version of the font and use the **Font Weight** selector to control font weights. However, if you want to use a light version of a particular font, you should link to that font's "light" font file, as certain fonts may display incorrectly if you attempt to select a light font weight.
    > <span class="note-header">More Information:</span>
    >
-   > Currently, REACT only supports external fonts from Google Fonts. For more information on linking to font files, see the [Configuring Fonts](/react/tracking-pages.html/#configuring-fonts) section. 
+   > Currently, REACT only supports external fonts from Google Fonts. For more information on linking to font files, see the [Configuring Fonts](/react/help/tracking-pages.html/#configuring-fonts) section. 
 5. Specify a default **Font Size**.
 6. Select a **Font Colour** by clicking the **Select** button and choosing a colour from the picker.
 7. Select a default **Font Weight**.
@@ -92,7 +92,7 @@ To configure the appearance of your page's nav bar, use the **Navbar** panel:
    You should link to the "regular" variant of the font. If you use alternative weights, the **Font Weight** option will not work correctly, and the typography on your page may not look quite right.
    > <span class="note-header">More Information:</span>
    >
-   > For more information on linking to font files, see the [Configuring Fonts](/react/tracking-pages.html/#configuring-fonts) section. 
+   > For more information on linking to font files, see the [Configuring Fonts](/react/help/tracking-pages.html/#configuring-fonts) section. 
 7. Select a **Font Colour** by clicking the **Select** button and choosing a colour from the picker. This is the colour of the nav bar's text.
 8. Select a **Font Size** and **Font Weight** for the nav bar's text.
 
@@ -177,7 +177,7 @@ To configure row elements:
    You should link to the "regular" variant of the font. If you use alternative weights, the **Font Weight** option will not work correctly, and the typography on your page may not look quite right.
    > <span class="note-header">More Information:</span>
    >
-   > For more information on linking to font files, see the [Configuring Fonts](/react/tracking-pages.html/#configuring-fonts) section. 
+   > For more information on linking to font files, see the [Configuring Fonts](/react/help/tracking-pages.html/#configuring-fonts) section. 
 6. Select a **Font Colour** by clicking the **Select** button and choosing a colour from the picker. This is the colour of the element's text.
 7. Select a **Font Size** and **Font Weight** for the element's text.
 8. Click **Save** to close the dialog and save the element's details.         
@@ -253,6 +253,6 @@ Admin and Marketing users can view, edit and delete tracking pages. Dashboard us
 ## Next Steps
 
 Learn more about the REACT UI:
-* [Monitoring Shipments](/react/monitoring-shipments.html)
-* [Settings](/react/settings.html)
-* [User Management](/react/user-management.html)
+* [Monitoring Shipments](/react/help/monitoring-shipments.html)
+* [Settings](/react/help/settings.html)
+* [User Management](/react/help/user-management.html)

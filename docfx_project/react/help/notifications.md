@@ -201,7 +201,7 @@ To create a new notification:
 7. If required, select a REACT tracking page from the **Select Tracking Page** drop-down list. If you select a tracking page, then REACT will insert a tracking link into the notification.
     > <span class="note-header">More Information:</span>
     >
-    > For more information on setting up REACT tracking pages, see the [Creating Tracking Pages](/react/tracking-pages.html) page.
+    > For more information on setting up REACT tracking pages, see the [Creating Tracking Pages](/react/help/tracking-pages.html) page.
 8. If you want to activate the notification immediately after saving, select the **Activate This Notification** check box.
 
     If you want to save the notification without activating it, leave the **Activate This Notification** check box unselected.
@@ -291,7 +291,7 @@ Hi `{{Consumer.FirstName}}`! The package with your `{{Contents}}` in is on its w
 >
 > Merge tags can only display information about a shipment if that shipment has the relevant information registered. In the example above, this would require you to register a customer's first name, and a `Contents` metadata property. 
 >
-> For more information on registering shipment data, including setting up metadata, see the [Registering Shipments](/react/registering-shipments.html) page.
+> For more information on registering shipment data, including setting up metadata, see the [Registering Shipments](/react/help/registering-shipments.html) page.
 
 ## User Access
 
@@ -301,7 +301,7 @@ Admin and Marketing users can view, edit and delete notifications and connectors
 
 Read on for more info:
 
-* [REACT Overview](/react/overview.html)
-* [Registering Shipments](/react/registering-shipments.html)
-* [Managing Webhooks](/react/managing-webhooks.html)
-* [Retrieving Shipment and Event Data](/react/retrieving-data.html)
+* [REACT Overview](/react/help/overview.html)
+* [Registering Shipments](/react/help/registering-shipments.html)
+* [Managing Webhooks](/react/help/managing-webhooks.html)
+* [Retrieving Shipment and Event Data](/react/help/retrieving-data.html)

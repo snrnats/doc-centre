@@ -27,7 +27,7 @@
             </p>
         </div>
     </a>
-    <a href="/react/overview.html">
+    <a href="/react/">
         <div class="homepage-container">
             <h2><span>Sorted</span><span>REACT<span></h2>
             <p>

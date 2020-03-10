@@ -12,7 +12,7 @@ The body of the request should be a [Shipment](https://docs.sorted.com/react/api
 
 > <span class="note-header">Note:</span>
 >
-> You must include the shipment's `tracking_reference` in the body of every **Update Shipment** request you make. If you send a request with no `tracking_reference`, or an amended `tracking_reference` property, then REACT returns a [400 - Validation](/react/error-codes.html) error.
+> You must include the shipment's `tracking_reference` in the body of every **Update Shipment** request you make. If you send a request with no `tracking_reference`, or an amended `tracking_reference` property, then REACT returns a [400 - Validation](/react/help/error-codes.html) error.
 >
 > All other Shipment properties are optional when making **Update Shipment** requests. For more information on available properties, see the [Update Shipment](https://docs.sorted.com/react/api/#UpdateShipment) API reference.
 
@@ -23,7 +23,7 @@ REACT follows the below rules when updating shipments:
 | Property                 | Consideration                                                                                                                                                                                                                                                                                                                                                                                        |
 | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `id`                     | You must include the `id` of the shipment in the URL so that REACT can identify the shipment to be updated. However, `id` is a read-only property and cannot be changed manually.                                                                                                                                                                                                                                 |
-| `tracking_references`    | You must include the shipment's `tracking_reference` in the body of the request so that REACT can identify the shipment to be updated. However, `tracking_reference` is a read-only property and cannot be changed manually. If you send a new `tracking_reference`, or add additional `tracking_reference` values, then REACT returns a [400 - Validation](/react/error-codes.html) error.            |
+| `tracking_references`    | You must include the shipment's `tracking_reference` in the body of the request so that REACT can identify the shipment to be updated. However, `tracking_reference` is a read-only property and cannot be changed manually. If you send a new `tracking_reference`, or add additional `tracking_reference` values, then REACT returns a [400 - Validation](/react/help/error-codes.html) error.            |
 | `custom_references`      | You can update custom references at any point. REACT replaces all existing reference data with data sent in the **Update Shipment** request. As such, you should include all required references when making an update request, not just new references. To delete all references, send an empty `custom_references` array. If REACT receives a null `custom_references` property, no changes are made. |
 | `tags`                   | You can update tags at any point. REACT replaces all existing tags with those tags sent in the **Update Shipment** request. As such, you should include all required tags when making an update request, not just new ones. To delete all tags, send an empty `tags` array. <br/><br/>If REACT receives a null `tags` property, no changes are made. You can add up to 20 tags to a shipment, and each tag must be between three and 30 characters long. If you attempt to add more than 20 tags then only the first 20 are stored. Tags are not case-sensitive, and you cannot add duplicate tags within the same shipment.
 | `carrier`                | You can update the shipment's carrier at any point. However, REACT will overwrite the `carrier` property if it receives a tracking event that contains a different carrier name. This property is a label only, and does not have any impact on the shipment itself.                                                                                                                                                                                                                                                                |
@@ -84,6 +84,6 @@ Once the request has been validated, REACT returns a code *202 - Accepted* with 
 
 Learn more about integrating with REACT:
 
-* [Registering Shipments](/react/registering-shipments.html)
-* [Retrieving Shipment and Event Data](/react/retrieving-data.html)
-* [Error Codes](/react/error-codes.html)
+* [Registering Shipments](/react/help/registering-shipments.html)
+* [Retrieving Shipment and Event Data](/react/help/retrieving-data.html)
+* [Error Codes](/react/help/error-codes.html)
