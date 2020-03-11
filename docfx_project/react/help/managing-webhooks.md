@@ -43,7 +43,7 @@ Each REACT webhook must be associated with at least one shipment filter. A shipm
 > 
 > All REACT shipments have a current shipment state, which is updated as shipment events occur.
 >
-> For a full list of REACT shipment states, see the [Shipment States](https://docs.sorted.com/react/shipment-states/) page.
+> For a full list of REACT shipment states, see the [Shipment States](/react/help/shipment-states.html) page.
 
 You can use changes in shipment state and new calculated events to filter shipments. States and calculated events can be filtered in whatever way you choose. For example, you could set up a filter containing states that require escalation to the carrier, such as **Lost**, **Damaged**, and the **Late** calculated event. You could also set up a filter containing states that you would want to send delivery updates to your customers on, such as **Out For Delivery**, **Collection Reminder**, and **Delivery Attempted**. The [Example Configuration](https://docs.sorted.com/react/managing-webhooks/#example-configuration) section gives further examples of potential shipment filters.
 
@@ -176,15 +176,16 @@ Webhooks are managed in the REACT UI via the **Settings > Webhooks** page. This 
 
        5. Enter the header that the webhook should send the resulting JWT token in into the **Request Header** field.
        6. Enter the value mask that REACT should use when sending the resulting token into the **Value Mask Format** field. The token itself should be represented as `$JWT$`.
-       > <span class="note-header">Note:</span>
-       >
-       > The **Request Header** and **Value Mask Format** fields enable you to specify exactly how REACT should use the token it receives from your authentication service. When a JWT-authenticated webhook sends data it places the token inside the header key specified. The corresponding value for this header key is the contents of the **Value Mask Format** field, where `$JWT$` represents the token itself. 
-       >
-       > For example, if you wanted REACT to send the token in a header named *Authentication*, with a corresponding key of *Bearer (token)*, you would enter:
-       >
-       > **Request Header:** `Authentication`
-       > 
-       > **Value Mask:** `Bearer $JWT$`    
+          > <span class="note-header">Note:</span>
+          >
+          > The **Request Header** and **Value Mask Format** fields enable you to specify exactly how REACT should use the token it receives from your authentication service. When a JWT-authenticated webhook sends data it places the token inside the header key specified. The corresponding value for this header key is the contents of the **Value Mask Format** field, where `$JWT$` represents the token itself. 
+          >
+          > For example, if you wanted REACT to send the token in a header named *Authentication*, with a corresponding key of *Bearer (token)*, you would enter:
+          >
+          > **Request Header:** `Authentication`
+          > 
+          > **Value Mask:** `Bearer $JWT$`    
+       
        7. Enter any headers that REACT should use when requesting the token by entering a **Key** and **Value** and clicking the **Add** button.
        8. Click **Next** to finish setting up authentication.
           > <span class="note-header">Note:</span>
@@ -270,6 +271,6 @@ Admin users can view, edit and delete webhooks. Marketing users can view existin
 
 Learn more about the REACT UI:
 
-* [Monitoring Shipments](https://docs.sorted.com/react/monitoring-shipments/)
-* [Settings](https://docs.sorted.com/react/settings/)
-* [User Management](https://docs.sorted.com/react/user-management/)
+* [Monitoring Shipments](/react/help/monitoring-shipments.html)
+* [Settings](/react/help/settings.html)
+* [User Management](/react/help/user-management.html)

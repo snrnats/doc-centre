@@ -18,7 +18,7 @@ Currently, you can only provide one tracking reference in the `tracking_referenc
 >
 > As with other REACT APIs, you'll need to include JSON `Content-Type` and `Accept` headers and a valid API key in order to use the **Register Shipments** endpoint. You can get an API key from the **Settings > API Keys** page of the REACT UI. 
 >
-> For more information on obtaining an API key, see the [Getting an API Key](/react/help/quick-start.html/#registering-a-shipment) section of the Quick Start guide.
+> For more information on obtaining an API key, see the [Getting an API Key](/react/help/quick-start.html#registering-a-shipment) section of the Quick Start guide.
 
 **Examples**
 
@@ -73,7 +73,7 @@ When REACT receives the request, it creates a new shipment record and returns a 
 
 And that's it! REACT will look out for the tracking reference you provided in the carrier data it receives from its carrier connectors, and will update the shipment's information as new events come in. You can use the carrier tracking reference or `{id}` to get updates on the shipment using REACT's APIs. The newly-registered shipment can also trigger any webhooks you have configured.
 
-REACT assigns an initial shipment state of *Registered* to all newly-registered shipments. For a full list of REACT shipment states, see the [Shipment States](/react/help/shipment-states.html/) page.
+REACT assigns an initial shipment state of *Registered* to all newly-registered shipments. For a full list of REACT shipment states, see the [Shipment States](/react/help/shipment-states.html) page.
 
 ## Registering Shipments by SFTP
 

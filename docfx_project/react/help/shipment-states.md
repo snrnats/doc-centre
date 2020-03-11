@@ -1,11 +1,4 @@
----
-title: Shipment States
-slug: "/shipment-states/"
-member: "Reference Info"
-order: 6
-description: "Start your React integration in just a few simple steps."
-keywords: "delivery, states, delivery-states, shipment, shipment-states, condition, tracking, progress, status, statuses, shipping"
----
+# Shipment States
 
 This table displays available REACT shipment states and indicates which carriers have tracking events mapped to each state.
 

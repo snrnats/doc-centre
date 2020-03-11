@@ -1,6 +1,6 @@
 # Quick Start
 
-Ready to get started with SortedREACT? This guide explains how to set up [real-time shipment tracking](/react/help/quick-start.html/#setting-up-tracking) and configure [shipment state monitoring](/react/help/quick-start.html/#setting-up-webhooks) via webhooks.
+Ready to get started with SortedREACT? This guide explains how to set up [real-time shipment tracking](#setting-up-tracking) and configure [shipment state monitoring](#setting-up-webhooks) via webhooks.
 
 ---
 ## Setting up Tracking
@@ -39,7 +39,7 @@ You can use your key by adding an `x-api-key` header to any requests you make. T
 
 **Using the Register Shipments Endpoint**
 
-To register a shipment, send a <span class="text--green text--bold">POST</span> request to the **Register Shipments** endpoint (`https://api.sorted.com/react/shipments`). As a minimum, you'll need to send the following information:
+To register a shipment, send a <span class="text--green text--bold">POST</span> request to the **Register Shipments** endpoint. As a minimum, you'll need to send the following information:
 
 * The shipment's tracking reference. REACT will only accept one `tracking_reference` per shipment.
 * JSON `Content-Type` and `Accept` headers. REACT works with JSON data.
@@ -115,14 +115,14 @@ Once the connector is set up, REACT keeps you in the loop by automatically acces
 
 ### Getting Tracking Events
 
-Once you've registered your shipments, your customers will probably want to see how they're getting on. One way to track a shipment in REACT is via the [Get Tracking Events by Shipment ID](https://docs.sorted.com/react/api/#GetTrackingEventsbyShipmentID) endpoint. Send a <span class="text--blue text--bold">GET</span> request to `https://api.sorted.com/react/tracking/search?shipment_id={id}`, where `{id}` is the shipment `id` you obtained when registering the shipment. Don't forget to include your [API key](/react/help/quick-start.html/#getting-an-api-key).
+Once you've registered your shipments, your customers will probably want to see how they're getting on. One way to track a shipment in REACT is via the [Get Tracking Events by Shipment ID](https://docs.sorted.com/react/api/#GetTrackingEventsbyShipmentID) endpoint. Send a <span class="text--blue text--bold">GET</span> request to `https://api.sorted.com/react/tracking/search?shipment_id={id}`, where `{id}` is the shipment `id` you obtained when registering the shipment. Don't forget to include your [API key](#registering-a-shipment).
 
 This endpoint returns a [Shipment Tracking Events](https://docs.sorted.com/react/api/#GetTrackingEventsbyShipmentID) response, which includes an
 array of all the tracking events that have been logged for that shipment. You can embed this data into your website or app, enabling you to serve real-time tracking information to your customers without directing them away from your site.
 
 > <span class="note-header">More Information:</span>
 >
-> For more information on retrieving shipment and tracking data from REACT, see the [Retrieving Shipment and Event Data](/react/help/retrieving-data.html/) page.
+> For more information on retrieving shipment and tracking data from REACT, see the [Retrieving Shipment and Event Data](/react/help/retrieving-data.html) page.
 
 ## Setting Up Webhooks
 
@@ -208,7 +208,7 @@ And we're done! Every time a shipment falls into a state of **Delivered To Neigh
 
 The next steps are up to you. Following our example, you might integrate the webhook payload with your SMS gateway. However, you can use the data from REACT webhooks in any way you choose. The possibilities are limitless!
 
-For more information on creating and maintaining shipment filters and webhooks, see the [Managing Webhooks](/react/help/managing-webhooks.html/) page.
+For more information on creating and maintaining shipment filters and webhooks, see the [Managing Webhooks](/react/help/managing-webhooks.html) page.
 
 ## Next Steps
 

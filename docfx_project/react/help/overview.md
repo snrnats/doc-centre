@@ -45,7 +45,7 @@ A typical REACT shipment lifecycle might look something like this:
 4. REACT converts the contents of the carrier's tracking update into a standardised REACT tracking event, and associates the contents of that event with the relevant shipment, based on the shipment's carrier tracking reference. If two or more shipments have the same carrier tracking reference, then REACT associates the tracking event with all relevant shipments.
 
    > <span class="note-header">More Information:</span>
-   > For information on the structure of REACT's tracking events, see the [Get Tracking Events](https://docs.sorted.com/react/api/#GetTrackingEvents) API reference.
+   > For information on the structure of REACT's tracking events, see the [Get Tracking Events](https://docs.sorted.com/react/api/#GetTrackingEventsbyShipmentID) API reference.
 5. If a shipment's properties need to be updated as a result of the tracking event (for example, because the shipment's state or promised date have changed), then REACT creates an internal event and updates the shipment's details accordingly. 
 
    > <span class="note-header">More Information:</span>

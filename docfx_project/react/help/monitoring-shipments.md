@@ -26,7 +26,7 @@ The **States** dashboard has two sections: a map indicating the delivery locatio
 >
 > Only those shipments for which REACT holds an origin address are displayed on the map. For more information on registering shipment data, see the [Registering Extra Shipment Information](https://docs.sorted.com/react/registering-shipments/#registering-extra-shipment-information) section of the [Registering Shipments](https://docs.sorted.com/react/registering-shipments/) page. 
 
-If required, you can filter the data displayed using the filter controls explained in the [Searching For and Filtering Dashboard Data](https://docs.sorted.com/react/monitoring-shipments/#searching-for-and-filtering-dashboard-data) section.
+If required, you can filter the data displayed using the filter controls explained in the [Filtering Dashboard Data](#filtering-dashboard-data) section.
 
 ### Drilling Down on Shipment Details by Status
 
@@ -96,7 +96,7 @@ To open the **All Shipments** dashboard, select the **Dashboards > All Shipments
 
 ![all-ships-db2](images/all-ships-db2.png)
 
-The **All Shipments** dashboard displays a list of all your current shipments. You can filter the list using the filter controls explained in the [Searching For and Filtering Dashboard Data](https://docs.sorted.com/react/monitoring-shipments/#searching-for-and-filtering-dashboard-data) section.
+The **All Shipments** dashboard displays a list of all your current shipments. You can filter the list using the filter controls explained in the [Filtering Dashboard Data](#filtering-dashboard-data) section.
 
 To export the data displayed onscreen (including any filters you may have selected), click **Export CSV**.
 
@@ -118,7 +118,7 @@ Adding shipment notes can help you to manage exceptions and customer service enq
 
 > <span class="note-header">Note:</span>
 >
-> The shipment information displayed in the REACT UI is largely populated from the information provided at registration. The more information you provide at registration, the more useful this page will be. For more information on the information you can provide at registration, see the [Registering Shipments](https://docs.sorted.com/react/registering-shipments/) page.
+> The shipment information displayed in the REACT UI is largely populated from the information provided at registration. The more information you provide at registration, the more useful this page will be. For more information on the information you can provide at registration, see the [Registering Shipments](/react/help/registering-shipments.html) page.
 
 ### Searching For a Specific Shipment
 
@@ -175,6 +175,6 @@ All REACT users can view the **States** and **All Shipments** pages, and view, e
 
 Learn more about the REACT UI:
 
-* [Managing Webhooks](https://docs.sorted.com/react/managing-webhooks/)
-* [Settings](https://docs.sorted.com/react/settings/)
-* [User Management](https://docs.sorted.com/react/user-management/)
+* [Managing Webhooks](/react/help/managing-webhooks.html)
+* [Settings](/react/help/settings.html)
+* [User Management](/react/help/user-management.html)
