@@ -135,6 +135,6 @@ The error object contains the following information:
 
 Learn more about integrating with REACT:
 
-* [Registering Shipments](https://docs.sorted.com/react/registering-shipments/)
-* [Retrieving Shipment and Event Data](https://docs.sorted.com/react/retrieving-data/)
-* [Updating Shipments](https://docs.sorted.com/react/updating-shipments/)
+* [Registering Shipments](/react/help/registering-shipments.html)
+* [Retrieving Shipment and Event Data](/react/help/retrieving-data.html)
+* [Updating Shipments](/react/help/updating-shipments.html)

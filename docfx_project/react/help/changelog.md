@@ -12,7 +12,7 @@ Each REACT tracking page is a customisable microsite, hosted by Sorted, that dis
 
 > <span class="note-header">More Information:</span>
 > 
-> For information on setting up tracking pages, see the [Creating Tracking Pages](https://docs.sorted.com/react/tracking-pages/) page.
+> For information on setting up tracking pages, see the [Creating Tracking Pages](/react/help/tracking-pages.html) page.
 
 ---
 
@@ -24,9 +24,9 @@ Shipment tags can be used in conjunction with webhooks to fine-tune the updates 
 
 > <span class="note-header">More Information:</span>
 > 
-> For information on tagging shipments, see the [Registering Shipments](https://docs.sorted.com/react/registering-shipments/) and [Updating Shipments](https://docs.sorted.com/react/updating-shipments/) pages.
+> For information on tagging shipments, see the [Registering Shipments](/react/help/registering-shipments.html) and [Updating Shipments](/react/help/updating-shipments.html) pages.
 > 
-> For information on using tags as a shipment filter selector, see [Managing Webhooks](https://docs.sorted.com/react/managing-webhooks/).
+> For information on using tags as a shipment filter selector, see [Managing Webhooks](/react/help/managing-webhooks.html).
 
 ---
 

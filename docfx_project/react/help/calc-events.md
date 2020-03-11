@@ -17,7 +17,7 @@ When REACT updates one of these properties, it creates a calculated event to rec
 
 > <span class="note-header">More Information:</span>
 >
-> For more information on retrieving events, see the [Retrieving Shipment and Event Data](https://docs.sorted.com/react/retrieving-data/) page of the docs portal, and the [Get Shipment Events](https://docs.sorted.com/react/api/#GetShipmentEvents) section of the API reference.
+> For more information on retrieving events, see the [Retrieving Shipment and Event Data](/react/help/retrieving-data.html) page of the docs portal, and the [Get Shipment Events](https://docs.sorted.com/react/api/#GetShipmentEvents) section of the API reference.
 
 ## May Be Missing
 
@@ -37,7 +37,7 @@ No state changing tracking event has been received for that shipment within 12 h
 
 All of the following conditions are met:
 
-* The shipment has never been in any of the [final states](https://docs.sorted.com/react/calc-events/#final-states).
+* The shipment has never been in any of the [final states](/react/help/calc-events.html#final-states).
 * The shipment has a country ISO code registered for both its origin and destination addresses (via the `addresses.country_iso_code` property).
 * It has been more than 24 hours since a tracking event was received for a domestic shipment, **OR** more than 72 hours since a tracking event was received for an international shipment. 
 
@@ -49,7 +49,7 @@ The `lateness.is_late` property denotes whether REACT believes a shipment to be 
 
 * The shipment has a `promised_date` recorded. 
 * The date and time recorded in `promised_date` has elapsed.
-* The shipment did not enter any of the [final states](https://docs.sorted.com/react/calc-events/#final-states) before the `promised_date` elapsed.
+* The shipment did not enter any of the [final states](/react/help/calc-events.html#final-states) before the `promised_date` elapsed.
 
 If a shipment does not have a `promised_date` recorded, then REACT cannot perform `lateness` calculations for that shipment. 
 
@@ -72,7 +72,7 @@ A shipment is deemed to be non-trackable if any of the following criteria are me
    > <span class="note-header">Note:</span>
    >
    > If we do not know whether a shipment is domestic or international (i.e. it does not have a `addresses.country_iso_code` recorded for both its origin and destination addresses), then it is assumed to be domestic.
-* The shipment is in a [final state](https://docs.sorted.com/react/calc-events/#final-states) **AND** Sorted has not received a tracking event for it in three or more days.
+* The shipment is in a [final state](/react/help/calc-events.html#final-states) **AND** Sorted has not received a tracking event for it in three or more days.
 
 ## Final States
 
@@ -105,12 +105,12 @@ Although set by REACT, the `lateness` and `may_be_missing` flags are standard pr
 
 > <span class="note-header">More Information:</span>
 >
-> For more information on retrieving data via REACT's APIs, see the [Retrieving Shipment and Event Data](https://docs.sorted.com/react/retrieving-data/) page.
+> For more information on retrieving data via REACT's APIs, see the [Retrieving Shipment and Event Data](/react/help/retrieving-data.html) page.
 
 ## Next Steps
 
 Learn more about integrating with REACT:
 
-* [Registering Shipments](https://docs.sorted.com/react/registering-shipments/)
-* [Updating Shipments](https://docs.sorted.com/react/updating-shipments/)
-* [Error Codes](https://docs.sorted.com/react/error-codes/)
+* [Registering Shipments](/react/help/registering-shipments.html)
+* [Updating Shipments](/react/help/updating-shipments.html)
+* [Error Codes](/react/help/error-codes.html)

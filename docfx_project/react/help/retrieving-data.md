@@ -16,7 +16,7 @@ REACT has three APIs that enable you to retrieve information.
 >
 > All REACT APIs require you to include JSON `Content-Type` and `Accept` headers and a valid API key as request headers. You can get an API key from the **Settings > API Keys** page of the REACT UI.
 >
-> For more information on obtaining an API key, see the [Getting an API Key](/react/help/quick-start.html/#registering-a-shipment) section of the Quick Start guide.
+> For more information on obtaining an API key, see the [Getting an API Key](/react/help/quick-start.html#registering-a-shipment) section of the Quick Start guide.
 
 ## Retrieving Shipments
 
@@ -76,7 +76,7 @@ Where a valid request is made but no matching shipments are found, REACT returns
 
 <span class="text--caption text--center">Response from Shipment API with no matching shipments found.</span>
 
-As with all REACT APIs, the **Get Shipments** endpoint retrieves a maximum of 200 records with any single request. Where more than 200 records exist, paging links to the next and previous set of results, as well as the first and last set of results, are returned. The `page` parameter enables you to request a particular page of results. See the [Paging Results](/react/help/retrieving-data.html/#paging-results) section for more information on paging in REACT's APIs.
+As with all REACT APIs, the **Get Shipments** endpoint retrieves a maximum of 200 records with any single request. Where more than 200 records exist, paging links to the next and previous set of results, as well as the first and last set of results, are returned. The `page` parameter enables you to request a particular page of results. See the [Paging Results](#paging-results) section for more information on paging in REACT's APIs.
 
 ### The Shipment Resource
 
