@@ -101,6 +101,14 @@ The error object contains the following information:
 
 ### Example Validation Error
 
+<div class="tab">
+    <button class="staticTabButton">Code 400 Error</button>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'code400')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+</div>
+
+<div id="code400" class="staticTabContent" onclick="CopyToClipboard(this, 'code400')">
+
+
 ```json
 {
   "id": "er_2287452498019024896",
@@ -129,7 +137,7 @@ The error object contains the following information:
 }
 ```
 
-<span class="text--caption">Code 400 Validation error message, returned due to empty tracking_references property.</span>
+</div>
 
 ## Next Steps
 
@@ -138,3 +146,7 @@ Learn more about integrating with REACT:
 * [Registering Shipments](/react/help/registering-shipments.html)
 * [Retrieving Shipment and Event Data](/react/help/retrieving-data.html)
 * [Updating Shipments](/react/help/updating-shipments.html)
+
+<script src="../../pro/scripts/requesttabs.js"></script>
+<script src="../../pro/scripts/responsetabs.js"></script>
+<script src="../../pro/scripts/copy.js"></script>

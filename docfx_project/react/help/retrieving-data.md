@@ -61,6 +61,13 @@ You can only add a maximum of one `tracking_reference` to your request. As such,
 
 Where a valid request is made but no matching shipments are found, REACT returns an empty array with a link to the resource itself. Note that in this scenario the response has a code _200 OK_ rather than _404 Not Found_, as the request itself is valid even though there are no shipments currently matching your search criteria.
 
+<div class="tab">
+    <button class="staticTabButton">No Matching Shipments Example</button>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'nmsExample')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+</div>
+
+<div id="nmsExample" class="staticTabContent" onclick="CopyToClipboard(this, 'nmsExample')">
+
 ```json
 {
   "shipments": [],
@@ -74,7 +81,7 @@ Where a valid request is made but no matching shipments are found, REACT returns
 }
 ```
 
-<span class="text--caption text--center">Response from Shipment API with no matching shipments found.</span>
+</div>
 
 As with all REACT APIs, the **Get Shipments** endpoint retrieves a maximum of 200 records with any single request. Where more than 200 records exist, paging links to the next and previous set of results, as well as the first and last set of results, are returned. The `page` parameter enables you to request a particular page of results. See the [Paging Results](#paging-results) section for more information on paging in REACT's APIs.
 
@@ -251,6 +258,13 @@ The **Get Shipment States History** endpoint returns a **Shipment State Events**
 
 The following example shows the **Shipment State Events** resource for a shipment that has gone from *Dispatched* to *In Transit* to *Delivered*, with accompanying timestamps and custom labels.  
 
+<div class="tab">
+    <button class="staticTabButton">Shipment State Events Resource</button>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'shipState')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+</div>
+
+<div id="shipState" class="staticTabContent" onclick="CopyToClipboard(this, 'shipState')">
+
 ```json
 {
   "shipment_id": "sp_18446744073709551615",
@@ -273,7 +287,8 @@ The following example shows the **Shipment State Events** resource for a shipmen
   ]
 }
 ```
-<span class="text--caption text--center">Example Shipment State Events resource.</span>
+
+</div>
 
 > <span class="note-header">More Information:</span>
 >
@@ -286,6 +301,13 @@ REACT enables you to retrieve a maximum of 200 records with any individual API c
 All paging links follow a standard format. They are returned in a `_links` object, located after either the 200th or final record returned, whichever is earlier. Each link takes the format `[URL requested]&page=[PAGE NUMBER]`
 
 For example, let's say you want to view all events for the shipments you have with Carrier X. You've sent a <span class="text--blue text--bold">GET</span> request to `https://api.sorted.com/react/events/search?carrier=Carrier%20X&page=1`, which has found around 900 results. After the 200th record, the response from the API would include the following:
+
+<div class="tab">
+    <button class="staticTabButton">Paging Links</button>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'pagingLinks')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+</div>
+
+<div id="pagingLinks" class="staticTabContent" onclick="CopyToClipboard(this, 'pagingLinks')">
 
 ```json
 {
@@ -314,7 +336,7 @@ For example, let's say you want to view all events for the shipments you have wi
 }
 ```
 
-<span class="text--caption text--center">Paging links for Events API search returning five pages of results.</span>
+</div>
 
 To access the rest of the results, you would need to make a <span class="text--blue text--bold">GET</span> request to the relevant paging link. For example, to get the third page of results, you would use <span class="text--blue text--bold">GET</span> `https://api.sorted.com/react/events/search?carrier=Carrier%20X&page=3`. Results are sorted by created on date.
 
@@ -327,3 +349,7 @@ Learn more about integrating with REACT:
 * [Registering Shipments](/react/help/registering-shipments.html)
 * [Updating Shipments](/react/help/updating-shipments.html)
 * [Error Codes](/react/help/error-codes.html)
+
+<script src="../../pro/scripts/requesttabs.js"></script>
+<script src="../../pro/scripts/responsetabs.js"></script>
+<script src="../../pro/scripts/copy.js"></script>

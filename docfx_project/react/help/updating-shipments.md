@@ -42,6 +42,13 @@ REACT follows the below rules when updating shipments:
 
 Once the shipment has been updated, REACT returns a confirmation response:
 
+<div class="tab">
+    <button class="staticTabButton">Update Shipment Response</button>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'updShipmentResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+</div>
+
+<div id="updShipmentResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'updShipmentResponse')">
+
 ```json
 {
   "id": "sp_1234567890",
@@ -56,7 +63,8 @@ Once the shipment has been updated, REACT returns a confirmation response:
   ]
 }
 ```
-<span class="text--caption text--center">Example Update Shipment confirmation response.</span>
+
+</div>
 
 ## Deleting Shipments
 
@@ -66,6 +74,13 @@ You can only delete shipments that belong to your organisation. Deleting a shipm
 
 Once the request has been validated, REACT returns a code *202 - Accepted* with the following confirmation response in its body:
 
+<div class="tab">
+    <button class="staticTabButton">Delete Shipment Response</button>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'delShipmentResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+</div>
+
+<div id="delShipmentResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'delShipmentResponse')">
+
 ```json
 {
   "id": "sp_1234567899900",
@@ -74,7 +89,8 @@ Once the request has been validated, REACT returns a code *202 - Accepted* with 
   "tracking_references": ["QWERTYUIOOP"]
 }
 ```
-<span class="text--caption text--center">Example Delete Shipment confirmation response.</span>
+
+</div>
 
 > <span class="note-header">More Information:</span>
 >
@@ -87,3 +103,7 @@ Learn more about integrating with REACT:
 * [Registering Shipments](/react/help/registering-shipments.html)
 * [Retrieving Shipment and Event Data](/react/help/retrieving-data.html)
 * [Error Codes](/react/help/error-codes.html)
+
+<script src="../../pro/scripts/requesttabs.js"></script>
+<script src="../../pro/scripts/responsetabs.js"></script>
+<script src="../../pro/scripts/copy.js"></script>

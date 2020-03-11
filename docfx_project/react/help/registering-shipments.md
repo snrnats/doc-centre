@@ -24,6 +24,13 @@ Currently, you can only provide one tracking reference in the `tracking_referenc
 
 This example shows the body of a simple **Register Shipments** request, in which the user has not provided any information other than a carrier tracking reference:
 
+<div class="tab">
+    <button class="staticTabButton">Single Register Shipments Request</button>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'singleRSRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+</div>
+
+<div id="singleRSRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'singleRSRequest')">
+
 ```json
 {
   "shipments": [{
@@ -32,9 +39,16 @@ This example shows the body of a simple **Register Shipments** request, in which
 }
 ```
 
-<span class="text--caption text--center">Register Shipments request with tracking reference only.</span>
+</div>
 
 The following example shows two simple shipments registered in a single API call:
+
+<div class="tab">
+    <button class="staticTabButton">Double Register Shipments Request</button>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'doubleRSRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+</div>
+
+<div id="doubleRSRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'doubleRSRequest')">
 
 ```json
 {
@@ -47,11 +61,18 @@ The following example shows two simple shipments registered in a single API call
 }
 ```
 
-<span class="text--caption text--center">Register Shipments request with two shipments, both with tracking reference only.</span>
+</div>
 
 ### Register Shipments Response
 
 When REACT receives the request, it creates a new shipment record and returns a **201 Created** response. The body of this response contains the shipment's `id` - a REACT-generated identifier for the shipment that can be used to recall data throughout REACT's APIs. 
+
+<div class="tab">
+    <button class="staticTabButton">Successful Register Shipments Response</button>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'successRSResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+</div>
+
+<div id="successRSResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'successRSResponse')">
 
 ```json
 {
@@ -69,7 +90,7 @@ When REACT receives the request, it creates a new shipment record and returns a 
 }
 ```
 
-<span class="text--caption text--center">Successful Register Shipments response.</span>
+</div>
 
 And that's it! REACT will look out for the tracking reference you provided in the carrier data it receives from its carrier connectors, and will update the shipment's information as new events come in. You can use the carrier tracking reference or `{id}` to get updates on the shipment using REACT's APIs. The newly-registered shipment can also trigger any webhooks you have configured.
 
@@ -103,6 +124,13 @@ The shipment data you want to upload should be stored in either a JSON or CSV fi
 
 This example shows the body of a simple CSV upload, in which the user has registered the carrier tracking references of five shipments, along with the carriers and carrier services used for those shipments:
 
+<div class="tab">
+    <button class="staticTabButton">CSV Upload</button>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'CSVUpload')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+</div>
+
+<div id="CSVUpload" class="staticTabContent" onclick="CopyToClipboard(this, 'CSVUpload')">
+
 ```
 "tracking_reference","carrier","carrier_service"
 "TRACKING-DEMO-REFERENCE1","A Carrier","A Carrier Service"
@@ -112,7 +140,7 @@ This example shows the body of a simple CSV upload, in which the user has regist
 "TRACKING-DEMO-REFERENCE5","A Carrier","A Carrier Service"
 ```
 
-<span class="text--caption text--center">CSV upload with five shipments.</span>
+</div>
 
 ### Uploading
 
@@ -141,6 +169,13 @@ The results file has two arrays of errors:
 
 * The file contained a single shipment, which was successfully uploaded.
 
+<div class="tab">
+    <button class="staticTabButton">SFTP Result File</button>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'SFTP1')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+</div>
+
+<div id="SFTP1" class="staticTabContent" onclick="CopyToClipboard(this, 'SFTP1')">
+
 ```json
 {
   "result_message":"Results for processing file shipments-1-valid.json",
@@ -160,9 +195,16 @@ The results file has two arrays of errors:
 }
 ```
 
-<span class="text--caption text--center">Successful SFTP upload response for a single shipment.</span>
+</div>
 
 * The file contained four shipments. One was registered successfully, one failed due to a validation error (in this case, duplicate `tracking_reference` values), and two failed due to errors during the registration process.
+
+<div class="tab">
+    <button class="staticTabButton">SFTP Result File</button>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'SFTP2')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+</div>
+
+<div id="SFTP2" class="staticTabContent" onclick="CopyToClipboard(this, 'SFTP2')">
 
 ```json
 {
@@ -202,9 +244,16 @@ The results file has two arrays of errors:
 }
 ```
 
-<span class="text--caption text--center">SFTP upload response with one successful upload, one validation error, and two registration errors.</span>
+</div>
 
 * The file could not be parsed at all, most likely due to an invalid structure:
+
+<div class="tab">
+    <button class="staticTabButton">SFTP Result File</button>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'SFTP3')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+</div>
+
+<div id="SFTP3" class="staticTabContent" onclick="CopyToClipboard(this, 'SFTP3')">
 
 ```json
 {
@@ -225,7 +274,7 @@ The results file has two arrays of errors:
 }
 ```
 
-<span class="text--caption text--center">SFTP upload response for unparseable file.</span>
+</div>
 
 You can upload multiple shipment files at the same time as long as the files have different names. If you attempt to upload two shipment files with the same name at the same time, or upload a file before another file of the same name has finished processing, then REACT will only process one file. 
 
@@ -270,7 +319,14 @@ If you only provide a carrier reference when registering then REACT is limited t
 
 ### Example Detailed JSON Request
 
-The following example shows a shipment registered with additional detail on tags, dates, consumer information, and custom tracking references. For full details of all the properties accepted by the **Register Shipments** endpoint, see the [API Reference](https://docs.sorted.com/react/api/#RegisterShipments)
+The following example shows a shipment registered with additional detail on tags, dates, consumer information, and custom tracking references. For full details of all the properties accepted by the **Register Shipments** endpoint, see the [API Reference](https://docs.sorted.com/react/api/#RegisterShipments).
+
+<div class="tab">
+    <button class="staticTabButton">Detailed Register Shipment Request</button>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'detailRSRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+</div>
+
+<div id="detailRSRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'detailRSRequest')">
 
 ```json
 {
@@ -341,7 +397,7 @@ The following example shows a shipment registered with additional detail on tags
 }
 ```
 
-<span class="text--caption text--center">Detailed Register Shipments request.</span>
+</div>
 
 This example has values specified in the `custom_references` array. These could be internal order numbers, customer references, or anything else you choose. Now that REACT has been given this data, you could use these references to retrieve information via the **Get Shipment Events** and **Get Shipments** endpoints. 
 
@@ -357,19 +413,33 @@ Where an object can take multiple records (such as the `addresses` object, which
 
 For example, multiple `addresses` could be represented as:
 
+<div class="tab">
+    <button class="staticTabButton">CSV - Multiple Addresses</button>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'CSVmultiple')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+</div>
+
+<div id="CSVmultiple" class="staticTabContent" onclick="CopyToClipboard(this, 'CSVmultiple')">
+
 ```
 ""addresses/0/address_type","addresses/0/postal_code","addresses/0/lat_long/latitude","addresses/0/lat_long/longitude","addresses/1/address_type","addresses/1/postal_code","addresses/1/lat_long/latitude","addresses/1/lat_long/longitude"
 "origin","ST4 4EG","123","456","destination","M33 5EW","789","012"
 
 ```
 
-<span class="text--caption text--center">Nested address objects in CSV format.</span>
+</div>
 
 ### Examples
 
 The following examples represent the same data structure:
 
 **JSON**
+
+<div class="tab">
+    <button class="staticTabButton">JSON Shipment Resource</button>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'JSONShipment')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+</div>
+
+<div id="JSONShipment" class="staticTabContent" onclick="CopyToClipboard(this, 'JSONShipment')">
 
 ```json
 {
@@ -404,14 +474,23 @@ The following examples represent the same data structure:
 }
 ```
 
+</div>
+
 **CSV**
+
+<div class="tab">
+    <button class="staticTabButton">CSV Shipment Resource</button>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'CSVShipment')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+</div>
+
+<div id="CSVShipment" class="staticTabContent" onclick="CopyToClipboard(this, 'CSVShipment')">
 
 ```
 "tracking_reference","custom_references/0","custom_references/1","carrier","carrier_service","addresses/0/address_type","addresses/0/postal_code","addresses/0/lat_long/latitude","addresses/0/lat_long/longitude","addresses/1/address_type","addresses/1/postal_code","addresses/1/country_iso_code"
 "TRK098JKH54ADD","29ab72c406a94efb8e0797deb309ee4d","HB-003","Carrier X","Next Day Priority","origin","ST4 4EG","123","456","destination","N2 3FD","GB"
 ```
 
-<span class="text--caption text--center">The same shipment data represented in JSON and CSV formats.</span>
+</div>
 
 ## Next Steps
 
@@ -420,3 +499,7 @@ Learn more about integrating with REACT:
 * [Retrieving Shipment and Event Data](/react/help/retrieving-data.html)
 * [Updating Shipments](/react/help/updating-shipments.html)
 * [Error Codes](/react/help/error-codes.html)
+
+<script src="../../pro/scripts/requesttabs.js"></script>
+<script src="../../pro/scripts/responsetabs.js"></script>
+<script src="../../pro/scripts/copy.js"></script>

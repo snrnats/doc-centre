@@ -47,6 +47,13 @@ To register a shipment, send a <span class="text--green text--bold">POST</span> 
 
 The full HTTP request for your new shipment should look something like this:
 
+<div class="tab">
+    <button class="staticTabButton">Register Shipments Request & Headers</button>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'HTTPRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+</div>
+
+<div id="HTTPRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'HTTPRequest')">
+
 ```json
 POST /react/shipments HTTPS/1.1
 Host: api.sorted.com
@@ -60,10 +67,17 @@ X-Api-Key: [your-api-key]
 }
 ```
 
-<span class="text--caption text--center">Register Shipments request with tracking reference only.</span>
+</div>
 
 Once you've sent the request, REACT will return a <em>201</em> code and a [Shipment Created](https://docs.sorted.com/react/api/#RegisterShipments) response,
 which contains some useful information about the Shipment resource produced. 
+
+<div class="tab">
+    <button class="staticTabButton">Register Shipments Response</button>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'rsResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+</div>
+
+<div id="rsResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'rsResponse')">
 
 ```json
   {
@@ -81,7 +95,7 @@ which contains some useful information about the Shipment resource produced.
   }
 ```
 
-<span class="text--caption text--center">Successful Register Shipments response.</span>
+</div>
 
 The `id` is particularly important - this is a REACT-generated identifier for this shipment that can be used throughout REACT's APIs. 
 
@@ -218,3 +232,7 @@ We've barely scratched the surface of what you can do with REACT. Read on for mo
 * [Registering Shipments](/react/help/registering-shipments.html)
 * [Managing Webhooks](/react/help/managing-webhooks.html)
 * [Retrieving Shipment and Event Data](/react/help/retrieving-data.html)
+
+<script src="../../pro/scripts/requesttabs.js"></script>
+<script src="../../pro/scripts/responsetabs.js"></script>
+<script src="../../pro/scripts/copy.js"></script>

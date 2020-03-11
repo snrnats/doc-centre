@@ -161,6 +161,13 @@ Webhooks are managed in the REACT UI via the **Settings > Webhooks** page. This 
          
            For example, if your JWT service requires callers to supply a username and password in the body of the request, you could enter the following into this field:
 
+      <div class="tab">
+         <button class="staticTabButton">Example JWT JSON Request Body</button>
+         <div class="copybutton" onclick="CopyToClipboard(this, 'JWTexample')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+      </div>
+
+      <div id="JWTexample" class="staticTabContent" onclick="CopyToClipboard(this, 'JWTexample')">
+
            ```json
            {
              "username": "EXAMPLE_USERNAME",
@@ -168,7 +175,7 @@ Webhooks are managed in the REACT UI via the **Settings > Webhooks** page. This 
            }
            ```
 
-       <span class="text--caption text--center">Example JWT JSON request body.</span>
+       </div>
 
        4. Enter the **HTTP Method** that REACT should use when requesting the token.
             
@@ -274,3 +281,7 @@ Learn more about the REACT UI:
 * [Monitoring Shipments](/react/help/monitoring-shipments.html)
 * [Settings](/react/help/settings.html)
 * [User Management](/react/help/user-management.html)
+
+<script src="../../pro/scripts/requesttabs.js"></script>
+<script src="../../pro/scripts/responsetabs.js"></script>
+<script src="../../pro/scripts/copy.js"></script>

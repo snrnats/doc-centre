@@ -273,6 +273,14 @@ Hi `{{Consumer.FirstName}}`! Your package is on its way. To keep an eye on it, g
 
 The metadata keys at the bottom enable you to further customise the information available in your notifications by adding metadata from your shipments. For example, supposed that you register a shipment with a `Contents` metadata property, which you use to supply a description of the shipment contents, as follows:
 
+<div class="tab">
+    <button class="staticTabButton">Metadata Example</button>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'metadataExample')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+</div>
+
+<div id="metadataExample" class="staticTabContent" onclick="CopyToClipboard(this, 'metadataExample')">
+
+
 ```json
       "metadata": [
         {
@@ -282,6 +290,8 @@ The metadata keys at the bottom enable you to further customise the information 
         },
       ],
 ```
+
+</div>
 
 You could then further enhance your notification by adding shipment contents to the text. For example:
 
@@ -305,3 +315,7 @@ Read on for more info:
 * [Registering Shipments](/react/help/registering-shipments.html)
 * [Managing Webhooks](/react/help/managing-webhooks.html)
 * [Retrieving Shipment and Event Data](/react/help/retrieving-data.html)
+
+<script src="../../pro/scripts/requesttabs.js"></script>
+<script src="../../pro/scripts/responsetabs.js"></script>
+<script src="../../pro/scripts/copy.js"></script>
