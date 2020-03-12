@@ -1,41 +1,38 @@
-# Packing Orders
+# Creating Consignments From Orders
 
-<div class="tab">
-    <button class="staticTabButton">Pack Order Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'packOrderEndpoint')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+Packing orders into shippable consignments is the final step in the Orders process. This page explains how to create consignments from an order.
 
-<div id="packOrderEndpoint" class="staticTabContent" onclick="CopyToClipboard(this, 'packOrderEndpoint')">
+---
 
-   ```
-   POST https://api.electioapp.com/orders/{orderReference}/pack
-   ```
-
-</div>
-
-Once your order is created, you'll need to use the **[Pack Order](https://docs.electioapp.com/#/api/PackOrder)** endpoint to create consignments from it.
+## Using Pack Order
 
 The **Pack Order** endpoint enables you to take those items on an order that share an origin and are to be shipped together, and generate a shippable consignment from them. You will need to send one **Pack Order** request per consignment that you want to create from the order.
 
-To make a **Pack Order** request, send a GET request to `https://api.electioapp.com/orders/{orderReference}/pack`. The body of the request can contain various properties that are used when creating the consignment, but at a minimum should contain the `{orderReference}` of the associated order and details of at least one `{item}` (and its accompanying `{package}`). The items and packages listed make up the consignment.
+To call **Pack Order**, send a `POST` request to `https://api.electioapp.com/orders/{orderReference}/pack`. At a minimum, the body of the request should contain the `{orderReference}` of the associated order and details of at least one `{item}` (and its accompanying `{package}`). The items and packages listed make up the consignment. If required, you can also populate the resulting consignment with a custom order reference and additional `MetaData`, `CustomsDocumentation`, and `Tags`.
+
+Each item must be identified by a `Reference`, an `ItemReferenceProvidedByCustomer`, or a `Sku`. These fields are not mandatory in themselves, but one of them must be present for each item.
 
 > <span class="note-header">Note:</span>
->  The <strong>Pack Order</strong> request's <code>OrderReferenceProvidedByCustomer</code> field enables you to provide a custom reference for the consignment that the request generates. 
->  
->  If you add a custom reference to your <strong>Pack Order</strong> request, then PRO uses this value as the consignment's custom reference, as opposed to any <code>OrderReferenceProvidedByCustomer</code> you may have provided when creating the order. 
->  
->  If you do not add a custom reference to your <strong>Pack Order</strong> request, then PRO uses the existing order's <code>OrderReferenceProvidedByCustomer</code> (where provided) as the consignment's custom reference.
+>
+> PRO validates the items on a <strong>Pack Order</strong> request against its associated order. For example, the system will return an error if you make a <strong>Pack Order</strong> request including an item with a <code>Sku</code> of <em>12345</em> if there is no item with that <code>Sku</code> on the corresponding order.
+>
+> However, PRO does not validate the items on a <strong>Pack Order</strong> request against previous <strong>Pack Order</strong> requests. As such, you should be careful to ensure that you do not pack the same item into more than one consignment.
 
-Once SortedPRO has received a **Pack Order** request, it creates the consignment and returns the relevant `{consignmentReference}`.
+Once SortedPRO has received a **Pack Order** request, it creates the consignment and returns the relevant `{consignmentReference}`. The consignment's details are taken from the body of the **Pack Order** request. Fields that are not part of the request (because they are either NULL or not part of the **Pack Order** request structure) are populated from the details of the specified order.
 
-<span class="highlight">
-Ive tested it.
- 
-Seems the Order.OrderReferenceProvidedByCustomer is used to populate the Consignment.ConsignmentReferenceProvidedByCustomer when the pack order call is made.
-The original Order.OrderReferenceProvidedByCustomer from the create order call, is overwritten/updated/ignored if the reference is provided in the Pack call, but conserved if the value is omitted in the Pack call.
- 
-Is all this stuff being documented?
-</span>
+### Providing a Custom Order Reference 
+
+The **Pack Order** request's `OrderReferenceProvidedByCustomer` field enables you to provide a custom reference for the consignment that the request generates. This is a separate field to the `OrderReferenceProvidedByCustomer` used on the order itself, and behaves in the following ways:
+
+* If you add a custom reference to your **Pack Order** request, then PRO uses this value as the consignment's custom reference, even if there is a different custom reference on the order itself. 
+* If you do not add a custom reference to your **Pack Order** request, but the order does have a custom reference, then PRO populates the resulting consignment's `OrderReferenceProvidedByCustomer` using value from the order
+* If neither the order or the **Pack Order** request has a custom reference specified, then PRO creates the consignment without a custom reference. 
+
+### Generating Return Consignments
+
+You can automatically generate a return consignment at the same time as well as an outbound consignment by using the `GenerateReturn` flag. When PRO receives a **Pack Order request that has** `GenerateReturn` set to _true_, it creates and returns two consignments - one outbound and one inbound.
+
+The inbound consignment is identical to the outbound consignment, with the exception that its _Origin_ and _Destination_ addresses are swapped.
 
 ### Pack Order Example
 
@@ -110,10 +107,16 @@ The example shows a **Pack Order** request to create a consignment with one pack
 
 </div>
 
-> <span class="note-header">Note:</span>
->  For full reference information on the <strong>Pack Order</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/PackOrder">Pack Order</a></strong> page of the API reference.
+> <span class="note-header">More Information:</span>
+>
+> * For full reference information on the <strong>Pack Order</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/PackOrder">Pack Order</a></strong> page of the API reference.
+> * For example call flows showing orders being packed into consignments, see the <a href="/pro/api/help/flows/order_flex_flow.html">Order Flex</a> and <a href="/pro/api/help/flows/consumer_options_flex_flow.html">Consumer Options Flex</a> call flow pages.
 
+## Next Steps
 
+* Learn how to retrieve delivery options at the [Getting Delivery Options](/pro/api/help/getting_delivery_options.html) page.
+* Learn how to retrieve a consignment's customs documentation and invoices at the [Getting Customs Docs And Invoices](/api/help/getting_customs_docs_and_invoices.html) page.
+* Learn how to track consignments at the [Tracking Consignments](/api/help/tracking_consignments.html) page.
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>

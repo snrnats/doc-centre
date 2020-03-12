@@ -26,8 +26,10 @@ At a minimum, the **Create Order** endpoint requires you to send item, origin ad
 
 Either the order's `origin` address, its `destination` address, or both, must include a valid <code>ShippingLocationReference</code>. For information on how to obtain a list of your organisation's shipping locations, see the <strong><a href="https://docs.electioapp.com/#/api/GetShippingLocations">Get Shipping Locations</a></strong> page of the API reference.
 
-> <span class="note-header">Note:</span>
->  For full reference information on the <strong>Create Order</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/CreateOrder">Create Order</a></strong> page of the API reference.
+> <span class="note-header">More Information:</span>
+>
+> * For full reference information on the <strong>Create Order</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/CreateOrder">Create Order</a></strong> page of the API reference.
+> * For an example call flow showing orders being created, see the <a href="/pro/api/help/flows/order_flex_flow.html">Order Flex</a> call flow page.
 
 ### Create Order Example
 

@@ -303,9 +303,8 @@ Both **Add Address To Order** and **Update Address On Order** return an empty co
 
 > <span class="note-header">More Information:</span>
 >
-> For full reference information on the <strong>Add Address To Order</strong> endpoint, see the <a href="https://docs.electioapp.com/#/api/AddAddresstoOrder">Add Address To Order</a> page of the API reference.
->
-> For full reference information on the <strong>Update Address On Order</strong> endpoint, see the <a href="https://docs.electioapp.com/#/api/UpdateAddressonOrder">Update Address On Order</a> page of the API reference.
+> * For full reference information on the <strong>Add Address To Order</strong> endpoint, see the <a href="https://docs.electioapp.com/#/api/AddAddresstoOrder">Add Address To Order</a> page of the API reference.
+> * For full reference information on the <strong>Update Address On Order</strong> endpoint, see the <a href="https://docs.electioapp.com/#/api/UpdateAddressonOrder">Update Address On Order</a> page of the API reference.
 
 ## Next Steps
 
