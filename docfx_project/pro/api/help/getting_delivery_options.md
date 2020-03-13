@@ -114,7 +114,7 @@ The example shows a request to get delivery options for a fairly standard consig
 The API has returned two delivery options, both for Carrier X: one with an `{estimatedDeliveryDate}` of _2020-03-18_ and one with an `{estimatedDeliveryDate}` of _2020-03-19_.
 
 <div class="tab">
-    <button class="staticTabButton">Example Delivery Options Response</button>
+    <button class="staticTabButton">Delivery Options Response</button>
     <div class="copybutton" onclick="CopyToClipboard(this, 'DelOptionsResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
@@ -211,11 +211,112 @@ At this point, you would present some or all of the options returned to your cus
 
 ## Getting a Summary Of Options
 
-Delivery Option Summary
+<div class="tab">
+    <button class="staticTabButton">Delivery Options Summary Response</button>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'DelOptionsSumResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+</div>
+
+<div id="DelOptionsSumResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'DelOptionsSumResponse')">
+
+```json
+{
+    "Reference": "EPC-000-039-EPK",
+    "DeliveryOptions": [
+        "2020-03-18T00:00:00",
+        "2020-03-19T00:00:00",
+        "2020-03-20T00:00:00",
+        "2020-03-21T00:00:00",
+        "2020-03-23T00:00:00",
+        "2020-03-24T00:00:00",
+        "2020-03-25T00:00:00",
+        "2020-03-26T00:00:00",
+        "2020-03-27T00:00:00",
+        "2020-03-28T00:00:00",
+        "2020-03-30T00:00:00"
+    ],
+    "TimeSlots": null,
+    "PickUp": null,
+    "DropOff": null
+}
+```
+
+</div>
 
 ## Getting Existing Delivery Options
 
-Get Existing Delivery Option
+<div class="tab">
+    <button class="staticTabButton">Get Existing Delivery Option Response</button>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'existDelOptResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+</div>
+
+<div id="existDelOptResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'existDelOptResponse')">
+
+```json
+{
+    "Reference": null,
+    "ConsignmentDetail": {
+        "Reference": "EPC-000-039-EPZ",
+        "CustomerReference": "00000000-0000-0000-0000-000000000000",
+        "Weight": {
+            "Kg": 0.0
+        },
+        "Value": {
+            "Amount": 0.00,
+            "Currency": {
+                "Name": "Pound Sterling",
+                "IsoCode": "GBP"
+            }
+        },
+        "CustomsDocumentation": null,
+        "DateCreated": "2020-03-13T15:29:46.7279404+00:00",
+        "ShippingDate": null,
+        "RequestedDeliveryDate": null,
+        "EarliestDeliveryDate": null,
+        "LatestDeliveryDate": null,
+        "ConsignmentReferenceProvidedByCustomer": "",
+        "Addresses": []
+    },
+    "DeliveryOption": {
+        "Reference": "EDO-000-79G-V89",
+        "EstimatedDeliveryDate": {
+            "Date": "2020-03-14T00:00:00+00:00",
+            "Guaranteed": true,
+            "DayOfWeek": "Saturday"
+        },
+        "DeliveryWindow": {
+            "Start": "00:00:00",
+            "End": "12:00:00",
+            "UtcOffset": "+00:00"
+        },
+        "Carrier": "UPS",
+        "CarrierService": "UPS EXPRESS (Saturday Delivery, Delivery Confirmation Signature Required)",
+        "CarrierServiceReference": "EDC5_UPSHEXSDDCS",
+        "Price": {
+            "Net": 33.64,
+            "Gross": 40.37,
+            "VatRate": {
+                "Reference": "GB-0.200059453032104637",
+                "CountryIsoCode": "GB",
+                "Type": "Standard",
+                "Rate": 0.200059453032104637
+            },
+            "VatAmount": 6.73,
+            "Currency": {
+                "Name": "Pound Sterling",
+                "IsoCode": "GBP"
+            }
+        },
+        "AllocationCutOff": "2020-03-13T15:30:00+00:00",
+        "OperationalCutOff": null
+    }
+}
+```
+
+</div>
+
+## Next Steps
+
+
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>

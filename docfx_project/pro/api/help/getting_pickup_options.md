@@ -82,59 +82,11 @@ The example shows a request to get no more than 10 pickup options for a fairly s
   },
   "MaxResults": 10,
   "ConsignmentReferenceProvidedByCustomer": "Your reference",
-  "DeliveryDate": "2019-06-19T00:00:00+00:00",
+  "DeliveryDate": "2020-03-19T00:00:00+00:00",
   "GuaranteedOnly": false,
-  "ShippingDate": "2019-06-16T00:00:00+00:00",
+  "ShippingDate": "2020-03-16T00:00:00+00:00",
   "Packages": [
     {
-      "Items": [
-        {
-          "Sku": "SKU093434",
-          "Model": "ITM-002",
-          "Description": "Striped Bamboo Red/White",
-          "CountryOfOrigin": {
-            "IsoCode": {
-              "TwoLetterCode": "GB"
-            }
-          },
-          "HarmonisationCode": "Harmonisation_Code",
-          "Weight": {
-            "Value": 0.5,
-            "Unit": "Kg"
-          },
-          "Dimensions": {
-            "Unit": "Cm",
-            "Width": 10.0,
-            "Length": 10.0,
-            "Height": 10.0
-          },
-          "Value": {
-            "Amount": 5.99,
-            "Currency": {
-              "IsoCode": "GBP"
-            }
-          },
-          "ItemReferenceProvidedByCustomer": "ITEMREF-098",
-          "Barcode": {
-            "Code": "09887-091221",
-            "BarcodeType": "Code39"
-          },
-          "MetaData": [
-            {
-              "KeyValue": "Picker",
-              "StringValue": "David Thomas"
-            }
-          ],
-          "Quantity": 1,
-          "Unit": "Box",
-          "HarmonisationKeyWords": [
-            "Keyword1"
-          ],
-          "ContentClassification": "Unrestricted",
-          "ContentClassificationDetails": "NotSpecified"
-        }
-      ],
-      "PackageReferenceProvidedByCustomer": "MYPACK-00923",
       "Weight": {
         "Value": 0.5,
         "Unit": "Kg"
@@ -151,52 +103,13 @@ The example shows a request to get no more than 10 pickup options for a fairly s
         "Currency": {
           "IsoCode": "GBP"
         }
-      },
-      "Barcode": {
-        "Code": "09887-091221",
-        "BarcodeType": "Code39"
-      },
-      "MetaData": [
-        {
-          "KeyValue": "WMS-REF",
-          "IntValue": 77656555
-        }
-      ]
-    }
+      }
+    }  
   ],
-  "CustomsDocumentation": {
-    "DesignatedPersonResponsible": "Peter McPetersson",
-    "ImportersVatNumber": "02345555",
-    "CategoryType": "Other",
-    "ShipperCustomsReference": "CREF0001",
-    "ImportersTaxCode": "TC001",
-    "ImportersTelephone": "0161123456",
-    "ImportersFax": "01611124547",
-    "ImportersEmail": "peter.mcpetersson@test.com",
-    "CN23Comments": "Comments",
-    "ReferencesOfAttachedInvoices": [
-      "INV001"
-    ],
-    "ReferencesOfAttachedCertificates": [
-      "CERT001"
-    ],
-    "ReferencesOfAttachedLicences": [
-      "LIC001"
-    ],
-    "CategoryTypeExplanation": "Explanation",
-    "DeclarationDate": "2019-06-14T00:00:00+00:00",
-    "OfficeOfPosting": "Manchester",
-    "ReasonForExport": "Sale",
-    "ShippingTerms": "CFR",
-    "ShippersVatNumber": "874541414",
-    "ReceiversTaxCode": "TC5454",
-    "ReceiversVatNumber": "8745474",
-    "InvoiceDate": "2019-06-14T00:00:00+00:00"
-  },
   "Addresses": [
     {
       "AddressType": "Origin",
-      "ShippingLocationReference": "Shipping_Location_Reference",
+      "ShippingLocationReference": "EDC5_Electio",
       "IsCached": false
     },
     {
@@ -210,11 +123,7 @@ The example shows a request to get no more than 10 pickup options for a fairly s
         "LandLine": "0161544123",
         "Email": "peter.mcpetersson@test.com"
       },
-      "CompanyName": "Test Company (UK) Ltd.",
       "AddressLine1": "13 Porter Street",
-      "AddressLine2": "Pressington",
-      "AddressLine3": "Carlsby",
-      "Town": "Manchester",
       "Region": "Greater Manchester",
       "Postcode": "M1 5WG",
       "Country": {
@@ -223,12 +132,11 @@ The example shows a request to get no more than 10 pickup options for a fairly s
           "TwoLetterCode": "GB"
         }
       },
-      "SpecialInstructions": "Gate code: 4454",
       "IsCached": false
     }
-  ],
-  "Direction": "Outbound"
+  ]
 }
+
 ```
 
 </div>  
@@ -310,7 +218,7 @@ The example shows a request to get no more than 10 pickup options for a fairly s
                 {
                     "Reference": "EDO-000-AHP-093",
                     "EstimatedDeliveryDate": {
-                        "Date": "2019-05-21T00:00:00+00:00",
+                        "Date": "2019-03-19T00:00:00+00:00",
                         "Guaranteed": true,
                         "DayOfWeek": "Tuesday"
                     },
@@ -343,7 +251,7 @@ The example shows a request to get no more than 10 pickup options for a fairly s
                 {
                     "Reference": "EDO-000-AHP-094",
                     "EstimatedDeliveryDate": {
-                        "Date": "2019-05-20T00:00:00+00:00",
+                        "Date": "2019-03-18T00:00:00+00:00",
                         "Guaranteed": true,
                         "DayOfWeek": "Monday"
                     },
@@ -376,9 +284,9 @@ The example shows a request to get no more than 10 pickup options for a fairly s
                 {
                     "Reference": "EDO-000-AHP-09G",
                     "EstimatedDeliveryDate": {
-                        "Date": "2019-05-17T00:00:00+00:00",
+                        "Date": "2019-03-17T00:00:00+00:00",
                         "Guaranteed": true,
-                        "DayOfWeek": "Friday"
+                        "DayOfWeek": "Sunday"
                     },
                     "DeliveryWindow": {
                         "Start": "09:00:00",
@@ -429,11 +337,13 @@ The example shows a request to get no more than 10 pickup options for a fairly s
 
 </div>  
 
-The API has returned one location that meets the requested criteria, and three options for delivery to that location. All three options use the same carrier service and have a delivery time window of 09:30 - 17:30, but are scheduled for different days. In practice, PRO is saying that the carrier can deliver to the pickup location during business hours on the 17th, 20th or 21st of May (as required by the customer).
+The API has returned one location that meets the requested criteria, and three options for delivery to that location. All three options use the same carrier service and have a delivery time window of 09:30 - 17:30, but are scheduled for different days. In practice, PRO is saying that the carrier can deliver to the pickup location during business hours on the 17th, 18th or 19th or March (as required by the customer).
 
 Note the `{Reference}` for each pickup option. When the customer selects their preferred delivery option you will need to pass the relevant `{Reference}` back to PRO via the **Select Option** endpoint.
 
-At this point, you would present some or all of the options returned to your customer via your site or app. In the next step, we'll see how to handle the choice the customer makes.
+At this point, you would present some or all of the options returned to your customer via your site or app. For information on how to handle the choice the customer makes, see the [Selecting Options](/pro/api/help/selecting_options.md) page.
+
+## Next Steps
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>
