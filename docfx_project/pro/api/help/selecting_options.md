@@ -1,21 +1,6 @@
 # Selecting Options
 
-Select Option
-
-<div class="tab">
-    <button class="staticTabButton">Select Option Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'selectOptionEndpoint')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="selectOptionEndpoint" class="staticTabContent" onclick="CopyToClipboard(this, 'selectOptionEndpoint')">
-
-   ```
-   POST https://api.electioapp.com/deliveryoptions/select/{deliveryOptionReference}
-   ```
-
-</div>  
-
-Once the customer has selected an available option, you'll need to record their choice in SortedPRO via the **[Select Option](https://docs.electioapp.com/#/api/SelectOption)** endpoint. The **Select Option** endpoint takes the `{deliveryOptionReference}` of the selected option as a path parameter.
+Once the customer has selected an  pickup or delivery option, you'll need to record their choice in SortedPRO via the **Select Option** endpoint. To make a **Select Option** request, send a `POST` request to `https://api.electioapp.com/deliveryoptions/select/{deliveryOptionReference}`.
 
 Once it has received the selected `{deliveryOptionReference}`, PRO has all the information it needs to create and allocate a consignment. The consignment details were passed as part of the original request to get delivery options, and the `{deliveryOptionReference}` passed to the **Select Option** endpoint confirms the required delivery promise.
 
@@ -83,6 +68,8 @@ The example shows a request to select a delivery option that has a `{deliveryOpt
 </div> 
 
 Reserve Pickup Option
+
+
 
 Select delivery option as an order
 

@@ -15,16 +15,6 @@
 
 The **[Pickup Options](https://docs.electioapp.com/#/api/PickupOptions)** endpoint takes the details of an as-yet uncreated consignment and returns available pickup options. This data can be used to offer pickup timeslots and locations for the product that the customer is about to purchase.
 
-> <span class="note-header">Note:</span>
->  In the context of PRO, a "pickup option" refers to a combination of a carrier service, date and time window.
->
->  For example, suppose that you use the **Pickup Options** endpoint to request pickup options for a particular consignment, and the response indicates the following:
->
->  * Carrier X could deliver the consignment on Monday between 9-5.
->  * Carrier Y could deliver the consignment on Monday between 9-12 or Tuesday between 9-12
->  * Carrier Z could deliver the consignment on Monday between 9-1 or Monday between 1-5
->
->  In this case, there are five available pickup options: one for Carrier X and two each for Carriers Y and Z. 
 
 At a minimum, SortedPRO requires you to send the following data in order to receive pickup options for a potential consignment:
 

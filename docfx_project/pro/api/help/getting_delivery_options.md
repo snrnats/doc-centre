@@ -211,6 +211,26 @@ At this point, you would present some or all of the options returned to your cus
 
 ## Getting a Summary Of Options
 
+The **Delivery Options Summary** endpoint enables you to to get a list of all dates on which delivery and/or pickup options would be available for a particular consignment. This could be useful during checkout flows if you want to give your customers an indication of the dates on which they could request delivery before you make a full **Get Delivery Options** call
+
+To call **Delivery Options Summary**, send a `POST` request to `https://api.electioapp.com/deliveryoptions/summary`. The body of the request should contain the details of an as-yet uncreated consignment, structured identically to a **Get Delivery Options** request.
+
+> <span class="note-header">More Information:</span>
+>
+> See the [Getting Detailed Options](#getting-detailed-options) section for more information on the structure of a **Get Delivery Options** request.
+
+Once it has received the request, PRO returns a list of all dates that have `DeliveryOptions` available for that consignment, and a separate list with all dates that have `PickUp` options available for that consignment. Note that PRO does not return details of the delivery options themselves.
+
+<span class="highlight">HOW DOES THE TIMESLOTS ARRAY WORK? IT'S NOT EVEN MENTIONED IN THE API REF?</span>
+
+> <span class="note-header">Note:</span>
+>
+>  For full reference information on the <strong>Delivery Options Summary</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/DeliveryOptionSummary">Delivery Options Summary</a></strong> page of the API reference.
+
+### Delivery Options Summary Example
+
+In this example response, PRO has returned a list of delivery dates, but there are no available pickup options for the consignment.
+
 <div class="tab">
     <button class="staticTabButton">Delivery Options Summary Response</button>
     <div class="copybutton" onclick="CopyToClipboard(this, 'DelOptionsSumResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
@@ -243,6 +263,8 @@ At this point, you would present some or all of the options returned to your cus
 </div>
 
 ## Getting Existing Delivery Options
+
+
 
 <div class="tab">
     <button class="staticTabButton">Get Existing Delivery Option Response</button>
