@@ -156,11 +156,13 @@ The example shows a request to select a delivery option that has a `{Reference}`
 
 ## Reserving Pickup Options
 
-
+<span class="highlight">NEED TO TALK THROUGH THIS AS I DON'T KNOW WHAT THE DIFFERENCE BETWEEN RESERVING AND SELECTING A PICKUP OPTION IS</span>
 
 ## Next Steps
 
-
+* Learn how to manifest consignments at the [Manifesting Consignments](/pro/api/help/manifesting_consignments.html) page
+* Learn how to pack orders into consignments at the [Creating Consignments From Orders](/pro/api/help/packing_orders.html) page
+* Learn how to retrieve customs docs and invoices at the [Getting Customs Docs and Invoices](/pro/api/help/getting_customs_docs_and_invoices.html) page
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>
