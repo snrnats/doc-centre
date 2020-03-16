@@ -1,19 +1,27 @@
 # Selecting Options
 
-Once the customer has selected an  pickup or delivery option, you'll need to record their choice in SortedPRO via the **Select Option** endpoint. To make a **Select Option** request, send a `POST` request to `https://api.electioapp.com/deliveryoptions/select/{deliveryOptionReference}`.
+This page explains how to to generate consignments and orders by selecting a delivery option. 
 
-> <span class="note-header">
+---
 
-Once it has received the selected `{deliveryOptionReference}`, PRO has all the information it needs to create and allocate a consignment. The consignment details were passed as part of the original request to get delivery options, and the `{deliveryOptionReference}` passed to the **Select Option** endpoint confirms the required delivery promise.
+## Selecting Options as a Consignment
 
-PRO creates and allocates a consignment with the selected details, and returns links to the consignment resource that was allocated, a summary of the carrier service that the consignment was allocated to, a link to the relevant package labels, and a `ConsignmentLegs` array indicating how many legs the shipment will need. Where a shipment would need multiple legs to complete, the `ConsignmentLegs` array shows tracking details for each individual leg.
+The **Select Option** endpoint enables you to record a customer's choice of delivery or pickup option in SortedPRO. PRO generates and allocates a consignment from the details of the selected option.
 
-> <span class="note-header">Note:</span>
-> For full reference information on the <strong>Select Option</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/SelectOption">Select Option</a></strong> page of the API reference.
+To call **Select Option**, send a `POST` request to `https://api.electioapp.com/deliveryoptions/select/{deliveryOptionReference}`. There is no body content required for the request.
+
+Once it has received the request, PRO creates a consignment using the consignment that details were passed as part of the original request to get delivery options. Next, the system allocates the consignment to the carrier service associated with the selected delivery option. 
+
+PRO then returns links to the consignment resource that was allocated, a summary of the carrier service that the consignment was allocated to, a link to the relevant package labels, and a `ConsignmentLegs` array indicating how many legs the shipment will need. Where a shipment would need multiple legs to complete, the `ConsignmentLegs` array shows tracking details for each individual leg.
+
+> <span class="note-header">More Information:</span>
+>
+> * For full reference information on the <strong>Select Option</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/SelectOption">Select Option</a></strong> page of the API reference.
+> * For an example call flow in which consignments are created using **Select Order**, see the [Consumer Options](/pro/api/help/flows/consumer_options_flow.html) call flow page.
 
 ### Select Option Example
 
-The example shows a request to select a delivery option that has a `{deliveryOptionReference}` of _EDO-000-6DX-6XP_. PRO creates a consignment with a `{consignmentReference}` of _EC-000-05B-MMQ_, which it then  allocates to the carrier service associated with delivery option _EDO-000-6DX-6XP_. PRO then returns the relevant `{consignmentReference}` and label link, enabling you to get labels for and manifest the consignment.
+The example shows a request to select a delivery option that has a `{deliveryOptionReference}` of _EDO-000-6DX-6XP_. PRO creates a consignment with a `{consignmentReference}` of _EC-000-05B-MMQ_, which it then allocates to the carrier service associated with delivery option _EDO-000-6DX-6XP_. PRO then returns the relevant `{consignmentReference}` and label link, enabling you to get labels for and manifest the consignment.
 
 <div class="tab">
     <button class="staticTabButton">Example Select Option Request</button>
@@ -22,9 +30,9 @@ The example shows a request to select a delivery option that has a `{deliveryOpt
 
 <div id="selectOptionRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'selectOptionRequest')">
 
-   ```
-   POST https://api.electioapp.com/deliveryoptions/select/EDO-000-6DX-6XP
-   ```
+```json
+POST https://api.electioapp.com/deliveryoptions/select/EDO-000-6DX-6XP
+```
 
 </div>   
 
@@ -69,11 +77,7 @@ The example shows a request to select a delivery option that has a `{deliveryOpt
 
 </div> 
 
-Reserve Pickup Option
-
-
-
-Select delivery option as an order
+## Selecting Options as an Order
 
 <div class="tab">
     <button class="staticTabButton">Select Delivery Option as an Order Endpoint</button>
@@ -152,6 +156,14 @@ The example shows a request to select a delivery option that has a `{Reference}`
   ```
 
 </div> 
+
+## Reserving Pickup Options
+
+
+
+## Next Steps
+
+
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>
