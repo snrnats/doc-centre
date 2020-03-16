@@ -79,7 +79,7 @@ POST https://api.electioapp.com/deliveryoptions/select/EDO-000-6DX-6XP
 
 ## Selecting Options as an Order    
 
-The **Select Option As Order** endpoint enables you to record a customer's choice of delivery or pickup option as an order rather than a consignment. You can then pack the resulting order into multiple consignments as per the PRO order process.
+The **Select Option As Order** endpoint enables you to record a customer's choice of delivery or pickup option as an order rather than a consignment. You can then pack the resulting order into multiple consignments as per the PRO order process. **Select Option As Order** enables you to select multiple delivery and/or pickup options at once. 
 
 Using **Select Option As Order** combines the benefits of PRO's delivery options and orders features, enabling you to offer your customers delivery options even if their orders need to be shipped in multiple consignments.
 
@@ -87,14 +87,14 @@ Using **Select Option As Order** combines the benefits of PRO's delivery options
 >
 > For more information on using orders in PRO, see the [Managing Orders](/pro/api/help/managing_orders.html) section.
 
+To call **Select Option As Order**, send a `POST` request to `https://api.electioapp.com/deliveryoptions/selectorder`. The body of the request should contain a `DeliveryOptions` array listing the delivery options you want to select as orders. Each `DeliveryOption` must contain a delivery option `Reference`, which is used to identify the order you want to select. If require, you can also add an `OrderReferenceProvidedByCustomer` and metadata to be added to the resulting order.
 
+Once it has received the **Select Delivery Option as an Order** request, PRO uses the details of the selected option to create an order and returns an object containing the associated `{orderReferences}`. 
 
- POST https://api.electioapp.com/deliveryoptions/selectorder
-
-Once it has received the **Select Delivery Option as an Order** request, PRO uses the details of the selected option to create an order and returns an object containing the associated `{orderReference}`. The reference will come in useful in the next step, when we pack the order into consignments.
-
-> <span class="note-header">Note:</span>
->  For full reference information on the <strong>Select Delivery Option as an Order</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/SelectDeliveryOptionasanOrder">Select Delivery Option as an Order</a></strong> page of the API reference.
+> <span class="note-header">More Information:</span>
+>
+> * For full reference information on the <strong>Select Delivery Option as an Order</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/SelectDeliveryOptionasanOrder">Select Delivery Option as an Order</a></strong> page of the API reference.
+> * For an example call flow showing options being selected as orders, see the [Consumer Options Flex](/pro/api/help/flows/consumer_options_flex_flow.html) flow page.
 
 ### Select Option As Order Example
 
