@@ -1,22 +1,18 @@
 # Getting Pickup Options
 
-<div class="tab">
-    <button class="staticTabButton">Pickup Options Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'pickupOptionsEndpoint')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+Want to let your customers collect their deliveries from a pickup location? This page explains how to use the **Pickup Options** endpoint to offer available pickup locations and timeslots.
 
-<div id="pickupOptionsEndpoint" class="staticTabContent" onclick="CopyToClipboard(this, 'pickupOptionsEndpoint')">
+---
 
-   ```
-   POST https://api.electioapp.com/deliveryoptions/pickupoptions/
-   ```
+## Using the Pickup Options Endpoint
 
-</div>    
+The **[Pickup Options](https://docs.electioapp.com/#/api/PickupOptions)** endpoint takes the details of an as-yet uncreated consignment and returns available pickup options. This information can be used to offer pickup timeslots and locations for the product that the customer is about to purchase.
 
-The **[Pickup Options](https://docs.electioapp.com/#/api/PickupOptions)** endpoint takes the details of an as-yet uncreated consignment and returns available pickup options. This data can be used to offer pickup timeslots and locations for the product that the customer is about to purchase.
+> <span class="note-header">Note:</span>
+>
+> For further information on what constitutes a pickup option, see the [Using Delivery and Pickup Options](using_delivery_and_pickup_options.md) page.
 
-
-At a minimum, SortedPRO requires you to send the following data in order to receive pickup options for a potential consignment:
+To call the **Pickup Options** endpoint, send a `POST` request to `https://api.electioapp.com/deliveryoptions/pickupoptions/`. At a minimum, the body of the request should contain the following information:
 
 * **Distance** - The maximum distance from the destination address (in km) you want to receive results for.
 * **Max Results** - The maximum number of results that you want to receive. This should be a value between one and 50.
@@ -34,13 +30,13 @@ At a minimum, SortedPRO requires you to send the following data in order to rece
 * Metadata. PRO metadata enables you to record additional data about a consignment in custom fields. For more information on using metadata in PRO, see the **[Metadata](/api/flows/moreInfo.html#metadata)** section of the **More Information** page.
 * Tags. Allocation tags enable you to filter the list of carrier services that a particular consignment could be allocated to. For more information on allocation tags, see the **[Tags](/api/flows/moreInfo.html#tags)** section of the **More Information** page.
 
-Providing extra information can help you to improve the relevance of the options returned.
+Providing extra information can help you to improve the relevance of the options returned, and means that any consignments or orders you generate from an option will be populated with richer data.
 
 Either the consignment's `origin` address, its `destination` address, or both, must include a valid <code>ShippingLocationReference</code>. For information on how to obtain a list of your organisation's shipping locations, see the <strong><a href="https://docs.electioapp.com/#/api/GetShippingLocations">Get Shipping Locations</a></strong> page of the API reference.
 
-The **Pickup Options** endpoint returns a `{Locations}` array detailing all the pickup locations that have options meeting your request criteria. Each `{Location}` object contains a `{DeliveryOptions}` array listing the delivery options that are available to that location for the proposed consignment, and the opening times of the location itself.
+The **Pickup Options** endpoint returns a `{Locations}` array listing all the pickup locations that can meet your request criteria. Each `{Location}` object contains a `{DeliveryOptions}` array listing the delivery options that are available to that location for the proposed consignment, and the opening times of the location itself.
 
-Each `{PickupOptions}` object contains details of a particular pickup option that could be used to deliver the consignment to the relevant location, including:
+Each `{DeliveryOptions}` object contains details of a particular option that could be used to deliver the consignment to the relevant `{location}`, including:
 
 * **Reference** - A unique identifier for the option, used when selecting options in the next step.
 * **Dates and Delivery Windows**
@@ -51,6 +47,7 @@ Each `{PickupOptions}` object contains details of a particular pickup option tha
 * **Service Direction**
 
 > <span class="note-header">More Information:</span>
+>
 >  For full reference information on the <strong>Pickup Options</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/PickupOptions">Pickup Options</a></strong> page of the API reference.
 
 ### Pickup Options Example
@@ -130,6 +127,8 @@ The example shows a request to get no more than 10 pickup options for a fairly s
 ```
 
 </div>  
+
+PRO returns one location that meets the requested criteria, and three options for delivery to that location. All three options use the same carrier service and have a delivery time window of 09:30 - 17:30, but are scheduled for different days. In practice, PRO is saying that the carrier can deliver to the pickup location during business hours on the 17th, 18th or 19th or March (as required by the customer).
 
 <div class="tab">
     <button class="staticTabButton">Example Pickup Options Response</button>
@@ -327,13 +326,15 @@ The example shows a request to get no more than 10 pickup options for a fairly s
 
 </div>  
 
-The API has returned one location that meets the requested criteria, and three options for delivery to that location. All three options use the same carrier service and have a delivery time window of 09:30 - 17:30, but are scheduled for different days. In practice, PRO is saying that the carrier can deliver to the pickup location during business hours on the 17th, 18th or 19th or March (as required by the customer).
-
 Note the `{Reference}` for each pickup option. When the customer selects their preferred delivery option you will need to pass the relevant `{Reference}` back to PRO via the **Select Option** endpoint.
 
 At this point, you would present some or all of the options returned to your customer via your site or app. For information on how to handle the choice the customer makes, see the [Selecting Options](/pro/api/help/selecting_options.md) page.
 
 ## Next Steps
+
+* Learn how to get delivery options for a consignment at the [Getting Delivery Options](/pro/api/help/getting_delivery_options.html) page
+* Learn how to create consignments and orders from delivery options at the [Selecting Options](/pro/api/help/selecting_options.html) page
+* Learn how to manifest consignments at the [Manifesting Consignments](/pro/api/help/manifesting_consignments.html) page
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>
