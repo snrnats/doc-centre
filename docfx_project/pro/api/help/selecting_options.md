@@ -77,22 +77,19 @@ POST https://api.electioapp.com/deliveryoptions/select/EDO-000-6DX-6XP
 
 </div> 
 
-## Selecting Options as an Order
+## Selecting Options as an Order    
 
-<div class="tab">
-    <button class="staticTabButton">Select Delivery Option as an Order Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'optAsOrderEndpoint')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+The **Select Option As Order** endpoint enables you to record a customer's choice of delivery or pickup option as an order rather than a consignment. You can then pack the resulting order into multiple consignments as per the PRO order process.
 
-<div id="optAsOrderEndpoint" class="staticTabContent" onclick="CopyToClipboard(this, 'optAsOrderEndpoint')">
+Using **Select Option As Order** combines the benefits of PRO's delivery options and orders features, enabling you to offer your customers delivery options even if their orders need to be shipped in multiple consignments.
 
-  ```
-  POST https://api.electioapp.com/deliveryoptions/selectorder
-  ```
+> <span class="note-header">More Information:</span>
+>
+> For more information on using orders in PRO, see the [Managing Orders](/pro/api/help/managing_orders.html) section.
 
-</div>     
 
-Once the customer has selected an available delivery option, you'll need to record their choice in SortedPRO via the **[Select Delivery Option as an Order](https://docs.electioapp.com/#/api/SelectDeliveryOptionasanOrder)** endpoint. This endpoint takes the `{Reference}` of the selected option as a path parameter.
+
+ POST https://api.electioapp.com/deliveryoptions/selectorder
 
 Once it has received the **Select Delivery Option as an Order** request, PRO uses the details of the selected option to create an order and returns an object containing the associated `{orderReference}`. The reference will come in useful in the next step, when we pack the order into consignments.
 
