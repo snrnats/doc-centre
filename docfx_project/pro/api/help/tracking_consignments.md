@@ -1,18 +1,40 @@
 # Tracking Consignments
 
-Get Tracking Events
+PRO's Tracking API enables you to drive embedded delivery tracking from your own website, without the need to pass customers off to a carrier portal. This page explains how to use the Tracking API to get updates on a consignment's progress.
 
-Get Events Per Package
+---
 
-Both are at consignment level. Package lists packages and events within those packages
+## Tracking API Overview
 
-Events also lists packages, but lists legs inside each package. Events are inside the legs object
+PRO's Tracking API has three endpoints:
 
-Get Consignment Events of Specified Type - needs to go in the consignment search section
+* **Get Tracking Events** - Returns full tracking event information for a specific consignment, including separate details for each leg of a shipment.
+* **Get Events Per Package** - Returns flattened tracking event information for a specific consignment, broken down by package. Does not take multiple legs into account.
+* **Post Tracking Events** - Enables carriers to post events directly to PRO.
 
-Get Consignment State Events of Specified Type - needs to go in the consignment search section
+> <span class="note-header">Note:</span>
+>
+> The **Post Tracking Events** endpoint is intended for carrier use only, and is outside the scope of this documentation.
 
-Post tracking events = for carriers only. Refer to it here but then deal with it in forthcoming For Carriers section.
+## What Is A Tracking Event?
+
+
+
+## Getting Multi-Leg Tracking Events
+
+The **Get Tracking Events** API enables you to get tracking events for 
+
+
+## Getting Single Leg Tracking Events
+
+
+
+## Using Tracking Events
+
+
+
+## Next Steps
+
 
 
 <script src="../../scripts/requesttabs.js"></script>
