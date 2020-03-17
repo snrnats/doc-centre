@@ -10,7 +10,7 @@ The **Select Option** endpoint enables you to record a customer's choice of deli
 
 To call **Select Option**, send a `POST` request to `https://api.electioapp.com/deliveryoptions/select/{deliveryOptionReference}`. There is no body content required for the request.
 
-Once it has received the request, PRO creates a consignment using the consignment that details were passed as part of the original request to get delivery options. Next, the system allocates the consignment to the carrier service associated with the selected delivery option. 
+Once it has received the request, PRO creates a consignment using the consignment that details were passed as part of the original request to get delivery options. Next, the system allocates the consignment in line with the delivery promise specified in the selected option. Generally, this means allocating to the carrier service returned in the original option, but PRO can allocate to an alternative service in certain circumstances. The delivery option guarantees the delivery promise, but not the carrier service
 
 PRO then returns links to the consignment resource that was allocated, a summary of the carrier service that the consignment was allocated to, a link to the relevant package labels, and a `ConsignmentLegs` array indicating how many legs the shipment will need. Where a shipment would need multiple legs to complete, the `ConsignmentLegs` array shows tracking details for each individual leg.
 
@@ -153,10 +153,6 @@ The example shows a request to select a delivery option that has a `{Reference}`
   ```
 
 </div> 
-
-## Reserving Pickup Options
-
-<span class="highlight">NEED TO TALK THROUGH THIS AS I DON'T KNOW WHAT THE DIFFERENCE BETWEEN RESERVING AND SELECTING A PICKUP OPTION IS</span>
 
 ## Next Steps
 
