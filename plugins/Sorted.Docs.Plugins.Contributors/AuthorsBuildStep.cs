@@ -62,7 +62,7 @@ namespace Sorted.Docs.Plugins.Contributors
                         index++;
                     }
                     
-                    content["gitPageDate"] = DateTime.Parse(gitCommits[0].Commit.Author.Date).ToShortDateString();
+                    content["gitPageDate"] = DateTime.Parse(gitCommits[0].Commit.Author.Date).ToString("dd/MM/yyyy");
                 }
             }
         }
