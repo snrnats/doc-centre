@@ -1,25 +1,27 @@
 # Getting Quotes For An Existing Consignment
 
-Get Quotes by Consignment Reference
+This page explains how to get delivery quotes for a consignment that already exists in PRO.
 
-<div class="tab">
-    <button class="staticTabButton">Get Quotes by Consignment Reference Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'quoteConRefEndpoint')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+---
 
-<div id="quoteConRefEndpoint" class="staticTabContent" onclick="CopyToClipboard(this, 'quoteConRefEndpoint')">
+The **Get Quotes By Consignment Reference** endpoint returns quotes based on the details of an existing consignment. Specifically, it takes a `{consignmentReference}` and returns an array of `{Quotes}` for that consignment. 
 
-```
-GET https://api.electioapp.com/quotes/consignment/{consignmentReference}
-```
+To call **Get Quotes by Consignment Reference**, send a `GET` request to `https://api.electioapp.com/quotes/consignment/{consignmentReference}`.
 
-</div>  
+Once it has received the request, PRO returns a quote result. The quote result object includes two lists: one containing `Quotes` and one containing `UnqualifiedServices` (that is, eligible services for which it was not possible to obtain a delivery quote). 
 
-Once you've created your consignment, you'll need to use the **[Get Quotes by Consignment Reference](https://docs.electioapp.com/#/api/GetQuotesbyConsignmentReference)** endpoint to get some delivery quotes for it.
+Each `Quote` object contains the following information:
 
-**Get Quotes by Consignment Reference** returns quotes based on the details of an existing consignment. Specifically, it takes a `{consignmentReference}` as a path parameter and returns an array of `{Quotes}` for that consignment, as well as a list of services that were unable to quote for the consignment. 
+* A unique reference for the quote. This value is important, as it is used when allocating consignments to the quote via the **Allocate With Quote** endpoint.
+* Creation and expiry dates
+* The name and reference of the relevant carrier and carrier service
+* Origin and destination addresses
+* Collection date, and a delivery date range
+* Pricing information
+* Details on each leg of the journey (where applicable)
+* The service direction
 
-Each `{Quote}` object contains details on carrier service, dates, addresses, and price, amongst other information. Pay particular attention to the `{quoteReference}`, as you'll need this when you select a quote in the next step.
+At this point, you would be able to display the relevant quote information to your customer service operative.
 
 > <span class="note-header">Note:</span>
 >  For full reference information on the <strong>Get Quotes by Consignment Reference</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/GetQuotesbyConsignmentReference">Get Quotes by Consignment Reference</a></strong> page of the API reference.
@@ -334,7 +336,9 @@ https://api.electioapp.com/quotes/consignment/EC-000-05B-1CM
 
 ## Next Steps
 
-
+* Learn how to get quotes for an uncreated consignment at the [Getting Quotes](/pro/api/help/getting_quotes.html) page.
+* Learn how to create consignments at the [Creating Consignments](/pro/api/help/creating_consignments.html) page.
+* Learn how to allocate consignments to your chosen quote at the [Allocating To A Specific Quote](/pro/api/help/allocating_to_a_specific_quote.html) page.
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>

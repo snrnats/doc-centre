@@ -21,7 +21,6 @@ PRO's Quotes API enables you to get delivery quotes for both as-yet uncreated an
 
 * [Getting Quotes](/pro/api/help/getting_quotes.md) - Explains how to get delivery quotes for an as-yet uncreated consignment
 * [Getting Quotes for an Existing Consignment](/pro/api/help/getting_quotes_for_an_existing_consignment.md) - Explains how to get delivery quotes for an existing consignment
-* [Getting Quotes for a Service Group](/pro/api/help/getting_quotes_for_a_service_group.md) - Explains how to get quotes grouped by service group
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>

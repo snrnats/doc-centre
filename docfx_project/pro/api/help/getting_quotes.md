@@ -4,9 +4,11 @@ This page explains how got get delivery quotes based on consignment details.
 
 ---
 
-## Sending a Get Quotes Request
+## Overview
 
-The **Get Quotes** endpoint enables you to get quotes based on the details of an as-yet nonexistent consignment. 
+PRO has two endpoints that take the details of an as-yet nonexistent consignment and
+
+## Sending a Get Quotes Request
 
 To call **Get Quotes**, send a `POST` request to `https://api.electioapp.com/quotes/`. The body of the request should contain a consignment object.
 
@@ -32,14 +34,14 @@ There are lots of optional properties you can send when getting quotes for a con
 
 Adding optional properties can help to improve the relevance and accuracy of the quote results that you get back from PRO.
 
-## The Get Quotes Response
+### The Get Quotes Response
 
 Once it has received the request, PRO returns a quote result. The quote result object includes two lists: one containing `Quotes` and one containing `UnqualifiedServices` (that is, eligible services for which it was not possible to obtain a delivery quote). 
 
 Each `Quote` object contains the following information:
 
 * A unique reference for the quote. This value is important, as it is used when allocating consignments to the quote via the **Allocate With Quote** endpoint.
-* Creation and expiry dates
+* Creation and expiry dates 
 * The name and reference of the relevant carrier and carrier service
 * Origin and destination addresses
 * Collection date, and a delivery date range
@@ -276,10 +278,14 @@ PRO has responded with one quote and two unavailable services.
 
 </div>
 
+## Getting Service Group Quotes
+
+
+
 ## Next Steps
 
 * Learn how to get quotes using a consignment reference at the [Getting Quotes For An Existing Consignment](/pro/api/help/getting_quotes_for_an_existing_consignment.html) page.
-* Learn how to get quotes from a carrier service group at the [Getting Quotes For A Service Group](/pro/api/help/getting_quotes_for_a_service_group.html) page.
+* Learn how to create consignments at the [Creating Consignments](/pro/api/help/creating_consignments.html) page.
 * Learn how to allocate consignments to your chosen quote at the [Allocating To A Specific Quote](/pro/api/help/allocating_to_a_specific_quote.html) page.
 
 <script src="../../scripts/requesttabs.js"></script>
