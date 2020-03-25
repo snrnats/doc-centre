@@ -280,7 +280,206 @@ PRO has responded with one quote and two unavailable services.
 
 ## Getting Service Group Quotes
 
+<div class="tab">
+    <button class="staticTabButton">Get Service Group Quotes Request Example</button>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'SGQuoteRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+</div>
 
+<div id="SGQuoteRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'SGQuoteRequest')">
+
+```json
+{
+  "Packages": [
+    {
+      "Weight": {
+        "Value": 0.5,
+        "Unit": "Kg"
+      },
+      "Dimensions": {
+        "Unit": "Cm",
+        "Width": 10.0,
+        "Length": 10.0,
+        "Height": 10.0
+      },
+      "Description": "Socks",
+      "Value": {
+        "Amount": 5.99,
+        "Currency": {
+          "IsoCode": "GBP"
+        }
+      }
+    }  
+  ],
+  "Addresses": [
+    {
+      "AddressType": "Origin",
+      "ShippingLocationReference": "EDC5_Electio",
+      "IsCached": false
+    },
+    {
+      "AddressType": "Destination",
+      "Contact": {
+        "Title": "Mr",
+        "FirstName": "Peter",
+        "LastName": "McPetersson",
+        "Telephone": "07702123456",
+        "Mobile": "07702123456",
+        "LandLine": "0161544123",
+        "Email": "peter.mcpetersson@test.com"
+      },
+      "AddressLine1": "13 Porter Street",
+      "Region": "Greater Manchester",
+      "Postcode": "M1 5WG",
+      "Country": {
+        "Name": "Great Britain",
+        "IsoCode": {
+          "TwoLetterCode": "GB"
+        }
+      },
+      "IsCached": false
+    }
+  ]
+}
+
+```
+
+</div>
+
+<div class="tab">
+    <button class="staticTabButton">Get Service Group Quotes Response Example</button>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'SGQuoteResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+</div>
+
+<div id="SGQuoteResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'SGQuoteResponse')">
+
+```json
+[
+    {
+        "Reference": "SIMON_TEST",
+        "Name": "Test",
+        "CheapestQuote": null,
+        "QuoteRequestReference": "a6e9024c-2379-4729-bda5-ab8900b01685",
+        "Quotes": [],
+        "Message": null,
+        "UnqualifiedServices": [
+            {
+                "Available": true,
+                "Rates": false,
+                "MpdCarrierService": "acceptanceTestCarrier_825d",
+                "CarrierReference": "DPD",
+                "MpdCarrierServiceReference": "acceptanceTestCarrier_f8fe",
+                "ExclusionReason": "No cost and/or pricing data configured"
+            }
+        ]
+    },
+    {
+        "Reference": "Test1",
+        "Name": "Test",
+        "CheapestQuote": null,
+        "QuoteRequestReference": "a6e9024c-2379-4729-bda5-ab8900b01685",
+        "Quotes": [],
+        "Message": null,
+        "UnqualifiedServices": [
+            {
+                "Available": false,
+                "Rates": true,
+                "MpdCarrierService": "UPS EXPRESS PLUS (Delivery Confirmation Signature Required)",
+                "CarrierReference": "UPS",
+                "MpdCarrierServiceReference": "EDC5_UPSHEP",
+                "ExclusionReason": "Service availability data not configured"
+            }
+        ]
+    },
+    {
+        "Reference": "Test1234567890",
+        "Name": "Test",
+        "CheapestQuote": null,
+        "QuoteRequestReference": "a6e9024c-2379-4729-bda5-ab8900b01685",
+        "Quotes": [],
+        "Message": null,
+        "UnqualifiedServices": [
+            {
+                "Available": false,
+                "Rates": true,
+                "MpdCarrierService": "UPS EXPRESS (Delivery Confirmation Signature Required)",
+                "CarrierReference": "UPS",
+                "MpdCarrierServiceReference": "EDC5_UPSHEXDCS",
+                "ExclusionReason": "Service availability data not configured"
+            }
+        ]
+    },
+    {
+        "Reference": "TEST_UPS",
+        "Name": "UPS",
+        "CheapestQuote": null,
+        "QuoteRequestReference": "a6e9024c-2379-4729-bda5-ab8900b01685",
+        "Quotes": [],
+        "Message": null,
+        "UnqualifiedServices": [
+            {
+                "Available": false,
+                "Rates": true,
+                "MpdCarrierService": "UPS EXPRESS (Delivery Confirmation Signature Required)",
+                "CarrierReference": "UPS",
+                "MpdCarrierServiceReference": "EDC5_UPSHEXDCS",
+                "ExclusionReason": "Service availability data not configured"
+            },
+            {
+                "Available": false,
+                "Rates": true,
+                "MpdCarrierService": "UPS EXPRESS (Saturday Delivery, Delivery Confirmation Signature Required)",
+                "CarrierReference": "UPS",
+                "MpdCarrierServiceReference": "EDC5_UPSHEXSDDCS",
+                "ExclusionReason": "Service availability data not configured"
+            },
+            {
+                "Available": false,
+                "Rates": true,
+                "MpdCarrierService": "UPS EXPRESS PLUS (Delivery Confirmation Signature Required)",
+                "CarrierReference": "UPS",
+                "MpdCarrierServiceReference": "EDC5_UPSHEP",
+                "ExclusionReason": "Service availability data not configured"
+            },
+            {
+                "Available": false,
+                "Rates": true,
+                "MpdCarrierService": "UPS SAVER (Delivery Confirmation Signature Required)",
+                "CarrierReference": "UPS",
+                "MpdCarrierServiceReference": "EDC5_UPSHSADCS",
+                "ExclusionReason": "Service availability data not configured"
+            },
+            {
+                "Available": false,
+                "Rates": true,
+                "MpdCarrierService": "UPS STANDARD (Delivery Confirmation Signature Required)",
+                "CarrierReference": "UPS",
+                "MpdCarrierServiceReference": "EDC5_UPSHSTDCS",
+                "ExclusionReason": "Service availability data not configured"
+            }
+        ]
+    },
+    {
+        "Reference": "NextDay",
+        "Name": "NextDay",
+        "CheapestQuote": null,
+        "QuoteRequestReference": "a6e9024c-2379-4729-bda5-ab8900b01685",
+        "Quotes": [],
+        "Message": null,
+        "UnqualifiedServices": [
+            {
+                "Available": false,
+                "Rates": true,
+                "MpdCarrierService": "Next Day Monday - Saturday",
+                "CarrierReference": "MNZIES",
+                "MpdCarrierServiceReference": "MPD_MNZIS-00001",
+                "ExclusionReason": "This service is not available between the selected addresses."
+            }
+        ]
+    }
+]
+```
+
+</div>
 
 ## Next Steps
 
