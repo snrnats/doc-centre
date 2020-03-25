@@ -6,13 +6,15 @@ namespace Sorted.Docs.Plugins.Contributors.Utils
     {
         public static string GetAuthToken()
         {
-            var (hasValue, value) = GetEnvironmentVariable("GITHUB_AUTH_TOKEN");
-            if (!hasValue)
+            const string VariableName = "GITHUB_AUTH_TOKEN";
+            var (hasValue, value) = GetEnvironmentVariable(VariableName);
+            if (hasValue)
             {
-                throw new Exception("GitHub credentials are not present. Is GITHUB_AUTH_TOKEN variable set?");
+                return value;
             }
+            ConsoleWriter.Warning($"Environment variable {VariableName} was not found. Cannot process commits.");
+            return string.Empty;
 
-            return value;
         }
 
         private static (bool HasValue, string Value) GetEnvironmentVariable(string name)

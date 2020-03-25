@@ -17,6 +17,12 @@ namespace Sorted.Docs.Plugins.Contributors.Services
         
         public static List<Contributor> GetContributors()
         {
+            if (!ApiTokenExists())
+            {
+                ConsoleWriter.Warning("GitHub API Token not provided. Commit processing will be skipped");
+                return new List<Contributor>(0);
+            }
+            
             var contributorsEndpoint = $"{BaseRepoUrl}/contributors";
             var results = CallApi(contributorsEndpoint).GetAwaiter().GetResult(); //sorry, DocFX doesn't support async methods here
             if (string.IsNullOrWhiteSpace(results))
@@ -39,6 +45,12 @@ namespace Sorted.Docs.Plugins.Contributors.Services
 
         public static List<Commits> GetCommits(string path)
         {
+            if (!ApiTokenExists())
+            {
+                ConsoleWriter.Warning("GitHub API Token not provided. Commit processing will be skipped");
+                return new List<Commits>(0);
+            }
+
             var commitsEndpoint = $"{BaseRepoUrl}/commits";
             
             if (!string.IsNullOrWhiteSpace(path))
@@ -109,6 +121,12 @@ namespace Sorted.Docs.Plugins.Contributors.Services
             var headerValue = GitHubApiKeyHelper.GetAuthToken();
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", headerValue);
             return client;
+        }
+
+        private static bool ApiTokenExists()
+        {
+            var apiToken = GitHubApiKeyHelper.GetAuthToken();
+            return !string.IsNullOrWhiteSpace(apiToken);
         }
     }
 }
