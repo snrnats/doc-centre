@@ -22,7 +22,7 @@ To call **Get Consignment**, sent a `GET` request to `https://api.electioapp.com
 
 ### Example Get Consignment Response
 
-The example below shows a simple **Get Consignment** request for an unallocated consignment that contains just package and address details. For an example of a full **Get Consignment** request, see the [Get Consignment](https://docs.electioapp.com/#/api/GetConsignment) API reference.
+The example below shows a simple **Get Consignment** request for an unallocated consignment containing just package and address details. For an example of a full **Get Consignment** request, see the [Get Consignment](https://docs.electioapp.com/#/api/GetConsignment) API reference.
 
 <div class="tab">
     <button class="staticTabButton">Get Consignment Response Example</button>
@@ -362,7 +362,7 @@ https://apis.electioapp.com/consignments/100/0/?State=Allocated&Direction=Inboun
             },
             "ApiLink": {
                 "Rel": "detail",
-                "Href": "https://apisandbox.electioapp.com/consignments/EC-000-05C-VQ4"
+                "Href": "https://api.electioapp.com/consignments/EC-000-05C-VQ4"
             },
             "FailedManifestMessage": null,
             "FailedManifestTimeStamp": null,
@@ -415,7 +415,7 @@ https://apis.electioapp.com/consignments/100/0/?State=Allocated&Direction=Inboun
             },
             "ApiLink": {
                 "Rel": "detail",
-                "Href": "https://apisandbox.electioapp.com/consignments/EC-000-05C-VQ3"
+                "Href": "https://api.electioapp.com/consignments/EC-000-05C-VQ3"
             },
             "FailedManifestMessage": null,
             "FailedManifestTimeStamp": null,

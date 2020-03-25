@@ -31,5 +31,10 @@
     --colour-search-highlight: #eee;
     --colour-tab-header: #f2f2f2;
     --colour-tab-border: #eee;
+    --colour-code-content: #404040;
+    --colour-code-background: #eee;
+    --colour-link-hover: #e60052;
+    --colour-search-background: #fff;
+    --colour-search-border: #eee;
     --colour-muted: #777;
 }

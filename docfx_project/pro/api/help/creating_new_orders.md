@@ -1,26 +1,20 @@
 # Creating New Orders
 
-Create Order
+The first step in using SortedPRO orders is to create the order itself. This page explains the various ways in which you can create orders.
 
-<div class="tab">
-    <button class="staticTabButton">Create Order Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'createOrderEndpoint')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+---
 
-<div id="createOrderEndpoint" class="staticTabContent" onclick="CopyToClipboard(this, 'createOrderEndpoint')">
+## Creating Orders Directly  
 
-   ```
-   POST https://api.electioapp.com/orders
-   ```
+The **[Create Order](https://docs.electioapp.com/#/api/CreateOrder)** endpoint enables you to record details of a customer's order in SortedPRO. To call **Create Order**, send a `POST` request to `https://api.electioapp.com/orders`.
 
-</div>    
+The body structure of the **Create Order** request is very similar to that of the **Create Consignments** request, with the exception that items on an order do not need to share an origin, ship date, and carrier.
 
-The **[Create Order](https://docs.electioapp.com/#/api/CreateOrder)** endpoint enables you to record details of a customer's order in SortedPRO. 
+> <span class="note-header">Note:</span>
+>
+> For more information on the difference between orders and consignments, see the [Managing Orders](/pro/api/help/managing_orders.html) page.
 
-> <span class="note-header">More Information:</span>
->  In the context of PRO, an order represents a collection of packages that is to be transported to the same destination and on behalf of the same customer. Each order will eventually correspond to one or more consignments.
-
-At a minimum, the **Create Order** endpoint requires you to send package, origin address, and destination address data. However, there are lots of other properties you can send when creating an order, including:
+At a minimum, the **Create Order** endpoint requires you to send item, origin address, and destination address data. However, there are lots of other properties you can send when creating an order, including:
 
 * Your own order reference.
 * The order's source.
@@ -32,14 +26,14 @@ At a minimum, the **Create Order** endpoint requires you to send package, origin
 
 Either the order's `origin` address, its `destination` address, or both, must include a valid <code>ShippingLocationReference</code>. For information on how to obtain a list of your organisation's shipping locations, see the <strong><a href="https://docs.electioapp.com/#/api/GetShippingLocations">Get Shipping Locations</a></strong> page of the API reference.
 
-To edit an existing order, use the **[Update Orders](https://docs.electioapp.com/#/api/UpdateOrder)** endpoint. For more information on updating orders, see the **[Updating Orders](/api/flows/moreInfo.html#updating-orders)** section of the **More Information** page.
-
-> <span class="note-header">Note:</span>
->  For full reference information on the <strong>Create Order</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/CreateOrder">Create Order</a></strong> page of the API reference.
+> <span class="note-header">More Information:</span>
+>
+> * For full reference information on the <strong>Create Order</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/CreateOrder">Create Order</a></strong> page of the API reference.
+> * For an example call flow showing orders being created, see the <a href="/pro/api/help/flows/order_flex_flow.html">Order Flex</a> call flow page.
 
 ### Create Order Example
 
-The example shows the creation of a fairly standard order. In this case, we have an outbound order comprising a single package with a single item inside it.
+The example shows the creation of a fairly standard order. In this case, we have an outbound order comprising a single package with a single item inside it. After receiving the request, PRO returns an `{orderReference}` of _EO-000-002-0TS_. You will need the `{orderReference}` when you come to pack the order into shippable consignments.
 
 <div class="tab">
     <button class="staticTabButton">Example Create Order Request</button>
@@ -50,26 +44,17 @@ The example shows the creation of a fairly standard order. In this case, we have
 
 ```json
 {
-  "OrderReferenceProvidedByCustomer": "MY_ORDER_REF_001",
-  "RequiredDeliveryDate": {
-    "Date": "2019-06-19T00:00:00+00:00",
-    "IsToBeExactlyOnTheDateSpecified": false
-  },
-  "Source": "Api",
-  "ShippingDate": "2019-06-17T13:23:44.3774435Z",
   "Packages": [
     {
-      "Items": [
+    	"Items": [
         {
           "Sku": "SKU093434",
-          "Model": "ITM-002",
           "Description": "Striped Bamboo Red/White",
           "CountryOfOrigin": {
             "IsoCode": {
               "TwoLetterCode": "GB"
             }
           },
-          "HarmonisationCode": "Harmonisation_Code",
           "Weight": {
             "Value": 0.5,
             "Unit": "Kg"
@@ -85,28 +70,9 @@ The example shows the creation of a fairly standard order. In this case, we have
             "Currency": {
               "IsoCode": "GBP"
             }
-          },
-          "ItemReferenceProvidedByCustomer": "ITEMREF-098",
-          "Barcode": {
-            "Code": "09887-091221",
-            "BarcodeType": "Code39"
-          },
-          "MetaData": [
-            {
-              "KeyValue": "Picker",
-              "StringValue": "David Thomas"
-            }
-          ],
-          "Quantity": 1,
-          "Unit": "Box",
-          "HarmonisationKeyWords": [
-            "Keyword1"
-          ],
-          "ContentClassification": "Unrestricted",
-          "ContentClassificationDetails": "NotSpecified"
-        }
+          }
+        }   
       ],
-      "PackageReferenceProvidedByCustomer": "MYPACK-00923",
       "Weight": {
         "Value": 0.5,
         "Unit": "Kg"
@@ -123,48 +89,9 @@ The example shows the creation of a fairly standard order. In this case, we have
         "Currency": {
           "IsoCode": "GBP"
         }
-      },
-      "Barcode": {
-        "Code": "09887-091221",
-        "BarcodeType": "Code39"
-      },
-      "MetaData": [
-        {
-          "KeyValue": "WMS-REF",
-          "IntValue": 77656555
-        }
-      ]
-    }
+      }
+    }  
   ],
-  "CustomsDocumentation": {
-    "DesignatedPersonResponsible": "Peter McPetersson",
-    "ImportersVatNumber": "02345555",
-    "CategoryType": "Other",
-    "ShipperCustomsReference": "CREF0001",
-    "ImportersTaxCode": "TC001",
-    "ImportersTelephone": "0161123456",
-    "ImportersFax": "01611124547",
-    "ImportersEmail": "peter.mcpetersson@test.com",
-    "CN23Comments": "Comments",
-    "ReferencesOfAttachedInvoices": [
-      "INV001"
-    ],
-    "ReferencesOfAttachedCertificates": [
-      "CERT001"
-    ],
-    "ReferencesOfAttachedLicences": [
-      "LIC001"
-    ],
-    "CategoryTypeExplanation": "Explanation",
-    "DeclarationDate": "2019-06-14T00:00:00+00:00",
-    "OfficeOfPosting": "Manchester",
-    "ReasonForExport": "Sale",
-    "ShippingTerms": "CFR",
-    "ShippersVatNumber": "874541414",
-    "ReceiversTaxCode": "TC5454",
-    "ReceiversVatNumber": "8745474",
-    "InvoiceDate": "2019-06-14T00:00:00+00:00"
-  },
   "Addresses": [
     {
       "AddressType": "Origin",
@@ -182,11 +109,7 @@ The example shows the creation of a fairly standard order. In this case, we have
         "LandLine": "0161544123",
         "Email": "peter.mcpetersson@test.com"
       },
-      "CompanyName": "Test Company (UK) Ltd.",
       "AddressLine1": "13 Porter Street",
-      "AddressLine2": "Pressington",
-      "AddressLine3": "Carlsby",
-      "Town": "Manchester",
       "Region": "Greater Manchester",
       "Postcode": "M1 5WG",
       "Country": {
@@ -195,25 +118,9 @@ The example shows the creation of a fairly standard order. In this case, we have
           "TwoLetterCode": "GB"
         }
       },
-      "SpecialInstructions": "Gate code: 4454",
-      "LatLong": {
-        "Latitude": 53.474220,
-        "Longitude": -2.246049
-      },
       "IsCached": false
     }
-  ],
-  "MetaData": [
-    {
-      "KeyValue": "Key1",
-      "StringValue": "Value1"
-    },
-    {
-      "KeyValue": "Key2",
-      "DecimalValue": 12.45
-    }
-  ],
-  "Direction": "Outbound"
+  ]
 }
 ```
 
@@ -230,95 +137,38 @@ The example shows the creation of a fairly standard order. In this case, we have
 [
   {
     "Rel": "Order",
-    "Href": "https://apisandbox.electioapp.com/orders/EO-000-002-0TS"
+    "Href": "https://api.electioapp.com/orders/EO-000-002-0TS"
   }
 ]
 ```
 
 </div>  
 
-After receiving the request, PRO returns an `{orderReference}` of _EO-000-002-0TS_. That `{orderReference}` will come in useful later, as we will need it when we pack the order into shippable consignments.
+## Creating Orders From Delivery Options
 
-Select delivery option as an order
+The **Create Orders** endpoint isn't the only PRO endpoint that can generate orders. You can also create orders via the **Delivery Options** API, which enables you to get a list of delivery options for a potential order that you can present to your customer at checkout. When you select the required option as an order, PRO automatically creates a new order without requiring you to make additional API calls.
 
-<div class="tab">
-    <button class="staticTabButton">Select Delivery Option as an Order Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'optAsOrderEndpoint')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+Creating orders in this way lets you provide front-end delivery options in circumstances where you cannot guarantee that the contents of your customer's online basket will map directly to a single consignment (and so first need to create an order that you can pack into consignments). For example, you might operate more than one warehouse and so may need to ship some orders in multiple consignments.
 
-<div id="optAsOrderEndpoint" class="staticTabContent" onclick="CopyToClipboard(this, 'optAsOrderEndpoint')">
+To create an order from delivery options, you'll need to make two API calls: 
 
-  ```
-  POST https://api.electioapp.com/deliveryoptions/selectorder
-  ```
+1. Call the **Delivery Options** endpoint. The structure of the **Delivery Options** request is very similar to that of the **Create Order** request. However, rather than simply creating an order from the information, PRO instead returns a list of potential delivery options for the (as yet uncreated) order. Each delivery option represents a delivery date and time, and a suitable carrier service. 
 
-</div>     
+2. Select the option that the customer chooses as an order. To do so, call **Select Delivery Option As An Order** by sending a `POST` request to `https://api.electioapp.com/deliveryoptions/selectorder` with the `Reference` of the delivery option you want to select in the body of the request. 
 
-Once the customer has selected an available delivery option, you'll need to record their choice in SortedPRO via the **[Select Delivery Option as an Order](https://docs.electioapp.com/#/api/SelectDeliveryOptionasanOrder)** endpoint. This endpoint takes the `{Reference}` of the selected option as a path parameter.
+You can also generate orders from pickup options. The process is the same as that used for delivery options - make a **Pickup Options** call and then select the required option via the **Select Delivery Option As Order** endpoint.
 
-Once it has received the **Select Delivery Option as an Order** request, PRO uses the details of the selected option to create an order and returns an object containing the associated `{orderReference}`. The reference will come in useful in the next step, when we pack the order into consignments.
+> <span class="note-header">More Information:</span>
+>
+> * For a full user guide on working with delivery and pickup options, including further information on selecting options, see the <a href="/api/help/using_delivery_and_pickup_options.html">Using Delivery and Pickup Options</a> section.
+> * For reference information on the Delivery Options and Pickup Options APIs, see the <a href="https://docs.electioapp.com/#/api/DeliveryOptions">API reference</a>.
+> * For worked examples showing an order being created from delivery options, see the <a href="/pro/api/help/flows/consumer_options_flex_flow.html">Consumer Options Flex</a> example call flow.
 
-> <span class="note-header">Note:</span>
->  For full reference information on the <strong>Select Delivery Option as an Order</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/SelectDeliveryOptionasanOrder">Select Delivery Option as an Order</a></strong> page of the API reference.
+## Next Steps
 
-### Select Option As Order Example
-
-The example shows a request to select a delivery option that has a `{Reference}` of _EDO-000-6DX-6XP_ as an order. PRO takes that delivery option's details and creates an order with an `{orderReference}` of _EO-000-002-0TT_.
-
-<div class="tab">
-    <button class="staticTabButton">Example Select Delivery Option as an Order Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'optAsOrderRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="optAsOrderRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'optAsOrderRequest')">
-
-```json
-{
-  "DeliveryOptions": [
-    {
-      "Reference": "EDO-000-6DX-6XP",
-      "OrderReferenceProvidedByCustomer": "MYORDEREF001",
-      "MetaData": [
-        {
-          "KeyValue": "OrderReference",
-          "StringValue": "10045634343"
-        }
-      ]
-    }
-  ]
-}
-```
-
-</div>   
-
-<div class="tab">
-    <button class="staticTabButton">Example Select Delivery Option as an Order Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'optAsOrderResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="optAsOrderResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'optAsOrderResponse')">
-
-  ```json
-  {
-    "SelectOrderResults": [
-      {
-        "DeliveryOptionReference": "EDO-000-6DX-6XP",
-        "OrderReference": "EO-000-002-0TT",
-        "Status": 201,
-        "Message": null,
-        "Links": [
-          {
-            "Rel": "Detail",
-            "Href": "https://api.electioapp.com/orders/EEO-000-002-0TT"
-          }
-        ]
-      }
-    ]
-  }
-  ```
-
-</div> 
-
+* Learn how to work with existing orders at the [Managing Existing Orders](/pro/api/help/managing_existing_orders.html) page.
+* Learn how to pack orders into consignments at the [Creating Consignments From Orders](/pro/api/help/packing_orders.html) page.
+* Learn how to retrieve delivery options at the [Getting Delivery Options](/pro/api/help/getting_delivery_options.html) page.
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>

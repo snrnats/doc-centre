@@ -19,7 +19,7 @@ There are two ways of obtaining a carrier service's `{MpdCarrierServiceReference
 
 The **Allocate With Carrier Service** endpoint enables you to allocate one or more consignments to a specific carrier service. 
 
-To call **Allocate With Carrier Service**, make a `PUT` request to `https://apisandbox.electioapp.com/allocation/allocatewithcarrierservice`. The body of the request should contain the `{MpdCarrierServiceReference}` of the carrier service you want to allocate to, and an array of `consignmentReferences` listing the references of the consignments you want to allocate to that service.
+To call **Allocate With Carrier Service**, make a `PUT` request to `https://api.electioapp.com/allocation/allocatewithcarrierservice`. The body of the request should contain the `{MpdCarrierServiceReference}` of the carrier service you want to allocate to, and an array of `consignmentReferences` listing the references of the consignments you want to allocate to that service.
 
 > <span class="note-header">Note:</span>
 >  For full reference information on the <strong>Allocate With Carrier Service</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/AllocateWithCarrierService">Allocate With Carrier Service</a></strong> page of the API reference. 
@@ -59,6 +59,11 @@ PUT https://api.electioapp.com/allocation/allocatewithcarrierservice
 
 </div>
 
+## Next Steps
+
+* Learn about alternative methods of allocating consignments at the [Allocating Consignments](/api/help/allocating_consignments.html) page.
+* Learn how to get and print delivery labels at the [Getting Labels](/api/help/getting_labels.html) page.
+* Learn how to add consignments to a carrier manifest at the [Manifesting Consignments](/api/help/manifesting_consignments.html) page.
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>
