@@ -1,5 +1,9 @@
 FROM mono:6.8.0.96 as build
 
+ARG AUTH_TOKEN
+
+ENV GITHUB_AUTH_TOKEN=${AUTH_TOKEN}
+
 WORKDIR /build
 
 RUN curl -L https://github.com/dotnet/docfx/releases/download/v2.49/docfx.zip --output docfx.zip
