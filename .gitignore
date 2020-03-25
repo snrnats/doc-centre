@@ -5,3 +5,5 @@ docfx.zip
 .idea/
 bin/
 obj/
+*.pdb
+*.deps.json
