@@ -1,0 +1,7 @@
+mode: ContinuousDeployment
+next-version: 1.0.1
+tag-prefix: '[vV]'
+
+branches:
+  master:
+    mode: ContinuousDelivery
