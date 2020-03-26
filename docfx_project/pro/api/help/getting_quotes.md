@@ -6,7 +6,10 @@ This page explains how got get delivery quotes based on consignment details.
 
 ## Overview
 
-PRO has two endpoints that take the details of an as-yet nonexistent consignment and
+PRO has two endpoints that take the details of an as-yet uncreated consignment and return quotes for it:
+
+* **Get Quotes** returns a simple list of delivery quotes for the potential consignment.
+* **Get Service Group Quotes** returns a list of current service groups, along with quotes from the eligible services in each group.
 
 ## Sending a Get Quotes Request
 
@@ -55,7 +58,7 @@ At this point, you would be able to display the relevant quote information to yo
 >
 > For full reference information on the **Get Quotes** endpoint, see the [API Reference](https://docs.electioapp.com/#/api/GetQuotes).
 
-## Example Get Quotes Call
+### Example Get Quotes Call
 
 The example below shows a **Get Quotes** call for a fairly simple consignment.
 
@@ -280,6 +283,14 @@ PRO has responded with one quote and two unavailable services.
 
 ## Getting Service Group Quotes
 
+To call **Get Service Group Quotes**, send a `POST` request to `https://api.electioapp.com/quotes/serviceGroups`. The body of the request should contain a consignment object, structured in the same way as the **Get Quotes** request detailed above.
+
+Once it has received the request, PRO returns a list of available service groups, identified by `Name` and `Reference`. Each service group contains a `CheapestQuote` detailing the cheapest service in that group. The service group object also contains a list of `Quotes` for the services in the group (including the service detailed in the `CheapestQuote` property) and a list of `UnqualifiedServices` (that is, eligible services within the group for which it was not possible to obtain a delivery quote).
+
+### Get Service Group Quotes Example
+
+This simplified example shows a **Get Service Group Quotes** request for an outbound consignment. In this case, there is one service group configured in PRO, with the name _Example Service Group_. The group contains two services, with the service references <em>SAMPLE_SERVICE01</em> and <em>SAMPLE_SERVICE02</em>.
+
 <div class="tab">
     <button class="staticTabButton">Get Service Group Quotes Request Example</button>
     <div class="copybutton" onclick="CopyToClipboard(this, 'SGQuoteRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
@@ -289,8 +300,147 @@ PRO has responded with one quote and two unavailable services.
 
 ```json
 {
+  "MetaData": [
+    {
+      "KeyValue": "IsExample",
+      "BoolValue": true
+    }
+  ],
+  "Source": "API",
+  "Weight": {
+    "Value": 0.5,
+    "Unit": "Kg"
+  },
+  "Value": {
+    "Amount": 5.99,
+    "Currency": {
+      "IsoCode": "GBP"
+    }
+  },
+  "CustomsDocumentation": {
+    "DesignatedPersonResponsible": "Peter McPetersson",
+    "ImportersVatNumber": "02345555",
+    "CategoryType": "Other",
+    "ShipperCustomsReference": "CREF0001",
+    "ImportersTaxCode": "TC001",
+    "ImportersTelephone": "0161123456",
+    "ImportersFax": "01611124547",
+    "ImportersEmail": "peter.mcpetersson@test.com",
+    "CN23Comments": "Comments",
+    "ReferencesOfAttachedInvoices": [
+      "INV001"
+    ],
+    "ReferencesOfAttachedCertificates": [
+      "CERT001"
+    ],
+    "ReferencesOfAttachedLicences": [
+      "LIC001"
+    ],
+    "CategoryTypeExplanation": "Explanation",
+    "DeclarationDate": "2020-02-11T00:00:00+00:00",
+    "OfficeOfPosting": "Manchester",
+    "ReasonForExport": "Sale",
+    "ShippingTerms": "CFR",
+    "ShippersVatNumber": "874541414",
+    "ReceiversTaxCode": "TC5454",
+    "ReceiversVatNumber": "8745474",
+    "InvoiceDate": "2020-02-11T00:00:00+00:00"
+  },
+  "Direction": "Outbound",
+  "ShippingDate": "2020-02-11T00:00:00+00:00",
+  "RequestedDeliveryDate": {
+    "Date": "2020-02-13T00:00:00+00:00",
+    "IsToBeExactlyOnTheDateSpecified": false
+  },
+  "ConsignmentReferenceProvidedByCustomer": "Your custom reference",
+  "Addresses": [
+    {
+      "AddressType": "Origin",
+      "ShippingLocationReference": "Shipping_Location_Reference",
+      "IsCached": false
+    },
+    {
+      "AddressType": "Destination",
+      "Contact": {
+        "Title": "Mr",
+        "FirstName": "Peter",
+        "LastName": "McPetersson",
+        "Telephone": "07702123456",
+        "Mobile": "07702123456",
+        "LandLine": "0161544123",
+        "Email": "peter.mcpetersson@test.com"
+      },
+      "CompanyName": "Test Company (UK) Ltd.",
+      "AddressLine1": "13 Porter Street",
+      "AddressLine2": "Pressington",
+      "AddressLine3": "Carlsby",
+      "Town": "Manchester",
+      "Region": "Greater Manchester",
+      "Postcode": "M1 5WG",
+      "Country": {
+        "Name": "Great Britain",
+        "IsoCode": {
+          "TwoLetterCode": "GB"
+        }
+      },
+      "SpecialInstructions": "Gate code: 4454",
+      "LatLong": {
+        "Latitude": 53.474220,
+        "Longitude": -2.246049
+      },
+      "IsCached": false
+    }
+  ],
   "Packages": [
     {
+      "Items": [
+        {
+          "Sku": "SKU093434",
+          "Model": "ITM-002",
+          "Description": "Striped Bamboo Red/White",
+          "CountryOfOrigin": {
+            "IsoCode": {
+              "TwoLetterCode": "GB"
+            }
+          },
+          "HarmonisationCode": "Harmonisation_Code",
+          "Weight": {
+            "Value": 0.5,
+            "Unit": "Kg"
+          },
+          "Dimensions": {
+            "Unit": "Cm",
+            "Width": 10.0,
+            "Length": 10.0,
+            "Height": 10.0
+          },
+          "Value": {
+            "Amount": 5.99,
+            "Currency": {
+              "IsoCode": "GBP"
+            }
+          },
+          "ItemReferenceProvidedByCustomer": "ITEMREF-098",
+          "Barcode": {
+            "Code": "09887-091221",
+            "BarcodeType": "Code39"
+          },
+          "MetaData": [
+            {
+              "KeyValue": "Picker",
+              "StringValue": "David Thomas"
+            }
+          ],
+          "Quantity": 1,
+          "Unit": "Box",
+          "HarmonisationKeyWords": [
+            "Keyword1"
+          ],
+          "ContentClassification": "Unrestricted",
+          "ContentClassificationDetails": "NotSpecified"
+        }
+      ],
+      "PackageReferenceProvidedByCustomer": "MYPACK-00923",
       "Weight": {
         "Value": 0.5,
         "Unit": "Kg"
@@ -307,43 +457,102 @@ PRO has responded with one quote and two unavailable services.
         "Currency": {
           "IsoCode": "GBP"
         }
-      }
-    }  
-  ],
-  "Addresses": [
-    {
-      "AddressType": "Origin",
-      "ShippingLocationReference": "EDC5_Electio",
-      "IsCached": false
+      },
+      "Barcode": {
+        "Code": "09887-091221",
+        "BarcodeType": "Code39"
+      },
+      "MetaData": [
+        {
+          "KeyValue": "WMS-REF",
+          "IntValue": 77656555
+        }
+      ]
     },
     {
-      "AddressType": "Destination",
-      "Contact": {
-        "Title": "Mr",
-        "FirstName": "Peter",
-        "LastName": "McPetersson",
-        "Telephone": "07702123456",
-        "Mobile": "07702123456",
-        "LandLine": "0161544123",
-        "Email": "peter.mcpetersson@test.com"
+      "Items": [
+        {
+          "Sku": "SKU093434",
+          "Model": "ITM-002",
+          "Description": "Striped Bamboo Red/White",
+          "CountryOfOrigin": {
+            "IsoCode": {
+              "TwoLetterCode": "GB"
+            }
+          },
+          "HarmonisationCode": "Harmonisation_Code",
+          "Weight": {
+            "Value": 0.5,
+            "Unit": "Kg"
+          },
+          "Dimensions": {
+            "Unit": "Cm",
+            "Width": 10.0,
+            "Length": 10.0,
+            "Height": 10.0
+          },
+          "Value": {
+            "Amount": 5.99,
+            "Currency": {
+              "IsoCode": "GBP"
+            }
+          },
+          "ItemReferenceProvidedByCustomer": "ITEMREF-098",
+          "Barcode": {
+            "Code": "09887-091221",
+            "BarcodeType": "Code39"
+          },
+          "MetaData": [
+            {
+              "KeyValue": "Picker",
+              "StringValue": "David Thomas"
+            }
+          ],
+          "Quantity": 1,
+          "Unit": "Box",
+          "HarmonisationKeyWords": [
+            "Keyword1"
+          ],
+          "ContentClassification": "Unrestricted",
+          "ContentClassificationDetails": "NotSpecified"
+        }
+      ],
+      "PackageReferenceProvidedByCustomer": "MYPACK-00923",
+      "Weight": {
+        "Value": 0.5,
+        "Unit": "Kg"
       },
-      "AddressLine1": "13 Porter Street",
-      "Region": "Greater Manchester",
-      "Postcode": "M1 5WG",
-      "Country": {
-        "Name": "Great Britain",
-        "IsoCode": {
-          "TwoLetterCode": "GB"
+      "Dimensions": {
+        "Unit": "Cm",
+        "Width": 10.0,
+        "Length": 10.0,
+        "Height": 10.0
+      },
+      "Description": "Socks",
+      "Value": {
+        "Amount": 5.99,
+        "Currency": {
+          "IsoCode": "GBP"
         }
       },
-      "IsCached": false
+      "Barcode": {
+        "Code": "09887-091221",
+        "BarcodeType": "Code39"
+      },
+      "MetaData": [
+        {
+          "KeyValue": "WMS-REF",
+          "IntValue": 77656555
+        }
+      ]
     }
   ]
 }
-
 ```
 
 </div>
+
+PRO returns a single service group object. In this case, <em>SAMPLE_SERVICE01</em> is the only eligible service, and so is displayed as both the `CheapestQuote` and the only entry in the `Quotes` array. <em>SAMPLE_SERVICE02</em> is returned in the list of unqualified services.
 
 <div class="tab">
     <button class="staticTabButton">Get Service Group Quotes Response Example</button>
@@ -354,128 +563,192 @@ PRO has responded with one quote and two unavailable services.
 
 ```json
 [
-    {
-        "Reference": "SIMON_TEST",
-        "Name": "Test",
-        "CheapestQuote": null,
-        "QuoteRequestReference": "a6e9024c-2379-4729-bda5-ab8900b01685",
-        "Quotes": [],
-        "Message": null,
-        "UnqualifiedServices": [
-            {
-                "Available": true,
-                "Rates": false,
-                "MpdCarrierService": "acceptanceTestCarrier_825d",
-                "CarrierReference": "DPD",
-                "MpdCarrierServiceReference": "acceptanceTestCarrier_f8fe",
-                "ExclusionReason": "No cost and/or pricing data configured"
-            }
-        ]
+  {
+    "Reference": "SGREF01",
+    "Name": "Example Service Group",
+    "CheapestQuote": {
+      "MpdCarrierServiceSource": "External",
+      "MpdCarrierService": "SAMPLE_SERVICE01",
+      "CarrierReference": "SAMPLE_CARRIER_REFERENCE",
+      "OriginAddress": {
+        "ShippingLocationReference": "Shipping_Location_Reference",
+        "IsCached": false
+      },
+      "DestinationAddress": {
+        "Contact": {
+          "Title": "Mr",
+          "FirstName": "Peter",
+          "LastName": "McPetersson",
+          "Telephone": "07702123456",
+          "Mobile": "07702123456",
+          "LandLine": "0161544123",
+          "Email": "peter.mcpetersson@test.com"
+        },
+        "CompanyName": "Test Company (UK) Ltd.",
+        "AddressLine1": "13 Porter Street",
+        "AddressLine2": "Pressington",
+        "AddressLine3": "Carlsby",
+        "Town": "Manchester",
+        "Region": "Greater Manchester",
+        "Postcode": "M1 5WG",
+        "Country": {
+          "Name": "Great Britain",
+          "IsoCode": {
+            "TwoLetterCode": "GB"
+          }
+        },
+        "SpecialInstructions": "Gate code: 4454",
+        "LatLong": {
+          "Latitude": 53.474220,
+          "Longitude": -2.246049
+        },
+        "CacheDate": "2020-02-11T11:08:09.8336643+00:00",
+        "CacheSource": "",
+        "IsCached": true
+      },
+      "CollectionDate": "2020-02-13T00:00:00+00:00",
+      "EarliestDeliveryDate": "2020-02-18T00:00:00+00:00",
+      "LatestDeliveryDate": "2020-02-19T00:00:00+00:00",
+      "BasePrice": {
+        "Net": 12.0,
+        "Gross": 10.0,
+        "TaxRate": {
+          "Reference": "VAT_STANDARD",
+          "CountryIsoCode": "GB",
+          "Type": "Standard",
+          "Rate": 0.2
+        },
+        "TaxAmount": 0.2,
+        "Currency": {
+          "IsoCode": "GBP"
+        }
+      },
+      "Price": {
+        "Net": 12.0,
+        "Gross": 10.0,
+        "TaxRate": {
+          "Reference": "VAT_STANDARD",
+          "CountryIsoCode": "GB",
+          "Type": "Standard",
+          "Rate": 0.2
+        },
+        "TaxAmount": 0.2,
+        "Currency": {
+          "IsoCode": "GBP"
+        }
+      },
+      "Surcharges": [],
+      "Legs": [],
+      "CarrierAccountOwner": "Electio",
+      "IsElectioService": true,
+      "ServiceDirection": "Outbound",
+      "QuoteReference": "5a182bf7-d17e-40f3-adb3-c7137c804f00",
+      "CreationDate": "2020-02-11T11:08:09.8336643+00:00",
+      "ExpiryDate": "2020-02-12T00:00:00+00:00",
+      "Requestor": "Peter",
+      "ConsignmentReference": "EC-000-02D-DA4",
+      "ConsignmentReferenceProvidedByCustomer": "MY_REF",
+      "MpdCarrierServiceReference": "SAMPLE_SERVICE01"
     },
-    {
-        "Reference": "Test1",
-        "Name": "Test",
-        "CheapestQuote": null,
-        "QuoteRequestReference": "a6e9024c-2379-4729-bda5-ab8900b01685",
-        "Quotes": [],
-        "Message": null,
-        "UnqualifiedServices": [
-            {
-                "Available": false,
-                "Rates": true,
-                "MpdCarrierService": "UPS EXPRESS PLUS (Delivery Confirmation Signature Required)",
-                "CarrierReference": "UPS",
-                "MpdCarrierServiceReference": "EDC5_UPSHEP",
-                "ExclusionReason": "Service availability data not configured"
+    "QuoteRequestReference": "6ddf6170-816e-448b-83a5-9e787080bffb",
+    "Quotes": [
+      {
+        "MpdCarrierServiceSource": "External",
+        "MpdCarrierService": "SAMPLE_SERVICE01",
+        "CarrierReference": "SAMPLE_CARRIER_REFERENCE",
+        "OriginAddress": {
+          "ShippingLocationReference": "Shipping_Location_Reference",
+          "IsCached": false
+        },
+        "DestinationAddress": {
+          "Contact": {
+            "Title": "Mr",
+            "FirstName": "Peter",
+            "LastName": "McPetersson",
+            "Telephone": "07702123456",
+            "Mobile": "07702123456",
+            "LandLine": "0161544123",
+            "Email": "peter.mcpetersson@test.com"
+          },
+          "CompanyName": "Test Company (UK) Ltd.",
+          "AddressLine1": "13 Porter Street",
+          "AddressLine2": "Pressington",
+          "AddressLine3": "Carlsby",
+          "Town": "Manchester",
+          "Region": "Greater Manchester",
+          "Postcode": "M1 5WG",
+          "Country": {
+            "Name": "Great Britain",
+            "IsoCode": {
+              "TwoLetterCode": "GB"
             }
-        ]
-    },
-    {
-        "Reference": "Test1234567890",
-        "Name": "Test",
-        "CheapestQuote": null,
-        "QuoteRequestReference": "a6e9024c-2379-4729-bda5-ab8900b01685",
-        "Quotes": [],
-        "Message": null,
-        "UnqualifiedServices": [
-            {
-                "Available": false,
-                "Rates": true,
-                "MpdCarrierService": "UPS EXPRESS (Delivery Confirmation Signature Required)",
-                "CarrierReference": "UPS",
-                "MpdCarrierServiceReference": "EDC5_UPSHEXDCS",
-                "ExclusionReason": "Service availability data not configured"
-            }
-        ]
-    },
-    {
-        "Reference": "TEST_UPS",
-        "Name": "UPS",
-        "CheapestQuote": null,
-        "QuoteRequestReference": "a6e9024c-2379-4729-bda5-ab8900b01685",
-        "Quotes": [],
-        "Message": null,
-        "UnqualifiedServices": [
-            {
-                "Available": false,
-                "Rates": true,
-                "MpdCarrierService": "UPS EXPRESS (Delivery Confirmation Signature Required)",
-                "CarrierReference": "UPS",
-                "MpdCarrierServiceReference": "EDC5_UPSHEXDCS",
-                "ExclusionReason": "Service availability data not configured"
-            },
-            {
-                "Available": false,
-                "Rates": true,
-                "MpdCarrierService": "UPS EXPRESS (Saturday Delivery, Delivery Confirmation Signature Required)",
-                "CarrierReference": "UPS",
-                "MpdCarrierServiceReference": "EDC5_UPSHEXSDDCS",
-                "ExclusionReason": "Service availability data not configured"
-            },
-            {
-                "Available": false,
-                "Rates": true,
-                "MpdCarrierService": "UPS EXPRESS PLUS (Delivery Confirmation Signature Required)",
-                "CarrierReference": "UPS",
-                "MpdCarrierServiceReference": "EDC5_UPSHEP",
-                "ExclusionReason": "Service availability data not configured"
-            },
-            {
-                "Available": false,
-                "Rates": true,
-                "MpdCarrierService": "UPS SAVER (Delivery Confirmation Signature Required)",
-                "CarrierReference": "UPS",
-                "MpdCarrierServiceReference": "EDC5_UPSHSADCS",
-                "ExclusionReason": "Service availability data not configured"
-            },
-            {
-                "Available": false,
-                "Rates": true,
-                "MpdCarrierService": "UPS STANDARD (Delivery Confirmation Signature Required)",
-                "CarrierReference": "UPS",
-                "MpdCarrierServiceReference": "EDC5_UPSHSTDCS",
-                "ExclusionReason": "Service availability data not configured"
-            }
-        ]
-    },
-    {
-        "Reference": "NextDay",
-        "Name": "NextDay",
-        "CheapestQuote": null,
-        "QuoteRequestReference": "a6e9024c-2379-4729-bda5-ab8900b01685",
-        "Quotes": [],
-        "Message": null,
-        "UnqualifiedServices": [
-            {
-                "Available": false,
-                "Rates": true,
-                "MpdCarrierService": "Next Day Monday - Saturday",
-                "CarrierReference": "MNZIES",
-                "MpdCarrierServiceReference": "MPD_MNZIS-00001",
-                "ExclusionReason": "This service is not available between the selected addresses."
-            }
-        ]
-    }
+          },
+          "SpecialInstructions": "Gate code: 4454",
+          "LatLong": {
+            "Latitude": 53.474220,
+            "Longitude": -2.246049
+          },
+          "CacheDate": "2020-02-11T11:08:09.8336643+00:00",
+          "CacheSource": "",
+          "IsCached": true
+        },
+        "CollectionDate": "2020-02-13T00:00:00+00:00",
+        "EarliestDeliveryDate": "2020-02-18T00:00:00+00:00",
+        "LatestDeliveryDate": "2020-02-19T00:00:00+00:00",
+        "BasePrice": {
+          "Net": 12.0,
+          "Gross": 10.0,
+          "TaxRate": {
+            "Reference": "VAT_STANDARD",
+            "CountryIsoCode": "GB",
+            "Type": "Standard",
+            "Rate": 0.2
+          },
+          "TaxAmount": 0.2,
+          "Currency": {
+            "IsoCode": "GBP"
+          }
+        },
+        "Price": {
+          "Net": 12.0,
+          "Gross": 10.0,
+          "TaxRate": {
+            "Reference": "VAT_STANDARD",
+            "CountryIsoCode": "GB",
+            "Type": "Standard",
+            "Rate": 0.2
+          },
+          "TaxAmount": 0.2,
+          "Currency": {
+            "IsoCode": "GBP"
+          }
+        },
+        "Surcharges": [],
+        "Legs": [],
+        "CarrierAccountOwner": "Electio",
+        "IsElectioService": true,
+        "ServiceDirection": "Outbound",
+        "QuoteReference": "5a182bf7-d17e-40f3-adb3-c7137c804f00",
+        "CreationDate": "2020-02-11T11:08:09.8336643+00:00",
+        "ExpiryDate": "2020-02-12T00:00:00+00:00",
+        "Requestor": "Peter",
+        "ConsignmentReference": "EC-000-02D-DA4",
+        "ConsignmentReferenceProvidedByCustomer": "MY_REF",
+        "MpdCarrierServiceReference": "SAMPLE_SERVICE01"
+      }
+    ],
+    "Message": "Quote created successfully",
+    "UnqualifiedServices": [
+      {
+        "Available": false,
+        "Rates": true,
+        "MpdCarrierService": "SAMPLE_SERVICE02",
+        "CarrierReference": "SAMPLE_CARRIER_REFERENCE",
+        "MpdCarrierServiceReference": "SAMPLE_SERVICE02",
+        "ExclusionReason": "The service is not available between selected addresses"
+      }
+    ]
+  }
 ]
 ```
 

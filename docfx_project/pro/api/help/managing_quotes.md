@@ -12,7 +12,7 @@ PRO's Quotes API enables you to get delivery quotes for both as-yet uncreated an
 
 > <span class="note-header">Note:</span>
 >
-> The **Allocate With Quote** endpoint it a key part of all PRO quotes workflows, enabling you to allocate a consignment to the carrier service returned in a particular quote:
+> The **Allocate With Quote** endpoint is a key part of all PRO quotes workflows, enabling you to allocate a consignment to the carrier service returned in a particular quote:
 >
 > * For reference information on **Allocate With Quote**, see the [API reference](https://docs.electioapp.com/#/api/AllocateWithQuote)
 > * For a user quote on the **Allocate With Quote** endpoint, see the [Allocating To A Specific Quote](/pro/api/help/allocating_to_a_specific_quote.md) page, in the **Allocating Consignments** section.
