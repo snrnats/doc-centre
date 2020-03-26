@@ -67,6 +67,11 @@
   href: getting_customs_docs_and_invoices.md  
 - name: Managing Quotes
   href: managing_quotes.md
+  items:
+  - name: Getting Quotes 
+    href: getting_quotes.md
+  - name: Getting Quotes For An Existing Consignment
+    href: getting_quotes_for_an_existing_consignment.md
 - name: Consignment States
   href: consignment_states.md
 - name: Glossary
