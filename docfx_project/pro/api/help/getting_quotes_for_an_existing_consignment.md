@@ -8,7 +8,7 @@ The **Get Quotes By Consignment Reference** endpoint returns quotes based on the
 
 To call **Get Quotes by Consignment Reference**, send a `GET` request to `https://api.electioapp.com/quotes/consignment/{consignmentReference}`.
 
-Once it has received the request, PRO returns a quote result. The quote result object includes two lists: one containing `Quotes` and one containing `UnqualifiedServices` (that is, eligible services for which it was not possible to obtain a delivery quote). 
+Once it has received the request, PRO returns a quote result. The quote result object includes two lists: one containing `Quotes` and one containing `UnqualifiedServices` (that is, services that have been disqualified from the quote process or that did not meet the delivery requirements for the consignment and were therefore unable to provide a quote). 
 
 Each `Quote` object contains the following information:
 
@@ -24,7 +24,9 @@ Each `Quote` object contains the following information:
 At this point, you would be able to display the relevant quote information to your customer service operative.
 
 > <span class="note-header">Note:</span>
->  For full reference information on the <strong>Get Quotes by Consignment Reference</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/GetQuotesbyConsignmentReference">Get Quotes by Consignment Reference</a></strong> page of the API reference.
+>
+> * For full reference information on the <strong>Get Quotes by Consignment Reference</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/GetQuotesbyConsignmentReference">Get Quotes by Consignment Reference</a></strong> page of the API reference.
+> * For an example call flow showing the **Get Quotes by Consignment Reference** endpoint being used, see the [Quotes Flow](/pro/api/help/flows/quotes_flow.html) page. 
 
 ### Get Quotes By Consignment Reference Example
 
@@ -58,7 +60,7 @@ https://api.electioapp.com/quotes/consignment/EC-000-05B-1CM
             "MpdCarrierServiceSource": 2,
             "MpdCarrierService": "1st and 2nd Class Account Mail (1st Parcel)",
             "OriginAddress": {
-                "ShippingLocationReference": "EDC5_Electio",
+                "ShippingLocationReference": "Sorted1",
                 "AddressLine1": "Third Floor",
                 "AddressLine2": "Merchant Exchange",
                 "AddressLine3": "Whitworth Street West",
@@ -162,7 +164,7 @@ https://api.electioapp.com/quotes/consignment/EC-000-05B-1CM
             "MpdCarrierServiceSource": 2,
             "MpdCarrierService": "Tracked 48 Signed For",
             "OriginAddress": {
-                "ShippingLocationReference": "EDC5_Electio",
+                "ShippingLocationReference": "Sorted1",
                 "AddressLine1": "Third Floor",
                 "AddressLine2": "Merchant Exchange",
                 "AddressLine3": "Whitworth Street West",
@@ -268,8 +270,8 @@ https://api.electioapp.com/quotes/consignment/EC-000-05B-1CM
         {
             "Available": true,
             "Rates": false,
-            "MpdCarrierService": "acceptanceTestCarrier_825d",
-            "MpdCarrierServiceReference": "acceptanceTestCarrier_f8fe",
+            "MpdCarrierService": "Tracked 48 Hour",
+            "MpdCarrierServiceReference": "MPD_T48H",
             "ExclusionReason": "No cost and/or pricing data configured"
         },
         {
@@ -336,7 +338,7 @@ https://api.electioapp.com/quotes/consignment/EC-000-05B-1CM
 
 ## Next Steps
 
-* Learn how to get quotes for an uncreated consignment at the [Getting Quotes](/pro/api/help/getting_quotes.html) page.
+* Learn how to get quotes without creating a new consignment at the [Getting Quotes](/pro/api/help/getting_quotes.html) page.
 * Learn how to create consignments at the [Creating Consignments](/pro/api/help/creating_consignments.html) page.
 * Learn how to allocate consignments to your chosen quote at the [Allocating To A Specific Quote](/pro/api/help/allocating_to_a_specific_quote.html) page.
 

@@ -11,6 +11,12 @@ PRO has two endpoints that take the details of an as-yet uncreated consignment a
 * **Get Quotes** returns a simple list of delivery quotes for the potential consignment.
 * **Get Service Group Quotes** returns a list of current service groups, along with quotes from the eligible services in each group.
 
+> <span class="note-header">Note:</span>
+>
+> Both the **Get Quotes** and **Get Service Group Quotes** endpoints take a consignment object in the body of the request. However, they do not create consignments in and of themselves. In order to allocate to one of the quotes returned by these endpoints, you would need to first create the consignment. 
+>
+> For more information on creating consignments, see the [Creating Consignments](/pro/api/help/creating_new_consignments.html) page.
+
 ## Sending a Get Quotes Request
 
 To call **Get Quotes**, send a `POST` request to `https://api.electioapp.com/quotes/`. The body of the request should contain a consignment object.
@@ -286,6 +292,10 @@ PRO has responded with one quote and two unavailable services.
 To call **Get Service Group Quotes**, send a `POST` request to `https://api.electioapp.com/quotes/serviceGroups`. The body of the request should contain a consignment object, structured in the same way as the **Get Quotes** request detailed above.
 
 Once it has received the request, PRO returns a list of available service groups, identified by `Name` and `Reference`. Each service group contains a `CheapestQuote` detailing the cheapest service in that group. The service group object also contains a list of `Quotes` for the services in the group (including the service detailed in the `CheapestQuote` property) and a list of `UnqualifiedServices` (that is, eligible services within the group for which it was not possible to obtain a delivery quote).
+
+> <span class="note-header">Note:</span>
+>
+> For full reference information on the **Get Service Group Quotes** endpoint, see the [API Reference](https://docs.electioapp.com/#/api/GetServiceGroupQuotes).
 
 ### Get Service Group Quotes Example
 
@@ -753,6 +763,7 @@ PRO returns a single service group object. In this case, <em>SAMPLE_SERVICE01</e
 ```
 
 </div>
+
 
 ## Next Steps
 
