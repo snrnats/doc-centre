@@ -38,13 +38,65 @@ PRO returns the relevant document as a base-64 encoded byte array.
 
 ## Getting All Customs Documents For A Consignment
 
-To call ****
+To call **Get Customs Documents**, send a `GET` request to `https://api.electioapp.com/consignments/docs/{consignmentReference}`.
+
+PRO returns an object containing three properties:
+
+* A `CommercialInvoiceDocuments` property containing the consignment's commercial invoice.
+* A `CN22Documents` property containing all CN22 documents for the consignment.
+* A `CN23Documents` property containing all CN23 documents for the consignment.
+
+All documents are represented as key / value pairs, with the key as the filename for the document and the value containing the document data.
+
+> <span class="note-header">More information:</span>
+>
+> For full reference information on the **Get Customs Documents** endpoint, see the [API reference](https://docs.electioapp.com/#/api/GetCustomsDocuments).
+
+### Get Customs Documents Example
+
+This example shows a **Get Customs Documents** response for a single-package consignment. PRO has returned a commercial invoice for the consignment and both CN22 and CN23 documents for the package.
+
+<div class="tab">
+    <button class="staticTabButton">Get Customs Documents Example Response</button>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'customsDocsResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+</div>
+
+<div id="customsDocsResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'customsDocsResponse')">
+
+```json
+{
+  "CommercialInvoiceDocuments": [
+    {
+      "Key": "INV_Example",
+      "Value": "(document data)"
+    }
+  ],
+  "CN22Documents": [
+    {
+      "Key": "CN22_Example",
+      "Value": "(document data)"
+    }
+  ],
+  "CN23Documents": [
+    {
+      "Key": "CN23_Example",
+      "Value": "(document data)"
+    }
+  ]
+}
+```
+
+</div>
 
 ## Using the Document Data
 
 Once you have obtained the raw document data, you will need to perform some processing in order to use it. For example methods to read the data, write it to disk, and automatically open the label file so it can be printed and applied to the relevant package, see <span class="highlight">LINK HERE</span>.
 
 ## Next Steps
+
+*
+*
+*
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>
