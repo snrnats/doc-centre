@@ -1,6 +1,6 @@
 # Tracking Consignments
 
-PRO's Tracking API enables you to drive embedded delivery tracking from your own website, without the need to pass customers off to a carrier portal. This page explains how to use the Tracking API to get updates on a consignment's progress.
+SortedPRO's Tracking API enables you to drive embedded delivery tracking from your own website, without the need to pass customers off to a carrier portal. This page explains how to use the Tracking API to get updates on a consignment's progress.
 
 ---
 
@@ -18,12 +18,25 @@ PRO's Tracking API has three endpoints:
 
 ## What Is A Tracking Event?
 
+<spnas class="highlight">ADD MORE TO THIS!</span>
 
+PRO tracking events contain the following properties:
+
+* `TimeStamp` - The time and date that the tracking event occurred
+* `Code` - A unique identifier for the type of tracking event
+* `Description` - A description of the tracking event
+* `SignedBy` - The name of the person who signed for the package (if applicable)
+* `Location` - The location of the tracking event
 
 ## Getting Multi-Leg Tracking Events
 
-The **Get Tracking Events** API enables you to get tracking events for 
+To call **Get Tracking Events**, send a `GET` request to `https://api.electioapp.com/tracking/{consignmentReference}`. 
 
+PRO responds with a `TrackedPackages` array, containing details of all the tracked packages in the consignment. Each package contains an array of `Legs`, of which each contains tracking `Events` for that particular leg of the package's journey.
+
+> <span class="note-header">Note:</span>
+>
+> 
 
 ## Getting Single Leg Tracking Events
 
