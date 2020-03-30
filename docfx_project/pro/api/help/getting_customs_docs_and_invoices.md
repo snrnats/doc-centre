@@ -94,9 +94,9 @@ Once you have obtained the raw document data, you will need to perform some proc
 
 ## Next Steps
 
-*
-*
-*
+* Learn how to get and print delivery labels at the [Getting Labels](/pro/api/help/getting_labels.html) page.
+* Learn how to add consignments to a carrier manifest at the [Manifesting Consignments](/pro/api/help/manifesting_consignments.html) page.
+* Learn how to track consignments at the [Tracking Consignments](/pro/api/help/tracking_consignments.html) page.
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>
