@@ -6,7 +6,7 @@ This page explains the various way in which SortedPRO can return return customs 
 
 ## Customs Docs in PRO
 
-When an international non-EU shipment (that is, an international shipment that either originates from a non-EU country, is destined for a non-EU country, or both <span class="highlight">PRESUMABLY THIS IS GOING TO CHANGE WITH BREXIT?</span>) is allocated, PRO generates CN22, CN23 and commercial invoice documents for it. The Customs Docs API enables you to retrieve that information.
+When shipping internationally, SortedPRO will automatically determine if customs documentation is required for a consignment. SortedPRO can automatically generate CN22, CN23, or Commercial Invoice documents in PDF format and will determine which document is appropriate for any allocated consignment. The Customs Docs APIs enable you to retrieve the pre-generated documents.
 
 The Customs Docs API has three endpoints:
 
@@ -28,7 +28,7 @@ To call **Get Commercial Invoice**, send a `GET` request to `https://api.electio
 
 ## Getting an Individual Customs Document
 
-To call **Get Customs Document**, send a `GET` request to `https://api.electioapp.com/consignments/docs/{customsDocumentType}/{consignmentReference}/{packageReference}`. The `{customsDocumentType}` can either _CN22_ or _CN23_.
+To call **Get Customs Document**, send a `GET` request to `https://api.electioapp.com/consignments/docs/{customsDocumentType}/{consignmentReference}/{packageReference}`. The `{customsDocumentType}` can return either _CN22_ or _CN23_ documents.
 
 PRO returns the relevant document as a base-64 encoded byte array.
 
@@ -40,11 +40,7 @@ PRO returns the relevant document as a base-64 encoded byte array.
 
 To call **Get Customs Documents**, send a `GET` request to `https://api.electioapp.com/consignments/docs/{consignmentReference}`.
 
-PRO returns an object containing three properties:
-
-* A `CommercialInvoiceDocuments` property containing the consignment's commercial invoice.
-* A `CN22Documents` property containing all CN22 documents for the consignment.
-* A `CN23Documents` property containing all CN23 documents for the consignment.
+PRO returns an object containing two properties: a `CommercialInvoiceDocuments` property containing the consignment's commercial invoice and either a `CN22Documents` property containing all CN22 documents for the consignment or a `CN23Documents` property containing all CN23 documents for the consignment.
 
 All documents are represented as key / value pairs, with the key as the filename for the document and the value containing the document data.
 
@@ -54,7 +50,7 @@ All documents are represented as key / value pairs, with the key as the filename
 
 ### Get Customs Documents Example
 
-This example shows a **Get Customs Documents** response for a single-package consignment. PRO has returned a commercial invoice for the consignment and both CN22 and CN23 documents for the package.
+This example shows a **Get Customs Documents** response for a single-package consignment. PRO has returned a commercial invoice for the consignment and a CN22 document for the package.
 
 <div class="tab">
     <button class="staticTabButton">Get Customs Documents Example Response</button>
@@ -74,12 +70,6 @@ This example shows a **Get Customs Documents** response for a single-package con
   "CN22Documents": [
     {
       "Key": "CN22_Example",
-      "Value": "(document data)"
-    }
-  ],
-  "CN23Documents": [
-    {
-      "Key": "CN23_Example",
       "Value": "(document data)"
     }
   ]
