@@ -62,7 +62,12 @@
   - name: Selecting Options
     href: selecting_options.md
 - name: Tracking Consignments
-  href: tracking_consignments.md  
+  href: tracking_consignments.md
+  items:
+  - name: Using PRO's Tracking API
+    href: using_pros_tracking_api.md
+  - name: Tracking Consignments Using REACT
+    href: tracking_consignments_using_react.md    
 - name: Getting Customs Docs and Invoices
   href: getting_customs_docs_and_invoices.md  
 - name: Managing Quotes
