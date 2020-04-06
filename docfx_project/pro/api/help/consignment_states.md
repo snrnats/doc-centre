@@ -147,7 +147,7 @@
     </tr>
     <tr>
         <td>Action Required</td>
-        <td>Carrier required additional information</td>
+        <td>Carrier requires additional information</td>
         <td>
             <p>Print labels</p> 
             <p>Cancel consignment</p> 
