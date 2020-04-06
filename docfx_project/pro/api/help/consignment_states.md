@@ -126,7 +126,7 @@
     </tr>
     <tr>
         <td>In Transit</td>
-        <td></td>
+        <td>Shipment is in transit</td>
         <td>
             <p>Print labels</p> 
             <p>Cancel consignment</p> 
@@ -134,12 +134,12 @@
     </tr>
     <tr>
         <td>In Transit - Waiting</td>
-        <td></td>
+        <td>Carrier is either waiting until transit can be resumed due to force majeure event OR delivery delayed on customer's request</td>
         <td>Print labels</td>        
     </tr>
     <tr>
         <td>At Customs</td>
-        <td></td>
+        <td>Shipment is being cleared through customs</td>
         <td>
             <p>Print labels</p> 
             <p>Cancel consignment</p> 
@@ -147,7 +147,7 @@
     </tr>
     <tr>
         <td>Action Required</td>
-        <td></td>
+        <td>Carrier required additional information</td>
         <td>
             <p>Print labels</p> 
             <p>Cancel consignment</p> 
@@ -155,7 +155,7 @@
     </tr>
     <tr>
         <td>Delayed</td>
-        <td></td>
+        <td>Shipment is delayed</td>
         <td>
             <p>Print labels</p> 
             <p>Cancel consignment</p> 
@@ -163,7 +163,7 @@
     </tr>
     <tr>
         <td>Held By Carrier</td>
-        <td></td>
+        <td>Shipment is held by the carrier</td>
         <td>
             <p>Print labels</p> 
             <p>Cancel consignment</p> 
@@ -171,7 +171,7 @@
     </tr>
     <tr>
         <td>Missing</td>
-        <td></td>
+        <td>Carrier cannot locate the shipment</td>
         <td>
             <p>Print labels</p> 
             <p>Cancel consignment</p> 
@@ -179,7 +179,7 @@
     </tr>
     <tr>
         <td>Lost</td>
-        <td></td>
+        <td>Shipment lost</td>
         <td>
             <p>Print labels</p> 
             <p>Cancel consignment</p> 
@@ -187,7 +187,7 @@
     </tr>
     <tr>
         <td>Damaged</td>
-        <td></td>
+        <td>Shipment was damaged</td>
         <td>
             <p>Print labels</p> 
             <p>Cancel consignment</p> 
@@ -195,7 +195,7 @@
     </tr>
     <tr>
         <td>Out For Delivery</td>
-        <td></td>
+        <td>Shipment is out for delivery</td>
         <td>
             <p>Print labels</p> 
             <p>Cancel consignment</p> 
@@ -203,7 +203,7 @@
     </tr>
     <tr>
         <td>Delivered Damaged</td>
-        <td></td>
+        <td>Shipment delivered, but it was damaged</td>
         <td>
             <p>Print labels</p> 
             <p>Cancel consignment</p> 
@@ -211,14 +211,14 @@
     </tr>
     <tr>
         <td>Partially Delivered</td>
-        <td></td>
+        <td>Part of the shipment was delivered</td>
         <td>
             <p>Print labels</p>
         </td>        
     </tr>
     <tr>
         <td>At Collection Point</td>
-        <td></td>
+        <td>Shipment is at a pickup shop</td>
         <td>
             <p>Print labels</p> 
             <p>Cancel consignment</p> 
@@ -226,14 +226,14 @@
     </tr>
     <tr>
         <td>Delivered</td>
-        <td></td>
+        <td>Shipment Delivered</td>
         <td>
             <p>Print labels</p> 
         </td>       
     </tr>
     <tr>
         <td>Delivery Failed Card Left</td>
-        <td></td>
+        <td>Delivery failed, but carrier left a calling card</td>
         <td>
             <p>Print labels</p> 
             <p>Cancel consignment</p> 
@@ -241,14 +241,14 @@
     </tr>
     <tr>
         <td>Delivery Failed</td>
-        <td></td>
+        <td>Delivery failed</td>
         <td>
             <p>Print labels</p> 
         </td>         
     </tr>
     <tr>
         <td>Return to Sender</td>
-        <td></td>
+        <td>Shipment will be returned to sender</td>
         <td>
             <p>Print labels</p> 
             <p>Cancel consignment</p> 
