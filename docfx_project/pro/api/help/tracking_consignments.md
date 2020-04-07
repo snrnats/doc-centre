@@ -13,7 +13,7 @@ Alternatively, you can use SortedREACT to offer a richer tracking experience to 
 ## Tracking Section Contents
 
 * [Using PRO's Tracking API](/pro/api/help/using_pros_tracking_api.html) - Explains how to call the Tracking API.
-* [Tracking Consignments Using REACT](/pro/api/help/tracking_consignments_using_react.html) - Explains how to link PRO to your REACT account, and gives an overview of how REACT and PRO interact.
+* [Tracking Consignments Using REACT](/pro/api/help/tracking_consignments_using_react.html) - Gives an overview of how REACT and PRO interact.
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>
