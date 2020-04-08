@@ -110,7 +110,7 @@ The example shows a request to manifest three consignments. The response indicat
 ```
 </div>
 
-## Manifesting Consignments Using A Query
+## Manifesting Consignments Using a Query
 
 The **Manifest Consignments From Query** endpoint enables you to manifest consignments using a query, rather than directly providing consignment references. 
 
@@ -128,7 +128,7 @@ Once the request is received, PRO attempts to manifest any consignments that mee
 > <span class="note-header">Note:</span>
 >  For full reference information on the <strong>Manifest Consignments From Query</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery">Manifest Consignments From Query</a></strong> page of the API Reference. 
 
-### Setting Consignments as Ready To Ship
+### Setting Consignments As Ready to Ship
 
 PRO's **Set Ready To Ship** and **Set Not Ready To Ship** endpoints can help you when manifesting consignments from queries. These endpoints set a consignment's `consignmentState` to _ReadyToShip_. Although setting a consignment as Ready To Ship doesn't do anything in and of itself <span class="highlight">SHOULD PROBABLY CONFIRM THIS IS THE CASE</span>, it can be useful as a means of marking consignments as ready for manifest via the **Manifest Consignments From Query** endpoint.
 

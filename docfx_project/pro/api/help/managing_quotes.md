@@ -4,7 +4,7 @@ SortedPRO's Quotes API enables you to get delivery quotes for a consignment manu
 
 ---
 
-## What Is A Quote In PRO?
+## What Is a Quote In PRO?
 
 In PRO, delivery quotes are generally used outside of a "regular" consignment allocation workflow, as a means of managing consignments that require manual intervention. For example, your customer service teams might want to get quotes for an expedited delivery on a consignment that was missed by a carrier and so did not meet its delivery promise.
 
@@ -15,7 +15,7 @@ PRO's Quotes API enables you to get delivery quotes for both as-yet uncreated an
 > The **Allocate With Quote** endpoint is a key part of all PRO quotes workflows, enabling you to allocate a consignment to the carrier service returned in a particular quote:
 >
 > * For reference information on **Allocate With Quote**, see the [API reference](https://docs.electioapp.com/#/api/AllocateWithQuote)
-> * For a user guide on the **Allocate With Quote** endpoint, see the [Allocating To A Specific Quote](/pro/api/help/allocating_to_a_specific_quote.md) page, in the **Allocating Consignments** section.
+> * For a user guide on the **Allocate With Quote** endpoint, see the [Allocating to a Specific Quote](/pro/api/help/allocating_to_a_specific_quote.md) page, in the **Allocating Consignments** section.
 
 ## Section Contents
 

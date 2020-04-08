@@ -769,7 +769,7 @@ PRO returns a single service group object. In this case, <em>SAMPLE_SERVICE01</e
 
 * Learn how to get quotes using a consignment reference at the [Getting Quotes For An Existing Consignment](/pro/api/help/getting_quotes_for_an_existing_consignment.html) page.
 * Learn how to create consignments at the [Creating Consignments](/pro/api/help/creating_consignments.html) page.
-* Learn how to allocate consignments to your chosen quote at the [Allocating To A Specific Quote](/pro/api/help/allocating_to_a_specific_quote.html) page.
+* Learn how to allocate consignments to your chosen quote at the [Allocating to a Specific Quote](/pro/api/help/allocating_to_a_specific_quote.html) page.
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>

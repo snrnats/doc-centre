@@ -4,7 +4,7 @@ In SortedPRO, a consignment represents a collection of goods that are to be ship
 
 ---
 
-## What Is A Consignment?
+## What Is a Consignment?
 
 In the context of PRO, the term **"consignment"** refers to a collection of one or more packages that are shipped from the same origin address, to the same destination address, on behalf of the same Sorted customer, using the same carrier service, on the same day.
 

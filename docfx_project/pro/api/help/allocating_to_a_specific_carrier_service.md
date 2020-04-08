@@ -1,10 +1,10 @@
-# Allocating To A Specific Carrier Service
+# Allocating to a Specific Carrier Service
 
 Want to specify the carrier service that should take your consignment? This page explains how to allocate consignments to services manually.
 
 ---
 
-## Getting The Carrier Service Reference
+## Getting the Carrier Service Reference
 
 In order to allocate a consignment to a specific carrier service, you'll need to know that service's `{MpdCarrierServiceReference}`. The `{MpdCarrierServiceReference}` is a unique identifier for each service available in PRO.
 
@@ -15,7 +15,7 @@ There are two ways of obtaining a carrier service's `{MpdCarrierServiceReference
   > <span class="note-header">Note:</span>
   >  For full reference information on the <strong>Get Available MPD Carrier Services</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/GetAvailableMPDCarrierServices">Get Available MPD Carrier Services</a></strong> page of the API reference. 
 
-## Allocating To A Carrier Service Manually
+## Allocating to a Carrier Service Manually
 
 The **Allocate With Carrier Service** endpoint enables you to allocate one or more consignments to a specific carrier service. 
 

@@ -4,7 +4,7 @@ This page explains how to to generate consignments and orders by selecting a del
 
 ---
 
-## Selecting Options as a Consignment
+## Selecting Options As a Consignment
 
 The **Select Option** endpoint enables you to record a customer's choice of delivery or pickup option in SortedPRO. PRO generates and allocates a consignment from the details of the selected option.
 
@@ -77,7 +77,7 @@ POST https://api.electioapp.com/deliveryoptions/select/EDO-000-6DX-6XP
 
 </div> 
 
-## Selecting Options as an Order    
+## Selecting Options As an Order    
 
 The **Select Option As Order** endpoint enables you to record a customer's choice of delivery or pickup option as an order rather than a consignment. You can then pack the resulting order into multiple consignments as per the PRO order process. **Select Option As Order** enables you to select multiple delivery and/or pickup options at once. 
 

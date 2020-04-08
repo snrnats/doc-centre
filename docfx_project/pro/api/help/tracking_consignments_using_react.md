@@ -26,7 +26,7 @@ REACT uses carrier connectors to keep shipments from a particular carrier up to 
 
 To use your PRO carriers with REACT, navigate to **Settings** > **Carrier Connectors** within the REACT UI, and click **Connect**.
 
-## Registering PRO Consignments In REACT
+## Registering PRO Consignments in REACT
 
 Once PRO and REACT have been linked, PRO will automatically create new REACT shipments from manifested consignments. The process is as follows:
 
