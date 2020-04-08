@@ -1,4 +1,4 @@
-# Tracking Consignments Using REACT
+# Tracking PRO Consignments Using REACT
 
 SortedPRO integrates seamlessly with REACT, Sorted's dedicated shipment tracking platform. PRO can automatically register shipments with REACT, and share carrier and tracking information. This page explains how PRO and REACT can interact with each other, and the benefits this brings.
 
@@ -8,9 +8,15 @@ SortedPRO integrates seamlessly with REACT, Sorted's dedicated shipment tracking
 
 ---
 
-## Benefits Of Using REACT
+## Why Use REACT?
 
+PRO's native tracking API enables you to build simple tracking pages that a consumer can access to check the status of their order. REACT, on the other hand, offers a full suite of tracking tools, giving you much more flexibility in the way that you supply tracking updates to your customers. REACT offers:
 
+* Custom webhooks that notify you of shipping events proactively. Whenever a shipment enters a selected state, REACT will send that shipment’s data to you, thereby enabling you to build services such as push notifications as email alerts.
+* A tracking dashboard that gives you advanced shipment monitoring features, and enables administrators to configure the system.
+* Customisable shipment state labels, enabling you to to communicate tracking information to your customers in your brand’s tone of voice or in an alternative language, as opposed to using default tracking state names.
+* Customisable web-based tracking pages that can be published with no development work needed.
+* Calculated events, whereby shipment properties are changes based on REACT's internal processing rather than a carrier update. For example, REACT can automatically flag a shipment as late if it passes its expected delivery date. 
 
 ## Integrating PRO and REACT
 
@@ -169,6 +175,314 @@ This table shows how the properties in a PRO consignment resource map to the pro
   </tr>
 </table>
 
+### Mapping Example
+
+This example shows a PRO consignment and a REACT shipment that has been generated from that consignment at the point it was manifested.
+
+<div class="tab">
+    <button class="staticTabButton">Example PRO Consignment</button>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'PROmapping')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+</div>
+
+<div id="PROmapping" class="staticTabContent" onclick="CopyToClipboard(this, 'PROmapping')">
+
+```json
+{
+    "ConsignmentLegs": [
+        {
+            "Leg": 1,
+            "TrackingReferences": [
+                "1Z9A80W5D991115692"
+            ],
+            "CarrierReference": "UPS",
+            "CarrierServiceReference": "UPSHSADCS",
+            "CarrierName": "UPS"
+        }
+    ],
+    "CollectionDate": "2020-04-08T00:00:00+01:00",
+    "DateDelivered": null,
+    "FirstAttemptedDeliveryDate": null,
+    "DateReturned": null,
+    "DateShipped": null,
+    "DateCollected": null,
+    "AttemptedDeliveryDate": null,
+    "MetaData": [],
+    "Allocation": {
+        "CarrierServiceGroupReference": "",
+        "MpdCarrierServiceGroupName": null,
+        "MpdCarrierServiceReference": "EDC5_UPSHSADCS",
+        "MpdCarrierServiceName": "UPS SAVER (Delivery Confirmation Signature Required)",
+        "AllocationDate": "2020-04-08T08:57:20.0959259+00:00",
+        "Price": {
+            "Net": 22.99,
+            "Gross": 22.99,
+            "TaxRate": {
+                "Reference": null,
+                "CountryIsoCode": "GB",
+                "Type": "Standard",
+                "Rate": 0.0000
+            },
+            "VatAmount": 0.00,
+            "Currency": {
+                "Name": null,
+                "IsoCode": "GBP"
+            }
+        }
+    },
+    "FailedAllocation": null,
+    "Source": "Api",
+    "LabelCount": 0,
+    "LabelsPrinted": false,
+    "DateLabelsWereFirstPrinted": null,
+    "IsLate": false,
+    "LateForCustomer": false,
+    "CustomerReference": "338a3524-5a17-44dd-a601-1527574f1a5d",
+    "Weight": {
+        "Value": 2.00000,
+        "Unit": "Kg"
+    },
+    "Value": {
+        "Amount": 20.00,
+        "Currency": {
+            "Name": "United States dollars",
+            "IsoCode": "USD"
+        }
+    },
+    "Direction": "Outbound",
+    "Tags": [],
+    "Reference": "EC-000-05E-BKJ",
+    "ConsignmentState": "Manifested",
+    "DateCreated": "2020-04-08T08:57:17.5970788+00:00",
+    "ShippingDate": "2020-04-08T17:00:00+01:00",
+    "RequestedDeliveryDate": {
+        "Date": "2020-04-10T00:00:00+00:00",
+        "DeliveryWindow": {
+            "Start": "00:00:00",
+            "End": "00:00:00",
+            "UtcOffset": null
+        },
+        "IsToBeExactlyOnTheDateSpecified": true
+    },
+    "EarliestDeliveryDate": "2020-04-10T00:00:00-04:00",
+    "LatestDeliveryDate": "2020-04-10T23:30:00-04:00",
+    "ConsignmentReferenceProvidedByCustomer": "PostDeploymentTest_API_v1.1_UKtoUS_NonGBP",
+    "Addresses": [
+        {
+            "AddressType": "Origin",
+            "ShopLocationReference": null,
+            "Contact": {
+                "Reference": null,
+                "Title": "Miss",
+                "FirstName": "Laura",
+                "LastName": "Somebody",
+                "Position": null,
+                "Telephone": "01234 567 890",
+                "Mobile": "01234 567 890",
+                "LandLine": "",
+                "Email": "laura.somebody@mpd-group.com"
+            },
+            "CompanyName": null,
+            "ShippingLocationReference": "EDC5_Electio",
+            "CustomerName": null,
+            "AddressLine1": "Third Floor",
+            "AddressLine2": "Merchant Exchange",
+            "AddressLine3": "Whitworth Street West",
+            "Town": "Manchester",
+            "Region": "",
+            "Postcode": "M1 5WG",
+            "Country": {
+                "Name": "United Kingdom",
+                "IsoCode": {
+                    "TwoLetterCode": "GB"
+                }
+            },
+            "RegionCode": "",
+            "SpecialInstructions": "",
+            "LatLong": null,
+            "IsCached": false
+        },
+        {
+            "AddressType": "Destination",
+            "ShopLocationReference": null,
+            "Contact": {
+                "Reference": null,
+                "Title": "",
+                "FirstName": "Robert",
+                "LastName": "Smith",
+                "Position": null,
+                "Telephone": "07495747394",
+                "Mobile": "07495747394",
+                "LandLine": "0161111454",
+                "Email": "robert.smith@email.com"
+            },
+            "CompanyName": "",
+            "ShippingLocationReference": null,
+            "CustomerName": null,
+            "AddressLine1": "400 N Calhoun Street",
+            "AddressLine2": "",
+            "AddressLine3": "",
+            "Town": "Leeds",
+            "Region": "West Yorks",
+            "Postcode": "LS1 6TH",
+            "Country": {
+                "Name": "United Kingdom",
+                "IsoCode": {
+                    "TwoLetterCode": "GB"
+                }
+            },
+            "RegionCode": "IA",
+            "SpecialInstructions": null,
+            "LatLong": null,
+            "IsCached": false
+        }
+    ],
+    "Packages": [
+        {
+            "ConsignmentLegs": [
+                {
+                    "Leg": 1,
+                    "TrackingReferences": [
+                        "1Z9A80W5D991115692"
+                    ],
+                    "CarrierReference": "UPS",
+                    "CarrierServiceReference": null,
+                    "CarrierName": null
+                }
+            ],
+            "Items": [
+                {
+                    "Reference": "099681e6c66d47c982c86e1e5aaa803c",
+                    "Sku": "sku",
+                    "Model": "model",
+                    "Description": "desc",
+                    "CountryOfOrigin": {
+                        "Name": "United Kingdom",
+                        "IsoCode": {
+                            "TwoLetterCode": "GB"
+                        }
+                    },
+                    "HarmonisationCode": "h code",
+                    "Weight": {
+                        "Value": 0.34000,
+                        "Unit": "Kg"
+                    },
+                    "Dimensions": {
+                        "Unit": "Cm",
+                        "Width": 1.10000,
+                        "Length": 1.10000,
+                        "Height": 1.10000
+                    },
+                    "Value": {
+                        "Amount": 10.0000,
+                        "Currency": {
+                            "Name": "United States dollars",
+                            "IsoCode": "USD"
+                        }
+                    },
+                    "ItemReferenceProvidedByCustomer": "Sorted Package 1 Item 1 Referene",
+                    "Barcode": {
+                        "Code": "code",
+                        "BarcodeType": "AztecCode"
+                    },
+                    "Quantity": 0,
+                    "Unit": null,
+                    "HarmonisationKeyWords": [
+                        "one",
+                        "two"
+                    ],
+                    "Status": null,
+                    "ContentClassification": "Unrestricted",
+                    "ContentClassificationDetails": "NotSpecified"
+                }
+            ],
+            "Charges": [],
+            "Reference": "EP-000-05G-CAH",
+            "PackageReferenceProvidedByCustomer": "",
+            "Weight": {
+                "Value": 2.00000,
+                "Unit": "Kg"
+            },
+            "Dimensions": {
+                "Unit": "Cm",
+                "Width": 5.00000,
+                "Length": 10.00000,
+                "Height": 1.00000
+            },
+            "Description": "test description",
+            "Value": {
+                "Amount": 20.0000,
+                "Currency": {
+                    "Name": "United States dollars",
+                    "IsoCode": "USD"
+                }
+            },
+            "PackageSizeReference": null,
+            "Barcode": {
+                "Code": "010101",
+                "BarcodeType": "AustraliaPostalCode"
+            }
+        }
+    ]
+}
+```
+
+</div>
+
+<div class="tab">
+    <button class="staticTabButton">Corresponding REACT Shipment </button>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'REACTmapping')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+</div>
+
+<div id="REACTmapping" class="staticTabContent" onclick="CopyToClipboard(this, 'REACTmapping')">
+
+```json
+{
+  "shipments": [
+    {
+      "tags": [],
+      "tracking_references": [
+        "1Z9A80W5D991115692"
+      ],
+      "carrier": "UPS",
+      "carrier_service": "UPS SAVER (Delivery Confirmation Signature Required)",
+      "shipped_date": null,
+      "promised_date": {
+        "start": "2020-04-10T00:00:00-04:00",
+        "end": "2020-04-10T23:30:00-04:00"
+      },
+      "expected_deliver_date": {
+        "start": "2020-04-10T00:00:00-04:00",
+        "end": "2020-04-10T23:30:00-04:00"
+      },
+      "addresses": [
+        {
+            "address_type": "Origin",
+            "reference": "EDC5_Electio",            
+            "address_line1": "Third Floor",
+            "address_line2": "Merchant Exchange",
+            "address_line3": "Whitworth Street West",
+            "region": "",
+            "postal_code": "M1 5WG",
+            "country_iso_code": "GB"
+        },
+        {
+            "address_type": "Destination",
+            "address_line1": "400 N Calhoun Street",
+            "address_line2": "",
+            "address_line3": "",
+            "region": "West Yorks",
+            "postal_code": "LS1 6TH",
+            "country_iso_code": "GB"
+        }
+      ],
+      "metadata": []
+    }
+  ]
+}
+```
+
+</div>
+
 > <span class="note-header">More Information:</span>
 >
 > * For more information on the structure of a REACT shipment, see the [Register Shipments](https://docs.sorted.com/react/api/#RegisterShipments) section of the REACT API reference and the [Registering Shipments](/react/help/registering_shipments.html) page of the REACT help.
@@ -180,8 +494,8 @@ Once a PRO consignment has been registered as a REACT shipment, PRO automaticall
 
 ## Next Steps
 
+* View the [REACT User Guide](/react/help/overview.html) for a full overview of how to use REACT.
 * Learn how to get customs docs and invoices for international shipments at the [Getting Customs Docs and Invoices](/pro/api/help/getting_customs_docs_and_invoices.html) page.
-* View the [REACT User Guide](/react/help/overview.html).
 * Learn how to manifest consignments at the [Manifesting Consignments](/pro/api/help/manifesting_consignments.html) page.
 
 <script src="../../scripts/requesttabs.js"></script>

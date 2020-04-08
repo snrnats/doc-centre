@@ -126,10 +126,6 @@ This example shows a simplified **Get Events Per Package** response for consignm
 
 </div>
 
-## Using Tracking Events
-
-<span class="highlight">NEED SOME REACT-STYLE BLURB IN HERE</span>
-
 ## Next Steps
 
 * Learn how to get customs docs and invoices for international shipments at the [Getting Customs Docs and Invoices](/pro/api/help/getting_customs_docs_and_invoices.html) page.
