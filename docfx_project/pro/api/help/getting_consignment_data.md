@@ -2,6 +2,8 @@
 
 PRO offers several endpoints that return consignment data. This page explains how to fetch data on an individual consignment, and how to search for consignments that meet a particular set of criteria.
 
+<span class="highlight">NEED TO ADD SOME STUFF IN HERE ABOUT THE EVENTS API AS THAT SHOULD PROBABLY SIT WITH THIS STUFF</span>
+
 ---
 
 ## Getting Data For a Specific Consignment
