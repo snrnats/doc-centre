@@ -2,6 +2,8 @@
 
 Using delivery options enables you to offer you customers a choice of delivery slots. This section explains how to get delivery and pickup options for a consignment, and how to generate consignments and orders from the options a customer selects.
 
+---
+
 ## What Is a Delivery Option?
 
 In the context of SortedPRO, a "delivery option" for a consignment is a delivery date and time window that that consignment could potentially be delivered on, and a carrier service that could meet that delivery promise. When you request delivery options, you give PRO the details of an as-yet uncreated consignment. PRO then checks its carrier services and returns a list of available delivery slots and their associated carriers, enabling you to present these options to your customer at checkout.
@@ -26,7 +28,7 @@ In this case, PRO would return five delivery options:
 
 Pickup options are similar to delivery options, except they are used to enable PUDO (pick up / drop off) services rather than home delivery.
 
-As with delivery options, when you request pickup options, you give PRO the details of an as-yet uncreated consignment. PRO then returns a list of each pickup location that consignment could potentially be delivered to. In turn, each location contains a list of delivery options, generated using the same rules as "standard" home delivery options. This enables you to create workflows whereby you customer selects a pickup location and then either selects or is presented with a pickup date/time
+As with delivery options, when you request pickup options, you give PRO the details of an as-yet uncreated consignment. PRO then returns a list of each pickup location that consignment could potentially be delivered to. In turn, each location contains a list of delivery options, generated using the same rules as "standard" home delivery options. This enables you to create workflows whereby your customer selects a pickup location and then either selects or is presented with a pickup date/time
 
 ## Section Contents
 
