@@ -152,7 +152,7 @@ PRO has responded with one quote and two unavailable services.
             "OriginAddress": {
                 "Contact": null,
                 "CompanyName": null,
-                "ShippingLocationReference": "EDC5_Electio",
+                "ShippingLocationReference": "Sorted1",
                 "CustomerName": null,
                 "AddressLine1": "Third Floor",
                 "AddressLine2": "Merchant Exchange",

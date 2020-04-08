@@ -132,7 +132,7 @@ https://api.electioapp.com/orders/EO-000-002-K0R
                 "Email": ""
             },
             "CompanyName": null,
-            "ShippingLocationReference": "EDC5_Electio",
+            "ShippingLocationReference": "Sorted1",
             "CustomerName": null,
             "AddressLine1": null,
             "AddressLine2": null,

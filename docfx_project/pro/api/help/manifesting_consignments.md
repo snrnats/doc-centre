@@ -150,7 +150,7 @@ The example below shows a successful request to set two consignments as _ReadyTo
 <div id="RTSRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'RTSRequest')">
 
 ```json
-PUT https://apisandbox.electioapp.com/consignments/setreadytoship
+PUT https://api.electioapp.com/consignments/setreadytoship
 
 [
     "EC-000-05D-EM7",
@@ -176,7 +176,7 @@ PUT https://apisandbox.electioapp.com/consignments/setreadytoship
         "ApiLinks": [
             {
                 "Rel": "detail",
-                "Href": "https://apisandbox.electioapp.com/consignments/EC-000-05D-EM7"
+                "Href": "https://api.electioapp.com/consignments/EC-000-05D-EM7"
             }
         ]
     },
@@ -187,7 +187,7 @@ PUT https://apisandbox.electioapp.com/consignments/setreadytoship
         "ApiLinks": [
             {
                 "Rel": "detail",
-                "Href": "https://apisandbox.electioapp.com/consignments/EC-000-05D-EKV"
+                "Href": "https://api.electioapp.com/consignments/EC-000-05D-EKV"
             }
         ]
     }
@@ -256,7 +256,7 @@ PUT https://api.electioapp.com/consignments/setnotreadytoship
         "ApiLinks": [
             {
                 "Rel": "detail",
-                "Href": "https://apisandbox.electioapp.com/consignments/EC-000-05D-GHR"
+                "Href": "https://api.electioapp.com/consignments/EC-000-05D-GHR"
             }
         ]
     }

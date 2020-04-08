@@ -79,7 +79,7 @@ The example shows a request to get delivery options for a fairly standard consig
   "Addresses": [
     {
       "AddressType": "Origin",
-      "ShippingLocationReference": "EDC5_Electio",
+      "ShippingLocationReference": "Sorted1",
       "IsCached": false
     },
     {

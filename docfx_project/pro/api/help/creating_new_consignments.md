@@ -81,7 +81,7 @@ The example below shows a simple **Create Consignments** request containing just
   "Addresses": [
     {
       "AddressType": "Origin",
-      "ShippingLocationReference": "EDC5_Electio",
+      "ShippingLocationReference": "Sorted1",
       "IsCached": false
     },
     {
