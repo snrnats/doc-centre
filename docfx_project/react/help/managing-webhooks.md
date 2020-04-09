@@ -45,7 +45,7 @@ Each REACT webhook must be associated with at least one shipment filter. A shipm
 >
 > For a full list of REACT shipment states, see the [Shipment States](/react/help/shipment-states.html) page.
 
-You can use changes in shipment state and new calculated events to filter shipments. States and calculated events can be filtered in whatever way you choose. For example, you could set up a filter containing states that require escalation to the carrier, such as **Lost**, **Damaged**, and the **Late** calculated event. You could also set up a filter containing states that you would want to send delivery updates to your customers on, such as **Out For Delivery**, **Collection Reminder**, and **Delivery Attempted**. The [Example Configuration](https://docs.sorted.com/react/managing-webhooks/#example-configuration) section gives further examples of potential shipment filters.
+You can use changes in shipment state and new calculated events to filter shipments. States and calculated events can be filtered in whatever way you choose. For example, you could set up a filter containing states that require escalation to the carrier, such as **Lost**, **Damaged**, and the **Late** calculated event. You could also set up a filter containing states that you would want to send delivery updates to your customers on, such as **Out For Delivery**, **Collection Reminder**, and **Delivery Attempted**. The [Example Configuration](/react/help/managing-webhooks.html#example-configuration) section gives further examples of potential shipment filters.
 
 In REACT, each shipment filter can trigger multiple webhooks, and each webhook can be triggered by multiple filters. This many-to-many relationship enables you to create flexible configurations that don't tie your business processes into your webhook configurations.
 
@@ -92,7 +92,7 @@ You'll need to set up your filters before configuring webhooks, as selecting shi
 
    > <span class="note-header">Note:</span>
    >
-   > Tags can be added to shipments via the **Register Shipments** and **Update Shipments** endpoints. For more information on adding tags to shipments, see the [Registering Extra Shipment Information](https://docs.sorted.com/react/registering-shipments/#registering-extra-shipment-information) section of the [Registering Shipments](https://docs.sorted.com/react/registering-shipments/) page, and the [Updating Shipments](https://docs.sorted.com/react/updating-shipments/) page.
+   > Tags can be added to shipments via the **Register Shipments** and **Update Shipments** endpoints. For more information on adding tags to shipments, see the [Registering Extra Shipment Information](/react/help/registering-shipments.html#registering-extra-shipment-information) section of the [Registering Shipments](/react/help/registering-shipments.html) page, and the [Updating Shipments](/react/help/updating-shipments.html) page.
 
    When you have added any tags you need, click **Create Filter** to finish. Your new filter appears as a tile on the **Shipment Filters** page.
 

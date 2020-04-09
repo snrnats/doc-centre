@@ -18,13 +18,13 @@ The **States** dashboard uses shipment states to group shipments into red/amber/
 * **Amber (Other Exceptions)** - There is an issue with the shipment that does not require you to take action. However, you might want to notify your customers. For example, a shipment in a state of *Delivery failed* would be classified as amber.
 * **Green (All Good)** - There is no issue with the shipment. For example, a shipment in a state of *Dispatched* would be classified as green.
 
-For a full list of REACT shipment states, including their colour classification, see the [Shipment States](https://docs.sorted.com/react/shipment-states/) page.
+For a full list of REACT shipment states, including their colour classification, see the [Shipment States](/react/help/shipment-states.html) page.
 
 The **States** dashboard has two sections: a map indicating the delivery locations of your shipments and a row of tiles indicating how many of your shipments are in each colour status.
 
 > <span class="note-header">Note:</span>
 >
-> Only those shipments for which REACT holds an origin address are displayed on the map. For more information on registering shipment data, see the [Registering Extra Shipment Information](https://docs.sorted.com/react/registering-shipments/#registering-extra-shipment-information) section of the [Registering Shipments](https://docs.sorted.com/react/registering-shipments/) page. 
+> Only those shipments for which REACT holds an origin address are displayed on the map. For more information on registering shipment data, see the [Registering Extra Shipment Information](/react/help/registering-shipments.html#registering-extra-shipment-information) section of the [Registering Shipments](/react/help/registering-shipments.html) page. 
 
 If required, you can filter the data displayed using the filter controls explained in the [Filtering Dashboard Data](#filtering-dashboard-data) section.
 

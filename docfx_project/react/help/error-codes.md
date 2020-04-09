@@ -1,6 +1,6 @@
 # Error Codes
 
-This page lists the errors that REACT's APIs can return and suggests potential fixes. For an explanation of the structure of the error response itself, see the [REACT Error Structure](https://docs.sorted.com/react/error-codes/#react-error-structure) section.
+This page lists the errors that REACT's APIs can return and suggests potential fixes. For an explanation of the structure of the error response itself, see the [REACT Error Structure](/react/help/error-codes.html#react-error-structure) section.
 
 ---
 
