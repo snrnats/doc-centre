@@ -4,7 +4,7 @@ Service groups enable you to specify a custom pool of carrier services to alloca
 
 ---
 
-## What Is A Carrier Service Group?
+## What Is a Carrier Service Group?
 
 SortedPRO carrier service groups are user-defined pools of carrier services. They are designed to be used in conjunction with the **[Allocate Consignment With Service Group](https://docs.electioapp.com/#/api/AllocateConsignmentWithServiceGroup)** endpoint as a means of limiting the carrier services that a particular consignment could be allocated to. 
 
@@ -38,7 +38,7 @@ To edit an existing carrier service group, click its **Edit** link.
 
 To delete an existing carrier service group, click its **Delete This Group** link.
 
-## Using The Allocate With Service Group Endpoint
+## Using the Allocate With Service Group Endpoint
 
 To call **Allocate Consignment With Service Group**, send a `PUT` request to `https://api.electioapp.com/allocation/{consignmentReference}/allocatewithservicegroup/{mpdCarrierServiceGroupReference}`, where `{consignmentReference}` is the unique reference for the consignment you want to allocate and `{mpdCarrierServiceGroupReference}` is the **Service Group Code** of the group you want to allocate within.
 

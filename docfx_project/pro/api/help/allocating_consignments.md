@@ -1,4 +1,4 @@
-# Allocating Consignments To Carriers
+# Allocating Consignments to Carriers
 
 Once you've created a consignment, you'll need to allocate it to a carrier service. This section explains how to configure allocation rules that PRO can use when selecting carrier services, and the various methods you can use to allocate consignments to those services.
 
@@ -70,7 +70,7 @@ PRO offers the following allocation endpoints:
 
 When a consignment is allocated to a carrier service, its status changes to _Allocated_, enabling you to retrieve its package labels and (where applicable) customs documentation. PRO also returns an Allocation Summary, confirming the service that the consignment was allocated to and (where applicable) providing tracking details.
 
-## What Is An Allocation Rule?
+## What Is an Allocation Rule?
 
 When you make an allocation request for a consignment, PRO uses its allocation rules to ascertain which carrier services are eligible to ship that consignment and which are not. Allocation rules are optional criteria that define the consignments that a particular carrier service is eligible to take. You can specify the following:
 
@@ -115,7 +115,7 @@ Allocation rules must be configured in the PRO UI. To configure allocation rules
 
     > <span class="note-header">More Information:</span>
     >
-    > For more information on how allocation tags work, see [What Is An Allocation Tag?](#what-is-an-allocation-tag).
+    > For more information on how allocation tags work, see [What Is an Allocation Tag?](#what-is-an-allocation-tag).
 
 6. If required, enter a UK postcode restriction. To do so, enter the postcode **area**, **district**, **sector**, and/or **unit** you want to restrict delivery to into the fields on the **Geographic Availability** panel and then click the **Add** button. PRO displays the restricted postcode area in the panel.
 
@@ -144,7 +144,7 @@ Allocation rules must be configured in the PRO UI. To configure allocation rules
 
 8. Click **Save** to save your changes and finish setting up allocation rules.
 
-## What Is An Allocation Tag?
+## What Is an Allocation Tag?
 
 Allocation tags are a type of allocation rule that enables you to filter the list of available carrier services on a per-consignment basis, no matter which allocation endpoint you use in your integration. They are generally used as a flexible means of excluding carrier services that would not be suitable for a particular consignment. 
 
@@ -251,10 +251,10 @@ In the example, a consignment with a `{consignmentReference}` of _EC-000-05B-MMA
 
 * [Viewing Available Carrier Services](/api/help/viewing_available_carrier_services.html) - Explains how to get a list of the carriers and services available with your subscription.
 * [Allocating Consignments To The Cheapest Quote](/api/help/allocating_to_the_cheapest_quote.html) - Explains how to allocate a consignment to the cheapest eligible quote.
-* [Allocating To A Specific Carrier Service](/api/help/allocating_to_a_specific_carrier_service.html) - Explains how to allocate a consignment to a specific carrier service.
+* [Allocating to a Specific Carrier Service](/api/help/allocating_to_a_specific_carrier_service.html) - Explains how to allocate a consignment to a specific carrier service.
 * [Allocating Via Service Group](/api/help/allocating_via_service_group.html) - Explains how to allocate a consignment to the cheapest available service in the specific carrier service group.
 * [Allocating Using Default Rules](/api/help/allocating_using_default_rules.html) - Explains how to allocate a consignment based on custom business rules.
-* [Allocating To A Specific Quote](/api/help/allocating_to_a_specific_quote.html) - Explains how to allocate a consignment based on a specific delivery quote from a carrier.
+* [Allocating to a Specific Quote](/api/help/allocating_to_a_specific_quote.html) - Explains how to allocate a consignment based on a specific delivery quote from a carrier.
 * [Deallocating Consignments](/api/help/deallocating_consignments.html) - Explains how to return a consignment to a deallocated state.
 
 <script src="../../scripts/requesttabs.js"></script>

@@ -4,7 +4,7 @@ SortedPRO's Orders function enables you to process deliveries that would ship fr
 
 ---
 
-## What Is An Order?
+## What Is an Order?
 
 In PRO, an order represents a collection of packages that is to be transported to the same destination and on behalf of the same customer. 
 

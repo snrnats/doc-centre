@@ -12,7 +12,7 @@ Getting labels is a key part of all PRO workflows, as an unlabelled consignment 
 > 
 > You can only retrieve labels for consignments that have been allocated to a carrier. If you attempt to return labels for an unallocated consignment, PRO returns an error.
 
-### Getting Labels For An Entire Consignment
+### Getting Labels for an Entire Consignment
 
 PRO offers two endpoints that return labels for all packages in a consignment: **Get Labels** and **Get Labels In Format**:
 
@@ -20,7 +20,7 @@ PRO offers two endpoints that return labels for all packages in a consignment: *
 
 * **[Get Labels in Format](https://docs.electioapp.com/#/api/GetLabelsinFormat)** is similar to **Get Labels**, but enables you to specify the file format that you want the labels to be returned in. This must be one of PRO's supported formats: PDF, PNG, ZPL or ZPLII. To call **Get Labels In Format**, send a `GET` request to `https://api.electioapp.com/labels/{consignmentReference}/{labelFormat}`.
 
-### Getting Labels For An Individual Package
+### Getting Labels for an Individual Package
 
 PRO also offers two endpoints that return labels for a specific package in a consignment: **Get Package Label** and **Get Package Label In Format**:
 

@@ -16,7 +16,7 @@ PRO's Tracking API has three endpoints:
 >
 > The **Post Tracking Events** endpoint is intended for carrier use only, and is outside the scope of this documentation.
 
-## What Is A Tracking Event?
+## What Is a Tracking Event?
 
 Tracking events are informational messages returned from carriers that provide details about the status of the consignment. Each tracking event contains the following properties:
 

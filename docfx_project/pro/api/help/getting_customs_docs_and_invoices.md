@@ -1,4 +1,4 @@
-# Getting Customs Docs And Invoices
+# Getting Customs Docs and Invoices
 
 This page explains the various way in which SortedPRO can return return customs documents and commercial invoices.
 
@@ -36,7 +36,7 @@ PRO returns the relevant document as a base-64 encoded byte array.
 >
 > For full reference information on the **Get Customs Document** endpoint, see the [API reference](https://docs.electioapp.com/#/api/GetCustomsDocument).
 
-## Getting All Customs Documents For A Consignment
+## Getting All Customs Documents for a Consignment
 
 To call **Get Customs Documents**, send a `GET` request to `https://api.electioapp.com/consignments/docs/{consignmentReference}`.
 

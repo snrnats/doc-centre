@@ -96,7 +96,7 @@ The example shows a request to get no more than 10 pickup options for a fairly s
   "Addresses": [
     {
       "AddressType": "Origin",
-      "ShippingLocationReference": "EDC5_Electio",
+      "ShippingLocationReference": "Sorted1",
       "IsCached": false
     },
     {

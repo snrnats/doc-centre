@@ -51,7 +51,7 @@ accept: application/xml
 
 </div>
 
-## Specifying API version
+## Specifying API Version
 
 You should include an `electio-api-version` header specifying the API version to use in all PRO API calls. The current version is _1.1_.
 
