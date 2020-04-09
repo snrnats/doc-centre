@@ -19,9 +19,17 @@
     </p>
 </div>
 <div class="button-container">
-    <a href="/react/help/getting-started.html">
+    <a href="/react/help/overview.html">
         <div class="homepage-container">
-            <h2>Getting Started</h2>
+            <h2>Introduction to REACT</h2>
+            <p>
+                What REACT does and how it works
+            </p>
+        </div>
+    </a>
+    <a href="/react/help/quick-start.html">
+        <div class="homepage-container">
+            <h2>Quick Start Guide</h2>
             <p>
                 Get up and running in minutes
             </p>
@@ -43,12 +51,20 @@
             </p>
         </div>
     </a>
-    <a href="/react/help/reference-info.html">
+    <a href="https://docs.sorted.com/react/api">
         <div class="homepage-container">
-            <h2>Reference Info</h2>
+            <h2>API Reference</h2>
             <p>
-                API reference and changelogs
+                API request and response structures
             </p>
         </div>
     </a>
+    <a href="/react/help/changelog.html">
+        <div class="homepage-container">
+            <h2>What's New</h2>
+            <p>
+                Changes and enhancements
+            </p>
+        </div>
+    </a>       
 </div>
