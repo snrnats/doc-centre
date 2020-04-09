@@ -14,7 +14,7 @@ PRO uses the following selection process when allocating via these endpoints:
 2. **Who meets the allocation rules?** - Next, PRO creates a final shortlist of carrier services by eliminating any services that do not meet your organisation's own allocation rules. For information on using allocation rules, see the [What Is An Allocation Rule?](/api/help/allocating_consignments.html#what-is-an-allocation-rule) section of the [Allocating Consignments To Carriers](/api/help/allocating_consignments.html) page.
 3. **Who is cheapest?** - Finally, PRO allocates the consignment to the cheapest service on the shortlist.
 
-## Allocating Multiple Consignments At Once
+## Allocating Multiple Consignments at Once
 
 The **Allocate Using Default Rules** endpoint enables you to allocate multiple consignments to the cheapest eligible carrier service in one request. The request body should contain an array of one or more `{consignmentReference}`s to be allocated. 
 

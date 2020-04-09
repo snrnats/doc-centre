@@ -1,4 +1,4 @@
-# Getting Quotes For An Existing Consignment
+# Getting Quotes for an Existing Consignment
 
 This page explains how to get delivery quotes for a consignment that already exists in PRO.
 
@@ -28,7 +28,7 @@ At this point, you would be able to display the relevant quote information to yo
 > * For full reference information on the <strong>Get Quotes by Consignment Reference</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/GetQuotesbyConsignmentReference">Get Quotes by Consignment Reference</a></strong> page of the API reference.
 > * For an example call flow showing the **Get Quotes by Consignment Reference** endpoint being used, see the [Quotes Flow](/pro/api/help/flows/quotes_flow.html) page. 
 
-### Get Quotes By Consignment Reference Example
+### Get Quotes by Consignment Reference Example
 
 The example shows a **Get Quotes by Consignment Reference** request and its accompanying response. In this case, SortedPRO has returned two quotes for the service. The next step in the process is to select one of those quotes.
 
@@ -340,7 +340,7 @@ https://api.electioapp.com/quotes/consignment/EC-000-05B-1CM
 
 * Learn how to get quotes without creating a new consignment at the [Getting Quotes](/pro/api/help/getting_quotes.html) page.
 * Learn how to create consignments at the [Creating Consignments](/pro/api/help/creating_consignments.html) page.
-* Learn how to allocate consignments to your chosen quote at the [Allocating To A Specific Quote](/pro/api/help/allocating_to_a_specific_quote.html) page.
+* Learn how to allocate consignments to your chosen quote at the [Allocating to a Specific Quote](/pro/api/help/allocating_to_a_specific_quote.html) page.
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>

@@ -4,11 +4,11 @@ In order for SortedPRO to manage a consignment, you'll need to record the detail
 
 ---
 
-## Creating a Consignment Via The Consignments API
+## Creating a Consignment Via the Consignments API
 
 Perhaps the simplest way to record consignment details in PRO is to use the **Create Consignment** API endpoint. **Create Consignment** enables you to send consignment details directly to PRO, from which PRO creates the consignment record and returns a unique `{consignmentReference}`.
 
-### Sending The Request
+### Sending the Request
 
 To create a consignment, send a `POST` request to `https://api.electioapp.com/consignments`. The body of the request should contain the consignment details, structured as per the PRO data contract.
 
@@ -81,7 +81,7 @@ The example below shows a simple **Create Consignments** request containing just
   "Addresses": [
     {
       "AddressType": "Origin",
-      "ShippingLocationReference": "EDC5_Electio",
+      "ShippingLocationReference": "Sorted1",
       "IsCached": false
     },
     {
@@ -144,7 +144,7 @@ All PRO consignments have a `{consignmentState}`, indicating the point in the de
 >
 > For more information on creating consignments via the PRO UI, see [LINK HERE]
 
-## Creating Consignments from Delivery Options
+## Creating Consignments From Delivery Options
 
 The **Create Consignments** endpoint isn't the only PRO endpoint that can generate consignments. You can also create consignments via the **Delivery Options** API, which enables you to get a list of delivery options for a potential consignment that you can present to your customer at checkout. When you select the required option, PRO automatically creates and allocates a new consignment without requiring you to make additional API calls.
 
@@ -162,7 +162,7 @@ You can also generate consignments from pickup options. The process is the same 
 > * For reference information on the Delivery Options and Pickup Options APIs, see the <a href="https://docs.electioapp.com/#/api/DeliveryOptions">API reference</a>.
 > * For worked examples showing an order being created from delivery options, see the <a href="/pro/api/help/flows/consumer_options_flex_flow.html">Consumer Options Flex</a> example call flow.
 
-## Creating Consignments from Orders
+## Creating Consignments From Orders
 
 You can also create consignments from orders via the **Pack Order** endpoint. **Pack Order** enables you to take a PRO order and generate consignments from it. This function is particularly useful if your business uses multiple fulfilment centres, or uses drop ship vending.
 

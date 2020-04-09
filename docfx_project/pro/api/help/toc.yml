@@ -33,9 +33,9 @@
     href: allocating_using_default_allocation_rules.md
   - name: Allocating Via Service Group
     href: allocating_via_service_group.md        
-  - name: Allocating To A Specific Carrier Service
+  - name: Allocating to a Specific Carrier Service
     href: allocating_to_a_specific_carrier_service.md
-  - name: Allocating To A Specific Quote
+  - name: Allocating to a Specific Quote
     href: allocating_to_a_specific_quote.md
   - name: Deallocating Consignments
     href: deallocating_consignments.md
@@ -75,7 +75,7 @@
   items:
   - name: Getting Quotes 
     href: getting_quotes.md
-  - name: Getting Quotes For An Existing Consignment
+  - name: Getting Quotes for an Existing Consignment
     href: getting_quotes_for_an_existing_consignment.md
 - name: Consignment States
   href: consignment_states.md

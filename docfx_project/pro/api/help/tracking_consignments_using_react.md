@@ -26,7 +26,7 @@ REACT uses carrier connectors to keep shipments from a particular carrier up to 
 
 To use your PRO carriers with REACT, navigate to **Settings** > **Carrier Connectors** within the REACT UI, and click **Connect**.
 
-## Registering PRO Consignments In REACT
+## Registering PRO Consignments in REACT
 
 Once PRO and REACT have been linked, PRO will automatically create new REACT shipments from manifested consignments. The process is as follows:
 
@@ -282,7 +282,7 @@ This example shows a PRO consignment and a REACT shipment that has been generate
                 "Email": "laura.somebody@mpd-group.com"
             },
             "CompanyName": null,
-            "ShippingLocationReference": "EDC5_Electio",
+            "ShippingLocationReference": "Sorted1",
             "CustomerName": null,
             "AddressLine1": "Third Floor",
             "AddressLine2": "Merchant Exchange",
@@ -457,7 +457,7 @@ This example shows a PRO consignment and a REACT shipment that has been generate
       "addresses": [
         {
             "address_type": "Origin",
-            "reference": "EDC5_Electio",            
+            "reference": "Sorted1",            
             "address_line1": "Third Floor",
             "address_line2": "Merchant Exchange",
             "address_line3": "Whitworth Street West",

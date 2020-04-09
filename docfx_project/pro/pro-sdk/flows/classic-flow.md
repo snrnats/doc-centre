@@ -206,11 +206,11 @@ Example Allocation Summary Response
         "ApiLinks": [
             {
                 "Rel": "detail",
-                "Href": "https://apisandbox.electioapp.com/consignments/EC-000-05B-MMA"
+                "Href": "https://api.electioapp.com/consignments/EC-000-05B-MMA"
             },
             {
                 "Rel": "label",
-                "Href": "https://apisandbox.electioapp.com/labels/EC-000-05B-MMA"
+                "Href": "https://api.electioapp.com/labels/EC-000-05B-MMA"
             }
         ],
         "Description": "Consignment EC-000-05B-MMA has been successfully allocated with Carrier X Next Day Super for shipping on 14/06/2019 17:00:00 +00:00",

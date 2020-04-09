@@ -79,7 +79,7 @@ The example shows a request to get delivery options for a fairly standard consig
   "Addresses": [
     {
       "AddressType": "Origin",
-      "ShippingLocationReference": "EDC5_Electio",
+      "ShippingLocationReference": "Sorted1",
       "IsCached": false
     },
     {
@@ -209,7 +209,7 @@ Note the `{Reference}` for each delivery option. When the customer selects their
 
 At this point, you would present some or all of the options returned to your customer via your site or app. For information on how to handle the choice the customer makes, see the [Selecting Options](/pro/api/help/selecting_options.md) page.
 
-## Getting a Summary Of Options
+## Getting a Summary of Options
 
 The **Delivery Options Summary** endpoint enables you to to get a list of all dates on which delivery and/or pickup options would be available for a particular consignment. This could be useful during checkout flows if you want to give your customers an indication of the dates on which they could request delivery before you make a full **Get Delivery Options** call
 

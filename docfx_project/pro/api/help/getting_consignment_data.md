@@ -91,7 +91,7 @@ The example below shows a simple **Get Consignment** request for an unallocated 
                 "Email": "laura.somebody@mpd-group.com"
             },
             "CompanyName": null,
-            "ShippingLocationReference": "EDC5_Electio",
+            "ShippingLocationReference": "Sorted1",
             "CustomerName": null,
             "AddressLine1": "Third Floor",
             "AddressLine2": "Merchant Exchange",

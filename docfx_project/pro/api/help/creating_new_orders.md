@@ -95,7 +95,7 @@ The example shows the creation of a fairly standard order. In this case, we have
   "Addresses": [
     {
       "AddressType": "Origin",
-      "ShippingLocationReference": "EDC5_Electio",
+      "ShippingLocationReference": "Sorted1",
       "IsCached": false
     },
     {
