@@ -11,14 +11,13 @@ GET https://api.electioapp.com/quotes/consignment/{consignmentReference}
 
 </div>  
 
-Once you've created your consignment, you'll need to use the **[Get Quotes by Consignment Reference](https://docs.electioapp.com/#/api/GetQuotesbyConsignmentReference)** endpoint to get some delivery quotes for it.
+Once you've created a consignment, you'll need to use the **[Get Quotes by Consignment Reference](https://docs.electioapp.com/#/api/GetQuotesbyConsignmentReference)** endpoint to get some delivery quotes for it.
 
 **Get Quotes by Consignment Reference** returns quotes based on the details of an existing consignment. Specifically, it takes a `{consignmentReference}` as a path parameter and returns an array of `{Quotes}` for that consignment, as well as a list of services that were unable to quote for the consignment. 
 
-Each `{Quote}` object contains details on carrier service, dates, addresses, and price, amongst other information. Pay particular attention to the `{quoteReference}`, as you'll need this when you select a quote in the next step.
-
 > <span class="note-header">Note:</span>
->  For full reference information on the <strong>Get Quotes by Consignment Reference</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/GetQuotesbyConsignmentReference">Get Quotes by Consignment Reference</a></strong> page of the API reference.
+> * For full reference information on the <strong>Get Quotes by Consignment Reference</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/GetQuotesbyConsignmentReference">Get Quotes by Consignment Reference</a></strong> page of the API reference.
+> * For a user guide on quotes in PRO, see the [Managing Quotes](/pro/api/help/managing_quotes.html) section.
 
 ### Get Quotes By Consignment Reference Example
 

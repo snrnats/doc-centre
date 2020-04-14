@@ -13,14 +13,11 @@ PUT https://api.electioapp.com/allocation/allocatewithcarrierservice
 
 To allocate one or more consignments to a specific carrier service, use the **[Allocate With Carrier Service](https://docs.electioapp.com/#/api/AllocateWithCarrierService)** endpoint. 
 
-The **Allocate With Carrier Service** request body contains an array of one or more `{consignmentReference}`s to be allocated and the `{MpdCarrierServiceReference}` of the carrier service that they should be allocated to. 
-
-Once the request is received, SortedPRO attempts to allocate the consignments to the specified carrier service. It then returns an array of Allocation Summaries, one for each allocated consignment. 
-
-If PRO is unable to allocate the consignment to the specified carrier service, it puts the consignment into a state of _Allocation Failed_ and takes no further action. For information on dealing with failed allocations, see the _Manage NOT SHIPPED Consignments_ section of the PRO UI User Manual.
+The **Allocate With Carrier Service** request body contains an array of one or more `{consignmentReference}`s to be allocated and the `{MpdCarrierServiceReference}` of the carrier service that they should be allocated to. Once the request is received, SortedPRO attempts to allocate the consignments to the specified carrier service.
 
 > <span class="note-header">Note:</span>
->  For full reference information on the <strong>Allocate With Carrier Service</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/AllocateWithCarrierService">Allocate With Carrier Service</a></strong> page of the API reference. 
+>  * For full reference information on the <strong>Allocate With Carrier Service</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/AllocateWithCarrierService">Allocate With Carrier Service</a></strong> page of the API reference.
+> * For a user guide on allocating consignments to a specific carrier service, see the [Allocating to a Specific Carrier Service](/pro/api/help/allocating_to_a_specific_carrier_service.html).
 
 ### Allocate With Carrier Service Example
 
