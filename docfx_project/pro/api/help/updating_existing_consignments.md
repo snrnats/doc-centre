@@ -153,7 +153,7 @@ If you just want to add a package to a single existing consignment, you could us
 
 > <span class="note-header">Note:</span>
 >
-> You can only add packages to consignments that are in a status of either _Unallocated_ or _Allocation Failed_. If you need to add a package to a consignment that has been allocated, you will need to first deallocate that consignment. For more information on deallocating consignments, see [LINK HERE].
+> You can only add packages to consignments that are in a status of either _Unallocated_ or _Allocation Failed_. If you need to add a package to a consignment that has been allocated, you will need to first deallocate that consignment. For more information on deallocating consignments, see the [Deallocating Consignments](/pro/api/help/deallocating_consignments.html) page.
 
 To call **Add Package**, send a `POST` request to `https://api.electioapp.com/consignments/{consignmentReference}/addpackage`. The body of the request should contain the details of the package that you want to add, structured in the same way as the `package` property in a **Create Consignment** request. The package's `weight`, `dimensions`, `description` and `value` are mandatory, but all other package properties are optional. 
 
@@ -246,7 +246,7 @@ For an example of a more detailed **Add Package** request, see the [API referenc
 
 You can delete a package from its associated consignment using the **Delete Package** endpoint. To call **Delete Package**, send a `DELETE` request to `https://api.electioapp.com/packages/{packageReference}`. PRO deletes the supplied package, and returns a code 200 response with no body.
 
-You can only delete packages from consignments that are in a status of either _Unallocated_ or _Allocation Failed_. If you need to add a package to a consignment that has been allocated, you will need to first deallocate that consignment. For more information on deallocating consignments, see [LINK HERE].
+You can only delete packages from consignments that are in a status of either _Unallocated_ or _Allocation Failed_. If you need to add a package to a consignment that has been allocated, you will need to first deallocate that consignment. For more information on deallocating consignments, see the [Deallocating Consignments](/pro/api/help/deallocating_consignments.html) page.
 
 You cannot delete the last package in a consignment. If you attempt to do so, PRO returns an error.
 
