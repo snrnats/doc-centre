@@ -77,6 +77,10 @@
     href: getting_quotes.md
   - name: Getting Quotes for an Existing Consignment
     href: getting_quotes_for_an_existing_consignment.md
+- name: Metadata
+  href: metadata.md
+- name: Tags
+  href: tags.md          
 - name: Consignment States
   href: consignment_states.md
 - name: Glossary
