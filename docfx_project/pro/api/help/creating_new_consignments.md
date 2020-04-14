@@ -33,8 +33,8 @@ There are lots of optional properties you can send when creating a consignment, 
 * Shipping and delivery dates.
 * Customs documentation.
 * The consignment's direction of travel.
-* Metadata. PRO metadata enables you to us custom fields to record additional data about a consignment. For more information on using metadata in PRO, see <span class="highlight">[LINK HERE]</span>.
-* Tags. Allocation tags enable you to filter the list of carrier services that a particular consignment could be allocated to. For more information on allocation tags, see <span class="highlight">[LINK HERE]</span>.
+* Metadata. PRO metadata enables you to us custom fields to record additional data about a consignment. For more information on using metadata in PRO, see the [Metadata](/pro/api/help/metadata.html) page.
+* Tags. Allocation tags enable you to filter the list of carrier services that a particular consignment could be allocated to. For more information on allocation tags, see the [Tags](/pro/api/help/tags.html) page.
 
 Adding optional properties when you create a consignment can help you to get more out of PRO. For example, recording your own consignment reference enables you to search for consignments by those references in the UI and via the **Search Consignments** endpoint. 
 
@@ -136,13 +136,13 @@ In the example below, PRO has returned a `{consignmentReference}` of _EC-000-05B
 ```
 </div>
 
-All PRO consignments have a `{consignmentState}`, indicating the point in the delivery process that that particular consignment is at. Newly-created consignments have an initial state of `Unallocated`. For more information on how PRO consignment states change across the lifecycle of a consignment, see <span class="highlight">{LINK HERE}</span>
+All PRO consignments have a `{consignmentState}`, indicating the point in the delivery process that that particular consignment is at. Newly-created consignments have an initial state of `Unallocated`. For more information on PRO consignment states, see the [Consignment States](/pro/api/help/consignment_states.html) page.
 
 > <span class="note-header">Note:</span>
 >
 > You can also create consignments via the <a href="https://www.electioapp.com/Allocation/ManualUpload">Manual Upload</a> page of the PRO UI. This feature is effectively a front-end for the **Create Consignments** API, and is most useful for handling exceptions and cases in which your conventional API workflow cannot be used.
 >
-> For more information on creating consignments via the PRO UI, see [LINK HERE]
+> For more information on creating consignments via the PRO UI, see the _Create a Consignment Manually_ how-to procedure in the PRO Web Admin Portal User Guide.
 
 ## Creating Consignments From Delivery Options
 
