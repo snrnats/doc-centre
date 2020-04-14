@@ -33,8 +33,8 @@ There are lots of optional properties you can send when creating a consignment, 
 * Shipping and delivery dates.
 * Customs documentation.
 * The consignment's direction of travel.
-* Metadata. PRO metadata enables you to us custom fields to record additional data about a consignment. For more information on using metadata in PRO, see <span class="highlight">[LINK HERE]</span>.
-* Tags. Allocation tags enable you to filter the list of carrier services that a particular consignment could be allocated to. For more information on allocation tags, see <span class="highlight">[LINK HERE]</span>.
+* Metadata. PRO metadata enables you to us custom fields to record additional data about a consignment. For more information on using metadata in PRO, see the [Metadata](/pro/api/help/metadata.html) page.
+* Tags. Allocation tags enable you to filter the list of carrier services that a particular consignment could be allocated to. For more information on allocation tags, see the [Tags](/pro/api/help/tags.html) page.
 
 Adding optional properties when you create a consignment can help you to get more out of PRO. For example, recording your own consignment reference enables you to search for consignments by those references in the UI and via the **Search Consignments** endpoint. 
 
