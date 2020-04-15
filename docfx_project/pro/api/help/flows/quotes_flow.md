@@ -1,8 +1,8 @@
 # Quotes Flow
 
 <p>
-   <a href="../../../images/Flow1.png" target="_blank" >
-      <img src="../../../images/Flow1.png" class="noborder"/>
+   <a href="../../../images/Flow6.png" target="_blank" >
+      <img src="../../../images/Flow6.png" class="noborder"/>
    </a>
 </p>
 
@@ -47,6 +47,12 @@ This section gives more detail on each step of the flow and provides worked exam
 ## Step 4: Getting Consignment Labels
 
 [!include[_get_labels_in_format](../../includes/_get_labels_in_format.md)]
+
+---
+
+## Step 4b (Optional): Getting Customs Docs
+
+[!include[_get_customs_docs](../../includes/_get_customs_docs.md)]
 
 ---
 

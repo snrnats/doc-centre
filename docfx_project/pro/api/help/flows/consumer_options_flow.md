@@ -1,3 +1,4 @@
+
 # Consumer Options Flow
 
 <p>
@@ -40,6 +41,12 @@ This section gives more detail on each step of the flow and provides worked exam
 ## Step 3: Getting a Package Label
 
 [!include[_get_labels_in_format](../../includes/_get_labels_in_format.md)]
+
+---
+
+## Step 3b (Optional): Getting Customs Docs
+
+[!include[_get_customs_docs](../../includes/_get_customs_docs.md)]
 
 ---
 

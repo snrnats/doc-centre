@@ -11,37 +11,15 @@
 
 </div>
 
-Once your order is created, you'll need to use the **[Pack Order](https://docs.electioapp.com/#/api/PackOrder)** endpoint to create consignments from it.
-
-It's important to understand the difference between a consignment and an order when using **Pack Order**:
-
-* An **order** is a collection of items that is to be transported to the same destination on behalf of the same customer.
-* A **consignment** is a collection of packages that is to be transported to the same destination, on behalf of the same customer, _from the same origin, on the same day, and by the same carrier_.
-
-This means that orders can contain items that will not ship from the same location, but consignments cannot. Similarly, orders can contain items that will ship from the same location but at different times (for example, because one of the items a customer has purchased is out of stock).
-
-The **Pack Order** endpoint enables you to take those items on an order that share an origin and are to be shipped together, and generate a shippable consignment from them. You will need to send one **Pack Order** request per consignment that you want to create from the order.
-
-> <span class="note-header">More Information:</span>
->  As an example, suppose that a clothing retailer has received a customer order for a necklace, a bracelet, a coat, and a hat. As the necklace and bracelet are both physically small, the retailer elects to ship them in the same package. The necklace and bracelet are located in warehouse A, and the coat and hat in warehouse B. This would likely break down to:
->
->  * Four items - The necklace, the bracelet, the coat, and the hat.
->  * Three packages - One containing the necklace and bracelet, one containing the coat, and one containing the hat.
->  * Two consignments - One with a single item for the package containing the necklace and bracelet, and another with separate packages for the coat and hat.
->  * A single order comprising the customer's entire purchase.
->
->  In this example, you would need to run <strong>Pack Order</strong> twice - once for each consignment.
+Once your order is created, you'll need to use the **[Pack Order](https://docs.electioapp.com/#/api/PackOrder)** endpoint to create consignments from it. The **Pack Order** endpoint enables you to take those items on an order that share an origin and are to be shipped together, and generate a shippable consignment from them. You will need to send one **Pack Order** request per consignment that you want to create from the order.
 
 To make a **Pack Order** request, send a GET request to `https://api.electioapp.com/orders/{orderReference}/pack`. The body of the request can contain various properties that are used when creating the consignment, but at a minimum should contain the `{orderReference}` of the associated order and details of at least one `{item}` (and its accompanying `{package}`). The items and packages listed make up the consignment.
 
-> <span class="note-header">Note:</span>
->  The <strong>Pack Order</strong> request's <code>OrderReferenceProvidedByCustomer</code> field enables you to provide a custom reference for the consignment that the request generates. 
->  
->  If you add a custom reference to your <strong>Pack Order</strong> request, then PRO uses this value as the consignment's custom reference, as opposed to any <code>OrderReferenceProvidedByCustomer</code> you may have provided when creating the order. 
->  
->  If you do not add a custom reference to your <strong>Pack Order</strong> request, then PRO uses the existing order's <code>OrderReferenceProvidedByCustomer</code> (where provided) as the consignment's custom reference.
-
 Once SortedPRO has received a **Pack Order** request, it creates the consignment and returns the relevant `{consignmentReference}`.
+
+> <span class="note-header">More Information:</span>
+> * For full reference information on the **Pack Order** endpoint, see the [Pack Order](https://docs.electioapp.com/#/api/PackOrder) page of the API reference.
+> * For a user guide on orders in PRO, see the [Managing Orders](/pro/api/help/managing_orders.html) section.
 
 ### Pack Order Example
 
