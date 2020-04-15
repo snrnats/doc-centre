@@ -20,7 +20,7 @@ The **Allocate Consignment With Service Group** endpoint takes the `{consignment
 > * For full reference information on the <strong>Allocate Consignment With Service Group</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/AllocateConsignmentWithServiceGroup">Allocate Consignment With Service Group</a></strong> page of the API reference.
 > * For a user guide on allocating consignments within a service group, see the [Allocating Via Service Group](/pro/api/help/allocating_via_service_group.html). 
 
-### Allocate With Service Group Example
+**Allocate With Service Group Example**
 
 The example shows a request to allocate a consignment with a `{consignmentReference}` of _EC-000-05B-MMA_ to a carrier service within a group named `valuableGoods`.
 

@@ -37,6 +37,12 @@ This section gives more detail on each step of the flow and provides worked exam
 
 ---
 
+## Step 3b (Optional): Getting Customs Docs
+
+[!include[_get_customs_docs](../../includes/_get_customs_docs.md)]
+
+---
+
 ## Step 4: Manifesting the Consignment
 
 [!include[_manifest_consignments_from_query](../../includes/_manifest_consignments_from_query.md)]
