@@ -11,7 +11,7 @@
 
 </div>    
 
-In the context of PRO, a "pickup option" refers to a combination of a carrier service, date and time window. The **[Pickup Options](https://docs.electioapp.com/#/api/PickupOptions)** endpoint takes the details of an as-yet uncreated consignment and returns available pickup options. This data can be used to offer pickup timeslots and locations for the product that the customer is about to purchase.
+In the context of PRO, a "pickup option" is a delivery date, pickup location, and time window that a consignment could potentially be delivered on, and a carrier service that could meet that delivery promise. The **[Pickup Options](https://docs.electioapp.com/#/api/PickupOptions)** endpoint takes the details of an as-yet uncreated consignment and returns available pickup options.
 
 At a minimum, SortedPRO requires you to send the following data in order to receive pickup options for a potential consignment:
 
