@@ -11,45 +11,15 @@
 
 </div>  
 
-The **[Delivery Options](https://docs.electioapp.com/#/api/DeliveryOptions)** endpoint takes the details of an as-yet-nonexistent consignment and returns a single available carrier service for each delivery option. PRO always returns the cheapest carrier service for each option, unless using the cheapest service would conflict with existing business rules. This data can be used to offer delivery promise choices (such as dates and timeslots) to your customer.   
+In the context of SortedPRO, a "delivery option" for a consignment is a delivery date and time window that that consignment could potentially be delivered on, and a carrier service that could meet that delivery promise. The **[Delivery Options](https://docs.electioapp.com/#/api/DeliveryOptions)** endpoint takes the details of an as-yet-nonexistent consignment and returns a single available carrier service for each delivery option. PRO always returns the cheapest carrier service for each option, unless using the cheapest service would conflict with existing business rules. 
+
+At a minimum, PRO requires you to send package, origin address and destination address data in order to return delivery options.
+
+The **Delivery Options** endpoint returns an array of `{DeliveryOptions}` objects. Each `{DeliveryOptions}` object contains details of a particular delivery option that is available to take a consignment with the details you passed in the request.
 
 > <span class="note-header">Note:</span>
->  In the context of SortedPRO, a "delivery option" refers to a combination of a carrier service, delivery date and time window.
->
->  For example, suppose that you use the **Delivery Options** endpoint to request delivery options for a particular consignment, and the response indicates the following:
->
->  * Carrier X could deliver the consignment between 9 and 5 on Monday.
->  * Carrier Y could deliver the consignment on Monday between 9 and 12 or Tuesday between 9 and 12
->  * Carrier Z could deliver the consignment on Monday between 9 and 1 or Monday between 1 and 5
->
->  In this case, there are five available delivery options: one for Carrier X and two each for Carriers Y and Z. 
-
-At a minimum, PRO requires you to send package, origin address and destination address data in order to return delivery options. However, there are lots of other properties you can send when getting delivery options, including:
-
-* Your own consignment reference.
-* The consignment's source.
-* Shipping and delivery dates.
-* Customs documentation.
-* The consignment's direction of travel.
-* Metadata. PRO metadata enables you to record additional data about a consignment in custom fields. For more information on using metadata in PRO, see the **[Metadata](/api/flows/moreInfo.html#metadata)** section of the **More Information** page.
-* Tags. Allocation tags enable you to filter the list of carrier services that a particular consignment could be allocated to. For more information on allocation tags, see the **[Tags](/api/flows/moreInfo.html#tags)** section of the **More Information** page.
-
-Providing extra information can help you to improve the relevance of the options returned.
-
-Either the consignment's `origin` address, its `destination` address, or both, must include a valid <code>ShippingLocationReference</code>. For information on how to obtain a list of your organisation's shipping locations, see the <strong><a href="https://docs.electioapp.com/#/api/GetShippingLocations">Get Shipping Locations</a></strong> page of the API reference.
-
-The **Delivery Options** endpoint returns an array of `{DeliveryOptions}` objects. Each `{DeliveryOptions}` object contains details of a particular delivery option that is available to take a consignment with the details you passed in the request, including:
-
-* **Reference** - A unique identifier for the delivery option, used when selecting delivery options in the next step.
-* **Dates and Delivery Windows**
-* **Carrier Service**
-* **Price (cost)**
-* **Allocation Cutoff** - The option's expiry time. If the option is not used by this time, it is rendered invalid. This value is usually set by the carrier, but can be configured manually via the **Settings > [Shipping Locations](https://www.electioapp.com/Configuration/ShippingLocations) > [Select Location] > Collection Calendar** page of the PRO UI. 
-* **Operational Cutoff** - 	The operational cut off date as specified by the fulfilling shipping location.
-* **Service Direction**
-
-> <span class="note-header">Note:</span>
->  For full reference information on the <strong>Delivery Options</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/DeliveryOptions">Delivery Options</a></strong> page of the API reference.
+> * For full reference information on the <strong>Delivery Options</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/DeliveryOptions">Delivery Options</a></strong> page of the API reference.
+> * For a user guide on PRO delivery options, see the [Using Delivery and Pickup Options](/pro/api/help/using_delivery_and_pickup_options.html) section.
 
 ### Get Delivery Options Example
 
