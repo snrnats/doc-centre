@@ -47,19 +47,19 @@ You'll need to allocate all of the consignments packed from your order. Bear in 
 
 ---
 
-## Step 3a: Allocating using Default Rules
+### Allocating using Default Rules
 
 [!include[_allocate_using_default_rules](../../includes/_allocate_using_default_rules.md)]
 
 ---
 
-## Step 3b: Allocating from a Service Group
+### Allocating from a Service Group
 
 [!include[_allocate_with_service_group](../../includes/_allocate_with_service_group.md)]
 
 ---
 
-## Step 3c: Allocating to a Specific Carrier Service
+### Allocating to a Specific Carrier Service
 
 [!include[_allocate_with_carrier_service](../../includes/_allocate_with_carrier_service.md)]
 
@@ -71,6 +71,12 @@ You'll need to allocate all of the consignments packed from your order. Bear in 
 
 > <span class="note-header">Note:</span>
 > You'll need to make one <strong>Get Labels</strong> call per consignment on the order.
+
+---
+
+## Step 4b (Optional): Getting Customs Docs
+
+[!include[_get_customs_docs](../../includes/_get_customs_docs.md)]
 
 ---
 

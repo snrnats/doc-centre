@@ -10,14 +10,13 @@ GET https://api.electioapp.com/labels/{consignmentReference}/{labelFormat}
 ```
 </div>
 
-When a consignment is allocated, SortedPRO generates labels for each package in that consignment. The next step in the process is to retrieve those delivery labels via the **[Get Label in Format](https://docs.electioapp.com/#/api/GetLabelsinFormat)** endpoint.
+When a consignment is allocated, SortedPRO generates labels for each package in that consignment. You can retrieve these delivery labels via the **[Get Label in Format](https://docs.electioapp.com/#/api/GetLabelsinFormat)** endpoint.
 
 The **Get Labels in Format** endpoint takes a `{consignmentReference}` and `{labelFormat}` as path parameters. PRO returns all package labels associated with that consignment as a base64-encoded byte array in the format requested.
 
-**Get Labels in Format** can return labels as `pdf`, `zpl` and `zplii` file types. We recommend that, when integrating PRO with your system, you make the `{labelFormat}` field a parameter, so you can easily return labels in an alternative format if required.
-
 > <span class="note-header">Note:</span>
->  For full reference information on the <strong>Get Labels in Format</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/GetLabelsinFormat">Get Labels in Format</a></strong> page of the API reference. 
+> * For full reference information on the <strong>Get Labels in Format</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/GetLabelsinFormat">Get Labels in Format</a></strong> page of the API reference.
+> * For a user guide on retrieving labels in PRO, see the [Getting Labels](/pro/api/help/getting_labels.html) page.  
   
 ### Get Labels in Format Example
 

@@ -13,19 +13,21 @@
 
 </div>   
 
-Once you've created a consignment, it must be allocated to a carrier service. PRO has multiple allocation endpoints, giving you the flexibility to allocate to carriers using whatever criteria suits you best. In this case you could allocate via:
+Once you've created a consignment, it must be allocated to a carrier service. In the context of SortedPRO, <strong>allocation</strong> is the process of selecting the carrier service that will be used to deliver the consignment. 
+
+PRO has multiple allocation endpoints, giving you the flexibility to allocate to carriers using whatever criteria suits you best. In this case you could allocate via:
 
 * **[Allocate Using Default Rules](https://docs.electioapp.com/#/api/AllocateUsingDefaultRules)** - Allocates the consignment using pre-configured default rules.
 * **[Allocate Consignment With Service Group](https://docs.electioapp.com/#/api/AllocateConsignmentWithServiceGroup)** - Allocates the consignment to the cheapest carrier service in the specified Carrier Service Group.
 * **[Allocate With Carrier Service](https://docs.electioapp.com/#/api/AllocateWithCarrierService)** - Allocates the consignment to the specified carrier service.
 
-> <span class="note-header">Note:</span>
-> In the context of SortedPRO, <strong>allocation</strong> is the process of selecting the carrier service that will be used to deliver the consignment.
-
-
 Once allocated, the consignment's status changes to _Allocated_, enabling you to retrieve its package labels and (where applicable) customs documentation.
 
 This section explains the circumstances in which you might choose to use each allocation endpoint, and gives worked examples.
+
+> <span class="note-header">More Information:</span>
+>
+> For a full user guide on allocating consignments in PRO, see the [Allocating Consignments](/pro/api/help/allocating_consignments.html) section.
 
 ### The Allocation Summary Response
 

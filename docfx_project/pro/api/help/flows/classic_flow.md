@@ -1,3 +1,4 @@
+
 # Classic Flow
 
 <p>
@@ -37,19 +38,19 @@ This section gives more detail on each step of the flow and provides worked exam
 
 ---
 
-## Step 2a: Allocating using Default Rules
+### Allocating using Default Rules
 
 [!include[_allocate_using_default_rules](../../includes/_allocate_using_default_rules.md)]
 
 ---
 
-## Step 2b: Allocating from a Service Group
+### Allocating from a Service Group
 
 [!include[_allocate_with_service_group](../../includes/_allocate_with_service_group.md)]
 
 ---
 
-## Step 2c: Allocating to a Specific Carrier Service
+### Allocating to a Specific Carrier Service
 
 [!include[_allocate_with_carrier_service](../../includes/_allocate_with_carrier_service.md)]
 
@@ -58,6 +59,12 @@ This section gives more detail on each step of the flow and provides worked exam
 ## Step 3: Getting Package Labels
 
 [!include[_get_labels_in_format](../../includes/_get_labels_in_format.md)]
+
+---
+
+## Step 3b (Optional): Getting Customs Docs
+
+[!include[_get_customs_docs](../../includes/_get_customs_docs.md)]
 
 ---
 
