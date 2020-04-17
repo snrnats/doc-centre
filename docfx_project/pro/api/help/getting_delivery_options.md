@@ -215,9 +215,7 @@ The **Delivery Options Summary** endpoint enables you to to get a list of all da
 
 To call **Delivery Options Summary**, send a `POST` request to `https://api.electioapp.com/deliveryoptions/summary`. The body of the request should contain the details of an as-yet uncreated consignment, structured identically to a **Get Delivery Options** request. For more information on the structure of a **Get Delivery Options** request, see the [Getting Detailed Options](#getting-detailed-options) section.
 
-Once it has received the request, PRO returns a list of all dates that have `DeliveryOptions` available for that consignment, and a separate list with all dates that have `PickUp` options available for that consignment. Note that PRO does not return details of the delivery options themselves.
-
-<span class="highlight">HOW DOES THE TIMESLOTS ARRAY WORK? IT'S NOT EVEN MENTIONED IN THE API REF?</span>
+Once it has received the request, PRO returns a list of all dates that have `DeliveryOptions` and `TimeSlots`available for that consignment, and a separate list with all dates that have `PickUp` options available for that consignment. Note that PRO does not return details of the delivery options themselves.
 
 > <span class="note-header">Note:</span>
 >

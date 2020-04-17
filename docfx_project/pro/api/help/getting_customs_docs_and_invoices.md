@@ -78,9 +78,9 @@ This example shows a **Get Customs Documents** response for a single-package con
 
 </div>
 
-## Using the Document Data
-
-Once you have obtained the raw document data, you will need to perform some processing in order to use it. For example methods to read the data, write it to disk, and automatically open the label file so it can be printed and applied to the relevant package, see <span class="highlight">LINK HERE</span>.
+> <span class="note-header">Note:</span>
+>
+> Once you have downloaded the file data, you will need to decode the file's Base64 in order to view the document itself. If you are unsure how to do so, see the **[MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding)** for more information.
 
 ## Next Steps
 
