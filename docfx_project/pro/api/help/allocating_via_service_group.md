@@ -49,8 +49,6 @@ To find the **Service Group Code** for a particular group, log in to the PRO UI,
 
 Once the request is received, PRO uses allocation rules to eliminate any carrier services in the group that would not be suitable to take the consignment, allocates the consignment to the cheapest remaining service, and returns an Allocation Summary.
 
-<span class="highlight">DOES IT DEFINITELY USE THE RULES? OR DOES IT JUST ALLOCATE TO THE CHEAPEST SERVICE AND LET THE USER ASSUME THE RISK?</span>
-
 > <span class="note-header">More Information:</span>
 > For information on using allocation rules, see the [What Is An Allocation Rule?](/api/help/allocating_consignments.html#what-is-an-allocation-rule) section of the [Allocating Consignments To Carriers](/api/help/allocating_consignments.html) page.
 

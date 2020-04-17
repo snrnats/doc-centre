@@ -1,8 +1,10 @@
 # Cancelling Consignments
 
-This page explains how to cancel consignments in PRO, both individually and in bulk. <span class="highlight">At what point are Cancelled consignments removed from the system?</span>
+This page explains how to cancel consignments in PRO, both individually and in bulk.
 
 ---
+
+## Overview
 
 You can only cancel consignments that are **not** in one of the following states:
 
@@ -10,6 +12,8 @@ You can only cancel consignments that are **not** in one of the following states
 * Partially Delivered 
 * Delivered 
 * Delivery Failed
+
+Once a consignment has been cancelled, then no further changes can be made to it. If you want to reinstate a cancelled consignment then you will need to create a new consignment with the same details.
 
 ## Cancelling Individual Consignments
 
