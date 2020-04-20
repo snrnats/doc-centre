@@ -130,7 +130,7 @@ Once the request is received, PRO attempts to manifest any consignments that mee
 
 ### Setting Consignments As Ready to Ship
 
-PRO's **Set Ready To Ship** and **Set Not Ready To Ship** endpoints can help you when manifesting consignments from queries. These endpoints set a consignment's `consignmentState` to _ReadyToShip_. Although setting a consignment as Ready To Ship doesn't do anything in and of itself <span class="highlight">SHOULD PROBABLY CONFIRM THIS IS THE CASE</span>, it can be useful as a means of marking consignments as ready for manifest via the **Manifest Consignments From Query** endpoint.
+PRO's **Set Ready To Ship** and **Set Not Ready To Ship** endpoints can help you when manifesting consignments from queries. These endpoints set a consignment's `consignmentState` to _ReadyToShip_. Although setting a consignment as Ready To Ship doesn't alter the consignment in and of itself, it can be useful as a means of marking consignments as ready for manifest via the **Manifest Consignments From Query** endpoint.
 
 To call **Set Ready To Ship**, send a `PUT` request to `https://api.electioapp.com/consignments/setreadytoship`. The body of the request should comprise a list containing the `{consignmentReferences}` of all the consignments you want to set as Ready To Ship.
 
@@ -407,9 +407,7 @@ The **Get Customer Manifest** endpoint enables you to download an individual man
 >
 > You can get the `ManifestReference` for a particular manifest by making a **Get Customer Manifests** request for a summary of existing manifest details. Each manifest summary returned contains a `ManifestReference`.
 
-Once the request is received, PRO returns the specified manifest file as a base-64 encoded byte array. You will need to perform some processing on the raw file data in order to use it. For example methods to read the data, write it to disk, and automatically open the label file so it can be printed and applied to the relevant package, see LINK HERE. 
-
-<span class="highlight">WHAT SHOULD WE BE TELLING PEOPLE ON PROCESSING RAW FILE DATA? IS THIS AN SDK THING? WHAT IF THEY'RE NOT USING THE SDK? THIS ALL ALSO APPLIES TO GET LABELS</span>
+Once the request is received, PRO returns the specified manifest file as a base-64 encoded byte array. You will need to decode the file in order to view the label itself. If you are unsure how to do so, see the **[MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding)** for more information.
 
 ## Next Steps
 

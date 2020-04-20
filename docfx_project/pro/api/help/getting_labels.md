@@ -62,7 +62,9 @@ The below example shows a typical label object.
 
 ## Using the Label Data
 
-Once you have obtained the raw label data, you will need to perform some processing in order to use it. For example methods to read the data, write it to disk, and automatically open the label file so it can be printed and applied to the relevant package, see LINK HERE. 
+> <span class="note-header">Note:</span>
+>
+> Once you have downloaded the file data, you will need to decode the file's Base64 in order to view the label itself. If you are unsure how to do so, see the **[MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding)** for more information.
 
 ## Next Steps
 
