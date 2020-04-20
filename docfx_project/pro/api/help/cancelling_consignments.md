@@ -6,12 +6,7 @@ This page explains how to cancel consignments in PRO, both individually and in b
 
 ## Overview
 
-You can only cancel consignments that are **not** in one of the following states:
-
-* In Transit - Waiting 
-* Partially Delivered 
-* Delivered 
-* Delivery Failed
+You can only cancel a consignment prior to it being manifested. Once a consignment has been manifested it can no longer be cancelled. 
 
 Once a consignment has been cancelled, then no further changes can be made to it. If you want to reinstate a cancelled consignment then you will need to create a new consignment with the same details.
 
