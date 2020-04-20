@@ -25,18 +25,34 @@
 <div class="button-container">
     <a href="/pro/api/help/introduction.html">
         <div class="homepage-container">
-            <h2>API Help</h2>
+            <h2>Consignments</h2>
             <p>
-                Call flows, user guides, and more.
+                Call flows, user guides, and more
             </p>
         </div>
     </a>
+    <a href="/pro/api/shipments/introduction.html">
+        <div class="homepage-container">
+            <h2>Shipments</h2>
+            <p>
+                Call flows, user guides, and more
+            </p>
+        </div>
+    </a>    
     <a href="/pro/reports/index.html">
         <div class="homepage-container">
             <h2>Reports</h2>
             <p>
-                About PRO's PowerBI reports.
+                About PRO's PowerBI reports
             </p>
         </div>
     </a>
+    <a href="/pro/overview/introduction.html">
+        <div class="homepage-container">
+            <h2>Overview</h2>
+            <p>
+                An introduction to PRO
+            </p>
+        </div>
+    </a>    
 </div>

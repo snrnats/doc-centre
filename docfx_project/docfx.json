@@ -4,6 +4,8 @@
         "files": [
           "pro/api/help/**.yml",
           "pro/api/help/**.md",
+          "pro/api/shipments/**.yml",
+          "pro/api/shipments/**.md",          
           "pro/toc.yml",
           "pro/index.md"
         ]
@@ -12,6 +14,8 @@
         "files": [
           "pro/reports/**.md",
           "pro/reports/toc.yml",
+          "pro/overview/**.md",
+          "pro/overview/toc.yml",          
           "toc.yml",
           "*.md"
         ]
