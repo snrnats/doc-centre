@@ -24,10 +24,10 @@ As an example, suppose that a clothing retailer has received a customer order fo
 
 ## Consignments Section Contents
 
-* **[Creating New Consignments](/api/help/creating_new_consignments.html)** - Explains how to use the **Create Consignment** endpoint, and how to generate consignments from quotes and orders.
-* **[Getting Consignment Data](/api/help/getting_consignment_data.html)** - Explains how to retrieve data on an individual consignment, and search for consignments that meet set criteria.
-* **[Updating Existing Consignments](/api/help/updating_existing_consignments.html)** - Explains how to update a consignment's details and edit its component packages.
-* **[Cancelling Consignments](/api/help/cancelling_consignments.html)** - Explains how to set a consignment's status to _Cancelled_.
+* **[Creating New Consignments](/pro/api/help/creating_new_consignments.html)** - Explains how to use the **Create Consignment** endpoint, and how to generate consignments from quotes and orders.
+* **[Getting Consignment Data](/pro/api/help/getting_consignment_data.html)** - Explains how to retrieve data on an individual consignment, and search for consignments that meet set criteria.
+* **[Updating Existing Consignments](/pro/api/help/updating_existing_consignments.html)** - Explains how to update a consignment's details and edit its component packages.
+* **[Cancelling Consignments](/pro/api/help/cancelling_consignments.html)** - Explains how to set a consignment's status to _Cancelled_.
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>
