@@ -1,3 +1,71 @@
 - name: Introduction
   href: introduction.md
+- name: Consignments vs Shipments
+  href: consignments_vs_shipments.md
+- name: Managing Shipments
+  href: managing_shipments.md
+  items:
+  - name: Creating Shipments
+    href: creating_shipments.md
+  - name: Getting Shipments
+    href: getting_shipments.md    
+  - name: Updating Shipments
+    href: updating_shipments.md
+  - name: Cancelling Shipments
+    href: cancelling_shipments.md                      
+- name: Allocating Shipments
+  href: allocating_shipments.md
+  items:
+  - name: Allocating To Default Rules
+    href: allocating_to_default_rules.md
+  - name: Allocating With A Specific Carrier Service
+    href: allocating_with_a_specific_carrier_service.md
+  - name: Allocating Within A Carrier Service Group
+    href: allocating_within_a_carrier_service_group.md
+  - name: Allocating Using Filters
+    href: allocating_using_filters.md
+  - name: Allocating Via A Quote
+    href: allocating_via_a_quote.md
+- name: Managing Quotes
+  href: managing_shipment_quotes.md
+  items:
+  - name: Creating Shipment Quotes
+    href: creating_shipment_quotes.md
+  - name: Getting Shipment Quotes
+    href: getting_shipment_quotes.md
+- name: Getting Customs Docs
+  href: getting_shipment_customs_docs.md
+- name: Getting Labels
+  href: getting_shipment_labels.md
+- name: Manifesting Shipments
+  href: manifesting_shipments.md
+  items:
+  - name: Manifesting Shipments Manually
+    href: manifesting_shipments_manually.md
+  - name: Manifesting Shipments By Query
+    href: manifesting_shipments_by_query.md
+  - name: Manifesting Shipments By Shipment Group
+    href: manifesting_shipments_by_shipment_group.md
+  - name: Getting Shipment Manifests
+    href: getting_shipment_manifests.md
+- name: Managing Shipment Groups
+  href: managing_shipment_groups.md
+  items: 
+  - name: Creating Shipment Groups
+    href: creating_shipment_groups.md
+  - name: Getting Shipment Groups
+    href: getting_shipment_groups.md
+  - name: Editing Shipment Groups
+    href: editing_shipment_groups.md
+  - name: Getting Collection Notes
+    href: getting_collection_notes.md
+  - name: Closing Shipment Groups
+    href: closing_shipment_groups.md
+- name: Tracking PRO Shipments
+  href: tracking_pro_shipments.md
+  items:
+  - name: Getting Shipment Events
+    href: getting_shipment_events.md
+  - name: Getting Content-Level Events
+    href: getting_content_level_events.md
   
