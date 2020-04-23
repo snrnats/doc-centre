@@ -24,16 +24,22 @@ steps:
     name: Docs
     displayName: Git Version  
   - powershell: |
-      $fullBranchName = $env:BUILD_SOURCEBRANCH;
+      $fullBranchName = "patch-1";
       if ($env:BUILD_REASON -eq "PullRequest") {
         $fullBranchName = $env:SYSTEM_PULLREQUEST_SOURCEBRANCH;
       }
-      $branch = $fullBranchName.substring($fullBranchName.lastIndexOf('/')).Trim('/');
+      $index = $fullBranchName.lastIndexOf('/');
+      $branch = '';
+      if ($index -lt 0) {
+          $branch = $fullBranchName;
+      } else {
+          $branch = $fullBranchName.substring($index).Trim('/');
+      }
       $buildVersion = '';
       if ($branch -eq "master") {
-      $buildVersion = $env:GITVERSION_MAJORMINORPATCH;
+          $buildVersion = $env:GITVERSION_MAJORMINORPATCH;
       } else {
-        $buildVersion = "$env:GITVERSION_MAJORMINORPATCH-$branch.$env:BUILD_BUILDID";
+          $buildVersion = "$env:GITVERSION_MAJORMINORPATCH-$branch.$env:BUILD_BUILDID";
       }
       Write-Host "##vso[task.setvariable variable=Branch;]$branch";
       Write-Host "##vso[task.setvariable variable=buildVersion;]$buildVersion";
