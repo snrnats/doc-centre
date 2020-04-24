@@ -1,3 +1,4 @@
 # Cancelling Shipments
 
-Content
+Cancel Shipment
+Delete Shipment

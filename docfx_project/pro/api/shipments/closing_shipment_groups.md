@@ -1,3 +1,3 @@
 # Closing Shipment Groups
 
-Content
+Close Shipment Group

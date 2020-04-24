@@ -1,3 +1,3 @@
 # Getting Shipment Events
 
-Content
+Get Tracking Events

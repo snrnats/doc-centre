@@ -1,3 +1,4 @@
 # Allocating to Default Rules
 
-Content
+Allocate Shipment
+Allocate Shipments

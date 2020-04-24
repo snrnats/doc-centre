@@ -1,3 +1,3 @@
 # Allocating via a Quote
 
-Content
+Allocate with Quote

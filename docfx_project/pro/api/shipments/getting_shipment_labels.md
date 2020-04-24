@@ -1,3 +1,4 @@
 # Getting Shipment Labels
 
-Content
+Get Labels
+Get Contents Label

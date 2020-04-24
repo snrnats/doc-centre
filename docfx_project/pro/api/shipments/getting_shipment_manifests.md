@@ -1,3 +1,3 @@
 # Getting Shipment Manifests
 
-Content
+Get Manifests
