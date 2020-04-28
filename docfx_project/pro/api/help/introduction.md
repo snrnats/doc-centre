@@ -9,7 +9,7 @@ You will need to provide a valid API key in every call you make to SortedPRO. Wh
 3. Click **Show API Key**. PRO prompts you to re-enter your UI password.
 4. Enter your password and click **Retrieve API Key** to display your API key.
 
-To use your API key, include it in an `ocp-apim-subscription-key` header when making calls to PRO. If you make an API call to PRO without including an API key, then PRO returns an error with a status code of _401 (Unauthorized)_.
+To use your API key, include it in an `ocp-apim-subscription-key` header when making calls to PRO. If you make an API call to PRO without including an API key, then PRO returns a _401 (Unauthorized)_ error.
 
 <div class="tab">
     <button class="staticTabButton">Example API Key</button>
