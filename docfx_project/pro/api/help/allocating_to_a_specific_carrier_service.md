@@ -1,21 +1,21 @@
-# Allocating To A Specific Carrier Service
+# Allocating to a Specific Carrier Service
 
 Want to specify the carrier service that should take your consignment? This page explains how to allocate consignments to services manually.
 
 ---
 
-## Getting The Carrier Service Reference
+## Getting the Carrier Service Reference
 
 In order to allocate a consignment to a specific carrier service, you'll need to know that service's `{MpdCarrierServiceReference}`. The `{MpdCarrierServiceReference}` is a unique identifier for each service available in PRO.
 
 There are two ways of obtaining a carrier service's `{MpdCarrierServiceReference}`: 
 
 * **Via the UI** - The [Carrier Services](https://www.electioapp.com/Configuration/carrierservices/) page (**Settings** > **Carrier Services**) displays a list of all available services. The `{MpdCarrierServiceReference}` for each service is displayed in the **Service Code** field.
-* **Via API** - The **Get Available MPD Carrier Services** endpoint returns a list of all available services.  The `{MpdCarrierServiceReference}` for each service is displayed in the `Reference` field. <span class="highlight">IS THIS DEFINTIELY RIGHT? THERE ARE A FEW REFERENCES IN THERE</span>
+* **Via API** - The **Get Available MPD Carrier Services** endpoint returns a list of all available services.  The `{MpdCarrierServiceReference}` for each service is displayed in the `Reference` field.
   > <span class="note-header">Note:</span>
   >  For full reference information on the <strong>Get Available MPD Carrier Services</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/GetAvailableMPDCarrierServices">Get Available MPD Carrier Services</a></strong> page of the API reference. 
 
-## Allocating To A Carrier Service Manually
+## Allocating to a Carrier Service Manually
 
 The **Allocate With Carrier Service** endpoint enables you to allocate one or more consignments to a specific carrier service. 
 
@@ -29,9 +29,7 @@ Once the request is received, SortedPRO takes each consignment in turn and check
 > <span class="note-header">More Information:</span>
 > For information on using allocation rules, see the [What Is An Allocation Rule?](/api/help/allocating_consignments.html#what-is-an-allocation-rule) section of the [Allocating Consignments To Carriers](/api/help/allocating_consignments.html) page.
 
-<span class="highlight">DOES IT DEFINITELY USE THE RULES? OR DOES IT JUST ALLOCATE IF IT CAN MEET THE DELIVERY PROMISE AND LET THE USER ASSUME THE RISK?</span>
-
-If PRO is unable to allocate the consignment to the specified carrier service, it puts the consignment into a state of _Allocation Failed_ and takes no further action. For information on dealing with failed allocations, see <span class="highlight">LINK HERE</span>.
+If PRO is unable to allocate the consignment to the specified carrier service, it puts the consignment into a state of _Allocation Failed_ and takes no further action. For information on dealing with failed allocations, see the _Manage Not Shipped Consignments_ section of the PRO UI User Manual.
 
 ### Allocate With Carrier Service Example
 

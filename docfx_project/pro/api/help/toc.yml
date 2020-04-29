@@ -33,9 +33,9 @@
     href: allocating_using_default_allocation_rules.md
   - name: Allocating Via Service Group
     href: allocating_via_service_group.md        
-  - name: Allocating To A Specific Carrier Service
+  - name: Allocating to a Specific Carrier Service
     href: allocating_to_a_specific_carrier_service.md
-  - name: Allocating To A Specific Quote
+  - name: Allocating to a Specific Quote
     href: allocating_to_a_specific_quote.md
   - name: Deallocating Consignments
     href: deallocating_consignments.md
@@ -50,7 +50,7 @@
     href: creating_new_orders.md   
   - name: Managing Existing Orders
     href: managing_existing_orders.md
-  - name: Packing Orders
+  - name: Creating Consignments From Orders
     href: packing_orders.md    
 - name: Using Delivery and Pickup Options
   href: using_delivery_and_pickup_options.md
@@ -62,11 +62,25 @@
   - name: Selecting Options
     href: selecting_options.md
 - name: Tracking Consignments
-  href: tracking_consignments.md  
+  href: tracking_consignments.md
+  items:
+  - name: Using PRO's Tracking API
+    href: using_pros_tracking_api.md
+  - name: Tracking Consignments Using REACT
+    href: tracking_consignments_using_react.md    
 - name: Getting Customs Docs and Invoices
   href: getting_customs_docs_and_invoices.md  
 - name: Managing Quotes
   href: managing_quotes.md
+  items:
+  - name: Getting Quotes 
+    href: getting_quotes.md
+  - name: Getting Quotes for an Existing Consignment
+    href: getting_quotes_for_an_existing_consignment.md
+- name: Metadata
+  href: metadata.md
+- name: Tags
+  href: tags.md          
 - name: Consignment States
   href: consignment_states.md
 - name: Glossary

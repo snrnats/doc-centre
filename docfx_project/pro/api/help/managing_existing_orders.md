@@ -1,29 +1,201 @@
 # Managing Existing Orders
 
-Update Address on Order
+Need to make changes to an order before you pack it? This page explains how to retrieve and edit order details.
 
-Add Address to 
+---
 
-Get Order
+## Retrieving Orders
 
-Update Order
+The **Get Order** endpoint returns full current details for a specific order. To call **Get Order**, sent a `GET` request to `https://api.electioapp.com/orders/{orderReference}`.
+
+> <span class="note-header">More Information:</span>
+>
+> For full reference information on the **Get Order** endpoint, see the <a href="https://docs.electioapp.com/#/api/GetOrder">API reference</a>.
+
+### Example Get Order Response
+
+The example below shows a **Get Order** request for a fairly simple order with an `{orderReference}` of _EO-000-002-K0R_. 
 
 <div class="tab">
-    <button class="staticTabButton">Update Order Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'updateOrdEndpoint')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+    <button class="staticTabButton">Get Order Response Example</button>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'getOrdResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="updateOrdEndpoint" class="staticTabContent" onclick="CopyToClipboard(this, 'updateOrdEndpoint')">
+<div id="getOrdResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'getOrdResponse')">
 
-```
-PUT https://api.electioapp.com/orders/{orderReference}
+```json
+
+https://api.electioapp.com/orders/EO-000-002-K0R
+
+{
+    "OrderReference": "EO-000-002-K0R",
+    "OrderReferenceProvidedByCustomer": null,
+    "DeliveryOptionReference": null,
+    "Packages": [
+        {
+            "Dimensions": {
+                "Unit": "Cm",
+                "Width": 10.00000,
+                "Length": 10.00000,
+                "Height": 10.00000
+            },
+            "Weight": {
+                "Value": 0.50000,
+                "Unit": "Kg"
+            },
+            "PackageSizeReference": null,
+            "Items": [
+                {
+                    "Sku": "SKU093434",
+                    "Reference": "02f60a1ff80c4f799799b2e9f281dd22",
+                    "MetaData": [],
+                    "Quantity": 1,
+                    "Unit": null,
+                    "Description": "Striped Bamboo Red/White",
+                    "Dimensions": {
+                        "Unit": "Cm",
+                        "Width": 10.00000,
+                        "Length": 10.00000,
+                        "Height": 10.00000
+                    },
+                    "Weight": {
+                        "Value": 0.50000,
+                        "Unit": "Kg"
+                    },
+                    "HarmonisationKeyWords": [],
+                    "Model": null,
+                    "Value": {
+                        "Amount": 5.9900,
+                        "Currency": {
+                            "Name": "Pound Sterling",
+                            "IsoCode": "GBP"
+                        }
+                    },
+                    "CountryOfOrigin": {
+                        "Name": "United Kingdom",
+                        "IsoCode": {
+                            "TwoLetterCode": "GB"
+                        }
+                    },
+                    "Barcode": null,
+                    "ContentClassification": null,
+                    "ContentClassificationDetails": null,
+                    "ItemReferenceProvidedByCustomer": "",
+                    "HarmonisationCode": null
+                }
+            ],
+            "MetaData": [],
+            "Value": {
+                "Amount": 5.9900,
+                "Currency": {
+                    "Name": "Pound Sterling",
+                    "IsoCode": "GBP"
+                }
+            },
+            "Reference": "EP-000-002-QPF",
+            "PackageReferenceProvidedByCustomer": "",
+            "Description": "Socks",
+            "Barcode": null
+        }
+    ],
+    "DateCreated": "2020-03-10T09:59:12.9275216+00:00",
+    "RequiredDeliveryDate": null,
+    "ShippingDate": null,
+    "MetaData": [],
+    "EarliestDeliveryDate": null,
+    "LatestDeliveryDate": null,
+    "Weight": {
+        "Value": 0.50000,
+        "Unit": "Kg"
+    },
+    "Source": "Api",
+    "Value": {
+        "Amount": 5.99,
+        "Currency": {
+            "Name": "Pound Sterling",
+            "IsoCode": "GBP"
+        }
+    },
+    "Addresses": [
+        {
+            "AddressType": "Origin",
+            "ShopLocationReference": null,
+            "Contact": {
+                "Reference": null,
+                "Title": "",
+                "FirstName": "",
+                "LastName": "",
+                "Position": null,
+                "Telephone": "",
+                "Mobile": "",
+                "LandLine": "",
+                "Email": ""
+            },
+            "CompanyName": null,
+            "ShippingLocationReference": "Sorted1",
+            "CustomerName": null,
+            "AddressLine1": null,
+            "AddressLine2": null,
+            "AddressLine3": null,
+            "Town": null,
+            "Region": null,
+            "Postcode": "",
+            "Country": null,
+            "RegionCode": null,
+            "SpecialInstructions": null,
+            "LatLong": null,
+            "IsCached": false
+        },
+        {
+            "AddressType": "Destination",
+            "ShopLocationReference": null,
+            "Contact": {
+                "Reference": null,
+                "Title": "Mr",
+                "FirstName": "Peter",
+                "LastName": "McPetersson",
+                "Position": null,
+                "Telephone": "07702123456",
+                "Mobile": "07702123456",
+                "LandLine": "0161544123",
+                "Email": "peter.mcpetersson@test.com"
+            },
+            "CompanyName": null,
+            "ShippingLocationReference": null,
+            "CustomerName": null,
+            "AddressLine1": "13 Porter Street",
+            "AddressLine2": null,
+            "AddressLine3": null,
+            "Town": null,
+            "Region": "Greater Manchester",
+            "Postcode": "M1 5WG",
+            "Country": {
+                "Name": "United Kingdom",
+                "IsoCode": {
+                    "TwoLetterCode": "GB"
+                }
+            },
+            "RegionCode": "",
+            "SpecialInstructions": null,
+            "LatLong": null,
+            "IsCached": false
+        }
+    ],
+    "CustomsDocumentation": null,
+    "Direction": "Outbound",
+    "Tags": []
+}
 ```
 
 </div>
 
-The **Update Order** endpoint enables you to update an existing order. When you make an **Update Order** request for a particular order, SortedPRO overwrites the existing order's details with new details provided in the body of the request.
+## Updating Order Details
 
-The structure of the **Update Order** request is identical to that of the **Create Order** request. PRO uses the following rules when updating order properties:
+The **Update Order** endpoint enables you to update an existing order. To call **Update Order**, send a `PUT` request to `https://api.electioapp.com/orders/{orderReference}`.
+
+When you make an **Update Order** request for a particular order, SortedPRO overwrites the existing order's details with new details provided in the body of the request. The structure of the **Update Order** request is identical to that of the **Create Order** request. 
+
+PRO uses the following rules when updating order properties:
 
 * `{OrderReference}` - Required property. Cannot be updated.
 * `{OrderReferenceProvidedByCustomer}` - PRO replaces the entire property with the updated values. If no value is provided, any existing value is deleted.
@@ -37,13 +209,15 @@ The structure of the **Update Order** request is identical to that of the **Crea
 * `{Direction}` - If any values are provided, then PRO replaces the entire property with the updated values. If no values are provided, PRO makes no changes to the order.
 * `{Tags}` - If any values are provided, then PRO replaces the entire property with the updated values. If no values are provided, PRO makes no changes to the order.
 
-<aside class="note">
-  For full reference information on the <strong>Update Order</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/UpdateOrder">Update Order</a></strong> page of the API reference.
-</aside>
+> <span class="note-header">Note:</span>
+>
+>  For full reference information on the <strong>Update Order</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/UpdateOrder">Update Order</a></strong> page of the API reference.
+
+Once it has received the request, PRO updates the order and returns a code _200_ message as confirmation. 
 
 ### Update Orders Example
 
-The example shows an  **Update Order** request for a single shipment that has a `{OrderReference}` of _EC-000-087-01A_.  
+The example shows an **Update Order** request to update delivery and shipping dates on an order with an `{orderReference}` of _EO-000-002-K0R_.  
 
 <div class="tab">
     <button class="staticTabButton">Example Update Order Request</button>
@@ -52,123 +226,91 @@ The example shows an  **Update Order** request for a single shipment that has a 
 
 <div id="updateOrdRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'updateOrdRequest')">
 
-```
-PUT https://api.electioapp.com/orders/EC-000-087-01A
-```
-
 ```json
+
+PUT https://api.electioapp.com/orders/EO-000-002-K0R
+
 {
-  "OrderReference": "EC-000-087-01A",
-  "OrderReferenceProvidedByCustomer": "5e6127aa-fe42-49d8-a3a4-cd621e11b9ea",
+  "OrderReference": "EO-000-002-K0R",
   "RequiredDeliveryDate": {
-    "Date": "2019-06-05T00:00:00+01:00",
+    "Date": "2020-06-05T00:00:00+01:00",
     "IsToBeExactlyOnTheDateSpecified": true
   },
-  "ShippingDate": "2019-05-31T00:00:00+01:00",
-  "CustomsDocumentation": {
-    "DesignatedPersonResponsible": "Peter McPetersson",
-    "ImportersVatNumber": "02345555",
-    "CategoryType": "Other",
-    "ShipperCustomsReference": "CREF0001",
-    "ImportersTaxCode": "TC001",
-    "ImportersTelephone": "0161123456",
-    "ImportersFax": "01611124547",
-    "ImportersEmail": "peter.mcpetersson@test.com",
-    "CN23Comments": "Comments",
-    "ReferencesOfAttachedInvoices": [
-      "INV001"
-    ],
-    "ReferencesOfAttachedCertificates": [
-      "CERT001"
-    ],
-    "ReferencesOfAttachedLicences": [
-      "LIC001"
-    ],
-    "CategoryTypeExplanation": "Explanation",
-    "DeclarationDate": "2019-05-31T00:00:00+01:00",
-    "OfficeOfPosting": "Manchester",
-    "ReasonForExport": "Sale",
-    "ShippingTerms": "CFR",
-    "ShippersVatNumber": "874541414",
-    "ReceiversTaxCode": "TC5454",
-    "ReceiversVatNumber": "8745474",
-    "InvoiceDate": "2019-05-31T00:00:00+01:00"
-  },
-  "Addresses": [
-    {
-      "AddressType": "Origin",
-      "ShippingLocationReference": "Shipping_Location_Reference",
-      "IsCached": false
-    },
-    {
-      "AddressType": "Destination",
-      "Contact": {
-        "Title": "Mr",
-        "FirstName": "Peter",
-        "LastName": "McPetersson",
-        "Telephone": "07702123456",
-        "Mobile": "07702123456",
-        "LandLine": "0161544123",
-        "Email": "peter.mcpetersson@test.com"
-      },
-      "CompanyName": "Test Company (UK) Ltd.",
-      "AddressLine1": "13 Porter Street",
-      "AddressLine2": "Pressington",
-      "AddressLine3": "Carlsby",
-      "Town": "Manchester",
-      "Region": "Greater Manchester",
-      "Postcode": "M1 5WG",
-      "Country": {
-        "Name": "Great Britain",
-        "IsoCode": {
-          "TwoLetterCode": "GB"
-        }
-      },
-      "SpecialInstructions": "Gate code: 4454",
-      "LatLong": {
-        "Latitude": 53.474220,
-        "Longitude": -2.246049
-      },
-      "IsCached": false
-    }
-  ],
-  "MetaData": [
-    {
-      "KeyValue": "Key1",
-      "StringValue": "Value1"
-    },
-    {
-      "KeyValue": "Key2",
-      "DecimalValue": 12.45
-    }
-  ],
-  "Direction": "Outbound",
-  "Tags": [
-    "TagC"
-  ]
+  "ShippingDate": "2020-05-31T00:00:00+01:00"
 }
 ```
 
 </div>
 
+### Adding and Updating Order Addresses
+
+In addition to the **Update Order** endpoint, PRO also features specific endpoints for adding and updating the addresses on a consignment.
+
+The **Add Address To Order** endpoint enables you to add a new address to an order. To call **Add Address To Order**, send a `POST` request to `https://api.electioapp.com/orders/{orderReference}/address`.
+
+**Add Address To Order** can only be used to add addresses with an address type that does not already exist on the order. For example, suppose that you have an order that already has _Origin_ and _Destination_ addresses. You could use **Add Address To Order** to add a new _Sender_ address to that order (because the order does not currently have a _Sender_ address), but you could not use it to add a new _Origin_ address (because the order does have an existing _Origin_).
+
+The **Update Address On Order** endpoint enables you to update an existing address on an order. To call **Update Address On Order**, send a `PUT` request to `https://api.electioapp.com/orders/{orderReference}/address`.
+
+**Update Address On Order** can only be used to edit addresses with an address type already exists on the order. For example, suppose that you have an order that already has _Origin_ and _Destination_ addresses. You could use **Update Address On Order** to edit those addresses (by using it to send a new `address` object with that `AddressType`), but not to add others of a different type. 
+
+For both of these endpoints, the body of the request should contain an `address` object. The example below shows a new _Sender_ address.
+
 <div class="tab">
-    <button class="staticTabButton">Example Update Order Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'updateOrdResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+    <button class="staticTabButton">Example Address Object</button>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'exampleAddress')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
-<div id="updateOrdResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'updateOrdResponse')">
+<div id="exampleAddress" class="staticTabContent" onclick="CopyToClipboard(this, 'exampleAddress')">
 
 ```json
-[
-  {
-    "Rel": "Link",
-    "Href": "https://api.electioapp.com/consignments/EC-000-087-01A"
-  }
-]
+{
+  "AddressType": "Sender",
+  "Contact": {
+    "Title": "Mr",
+    "FirstName": "Peter",
+    "LastName": "McPetersson",
+    "Telephone": "07702123456",
+    "Mobile": "07702123456",
+    "LandLine": "0161544123",
+    "Email": "peter.mcpetersson@test.com"
+  },
+  "CompanyName": "Update Address On Order Ltd.",
+  "AddressLine1": "13 Porter Street",
+  "AddressLine2": "Pressington",
+  "AddressLine3": "Carlsby",
+  "Town": "Manchester",
+  "Region": "Greater Manchester",
+  "Postcode": "M1 5WG",
+  "Country": {
+    "Name": "Great Britain",
+    "IsoCode": {
+      "TwoLetterCode": "GB"
+    }
+  },
+  "SpecialInstructions": "Gate code: 4454",
+  "LatLong": {
+    "Latitude": 53.474220,
+    "Longitude": -2.246049
+  },
+  "IsCached": false
+}
 ```
 
 </div>
 
+Both **Add Address To Order** and **Update Address On Order** return an empty code _200_ message as confirmation that the address change was successful.
+
+> <span class="note-header">More Information:</span>
+>
+> * For full reference information on the <strong>Add Address To Order</strong> endpoint, see the <a href="https://docs.electioapp.com/#/api/AddAddresstoOrder">Add Address To Order</a> page of the API reference.
+> * For full reference information on the <strong>Update Address On Order</strong> endpoint, see the <a href="https://docs.electioapp.com/#/api/UpdateAddressonOrder">Update Address On Order</a> page of the API reference.
+
+## Next Steps
+
+* Learn how to pack orders into consignments at the [Creating Consignments From Orders](/pro/api/help/packing_orders.html) page.
+* Learn how to retrieve delivery options at the [Getting Delivery Options](/pro/api/help/getting_delivery_options.html) page.
+* Learn how to allocate consignments at the [Allocating Consignments to Carriers](/api/help/allocating_consignments_to_carriers.html) page.
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>

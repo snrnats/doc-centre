@@ -2,7 +2,7 @@
 
 ## Authentication
 
-You will need to provide a valid API key in every API call you make to SortedPRO. When a new user account is created, PRO generates a unique API key and allocates it to the new user. To view your API key:
+You will need to provide a valid API key in every call you make to SortedPRO. When a new user account is created, PRO generates a unique API key and allocates it to the new user. To view your API key:
 
 1. Log in to the PRO dashboard and select **Settings > Users & Roles > [User Accounts](https://www.electioapp.com/Company/UserAccounts)** to display the **User Accounts** page. A list of the user accounts that you have access to is displayed.
 2. Click the **Edit User** button for your account to display your account details.
@@ -51,7 +51,7 @@ accept: application/xml
 
 </div>
 
-## Specifying API version
+## Specifying API Version
 
 You should include an `electio-api-version` header specifying the API version to use in all PRO API calls. The current version is _1.1_.
 

@@ -11,18 +11,7 @@
 
 </div>    
 
-The **[Pickup Options](https://docs.electioapp.com/#/api/PickupOptions)** endpoint takes the details of an as-yet uncreated consignment and returns available pickup options. This data can be used to offer pickup timeslots and locations for the product that the customer is about to purchase.
-
-> <span class="note-header">Note:</span>
->  In the context of PRO, a "pickup option" refers to a combination of a carrier service, date and time window.
->
->  For example, suppose that you use the **Pickup Options** endpoint to request pickup options for a particular consignment, and the response indicates the following:
->
->  * Carrier X could deliver the consignment on Monday between 9-5.
->  * Carrier Y could deliver the consignment on Monday between 9-12 or Tuesday between 9-12
->  * Carrier Z could deliver the consignment on Monday between 9-1 or Monday between 1-5
->
->  In this case, there are five available pickup options: one for Carrier X and two each for Carriers Y and Z. 
+In the context of PRO, a "pickup option" is a delivery date, pickup location, and time window that a consignment could potentially be delivered on, and a carrier service that could meet that delivery promise. The **[Pickup Options](https://docs.electioapp.com/#/api/PickupOptions)** endpoint takes the details of an as-yet uncreated consignment and returns available pickup options.
 
 At a minimum, SortedPRO requires you to send the following data in order to receive pickup options for a potential consignment:
 
@@ -32,34 +21,13 @@ At a minimum, SortedPRO requires you to send the following data in order to rece
 * **Origin Address**
 * **Destination Address**
 
- However, there are lots of other properties you can send when getting pickup options, including:
-
-* Your own consignment reference.
-* The consignment's source.
-* Shipping and delivery dates.
-* Customs documentation.
-* The consignment's direction of travel.
-* Metadata. PRO metadata enables you to record additional data about a consignment in custom fields. For more information on using metadata in PRO, see the **[Metadata](/api/flows/moreInfo.html#metadata)** section of the **More Information** page.
-* Tags. Allocation tags enable you to filter the list of carrier services that a particular consignment could be allocated to. For more information on allocation tags, see the **[Tags](/api/flows/moreInfo.html#tags)** section of the **More Information** page.
-
-Providing extra information can help you to improve the relevance of the options returned.
-
-Either the consignment's `origin` address, its `destination` address, or both, must include a valid <code>ShippingLocationReference</code>. For information on how to obtain a list of your organisation's shipping locations, see the <strong><a href="https://docs.electioapp.com/#/api/GetShippingLocations">Get Shipping Locations</a></strong> page of the API reference.
-
 The **Pickup Options** endpoint returns a `{Locations}` array detailing all the pickup locations that have options meeting your request criteria. Each `{Location}` object contains a `{DeliveryOptions}` array listing the delivery options that are available to that location for the proposed consignment, and the opening times of the location itself.
 
-Each `{PickupOptions}` object contains details of a particular pickup option that could be used to deliver the consignment to the relevant location, including:
-
-* **Reference** - A unique identifier for the option, used when selecting options in the next step.
-* **Dates and Delivery Windows**
-* **Carrier Service**
-* **Price**
-* **Allocation Cutoff** - The option's expiry time. If the option is not used by this time, it is rendered invalid.
-* **Operational Cutoff** - 	The operational cut off date as specified by the fulfilling shipping location.
-* **Service Direction**
+Each `{PickupOptions}` object contains details of a particular pickup option that could be used to deliver the consignment to the relevant location.
 
 > <span class="note-header">More Information:</span>
->  For full reference information on the <strong>Pickup Options</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/PickupOptions">Pickup Options</a></strong> page of the API reference.
+> * For full reference information on the <strong>Pickup Options</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/PickupOptions">Pickup Options</a></strong> page of the API reference.
+> * For a user guide on pickup options, see the [Getting Pickup Options](/pro/api/help/getting_pickup_options.html) page.
 
 ### Pickup Options Example
 

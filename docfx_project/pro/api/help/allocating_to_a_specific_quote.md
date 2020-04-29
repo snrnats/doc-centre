@@ -1,4 +1,4 @@
-# Allocating To A Specific Quote
+# Allocating to a Specific Quote
 
 Obtaining quotes to carry an individual consignment and then allocating to the most suitable response is a key part of many customer service workflows in PRO. This page explains how to use the **Allocate With Quote** endpoint to select a quote.
 

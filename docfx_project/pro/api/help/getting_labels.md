@@ -12,7 +12,7 @@ Getting labels is a key part of all PRO workflows, as an unlabelled consignment 
 > 
 > You can only retrieve labels for consignments that have been allocated to a carrier. If you attempt to return labels for an unallocated consignment, PRO returns an error.
 
-### Getting Labels For An Entire Consignment
+### Getting Labels for an Entire Consignment
 
 PRO offers two endpoints that return labels for all packages in a consignment: **Get Labels** and **Get Labels In Format**:
 
@@ -20,7 +20,7 @@ PRO offers two endpoints that return labels for all packages in a consignment: *
 
 * **[Get Labels in Format](https://docs.electioapp.com/#/api/GetLabelsinFormat)** is similar to **Get Labels**, but enables you to specify the file format that you want the labels to be returned in. This must be one of PRO's supported formats: PDF, PNG, ZPL or ZPLII. To call **Get Labels In Format**, send a `GET` request to `https://api.electioapp.com/labels/{consignmentReference}/{labelFormat}`.
 
-### Getting Labels For An Individual Package
+### Getting Labels for an Individual Package
 
 PRO also offers two endpoints that return labels for a specific package in a consignment: **Get Package Label** and **Get Package Label In Format**:
 
@@ -62,7 +62,9 @@ The below example shows a typical label object.
 
 ## Using the Label Data
 
-Once you have obtained the raw label data, you will need to perform some processing in order to use it. For example methods to read the data, write it to disk, and automatically open the label file so it can be printed and applied to the relevant package, see LINK HERE. 
+> <span class="note-header">Note:</span>
+>
+> Once you have downloaded the file data, you will need to decode the file's Base64 in order to view the label itself. If you are unsure how to do so, see the **[MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding)** for more information.
 
 ## Next Steps
 
