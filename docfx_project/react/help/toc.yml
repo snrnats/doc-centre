@@ -31,7 +31,7 @@
   - name: Calculated Events
     href: calc-events.md
 - name: API Reference
-  href: https://docs.sorted.com/react/api
+  href: ./react/api/
 - name: What's New
   href: changelog.md
 - name: Shipment State List
