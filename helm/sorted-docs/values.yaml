@@ -24,6 +24,7 @@ ingress:
     pro:
       kubernetes.io/ingress.class: nginx
       nginx.ingress.kubernetes.io/auth-tls-secret: feature/sorted-wildcard-cert
+      cert-manager.io/issuer: "letsencrypt"
   hosts:
     pro:
       - host: docs-feature.sorted.com
