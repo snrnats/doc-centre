@@ -10,11 +10,11 @@ POST https://api.electioapp.com/consignments
 ```
 </div>
 
-The first step toward manifesting a consignment is to create that consignment in SortedPRO. 
+The first step toward managing consignments in SortedPRO is to create the consignments. 
 
 Consignments are created using the **[Create Consignment](https://docs.electioapp.com/#/api/CreateConsignment)** endpoint, which takes information about new consignments, adds them to the database, and returns a link to the newly-created consignment, including its `{consignmentReference}`. 
 
-As a minimum, the **Create Consignments** endpoint requires you to send package weights and dimensions, origin address, and destination address data. 
+As a minimum, the **Create Consignment** endpoint requires you to send package weights and dimensions, origin address, and destination address data. 
 
 > <span class="note-header">More Information:</span>
 > * For full reference information on the <strong>Create Consignment</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/CreateConsignment">Create Consignment</a></strong> page of the API reference.
@@ -193,10 +193,10 @@ These examples show the creation of a fairly standard consignment. In this case,
 
 </div>   
 
-After receiving the request, PRO returns a `{consignmentReference}` of _EC-000-05B-MMA_. At this point, you should store the `{consignmentReference}`, as many of PRO's endpoints take `{consignmentReference}` as a parameter.
+After receiving the request, PRO returns a `{consignmentReference}` of _EC-000-05B-MMA_. Many of the follow on processes in PRO require you to provide the the `{consignmentReference}` as as a parameternt therefore, you should store the `{consignmentReference}` for later use.
 
 <div class="tab">
-    <button class="staticTabButton">Request Example</button>
+    <button class="staticTabButton">Response Example</button>
     <div class="copybutton" onclick="CopyToClipboard(this, 'createConResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
 </div>
 
