@@ -24,7 +24,7 @@ ocp-apim-subscription-key: [qwerrtyuiioop0987654321]
 
 ## Specifying Request / Response Format
 
-PRO's APIs support both JSON and XML content types. PRO expects `application/json` data by default, but you can specify which content type you are sending for each API request if required. To do so, pass a `content-type` header with a value of `application/json`, `text/xml` or `application/xml` (as applicable) in your request. All other content types are invalid.
+PRO's APIs support both JSON and XML content types. State which content type you are sending for each API request sent to PRO. To do so, pass a `content-type` header with a value of `application/json`, `text/xml` or `application/xml` (as applicable) in your request. All other content types are invalid.
 
 You can also specify the content type that you want PRO to use in API responses. To do so, pass an `accept` header with a value of `application/json`, `text/xml`, or `application/xml` in your request. If you don't pass an `accept` header then PRO responds with `application/json`.
 
@@ -53,7 +53,7 @@ accept: application/xml
 
 ## Specifying API Version
 
-You should include an `electio-api-version` header specifying the API version to use in all PRO API calls. The current version is _1.1_.
+PRO APIs include versioning. The current version is _1.1_. Please include an `electio-api-version` header specifying the API version to use in all PRO API calls. 
 
 <div class="tab">
     <button class="staticTabButton">Example API Version Header</button>
