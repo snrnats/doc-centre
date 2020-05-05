@@ -20,7 +20,7 @@ There are four steps to the flow:
 1. **Create the consignment** - Use the [Create Consignment](https://docs.electioapp.com/#/api/CreateConsignment) endpoint to record the details of your new consignment.
 2. **Allocate the consignment** - Use one of PRO's [Allocation](https://docs.electioapp.com/#/api/AllocateConsignment) endpoints to select the carrier service that your consignment will use. You can nominate a specific service, ask PRO to determine the best service to use from a pre-defined group, or allocate based on pre-set allocation rules.
 3. **Get the consignment's labels** - Use the [Get Labels in Format](https://docs.electioapp.com/#/api/GetLabelsinFormat) endpoint to get the delivery label for your consignment.
-4. **Manifest consignments** - Use the [Manifest Consignments from Query](https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery) endpoint to trigger the transmission of consignment data to the selected carrier. Every successful request to a manifest endpoint will result in data being transmitted to the carrier and therefore, Sorted strongly advise that consignments are not manifested singularly and manifesting consignments is aligned with the carrier collection times from the warehouse.   
+4. **Manifest consignments** - Use the [Manifest Consignments from Query](https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery) endpoint to transmit consignment data to the selected carrier.    
 
 This section gives more detail on each step of the flow and provides worked examples.
 
