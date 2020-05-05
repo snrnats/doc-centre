@@ -7,7 +7,7 @@
    </a>
 </p>
 
-Creating a new consignment, allocating it to a suitable carrier service, and then adding it to that service's manifest is perhaps PRO's most basic use case. The **Classic** call flow offers the lightest integration design of all PRO flows, making it easy for your organisation to manage deliveries across multiple carriers.
+Creating a new consignment, allocating it to a suitable carrier service and then manifesting consignment data to a carrier, is perhaps PRO's most basic use case. The **Classic** flow offers the lightest integration design of all PRO flows, making it easy for your organisation to manage deliveries across multiple carriers.
 
 The **Classic** flow is most useful to your business if:
 
@@ -20,7 +20,7 @@ There are four steps to the flow:
 1. **Create the consignment** - Use the [Create Consignment](https://docs.electioapp.com/#/api/CreateConsignment) endpoint to record the details of your new consignment.
 2. **Allocate the consignment** - Use one of PRO's [Allocation](https://docs.electioapp.com/#/api/AllocateConsignment) endpoints to select the carrier service that your consignment will use. You can nominate a specific service, ask PRO to determine the best service to use from a pre-defined group, or allocate based on pre-set allocation rules.
 3. **Get the consignment's labels** - Use the [Get Labels in Format](https://docs.electioapp.com/#/api/GetLabelsinFormat) endpoint to get the delivery label for your consignment.
-4. **Manifest the consignment** - Use the [Manifest Consignments from Query](https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery) endpoint to confirm the consignment with the selected carrier. At this point, the consignment is ready to ship.    
+4. **Manifest consignments** - Use the [Manifest Consignments from Query](https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery) endpoint to transmit consignment data to the selected carrier.    
 
 This section gives more detail on each step of the flow and provides worked examples.
 
