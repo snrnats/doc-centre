@@ -212,4 +212,4 @@ After receiving the request, PRO returns a `{consignmentReference}` of _EC-000-0
 ```
 </div>
 
-A newly created consignment will have a status `{consignmentState}` of "Unallocated".
+A newly created consignment has a `{consignmentState}` of "Unallocated".
