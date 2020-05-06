@@ -66,24 +66,24 @@
     <h2>Shipments</h2>
     <div class="two-columns">
         <ul class="fa-ul">
-            <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Overview</li>
-            <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Call Flows</li>
-            <li><span class="fa-li"><i class="fas fa-check-square"></i></span>API Ref</li>
-            <li><span class="fa-li"><i class="fas fa-check-square"></i></span>API User Guide</li>
-            <li><span class="fa-li"><i class="fas fa-check-square"></i></span>UI User Guide</li>            
+            <li><span class="fa-li"><i class="fas fa-check-square"></i></span><a href="/pro/api/help/introduction.html">Overview</a><p>An introduction to Consignments in PRO</p></li>
+            <li><span class="fa-li"><i class="fas fa-check-square"></i></span><a href="/pro/api/help/flows.html">Call Flows</a><p>Suggested Consignments API call flows to help you achieve common tasks in PRO</p></li>
+            <li><span class="fa-li"><i class="fas fa-check-square"></i></span><a href="https://docs.electioapp.com/#/api">API Ref</a><p>Reference information for all of PRO's Consignments APIs</p></li>
+            <li><span class="fa-li"><i class="fas fa-check-square"></i></span><a href="/pro/api/help/introduction.html">API User Guide</a><p>PRO's Consignments APIs, explained</p></li>
+            <li><span class="fa-li"><i class="fas fa-check-square"></i></span><a href="/pro/api/help/introduction.html">UI User Guide</a><p>How to use consignments in PRO's UI</p></li>            
         </ul>
         <p>Blurb blurb blurb Blurb blurb blurb Blurb blurb blurb Blurb blurb blurb Blurb blurb blurb Blurb blurb blurb Blurb blurb blurb Blurb blurb blurb Blurb blurb blurb Blurb blurb blurb </p>
-    </div>
+    </div>   
 </div>
 <div class="landing-container">
     <h2>Consignments</h2>
     <div class="two-columns">
         <ul class="fa-ul">
-            <li><span class="fa-li"><i class="fas fa-check-square"></i></span><a href="/pro/api/help/introduction.html">Overview</a></li>
-            <li><span class="fa-li"><i class="fas fa-check-square"></i></span><a href="/pro/api/help/flows.html">Call Flows</a></li>
-            <li><span class="fa-li"><i class="fas fa-check-square"></i></span><a href="https://docs.electioapp.com/#/api">API Ref</a></li>
-            <li><span class="fa-li"><i class="fas fa-check-square"></i></span><a href="/pro/api/help/introduction.html">API User Guide</a></li>
-            <li><span class="fa-li"><i class="fas fa-check-square"></i></span><a href="/pro/api/help/introduction.html">UI User Guide</a></li>            
+            <li><span class="fa-li"><i class="fas fa-check-square"></i></span><a href="/pro/api/help/introduction.html">Overview</a><p>An introduction to Consignments in PRO</p></li>
+            <li><span class="fa-li"><i class="fas fa-check-square"></i></span><a href="/pro/api/help/flows.html">Call Flows</a><p>Suggested Consignments API call flows to help you achieve common tasks in PRO</p></li>
+            <li><span class="fa-li"><i class="fas fa-check-square"></i></span><a href="https://docs.electioapp.com/#/api">API Ref</a><p>Reference information for all of PRO's Consignments APIs</p></li>
+            <li><span class="fa-li"><i class="fas fa-check-square"></i></span><a href="/pro/api/help/introduction.html">API User Guide</a><p>PRO's Consignments APIs, explained</p></li>
+            <li><span class="fa-li"><i class="fas fa-check-square"></i></span><a href="/pro/api/help/introduction.html">UI User Guide</a><p>How to use consignments in PRO's UI</p></li>            
         </ul>
         <p>Blurb blurb blurb Blurb blurb blurb Blurb blurb blurb Blurb blurb blurb Blurb blurb blurb Blurb blurb blurb Blurb blurb blurb Blurb blurb blurb Blurb blurb blurb Blurb blurb blurb </p>
     </div>    
