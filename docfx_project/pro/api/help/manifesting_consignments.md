@@ -15,6 +15,10 @@ PRO has two manifest endpoints:
 * **Manifest Consignments** enables you to manifest multiple consignments at once by providing a list of `{consignmentReferences}`. 
 * **Manifest Consignments From Query** enables you to manifest all consignments that meet a specified set of search criteria.
 
+> <span class="note-header">Note:</span> 
+>
+> Every successful request to a manifest endpoint results in data being transmitted to the carrier. Therefore, Sorted strongly advise that consignments are not manifested singularly, and that consignment manifesting is aligned with the carrier collection times from the warehouse.
+
 Manifesting a consignment changes its state to _Manifested_. At this point the carrier is aware of the consignment, and will collect it unless otherwise advised. In order to prevent the consignment being shipped, you would need to either cancel or deallocate it. 
 
 > <span class="note-header">More Information:</span>
