@@ -193,7 +193,7 @@ These examples show the creation of a fairly standard consignment. In this case,
 
 </div>   
 
-After receiving the request, PRO returns a `{consignmentReference}` of _EC-000-05B-MMA_. At this point, you should store the `{consignmentReference}`, as many of PRO's endpoints take `{consignmentReference}` as a parameter.
+After receiving the request, PRO returns a `{consignmentReference}` of _EC-000-05B-MMA_. Many of PRO's functions require you to provide a `{consignmentReference}` as a parameter. Therefore, you should store the `{consignmentReference}` for later use.
 
 <div class="tab">
     <button class="staticTabButton">Request Example</button>
