@@ -31,6 +31,9 @@
     <div class="two-columns">    
         <p>PRO is great and it lets you do this and this and this and this and this and this and this and this and this and this and this and this and this and this </p>
         <p>This is a placeholder for a video or image or something</p>
+        <p>This is a placeholder for a video or image or something 2</p>
+        <p>This is a placeholder for a video or image or something 3</p>
+        <p>This is a placeholder for a video or image or something 4</p>
     </div>    
 </div>
 <div class="landing-container">
