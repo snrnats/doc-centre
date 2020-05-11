@@ -992,8 +992,32 @@ div.header-container {
   padding: 30px 0;
 }
 
+div.header-container p {
+  padding: 0px 135px;
+  text-align: left;
+  display: inline-block;
+}
+
 div.landing-container {
-  padding: 20px 135px;
+  padding: 0px 135px 20px 135px;
+}
+
+div.landing-button {
+  cursor: pointer;
+  display: block;
+  border: none;
+  height: 40px;
+  font-weight: 600;
+  margin: 20px auto;
+  width: 250px;
+  background-color: #ff005e;
+  color: white;
+  text-align: center;
+  padding-top: 7px;
+}
+
+div.landing-button:hover{
+  background-color: #261c4c;
 }
 
 @media all and (max-width: 768px) {
