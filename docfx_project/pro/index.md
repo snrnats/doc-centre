@@ -22,7 +22,7 @@
 
 <div class="header-container">
     <h1 id="big-header" class="text--underlined text--header"><span>SortedPRO </span><span>Docs</span></h1>
-    <p>
+    <p class="header-info">
         PRO is Sorted's carrier and delivery management platform. Featuring both a DIY API toolkit and a lightweight UI, PRO helps you manage your shipping from checkout to the customer's doorstep. 
     </p>
 </div>
@@ -58,13 +58,17 @@
 <div class="landing-container">
     <h2>Consignments</h2>
     <div class="two-columns">
-        <ul class="fa-ul">
-            <li><span class="fa-li"><i class="fas fa-check-square"></i></span><a href="/pro/api/help/introduction.html">Overview</a><p>An introduction to Consignments in PRO</p></li>
-            <li><span class="fa-li"><i class="fas fa-check-square"></i></span><a href="/pro/api/help/flows.html">Call Flows</a><p>Suggested Consignments API call flows to help you achieve common tasks in PRO</p></li>
-            <li><span class="fa-li"><i class="fas fa-check-square"></i></span><a href="https://docs.electioapp.com/#/api">API Ref</a><p>Reference information for all of PRO's Consignments APIs</p></li>
-            <li><span class="fa-li"><i class="fas fa-check-square"></i></span><a href="https://docs.electioapp.com/#/api">API User Guide</a><p>PRO's Consignments APIs, explained</p></li>          
-        </ul>
-        <p>PRO's Consignments API collection is designed to work with regular scheduled carrier collections. If carriers pick goods up from your fulfilment centres on a regular basis, then Consignments is for you. </p>
+        <div class="left-column">
+            <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fas fa-check-square"></i></span><a href="/pro/api/help/introduction.html">Overview</a><p class="button-text">An introduction to Consignments in PRO</p></li>
+                <li><span class="fa-li"><i class="fas fa-check-square"></i></span><a href="/pro/api/help/flows.html">Call Flows</a><p class="button-text">Suggested Consignments API call flows to help you achieve common tasks in PRO</p></li>
+                <li><span class="fa-li"><i class="fas fa-check-square"></i></span><a href="https://docs.electioapp.com/#/api">API Ref</a><p class="button-text">Reference information for all of PRO's Consignments APIs</p></li>
+                <li><span class="fa-li"><i class="fas fa-check-square"></i></span><a href="/pro/api/help/managing_consignments.html">API User Guide</a><p class="button-text">PRO's Consignments APIs, explained</p></li>          
+            </ul>
+        </div>
+        <div class="right-column">
+            <p>PRO's Consignments API collection is designed to work with regular scheduled carrier collections. If carriers pick goods up from your fulfilment centres on a regular basis, then Consignments is for you. </p>
+        </div>
     </div>    
 </div>
 <div class="landing-container">

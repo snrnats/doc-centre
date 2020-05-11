@@ -426,20 +426,65 @@ div.button-element p {
 }
 
 .globalSpacer1 {
-  padding: 30px 0;
+  padding: 20px 0 0 0;
 }
 
 .landing-button-container {
-  width: 960px;
+  width: 100%;
   padding: 0 10px;
   margin: 0 auto;
 }
 
 .styles-module--dualQuad--OrVsV {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 40px;
+}
+
+div.right-column {
+  display: none;
+}
+
+.two-columns {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;  
-  grid-column-gap: 15px;
-  grid-row-gap: 40px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 30px;
+  margin: 30px auto 0;
+  width: 100%;
+}
+
+div.landing-container {
+  padding: 0px 20px 20px 20px;
+}
+
+p.header-info {
+  padding: 20px 20px 0 20px;
+  text-align: left;
+  display: inline-block;
+}
+
+@media (min-width: 998px){
+  .styles-module--dualQuad--OrVsV {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  div.right-column {
+    display: block;
+  }
+
+  .two-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  div.landing-container {
+    padding: 0px 135px 20px 135px;
+  }
+
+  p.header-info {
+    padding: 0px 135px;
+  }
+
 }
 
 .styles-module--messageBlock--7l7wn {
@@ -462,6 +507,11 @@ div.button-element p {
   margin-bottom: 0;
 }
 
+@media (max-width: 400px){
+  .styles-module--messageBlock--7l7wn h4 {
+    font-size: 1em;
+  }
+}
 .styles-module--messageBlock--7l7wn:hover {
   text-decoration: none;
   background: rgba(0,0,0,.05);
@@ -923,14 +973,6 @@ div.button1:hover {
   width: 100%;
 }
 
-.two-columns {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 30px;
-  margin: 30px auto 0;
-  width: 100%;
-}
-
 @media all and (max-width: 768px) {
   .button-container {
     grid-template-columns: unset;
@@ -990,16 +1032,6 @@ div.header-container, div.landing-container {
 div.header-container {
   text-align: center;
   padding: 30px 0;
-}
-
-div.header-container p {
-  padding: 0px 135px;
-  text-align: left;
-  display: inline-block;
-}
-
-div.landing-container {
-  padding: 0px 135px 20px 135px;
 }
 
 div.landing-button {
@@ -1075,6 +1107,12 @@ h1#big-header {
   h1#big-header {
     margin-top: 5px;
     margin-bottom: 5px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  h1#big-header {
+    font-size: 4em;    
   }
 }
 
