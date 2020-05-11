@@ -1,6 +1,9 @@
 - name: PRO API Help  
   href: pro/api/help/  
   homepage: pro/api/help/introduction.md
+  items:
+  - name: test 1
+    href: test.md
 - name: PRO Reports
   href: pro/reports/
   homepage: pro/reports/index.md

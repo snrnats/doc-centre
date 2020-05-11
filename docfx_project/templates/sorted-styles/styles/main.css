@@ -530,6 +530,14 @@ ul.level1 {
   text-decoration: underline;
 }
 
+ul.nav.level2 {
+  display: none;
+}
+
+.level1 li:hover ul.nav.level2 {
+  display: block;
+}
+
 .toc .nav > li > .expand-stub::before,
 .toc .nav > li.active > .expand-stub::before {
   content: ">";
