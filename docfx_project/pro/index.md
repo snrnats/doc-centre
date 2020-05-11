@@ -27,13 +27,10 @@
     </p>
 </div>
 <div class="landing-container">
-    <h2>Do this awesome thing in PRO</h2>
+    <h2>Welcome to PRO</h2>
     <div class="two-columns">    
-        <p>PRO is great and it lets you do this and this and this and this and this and this and this and this and this and this and this and this and this and this </p>
+        <p>PRO is Sorted's carrier and delivery management platform. Featuring both a DIY API toolkit and a lightweight UI, PRO helps you manage your shipping from checkout to the customer's doorstep. </p>
         <p>This is a placeholder for a video or image or something</p>
-        <p>This is a placeholder for a video or image or something 2</p>
-        <p>This is a placeholder for a video or image or something 3</p>
-        <p>This is a placeholder for a video or image or something 4</p>
     </div>    
 </div>
 <div class="landing-container">
@@ -75,7 +72,7 @@
             <li><span class="fa-li"><i class="fas fa-check-square"></i></span><a href="/pro/api/help/introduction.html">API User Guide</a><p>PRO's Consignments APIs, explained</p></li>
             <li><span class="fa-li"><i class="fas fa-check-square"></i></span><a href="/pro/api/help/introduction.html">UI User Guide</a><p>How to use consignments in PRO's UI</p></li>            
         </ul>
-        <p>Blurb blurb blurb Blurb blurb blurb Blurb blurb blurb Blurb blurb blurb Blurb blurb blurb Blurb blurb blurb Blurb blurb blurb Blurb blurb blurb Blurb blurb blurb Blurb blurb blurb </p>
+        <p>PRO's Shipments API collection enables you to manage both the collection and delivery phases of a customer order. By integrating with the Shipments APIs, you can build flexible "on-demand" delivery services, letting you control when and where carriers pick up your goods. </p>
     </div>   
 </div>
 <div class="landing-container">
@@ -88,10 +85,10 @@
             <li><span class="fa-li"><i class="fas fa-check-square"></i></span><a href="/pro/api/help/introduction.html">API User Guide</a><p>PRO's Consignments APIs, explained</p></li>
             <li><span class="fa-li"><i class="fas fa-check-square"></i></span><a href="/pro/api/help/introduction.html">UI User Guide</a><p>How to use consignments in PRO's UI</p></li>            
         </ul>
-        <p>Blurb blurb blurb Blurb blurb blurb Blurb blurb blurb Blurb blurb blurb Blurb blurb blurb Blurb blurb blurb Blurb blurb blurb Blurb blurb blurb Blurb blurb blurb Blurb blurb blurb </p>
+        <p>PRO's Consignments API collection is designed to work with regular scheduled carrier collections. If carriers pick goods up from your fulfilment centres on a regular basis, then Consignments is for you. </p>
     </div>    
 </div>
 <div class="landing-container">
     <h2>Reports</h2>
-    <p>Blurb blurb blurb</p>    
+    <p>PRO includes its own reporting app, running in Microsoft Power BI. Click here for information.</p>    
 </div>
