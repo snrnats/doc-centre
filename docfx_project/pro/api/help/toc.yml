@@ -1,4 +1,4 @@
-- name: Introduction
+- name: Getting Started
   href: introduction.md
 - name: Example Call Flows
   href: flows.md
