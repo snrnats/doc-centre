@@ -17,7 +17,13 @@ Once you've created a consignment, it must be allocated to a carrier service. In
 
 PRO allocates all packages in a consignment together, as carriers expect that all packages in a consignment will ship on the same service.
 
-PRO has multiple allocation API endpoints, giving you the flexibility to pass instructions, hints or filtering criteria when allocating. This page explains the following endpoints:
+PRO has multiple allocation API endpoints, giving you the flexibility to pass instructions, hints or filtering criteria when allocating. PRO's allocation endpoints consider the following factors when selecting a service:
+
+* The capabilities of the carrier services.
+* Any custom allocation rules you may have configured in PRO.
+* Any allocation tags you may have supplied when the consignment was created.
+
+This page explains the following endpoints:
 
 * **[Allocate Using Default Rules](https://docs.electioapp.com/#/api/AllocateUsingDefaultRules)** - Allocates the consignment using pre-configured default rules.
 * **[Allocate Consignment With Service Group](https://docs.electioapp.com/#/api/AllocateConsignmentWithServiceGroup)** - Allocates the consignment to the cheapest carrier service in the specified Carrier Service Group.
