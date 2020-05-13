@@ -11,7 +11,7 @@ PUT https://api.electioapp.com/allocation/allocate
 
 </div>
 
-To allocate one or more consignments based on your organisation's custom allocation rules, use the **[Allocate Using Default Rules](https://docs.electioapp.com/#/api/AllocateUsingDefaultRules)** endpoint. PRO allocation rules enable you to configure business rules - such as physical package size, consignment value, and geographical availability - against individual carrier services. You can configure them via the <strong>Manage Carrier Service Rules</strong></a> page of the PRO UI. 
+To allocate one or more consignments based on your organisation's custom allocation rules, use the **[Allocate Using Default Rules](https://docs.electioapp.com/#/api/AllocateUsingDefaultRules)** endpoint. PRO enables you to configure custom allocation rules - such as valid package dimensions, maximum consignment value, and geographical availability - for individual carrier services. You can configure them via the <strong>Manage Carrier Service Rules</strong></a> page of the PRO UI. 
 
 The **Allocate Using Default Rules** endpoint can be used to allocate multiple consignments simultaneously. The request body can contain an array of one or more `{consignmentReference}`s to be allocated. 
 
