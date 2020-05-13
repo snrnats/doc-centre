@@ -1,4 +1,36 @@
-# Getting Started
+# Getting Started with PRO Consignments APIs
+
+Welcome to SortedPRO! Here you'll find a brief overview of PRO's Consignments APIs and how you can call them.
+
+---
+
+## Consignments Overview
+
+In PRO, a _consignment_ is a collection of one or more packages that are shipped from the same origin address, to the same destination address, on behalf of the same Sorted customer, using the same carrier service, on the same day. Consignments form the basis of PRO's Consignments API suite, which enables you to build flexible shipping workflows that manage a consignment's journey from customer order right through to delivery. 
+
+PRO's Consignments suite offers the following APIs:
+
+* **Allocation** - Allocates consignments to an appropriate carrier services.
+* **Carrier Services** - Returns available carrier services.
+* **Carriers** - Returns available carriers.
+* **Consignments** - Adds, gets, updates and deletes consignment information.
+* **Customs Docs** - Returns customs docs for international consignments.
+* **Delivery Options** - Returns potential delivery timeslots for consignments.
+* **Events** - Searches for specified consignment events.
+* **Labels** - Returns labels for a consignment.
+* **Manifest** - Adds consignments to the relevant carrier manifest.
+* **Orders** - Adds, gets, updates and deletes order information.
+* **Package Sizes** - Returns standardised package sizes.
+* **Packages** - Deletes a package from a consignment.
+* **Pickup Options** - Returns potential pickup locations and timeslots for a consignment.
+* **Quotes** - Returns manual delivery quotes for a consignment. 
+* **Shipping Locations** - Returns pre-configured shipping locations.
+* **Tracking** - Returns tracking information for a consignment.
+
+> <span class="note-header">More Information</span>
+>
+> * For example API call flows, see the [PRO Call Flows](/pro/api/help/flows.html) section.
+> * For API reference information, see the [API Reference](https://docs.electioapp.com/#/api/PostTrackingEvents).
 
 ## Authentication
 
