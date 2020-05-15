@@ -366,12 +366,13 @@ hr {
 }
 
 .navbar-nav li:hover {
-  border-bottom: 2px var(--colour-top-nav-link) solid;
+  background-color: var(--colour-tab-active);
 }
 
 .navbar-nav li.active,
 .navbar-nav li.active:hover {
-  border-bottom: 2px var(--colour-main) solid;
+  border: none;
+
 }
 
 .navbar-default {
@@ -656,14 +657,58 @@ ul.level1 {
   margin-bottom: 0.2em;
 }
 
-.toc .level2 > li > a:hover {
-  text-decoration: underline;
+@media all and (min-width: 768px) {
+
+    .toc .level2 > li > a:hover {
+      text-decoration: underline;
+    }
+    
+    nav#autocollapse ul.nav.level1 li:hover ul.nav.level2 {
+      display: inline;
+    }
+    
+    nav#autocollapse ul.nav.level1 {
+      position: relative;
+      display: inline-block;
+    }
+    
+    nav#autocollapse ul.nav.level2 {
+        display: none;
+        position: absolute;
+        background-color: #494B52;
+        min-width: 160px;
+        z-index: 1;
+    }
+    
+    nav#autocollapse ul.nav.level2 li {
+      margin-left: 0;
+    }
+    
+    nav#autocollapse ul.nav.level2 li a {
+      color: #f1f1f1;
+      font-size: 14px;
+      font-weight: 400;
+    }
+    
+    nav#autocollapse ul.nav.level2:hover {
+      color: var(--colour-main);
+    }
+    
 }
+
+
 
 .toc .nav > li > .expand-stub::before,
 .toc .nav > li.active > .expand-stub::before {
   content: ">";
   color: var(--colour-grey-1);
+}
+
+.nav>li>a:focus,.nav>li>a:hover {
+  text-decoration:none;
+  background-color:var(--colour-tab-active);
+  color: var(--colour-main) !important;
+  font-weight: 700 !important;
 }
 
 .toc .nav > li.active > .expand-stub::before,
