@@ -12,7 +12,7 @@ GET https://api.electioapp.com/labels/{consignmentReference}/{labelFormat}
 
 When a consignment is allocated, SortedPRO generates labels for each package in that consignment. You can retrieve these delivery labels via the **[Get Label in Format](https://docs.electioapp.com/#/api/GetLabelsinFormat)** endpoint.
 
-The **Get Labels in Format** endpoint takes a `{consignmentReference}` and `{labelFormat}` as path parameters. PRO returns all package labels associated with that consignment as a base64-encoded byte array in the format requested.
+The **Get Labels in Format** endpoint takes a `{consignmentReference}` and `{labelFormat}` as path parameters. PRO returns all package labels associated with that consignment as a base64-encoded byte array that decodes to the format requested.
 
 > <span class="note-header">Note:</span>
 > * For full reference information on the <strong>Get Labels in Format</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/GetLabelsinFormat">Get Labels in Format</a></strong> page of the API reference.
@@ -22,7 +22,7 @@ The **Get Labels in Format** endpoint takes a `{consignmentReference}` and `{lab
 
 The example shows a request to get PDF labels for a consignment with a `{consignmentReference}` of _EC-000-05B-MMA_. The file data in the response has been truncated for clarity.
 
-You would next need to decode the file's Base64 in order to view the label itself. If you are unsure how to do so, see the **[MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding)** for more information.
+You will need to decode the File's Base64 data in order to view or print the label. If you are unsure how to do so, see the **[MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding)** for more information.
 
 <div class="tab">
     <button class="staticTabButton">Example Get Labels in Format Request</button>
