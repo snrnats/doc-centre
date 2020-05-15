@@ -22,7 +22,7 @@ The **Get Labels in Format** endpoint takes a `{consignmentReference}` and `{lab
 
 The example shows a request to get PDF labels for a consignment with a `{consignmentReference}` of _EC-000-05B-MMA_. The file data in the response has been truncated for clarity.
 
-You will need to decode the File's Base64 data in order to view or print the label. If you are unsure how to do this, see the **[MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding)** for more information.
+You will need to decode the File's Base64 data in order to view or print the label. If you are unsure how to do so, see the **[MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding)** for more information.
 
 <div class="tab">
     <button class="staticTabButton">Example Get Labels in Format Request</button>
