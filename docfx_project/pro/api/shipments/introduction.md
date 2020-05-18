@@ -1,16 +1,32 @@
-# Getting Started with PRO Shipments APIs
+# Getting Started with PRO's Shipments APIs
 
 Welcome to SortedPRO! Here you'll find a brief overview of PRO's Shipments APIs and how you can call them.
 
 ---
 
-## Consignments Overview
+## Shipments API Overview
 
 PRO's Shipments functionality was introduced as an extension to the previous Consignments suite of APIs. PRO's Shipments API collection offers unparalleled flexibility, with support for on-demand collections from multiple smaller locations (e.g. a ship-from-store model) as well the regular scheduled fulfilment centre collections supported by Consignments.
 
-PRO's Shipments suite offers the following APIs:
+Shipments also offers the ability to auto-manifest with carriers, the ability to group shipments together for ease of management, and improved dangerous goods and customs functionality, among many other features.
 
-* **Allocation** - 
+> <span class="note-header">More Information:</span>
+>
+> For more information on the differences between PRO's Shipments API suite and the older Consignments API suite, see the <a href="/pro/api/shipments/consignments_vs_shipments.html">Consignments vs Shipments</a> page.
+
+PRO's Shipments APIs enable you to:
+
+* **Manage Shipments** - Create, update, clone, cancel and delete shipment records, and manually modify their shipment states where required.
+* **Allocate Shipments** - Allocate shipments to the most appropriate carrier service, allocate within a service group, manually filter services to allocate to, or allocate based on a previous delivery quote.
+* **Manage Quotes** - Create and receive delivery quotes for shipments.
+* **Get Customs Docs** - Get customs documents for allocated international shipments. 
+* **Get Labels** - Get delivery labels for an allocated shipment in either ZPL or PDF format.
+* **Manifest Shipments** - Manually manifest an individual shipment, all shipments that meet a particular query, or all shipments in a particular shipment group. 
+* **Manage Shipment Groups** - Group shipments together so they can be operated on as a single unit, and edit or delete shipment groups as required.
+* **Get Collection Notes** - Retrieve collection notes (aka a driver's manifest) by search query, or by shipment group.
+* **Track Shipments** - Return tracking updates for a given shipment. 
+
+<span class="highlight">NEED SOME SORT ODF NOTE ABOUT REACT TRACKING IN HERE</span>
 
 > <span class="note-header">More Information</span>
 >
@@ -39,49 +55,13 @@ ocp-apim-subscription-key: [qwerrtyuiioop0987654321]
 
 </div>
 
-## Specifying Request / Response Format
+## Request Headers
 
-PRO's APIs support both JSON and XML content types. You should state which content type you are sending for each API request sent to PRO. To do so, pass a `content-type` header with a value of `application/json`, `text/xml` or `application/xml` (as applicable) in your request. All other content types are invalid.
 
-You can also specify the content type that you want PRO to use in API responses. To do so, pass an `accept` header with a value of `application/json`, `text/xml`, or `application/xml` in your request. If you don't pass an `accept` header then PRO responds with `application/json`.
 
-<div class="tab">
-    <button class="requestTabLinks" onclick="openRequestTab(event, 'json')" id="defaultRequest">JSON Example</button>
-    <button class="requestTabLinks" onclick="openRequestTab(event, 'xml')">XML Example</button>
-</div>
+## Response Headers
 
-<div id="json"  class="requestTabContent">
 
-```json
-content-type: application/json
-accept: application/json
-```
-
-</div>
-
-<div id="xml"  class="requestTabContent">
-
-```xml
-content-type: application/xml
-accept: application/xml
-```
-
-</div>
-
-## Specifying API Version
-
-You should include an `electio-api-version` header specifying the API version to use in all PRO API calls. The current version is _1.1_.
-
-<div class="tab">
-    <button class="staticTabButton">Example API Version Header</button>
-</div>
-<div id="apikeyexample" class="staticTabContent">
-
-```
-electio-api-version: 1.1
-```
-
-</div>
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/copy.js"></script>
