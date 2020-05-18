@@ -80,25 +80,18 @@ You must provide an `x-api-version` header indicating the version of PRO's APIs 
 
 ## Response Headers
 
-PRO's responses may include one or more of the following headers:
+Depending on the content returned, PRO's responses may include the following headers:
 
-x-api-version 
+* `x-api-version` - The version of the API that served the request 
+* `Last-Modified` - For resources that can be updated (e.g. shipments and shipment groups) the `Last-Modified` header will include the timestamp on which the resource was last updated. 
+* `Content-Type` -  The format of the response body. This will ordinarily have the value _application/json_. 
+* `Content-Encoding` -  If you request responses in GZIP format, the `Content-Encoding` response header returns a value of _gzipped_. 
 
-The version of the API that served the request 
+## Next Steps
 
-Last-Modified 
-
-For resources that can be updated (e.g. shipment) the Last-Modified header will include the timestamp that the resource was last updated. 
-
-Content-Type 
-
-The format of the response body. This will ordinarily have the value application/json 
-
-Content-Encoding 
-
-If you request responses in gzip format, the Content-Encoding response header will indicate that the response is gzipped. 
-
-
+* Learn more about the differences between shipments and consignments: [Shipments vs Consignments](/pro/api/shipments/consignments_vs_shipments.html)
+* Learn how to create, update and delete shipments: [Managing Shipments](/pro/api/shipments/managing_shipments.html)
+* Learn how to allocate shipments to carrier services: [Allocating Shipments](/pro/api/shipments/allocating_shipments.html)
 
 
 <script src="../../scripts/requesttabs.js"></script>
