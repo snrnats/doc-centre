@@ -84,13 +84,12 @@ collection request does not succeed	collection_booking_failed
 >
 > If the date of collection for a shipment is known, this information should be populated in the shipping_date property of the shipment. This applies whether the shipment is allocated according to "per shipment mode" or "roll up mode".
 
-Customers can:
+The customer can't do anything about collections and we're going to handle it per carrier service as part of our integration
 
-* Create manual collection requests for specific shipments
-* Create manual collection requests using a query
-* Auto-manifest to on-demand carrier services via a schedule like so:
-    * Identify the shipments matching the parameters of the auto-manifest configuration
-    * Group the shipments according to the origin shipping location, shipment_type, and carrier service
-    * For each group where the shipment_type is on_demand, initiate a pickup request using the carrier service integration (see FR008).
-* Retrieve scheduled collection requests
-* Notify consumers of collection requests by shipment reference
+Andy Walton:house:  15:34
+Ah right, OK. So as far as the customer's concerned they just allocate to the on demand service and we tell them when it's getting picked up?
+
+Michael Rose  15:35
+exactly. we might not even tell them when it's going to be picked up, just that it will be
+15:35
+carriers don't all even confirm pick up requests
