@@ -2,5 +2,4 @@
 
 <span class="highlight">THESE ARE ALL JUST NOTES TO SELF AND AREN'T INTENDED FOR PUBLIC CONSUMPTION (AT LEAST, NOT IN THIS FORM)</span>
 
-### Collections
-
+I think auto manifest runs through the UI, need to confirm that though
