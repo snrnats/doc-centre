@@ -55,14 +55,7 @@ x-api-version: 1.1
 
 ### Authentication
 
-You will need to provide a valid API key in every call you make to SortedPRO. When a new user account is created, PRO generates a unique API key and allocates it to the new user. To view your API key:
-
-1. Log in to the PRO dashboard and select **Settings > Users & Roles > [User Accounts](https://www.electioapp.com/Company/UserAccounts)** to display the **User Accounts** page. A list of the user accounts that you have access to is displayed.
-2. Click the **Edit User** button for your account to display your account details.
-3. Click **Show API Key**. PRO prompts you to re-enter your UI password.
-4. Enter your password and click **Retrieve API Key** to display your API key.
-
-<span class="highlight">NEED TO CONFIRM THAT THIS IS ALL STILL RELEVANT IN THE WAKE OF UI CHANGE</span>
+You will need to provide a valid API key in every call you make to SortedPRO. When a new user account is created, PRO generates a unique API key and allocates it to the new user. You can view your API key in the PRO UI.
 
 To use your API key, include it in an `x-api-key` header when making calls to PRO. If you make an API call to PRO without including an API key, then PRO returns an error with a status code of _401 (Unauthorized)_.
 
@@ -83,7 +76,6 @@ You must provide an `x-api-version` header indicating the version of PRO's APIs 
 Depending on the content returned, PRO's responses may include the following headers:
 
 * `x-api-version` - The version of the API that served the request 
-* `Last-Modified` - For resources that can be updated (e.g. shipments and shipment groups) the `Last-Modified` header will include the timestamp on which the resource was last updated. 
 * `Content-Type` -  The format of the response body. This will ordinarily have the value _application/json_. 
 * `Content-Encoding` -  If you request responses in GZIP format, the `Content-Encoding` response header returns a value of _gzipped_. 
 

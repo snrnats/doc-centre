@@ -28,8 +28,8 @@ However, PRO hasn't lost any functionality. Shipments can also handle high volum
 
 As well as support for on-demand shipping, the enhancements to PRO's data contract have enabled us to add several additional new features to PRO. Shipments also includes:
 
-* **Shipment Groups and Collection Notes** – A shipment group is a group of one or more shipments, booked with the same carrier service, that can be operated on together. Grouping shipments fulfils several workflow needs, such as letting a driver use a collection note to sign off the shipments he’s just collected from a store, or grouping and manifesting shipments by trailer in a warehouse.            
-* **Auto-Manifest** - PRO can now automatically manifest shipments with carriers using a pre-configured schedule – you don't need to make an API call to tell it when to manifest
+* **Shipment Groups and Collection Notes** – A shipment group is a group of one or more shipments, booked with the same carrier service, that can be operated on together. Grouping shipments fulfils several workflow needs, such as letting a driver use a collection note to sign off the shipments they've just collected from a store, or grouping and manifesting shipments by trailer in a warehouse.            
+* **Auto-Manifest** - PRO can now automatically manifest shipments with carriers using a pre-configured schedule.
 * **REACT Powered Tracking** - PRO now uses Sorted's REACT product as its core tracking engine, offering improved tracking functionality including push notifications and easy-to-configure tracking pages.
 * **Dangerous Goods** – PRO's Dangerous Goods functionality has been completely overhauled, enabling you to use custom rulesets to configure which carrier services can carry which types of dangerous goods. This is especially useful if you have have non-standard agreements with carriers.
 * **Label Extension** - PRO now offers improved support for label extensions, including enabling you to select whether you want standard or extended labels are part of your API call.
