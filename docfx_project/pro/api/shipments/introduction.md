@@ -12,7 +12,7 @@ Shipments also offers the ability to auto-manifest with carriers, the ability to
 
 > <span class="note-header">More Information:</span>
 >
-> For more information on the differences between PRO's Shipments API suite and the older Consignments API suite, see the <a href="/pro/api/shipments/consignments_vs_shipments.html">Consignments vs Shipments</a> page.
+> For more information on the differences between PRO's Shipments API suite and the older Consignments API suite, see the [Consignments vs Shipments](/pro/api/shipments/consignments_vs_shipments.html) page.
 
 PRO's Shipments APIs enable you to:
 
@@ -26,12 +26,13 @@ PRO's Shipments APIs enable you to:
 * **Get Collection Notes** - Retrieve collection notes (aka a driver's manifest) by search query, or by shipment group.
 * **Track Shipments** - Return tracking updates for a given shipment. 
 
-<span class="highlight">NEED SOME SORT ODF NOTE ABOUT REACT TRACKING IN HERE</span>
+<span class="highlight">NEED SOME SORT OF NOTE ABOUT REACT TRACKING IN HERE</span>
 
 > <span class="note-header">More Information</span>
 >
 > * For example API call flows, see LINK HERE.
 > * For API reference information, see LINK HERE.
+
 
 ## Making an API Request in PRO
 
