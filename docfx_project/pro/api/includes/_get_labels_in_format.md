@@ -10,7 +10,7 @@ GET https://api.electioapp.com/labels/{consignmentReference}/{labelFormat}
 ```
 </div>
 
-When a consignment is allocated, SortedPRO generates labels for each package in that consignment. You can retrieve these delivery labels via the **[Get Label in Format](https://docs.electioapp.com/#/api/GetLabelsinFormat)** endpoint.
+When a consignment is allocated, SortedPRO generates labels for each package in that consignment. You can retrieve these delivery labels via the **[Get Labels in Format](https://docs.electioapp.com/#/api/GetLabelsinFormat)** endpoint.
 
 The **Get Labels in Format** endpoint takes a `{consignmentReference}` and `{labelFormat}` as path parameters. PRO returns all package labels associated with that consignment as a base64-encoded byte array that decodes to the format requested.
 
