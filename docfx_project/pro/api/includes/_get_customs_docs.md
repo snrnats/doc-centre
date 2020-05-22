@@ -22,7 +22,7 @@ The **Get Customs Documents** endpoint takes a `{consignmentReference}` as a pat
 
 This example shows a **Get Customs Documents** response for a single-package consignment. PRO has returned a commercial invoice for the consignment and a CN22 document for the package.
 
-You will need to decode the File's Base64 data in order to view or print the documents. If you are unsure how to do so, see the **[MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding)** for more information.
+You will need to decode the file's Base64 data in order to view or print the documents. If you are unsure how to do so, see the **[MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding)** for more information.
 
 <div class="tab">
     <button class="staticTabButton">Get Customs Documents Example Request</button>
