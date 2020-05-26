@@ -20,6 +20,8 @@
         "files": [
           "pro/reports/**.md",
           "pro/reports/toc.yml",
+          "pro/release-notes/**.md",
+          "pro/release-notes/toc.yml",          
           "toc.yml",
           "*.md"
         ]
