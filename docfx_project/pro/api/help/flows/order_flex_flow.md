@@ -12,7 +12,7 @@ The **Order Flex** flow is useful to your business if:
 
 * You operate multiple warehouses / fulfilment centres, or run a customer marketplace.
 * You use drop ship vending.
-* You use a static delivery promise (e.g. Order by 5pm to get next day delivery).
+* You use a static delivery promise (e.g. "Order by 5pm to get next day delivery").
 
 There are five steps to the flow:
 
