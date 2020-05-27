@@ -10,6 +10,9 @@
   - name: Reports
     href: pro/reports/
     homepage: pro/reports/index.md
+  - name: Release Notes
+    href: pro/release-notes/
+    homepage: pro/release-notes/index.md  
 - name: REACT 
   href: /react/
   items:
