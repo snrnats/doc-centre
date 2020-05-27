@@ -13,7 +13,11 @@
 
 Once the customer has selected an available option, you'll need to record their choice in SortedPRO via the **[Select Option](https://docs.electioapp.com/#/api/SelectOption)** endpoint. 
 
-PRO creates and allocates a consignment using the details supplied previously in the delivery options call, and returns; alink to the consignment resource that was allocated, a summary of the carrier service the consignment was allocated to, a link to the relevant package labels, and a `ConsignmentLegs` array indicating how many legs the consignment will need. Where a shipment would need multiple legs to complete, the `ConsignmentLegs` array shows tracking details for each individual leg. (not sure legs actually work in consignments so i think remove the last sentance here)
+PRO creates and allocates a consignment using the details supplied previously in the delivery options call, and returns: 
+
+* A link to the consignment resource that was allocated
+* A summary of the carrier service the consignment was allocated to
+* A link to the relevant package labels
 
 > <span class="note-header">Note:</span>
 > * For full reference information on the <strong>Select Option</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/SelectOption">Select Option</a></strong> page of the API reference.
