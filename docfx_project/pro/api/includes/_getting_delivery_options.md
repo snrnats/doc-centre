@@ -11,15 +11,15 @@
 
 </div>  
 
-In the context of SortedPRO, a "delivery option" is a combination of a delivery date, a start time and an end time which form a delivery promise that a consignment can be delivered to. The currently recommended carrier service that can meet the delivery promise, the delivery cost and required shipping date to meet the promise, complete the data for each delivery option.
+In the context of SortedPRO, a "delivery option" is a combination of a delivery date, a start time and an end time. These details form a delivery promise for a consignment. PRO recommends a carrier service that can meet the delivery promise, the delivery cost, and the required shipping date, completing the data for each delivery option.
 
 The **[Delivery Options](https://docs.electioapp.com/#/api/DeliveryOptions)** endpoint takes the details of the (as yet uncreated) consignment. As a minimum, PRO requires you to send package, origin address and destination address data in order to return delivery options. 
 
-The **Delivery Options** endpoint returns an array of `{DeliveryOptions}` objects. Each `{DeliveryOptions}` object contains details of a particular delivery option that is available to take a consignment with the details you passed in the request. PRO always returns the cheapest carrier service for each delivery promise, unless using the cheapest service would conflict with existing business rules.
+The endpoint returns an array of `{DeliveryOptions}` objects. Each `{DeliveryOptions}` object contains details of a delivery option that can be used to take a consignment with the details you passed in the request. PRO always returns the cheapest carrier service for each delivery promise, unless using the cheapest service would conflict with existing business rules.
 
-Delivery options will be returned for a maximum of fourteen days forwards from today if no DeliveryDate is provided in the request. If a DeliveryDate is provided, the resulting array will be limited to delivery options up to and including the supplied date.
+If you do not provide a `DeliveryDate` in the request, then PRO returns delivery options for a maximum of fourteen days from the current date. If you provide a `DeliveryDate`, then PRO provides options up to and including the supplied date.
 
-The delivery options available for a given consignment can change as time passes. This is primarily due to differing collection times the carriers have at each shipping location.
+The delivery options available for a given consignment can changeover time. This is primarily due to differing carrier collection times at each shipping location.
 
 > <span class="note-header">Note:</span>
 > * For full reference information on the <strong>Delivery Options</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/DeliveryOptions">Delivery Options</a></strong> page of the API reference.
