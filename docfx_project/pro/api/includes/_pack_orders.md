@@ -97,4 +97,5 @@ The example shows a **Pack Order** request to create a consignment with one pack
 > <span class="note-header">Note:</span>
 >  For full reference information on the <strong>Pack Order</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/PackOrder">Pack Order</a></strong> page of the API reference.
 
+The Pack Order endpoint can be called multiple times for the same order and items. This allows for split picks and short picks to backorder in an operation. PRO does not validate the total quantity of an item on the resulting consignments to the quantity initially regitered on the order.
 
