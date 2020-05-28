@@ -11,9 +11,9 @@
 
 </div>    
 
-In the context of SortedPRO, a "pickup option" is a delivery date, pickup location and a carrier service that could meet that delivery promise for a consignment. The **[Pickup Options](https://docs.electioapp.com/#/api/PickupOptions)** endpoint takes the details of the (as-yet uncreated) consignment and returns available pickup options.
+In the context of PRO, a "pickup option" is a combination of a delivery promise (i.e. a delivery date and pickup location), and a carrier service that could meet that delivery promise for a consignment. The **[Pickup Options](https://docs.electioapp.com/#/api/PickupOptions)** endpoint takes the details of an as-yet uncreated consignment and returns available pickup options.
 
-At a minimum, SortedPRO requires you to send the following data in order to receive pickup options for a potential consignment:
+At a minimum, PRO requires you to send the following data in order to receive pickup options for a potential consignment:
 
 * **Distance** - The maximum distance from the destination address that you want to receive results for.
 * **Max Results** - The maximum number of results that you want to receive. This should be a value between one and 50.
@@ -21,11 +21,9 @@ At a minimum, SortedPRO requires you to send the following data in order to rece
 * **Origin Address**
 * **Destination Address**
 
-The **Pickup Options** endpoint returns a `{Locations}` array containing pertinant details for each pickup location that has the capability to accept your consignment. The location's full address, distance from destination address, latitude and longitude, and opening and closing times are provided for you to surface the information in the checkout which enables your customers to chose the most convenient option for them. 
+The **Pickup Options** endpoint returns a `{Locations}` array containing details of each pickup location that can accept your consignment. PRO provides the location's full address, distance from destination address, latitude / longitude, and opening and closing times, enabling you to surface this information at checkout so that your customers can choose a convenient option. 
 
-Each `{Location}` object contains a `{DeliveryOptions}` array listing the delivery promises that are available to that location for the proposed consignment. Each `{DeliveryOptions}` includes; a delivery date, a start and end time, the carrier and service, the cost of delivery and the latest shipping date and time possible to meet the promise.
-
-The pickup options available for a given consignment can change over time and should therefore be treated an dynamic. This is primarily due to differnet carriers collecting at differnet times at each shipping location or the pickup locations provider updating the list of active locations. Pickup locations are classified as either finite or infinate capacity. In the case of finite capcity the locations provider may disable or enable a location at any time as demand for the locatation dictates. Sorted strongly advise that location details are never cached for re-use in the web store or checkout due to the dynamic nature of the information.
+Each `{Location}` object contains a `{DeliveryOptions}` array listing the delivery promises available to that location for the proposed consignment. 
 
 > <span class="note-header">More Information:</span>
 > * For full reference information on the <strong>Pickup Options</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/PickupOptions">Pickup Options</a></strong> page of the API reference.
