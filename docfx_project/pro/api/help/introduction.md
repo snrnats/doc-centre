@@ -10,7 +10,7 @@ In PRO, a _consignment_ is a collection of one or more packages that are shipped
 
 PRO's Consignments suite offers the following APIs:
 
-* **Allocation** - Allocates consignments to an appropriate carrier services.
+* **Allocation** - Allocates consignments to an appropriate carrier service.
 * **Carrier Services** - Returns available carrier services.
 * **Carriers** - Returns available carriers.
 * **Consignments** - Adds, gets, updates and deletes consignment information.
