@@ -34,17 +34,22 @@ Providing extra information can help you to improve the relevance of the options
 
 Either the consignment's `origin` address, its `destination` address, or both, must include a valid <code>ShippingLocationReference</code>. For information on how to obtain a list of your organisation's shipping locations, see the <strong><a href="https://docs.electioapp.com/#/api/GetShippingLocations">Get Shipping Locations</a></strong> page of the API reference.
 
-The **Pickup Options** endpoint returns a `{Locations}` array listing all the pickup locations that can meet your request criteria. Each `{Location}` object contains a `{DeliveryOptions}` array listing the delivery options that are available to that location for the proposed consignment, and the opening times of the location itself.
+The **Pickup Options** endpoint returns a `{Locations}` array listing all the pickup locations that can meet your request criteria. Each `{Location}` object contains a `{DeliveryOptions}` array listing the delivery options that are available to that location for the proposed consignment.
 
 Each `{DeliveryOptions}` object contains details of a particular option that could be used to deliver the consignment to the relevant `{location}`, including:
 
 * **Reference** - A unique identifier for the option, used when selecting options in the next step.
-* **Dates and Delivery Windows**
+* **Delivery Date**
+* **Start** and **End Time**
 * **Carrier Service**
-* **Price**
-* **Allocation Cutoff** - The option's expiry time. If the option is not used by this time, it is rendered invalid.
-* **Operational Cutoff** - 	The operational cut off date as specified by the fulfilling shipping location.
-* **Service Direction**
+* **Cost of Delivery**
+* The latest **Shipping Date** and **Time** possible to meet the promise.
+
+The pickup options available for a given consignment can change over time. This is primarily due to different carriers collecting at different times at each shipping location, or the pickup locations provider updating the list of active locations. 
+
+> <span class="note-header">Note:</span>
+>
+> Pickup locations are classified as having either finite or infinite capacity. For locations with finite capacity, PRO may disable or enable a location at any time in line with demand for the location. Sorted strongly advise that location details are never cached for re-use in the web store or checkout due to the dynamic nature of this information.
 
 > <span class="note-header">More Information:</span>
 >
