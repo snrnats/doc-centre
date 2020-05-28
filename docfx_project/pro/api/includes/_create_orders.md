@@ -13,7 +13,7 @@
 
 The **[Create Order](https://docs.electioapp.com/#/api/CreateOrder)** endpoint enables you to record details of a customer's order in SortedPRO. 
 
-At a minimum, the **Create Order** endpoint requires you to send package, origin address, and destination address data.
+As a minimum, the **Create Order** endpoint requires you to send package and item details, origin address, and destination address data.
 
 > <span class="note-header">Note:</span>
 > * For full reference information on the <strong>Create Order</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/CreateOrder">Create Order</a></strong> page of the API reference.
@@ -219,4 +219,4 @@ The example shows the creation of a fairly standard order. In this case, we have
 
 </div>  
 
-After receiving the request, PRO returns an `{orderReference}` of _EO-000-002-0TS_. That `{orderReference}` will come in useful later, as we will need it when we pack the order into shippable consignments.
+After receiving the request, PRO returns an `{orderReference}` of _EO-000-002-0TS_. You should store the `{orderReference}`, as it will be required later when we pack the order into shippable consignments.

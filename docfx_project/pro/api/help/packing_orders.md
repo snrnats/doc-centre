@@ -16,7 +16,7 @@ Each item must be identified by a `Reference`, an `ItemReferenceProvidedByCustom
 >
 > PRO validates the items on a <strong>Pack Order</strong> request against its associated order. For example, the system will return an error if you make a <strong>Pack Order</strong> request including an item with a <code>Sku</code> of <em>12345</em> if there is no item with that <code>Sku</code> on the corresponding order.
 >
-> However, PRO does not validate the items on a <strong>Pack Order</strong> request against previous <strong>Pack Order</strong> requests. As such, you should be careful to ensure that you do not pack the same item into more than one consignment.
+> However, PRO does not validate the items on a <strong>Pack Order</strong> request against previous <strong>Pack Order</strong> requests. The Pack Order endpoint can be called multiple times for the same order and items. This allows for split picks and short picks to backorder in an operation.
 
 Once SortedPRO has received a **Pack Order** request, it creates the consignment and returns the relevant `{consignmentReference}`. The consignment's details are taken from the body of the **Pack Order** request. Fields that are not part of the request (because they are either NULL or not part of the **Pack Order** request structure) are populated from the details of the specified order.
 
