@@ -12,8 +12,7 @@ The **Order Flex** flow is useful to your business if:
 
 * You operate multiple warehouses / fulfilment centres, or run a customer marketplace.
 * You use drop ship vendors.
-* You use a static delivery promise (e.g. Order by 5pm to get next day delivery). not sure about this point?? Why is it useful for this?
-* You supply a large range of products with large vaiations in weights and dimensions.
+* You supply a range of products with large variations in weights and dimensions.
 
 There are five steps to the flow:
 
