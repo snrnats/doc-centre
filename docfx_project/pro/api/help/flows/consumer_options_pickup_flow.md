@@ -6,7 +6,7 @@
    </a>
 </p>
 
-The **Consumer Options** flow can also be used to power Pick Up / Drop-Off (PUDO) services. By integrating PRO's **Pickup Options** endpoint, you can build click-and-collect functionality that lets your customers select a convenient pickup location and collection date that fits their need.
+The **Consumer Options** flow can also be used to power Pick Up / Drop-Off (PUDO) services. By integrating PRO's **Pickup Options** endpoint, you can build click-and-collect functionality that lets your customers select a pickup location and collection date.
 
 There are four steps to the flow:
 
