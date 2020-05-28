@@ -116,7 +116,7 @@ The example shows a request to manifest three consignments. The response indicat
 
 ## Manifesting Consignments Using a Query
 
-The **Manifest Consignments From Query** endpoint enables you to manifest consignments using a query, rather than directly providing consignment references. 
+The **Manifest Consignments From Query** endpoint enables you to manifest consignments using a query, rather than by providing consignment references directly. 
 
 To call **Manifest Consignments From Query**, send a `POST` request to `https://api.electioapp.com/consignments/manifestFromQuery`. The body of the request should contain consignment search criteria. You can use the following query fields:
 
