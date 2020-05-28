@@ -310,7 +310,7 @@ Both **Add Address To Order** and **Update Address On Order** return an empty co
 
 * Learn how to pack orders into consignments at the [Creating Consignments From Orders](/pro/api/help/packing_orders.html) page.
 * Learn how to retrieve delivery options at the [Getting Delivery Options](/pro/api/help/getting_delivery_options.html) page.
-* Learn how to allocate consignments at the [Allocating Consignments to Carriers](/api/help/allocating_consignments_to_carriers.html) page.
+* Learn how to allocate consignments at the [Allocating Consignments to Carriers](/pro/api/help/allocating_consignments_to_carriers.html) page.
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>

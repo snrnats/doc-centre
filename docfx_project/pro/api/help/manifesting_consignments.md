@@ -415,9 +415,9 @@ Once the request is received, PRO returns the specified manifest file as a base-
 
 ## Next Steps
 
-* Learn how to track consignments via PRO's APIs at the [Tracking Consignments](/api/help/tracking_consignments.html) page.
-* Learn how to get and print delivery labels at the [Getting Labels](/api/help/getting_labels.html) page.
-* Learn how to deallocate a consignment at the [Deallocating Consignments](/api/help/deallocating_consignments.html)page.
+* Learn how to track consignments via PRO's APIs at the [Tracking Consignments](/pro/api/help/tracking_consignments.html) page.
+* Learn how to get and print delivery labels at the [Getting Labels](/pro/api/help/getting_labels.html) page.
+* Learn how to deallocate a consignment at the [Deallocating Consignments](/pro/api/help/deallocating_consignments.html)page.
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>

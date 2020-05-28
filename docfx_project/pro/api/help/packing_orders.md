@@ -115,8 +115,8 @@ The example shows a **Pack Order** request to create a consignment with one pack
 ## Next Steps
 
 * Learn how to retrieve delivery options at the [Getting Delivery Options](/pro/api/help/getting_delivery_options.html) page.
-* Learn how to retrieve a consignment's customs documentation and invoices at the [Getting Customs Docs And Invoices](/api/help/getting_customs_docs_and_invoices.html) page.
-* Learn how to track consignments at the [Tracking Consignments](/api/help/tracking_consignments.html) page.
+* Learn how to retrieve a consignment's customs documentation and invoices at the [Getting Customs Docs And Invoices](/pro/api/help/getting_customs_docs_and_invoices.html) page.
+* Learn how to track consignments at the [Tracking Consignments](/pro/api/help/tracking_consignments.html) page.
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>
