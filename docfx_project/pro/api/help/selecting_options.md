@@ -94,7 +94,6 @@ Once it has received the **Select Delivery Option as an Order** request, PRO use
 > <span class="note-header">More Information:</span>
 >
 > * For full reference information on the <strong>Select Delivery Option as an Order</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/SelectDeliveryOptionasanOrder">Select Delivery Option as an Order</a></strong> page of the API reference.
-> * For an example call flow showing options being selected as orders, see the [Consumer Options Flex](/pro/api/help/flows/consumer_options_flex_flow.html) flow page.
 
 ### Select Option As Order Example
 
