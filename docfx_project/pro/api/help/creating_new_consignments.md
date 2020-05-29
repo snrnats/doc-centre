@@ -148,6 +148,10 @@ All PRO consignments have a `{consignmentState}`, indicating the point in the de
 
 The **Create Consignments** endpoint isn't the only PRO endpoint that can generate consignments. You can also create consignments via the **Delivery Options** API, which enables you to get a list of delivery options for a potential consignment that you can present to your customer at checkout. When you select the required option, PRO automatically creates and allocates a new consignment without requiring you to make additional API calls.
 
+> <span class="note-header">Note:</span>
+>
+> Access to PRO's delivery and pickup option endpoints requires a SortedHERO license. This component is sold separately to the main SortedPRO product. 
+
 To create a consignment in this way, you'll need to make two API calls: 
 
 1. Call the **Delivery Options** endpoint. The structure of the **Delivery Options** request is very similar to that of the **Create Consignment** request. However, rather than simply creating a consignment from the information, PRO instead returns a list of potential delivery options for the (as yet uncreated) consignment. Each delivery option represents a delivery date and time, and a carrier services that can fulfil the delivery of the consignment in line with that date and time. 
