@@ -11,7 +11,9 @@ The **Allocate Using Default Rules** and **Allocate Consignments** endpoints ena
 PRO uses the following selection process when allocating via these endpoints:
 
 1. **Who can deliver?** - First, PRO compiles a list of all carrier services that could potentially take the consignment (that is, configured and enabled services that ship to the delivery address and could meet any specified delivery promise).
+
 2. **Who meets the allocation rules?** - Next, PRO creates a final shortlist of carrier services by eliminating any services that do not meet your organisation's own allocation rules. For information on using allocation rules, see the [What Is An Allocation Rule?](/pro/api/help/allocating_consignments.html#what-is-an-allocation-rule) section of the [Allocating Consignments To Carriers](/pro/api/help/allocating_consignments.html) page.
+
 3. **Who is cheapest?** - Finally, PRO allocates the consignment to the cheapest service on the shortlist.
 
 ## Allocating Multiple Consignments at Once
