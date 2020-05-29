@@ -1,7 +1,6 @@
 {{- if .Values.ingress.enabled -}}
 {{- $fullName := include "sorted-docs.fullname" . -}}
 {{- $serviceName := .Values.serviceName -}}
-{{- $proIngressName := .Values.ingress.names.pro }}
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
@@ -13,7 +12,7 @@ metadata:
     chart: {{ template "sorted-docs.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
-  {{- with .Values.ingress.annotations.pro }}
+  {{- with .Values.ingress.annotations }}
   annotations:
     {{- toYaml . | nindent 4 }}
   {{- end }}
@@ -29,12 +28,15 @@ spec:
   {{- end }}
 {{- end }}
   rules:
-  {{- range .Values.ingress.hosts.pro }}
+  {{- range .Values.ingress.hosts }}
     - host: {{ .host | quote }}
       http:
         paths:
-        - backend:
-            serviceName: {{ $serviceName }}
-            servicePort: http
+        {{- range .paths }}
+          - path: {{ . }}
+          - backend:
+              serviceName: {{ $serviceName }}
+              servicePort: http
+        {{- end }}
   {{- end }}
 {{- end }}
