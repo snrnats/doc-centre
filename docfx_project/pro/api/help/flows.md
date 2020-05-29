@@ -20,10 +20,6 @@ We will cover:
 
    The **[Order Flex](./flows/order_flex_flow.md)** flow is used when you can't guarantee that all parts of a customer's order will be picked, packed and dispatched from the same place at the same time. PRO can generate multiple consignments from a single customer order where required.
 
-* **Using delivery options to create a pack order flow**
-
-   The **[Consumer Options Flex](./flows/consumer_options_flex_flow.md)** flow is used when you can't guarantee that all parts of a customer's order will be picked, packed and dispatched from the same place at the same time, _and_ you want to present delivery options to your customer at point of purchase.
-
 * **Obtaining and selecting delivery quotes**
 
    The **[Quotes](./flows/quotes_flow.md)** flow is used to obtain a full list of potential delivery services for a consignment. It is often used to validate a consignment's detail or to enable a customer service operator to get manual quotes for a customer.

@@ -164,7 +164,6 @@ You can also generate consignments from pickup options. The process is the same 
 >
 > * For a full user guide on working with delivery and pickup options, including further information on selecting options, see the <a href="/pro/api/help/using_delivery_and_pickup_options.html">Using Delivery and Pickup Options</a> section.
 > * For reference information on the Delivery Options and Pickup Options APIs, see the <a href="https://docs.electioapp.com/#/api/DeliveryOptions">API reference</a>.
-> * For worked examples showing an order being created from delivery options, see the <a href="/pro/api/help/flows/consumer_options_flex_flow.html">Consumer Options Flex</a> example call flow.
 
 ## Creating Consignments From Orders
 
@@ -187,7 +186,7 @@ To create a consignment in this way, you'll need to make two API calls:
 >
 > * For a full user guide on working with orders, see the <a href="/pro/api/help/creating_new_orders.html">Creating New Orders</a> and <a href="/pro/api/help/managing_existing_orders.html">Managing Existing Orders</a> page.
 > * For reference information on the Orders API, see the <a href="https://docs.electioapp.com/#/api/CreateOrder">API reference</a>.
-> * For worked examples showing consignments being created from orders, see the <a href="/pro/api/help/flows/order_flex_flow.html">Order Flex</a> and <a href="/pro/api/help/flows/consumer_options_flex_flow.html">Consumer Options Flex</a> call flow documents.
+> * For worked examples showing consignments being created from orders, see the <a href="/pro/api/help/flows/order_flex_flow.html">Order Flex</a> call flow page.
 
 ## Next Steps
 
