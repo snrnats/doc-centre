@@ -150,6 +150,10 @@ The **Create Orders** endpoint isn't the only PRO endpoint that can generate ord
 
 Creating orders in this way lets you provide front-end delivery options in circumstances where you cannot guarantee that the contents of your customer's online basket will map directly to a single consignment (and so first need to create an order that you can pack into consignments). For example, you might operate more than one warehouse and so may need to ship some orders in multiple consignments.
 
+> <span class="note-header">Note:</span>
+>
+> Access to PRO's delivery and pickup option endpoints requires a SortedHERO license. This component is sold separately to the main SortedPRO product. 
+
 To create an order from delivery options, you'll need to make two API calls: 
 
 1. Call the **Delivery Options** endpoint. The structure of the **Delivery Options** request is very similar to that of the **Create Order** request. However, rather than simply creating an order from the information, PRO instead returns a list of potential delivery options for the (as yet uncreated) order. Each delivery option represents a delivery date and time, and a suitable carrier service. 

@@ -15,14 +15,14 @@ PRO's Consignments suite offers the following APIs:
 * **Carriers** - Returns available carriers.
 * **Consignments** - Adds, gets, updates and deletes consignment information.
 * **Customs Docs** - Returns customs docs for international consignments.
-* **Delivery Options** - Returns potential delivery timeslots for consignments.
+* **Delivery Options** - Returns potential delivery timeslots for consignments. Access to PRO's delivery option endpoints requires a SortedHERO license. This component is sold separately to the main SortedPRO product. 
 * **Events** - Searches for specified consignment events.
 * **Labels** - Returns labels for a consignment.
 * **Manifest** - Adds consignments to the relevant carrier manifest.
 * **Orders** - Adds, gets, updates and deletes order information.
 * **Package Sizes** - Returns standardised package sizes.
 * **Packages** - Deletes a package from a consignment.
-* **Pickup Options** - Returns potential pickup locations and timeslots for a consignment.
+* **Pickup Options** - Returns potential pickup locations and timeslots for a consignment. Access to PRO's pickup option endpoints requires a SortedHERO license. This component is sold separately to the main SortedPRO product. 
 * **Quotes** - Returns manual delivery quotes for a consignment. 
 * **Shipping Locations** - Returns pre-configured shipping locations.
 * **Tracking** - Returns tracking information for a consignment.
