@@ -20,15 +20,15 @@ PRO's Tracking API has three endpoints:
 
 Tracking events are informational messages returned from carriers that provide details about the status of the consignment. Each tracking event contains the following properties:
 
-* `TimeStamp` - The time and date that the tracking event occurred
-* `Code` - A unique identifier for the type of tracking event (for example "Delivered")
-* `Description` - A description of the tracking event
-* `SignedBy` - The name of the person who signed for the package (if applicable)
-* `Location` - The location of the tracking event
+* `TimeStamp` - The time and date that the tracking event occurred.
+* `Code` - A unique identifier for the type of tracking event (for example "Delivered").
+* `Description` - A description of the tracking event.
+* `SignedBy` - The name of the person who signed for the package (if applicable).
+* `Location` - The location of the tracking event.
 
 PRO integrates with many carriers, and each carrier provides tracking events in different formats. As such, PRO translates all tracking events into a standard format, regardless of carrier service selected.
 
-A consignment's current `ConsignmentState` is derived from these tracking events. For example, a "Delivered" tracking event will change the state of the relevant consignment to "Delivered".
+A consignment's current `ConsignmentState` is derived from these tracking events. For example, a "Delivered" tracking event will change the state of the relevant consignment to _Delivered_.
 
 > <span class="note-header">More Information:</span>
 >
