@@ -27,8 +27,8 @@ To call the **Pickup Options** endpoint, send a `POST` request to `https://api.e
 * Shipping and delivery dates.
 * Customs documentation.
 * The consignment's direction of travel.
-* Metadata. PRO metadata enables you to record additional data about a consignment in custom fields. For more information on using metadata in PRO, see the **[Metadata](/api/flows/moreInfo.html#metadata)** section of the **More Information** page.
-* Tags. Allocation tags enable you to filter the list of carrier services that a particular consignment could be allocated to. For more information on allocation tags, see the **[Tags](/api/flows/moreInfo.html#tags)** section of the **More Information** page.
+* Metadata. PRO metadata enables you to record additional data about a consignment in custom fields. For more information on using metadata in PRO, see the [Metadata](/pro/api/help/metadata.html) page.
+* Tags. Allocation tags enable you to filter the list of carrier services that a particular consignment could be allocated to. For more information on allocation tags, see the [Tags](/pro/api/help/tags.html) page.
 
 Providing extra information can help you to improve the relevance of the options returned, and means that any consignments or orders you generate from an option will be populated with richer data.
 
@@ -333,7 +333,7 @@ PRO returns one location that meets the requested criteria, and three options fo
 
 Note the `{Reference}` for each pickup option. When the customer selects their preferred delivery option you will need to pass the relevant `{Reference}` back to PRO via the **Select Option** endpoint.
 
-At this point, you would present some or all of the options returned to your customer via your site or app. For information on how to handle the choice the customer makes, see the [Selecting Options](/pro/api/help/selecting_options.md) page.
+At this point, you would present some or all of the options returned to your customer via your site or app. For information on how to handle the choice the customer makes, see the [Selecting Options](/pro/api/help/selecting_options.html) page.
 
 ## Next Steps
 
