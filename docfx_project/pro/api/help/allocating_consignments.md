@@ -8,7 +8,7 @@ Once you've created a consignment, you'll need to allocate it to a carrier servi
 
 In the context of SortedPRO, **allocation** is the process of selecting the carrier service that will be used to deliver a consignment. Allocation is a key part of all PRO workflows, as a consignment cannot be shipped if it has not previously been allocated to a suitable carrier service.
 
-> <span class="note=header">Note:</span>
+> <span class="note-header">Note:</span>
 >
 > You can only allocate consignments that are in a consignment state of either _Unallocated_ or _Allocation Failed_. If you attempt to allocate a consignment that is not in one of those states, PRO returns an error.
 
@@ -24,7 +24,7 @@ PRO offers the following allocation endpoints:
     </tr>
     <tr>
         <td>
-            <p><a href="/api/help/allocating_using_default_allocation_rules.html">Allocate Using Default Rules</a></p>
+            <p><a href="/pro/api/help/allocating_using_default_allocation_rules.html">Allocate Using Default Rules</a></p>
             <p><pre>PUT https://api.electioapp.com/allocation/allocate</pre></p>
         </td>
         <td>Allocates one or more consignments based on your organisation's custom allocation rules</td>
@@ -32,7 +32,7 @@ PRO offers the following allocation endpoints:
     </tr>
     <tr>
         <td width="55%">
-            <p><a href="/api/help/allocating_using_default_allocation_rules.html">Allocate Consignment</a></p> 
+            <p><a href="/pro/api/help/allocating_using_default_allocation_rules.html">Allocate Consignment</a></p> 
             <p><pre>PUT https://api.electioapp.com/allocation/{consignmentReference}/allocatewithcheapestquote</pre></p>
         </td>
         <td width="33%">Allocates a single consignment to the cheapest available carrier service</td>
@@ -40,7 +40,7 @@ PRO offers the following allocation endpoints:
     </tr>        
     <tr>
         <td>
-            <p><a href="/api/help/allocating_via_service_group.html">Allocate Consignment With Service Group</a></p>
+            <p><a href="/pro/api/help/allocating_via_service_group.html">Allocate Consignment With Service Group</a></p>
             <p><pre>PUT https://api.electioapp.com/allocation/{consignmentReference}/allocatewithservicegroup/{mpdCarrierServiceGroupReference}</pre></p>
         </td>
         <td>Allocates a consignment to the cheapest available carrier service in a particular carrier service group</td>
@@ -48,7 +48,7 @@ PRO offers the following allocation endpoints:
     </tr>
     <tr>
         <td>
-            <p><a href="/api/help/allocating_to_a_specific_carrier_service.html">Allocate With Carrier Service</a></p>
+            <p><a href="/pro/api/help/allocating_to_a_specific_carrier_service.html">Allocate With Carrier Service</a></p>
             <p><pre>PUT https://api.electioapp.com/allocation/allocatewithcarrierservice</pre></p>
         </td>
         <td>Allocates one or more consignments to a specific carrier service</td>
@@ -56,7 +56,7 @@ PRO offers the following allocation endpoints:
     </tr>
     <tr>
         <td>
-            <p><a href="/api/help/allocating_to_a_specific_quote.html">Allocate With Quote</a></p>
+            <p><a href="/pro/api/help/allocating_to_a_specific_quote.html">Allocate With Quote</a></p>
             <p><pre>PUT https://api.electioapp.com/allocation/{consignmentReference}/Route parameter: {consignmentReference}allocatewithquote/{quoteReference}</pre></p>
         </td>
         <td>Allocates an individual consignment based on a specific delivery quote from a carrier</td>
@@ -249,13 +249,11 @@ In the example, a consignment with a `{consignmentReference}` of _EC-000-05B-MMA
 
 ## Allocation Section Contents
 
-* [Viewing Available Carrier Services](/api/help/viewing_available_carrier_services.html) - Explains how to get a list of the carriers and services available with your subscription.
-* [Allocating Consignments To The Cheapest Quote](/api/help/allocating_to_the_cheapest_quote.html) - Explains how to allocate a consignment to the cheapest eligible quote.
-* [Allocating to a Specific Carrier Service](/api/help/allocating_to_a_specific_carrier_service.html) - Explains how to allocate a consignment to a specific carrier service.
-* [Allocating Via Service Group](/api/help/allocating_via_service_group.html) - Explains how to allocate a consignment to the cheapest available service in the specific carrier service group.
-* [Allocating Using Default Rules](/api/help/allocating_using_default_rules.html) - Explains how to allocate a consignment based on custom business rules.
-* [Allocating to a Specific Quote](/api/help/allocating_to_a_specific_quote.html) - Explains how to allocate a consignment based on a specific delivery quote from a carrier.
-* [Deallocating Consignments](/api/help/deallocating_consignments.html) - Explains how to return a consignment to a deallocated state.
+* [Allocating to a Specific Carrier Service](/pro/api/help/allocating_to_a_specific_carrier_service.html) - Explains how to allocate a consignment to a specific carrier service.
+* [Allocating Via Service Group](/pro/api/help/allocating_via_service_group.html) - Explains how to allocate a consignment to the cheapest available service in the specific carrier service group.
+* [Allocating Using Default Rules](/pro/api/help/allocating_using_default_allocation_rules.html) - Explains how to allocate a consignment based on custom business rules.
+* [Allocating to a Specific Quote](/pro/api/help/allocating_to_a_specific_quote.html) - Explains how to allocate a consignment based on a specific delivery quote from a carrier.
+* [Deallocating Consignments](/pro/api/help/deallocating_consignments.html) - Explains how to return a consignment to a deallocated state.
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>

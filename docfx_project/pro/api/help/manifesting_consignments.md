@@ -1,12 +1,12 @@
 # Manifesting Consignments
 
-Once you've created a consignment and allocated it to a carrier service, you're ready to manifest it. This page explains how to manifest consignments, how to view existing customer manifests, and how to set a consignment as ready to ship.
+Once you've created a consignment and allocated it to a carrier service, you're ready to manifest it. This page explains how to manifest consignments, how to view existing customer manifests, and how to set a consignment as _Ready to Ship_.
 
 ---
 
 ## Manifesting Overview
 
-In the context of SortedPRO, the term **manifesting** refers to advising the carrier that the consignment in question needs to be collected from the shipper. It is the final step of most PRO workflows.
+In the context of SortedPRO, the term "manifesting" refers to collating, formatting and transmitting consignment data to carriers. It is the final step of most PRO workflows.
 
 You can only manifest consignments that are in a state of _Allocated_, _Manifest Failed_, or _ReadyToShip_. If you attempt to manifest a consignment that is not in one of these states then PRO returns an error.
 
@@ -17,7 +17,7 @@ PRO has two manifest endpoints:
 
 > <span class="note-header">Note:</span> 
 >
-> Every successful request to a manifest endpoint results in data being transmitted to the carrier. Therefore, Sorted strongly advise that consignments are not manifested singularly, and that consignment manifesting is aligned with the carrier collection times from the warehouse.
+> Every successful request to a manifest endpoint results in data being transmitted to the carrier. Therefore, Sorted strongly advise that you do not manifest consignments individually, and that consignment manifesting is aligned with the carrier collection times from the warehouse.
 
 Manifesting a consignment changes its state to _Manifested_. At this point the carrier is aware of the consignment, and will collect it unless otherwise advised. In order to prevent the consignment being shipped, you would need to either cancel or deallocate it. 
 
@@ -35,7 +35,7 @@ At this point, you should also look to print labels for the consignment, if you 
 
 ## Manifesting Consignments
 
-Perhaps the simplest way to manifest consignments in PRO is to use the **Manifest Consignment** endpoint. **Manifest Consignment** enables you to manifest multiple consignments at once by providing their unique references
+Perhaps the simplest way to manifest consignments in PRO is to use the **Manifest Consignment** endpoint. **Manifest Consignment** enables you to manifest multiple consignments at once by providing their `ConsignmentReferences`.
 
 To call **Manifest Consignments**, send a `PUT` request to `https://api.electioapp.com/consignments/manifest`. The body of the request should contain a `ConsignmentReferences` list. 
 
@@ -116,7 +116,7 @@ The example shows a request to manifest three consignments. The response indicat
 
 ## Manifesting Consignments Using a Query
 
-The **Manifest Consignments From Query** endpoint enables you to manifest consignments using a query, rather than directly providing consignment references. 
+The **Manifest Consignments From Query** endpoint enables you to manifest consignments using a query, rather than by providing consignment references directly. 
 
 To call **Manifest Consignments From Query**, send a `POST` request to `https://api.electioapp.com/consignments/manifestFromQuery`. The body of the request should contain consignment search criteria. You can use the following query fields:
 
@@ -134,13 +134,13 @@ Once the request is received, PRO attempts to manifest any consignments that mee
 
 ### Setting Consignments As Ready to Ship
 
-PRO's **Set Ready To Ship** and **Set Not Ready To Ship** endpoints can help you when manifesting consignments from queries. These endpoints set a consignment's `consignmentState` to _ReadyToShip_. Although setting a consignment as Ready To Ship doesn't alter the consignment in and of itself, it can be useful as a means of marking consignments as ready for manifest via the **Manifest Consignments From Query** endpoint.
+PRO's **Set Ready To Ship** and **Set Not Ready To Ship** endpoints can help you when manifesting consignments from queries. These endpoints set a consignment's `consignmentState` to _ReadyToShip_. Although setting a consignment as ready to ship doesn't alter the consignment in and of itself, it can be useful as a means of marking consignments as ready for manifest via the **Manifest Consignments From Query** endpoint.
 
-To call **Set Ready To Ship**, send a `PUT` request to `https://api.electioapp.com/consignments/setreadytoship`. The body of the request should comprise a list containing the `{consignmentReferences}` of all the consignments you want to set as Ready To Ship.
+To call **Set Ready To Ship**, send a `PUT` request to `https://api.electioapp.com/consignments/setreadytoship`. The body of the request should comprise a list containing the `{consignmentReferences}` of all the consignments you want to set as _ReadyToShip_.
 
 > <span class="note-header">Note:</span>
 >
-> You can only set consignments that are in an _Allocated_ state as Ready To Ship.
+> You can only set consignments that are in an _Allocated_ state as _ReadyToShip_.
 
 Once the request is received, PRO changes the `consignmentStates` of all the relevant consignments to _ReadyToShip_ and returns a confirmation message. You could then manifest these consignments with a simple **Manifest Consignments From Query** call adding all consignments in that state to the manifest queue. 
 
@@ -327,7 +327,7 @@ To call **Get Customer Manifests**, send a `GET` request to  `https://api.electi
 
 > <span class="note-header">Note:</span>
 >
-> You can get a list of valid shipping locations by calling the **Get Shipping Locations** endpoint. For reference information on **Get Shipping Locations**, see the <a href="https://docs.electioapp.com/#/api/GetShippingLocations">API Reference</a>
+> You can get a list of valid shipping locations by calling the **Get Shipping Locations** endpoint. For reference information on **Get Shipping Locations**, see the <a href="https://docs.electioapp.com/#/api/GetShippingLocations">API Reference</a>.
 
 Once it has received the request, PRO returns a summary of all current manifests, including the following information:
 
@@ -415,9 +415,9 @@ Once the request is received, PRO returns the specified manifest file as a base-
 
 ## Next Steps
 
-* Learn how to track consignments via PRO's APIs at the [Tracking Consignments](/api/help/tracking_consignments.html) page.
-* Learn how to get and print delivery labels at the [Getting Labels](/api/help/getting_labels.html) page.
-* Learn how to deallocate a consignment at the [Deallocating Consignments](/api/help/deallocating_consignments.html)page.
+* Learn how to track consignments via PRO's APIs at the [Tracking Consignments](/pro/api/help/tracking_consignments.html) page.
+* Learn how to get and print delivery labels at the [Getting Labels](/pro/api/help/getting_labels.html) page.
+* Learn how to deallocate a consignment at the [Deallocating Consignments](/pro/api/help/deallocating_consignments.html)page.
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>

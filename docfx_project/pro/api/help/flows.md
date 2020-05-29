@@ -22,7 +22,7 @@ We will cover:
 
 * **Using delivery options to create a pack order flow**
 
-   The **[Consumer Options Flex](./flows/consumer_options_flex_flow.md)** flow is used when you can't guarantee that all parts of a customer's order will be picked, packed and dispatched from the same place at the same time, and you want to present delivery options to your customer at point of purchase.
+   The **[Consumer Options Flex](./flows/consumer_options_flex_flow.md)** flow is used when you can't guarantee that all parts of a customer's order will be picked, packed and dispatched from the same place at the same time, _and_ you want to present delivery options to your customer at point of purchase.
 
 * **Obtaining and selecting delivery quotes**
 
@@ -30,5 +30,3 @@ We will cover:
 
 > <span class="note-header">Note:</span>
 > This guide is intended as a primer for PRO. If you're already familiar with the basics of PRO, or you just need reference info for PRO's APIs, see the [API Reference](https://docs.electioapp.com/#/api).
->
-> Sample requests and responses are available in both **JSON** and **XML**. To switch between the two, use the tabs at the top of the right-hand panel.
