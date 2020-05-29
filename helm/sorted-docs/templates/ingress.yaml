@@ -4,7 +4,7 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: {{ $proIngressName }}
+  name: {{ $serviceName }}
   namespace: {{ .Values.namespace }}
   labels:
 {{ include "sorted-docs.labels" . | indent 4 }}
