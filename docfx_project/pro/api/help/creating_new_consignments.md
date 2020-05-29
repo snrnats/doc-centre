@@ -14,7 +14,7 @@ To create a consignment, send a `POST` request to `https://api.electioapp.com/co
 
 > <span class="note-header">Note:</span>
 >
-> For full reference information on the **Create Consignments** endpoint, including the properties accepted and the structure required, see the <a href="https://docs.electioapp.com/#/api/CreateConsignment">Create Consignments API reference</a>.
+> For full reference information on the **Create Consignments** endpoint, including the properties accepted and the structure required, see the <a href="https://docs.electioapp.com/#/api/CreateConsignment">Create Consignment API reference</a>.
 
 As a minimum, the **Create Consignments** endpoint requires you to send package weights and dimensions, origin address, and destination address data. You can either specify package weights and dimension via the `Weight` and `Dimensions` properties, or by supplying a `PackageSizeReference`. 
 
@@ -33,7 +33,7 @@ There are lots of optional properties you can send when creating a consignment, 
 * Shipping and delivery dates.
 * Customs documentation.
 * The consignment's direction of travel.
-* Metadata. PRO metadata enables you to us custom fields to record additional data about a consignment. For more information on using metadata in PRO, see the [Metadata](/pro/api/help/metadata.html) page.
+* Metadata. PRO metadata enables you to use custom fields to record additional data about a consignment. For more information on using metadata in PRO, see the [Metadata](/pro/api/help/metadata.html) page.
 * Tags. Allocation tags enable you to filter the list of carrier services that a particular consignment could be allocated to. For more information on allocation tags, see the [Tags](/pro/api/help/tags.html) page.
 
 Adding optional properties when you create a consignment can help you to get more out of PRO. For example, recording your own consignment reference enables you to search for consignments by those references in the UI and via the **Search Consignments** endpoint. 
@@ -113,9 +113,9 @@ The example below shows a simple **Create Consignments** request containing just
 
 ### The Create Consignments Response
 
-Once it has received the consignment information, PRO creates the consignment record and returns a link to the newly-created consignment, including its `consignmentReference`. 
+Once it has received the consignment information, PRO creates the consignment record and returns a link to the newly-created consignment, including its `{consignmentReference}`. 
 
-The `{consignmentReference}` is a unique identifier for that consignment within PRO, and is a required parameter for many of PRO's API requests. Each PRO `consignmentReference` takes the format `EC-xxx-xxx-xxx`, where `x` is an alphanumeric character. Many of PRO's endpoints take `{consignmentReference}` as a parameter.
+The `{consignmentReference}` is a unique identifier for that consignment within PRO, and is a required parameter for many of PRO's API requests. Each PRO `{consignmentReference}` takes the format `EC-xxx-xxx-xxx`, where `x` is an alphanumeric character. Many of PRO's endpoints take `{consignmentReference}` as a parameter.
 
 In the example below, PRO has returned a `{consignmentReference}` of _EC-000-05B-MMA_. 
 
@@ -136,7 +136,7 @@ In the example below, PRO has returned a `{consignmentReference}` of _EC-000-05B
 ```
 </div>
 
-All PRO consignments have a `{consignmentState}`, indicating the point in the delivery process that that particular consignment is at. Newly-created consignments have an initial state of `Unallocated`. For more information on PRO consignment states, see the [Consignment States](/pro/api/help/consignment_states.html) page.
+All PRO consignments have a `{consignmentState}`, indicating the point in the delivery process that that particular consignment is at. Newly-created consignments have an initial state of _Unallocated_. For more information on PRO consignment states, see the [Consignment States](/pro/api/help/consignment_states.html) page.
 
 > <span class="note-header">Note:</span>
 >
@@ -158,7 +158,7 @@ You can also generate consignments from pickup options. The process is the same 
 
 > <span class="note-header">More Information:</span>
 >
-> * For a full user guide on working with delivery and pickup options, including further information on selecting options, see the <a href="/api/help/using_delivery_and_pickup_options.html">Using Delivery and Pickup Options</a> section.
+> * For a full user guide on working with delivery and pickup options, including further information on selecting options, see the <a href="/pro/api/help/using_delivery_and_pickup_options.html">Using Delivery and Pickup Options</a> section.
 > * For reference information on the Delivery Options and Pickup Options APIs, see the <a href="https://docs.electioapp.com/#/api/DeliveryOptions">API reference</a>.
 > * For worked examples showing an order being created from delivery options, see the <a href="/pro/api/help/flows/consumer_options_flex_flow.html">Consumer Options Flex</a> example call flow.
 
@@ -176,19 +176,20 @@ The **Pack Order** endpoint enables you to take those items on an order that sha
 To create a consignment in this way, you'll need to make two API calls: 
 
 1. Call the **Create Order** endpoint to create an order in PRO. The structure of the **Create Order** request is very similar to that of the **Create Consignment** request, and must include package, origin address, and destination address data at a minimum. PRO creates the order and returns an `orderReference`.
+
 2. Call the **Pack Order** endpoint to create the consignment. In the body of the request you'll need to supply at least the relevant `orderReference` and the package details of the consignment that you want to pack. Each package must contain at least one item. If the **Pack Order** request would create a valid consignment, then PRO creates the consignment and returns a consignment reference.
 
 > <span class="note-header">More Information:</span>
 >
-> * For a full user guide on working with orders, see the <a href="/api/help/creating_new_orders.html">Creating New Orders</a> and <a href="/api/help/managing_existing_orders.html">Managing Existing Orders</a> page.
+> * For a full user guide on working with orders, see the <a href="/pro/api/help/creating_new_orders.html">Creating New Orders</a> and <a href="/pro/api/help/managing_existing_orders.html">Managing Existing Orders</a> page.
 > * For reference information on the Orders API, see the <a href="https://docs.electioapp.com/#/api/CreateOrder">API reference</a>.
-> * For worked examples showing consignments being created from orders, see the <a href="/api/help/flows/order_flex_flow.html">Order Flex</a> and <a href="/api/help/flows/consumer_options_flex_flow.html">Consumer Options Flex</a> call flow documents.
+> * For worked examples showing consignments being created from orders, see the <a href="/pro/api/help/flows/order_flex_flow.html">Order Flex</a> and <a href="/pro/api/help/flows/consumer_options_flex_flow.html">Consumer Options Flex</a> call flow documents.
 
 ## Next Steps
 
-* Learn how to work with existing consignments at the [Managing Existing Consignments](/api/help/managing_existing_consignments.html) page
-* Learn how to allocate consignments at the [Allocating Consignments to Carriers](/api/help/allocating_consignments_to_carriers.html) page.
-* Learn how to get and print delivery labels at the [Getting Labels](/api/help/getting_labels.html) page
+* Learn how to work with existing consignments at the [Managing Existing Consignments](/pro/api/help/updating_existing_consignments.html) page
+* Learn how to allocate consignments at the [Allocating Consignments to Carriers](/pro/api/help/allocating_consignments.html) page.
+* Learn how to get and print delivery labels at the [Getting Labels](/pro/api/help/getting_labels.html) page
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>

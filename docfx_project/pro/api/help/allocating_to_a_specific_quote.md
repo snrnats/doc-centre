@@ -12,9 +12,9 @@ PRO's Quotes API enables you to get delivery quotes for both uncreated and exist
 
 > <span class="note-header">More Information:</span>
 >
-> * For a full user guide on working with quotes, see the <a href="/api/help/managing_quotes.html">Managing Quotes</a> page.
+> * For a full user guide on working with quotes, see the <a href="/pro/api/help/managing_quotes.html">Managing Quotes</a> page.
 > * For reference information on the Quotes API, see the <a href="https://docs.electioapp.com/#/api/GetQuotes">API reference</a>.
-> * For worked examples showing a consignment being allocated from a quote, see the <a href="/api/help/flows/quotes_flow.html">Quotes</a> call flow page.
+> * For worked examples showing a consignment being allocated from a quote, see the <a href="/pro/api/help/flows/quotes_flow.html">Quotes</a> call flow page.
 
 ## Using Allocate With Quote
 
@@ -44,9 +44,9 @@ PUT https://api.electioapp.com/allocation/EC-000-05B-N40/allocatewithquote/11223
 
 ## Next Steps
 
-* Learn about alternative methods of allocating consignments at the [Allocating Consignments](/api/help/allocating_consignments.html) page.
-* Learn how to get and print delivery labels at the [Getting Labels](/api/help/getting_labels.html) page.
-* Learn how to add consignments to a carrier manifest at the [Manifesting Consignments](/api/help/manifesting_consignments.html) page.
+* Learn about alternative methods of allocating consignments at the [Allocating Consignments](/pro/api/help/allocating_consignments.html) page.
+* Learn how to get and print delivery labels at the [Getting Labels](/pro/api/help/getting_labels.html) page.
+* Learn how to add consignments to a carrier manifest at the [Manifesting Consignments](/pro/api/help/manifesting_consignments.html) page.
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>

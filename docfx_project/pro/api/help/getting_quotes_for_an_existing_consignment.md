@@ -12,14 +12,14 @@ Once it has received the request, PRO returns a quote result. The quote result o
 
 Each `Quote` object contains the following information:
 
-* A unique reference for the quote. This value is important, as it is used when allocating consignments to the quote via the **Allocate With Quote** endpoint.
-* Creation and expiry dates
-* The name and reference of the relevant carrier and carrier service
-* Origin and destination addresses
-* Collection date, and a delivery date range
-* Pricing information
-* Details on each leg of the journey (where applicable)
-* The service direction
+* A unique reference for the quote. This property is important, as it is used when allocating consignments to the quote via the **Allocate With Quote** endpoint.
+* Creation and expiry dates.
+* The name and reference of the relevant carrier and carrier service.
+* Origin and destination addresses.
+* Collection date, and a delivery date range.
+* Pricing information.
+* Details on each leg of the journey (where applicable).
+* The service direction.
 
 At this point, you would be able to display the relevant quote information to your customer service operative.
 
@@ -339,7 +339,7 @@ https://api.electioapp.com/quotes/consignment/EC-000-05B-1CM
 ## Next Steps
 
 * Learn how to get quotes without creating a new consignment at the [Getting Quotes](/pro/api/help/getting_quotes.html) page.
-* Learn how to create consignments at the [Creating Consignments](/pro/api/help/creating_consignments.html) page.
+* Learn how to create consignments at the [Creating New Consignments](/pro/api/help/creating_new_consignments.html) page.
 * Learn how to allocate consignments to your chosen quote at the [Allocating to a Specific Quote](/pro/api/help/allocating_to_a_specific_quote.html) page.
 
 <script src="../../scripts/requesttabs.js"></script>

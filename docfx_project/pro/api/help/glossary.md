@@ -10,7 +10,7 @@
 * **Delivery Option** - A combination of a delivery date and time window that a consignment could potentially be delivered on, and a carrier service that could meet that delivery promise. 
 * **Item** - An object being shipped inside a package, within a consignment.
 * **Label** - A document that is to be printed and affixed to every consignment or package. Each carrier or carrier service have different, strict label format requirements. 
-* **Manifest** - The process of confirming the consignment with the selected carrier. Once a consignment is manifested the carrier has been informed of the confirmed booking.
+* **Manifest** - The process of collating, formatting and transmitting consignment data to carriers. Once a consignment is manifested the carrier has been informed of the confirmed booking.
 * **Order** - A collection of packages that is to be transported to the same destination and on behalf of the same customer. 
 * **Package** - An item or a collection of items, wrapped or contained together for shipment. Each package can contain one or more items.
 * **Pickup Option** - A combination of a PUDO (pickup/drop-off) location that a consignment could potentially be delivered to, a delivery date and time window that it could be delivered to that location on, and a carrier service that could meet that delivery promise.
