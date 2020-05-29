@@ -11,8 +11,6 @@
     href: flows/consumer_options_pickup_flow.md
   - name: Order Flex Flow
     href: flows/order_flex_flow.md
-  - name: Consumer Options Flex Flow
-    href: flows/consumer_options_flex_flow.md
   - name: Quotes Flow
     href: flows/quotes_flow.md
 - name: Managing Consignments
