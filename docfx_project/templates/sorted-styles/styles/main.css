@@ -616,6 +616,10 @@ article span.small.pull-right {
   margin: 0 auto;
 }
 
+img.halfwidth {
+  width: 50%;
+}
+
 img.noborder {
   border: none;
 }
