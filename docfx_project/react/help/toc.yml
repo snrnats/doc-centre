@@ -17,7 +17,7 @@
     href: tracking-pages.md        
   - name: Configuring Notifications
     href: notifications.md
-- name: Integration Guide
+- name: API User Guide
   href: integration-guide.md
   items:
   - name: Registering Shipments
@@ -31,9 +31,7 @@
   - name: Calculated Events
     href: calc-events.md
 - name: API Reference
-  href: ./react/api/
-- name: What's New
-  href: changelog.md
+  href: https://docs.sorted.com/react/api
 - name: Shipment State List
   href: shipment-states.md
 - name: Glossary
