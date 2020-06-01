@@ -41,18 +41,18 @@ Hover your mouse over the graph to see average ship time data for a specific day
 
 You can filter the data displayed on the **Average Days from Shipping to Receipt by Carriers** table using the following filters:
 
-* **Average Days to Ship** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter delivery locations by average ship time. For example, if you were to filter on *is greater than or equal to 0.5*, then only those locations with an average ship time of 0.5 days or more would be displayed.
-* **CreatedDateOnly** ([Basic](/reports/filters-options.html#using-basic-filters), [Advanced](/reports/filters-options.html#using-advanced-filters), and [Relative Date](/reports/filters-options.html#using-relative-date-filters)) - enables you to select specific dates or date ranges to view.
-* **Shipping Location** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select a shipping location or locations to view.
+* **Average Days to Ship** ([Numerical](/pro/reports/filters-options.html#using-numerical-filters)) - enables you to filter delivery locations by average ship time. For example, if you were to filter on *is greater than or equal to 0.5*, then only those locations with an average ship time of 0.5 days or more would be displayed.
+* **CreatedDateOnly** ([Basic](/pro/reports/filters-options.html#using-basic-filters), [Advanced](/pro/reports/filters-options.html#using-advanced-filters), and [Relative Date](/pro/reports/filters-options.html#using-relative-date-filters)) - enables you to select specific dates or date ranges to view.
+* **Shipping Location** ([Basic](/pro/reports/filters-options.html#using-basic-filters) and [Advanced](/pro/reports/filters-options.html#using-advanced-filters)) - enables you to select a shipping location or locations to view.
 
 ### More Options
 
 The following options are available from the **More Options** menu:
 
-* [Open Comments](/reports/filters-options.html#open-comments)
-* [Export Data](/reports/filters-options.html#export-data)
-* [Show Data](/reports/filters-options.html#show-data)
-* [Spotlight](/reports/filters-options.html#spotlight)
+* [Open Comments](/pro/reports/filters-options.html#open-comments)
+* [Export Data](/pro/reports/filters-options.html#export-data)
+* [Show Data](/pro/reports/filters-options.html#show-data)
+* [Spotlight](/pro/reports/filters-options.html#spotlight)
 
 ### Viewing Data
 
@@ -80,18 +80,18 @@ Hover your mouse over a segment of the graph to see how many consignments were a
 
 You can filter the carriers displayed on the **Carrier Usage** table using the following filters:
 
-* **Carrier Name** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select a carrier or carriers whose services you want to view.
-* **Count of ConsignmentReference** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped per carrier per day. For example, if you were to filter on *is greater than 1000*, then any data points in which the carrier had shipped 1000 or fewer consignments on that day would be ignored.
-* **CreatedDateOnly** ([Basic](/reports/filters-options.html#using-basic-filters), [Advanced](/reports/filters-options.html#using-advanced-filters), and [Relative Date](/reports/filters-options.html#using-relative-date-filters)) - enables you to select specific created dates or date ranges to view.
+* **Carrier Name** ([Basic](/pro/reports/filters-options.html#using-basic-filters) and [Advanced](/pro/reports/filters-options.html#using-advanced-filters)) - enables you to select a carrier or carriers whose services you want to view.
+* **Count of ConsignmentReference** ([Numerical](/pro/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped per carrier per day. For example, if you were to filter on *is greater than 1000*, then any data points in which the carrier had shipped 1000 or fewer consignments on that day would be ignored.
+* **CreatedDateOnly** ([Basic](/pro/reports/filters-options.html#using-basic-filters), [Advanced](/pro/reports/filters-options.html#using-advanced-filters), and [Relative Date](/pro/reports/filters-options.html#using-relative-date-filters)) - enables you to select specific created dates or date ranges to view.
 
 ### More Options
 
 The following options are available from the **More Options** menu:
 
-* [Open Comments](/reports/filters-options.html#open-comments)
-* [Export Data](/reports/filters-options.html#export-data)
-* [Show Data](/reports/filters-options.html#show-data)
-* [Spotlight](/reports/filters-options.html#spotlight)
+* [Open Comments](/pro/reports/filters-options.html#open-comments)
+* [Export Data](/pro/reports/filters-options.html#export-data)
+* [Show Data](/pro/reports/filters-options.html#show-data)
+* [Spotlight](/pro/reports/filters-options.html#spotlight)
 
 You can also view the records that the visual's data was generated from by right-clicking on it and selecting **View Records** from the pop-up menu.
 
@@ -115,20 +115,20 @@ The **Average Days to Ship by Shipping Location** chart shows the average time f
 
 You can filter the shipping locations displayed on the **Average Days to Ship by Shipping Location** table using the following filters:
 
-* **Average Days to Ship** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter delivery locations by average ship time. For example, if you were to filter on *is greater than or equal to 1*, then only those locations with an average ship time of 1 days or more would be displayed.
-* **Shipping Location** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select a shipping location or locations to view.
+* **Average Days to Ship** ([Numerical](/pro/reports/filters-options.html#using-numerical-filters)) - enables you to filter delivery locations by average ship time. For example, if you were to filter on *is greater than or equal to 1*, then only those locations with an average ship time of 1 days or more would be displayed.
+* **Shipping Location** ([Basic](/pro/reports/filters-options.html#using-basic-filters) and [Advanced](/pro/reports/filters-options.html#using-advanced-filters)) - enables you to select a shipping location or locations to view.
 
 ### More Options
 
 The following options are available from the **More Options** menu:
 
-* [Open Comments](/reports/filters-options.html#open-comments)
-* [Export Data](/reports/filters-options.html#export-data)
-* [Show Data](/reports/filters-options.html#show-data)
-* [Spotlight](/reports/filters-options.html#spotlight)
-* [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
-* [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
-* [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Shipping Location / Average Days to Ship
+* [Open Comments](/pro/reports/filters-options.html#open-comments)
+* [Export Data](/pro/reports/filters-options.html#export-data)
+* [Show Data](/pro/reports/filters-options.html#show-data)
+* [Spotlight](/pro/reports/filters-options.html#spotlight)
+* [Sort Descending](/pro/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort Ascending](/pro/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort by](/pro/reports/filters-options.html#sort-descending--ascending--sort-by) Shipping Location / Average Days to Ship
 
 ### Viewing Data
 
@@ -156,18 +156,18 @@ Hover your mouse over a particular date on the chart to see how many consignment
 
 You can filter the carriers displayed on the **Consignments Over Time by Shipping Location** table using the following filters:
 
-* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped per day. For example, if you were to filter on *is greater than 1000*, then any data points in which the carrier had shipped 1000 or fewer consignments on that day would be ignored. In this example, the y-axis of the graph is effectively skewed so that it starts at 1000 rather than 0.
-* **Date Created** ([Basic](/reports/filters-options.html#using-basic-filters), [Advanced](/reports/filters-options.html#using-advanced-filters), and [Relative Date](/reports/filters-options.html#using-relative-date-filters)) - enables you to select specific created dates or date ranges to view.
-* **Shipping Location** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select a shipping location or locations to view.
+* **Consignments** ([Numerical](/pro/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped per day. For example, if you were to filter on *is greater than 1000*, then any data points in which the carrier had shipped 1000 or fewer consignments on that day would be ignored. In this example, the y-axis of the graph is effectively skewed so that it starts at 1000 rather than 0.
+* **Date Created** ([Basic](/pro/reports/filters-options.html#using-basic-filters), [Advanced](/pro/reports/filters-options.html#using-advanced-filters), and [Relative Date](/pro/reports/filters-options.html#using-relative-date-filters)) - enables you to select specific created dates or date ranges to view.
+* **Shipping Location** ([Basic](/pro/reports/filters-options.html#using-basic-filters) and [Advanced](/pro/reports/filters-options.html#using-advanced-filters)) - enables you to select a shipping location or locations to view.
 
 ### More Options
 
 The following options are available from the **More Options** menu:
 
-* [Open Comments](/reports/filters-options.html#open-comments)
-* [Export Data](/reports/filters-options.html#export-data)
-* [Show Data](/reports/filters-options.html#show-data)
-* [Spotlight](/reports/filters-options.html#spotlight)
+* [Open Comments](/pro/reports/filters-options.html#open-comments)
+* [Export Data](/pro/reports/filters-options.html#export-data)
+* [Show Data](/pro/reports/filters-options.html#show-data)
+* [Spotlight](/pro/reports/filters-options.html#spotlight)
 
 ### Viewing Data
 

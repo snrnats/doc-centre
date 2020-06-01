@@ -485,7 +485,7 @@ This example shows a PRO consignment and a REACT shipment that has been generate
 
 > <span class="note-header">More Information:</span>
 >
-> * For more information on the structure of a REACT shipment, see the [Register Shipments](https://docs.sorted.com/react/api/#RegisterShipments) section of the REACT API reference and the [Registering Shipments](/react/help/registering_shipments.html) page of the REACT help.
+> * For more information on the structure of a REACT shipment, see the [Register Shipments](https://docs.sorted.com/react/api/#RegisterShipments) section of the REACT API reference and the [Registering Shipments](/react/help/registering-shipments.html) page of the REACT help.
 > * For more information on the structure of a PRO consignment, see the [Create Consignment](https://docs.electioapp.com/#/api/CreateConsignment) page of the PRO API reference and the [Creating New Consignments](/pro/api/help/creating_new_consignments.html) page of the PRO help.
 
 ## After Registration

@@ -50,24 +50,24 @@ The consignment data table visual lists the following information for each of yo
 
 The consignment data table enables you to filter the companies displayed. For example, if you were to set an **Average Packages Per Consignment** filter of *less than 1.5* packages, then any companies shipping an average of 1.51 or more packages per consignment would be excluded. The following filters are available:
 
-* **Average Packages Per Consignment** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by the average number of packages shipped in each consignment.
-* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters))
-* **Packages** ([Numerical](/reports/filters-options.html#using-numerical-filters))
-* **Average Weight, KG** ([Numerical](/reports/filters-options.html#using-numerical-filters))
-* **Average Weight, Volumetric** ([Numerical](/reports/filters-options.html#using-numerical-filters))
-* **Company** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))
+* **Average Packages Per Consignment** ([Numerical](/pro/reports/filters-options.html#using-numerical-filters)) - enables you to filter by the average number of packages shipped in each consignment.
+* **Consignments** ([Numerical](/pro/reports/filters-options.html#using-numerical-filters))
+* **Packages** ([Numerical](/pro/reports/filters-options.html#using-numerical-filters))
+* **Average Weight, KG** ([Numerical](/pro/reports/filters-options.html#using-numerical-filters))
+* **Average Weight, Volumetric** ([Numerical](/pro/reports/filters-options.html#using-numerical-filters))
+* **Company** ([Basic](/pro/reports/filters-options.html#using-basic-filters) and [Advanced](/pro/reports/filters-options.html#using-advanced-filters))
 
 ### More Options
 
 The following options are available from the **More Options** menu:
 
-* [Open Comments](/reports/filters-options.html#open-comments)
-* [Export Data](/reports/filters-options.html#export-data)
-* [Show Data](/reports/filters-options.html#show-data)
-* [Spotlight](/reports/filters-options.html#spotlight)
-* [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
-* [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
-* [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Company / Consignments / Packages / Average Packages per Consignment / Avg Weight, Kg / Avg Weight, Volumetric
+* [Open Comments](/pro/reports/filters-options.html#open-comments)
+* [Export Data](/pro/reports/filters-options.html#export-data)
+* [Show Data](/pro/reports/filters-options.html#show-data)
+* [Spotlight](/pro/reports/filters-options.html#spotlight)
+* [Sort Descending](/pro/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort Ascending](/pro/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort by](/pro/reports/filters-options.html#sort-descending--ascending--sort-by) Company / Consignments / Packages / Average Packages per Consignment / Avg Weight, Kg / Avg Weight, Volumetric
 
 ## Consignment Volume Distribution by Absolute Weight
 
@@ -81,16 +81,16 @@ In the example above, the company in question has shipped 53,324 consignments th
 
 ### Visual Filters
 
-The **Consignment Volume Distribution by Absolute Weight** chart's **Kilograms** filter is a ([Numerical](/reports/filters-options.html#using-numerical-filters)) filter that enables you to limit the consignment weights displayed. For example, if you were to set the filter to *is greater than or equal 10*, then the chart would only display data for those consignments with an absolute weight of 10kg or above.
+The **Consignment Volume Distribution by Absolute Weight** chart's **Kilograms** filter is a ([Numerical](/pro/reports/filters-options.html#using-numerical-filters)) filter that enables you to limit the consignment weights displayed. For example, if you were to set the filter to *is greater than or equal 10*, then the chart would only display data for those consignments with an absolute weight of 10kg or above.
 
 ### More Options
 
 The following options are available from the **More Options** menu:
 
-* [Open Comments](/reports/filters-options.html#open-comments)
-* [Export Data](/reports/filters-options.html#export-data)
-* [Show Data](/reports/filters-options.html#show-data)
-* [Spotlight](/reports/filters-options.html#spotlight)
+* [Open Comments](/pro/reports/filters-options.html#open-comments)
+* [Export Data](/pro/reports/filters-options.html#export-data)
+* [Show Data](/pro/reports/filters-options.html#show-data)
+* [Spotlight](/pro/reports/filters-options.html#spotlight)
 
 ### Viewing Data
 
@@ -118,16 +118,16 @@ In the example above, the company in question has shipped 65,091 consignments th
 
 ### Visual Filters
 
-The **Consignment Volume Distribution by Volumetric Weight** chart's **Kilograms** filter is a ([Numerical](/reports/filters-options.html#using-numerical-filters)) filter that enables you to limit the consignment weights displayed. For example, if you were to set the filter to *is greater than or equal 10*, then the chart would only display data for those consignments with a volumetric weight of 10kg or above.
+The **Consignment Volume Distribution by Volumetric Weight** chart's **Kilograms** filter is a ([Numerical](/pro/reports/filters-options.html#using-numerical-filters)) filter that enables you to limit the consignment weights displayed. For example, if you were to set the filter to *is greater than or equal 10*, then the chart would only display data for those consignments with a volumetric weight of 10kg or above.
 
 ### More Options
 
 The following options are available from the **More Options** menu:
 
-* [Open Comments](/reports/filters-options.html#open-comments)
-* [Export Data](/reports/filters-options.html#export-data)
-* [Show Data](/reports/filters-options.html#show-data)
-* [Spotlight](/reports/filters-options.html#spotlight)
+* [Open Comments](/pro/reports/filters-options.html#open-comments)
+* [Export Data](/pro/reports/filters-options.html#export-data)
+* [Show Data](/pro/reports/filters-options.html#show-data)
+* [Spotlight](/pro/reports/filters-options.html#spotlight)
 
 ### Viewing Data
 
