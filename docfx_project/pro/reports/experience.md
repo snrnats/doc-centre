@@ -35,20 +35,20 @@ The **Consignments by Delivery Window** pie chart shows the proportion of your c
 
 You can filter the delivery windows displayed on the **Consignments by Delivery Window** chart using the following filters:
 
-* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped. For example, if you were to filter on *is greater than 5000*, then only those delivery windows for which you had shipped 5001 or more consignments would be displayed.
-* **Delivery Window** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select a specific delivery window or windows to view.
+* **Consignments** ([Numerical](/pro/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped. For example, if you were to filter on *is greater than 5000*, then only those delivery windows for which you had shipped 5001 or more consignments would be displayed.
+* **Delivery Window** ([Basic](/pro/reports/filters-options.html#using-basic-filters) and [Advanced](/pro/reports/filters-options.html#using-advanced-filters)) - enables you to select a specific delivery window or windows to view.
 
 ### More Options
 
 The following options are available from the **More Options** menu:
 
-* [Open Comments](/reports/filters-options.html#open-comments)
-* [Export Data](/reports/filters-options.html#export-data)
-* [Show Data](/reports/filters-options.html#show-data)
-* [Spotlight](/reports/filters-options.html#spotlight)
-* [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
-* [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
-* [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Delivery Window / Consignments
+* [Open Comments](/pro/reports/filters-options.html#open-comments)
+* [Export Data](/pro/reports/filters-options.html#export-data)
+* [Show Data](/pro/reports/filters-options.html#show-data)
+* [Spotlight](/pro/reports/filters-options.html#spotlight)
+* [Sort Descending](/pro/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort Ascending](/pro/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort by](/pro/reports/filters-options.html#sort-descending--ascending--sort-by) Delivery Window / Consignments
 
 You can also view the records that the visual's data was generated from by right-clicking on it and selecting **View Records** from the pop-up menu.
 
@@ -78,20 +78,20 @@ Hover your mouse over an area of the chart to see further details.
 
 You can filter the companies displayed on the **First Time Delivery %** chart using the following filters:
 
-* **Company** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))- enables you to select one or more of your companies to view shipments for.
-* **Count of ConsignmentReference** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped per company per day. For example, if you were to filter on *is greater than 1000*, then any data points in which the company had shipped 1000 or fewer consignments on that day would be ignored.
+* **Company** ([Basic](/pro/reports/filters-options.html#using-basic-filters) and [Advanced](/pro/reports/filters-options.html#using-advanced-filters))- enables you to select one or more of your companies to view shipments for.
+* **Count of ConsignmentReference** ([Numerical](/pro/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped per company per day. For example, if you were to filter on *is greater than 1000*, then any data points in which the company had shipped 1000 or fewer consignments on that day would be ignored.
 
 ### More Options
 
 The **First Time Delivery %** chart has the following options available from its **More Options** menu:
 
-* [Open Comments](/reports/filters-options.html#open-comments)
-* [Export Data](/reports/filters-options.html#export-data)
-* [Show Data](/reports/filters-options.html#show-data)
-* [Spotlight](/reports/filters-options.html#spotlight)
-* [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
-* [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
-* [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Carrier / Consignments
+* [Open Comments](/pro/reports/filters-options.html#open-comments)
+* [Export Data](/pro/reports/filters-options.html#export-data)
+* [Show Data](/pro/reports/filters-options.html#show-data)
+* [Spotlight](/pro/reports/filters-options.html#spotlight)
+* [Sort Descending](/pro/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort Ascending](/pro/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort by](/pro/reports/filters-options.html#sort-descending--ascending--sort-by) Carrier / Consignments
 
 You can also view the records that the visual's data was generated from by right-clicking on it and selecting **View Records** from the pop-up menu.
 
@@ -121,21 +121,21 @@ Hover your mouse over an area of the chart to see the number of that carrier's c
 
 You can filter the carriers displayed on the **Delivery Type by Carrier** chart using the following filters:
 
-* **Carrier Name** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select a carrier or carriers to view.
-* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped. For example, if you were to filter on *is greater than 5000*, then only those carriers with which you had shipped 5001 or more consignments would be displayed.
-* **Delivery Type** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select a specific delivery type or types.
+* **Carrier Name** ([Basic](/pro/reports/filters-options.html#using-basic-filters) and [Advanced](/pro/reports/filters-options.html#using-advanced-filters)) - enables you to select a carrier or carriers to view.
+* **Consignments** ([Numerical](/pro/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped. For example, if you were to filter on *is greater than 5000*, then only those carriers with which you had shipped 5001 or more consignments would be displayed.
+* **Delivery Type** ([Basic](/pro/reports/filters-options.html#using-basic-filters) and [Advanced](/pro/reports/filters-options.html#using-advanced-filters)) - enables you to select a specific delivery type or types.
 
 ### More Options
 
 The following options are available from the **More Options** menu:
 
-* [Open Comments](/reports/filters-options.html#open-comments)
-* [Export Data](/reports/filters-options.html#export-data)
-* [Show Data](/reports/filters-options.html#show-data)
-* [Spotlight](/reports/filters-options.html#spotlight)
-* [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
-* [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
-* [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Carrier / Consignments
+* [Open Comments](/pro/reports/filters-options.html#open-comments)
+* [Export Data](/pro/reports/filters-options.html#export-data)
+* [Show Data](/pro/reports/filters-options.html#show-data)
+* [Spotlight](/pro/reports/filters-options.html#spotlight)
+* [Sort Descending](/pro/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort Ascending](/pro/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort by](/pro/reports/filters-options.html#sort-descending--ascending--sort-by) Carrier / Consignments
 
 You can also view the records that the visual's data was generated from by right-clicking on it and selecting **View Records** from the pop-up menu.
 
@@ -171,20 +171,20 @@ Hover your mouse over an area of the chart to see the number of that carrier's c
 
 You can filter the carriers displayed on the **Delivery Window by Carrier** chart using the following filters:
 
-* **Carrier Name** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select a carrier or carriers to view.
-* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped. For example, if you were to filter on *is greater than 5000*, then only those carriers with which you had shipped 5001 or more consignments would be displayed.
+* **Carrier Name** ([Basic](/pro/reports/filters-options.html#using-basic-filters) and [Advanced](/pro/reports/filters-options.html#using-advanced-filters)) - enables you to select a carrier or carriers to view.
+* **Consignments** ([Numerical](/pro/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped. For example, if you were to filter on *is greater than 5000*, then only those carriers with which you had shipped 5001 or more consignments would be displayed.
 
 ### More Options
 
 The following options are available from the **More Options** menu:
 
-* [Open Comments](/reports/filters-options.html#open-comments)
-* [Export Data](/reports/filters-options.html#export-data)
-* [Show Data](/reports/filters-options.html#show-data)
-* [Spotlight](/reports/filters-options.html#spotlight)
-* [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
-* [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
-* [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Carrier / Consignments
+* [Open Comments](/pro/reports/filters-options.html#open-comments)
+* [Export Data](/pro/reports/filters-options.html#export-data)
+* [Show Data](/pro/reports/filters-options.html#show-data)
+* [Spotlight](/pro/reports/filters-options.html#spotlight)
+* [Sort Descending](/pro/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort Ascending](/pro/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort by](/pro/reports/filters-options.html#sort-descending--ascending--sort-by) Carrier / Consignments
 
 You can also view the records that the visual's data was generated from by right-clicking on it and selecting **View Records** from the pop-up menu.
 

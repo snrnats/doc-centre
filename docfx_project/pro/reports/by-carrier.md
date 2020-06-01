@@ -35,21 +35,21 @@ The consignments table visual lists the total number of packages and consignment
 
 The consignments table enables you to apply the following filters to the list of carriers displayed:
 
-* **Carrier** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select a specific carrier or carriers to view.
-* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped. For example, if you were to filter on *is greater than 5000*, then only those carriers who had shipped 5001 or more consignments would be displayed.
-* **Packages** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of packages shipped. For example, if you were to filter on *is greater than 5000*, then only those carriers who had shipped 5001 or more packages would be displayed.
+* **Carrier** ([Basic](/pro/reports/filters-options.html#using-basic-filters) and [Advanced](/pro/reports/filters-options.html#using-advanced-filters)) - enables you to select a specific carrier or carriers to view.
+* **Consignments** ([Numerical](/pro/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped. For example, if you were to filter on *is greater than 5000*, then only those carriers who had shipped 5001 or more consignments would be displayed.
+* **Packages** ([Numerical](/pro/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of packages shipped. For example, if you were to filter on *is greater than 5000*, then only those carriers who had shipped 5001 or more packages would be displayed.
 
 ### More Options
 
 The following options are available from the **More Options** menu:
 
-* [Open Comments](/reports/filters-options.html#open-comments)
-* [Export Data](/reports/filters-options.html#export-data)
-* [Show Data](/reports/filters-options.html#show-data)
-* [Spotlight](/reports/filters-options.html#spotlight)
-* [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
-* [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
-* [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Carrier / Consignments / Packages
+* [Open Comments](/pro/reports/filters-options.html#open-comments)
+* [Export Data](/pro/reports/filters-options.html#export-data)
+* [Show Data](/pro/reports/filters-options.html#show-data)
+* [Spotlight](/pro/reports/filters-options.html#spotlight)
+* [Sort Descending](/pro/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort Ascending](/pro/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort by](/pro/reports/filters-options.html#sort-descending--ascending--sort-by) Carrier / Consignments / Packages
 
 You can also view 
 
@@ -65,20 +65,20 @@ The **Consignments by Carrier Name** pie chart displays each carrier's share of 
 
 The **Consignments by Carrier Name** chart enables you to filter the data displayed in the following ways:
 
-* **Carrier** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select a specific carrier or carriers to view.
-* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped. For example, if you were to filter on *is greater than 5000*, then only those carriers who had shipped 5001 or more consignments would be displayed.
+* **Carrier** ([Basic](/pro/reports/filters-options.html#using-basic-filters) and [Advanced](/pro/reports/filters-options.html#using-advanced-filters)) - enables you to select a specific carrier or carriers to view.
+* **Consignments** ([Numerical](/pro/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped. For example, if you were to filter on *is greater than 5000*, then only those carriers who had shipped 5001 or more consignments would be displayed.
 
 ### More Options
 
 The following options are available from the **More Options** menu:
 
-* [Open Comments](/reports/filters-options.html#open-comments)
-* [Export Data](/reports/filters-options.html#export-data)
-* [Show Data](/reports/filters-options.html#show-data)
-* [Spotlight](/reports/filters-options.html#spotlight)
-* [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
-* [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
-* [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Carrier / Consignments
+* [Open Comments](/pro/reports/filters-options.html#open-comments)
+* [Export Data](/pro/reports/filters-options.html#export-data)
+* [Show Data](/pro/reports/filters-options.html#show-data)
+* [Spotlight](/pro/reports/filters-options.html#spotlight)
+* [Sort Descending](/pro/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort Ascending](/pro/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort by](/pro/reports/filters-options.html#sort-descending--ascending--sort-by) Carrier / Consignments
 
 You can also view the records that the visual's data was generated from by right-clicking on it and selecting **View Records** from the pop-up menu.
 
@@ -108,18 +108,18 @@ Hover your mouse pointer over a particular day to view exact per-carrier shipmen
 
 The **Consignments Shipped by Carrier Over Time** chart enables you to filter the data displayed in the following ways:
 
-* **Carrier Name** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters))  - enables you to select a specific carrier or carriers to view.
-* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped on a given day. For example, if you were to filter on *is greater than 1000*, then any data points in which the carrier in question had shipped 1000 or fewer consignments on that day would be ignored. In this example, the y-axis of the graph is effectively skewed so that it starts at 1000 rather than 0.
-* **DateShippedOnly** ([Basic](/reports/filters-options.html#using-basic-filters), [Advanced](/reports/filters-options.html#using-advanced-filters), and [Relative Date](/reports/filters-options.html#using-relative-date-filters)) - enables you to select specific dates or date ranges to view.
+* **Carrier Name** ([Basic](/pro/reports/filters-options.html#using-basic-filters) and [Advanced](/pro/reports/filters-options.html#using-advanced-filters))  - enables you to select a specific carrier or carriers to view.
+* **Consignments** ([Numerical](/pro/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped on a given day. For example, if you were to filter on *is greater than 1000*, then any data points in which the carrier in question had shipped 1000 or fewer consignments on that day would be ignored. In this example, the y-axis of the graph is effectively skewed so that it starts at 1000 rather than 0.
+* **DateShippedOnly** ([Basic](/pro/reports/filters-options.html#using-basic-filters), [Advanced](/pro/reports/filters-options.html#using-advanced-filters), and [Relative Date](/pro/reports/filters-options.html#using-relative-date-filters)) - enables you to select specific dates or date ranges to view.
 
 ### More Options
 
 The following options are available from the **More Options** menu:
 
-* [Open Comments](/reports/filters-options.html#open-comments)
-* [Export Data](/reports/filters-options.html#export-data)
-* [Show Data](/reports/filters-options.html#show-data)
-* [Spotlight](/reports/filters-options.html#spotlight)
+* [Open Comments](/pro/reports/filters-options.html#open-comments)
+* [Export Data](/pro/reports/filters-options.html#export-data)
+* [Show Data](/pro/reports/filters-options.html#show-data)
+* [Spotlight](/pro/reports/filters-options.html#spotlight)
 
 ### Viewing Data
 

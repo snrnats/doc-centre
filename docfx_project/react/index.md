@@ -37,7 +37,7 @@
     </a>
     <a href="/react/help/integration-guide.html">
         <div class="homepage-container">
-            <h2>Integration Guide</h2>
+            <h2>API User Guide</h2>
             <p>
                 How to work with REACT's APIs
             </p>
@@ -58,13 +58,5 @@
                 API request and response structures
             </p>
         </div>
-    </a>
-    <a href="/react/help/changelog.html">
-        <div class="homepage-container">
-            <h2>What's New</h2>
-            <p>
-                Changes and enhancements
-            </p>
-        </div>
-    </a>       
+    </a>      
 </div>
