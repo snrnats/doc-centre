@@ -31,20 +31,20 @@ The **API Requests by Company Name** chart shows how many requests each of your 
 
 You can filter the companies displayed on the **API Requests by Company Name** visual as follows: 
 
-* **API Requests** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of API requests made. For example, if you were to filter on *is greater than 5000000*, then only those companies who had made more than 5,000,000 API requests would be displayed.
-* **Company Name** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select one or more companies to view.
+* **API Requests** ([Numerical](/pro/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of API requests made. For example, if you were to filter on *is greater than 5000000*, then only those companies who had made more than 5,000,000 API requests would be displayed.
+* **Company Name** ([Basic](/pro/reports/filters-options.html#using-basic-filters) and [Advanced](/pro/reports/filters-options.html#using-advanced-filters)) - enables you to select one or more companies to view.
 
 ### More Options
 
 The following options are available from the **More Options** menu:
 
-* [Open Comments](/reports/filters-options.html#open-comments)
-* [Export Data](/reports/filters-options.html#export-data)
-* [Show Data](/reports/filters-options.html#show-data)
-* [Spotlight](/reports/filters-options.html#spotlight)
-* [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
-* [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
-* [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) CustomerName / API Requests
+* [Open Comments](/pro/reports/filters-options.html#open-comments)
+* [Export Data](/pro/reports/filters-options.html#export-data)
+* [Show Data](/pro/reports/filters-options.html#show-data)
+* [Spotlight](/pro/reports/filters-options.html#spotlight)
+* [Sort Descending](/pro/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort Ascending](/pro/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort by](/pro/reports/filters-options.html#sort-descending--ascending--sort-by) CustomerName / API Requests
 
 You can also view the records that the visual's data was generated from by right-clicking on it and selecting **View Records** from the pop-up menu.
 
@@ -74,20 +74,20 @@ Hover your mouse pointer over the chart to view the ATUs used by each individual
 
 You can filter the companies displayed on the **ATU Total Company** visual as follows: 
 
-* **ATU Total** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of ATUs consumed. For example, if you were to filter on *is greater than 5000000*, then only those companies who had consumed more than 5,000,000 ATUs would be displayed.
-* **Customer Name** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select one or more companies to view.
+* **ATU Total** ([Numerical](/pro/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of ATUs consumed. For example, if you were to filter on *is greater than 5000000*, then only those companies who had consumed more than 5,000,000 ATUs would be displayed.
+* **Customer Name** ([Basic](/pro/reports/filters-options.html#using-basic-filters) and [Advanced](/pro/reports/filters-options.html#using-advanced-filters)) - enables you to select one or more companies to view.
 
 ### More Options
 
 The following options are available from the **More Options** menu:
 
-* [Open Comments](/reports/filters-options.html#open-comments)
-* [Export Data](/reports/filters-options.html#export-data)
-* [Show Data](/reports/filters-options.html#show-data)
-* [Spotlight](/reports/filters-options.html#spotlight)
-* [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
-* [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
-* [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) CustomerName / ATU Total
+* [Open Comments](/pro/reports/filters-options.html#open-comments)
+* [Export Data](/pro/reports/filters-options.html#export-data)
+* [Show Data](/pro/reports/filters-options.html#show-data)
+* [Spotlight](/pro/reports/filters-options.html#spotlight)
+* [Sort Descending](/pro/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort Ascending](/pro/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort by](/pro/reports/filters-options.html#sort-descending--ascending--sort-by) CustomerName / ATU Total
 
 You can also view the records that the visual's data was generated from by right-clicking on it and selecting **View Records** from the pop-up menu.
 
@@ -115,18 +115,18 @@ Hover your mouse over the chart to view the total number of API requests made by
 
 ### Visual Filters
 
-* **API Requests** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of API requests made on a given day. For example, if you were to filter on *is greater than 100000*, then any data points in which the company had made 100000 or fewer API requests on that day would be ignored. In this example, the y-axis of the graph is effectively skewed so that it starts at 100000 rather than 0.
-* **Company Name** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters) - enables you to select one or more companies to view.
-* **Calendar Date** ([Basic](/reports/filters-options.html#using-basic-filters), [Advanced](/reports/filters-options.html#using-advanced-filters), and [Relative Date](/reports/filters-options.html#using-relative-date-filters)) - enables you to select specific dates or date ranges to view. 
+* **API Requests** ([Numerical](/pro/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of API requests made on a given day. For example, if you were to filter on *is greater than 100000*, then any data points in which the company had made 100000 or fewer API requests on that day would be ignored. In this example, the y-axis of the graph is effectively skewed so that it starts at 100000 rather than 0.
+* **Company Name** ([Basic](/pro/reports/filters-options.html#using-basic-filters) and [Advanced](/pro/reports/filters-options.html#using-advanced-filters) - enables you to select one or more companies to view.
+* **Calendar Date** ([Basic](/pro/reports/filters-options.html#using-basic-filters), [Advanced](/pro/reports/filters-options.html#using-advanced-filters), and [Relative Date](/pro/reports/filters-options.html#using-relative-date-filters)) - enables you to select specific dates or date ranges to view. 
 
 ### More Options
 
 The following options are available from the **More Options** menu:
 
-* [Open Comments](/reports/filters-options.html#open-comments)
-* [Export Data](/reports/filters-options.html#export-data)
-* [Show Data](/reports/filters-options.html#show-data)
-* [Spotlight](/reports/filters-options.html#spotlight)
+* [Open Comments](/pro/reports/filters-options.html#open-comments)
+* [Export Data](/pro/reports/filters-options.html#export-data)
+* [Show Data](/pro/reports/filters-options.html#show-data)
+* [Spotlight](/pro/reports/filters-options.html#spotlight)
 
 ### Viewing Data
 

@@ -41,21 +41,21 @@ The consignments table shows how many consignments and packages were shipped to 
 
 You can filter the list of countries displayed on the consignments table using the following filters:
 
-* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped. For example, if you were to filter on *is greater than 5000*, then only those countries to which you had shipped 5001 or more consignments would be displayed.
-* **Destination Country** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select a specific country or countries to view.
-* **Packages** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of packages shipped. For example, if you were to filter on *is greater than 5000*, then only those countries to which you had shipped 5001 or more packages would be displayed.
+* **Consignments** ([Numerical](/pro/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped. For example, if you were to filter on *is greater than 5000*, then only those countries to which you had shipped 5001 or more consignments would be displayed.
+* **Destination Country** ([Basic](/pro/reports/filters-options.html#using-basic-filters) and [Advanced](/pro/reports/filters-options.html#using-advanced-filters)) - enables you to select a specific country or countries to view.
+* **Packages** ([Numerical](/pro/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of packages shipped. For example, if you were to filter on *is greater than 5000*, then only those countries to which you had shipped 5001 or more packages would be displayed.
 
 ### More Options
 
 The following options are available from the **More Options** menu:
 
-* [Open Comments](/reports/filters-options.html#open-comments)
-* [Export Data](/reports/filters-options.html#export-data)
-* [Show Data](/reports/filters-options.html#show-data)
-* [Spotlight](/reports/filters-options.html#spotlight)
-* [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
-* [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
-* [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Destination Country / Consignments / Packages
+* [Open Comments](/pro/reports/filters-options.html#open-comments)
+* [Export Data](/pro/reports/filters-options.html#export-data)
+* [Show Data](/pro/reports/filters-options.html#show-data)
+* [Spotlight](/pro/reports/filters-options.html#spotlight)
+* [Sort Descending](/pro/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort Ascending](/pro/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort by](/pro/reports/filters-options.html#sort-descending--ascending--sort-by) Destination Country / Consignments / Packages
 
 
 ## Consignment Volumes by Country
@@ -72,17 +72,17 @@ If required, you can search for countries and locations using the search bar at 
 
 You can filter the countries displayed on the **Consignment Volumes by Country** chart via the following filters: 
 
-* **Consignments** ([Numerical](/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped. For example, if you were to filter on *is greater than 5000*, then only those countries to which you had shipped 5001 or more consignments would be displayed.
-* **MapBox** ([Basic](/reports/filters-options.html#using-basic-filters) and [Advanced](/reports/filters-options.html#using-advanced-filters)) - enables you to select a specific country or countries to view.
+* **Consignments** ([Numerical](/pro/reports/filters-options.html#using-numerical-filters)) - enables you to filter by number of consignments shipped. For example, if you were to filter on *is greater than 5000*, then only those countries to which you had shipped 5001 or more consignments would be displayed.
+* **MapBox** ([Basic](/pro/reports/filters-options.html#using-basic-filters) and [Advanced](/pro/reports/filters-options.html#using-advanced-filters)) - enables you to select a specific country or countries to view.
 
 ### More Options
 
 The following options are available from the **More Options** menu:
 
-* [Open Comments](/reports/filters-options.html#open-comments)
-* [Export Data](/reports/filters-options.html#export-data)
-* [Show Data](/reports/filters-options.html#show-data)
-* [Spotlight](/reports/filters-options.html#spotlight)
+* [Open Comments](/pro/reports/filters-options.html#open-comments)
+* [Export Data](/pro/reports/filters-options.html#export-data)
+* [Show Data](/pro/reports/filters-options.html#show-data)
+* [Spotlight](/pro/reports/filters-options.html#spotlight)
 
 ### Viewing Data
 
@@ -104,13 +104,13 @@ The **% of Consignment Volume by Destination Country** bar chart shows each dest
 
 The following options are available from the **More Options** menu:
 
-* [Open Comments](/reports/filters-options.html#open-comments)
-* [Export Data](/reports/filters-options.html#export-data)
-* [Show Data](/reports/filters-options.html#show-data)
-* [Spotlight](/reports/filters-options.html#spotlight)
-* [Sort Descending](/reports/filters-options.html#sort-descending--ascending--sort-by)
-* [Sort Ascending](/reports/filters-options.html#sort-descending--ascending--sort-by)
-* [Sort by](/reports/filters-options.html#sort-descending--ascending--sort-by) Country / %GT Count of ConsignmentReference
+* [Open Comments](/pro/reports/filters-options.html#open-comments)
+* [Export Data](/pro/reports/filters-options.html#export-data)
+* [Show Data](/pro/reports/filters-options.html#show-data)
+* [Spotlight](/pro/reports/filters-options.html#spotlight)
+* [Sort Descending](/pro/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort Ascending](/pro/reports/filters-options.html#sort-descending--ascending--sort-by)
+* [Sort by](/pro/reports/filters-options.html#sort-descending--ascending--sort-by) Country / %GT Count of ConsignmentReference
 
 ### Viewing Data
 
