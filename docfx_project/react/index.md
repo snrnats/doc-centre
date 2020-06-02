@@ -15,7 +15,7 @@
 <div class="header-container">
     <h1 id="big-header" class="text--underlined text--header"><span>SortedREACT </span><span>Docs</span></h1>
     <p class="text--center">
-        Help and support for SortedREACT
+        Technical documents, help and support for SortedREACT
     </p>
 </div>
 <div class="button-container">
