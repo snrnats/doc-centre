@@ -15,6 +15,12 @@ Alternatively, you can use SortedREACT to offer a richer tracking experience to 
 * [Using PRO's Tracking API](/pro/api/help/using_pros_tracking_api.html) - Explains how to call the Tracking API.
 * [Tracking Consignments Using REACT](/pro/api/help/tracking_consignments_using_react.html) - Gives an overview of how REACT and PRO interact.
 
+> <span class="note-header">Note:</span>
+>
+> All of the URLs and examples given in this documentation relate to PRO's live production environment. To call APIs in the sandbox environment, substitute the `api.electioapp.com` portion of the API's base URL with `apisandbox.electioapp.com`. Don't forget to use your sandbox API key (as opposed to your production API key) when making the call.
+>
+> For more information on PRO's sandbox, see [Using the Sandbox Environment](/pro/api/help/introduction.html#using-the-sandbox-environment).
+
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>
 <script src="../../scripts/copy.js"></script>

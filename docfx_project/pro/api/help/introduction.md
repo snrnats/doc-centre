@@ -98,5 +98,15 @@ electio-api-version: 1.1
 
 </div>
 
+## Using the Sandbox Environment
+
+All of the URLs and examples given in this documentation relate to PRO's live production environment. However, PRO also offers a sandbox, enabling you to use a "safe" development environment in which you can integrate with PRO without running the risk of inadvertently transmitting data to carriers. The sandbox works in exactly the same way as the production environment, but is entirely self-contained and uses a separate dataset.
+
+In order to call APIs in the sandbox environment, you will first need to set up a sandbox API key. To do so, log in to the [sandbox environment UI](https://websandbox.electioapp.com/) and follow the process listed in the [Authentication](#authentication) section of this page.
+
+To call an API in the sandbox rather than the production environment, substitute the `api.electioapp.com` portion of the API's base URL with `apisandbox.electioapp.com`. Don't forget to use your sandbox API key (as opposed to your production API key) in the `ocp-apim-subscription-key` header when making the call.
+
+For example, to call the **Create Consignments** endpoint in the production environment, you would send a `POST` request to `https://api.electioapp.com/consignments`. To call the same endpoint in the sandbox, you would send a `POST` request to `https://apisandbox.electioapp.com/consignments`.
+
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/copy.js"></script>

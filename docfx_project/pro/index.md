@@ -73,6 +73,6 @@
 </div>
 <div class="landing-container">
     <h2>Reports</h2>
-    <p>PRO includes its own reporting app, running in Microsoft Power BI. You can use these reports to view traffic profiles, a breakdown of sipping volumes, and more. </p>
+    <p>PRO includes its own reporting app, running in Microsoft Power BI. You can use these reports to view traffic profiles, a breakdown of shipping volumes, and more. </p>
     <a href="/pro/reports/index.html"><div class="landing-button">View report docs</div></a>    
 </div>
