@@ -419,6 +419,12 @@ Once the request is received, PRO returns the specified manifest file as a base-
 * Learn how to get and print delivery labels at the [Getting Labels](/pro/api/help/getting_labels.html) page.
 * Learn how to deallocate a consignment at the [Deallocating Consignments](/pro/api/help/deallocating_consignments.html)page.
 
+> <span class="note-header">Note:</span>
+>
+> All of the URLs and examples given in this documentation relate to PRO's live production environment. To call APIs in the sandbox environment, substitute the `api.electioapp.com` portion of the API's base URL with `apisandbox.electioapp.com`. Don't forget to use your sandbox API key (as opposed to your production API key) when making the call.
+>
+> For more information on PRO's sandbox, see [Using the Sandbox Environment](/pro/api/help/introduction.html#using-the-sandbox-environment).
+
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>
 <script src="../../scripts/copy.js"></script>
