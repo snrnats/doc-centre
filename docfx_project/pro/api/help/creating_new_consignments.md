@@ -1,6 +1,6 @@
 # Creating New Consignments
 
-In order for SortedPRO to manage a consignment, you'll need to record the details of that consignment on the system. This page explains explains the various ways that you can record consignment information in PRO.
+In order for SortedPRO to manage a consignment, you'll need to record the details of that consignment on the system. This page explains the various ways that you can record consignment information in PRO.
 
 ---
 
