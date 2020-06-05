@@ -47,32 +47,28 @@ The example below shows how this shipment would be represented in JSON. This is 
         {
             "value": {
                 "amount": 79.99,
-                "currency": "GBP",
-                "discount": 0.0
+                "currency": "GBP"
             },
             "description": "Coat"
         },
         {
             "value": {
-                "amount": 0,
-                "currency": "GBP",
-                "discount": 0.0
+                "amount": 69.98,
+                "currency": "GBP"
             },
             "description": "Package for necklace and bracelet",
             "contents": [
                 {
                     "value": {
                         "amount": 39.99,
-                        "currency": "GBP",
-                        "discount": 0.0
+                        "currency": "GBP"
                     },
                     "description": "Necklace"
                 },
                 {
                     "value": {
                         "amount": 29.99,
-                        "currency": "GBP",
-                        "discount": 0.0
+                        "currency": "GBP"
                     },
                     "description": "Bracelet"
                 }    
@@ -264,3 +260,22 @@ All PRO shipments have a `{state}`, indicating the point in the delivery process
 
 ## Cloning Shipments
 
+<span class="highlight">CLONE SHIPMENTS IS IN DRAFT AT THE TIME OF WRITING - THIS ALL NEEDS FULLY REVIEWING BEFORE GO-LIVE</span>
+
+As well as creating entirely new shipments through the **Create Shipment** endpoint, you can also clone existing shipments via the **Clone Shipment** endpoint. **Clone Shipment** takes the basic properties of a given shipment, creates a new shipment with identical properties, and returns that new shipment's `{reference}`. 
+
+> <span class="note-header">Note:</span>
+>
+> **Clone Shipment** only clones those shipment properties that can be specified via the **Create Shipment** endpoint. For example, it will copy `address` and `contents` details to the new shipment, but not allocation details.
+
+To call **Clone Shipment**, send a `POST` request to `https://api.sorted.com/pro/shipments/{reference}/clone`, where `{reference}` refers to the shipment you want to clone. Once it has received the request, PRO creates the new shipment record and returns a link to the newly-created shipment.
+
+### Clone Shipment Example 
+
+The example below shows a request to clone a shipment <span class="highlight">NEED TO PUT IN EXAMPLE ONCE THE ENDPOINT STUB IS UP AND RUNNING</span>
+
+## Next Steps
+
+* Learn how to retrieve shipment data: [Getting Shipments](/pro/api/shipments/getting_shipments.html)
+* Learn how to update existing shipments: [Updating Shipments](/pro/api/shipments/updating_shipments.html)
+* Learn how to cancel shipments: [Cancelling Shipments](/pro/api/shipments/cancelling_shipments.html)
