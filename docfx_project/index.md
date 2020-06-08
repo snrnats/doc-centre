@@ -31,7 +31,7 @@
             </p>
         </div>
     </a>
-    <a href="/react/">
+    <a href="/react/index.html?v2">
         <div class="homepage-container">
             <h2><span>Sorted</span><span>REACT<span></h2>
             <p>
