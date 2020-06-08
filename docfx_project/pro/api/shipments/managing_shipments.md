@@ -20,3 +20,7 @@ Each shipment object contains details of the shipment's current state (for examp
 * [Getting Shipments](/pro/api/shipments/getting_shipments.html) - Explains how to use the **Get Shipment** endpoint to retrieve shipment details.
 * [Updating Shipments](/pro/api/shipments/updating_shipments.html) - Explains how to use the **Update Shipment** endpoint to update an existing shipment's details, and how to use the **Change Shipment State** endpoint to manually edit a shipment's state.
 * [Cancelling Shipments](/pro/api/shipments/cancelling_shipments.html) - Explains how to use the **Cancel Shipment** endpoint to set a shipment's status to _Cancelled_.
+
+<script src="../../scripts/requesttabs.js"></script>
+<script src="../../scripts/responsetabs.js"></script>
+<script src="../../scripts/copy.js"></script>

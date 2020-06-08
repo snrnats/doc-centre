@@ -279,3 +279,7 @@ The example below shows a request to clone a shipment <span class="highlight">NE
 * Learn how to retrieve shipment data: [Getting Shipments](/pro/api/shipments/getting_shipments.html)
 * Learn how to update existing shipments: [Updating Shipments](/pro/api/shipments/updating_shipments.html)
 * Learn how to cancel shipments: [Cancelling Shipments](/pro/api/shipments/cancelling_shipments.html)
+
+<script src="../../scripts/requesttabs.js"></script>
+<script src="../../scripts/responsetabs.js"></script>
+<script src="../../scripts/copy.js"></script>
