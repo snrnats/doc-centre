@@ -6,7 +6,7 @@ Need to make changes to an order before you pack it? This page explains how to r
 
 ## Retrieving Orders
 
-The **Get Order** endpoint returns full current details for a specific order. To call **Get Order**, sent a `GET` request to `https://api.electioapp.com/orders/{orderReference}`.
+The **Get Order** endpoint returns full current details for a specific order. To call **Get Order**, send a `GET` request to `https://api.electioapp.com/orders/{orderReference}`.
 
 > <span class="note-header">More Information:</span>
 >

@@ -14,7 +14,7 @@ Perhaps the most straightforward way of getting PRO consignment data is to use t
 * Label information, including whether labels have been printed yet and the date on which the labels were printed
 * An `IsLate` flag indicating whether the consignment is late or not.
 
-To call **Get Consignment**, sent a `GET` request to `https://api.electioapp.com/consignments/{consignmentReference}`.
+To call **Get Consignment**, send a `GET` request to `https://api.electioapp.com/consignments/{consignmentReference}`.
 
 > <span class="note-header">More Information:</span>
 >
