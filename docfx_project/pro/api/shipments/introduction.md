@@ -87,4 +87,5 @@ Depending on the content returned, PRO's responses may include the following hea
 * Learn how to allocate shipments to carrier services: [Allocating Shipments](/pro/api/shipments/allocating_shipments.html)
 
 <script src="../../scripts/requesttabs.js"></script>
+<script src="../../scripts/responsetabs.js"></script>
 <script src="../../scripts/copy.js"></script>

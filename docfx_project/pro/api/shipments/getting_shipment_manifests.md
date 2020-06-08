@@ -2,9 +2,6 @@
 
 Get Manifests
 
-<!--HTML Comment test-->
-
-<!--
-HTML Multiline
-comment test
--->
+<script src="../../scripts/requesttabs.js"></script>
+<script src="../../scripts/responsetabs.js"></script>
+<script src="../../scripts/copy.js"></script>

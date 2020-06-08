@@ -98,3 +98,6 @@ When the customer provides multiple `shipment` references and one or more of tho
     "_links": //omitted for brevity
 }
 ```
+<script src="../../scripts/requesttabs.js"></script>
+<script src="../../scripts/responsetabs.js"></script>
+<script src="../../scripts/copy.js"></script>

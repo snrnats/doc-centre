@@ -39,3 +39,7 @@ In implementing this endpoint, the application must identify the customs documen
 
 Get Document
 Get Customs Documents 
+
+<script src="../../scripts/requesttabs.js"></script>
+<script src="../../scripts/responsetabs.js"></script>
+<script src="../../scripts/copy.js"></script>

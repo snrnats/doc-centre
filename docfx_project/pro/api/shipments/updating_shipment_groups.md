@@ -26,3 +26,7 @@ This endpoint is used when all `shipments` within a `shipment_group` have been `
 
 > [!CAUTION]
 > This operation is not reversible. Once a `shipment_group` has been `closed` it cannot be re-opened.
+
+<script src="../../scripts/requesttabs.js"></script>
+<script src="../../scripts/responsetabs.js"></script>
+<script src="../../scripts/copy.js"></script>

@@ -93,3 +93,7 @@ Michael Rose  15:35
 exactly. we might not even tell them when it's going to be picked up, just that it will be
 15:35
 carriers don't all even confirm pick up requests
+
+<script src="../../scripts/requesttabs.js"></script>
+<script src="../../scripts/responsetabs.js"></script>
+<script src="../../scripts/copy.js"></script>
