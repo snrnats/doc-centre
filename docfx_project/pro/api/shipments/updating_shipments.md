@@ -1,7 +1,6 @@
 # Updating Shipments
 
 Update Shipment
-Change Shipment State
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>
