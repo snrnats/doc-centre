@@ -1,6 +1,6 @@
 # Shipment States
 
-All PRO shipments have a `{state}`, indicating the point in the delivery process that that particular shipment is at. This page lists PRO's shipment states and explains how to use the **Change Shipment State** endpoint to manually edit a shipment's `{state}`.
+All PRO shipments have a `{state}`, indicating the point in the delivery process that that particular shipment is at. This page lists PRO's shipment states 
 
 ---
 
@@ -50,10 +50,6 @@ All PRO shipments have a `{state}`, indicating the point in the delivery process
 | `carrier_collection_failed` | The carrier failed to collect the shipment. |
 | `customer_collection_failed` | The customer failed to collect the shipment. |
 | `at_customer_collection_point` | The shipment been delivered to the collection point. |
-
-## Manually Editing a Shipment's State
-
-
 
 ## Next Steps
 
