@@ -12,7 +12,9 @@
   - name: Updating Shipments
     href: updating_shipments.md
   - name: Cancelling Shipments
-    href: cancelling_shipments.md                      
+    href: cancelling_shipments.md
+  - name: Shipment States
+    href: shipment_states.md                            
 - name: Allocating Shipments
   href: allocating_shipments.md
   items:
@@ -68,4 +70,5 @@
     href: getting_shipment_events.md
   - name: Getting Content-Level Events
     href: getting_content_level_events.md
+  
   
