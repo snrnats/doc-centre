@@ -14,7 +14,7 @@
     href: pro/release-notes/
     homepage: pro/release-notes/index.md  
 - name: REACT 
-  href: /react/
+  href: /react/index.html?v2
   items:
   - name: Quick Start
     href: /react/help/quick-start.html
