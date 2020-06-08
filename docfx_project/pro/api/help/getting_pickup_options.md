@@ -27,24 +27,29 @@ To call the **Pickup Options** endpoint, send a `POST` request to `https://api.e
 * Shipping and delivery dates.
 * Customs documentation.
 * The consignment's direction of travel.
-* Metadata. PRO metadata enables you to record additional data about a consignment in custom fields. For more information on using metadata in PRO, see the **[Metadata](/api/flows/moreInfo.html#metadata)** section of the **More Information** page.
-* Tags. Allocation tags enable you to filter the list of carrier services that a particular consignment could be allocated to. For more information on allocation tags, see the **[Tags](/api/flows/moreInfo.html#tags)** section of the **More Information** page.
+* Metadata. PRO metadata enables you to record additional data about a consignment in custom fields. For more information on using metadata in PRO, see the [Metadata](/pro/api/help/metadata.html) page.
+* Tags. Allocation tags enable you to filter the list of carrier services that a particular consignment could be allocated to. For more information on allocation tags, see the [Tags](/pro/api/help/tags.html) page.
 
 Providing extra information can help you to improve the relevance of the options returned, and means that any consignments or orders you generate from an option will be populated with richer data.
 
 Either the consignment's `origin` address, its `destination` address, or both, must include a valid <code>ShippingLocationReference</code>. For information on how to obtain a list of your organisation's shipping locations, see the <strong><a href="https://docs.electioapp.com/#/api/GetShippingLocations">Get Shipping Locations</a></strong> page of the API reference.
 
-The **Pickup Options** endpoint returns a `{Locations}` array listing all the pickup locations that can meet your request criteria. Each `{Location}` object contains a `{DeliveryOptions}` array listing the delivery options that are available to that location for the proposed consignment, and the opening times of the location itself.
+The **Pickup Options** endpoint returns a `{Locations}` array listing all the pickup locations that can meet your request criteria. Each `{Location}` object contains a `{DeliveryOptions}` array listing the delivery options that are available to that location for the proposed consignment.
 
 Each `{DeliveryOptions}` object contains details of a particular option that could be used to deliver the consignment to the relevant `{location}`, including:
 
 * **Reference** - A unique identifier for the option, used when selecting options in the next step.
-* **Dates and Delivery Windows**
+* **Delivery Date**
+* **Start** and **End Time**
 * **Carrier Service**
-* **Price**
-* **Allocation Cutoff** - The option's expiry time. If the option is not used by this time, it is rendered invalid.
-* **Operational Cutoff** - 	The operational cut off date as specified by the fulfilling shipping location.
-* **Service Direction**
+* **Cost of Delivery**
+* The latest **Shipping Date** and **Time** possible to meet the promise.
+
+The pickup options available for a given consignment can change over time. This is primarily due to different carriers collecting at different times at each shipping location, or the pickup locations provider updating the list of active locations. 
+
+> <span class="note-header">Note:</span>
+>
+> Pickup locations are classified as having either finite or infinite capacity. For locations with finite capacity, PRO may disable or enable a location at any time in line with demand for the location. Sorted strongly advise that location details are never cached for re-use in the web store or checkout due to the dynamic nature of this information.
 
 > <span class="note-header">More Information:</span>
 >
@@ -328,7 +333,7 @@ PRO returns one location that meets the requested criteria, and three options fo
 
 Note the `{Reference}` for each pickup option. When the customer selects their preferred delivery option you will need to pass the relevant `{Reference}` back to PRO via the **Select Option** endpoint.
 
-At this point, you would present some or all of the options returned to your customer via your site or app. For information on how to handle the choice the customer makes, see the [Selecting Options](/pro/api/help/selecting_options.md) page.
+At this point, you would present some or all of the options returned to your customer via your site or app. For information on how to handle the choice the customer makes, see the [Selecting Options](/pro/api/help/selecting_options.html) page.
 
 ## Next Steps
 

@@ -10,7 +10,7 @@ The Delivery Options endpoint takes the details of an as-yet-nonexistent consign
 
 > <span class="note-header">Note:</span>
 >
-> For further information on what constitutes a delivery option, see the [Using Delivery and Pickup Options](using_delivery_and_pickup_options.md) page.
+> For further information on what constitutes a delivery option, see the [Using Delivery and Pickup Options](using_delivery_and_pickup_options.html) page.
 
 At a minimum, PRO requires you to send the consignment's package, origin address and destination address data in your **Delivery Options** request. However, there are lots of other properties you can send when getting delivery options, including:
 
@@ -19,8 +19,8 @@ At a minimum, PRO requires you to send the consignment's package, origin address
 * Shipping and delivery dates.
 * Customs documentation.
 * The consignment's direction of travel.
-* Metadata. PRO metadata enables you to record additional data about a consignment in custom fields. For more information on using metadata in PRO, see the **[Metadata](/api/flows/moreInfo.html#metadata)** section of the **More Information** page.
-* Tags. Allocation tags enable you to filter the list of carrier services that a particular consignment could be allocated to. For more information on allocation tags, see the **[Tags](/api/flows/moreInfo.html#tags)** section of the **More Information** page.
+* Metadata. PRO metadata enables you to record additional data about a consignment in custom fields. For more information on using metadata in PRO, see the [Metadata](/pro/api/help/metadata.html) page.
+* Tags. Allocation tags enable you to filter the list of carrier services that a particular consignment could be allocated to. For more information on allocation tags, see the [Tags](/pro/api/help/tags.html) page.
 
 Providing extra information can help you to improve the relevance of the options returned, and means that any consignments or orders you generate from an option will be populated with richer data.
 
@@ -207,7 +207,7 @@ Both of these options have a time window starting at 00:00 and ending at 23:59. 
 
 Note the `{Reference}` for each delivery option. When the customer selects their preferred delivery option you will need to pass the relevant `{Reference}` back to PRO via the **Select Option** endpoint.
 
-At this point, you would present some or all of the options returned to your customer via your site or app. For information on how to handle the choice the customer makes, see the [Selecting Options](/pro/api/help/selecting_options.md) page.
+At this point, you would present some or all of the options returned to your customer via your site or app. For information on how to handle the choice the customer makes, see the [Selecting Options](/pro/api/help/selecting_options.html) page.
 
 ## Getting a Summary of Options
 

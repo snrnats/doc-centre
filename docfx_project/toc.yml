@@ -1,9 +1,26 @@
-- name: PRO API Help  
-  href: pro/api/help/  
-  homepage: pro/api/help/introduction.md
-- name: PRO Reports
-  href: pro/reports/
-  homepage: pro/reports/index.md
+- name: PRO  
+  homepage: /pro/
+  items:
+  - name: API User Guide
+    href: /pro/api/help/introduction.html
+  - name: API Reference
+    href: https://docs.electioapp.com/#/api
+  - name: Example Call Flows
+    href: /pro/api/help/flows.html      
+  - name: Reports
+    href: pro/reports/
+    homepage: pro/reports/index.md
+  - name: Release Notes
+    href: pro/release-notes/
+    homepage: pro/release-notes/index.md  
 - name: REACT 
-  href: https://docs.sorted.com/react/
- 
+  href: /react/index.html?v2
+  items:
+  - name: Quick Start
+    href: /react/help/quick-start.html
+  - name: API User Guide
+    href: /react/help/integration-guide.html
+  - name: API Reference
+    href: https://docs.sorted.com/react/api
+  - name: UI Help
+    href: /react/help/ui-help.html          

@@ -19,4 +19,5 @@ FROM nginx:1.17.8-alpine as host
 
 WORKDIR /site
 
+COPY default.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /build/source/docfx_project/_site /usr/share/nginx/html

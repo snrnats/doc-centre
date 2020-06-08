@@ -10,9 +10,9 @@ PUT https://api.electioapp.com/consignments/manifestFromQuery
 ```
 </div>
 
-Once you've created a consignment, allocated it to a carrier service and printed labels for it, you're ready to manifest it. To manifest a consignment, use the **[Manifest Consignments From Query](https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery)** endpoint. In the context of SortedPRO, the term "manifest" refers to advising the carrier that the consignment in question needs to be collected from the shipper.
+Once you've created a consignment, allocated it to a carrier service and printed labels for it, you're ready to manifest it. To manifest a consignment, use the **[Manifest Consignments From Query](https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery)** endpoint. In the context of SortedPRO, the term "manifesting" refers to collating, formatting and transmitting the consignment data to carriers.
 
-The **Manifest Consignments From Query** endpoint enables you to use a query to select consignments to be manifested. Once PRO has attempted to add those consignments to the manifest queue, the **Manifest Consignments From Query** endpoint returns a `Message` indicating how many consignments met the terms of the query and how many it was able to queue. 
+The **Manifest Consignments From Query** endpoint enables you to use a query to select consignments to be manifested. Once PRO has added those consignments to a manifest and queued the data to be sent, the **Manifest Consignments From Query** endpoint returns a `Message` detailing how many consignments met the terms of the query, how many of those consignments were successfully queued, and how many could not be queued. 
 
 > <span class="note-header">Note:</span>
 > * For full reference information on the <strong>Manifest Consignments From Query</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery">Manifest Consignments From Query</a></strong> page of the API Reference.

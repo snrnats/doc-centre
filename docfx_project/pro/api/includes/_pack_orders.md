@@ -11,9 +11,9 @@
 
 </div>
 
-Once your order is created, you'll need to use the **[Pack Order](https://docs.electioapp.com/#/api/PackOrder)** endpoint to create consignments from it. The **Pack Order** endpoint enables you to take those items on an order that share an origin and are to be shipped together, and generate a shippable consignment from them. You will need to send one **Pack Order** request per consignment that you want to create from the order.
+Once your order is created, you'll need to use the **[Pack Order](https://docs.electioapp.com/#/api/PackOrder)** endpoint to create consignments from it. The **Pack Order** endpoint enables you to group those items on an order that share an origin and are to be shipped together, generating a shippable consignment for them. You will need to send a **Pack Order** request for each consignment that you want to create from the order.
 
-To make a **Pack Order** request, send a GET request to `https://api.electioapp.com/orders/{orderReference}/pack`. The body of the request can contain various properties that are used when creating the consignment, but at a minimum should contain the `{orderReference}` of the associated order and details of at least one `{item}` (and its accompanying `{package}`). The items and packages listed make up the consignment.
+To make a **Pack Order** request, send a GET request to `https://api.electioapp.com/orders/{orderReference}/pack`. The body of the request can contain various properties that are used when creating the consignment, but at a minimum should contain the `{orderReference}` of the associated order and details of at least one `{package}` containing at least one `{item}` from the order. The items and packages listed make up the consignment.
 
 Once SortedPRO has received a **Pack Order** request, it creates the consignment and returns the relevant `{consignmentReference}`.
 
@@ -93,8 +93,3 @@ The example shows a **Pack Order** request to create a consignment with one pack
 ```
 
 </div>
-
-> <span class="note-header">Note:</span>
->  For full reference information on the <strong>Pack Order</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/PackOrder">Pack Order</a></strong> page of the API reference.
-
-

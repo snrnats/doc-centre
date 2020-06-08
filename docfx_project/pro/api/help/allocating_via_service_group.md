@@ -50,7 +50,7 @@ To find the **Service Group Code** for a particular group, log in to the PRO UI,
 Once the request is received, PRO uses allocation rules to eliminate any carrier services in the group that would not be suitable to take the consignment, allocates the consignment to the cheapest remaining service, and returns an Allocation Summary.
 
 > <span class="note-header">More Information:</span>
-> For information on using allocation rules, see the [What Is An Allocation Rule?](/api/help/allocating_consignments.html#what-is-an-allocation-rule) section of the [Allocating Consignments To Carriers](/api/help/allocating_consignments.html) page.
+> For information on using allocation rules, see the [What Is An Allocation Rule?](/pro/api/help/allocating_consignments.html#what-is-an-allocation-rule) section of the [Allocating Consignments To Carriers](/pro/api/help/allocating_consignments.html) page.
 
 ### Allocate Consignment With Service Group Example
 
@@ -71,9 +71,9 @@ PUT https://api.electioapp.com/allocation/EC-000-05B-MMA/allocatewithservicegrou
 
 ## Next Steps
 
-* Learn about alternative methods of allocating consignments at the [Allocating Consignments](/api/help/allocating_consignments.html) page.
-* Learn how to get and print delivery labels at the [Getting Labels](/api/help/getting_labels.html) page.
-* Learn how to add consignments to a carrier manifest at the [Manifesting Consignments](/api/help/manifesting_consignments.html) page.
+* Learn about alternative methods of allocating consignments at the [Allocating Consignments](/pro/api/help/allocating_consignments.html) page.
+* Learn how to get and print delivery labels at the [Getting Labels](/pro/api/help/getting_labels.html) page.
+* Learn how to add consignments to a carrier manifest at the [Manifesting Consignments](/pro/api/help/manifesting_consignments.html) page.
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>

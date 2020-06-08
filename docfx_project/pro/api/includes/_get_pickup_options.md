@@ -11,19 +11,19 @@
 
 </div>    
 
-In the context of PRO, a "pickup option" is a delivery date, pickup location, and time window that a consignment could potentially be delivered on, and a carrier service that could meet that delivery promise. The **[Pickup Options](https://docs.electioapp.com/#/api/PickupOptions)** endpoint takes the details of an as-yet uncreated consignment and returns available pickup options.
+In the context of PRO, a "pickup option" is a combination of a delivery promise (i.e. a delivery date and pickup location), and a carrier service that could meet that delivery promise for a consignment. The **[Pickup Options](https://docs.electioapp.com/#/api/PickupOptions)** endpoint takes the details of an as-yet uncreated consignment and returns available pickup options.
 
-At a minimum, SortedPRO requires you to send the following data in order to receive pickup options for a potential consignment:
+At a minimum, PRO requires you to send the following data in order to receive pickup options for a potential consignment:
 
-* **Distance** - The maximum distance from the destination address (in km) you want to receive results for.
+* **Distance** - The maximum distance from the destination address that you want to receive results for.
 * **Max Results** - The maximum number of results that you want to receive. This should be a value between one and 50.
 * **Package Information**
 * **Origin Address**
 * **Destination Address**
 
-The **Pickup Options** endpoint returns a `{Locations}` array detailing all the pickup locations that have options meeting your request criteria. Each `{Location}` object contains a `{DeliveryOptions}` array listing the delivery options that are available to that location for the proposed consignment, and the opening times of the location itself.
+The **Pickup Options** endpoint returns a `{Locations}` array containing details of each pickup location that can accept your consignment. PRO provides the location's full address, distance from destination address, latitude / longitude, and opening and closing times, enabling you to surface this information at checkout so that your customers can choose a convenient option. 
 
-Each `{PickupOptions}` object contains details of a particular pickup option that could be used to deliver the consignment to the relevant location.
+Each `{Location}` object contains a `{DeliveryOptions}` array listing the delivery promises available to that location for the proposed consignment. 
 
 > <span class="note-header">More Information:</span>
 > * For full reference information on the <strong>Pickup Options</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/PickupOptions">Pickup Options</a></strong> page of the API reference.
@@ -397,6 +397,6 @@ The example shows a request to get no more than 10 pickup options for a fairly s
 
 The API has returned one location that meets the requested criteria, and three options for delivery to that location. All three options use the same carrier service and have a delivery time window of 09:30 - 17:30, but are scheduled for different days. In practice, PRO is saying that the carrier can deliver to the pickup location during business hours on the 17th, 20th or 21st of May (as required by the customer).
 
-Note the `{Reference}` for each pickup option. When the customer selects their preferred delivery option you will need to pass the relevant `{Reference}` back to PRO via the **Select Option** endpoint.
+Note the `{Reference}` for each pickup option. When the customer selects their preferred pickup option you will need to pass the relevant `{Reference}` back to PRO via the **Select Option** endpoint.
 
 At this point, you would present some or all of the options returned to your customer via your site or app. In the next step, we'll see how to handle the choice the customer makes.
