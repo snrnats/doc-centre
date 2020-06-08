@@ -93,3 +93,11 @@ Michael Rose  15:35
 exactly. we might not even tell them when it's going to be picked up, just that it will be
 15:35
 carriers don't all even confirm pick up requests
+
+## Allocation Section Contents
+
+* [Allocating to Default Rules](/pro/api/shipments/allocating_to_default_rules.html)
+* [Allocating with a Specific Carrier Service](/pro/api/shipments/allocating_with_a_specific_carrier_service.html)
+* [Allocating Within a Carrier Service Group](/pro/api/shipments/allocating_within_a_carrier_service_group.html)
+* [Allocating Using Filters](/pro/api/shipments/allocating_using_filters.html)
+* [Allocating via a Quote](/pro/api/shipments/allocating_via_a_quote.html)

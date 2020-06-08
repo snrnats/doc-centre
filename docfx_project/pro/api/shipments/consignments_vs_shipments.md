@@ -60,3 +60,7 @@ Like consignments, shipments are a collection of one or more packages that are s
 * Learn how to create, update and delete shipments: [Managing Shipments](/pro/api/shipments/managing_shipments.html)
 * Learn how to allocate shipments to carrier services: [Allocating Shipments](/pro/api/shipments/allocating_shipments.html)
 * Learn how to create shipment groups: [Managing Shipment Groups](/pro/api/shipments/managing_shipment_groups.html)
+
+<script src="../../scripts/requesttabs.js"></script>
+<script src="../../scripts/responsetabs.js"></script>
+<script src="../../scripts/copy.js"></script>
