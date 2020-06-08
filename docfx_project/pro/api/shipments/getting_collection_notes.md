@@ -13,3 +13,7 @@ The `latest` `version` will always be the `shipment_group` with the **highest** 
 
 Get Collection Note by Query
 Get Collection Note by Manifests
+
+<script src="../../scripts/requesttabs.js"></script>
+<script src="../../scripts/responsetabs.js"></script>
+<script src="../../scripts/copy.js"></script>
