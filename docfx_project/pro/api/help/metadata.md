@@ -40,3 +40,7 @@ The example shows a `MetaData` array that is being used to store a consignment's
 ```
 
 </div>
+
+<script src="../../scripts/requesttabs.js"></script>
+<script src="../../scripts/responsetabs.js"></script>
+<script src="../../scripts/copy.js"></script>

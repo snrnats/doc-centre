@@ -10,7 +10,7 @@ A consignment cannot be edited once it is allocated. In order to edit or cancel 
 
 > <span class="note-header">More Information:</span>
 >
-> For more information on editing existing consignments, see the <a href="/api/help/updating_existing_consignments.md"> Updating Existing Consignments</a> page.
+> For more information on editing existing consignments, see the <a href="/pro/api/help/updating_existing_consignments.html"> Updating Existing Consignments</a> page.
 
 Deallocating a consignment erases any allocation data that consignment holds and changes its state to _Unallocated_. You can only deallocate consignments that are in a state of _Allocated_, _Manifested_, or _Manifest Failed_.
 
@@ -81,9 +81,9 @@ This examples shows a request to deallocate three consignments.
 
 ## Next Steps
 
-* Learn about alternative methods of allocating consignments at the [Allocating Consignments](/api/help/allocating_consignments.html) page.
-* Learn how to get and print delivery labels at the [Getting Labels](/api/help/getting_labels.html) page.
-* Learn how to add consignments to a carrier manifest at the [Manifesting Consignments](/api/help/manifesting_consignments.html) page.
+* Learn about alternative methods of allocating consignments at the [Allocating Consignments](/pro/api/help/allocating_consignments.html) page.
+* Learn how to get and print delivery labels at the [Getting Labels](/pro/api/help/getting_labels.html) page.
+* Learn how to add consignments to a carrier manifest at the [Manifesting Consignments](/pro/api/help/manifesting_consignments.html) page.
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>

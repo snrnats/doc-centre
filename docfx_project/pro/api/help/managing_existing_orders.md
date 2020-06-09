@@ -6,7 +6,7 @@ Need to make changes to an order before you pack it? This page explains how to r
 
 ## Retrieving Orders
 
-The **Get Order** endpoint returns full current details for a specific order. To call **Get Order**, sent a `GET` request to `https://api.electioapp.com/orders/{orderReference}`.
+The **Get Order** endpoint returns full current details for a specific order. To call **Get Order**, send a `GET` request to `https://api.electioapp.com/orders/{orderReference}`.
 
 > <span class="note-header">More Information:</span>
 >
@@ -246,13 +246,13 @@ PUT https://api.electioapp.com/orders/EO-000-002-K0R
 
 In addition to the **Update Order** endpoint, PRO also features specific endpoints for adding and updating the addresses on a consignment.
 
-The **Add Address To Order** endpoint enables you to add a new address to an order. To call **Add Address To Order**, send a `POST` request to `https://api.electioapp.com/orders/{orderReference}/address`.
+* The **Add Address To Order** endpoint enables you to add a new address to an order. To call **Add Address To Order**, send a `POST` request to `https://api.electioapp.com/orders/{orderReference}/address`.
+ 
+    **Add Address To Order** can only be used to add addresses with an address type that does not already exist on the order. For example, suppose that you have an order that already has _Origin_ and _Destination_ addresses. You could use **Add Address To Order** to add a new _Sender_ address to that order (because the order does not currently have a _Sender_ address), but you could not use it to add a new _Origin_ address (because the order does have an existing _Origin_).
 
-**Add Address To Order** can only be used to add addresses with an address type that does not already exist on the order. For example, suppose that you have an order that already has _Origin_ and _Destination_ addresses. You could use **Add Address To Order** to add a new _Sender_ address to that order (because the order does not currently have a _Sender_ address), but you could not use it to add a new _Origin_ address (because the order does have an existing _Origin_).
-
-The **Update Address On Order** endpoint enables you to update an existing address on an order. To call **Update Address On Order**, send a `PUT` request to `https://api.electioapp.com/orders/{orderReference}/address`.
-
-**Update Address On Order** can only be used to edit addresses with an address type already exists on the order. For example, suppose that you have an order that already has _Origin_ and _Destination_ addresses. You could use **Update Address On Order** to edit those addresses (by using it to send a new `address` object with that `AddressType`), but not to add others of a different type. 
+* The **Update Address On Order** endpoint enables you to update an existing address on an order. To call **Update Address On Order**, send a `PUT` request to `https://api.electioapp.com/orders/{orderReference}/address`.
+ 
+    **Update Address On Order** can only be used to edit addresses with an address type already exists on the order. For example, suppose that you have an order that already has _Origin_ and _Destination_ addresses. You could use **Update Address On Order** to edit those addresses (by using it to send a new `address` object with that `AddressType`), but not to add others of a different type. 
 
 For both of these endpoints, the body of the request should contain an `address` object. The example below shows a new _Sender_ address.
 
@@ -310,7 +310,7 @@ Both **Add Address To Order** and **Update Address On Order** return an empty co
 
 * Learn how to pack orders into consignments at the [Creating Consignments From Orders](/pro/api/help/packing_orders.html) page.
 * Learn how to retrieve delivery options at the [Getting Delivery Options](/pro/api/help/getting_delivery_options.html) page.
-* Learn how to allocate consignments at the [Allocating Consignments to Carriers](/api/help/allocating_consignments_to_carriers.html) page.
+* Learn how to allocate consignments at the [Allocating Consignments](/pro/api/help/allocating_consignments.html) page.
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>

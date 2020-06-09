@@ -11,7 +11,9 @@ The **Allocate Using Default Rules** and **Allocate Consignments** endpoints ena
 PRO uses the following selection process when allocating via these endpoints:
 
 1. **Who can deliver?** - First, PRO compiles a list of all carrier services that could potentially take the consignment (that is, configured and enabled services that ship to the delivery address and could meet any specified delivery promise).
-2. **Who meets the allocation rules?** - Next, PRO creates a final shortlist of carrier services by eliminating any services that do not meet your organisation's own allocation rules. For information on using allocation rules, see the [What Is An Allocation Rule?](/api/help/allocating_consignments.html#what-is-an-allocation-rule) section of the [Allocating Consignments To Carriers](/api/help/allocating_consignments.html) page.
+
+2. **Who meets the allocation rules?** - Next, PRO creates a final shortlist of carrier services by eliminating any services that do not meet your organisation's own allocation rules. For information on using allocation rules, see the [What Is An Allocation Rule?](/pro/api/help/allocating_consignments.html#what-is-an-allocation-rule) section of the [Allocating Consignments To Carriers](/pro/api/help/allocating_consignments.html) page.
+
 3. **Who is cheapest?** - Finally, PRO allocates the consignment to the cheapest service on the shortlist.
 
 ## Allocating Multiple Consignments at Once
@@ -77,9 +79,9 @@ PUT https://api.electioapp.com/allocation/EC-000-05A-Z6S/allocatewithcheapestquo
 
 ## Next Steps
 
-* Learn about alternative methods of allocating consignments at the [Allocating Consignments](/api/help/allocating_consignments.html) page.
-* Learn how to get and print delivery labels at the [Getting Labels](/api/help/getting_labels.html) page.
-* Learn how to add consignments to a carrier manifest at the [Manifesting Consignments](/api/help/manifesting_consignments.html) page.
+* Learn about alternative methods of allocating consignments at the [Allocating Consignments](/pro/api/help/allocating_consignments.html) page.
+* Learn how to get and print delivery labels at the [Getting Labels](/pro/api/help/getting_labels.html) page.
+* Learn how to add consignments to a carrier manifest at the [Manifesting Consignments](/pro/api/help/manifesting_consignments.html) page.
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>

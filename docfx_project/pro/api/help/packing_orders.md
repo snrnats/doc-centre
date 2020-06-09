@@ -16,7 +16,7 @@ Each item must be identified by a `Reference`, an `ItemReferenceProvidedByCustom
 >
 > PRO validates the items on a <strong>Pack Order</strong> request against its associated order. For example, the system will return an error if you make a <strong>Pack Order</strong> request including an item with a <code>Sku</code> of <em>12345</em> if there is no item with that <code>Sku</code> on the corresponding order.
 >
-> However, PRO does not validate the items on a <strong>Pack Order</strong> request against previous <strong>Pack Order</strong> requests. As such, you should be careful to ensure that you do not pack the same item into more than one consignment.
+> However, PRO does not validate the items on a <strong>Pack Order</strong> request against previous <strong>Pack Order</strong> requests. The Pack Order endpoint can be called multiple times for the same order and items. This allows for split picks and short picks to backorder in an operation.
 
 Once SortedPRO has received a **Pack Order** request, it creates the consignment and returns the relevant `{consignmentReference}`. The consignment's details are taken from the body of the **Pack Order** request. Fields that are not part of the request (because they are either NULL or not part of the **Pack Order** request structure) are populated from the details of the specified order.
 
@@ -25,12 +25,12 @@ Once SortedPRO has received a **Pack Order** request, it creates the consignment
 The **Pack Order** request's `OrderReferenceProvidedByCustomer` field enables you to provide a custom reference for the consignment that the request generates. This is a separate field to the `OrderReferenceProvidedByCustomer` used on the order itself, and behaves in the following ways:
 
 * If you add a custom reference to your **Pack Order** request, then PRO uses this value as the consignment's custom reference, even if there is a different custom reference on the order itself. 
-* If you do not add a custom reference to your **Pack Order** request, but the order does have a custom reference, then PRO populates the resulting consignment's `OrderReferenceProvidedByCustomer` using value from the order
+* If you do not add a custom reference to your **Pack Order** request, but the order does have a custom reference, then PRO populates the resulting consignment's `OrderReferenceProvidedByCustomer` using the value from the order.
 * If neither the order or the **Pack Order** request has a custom reference specified, then PRO creates the consignment without a custom reference. 
 
 ### Generating Return Consignments
 
-You can automatically generate a return consignment at the same time as well as an outbound consignment by using the `GenerateReturn` flag. When PRO receives a **Pack Order request that has** `GenerateReturn` set to _true_, it creates and returns two consignments - one outbound and one inbound.
+You can automatically generate a return consignment at the same time as well as an outbound consignment by using the `GenerateReturn` flag. When PRO receives a **Pack Order** request that has `GenerateReturn` set to _true_, it creates and returns two consignments - one outbound and one inbound.
 
 The inbound consignment is identical to the outbound consignment, with the exception that its _Origin_ and _Destination_ addresses are swapped.
 
@@ -110,13 +110,13 @@ The example shows a **Pack Order** request to create a consignment with one pack
 > <span class="note-header">More Information:</span>
 >
 > * For full reference information on the <strong>Pack Order</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/PackOrder">Pack Order</a></strong> page of the API reference.
-> * For example call flows showing orders being packed into consignments, see the <a href="/pro/api/help/flows/order_flex_flow.html">Order Flex</a> and <a href="/pro/api/help/flows/consumer_options_flex_flow.html">Consumer Options Flex</a> call flow pages.
+> * For an example call flow showing orders being packed into consignments, see the <a href="/pro/api/help/flows/order_flex_flow.html">Order Flex</a> call flow page.
 
 ## Next Steps
 
 * Learn how to retrieve delivery options at the [Getting Delivery Options](/pro/api/help/getting_delivery_options.html) page.
-* Learn how to retrieve a consignment's customs documentation and invoices at the [Getting Customs Docs And Invoices](/api/help/getting_customs_docs_and_invoices.html) page.
-* Learn how to track consignments at the [Tracking Consignments](/api/help/tracking_consignments.html) page.
+* Learn how to retrieve a consignment's customs documentation and invoices at the [Getting Customs Docs And Invoices](/pro/api/help/getting_customs_docs_and_invoices.html) page.
+* Learn how to track consignments at the [Tracking Consignments](/pro/api/help/tracking_consignments.html) page.
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>

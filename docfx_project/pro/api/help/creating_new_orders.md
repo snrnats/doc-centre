@@ -21,8 +21,8 @@ At a minimum, the **Create Order** endpoint requires you to send item, origin ad
 * The required delivery date.
 * Customs documentation.
 * The order's direction of travel.
-* Metadata. PRO metadata enables you to record additional data about a consignment in custom fields. For more information on using metadata in PRO, see the **[Metadata](/api/flows/moreInfo.html#metadata)** section of the **More Information** page.
-* Tags. Allocation tags enable you to filter the list of carrier services that a particular consignment could be allocated to. For more information on allocation tags, see the **[Tags](/api/flows/moreInfo.html#tags)** section of the **More Information** page.
+* Metadata. PRO metadata enables you to record additional data about a consignment in custom fields. For more information on using metadata in PRO, see the [Metadata](/pro/api/help/metadata.html) page.
+* Tags. Allocation tags enable you to filter the list of carrier services that a particular consignment could be allocated to. For more information on allocation tags, see the [Tags](/pro/api/help/tags.html) page.
 
 Either the order's `origin` address, its `destination` address, or both, must include a valid <code>ShippingLocationReference</code>. For information on how to obtain a list of your organisation's shipping locations, see the <strong><a href="https://docs.electioapp.com/#/api/GetShippingLocations">Get Shipping Locations</a></strong> page of the API reference.
 
@@ -150,6 +150,10 @@ The **Create Orders** endpoint isn't the only PRO endpoint that can generate ord
 
 Creating orders in this way lets you provide front-end delivery options in circumstances where you cannot guarantee that the contents of your customer's online basket will map directly to a single consignment (and so first need to create an order that you can pack into consignments). For example, you might operate more than one warehouse and so may need to ship some orders in multiple consignments.
 
+> <span class="note-header">Note:</span>
+>
+> Access to PRO's delivery and pickup option endpoints requires a SortedHERO license. This component is sold separately to the main SortedPRO product. 
+
 To create an order from delivery options, you'll need to make two API calls: 
 
 1. Call the **Delivery Options** endpoint. The structure of the **Delivery Options** request is very similar to that of the **Create Order** request. However, rather than simply creating an order from the information, PRO instead returns a list of potential delivery options for the (as yet uncreated) order. Each delivery option represents a delivery date and time, and a suitable carrier service. 
@@ -160,9 +164,8 @@ You can also generate orders from pickup options. The process is the same as tha
 
 > <span class="note-header">More Information:</span>
 >
-> * For a full user guide on working with delivery and pickup options, including further information on selecting options, see the <a href="/api/help/using_delivery_and_pickup_options.html">Using Delivery and Pickup Options</a> section.
+> * For a full user guide on working with delivery and pickup options, including further information on selecting options, see the <a href="/pro/api/help/using_delivery_and_pickup_options.html">Using Delivery and Pickup Options</a> section.
 > * For reference information on the Delivery Options and Pickup Options APIs, see the <a href="https://docs.electioapp.com/#/api/DeliveryOptions">API reference</a>.
-> * For worked examples showing an order being created from delivery options, see the <a href="/pro/api/help/flows/consumer_options_flex_flow.html">Consumer Options Flex</a> example call flow.
 
 ## Next Steps
 
