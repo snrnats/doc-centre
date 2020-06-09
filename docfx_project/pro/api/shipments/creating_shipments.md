@@ -1,6 +1,6 @@
 # Creating Shipments
 
-In order for SortedPRO to manage a shipment, you'll need to record the details of that shipment on the system. This page explains how to use the **Create Shipment** endpoint to create a new shipment record, and how to clone existing shipments using the **Clone Shipment** endpoint.
+In order for SortedPRO to manage a shipment, you'll need to record the details of that shipment on the system. This page explains how to use the **Create Shipment** endpoint to create a new shipment record, how to clone existing shipments using the **Clone Shipment** endpoint, and how to update existing shipments using the **Update Shipment** endpoint.
 
 ---
 
@@ -274,11 +274,96 @@ To call **Clone Shipment**, send a `POST` request to `https://api.sorted.com/pro
 
 The example below shows a request to clone a shipment <span class="highlight">NEED TO PUT IN EXAMPLE ONCE THE ENDPOINT STUB IS UP AND RUNNING</span>
 
+## Updating Shipments
+
+You can update an existing unallocated shipment via the **Update Shipment** endpoint. When you make an **Update Shipment** request, SortedPRO overwrites the relevant shipment's details with new details provided in the body of the request.
+
+To call **Update Shipment**, send a `PUT` request to `https://api.sorted.com/pro/shipments`. You will need to specify the shipment `{reference}` in the body of the request, but the request should otherwise be structured in the same way as a **Create Shipment** request. Other than the `reference`, **Update Shipment** uses the same validation as **Create Shipment** (that is, `shipment_type`, `contents`, and `addresses` are required and all other valid properties are optional). 
+
+<span class="highlight">CAN YOU PASS MULTIPLE SHIPMENTS AT ONCE? THE STUB WON'T LET ME BUT I DON'T KNOW IF THAT'S CONCLUSIVE</span>
+
+You can only pass properties that would be accepted by a **Create Shipment**  request when using **Update Shipment**. For example, you can update a shipment's `contents` and `custom_reference`, but not its `allocation` details or `state`.
+
+When it has received the request, PRO replaces the _entire_ shipment object for the specified shipment with the new details you provided, and returns a confirmation message.
+
+> <span class="note-header">Note:</span>
+>
+> If you do not pass a value for an optional property when making an **Update Shipment** request then PRO will not store any value for that property, even if that property had a value before you updated the shipment.
+
+You cannot update a shipment that has already been allocated, because PRO uses a shipment's current details to decide the carrier services that that shipment can be allocated to. You would first need to deallocate an allocated shipment in order to update it.
+
+> <span class="note-header">Note:</span>
+>
+> For more information on deallocating a shipment, see [LINK HERE]
+
+### Update Shipment Example
+
+The example shows a simple **Update Shipment** request for a shipment with a `{reference}` of  _sp_00595452779180472847666078547968_. The request is successful, meaning that PRO has any previous details for that shipment with the details in the request.
+
+<div class="tab">
+    <button class="staticTabButton">Example Update Shipment Request</button>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'updateShipmentResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+</div>
+
+<div id="updateShipmentResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'updateShipmentResponse')">
+
+```json
+{
+	"reference": "sp_00595452779180472847666078547968",
+	"custom_reference": "MyCustomRef002",
+	"shipment_type": "on_demand",
+	"direction": "outbound",
+	"contents": [
+		{
+			"value": {
+				"amount": 2.99,
+				"currency": "GBP"
+			}
+		}
+	],
+	"addresses": [
+		{
+			"address_type": "origin",
+			"shipping_location_reference": "myref"
+		},
+		{
+			"address_type": "destination",
+			"shipping_location_reference": "myref002"
+		}
+	]
+}
+```
+</div>
+
+<div class="tab">
+    <button class="staticTabButton">Example Update Shipment Response</button>
+    <div class="copybutton" onclick="CopyToClipboard(this, 'updateShipmentRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
+</div>
+
+<div id="updateShipmentRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'updateShipmentRequest')">
+
+```json
+{
+  "reference": "sp_00595452779180472847666078547968",
+  "custom_reference": "MyCustomRef002",
+  "message": "Shipment sp_00595452779180472847666078547968 has been updated successfully",
+  "_links": [
+    {
+      "href": "https://api.sorted.com/pro/shipments/sp_00595452779180472847666078547968",
+      "rel": "shipment",
+      "reference": "sp_00595452779180472847666078547968",
+      "type": "shipment"
+    }
+  ]
+}
+```
+</div>
+
 ## Next Steps
 
 * Learn how to retrieve shipment data: [Getting Shipments](/pro/api/shipments/getting_shipments.html)
-* Learn how to update existing shipments: [Updating Shipments](/pro/api/shipments/updating_shipments.html)
 * Learn how to cancel shipments: [Cancelling Shipments](/pro/api/shipments/cancelling_shipments.html)
+* Learn how to allocate shipments: [Allocating Shipments](/pro/api/shipments/allocating_shipments.html)
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>

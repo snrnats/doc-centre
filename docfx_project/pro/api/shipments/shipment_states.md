@@ -54,8 +54,8 @@ All PRO shipments have a `{state}`, indicating the point in the delivery process
 ## Next Steps
 
 * Learn how to retrieve shipment data: [Getting Shipments](/pro/api/shipments/getting_shipments.html)
-* Learn how to update existing shipments: [Updating Shipments](/pro/api/shipments/updating_shipments.html)
 * Learn how to cancel shipments: [Cancelling Shipments](/pro/api/shipments/cancelling_shipments.html)
+* Learn how to allocate shipments: [Allocating Shipments](/pro/api/shipments/allocating_shipments.html)
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>

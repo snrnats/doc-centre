@@ -16,10 +16,10 @@ Each shipment object contains details of the shipment's current state (for examp
 
 ## Shipments Section Contents
 
-* [Creating Shipments](/pro/api/shipments/creating_shipments.html) - Explains how to use the **Create Shipments** endpoint, and also how to clone existing shipments.
+* [Creating Shipments](/pro/api/shipments/creating_shipments.html) - Explains how to create, clone, and update shipments.
 * [Getting Shipments](/pro/api/shipments/getting_shipments.html) - Explains how to use the **Get Shipment** endpoint to retrieve shipment details.
-* [Updating Shipments](/pro/api/shipments/updating_shipments.html) - Explains how to use the **Update Shipment** endpoint to update an existing shipment's details, and how to use the **Change Shipment State** endpoint to manually edit a shipment's state.
 * [Cancelling Shipments](/pro/api/shipments/cancelling_shipments.html) - Explains how to use the **Cancel Shipment** endpoint to set a shipment's status to _Cancelled_.
+* [Shipment States](/pro/api/shipments/shipment_states.html) - Lists the various `{states}` that a shipment can assume.
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>

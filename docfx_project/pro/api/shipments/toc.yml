@@ -9,8 +9,6 @@
     href: creating_shipments.md
   - name: Getting Shipments
     href: getting_shipments.md    
-  - name: Updating Shipments
-    href: updating_shipments.md
   - name: Cancelling Shipments
     href: cancelling_shipments.md
   - name: Shipment States

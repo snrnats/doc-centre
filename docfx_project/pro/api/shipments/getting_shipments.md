@@ -24,9 +24,9 @@ To call **Get Shipment**, send a `GET` request to `https://api.sorted.com/pro/sh
 >
 > For full reference information on the **Get Shipment** endpoint, see [LINK HERE]
 
-## Example get Shipment Response
+## Example Get Shipment Response
 
-The example below shows a **Get Shipment** request for a shipment with a `{reference}` of `sp_9953035299125395456009822134452`.
+The example below shows a **Get Shipment** request for a shipment with a `{reference}` of _sp_9953035299125395456009822134452_.
 
 <div class="tab">
     <button class="staticTabButton">Example Get Shipment Response</button>
@@ -212,8 +212,8 @@ The example below shows a **Get Shipment** request for a shipment with a `{refer
 ## Next Steps
 
 * Learn how to create new shipments: [Creating Shipments](/pro/api/shipments/creating_shipments.html)
-* Learn how to update existing shipments: [Updating Shipments](/pro/api/shipments/updating_shipments.html)
 * Learn how to cancel shipments: [Cancelling Shipments](/pro/api/shipments/cancelling_shipments.html)
+* Learn how to allocate shipments: [Allocating Shipments](/pro/api/shipments/allocating_shipments.html)
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>
