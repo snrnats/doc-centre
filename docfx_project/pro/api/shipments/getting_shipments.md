@@ -211,7 +211,7 @@ The example below shows a **Get Shipment** request for a shipment with a `{refer
 
 ## Next Steps
 
-* Learn how to create new shipments: [Creating Shipments](/pro/api/shipments/creating_shipments.html)
+* Learn how to create, clone, and update shipments: [Creating Shipments](/pro/api/shipments/creating_shipments.html)
 * Learn how to cancel shipments: [Cancelling Shipments](/pro/api/shipments/cancelling_shipments.html)
 * Learn how to allocate shipments: [Allocating Shipments](/pro/api/shipments/allocating_shipments.html)
 

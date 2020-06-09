@@ -274,6 +274,10 @@ To call **Clone Shipment**, send a `POST` request to `https://api.sorted.com/pro
 
 The example below shows a request to clone a shipment <span class="highlight">NEED TO PUT IN EXAMPLE ONCE THE ENDPOINT STUB IS UP AND RUNNING</span>
 
+> <span class="note-header">Note:</span>
+>
+> For full reference information on the **Clone Shipment** endpoint, see [LINK HERE]
+
 ## Updating Shipments
 
 You can update an existing unallocated shipment via the **Update Shipment** endpoint. When you make an **Update Shipment** request, SortedPRO overwrites the relevant shipment's details with new details provided in the body of the request.
@@ -358,6 +362,10 @@ The example shows a simple **Update Shipment** request for a shipment with a `{r
 }
 ```
 </div>
+
+> <span class="note-header">Note:</span>
+>
+> For full reference information on the **Update Shipment** endpoint, see [LINK HERE]
 
 ## Next Steps
 
