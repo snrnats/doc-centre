@@ -10,10 +10,6 @@ The **Create Shipment** endpoint enables you to create new shipment records with
 
 To create a shipment, send a `POST` request to `https://api.sorted.com/pro/shipments`. The body of the request should contain the shipment details, structured as per the PRO data contract.
 
-> <span class="note-header">Note:</span>
->
-> For full reference information on the **Create Shipments** endpoint, including the properties accepted and the structure required, see [LINK HERE]
-
 ### Required Shipment Properties
 
 As a minimum, the **Create Shipments** endpoint requires you to send:
@@ -21,6 +17,10 @@ As a minimum, the **Create Shipments** endpoint requires you to send:
 * `shipment_type` - Specifies whether the shipment is `on_demand` (i.e. will require an ad-hoc carrier collection to be booked) or `scheduled` (i.e. will be picked up as part of a regularly scheduled carrier collection ).
 * `contents` - The contents of the shipment itself.
 * `addresses` - All shipments require both `origin` and `destination` addresses.
+
+> <span class="note-header">Note:</span>
+>
+> PRO handles collection booking for `on-demand` shipments as a background process when the shipment is allocated to a carrier service. You do not need to specify `on_demand` booking details manually.
 
 ### Specifying Shipment Contents
 
@@ -257,6 +257,10 @@ In the example below, PRO has returned a shipment `{reference}` of _sp_005954527
 All PRO shipments have a `{state}`, indicating the point in the delivery process that that particular shipment is at. Newly-created shipments have an initial state of `Unallocated`. For more information on PRO shipment states, see [LINK HERE].
 
 <span class="highlight">SHOULD PROBABLY PUT A NOTE IN HERE ABOUT CREATING SHIPMENTS IN THE UI ONCE WE KNOW WHAT THE NEW UI IS GOING TO LOOK LIKE</span>
+
+> <span class="note-header">Note:</span>
+>
+> For full reference information on the **Create Shipments** endpoint, including the properties accepted and the structure required, see [LINK HERE]
 
 ## Cloning Shipments
 

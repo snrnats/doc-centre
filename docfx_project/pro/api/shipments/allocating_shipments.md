@@ -1,98 +1,77 @@
 # Allocating Shipments
 
-<span class="highlight">THESE ARE ALL JUST NOTES TO SELF AND AREN'T INTENDED FOR PUBLIC CONSUMPTION (AT LEAST, NOT IN THIS FORM)</span>
+Once you've created a shipment, you'll need to allocate it to a carrier service. This section explains how to configure allocation rules that PRO can use when selecting carrier services, and the various methods you can use to allocate shipments to those services.
 
-In order to make dangerous goods rulesets reusable and simple to manage for customers, the concept we are introducing is that customers will manage which carrier services can carry which types of dangerous goods. This means that Sorted do not have to continually update integrations when new rules are introduced by carriers. This is especially useful in situations where customers have non-standard agreements with carriers.
+---
 
-In this concept, a "dangerous goods ruleset" is created independently of a carrier service and can then be applied to or linked to a carrier service. Then, when allocating, the dangerous goods rules should be considered and any service which does not meet the rules should be excluded.
+## What Is Allocation?
 
-When allocating or retrieving quotes for a shipment, the Shipment API should also consult the Allocation Rules API to check for any excluded carrier services.
-
-Rulesets are managed through the new UI
-
-### collections
-
-For on_demand carriers there is a need to tell the carrier when to send a driver to collect shipments. This is in contrast to scheduled shipments where there is a scheduled collection from pre-defined shipping locations.
+In the context of SortedPRO, **allocation** is the process of selecting the carrier service that will be used to deliver a shipment. Allocation is a key part of all PRO workflows, as a shipment cannot be shipped if it has not previously been allocated to a suitable carrier service.
 
 > <span class="note-header">Note:</span>
 >
-> The terminology used by many carriers for this type of operation is a "pick-up request". To avoid confusion with "pick-up options", this operation will be known as a "collection request" in Sorted.
+> You can only allocate shipments that are in a `{state}` of either _unallocated_ or _allocation_failed_. If you attempt to allocate a shipment that is not in one of those states, PRO returns an error.
 
-After analysing several carriers for on_demand shipping it became clear that carriers generally operate in a similar way.
+<span class="highlight">THE ABOVE IS A CONSIGNMENTS RULE BUT I'M GUESSING THAT THIS IS STILL THE CASE. CAN'T SEE ANY OTHER STATES ON THE LIST THAT YOU WOULD BE ABLE TO ALLOCATE FROM</span>
 
-Shipments are booked individually with the carrier but are only collected by the carrier once a collection or pick-up request has been made.
+To allocate shipments in PRO, you'll need to call one of PRO's allocation endpoints. You can specify a carrier service or service group to allocate to, allocate based on a quote you received, or have PRO select the cheapest eligible carrier service for you. You can also use custom filters to narrow down the pool of available services on a per-shipment basis. Whichever endpoint you use, PRO uses pre-defined allocation rules to ensure that your shipment is allocated to a suitable carrier service.
 
-Each on_demand carrier service will have different requirements for when and how a collection request can be made.
+PRO offers the following allocation endpoints:
 
-For example:
+* **Allocate Shipment**
 
-FedEx Ground - maximum of one collection request per location, per day for next day collection.
-DPD - maximum of one collection request per location, per day, no later than 12:00 on the day of collection.
-WARNING
-The following points should be factored in to any design for this feature:
+    `https://api.sorted.com/pro/shipments/{reference}/allocate` - Allocates a single shipment using your default allocation rules.
+* **Allocate Shipments**
 
-* Collection requests must not be configurable by customers, but must be configurable by Sorted per carrier service.
-* Collection schedules must be configurable outside of the carrier service integration.
-* Collection requests must be made per origin location and must respect carrier limits.
+    `https://api.sorted.com/pro/shipments/allocation` - Allocates multiple shipments using your default allocation rules. 
+* **Allocate Shipment with Carrier Service**
 
-There are 2 known operating modes for carrier collection requests:
+    `https://api.sorted.com/pro/shipments/{reference}/allocate/service/{service_ref}` - Allocates a single shipment with a specific carrier service.
+* **Allocate with Carrier Service**
 
-* Per shipment
-* Roll up per origin location
+    `https://api.sorted.com/pro/shipments/allocation/service` - Allocates multiple shipments with a specific carrier service.
+* **Allocate Shipment with Service Group**
 
-Per shipment mode
-This operating mode must result in a collection request per shipment as part of the allocation flow.
+    `https://api.sorted.com/pro/shipments/{reference}/allocate/service_group/{group_ref}` - Allocates a single shipment with a carrier service from a specific carrier service group.
+* **Allocate with Service Group**
 
-Success: The shipment is allocated when the both pick up and delivery elements of a request succeed
-Failure: Allocation of the shipment will fail if either the collection or delivery element of a request fails
+    `https://api.sorted.com/pro/shipments/allocation/service_group` - Allocates multiple shipments with a carrier service from a specific carrier service group.
+* **Allocate with Filters**
+    
+    `https://api.sorted.com/pro/shipments/allocation/filters` - Allocates one or more shipments with a carrier service that matches the specified filters. 
+* **Allocate Shipment with Quote**
 
-Roll up mode
-Roll up mode is more complex. Some carrier services have limits such as a maximum frequency of collection requests (e.g. once per location per day), as well as a maximum number of shipments per request.
+    `https://api.sorted.com/pro/shipments/allocate/{reference}/quote/{quote_reference}` - Allocates a single shipment with the carrier service referenced in a specific pre-existing quote.
 
-Success:
-The current number of queued shipments per location does not exceed the carrier service's specific limit (if applicable);
-The delivery element of the shipment is successful;
-The shipment is successfully queued in an internal queue for collection booking
-Failure
-The current number of queued shipments per location exceeds the carrier service's specific limit (if applicable)
-The delivery element of the shipment is unsuccessful
-The shipment is not successfully queued in an internal queue for collection booking
+When a shipment is allocated to a carrier service, its status changes to _allocated_, enabling you to retrieve its package labels and (where applicable) customs documentation. If you used an endpoint that only 
 
-Following an allocation request,the following state transitions should occur.
+## What Is an Allocation Rule?
 
-Per shipment mode
-When operating per shipment, the state transitions should be as follows:
 
-Event	Target State
-shipment successfully booked with carrier, including collection and delivery	collection_booked
-shipment not successfully booked with carrier for delivery	allocation_failed
-shipment not successfully booked with carrier for collection	collection_booking_failed
 
-Roll up mode
-In addition to immediate feedback when allocating in this mode, we have scheduled events that will be triggered later in the lifecycle of a shipment, e.g.:
+### Configuring Dangerous Goods Rules
 
-The queued collection request succeeds (i.e. a driver collection is booked)
-The queued collection request does not succeed
+PRO enables you to manage which carrier services can carry which types of dangerous goods by setting up "dangerous goods rulesets" in the UI. This is a change from the original PRO's consignments-based implementation, in which dangerous goods specifications were directly tied in to each carrier service.
 
-Event	Target State
-shipment successfully booked for delivery	allocated
-shipment not successfully queued for collection request	collection_booking_failed
-collection request succeeds	collection_booked
-collection request does not succeed	collection_booking_failed
+When setting up dangerous goods rules, you configure a ruleset independently of any carrier services and then link those rules to the services you require. This is especially useful if you have non-standard agreements with your carriers (that is, carriers will allow you to ship dangerous goods on a carrier service that would not normally take that class of goods).
+
+When allocating shipments, PRO takes your dangerous goods rulesets into account as part of its allocation rule checks. Any service that does not meet the rules is excluded.
+
+<span class="highlight">INSTRUCTIONS FOR SETTING UP RULESETS IN HERE (WHEN IT'S IN THE UI)</span>
 
 > <span class="note-header">Note:</span>
 >
-> If the date of collection for a shipment is known, this information should be populated in the shipping_date property of the shipment. This applies whether the shipment is allocated according to "per shipment mode" or "roll up mode".
+> When you allocate an `on-demand` shipment, PRO automatically books a collection as a background process. You do not need to specify `on_demand` booking details manually.
 
-The customer can't do anything about collections and we're going to handle it per carrier service as part of our integration
+## After Allocation
 
-Andy Walton:house:  15:34
-Ah right, OK. So as far as the customer's concerned they just allocate to the on demand service and we tell them when it's getting picked up?
 
-Michael Rose  15:35
-exactly. we might not even tell them when it's going to be picked up, just that it will be
-15:35
-carriers don't all even confirm pick up requests
+
+## Allocation Section Contents
+
+*
+*
+*
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>
