@@ -87,9 +87,11 @@ When allocating shipments, PRO takes your dangerous goods rulesets into account 
 
 ## Allocation Section Contents
 
-*
-*
-*
+* [Allocating to Default Rules](/pro/api/shipments/allocating_to_default_rules.html) - Explains how to allocate shipments based on custom business rules.
+* [Allocating with a Specific Carrier Service](/pro/api/shipments/allocating_with_a_specific_carrier_service.html) - Explains how to allocate shipments with a specific carrier service.
+* [Allocating Within a Carrier Service Group](/pro/api/shipments/allocating_within_a_carrier_service_group.html) - Explains how to allocate shipments with a carrier service from a specific carrier service group.
+* [Allocating Using Filters](/pro/api/shipments/allocating_using_filters.html) - Explains how to use filters to specify allocation rules on a per-shipment basis. 
+* [Allocating via a Quote](/pro/api/shipments/allocating_via_a_quote.html) - Explains how to allocate a shipment with the carrier service referenced in a specific pre-existing quote.
 
 <script src="../../scripts/requesttabs.js"></script>
 <script src="../../scripts/responsetabs.js"></script>
