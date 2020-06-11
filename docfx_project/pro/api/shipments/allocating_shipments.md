@@ -43,11 +43,33 @@ PRO offers the following allocation endpoints:
 
     `https://api.sorted.com/pro/shipments/allocate/{reference}/quote/{quote_reference}` - Allocates a single shipment with the carrier service referenced in a specific pre-existing quote.
 
-When a shipment is allocated to a carrier service, its status changes to _allocated_, enabling you to retrieve its package labels and (where applicable) customs documentation. If you used an endpoint that only 
+The action PRO takes once the allocation request is received depends on the type of endpoint you used. If you used an endpoint that allocated individual shipments, then PRO allocates the shipment immediately and returns an Allocation Summary listing details of the allocation, such as prices, dates and tracking information. However, if you used an endpoint that can allocate multiple shipments at once, then PRO queues the shipments for allocation at a later time and returns an Allocate Shipments Result confirming the shipments that were queued.
+
+<span class="highlight">NEEDS A NOTE AS TO WHY IT DOES THE ASYNC QUEUE THING. I'M GUESSING IT'S FOR PERFORMANCE REASONS BUT WE NEED TO CHECK THAT</span>
+
+> <span class="note-header">Note:</span>
+>
+> For more information on PRO's responses to allocation requests, see [LINK HERE]
+
+When a shipment is allocated to a carrier service, its status changes to _allocated_, enabling you to retrieve its package labels and (where applicable) customs documentation.
 
 ## What Is an Allocation Rule?
 
+When you make an allocation request for a shipment, PRO uses its allocation rules to ascertain which carrier services are eligible to take that shipment and which are not. Allocation rules are optional criteria that define the shipments that a particular carrier service is eligible to take. You can specify the following:
 
+* Maximum and minimum dimensions and weight
+* Maximum monetary value
+* Excluded UK postcode areas
+* Excluded countries
+* Allocation tags.
+
+<span class="highlight">LIST TAKEN FROM CONSIGNMENTS HELP. NEEDS CHECKING IN NEW UI</span>
+
+For example, you could specify that a particular carrier service should only be allocated shipments that weigh between 1-25 Kg. Subsequently, PRO would not consider this service when allocating a shipment with a weight of 30Kg.
+
+### Configuring Allocation Rules
+
+<span class="highlight">INSTRUCTIONS ON CONFIGURING RULES IN NEW UI IN HERE</span>
 
 ### Configuring Dangerous Goods Rules
 
@@ -62,10 +84,6 @@ When allocating shipments, PRO takes your dangerous goods rulesets into account 
 > <span class="note-header">Note:</span>
 >
 > When you allocate an `on-demand` shipment, PRO automatically books a collection as a background process. You do not need to specify `on_demand` booking details manually.
-
-## After Allocation
-
-
 
 ## Allocation Section Contents
 
