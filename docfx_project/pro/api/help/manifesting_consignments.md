@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-manifesting-consignments
+title: Manifesting Consignments
+tags: consignments,pro,api
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 02/06/2020
+---
 # Manifesting Consignments
 
 Once you've created a consignment and allocated it to a carrier service, you're ready to manifest it. This page explains how to manifest consignments, how to view existing customer manifests, and how to set a consignment as _Ready to Ship_.
@@ -15,13 +22,13 @@ PRO has two manifest endpoints:
 * **Manifest Consignments** enables you to manifest multiple consignments at once by providing a list of `{consignmentReferences}`. 
 * **Manifest Consignments From Query** enables you to manifest all consignments that meet a specified set of search criteria.
 
-> <span class="note-header">Note:</span> 
+> [!CAUTION]
 >
 > Every successful request to a manifest endpoint results in data being transmitted to the carrier. Therefore, Sorted strongly advise that you do not manifest consignments individually, and that consignment manifesting is aligned with the carrier collection times from the warehouse.
 
 Manifesting a consignment changes its state to _Manifested_. At this point the carrier is aware of the consignment, and will collect it unless otherwise advised. In order to prevent the consignment being shipped, you would need to either cancel or deallocate it. 
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > For more information on cancelling consignments, see the [Cancelling Consignments](/pro/api/help/cancelling_consignments.html) page.
 >
@@ -29,7 +36,7 @@ Manifesting a consignment changes its state to _Manifested_. At this point the c
 
 At this point, you should also look to print labels for the consignment, if you have not already done so. See [Getting Labels](/pro/api/help/getting_labels.html) for an explanation of how to retrieve package labels.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > For worked examples showing consignments being manifested, see any of the flows in the [Example Call Flows](/pro/api/help/flows.html) section.
 
@@ -41,7 +48,7 @@ To call **Manifest Consignments**, send a `PUT` request to `https://api.electioa
 
 Once PRO has received the request, it attempts to manifest the consignments listed in the request. The system then returns an array of messages indicating whether each individual consignment was successfully manifested.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 >  For full reference information on the <strong>Manifest Consignments</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/ManifestConsignments">Manifest Consignments</a></strong> page of the API Reference. 
 
@@ -49,12 +56,9 @@ Once PRO has received the request, it attempts to manifest the consignments list
 
 The example shows a request to manifest three consignments. The response indicates that all three consignments were successfully manifested.
 
-<div class="tab">
-    <button class="staticTabButton">Example Manifest Consignment Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'manifestConsRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Manifest Consignments Request](#tab/manifest-consignments-request)
 
-<div id="manifestConsRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'manifestConsRequest')">
+`PUT https://api.electioapp.com/consignments/manifest`
 
 ```json
 {
@@ -66,14 +70,7 @@ The example shows a request to manifest three consignments. The response indicat
 }
 ```
 
-</div>
-
-<div class="tab">
-    <button class="staticTabButton">Example Manifest Consignment Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'manifestConsResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="manifestConsResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'manifestConsResponse')">
+# [Manifest Consignments Response](#tab/manifest-consignments-response)
 
 ```json
 [
@@ -112,7 +109,8 @@ The example shows a request to manifest three consignments. The response indicat
   }
 ]
 ```
-</div>
+
+---
 
 ## Manifesting Consignments Using a Query
 
@@ -129,7 +127,8 @@ To call **Manifest Consignments From Query**, send a `POST` request to `https://
 
 Once the request is received, PRO attempts to manifest any consignments that meet the specified criteria. PRO then returns a `Message` indicating how many consignments met the terms of the query and how many it was able to add to the manifest queue. It also returns a `FailedConsignments` array listing the `consignmentReferences` of those consignments that PRO was unable to queue for manifest.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
+>
 >  For full reference information on the <strong>Manifest Consignments From Query</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery">Manifest Consignments From Query</a></strong> page of the API Reference. 
 
 ### Setting Consignments As Ready to Ship
@@ -138,7 +137,7 @@ PRO's **Set Ready To Ship** and **Set Not Ready To Ship** endpoints can help you
 
 To call **Set Ready To Ship**, send a `PUT` request to `https://api.electioapp.com/consignments/setreadytoship`. The body of the request should comprise a list containing the `{consignmentReferences}` of all the consignments you want to set as _ReadyToShip_.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > You can only set consignments that are in an _Allocated_ state as _ReadyToShip_.
 
@@ -146,30 +145,18 @@ Once the request is received, PRO changes the `consignmentStates` of all the rel
 
 The example below shows a successful request to set two consignments as _ReadyToShip_, and a further **Manifest Consignments From Query** call to manifest all consignments in that state.
 
-<div class="tab">
-    <button class="staticTabButton">Example Set Ready To Ship Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'RTSRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Ready To Ship Request](#tab/ready-to-ship-request)
 
-<div id="RTSRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'RTSRequest')">
+`PUT https://api.electioapp.com/consignments/setreadytoship`
 
 ```json
-PUT https://api.electioapp.com/consignments/setreadytoship
-
 [
     "EC-000-05D-EM7",
     "EC-000-05D-EKV"
 ]
 ```
 
-</div>
-
-<div class="tab">
-    <button class="staticTabButton">Example Set Ready To Ship Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'RTSResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="RTSResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'RTSResponse')">
+# [Ready To Ship Response](#tab/ready-to-ship-response)
 
 ```json
 [
@@ -198,19 +185,11 @@ PUT https://api.electioapp.com/consignments/setreadytoship
 ]    
 ```
 
-</div>
+# [Manifest Query](#tab/manifest-query)
 
-<div class="tab">
-    <button class="staticTabButton">Manifesting Ready To Ship Consignments</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'RTSManifest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="RTSManifest" class="staticTabContent" onclick="CopyToClipboard(this, 'RTSManifest')">
+`POST https://api.electioapp.com/consignments/manifestFromQuery`
 
 ```json
-
-POST https://api.electioapp.com/consignments/manifestFromQuery
-
 {
   "States": [
     "ReadyToShip"
@@ -218,7 +197,7 @@ POST https://api.electioapp.com/consignments/manifestFromQuery
 }
 ```
 
-</div>
+---
 
 The **Set Not Ready To Ship** endpoint works in exactly the same way as **Set Ready To Ship**, only in reverse. It takes the `consignmentReferences` of consignments in a _ReadyToShip_ state and returns them to a state of _Allocated_, enabling them to be deallocated (and subsequently edited if required) or cancelled.
 
@@ -226,30 +205,17 @@ To call **Set Not Ready To Ship**, send a `PUT` request to `https://api.electioa
 
 The example below shows a successful **Set Not Ready To Ship** request for a single consignment.
 
-<div class="tab">
-    <button class="staticTabButton">Example Set Ready To Ship Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'RTSRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Not Ready To Ship Request](#tab/not-ready-to-ship-request)
 
-<div id="RTSRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'RTSRequest')">
+`PUT https://api.electioapp.com/consignments/setnotreadytoship`
 
 ```json
-
-PUT https://api.electioapp.com/consignments/setnotreadytoship
-
 [
 	"EC-000-05D-GHR"
 ]
 ```
 
-</div>
-
-<div class="tab">
-    <button class="staticTabButton">Example Set Ready To Ship Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'RTSResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="RTSResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'RTSResponse')">
+# [Not Ready To Ship Response](#tab/not-ready-to-ship-response)
 
 ```json
 [
@@ -267,23 +233,17 @@ PUT https://api.electioapp.com/consignments/setnotreadytoship
 ]
 ```
 
-</div>
+---
 
 ### Manifest Consignments From Query Example
 
 The example shows a request to manifest all consignments that are allocated to Carrier X, shipping from a location with the `ShippingLocationReference` _Location1_, and have already had their labels printed. The response indicates that PRO found 10 consignments meeting these criteria, and that all 10 were successfully queued for manifest.
 
-<div class="tab">
-    <button class="staticTabButton">Example Manifest Consignments From Query Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'ManifestQueryRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Manifest From Query Request](#tab/manifest-from-query-request)
 
-<div id="ManifestQueryRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'ManifestQueryRequest')">
+`POST https://api.electioapp.com/consignments/manifestFromQuery`
 
 ```json
-
-POST https://api.electioapp.com/consignments/manifestFromQuery
-
 {
   "ShippingLocationReferences": [
     "Location1"
@@ -297,14 +257,7 @@ POST https://api.electioapp.com/consignments/manifestFromQuery
   "LabelsPrinted": true
 }
 ```
-</div>
-
-<div class="tab">
-    <button class="staticTabButton">Example Manifest Consignments From Query Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'ManifestQueryResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="ManifestQueryResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'ManifestQueryResponse')">
+# [Manifest From Query Response](#tab/manifest-from-query-response)
 
 ```json
 {
@@ -312,7 +265,7 @@ POST https://api.electioapp.com/consignments/manifestFromQuery
 }
 ```
 
-</div>
+---
 
 ## Retrieving Customer Manifests
 
@@ -325,8 +278,8 @@ PRO has two endpoints that enable you to retrieve current customer manifest deta
 
 To call **Get Customer Manifests**, send a `GET` request to  `https://api.electioapp.com/consignments/customer/manifests`. Optionally, you can add a `?shippingLocationReference=string` parameter, where `shippingLocationReference` is the unique reference of a shipping location you want to retrieve manifests for.
 
-> <span class="note-header">Note:</span>
->
+> [!NOTE]
+> 
 > You can get a list of valid shipping locations by calling the **Get Shipping Locations** endpoint. For reference information on **Get Shipping Locations**, see the <a href="https://docs.electioapp.com/#/api/GetShippingLocations">API Reference</a>.
 
 Once it has received the request, PRO returns a summary of all current manifests, including the following information:
@@ -343,25 +296,11 @@ If you added a `shippingLocationReference` parameter, then the summary only incl
 
 This example shows a request for details of all manifests associated with shipping location _EDC5-SL1_. PRO has returned a summary of three manifest files.
 
-<div class="tab">
-    <button class="staticTabButton">Example Get Customer Manifests Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'getManifestsRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Get Customer Manifests Request](#tab/get-customer-manifests-request)
 
-<div id="getManifestsRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'getManifestsRequest')">
+`GET https://api.electioapp.com/consignments/customer/manifests?shippingLocationReference=EDC5-SL1`
 
-```
-GET https://api.electioapp.com/consignments/customer/manifests?shippingLocationReference=EDC5-SL1
-```
-
-</div>
-
-<div class="tab">
-    <button class="staticTabButton">Example Get Customer Manifests Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'getManifestsResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="getManifestsResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'getManifestsResponse')">
+# [Get Customer Manifests Response](#tab/get-customer-manifests-response)
 
 ```json
 [
@@ -401,13 +340,13 @@ GET https://api.electioapp.com/consignments/customer/manifests?shippingLocationR
 ]
 ```
 
-</div>
+---
 
 ### Downloading a Manifest File
 
 The **Get Customer Manifest** endpoint enables you to download an individual manifest file in PDF format. To call **Get Customer Manifest**, send a `GET` request to `https://api.electioapp.com/consignments/customer/manifest/{manifestReference}`, where `{manifestReference}` is the unique reference of the manifest you want to download.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > You can get the `ManifestReference` for a particular manifest by making a **Get Customer Manifests** request for a summary of existing manifest details. Each manifest summary returned contains a `ManifestReference`.
 
@@ -419,7 +358,7 @@ Once the request is received, PRO returns the specified manifest file as a base-
 * Learn how to get and print delivery labels at the [Getting Labels](/pro/api/help/getting_labels.html) page.
 * Learn how to deallocate a consignment at the [Deallocating Consignments](/pro/api/help/deallocating_consignments.html)page.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > All of the URLs and examples given in this documentation relate to PRO's live production environment. To call APIs in the sandbox environment, substitute the `api.electioapp.com` portion of the API's base URL with `apisandbox.electioapp.com`. Don't forget to use your sandbox API key (as opposed to your production API key) when making the call.
 >
