@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-cancelling-consignments
+title: Cancelling Consignments
+tags: consignments,pro,api
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 28/05/2020
+---
 # Cancelling Consignments
 
 This page explains how to cancel consignments in PRO, both individually and in bulk.
@@ -32,12 +39,9 @@ Once the request has been received, PRO changes the each consignment's `consignm
 
 This example shows three consignments being cancelled at once via **Cancel Consignments** endpoint.
 
-<div class="tab">
-    <button class="staticTabButton">Example Cancel Consignments Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'cancelConsRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Cancel Consignments Request](#tab/update-consignments-request)
 
-<div id="cancelConsRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'cancelConsRequest')">
+`PUT https://api.electioapp.com/consignments/cancellist`
 
 ```json
 [
@@ -46,14 +50,8 @@ This example shows three consignments being cancelled at once via **Cancel Consi
   "EC-000-05D-1NV"
 ]
 ```
-</div>
 
-<div class="tab">
-    <button class="staticTabButton">Example Cancel Consignments Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'cancelConsResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="cancelConsResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'cancelConsResponse')">
+# [Cancel Consignments Response](#tab/update-consignments-response)
 
 ```json
 [
@@ -77,7 +75,7 @@ This example shows three consignments being cancelled at once via **Cancel Consi
     }
 ]
 ```
-</div>
+---
 
 ## Next Steps
 
