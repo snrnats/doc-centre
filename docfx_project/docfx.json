@@ -67,9 +67,9 @@
     "fileMetadataFiles": [],
     "template": [
       "default",
-      "templates/sorted-styles"
+      "templates/sorted"
     ],
-    "postProcessors": [ "ExtractSearchIndex", "AuthorsProcessor" ],
+    "postProcessors": [ "ExtractSearchIndex" ],
     "markdownEngineName": "markdig",
     "noLangKeyword": false,
     "keepFileLink": false,

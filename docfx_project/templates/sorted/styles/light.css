@@ -1,0 +1,74 @@
+:root {
+    --colour-dark: #404040;
+    --colour-darkest: #000;
+    --colour-main: #ff055e;
+    --colour-light-grey-1: #eee;
+    --colour-light-grey-2: #ddd;
+    --colour-light-grey-3: #ccc;
+    --colour-light-grey-4: #f1f1f1;
+    --colour-light-grey-5: #f8f8f8;
+    --colour-light-grey-6: #e7e7e7;
+    --colour-light-1: #fff;
+    --colour-light-2: #fafafa;
+    --colour-light-3: #f2f2f2;
+    --colour-light-4: #f9f9f9;
+    --colour-light-5: #fff;
+    --colour-grey-1: #666;
+    --colour-grey-2: #605d58;
+    --colour-grey-3: #494B52;
+    --colour-grey-4: #333;
+    --colour-highlight: yellow;
+    --colour-success: #128712;
+    --colour-background: #fff;
+    --colour-nav-background: #f8f8f8;
+    --colour-nav-active: #f2f2f2;
+    --colour-top-nav: #494B52;
+    --colour-top-nav-link: #fff;
+    --colour-tab-active: #ccc;
+    --colour-tab-background: #f2f2f2;
+    --colour-code-base: #333;
+    --colour-code-highlight-1: #ff055e;
+    --colour-code-highlight-2: #ddd;
+    --colour-search-highlight: #eee;
+    --colour-tab-header: #f2f2f2;
+    --colour-tab-border: #e0e0e0;
+    --colour-code-content: #404040;
+    --colour-code-background: #eee;
+    --colour-link-hover: #e60052;
+    --colour-search-background: #fff;
+    --colour-search-border: #eee;
+    --colour-muted: #777;
+
+    --font-code: 'Consolas', 'Menlo', sans-serif;
+    --code-light: #f2f2f2;
+    --code-default: #404040;
+    --code-emphasis: #a8a8a2;
+    --code-literal: #7930ff;
+    --code-title: #007027;
+    --code-attribute: #66d9ef;
+    --code-class: #757575;
+    --code-variable: #404040;
+    --code-comment: #999;
+    --code-size: 1.1em;
+
+    --table-row: #fff;
+    --table-row-alt: #e8e8e8;
+    --table-header: #ccc;
+
+    --colour-success: #128712;
+
+    --colour-tab-selected: #222;
+
+    --colour-spot-border: #777;
+
+    --colour-tag-background: #404040;
+    --colour-tag-hover: #ff055e;
+    --colour-tag-text: #fff;
+
+    --slider-shadow: #404040;
+    --slider-right-offset: 2px;
+
+    --btn-primary: #ddd;
+    --btn-primary-border: #e7e7e7;
+    --btn-primary-hover: #777;
+}
