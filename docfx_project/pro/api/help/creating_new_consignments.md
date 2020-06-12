@@ -31,7 +31,7 @@ There are lots of optional properties you can send when creating a consignment, 
 * Details of the specific items inside the consignment's packages.
 * The consignment's source.
 * Shipping and delivery dates.
-* Customs documentation.
+* Customs documentation data.
 * The consignment's direction of travel.
 * Metadata. PRO metadata enables you to use custom fields to record additional data about a consignment. For more information on using metadata in PRO, see the [Metadata](/pro/api/help/metadata.html) page.
 * Tags. Allocation tags enable you to filter the list of carrier services that a particular consignment could be allocated to. For more information on allocation tags, see the [Tags](/pro/api/help/tags.html) page.
@@ -115,7 +115,7 @@ The example below shows a simple **Create Consignments** request containing just
 
 Once it has received the consignment information, PRO creates the consignment record and returns a link to the newly-created consignment, including its `{consignmentReference}`. 
 
-The `{consignmentReference}` is a unique identifier for that consignment within PRO, and is a required parameter for many of PRO's API requests. Each PRO `{consignmentReference}` takes the format `EC-xxx-xxx-xxx`, where `x` is an alphanumeric character. Many of PRO's endpoints take `{consignmentReference}` as a parameter.
+The `{consignmentReference}` is a unique identifier for that consignment within PRO, and is a required parameter for many of PRO's API requests. Each PRO `{consignmentReference}` takes the format `EC-xxx-xxx-xxx`, where `x` is an alphanumeric character. 
 
 In the example below, PRO has returned a `{consignmentReference}` of _EC-000-05B-MMA_. 
 
@@ -146,7 +146,7 @@ All PRO consignments have a `{consignmentState}`, indicating the point in the de
 
 ## Creating Consignments From Delivery Options
 
-The **Create Consignments** endpoint isn't the only PRO endpoint that can generate consignments. You can also create consignments via the **Delivery Options** API, which enables you to get a list of delivery options for a potential consignment that you can present to your customer at checkout. When you select the required option, PRO automatically creates and allocates a new consignment without requiring you to make additional API calls.
+The **Create Consignments** endpoint isn't the only PRO endpoint that can generate consignments. You can also create consignments via the **Consumer Options** workflows, which enables you to get a list of delivery options for a potential consignment that you can present to your customer at checkout. When you select the required option, PRO automatically creates and allocates a new consignment without requiring you to make additional API calls.
 
 > <span class="note-header">Note:</span>
 >
@@ -167,12 +167,12 @@ You can also generate consignments from pickup options. The process is the same 
 
 ## Creating Consignments From Orders
 
-You can also create consignments from orders via the **Pack Order** endpoint. **Pack Order** enables you to take a PRO order and generate consignments from it. This function is particularly useful if your business uses multiple fulfilment centres, or uses drop ship vending.
+You can also create consignments from orders via the **Pack Order** endpoint. **Pack Order** enables you to take a PRO order and generate consignments from it. This function is particularly useful if your business uses multiple fulfilment centres, or uses drop ship vendors.
 
 It's important to understand the difference between a consignment and an order when using **Pack Order**:
 
 * An **order** is a collection of items that is to be transported to the same destination on behalf of the same customer.
-* A **consignment** is a collection of packages that is to be transported to the same destination, on behalf of the same customer, _from the same origin, on the same day, and by the same carrier_.
+* A **consignment** is a collection of packages that is to be transported to the same destination, on behalf of the same customer, _from the same origin, on the same day, and using the same carrier service_.
 
 The **Pack Order** endpoint enables you to take those items on an order that share an origin and are to be shipped together, and generate a shippable consignment from them. You will need to send one Pack Order request per consignment that you want to create from the order.
 
@@ -180,7 +180,7 @@ To create a consignment in this way, you'll need to make two API calls:
 
 1. Call the **Create Order** endpoint to create an order in PRO. The structure of the **Create Order** request is very similar to that of the **Create Consignment** request, and must include package, origin address, and destination address data at a minimum. PRO creates the order and returns an `orderReference`.
 
-2. Call the **Pack Order** endpoint to create the consignment. In the body of the request you'll need to supply at least the relevant `orderReference` and the package details of the consignment that you want to pack. Each package must contain at least one item. If the **Pack Order** request would create a valid consignment, then PRO creates the consignment and returns a consignment reference.
+2. Call the **Pack Order** endpoint to create a consignment. In the body of the request you'll need to supply at least the relevant `orderReference` and the package details of the consignment that you want to pack. Each package must contain at least one item. Only items supplied on the original order can be packed. If the **Pack Order** request is successful, PRO creates a consignment and returns the consignment reference.
 
 > <span class="note-header">More Information:</span>
 >
@@ -190,7 +190,7 @@ To create a consignment in this way, you'll need to make two API calls:
 
 ## Next Steps
 
-* Learn how to work with existing consignments at the [Managing Existing Consignments](/pro/api/help/updating_existing_consignments.html) page
+* Learn how to work with existing consignments at the [Updating Existing Consignments](/pro/api/help/updating_existing_consignments.html) page
 * Learn how to allocate consignments at the [Allocating Consignments to Carriers](/pro/api/help/allocating_consignments.html) page.
 * Learn how to get and print delivery labels at the [Getting Labels](/pro/api/help/getting_labels.html) page
 
