@@ -1,8 +1,15 @@
+---
+uid: pro-api-help-using-delivery-and-pickup-options
+title: Using Delivery and Pickup Options
+tags: options,pro,api,consignments,delivery options,pickup options
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 02/06/2020
+---
 # Using Delivery and Pickup Options
 
 Using delivery options enables you to offer you customers a choice of delivery slots. This section explains how to get delivery and pickup options for a consignment, and how to generate consignments and orders from the options a customer selects.
 
-> <span class="note-header">Important Note:</span>
+> [!NOTE]
 >
 > Access to PRO's delivery and pickup option endpoints requires a SortedHERO license. This component is sold separately to the main SortedPRO product. 
 

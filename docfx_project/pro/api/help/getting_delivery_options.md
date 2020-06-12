@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-getting-delivery-options
+title: Getting Delivery Options
+tags: options,pro,api,consignments,delivery options
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 29/05/2020
+---
 # Getting Delivery Options
 
 This page explains how to get a list of delivery options for a consignment, both as a summary and with full details.
@@ -44,14 +51,11 @@ PRO only returns a single carrier service for each delivery window on each date.
 
 ### Get Delivery Options Example
 
-The example shows a request to get delivery options for a fairly standard consignment. 
+The example shows a request to get delivery options for a fairly standard consignment. The API has returned two delivery options, both for Carrier X: one with an `{estimatedDeliveryDate}` of _2020-03-18_ and one with an `{estimatedDeliveryDate}` of _2020-03-19_.
 
-<div class="tab">
-    <button class="staticTabButton">Example Delivery Options Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'DelOptionsRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Get Delivery Options Request](#tab/get-delivery-options-request)
 
-<div id="DelOptionsRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'DelOptionsRequest')">
+`POST https://api.electioapp.com/deliveryoptions`
 
 ```json
 {
@@ -109,16 +113,7 @@ The example shows a request to get delivery options for a fairly standard consig
 
 ```
 
-</div>
-
-The API has returned two delivery options, both for Carrier X: one with an `{estimatedDeliveryDate}` of _2020-03-18_ and one with an `{estimatedDeliveryDate}` of _2020-03-19_.
-
-<div class="tab">
-    <button class="staticTabButton">Delivery Options Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'DelOptionsResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="DelOptionsResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'DelOptionsResponse')">
+# [Get Delivery Options Response](#tab/get-delivery-options-response)
 
 ```json
 {
@@ -135,7 +130,7 @@ The API has returned two delivery options, both for Carrier X: one with an `{est
                 "End": "23:59:00",
                 "UtcOffset": "+00:00"
             },
-            "Carrier": "Royal Mail",
+            "Carrier": "Carrier X",
             "CarrierService": "Tracked 48 ",
             "CarrierServiceReference": "MPD_RMDTPS48HNAUT",
             "CarrierServiceTypes": [
@@ -172,7 +167,7 @@ The API has returned two delivery options, both for Carrier X: one with an `{est
                 "End": "23:59:00",
                 "UtcOffset": "+00:00"
             },
-            "Carrier": "Royal Mail",
+            "Carrier": "Carrier X",
             "CarrierService": "Tracked 48 ",
             "CarrierServiceReference": "MPD_RMDTPS48HNAUT",
             "CarrierServiceTypes": [
@@ -201,7 +196,7 @@ The API has returned two delivery options, both for Carrier X: one with an `{est
 }
 ```
 
-</div>  
+--- 
 
 Both of these options have a time window starting at 00:00 and ending at 23:59. In practice, the carrier is offering to make the delivery at some point on either the 18th or 19th of March (as selected by the customer), but isn't offering a more specific timeslot on that service. 
 
@@ -225,12 +220,7 @@ Once it has received the request, PRO returns a list of all dates that have `Del
 
 In this example response, PRO has returned a list of delivery dates, but there are no available pickup options for the consignment.
 
-<div class="tab">
-    <button class="staticTabButton">Delivery Options Summary Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'DelOptionsSumResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="DelOptionsSumResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'DelOptionsSumResponse')">
+# [Delivery Options Summary Response](#tab/delivery-options-summary-response)
 
 ```json
 {
@@ -254,7 +244,7 @@ In this example response, PRO has returned a list of delivery dates, but there a
 }
 ```
 
-</div>
+---
 
 ## Getting Existing Delivery Options
 
@@ -270,12 +260,11 @@ Once it has received the request, PRO returns the details of the delivery option
 
 This example shows a standard delivery option as returned by the **Get Existing Delivery Options** endpoint.
 
-<div class="tab">
-    <button class="staticTabButton">Get Existing Delivery Option Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'existDelOptResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Get Existing Delivery Options Request](#tab/get-existing-delivery-options-request)
 
-<div id="existDelOptResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'existDelOptResponse')">
+`GET https://api.electioapp.com/deliveryoptions/details/EDO-000-79G-V89`
+
+# [Get Existing Delivery Options Response](#tab/get-existing-delivery-options-response)
 
 ```json
 {
@@ -338,7 +327,7 @@ This example shows a standard delivery option as returned by the **Get Existing 
 }
 ```
 
-</div>
+---
 
 ## Next Steps
 

@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-selecting-options
+title: Selecting Options
+tags: options,pro,api,consignments,pickup options,delivery options
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 29/05/2020
+---
 # Selecting Options
 
 This page explains how to to generate consignments and orders by selecting a delivery option. 
@@ -23,25 +30,11 @@ PRO then returns links to the consignment resource that was allocated, a summary
 
 The example shows a request to select a delivery option that has a `{deliveryOptionReference}` of _EDO-000-6DX-6XP_. PRO creates a consignment with a `{consignmentReference}` of _EC-000-05B-MMQ_, which it then allocates to the carrier service associated with delivery option _EDO-000-6DX-6XP_. PRO then returns the relevant `{consignmentReference}` and label link, enabling you to get labels for and manifest the consignment.
 
-<div class="tab">
-    <button class="staticTabButton">Example Select Option Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'selectOptionRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Select Option Request](#tab/select-option-request)
 
-<div id="selectOptionRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'selectOptionRequest')">
+`POST https://api.electioapp.com/deliveryoptions/select/EDO-000-6DX-6XP`
 
-```json
-POST https://api.electioapp.com/deliveryoptions/select/EDO-000-6DX-6XP
-```
-
-</div>   
-
-<div class="tab">
-    <button class="staticTabButton">Example Select Option Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'selectOptionResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="selectOptionResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'selectOptionResponse')">
+# [Select Option Response](#tab/select-option-response)
 
 ```json
 {
@@ -75,7 +68,7 @@ POST https://api.electioapp.com/deliveryoptions/select/EDO-000-6DX-6XP
 }
 ```
 
-</div> 
+---
 
 ## Selecting Options As an Order    
 
@@ -99,12 +92,7 @@ Once it has received the **Select Delivery Option as an Order** request, PRO use
 
 The example shows a request to select a delivery option that has a `{Reference}` of _EDO-000-6DX-6XP_ as an order. PRO takes that delivery option's details and creates an order with an `{orderReference}` of _EO-000-002-0TT_.
 
-<div class="tab">
-    <button class="staticTabButton">Example Select Delivery Option as an Order Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'optAsOrderRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="optAsOrderRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'optAsOrderRequest')">
+# [Select Option As Order Request](#tab/select-option-as-order-request)
 
 ```json
 {
@@ -123,14 +111,7 @@ The example shows a request to select a delivery option that has a `{Reference}`
 }
 ```
 
-</div>   
-
-<div class="tab">
-    <button class="staticTabButton">Example Select Delivery Option as an Order Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'optAsOrderResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="optAsOrderResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'optAsOrderResponse')">
+# [Select Option As Order Response](#tab/select-option-as-order-response)
 
   ```json
   {
@@ -151,7 +132,7 @@ The example shows a request to select a delivery option that has a `{Reference}`
   }
   ```
 
-</div> 
+---
 
 ## Next Steps
 

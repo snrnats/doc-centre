@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-getting-pickup-options
+title: Getting Pickup Options
+tags: options,pro,api,consignments,pickup options
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 29/05/2020
+---
 # Getting Pickup Options
 
 Want to let your customers collect their deliveries from a pickup location? This page explains how to use the **Pickup Options** endpoint to offer available pickup locations and timeslots.
@@ -47,24 +54,21 @@ Each `{DeliveryOptions}` object contains details of a particular option that cou
 
 The pickup options available for a given consignment can change over time. This is primarily due to different carriers collecting at different times at each shipping location, or the pickup locations provider updating the list of active locations. 
 
-> [!NOTE]
+> [!CAUTION]
 >
 > Pickup locations are classified as having either finite or infinite capacity. For locations with finite capacity, PRO may disable or enable a location at any time in line with demand for the location. Sorted strongly advise that location details are never cached for re-use in the web store or checkout due to the dynamic nature of this information.
 
 > [!NOTE]
 >
->  For full reference information on the <strong>Pickup Options</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/PickupOptions">Pickup Options</a></strong> page of the API reference.
+> For full reference information on the <strong>Pickup Options</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/PickupOptions">Pickup Options</a></strong> page of the API reference.
 
 ### Pickup Options Example
 
-The example shows a request to get no more than 10 pickup options for a fairly standard consignment, all within 1km of the recipient's location. 
+The example shows a request to get no more than 10 pickup options for a fairly standard consignment, all within 1km of the recipient's location. PRO returns one location that meets the requested criteria, and three options for delivery to that location. All three options use the same carrier service and have a delivery time window of 09:30 - 17:30, but are scheduled for different days. In practice, PRO is saying that the carrier can deliver to the pickup location during business hours on the 17th, 18th or 19th or March (as required by the customer).
 
-<div class="tab">
-    <button class="staticTabButton">Example Pickup Options Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'pickupOptionsRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Get Pickup Options Request](#tab/get-pickup-options-request)
 
-<div id="pickupOptionsRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'pickupOptionsRequest')">
+`POST https://api.electioapp.com/deliveryoptions/pickupoptions/`
 
 ```json
 {
@@ -131,16 +135,7 @@ The example shows a request to get no more than 10 pickup options for a fairly s
 
 ```
 
-</div>  
-
-PRO returns one location that meets the requested criteria, and three options for delivery to that location. All three options use the same carrier service and have a delivery time window of 09:30 - 17:30, but are scheduled for different days. In practice, PRO is saying that the carrier can deliver to the pickup location during business hours on the 17th, 18th or 19th or March (as required by the customer).
-
-<div class="tab">
-    <button class="staticTabButton">Example Pickup Options Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'pickupOptionsResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="pickupOptionsResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'pickupOptionsResponse')">
+# [Get Pickup Options Response](#tab/get-pickup-options-response)
 
 ```json
 {
@@ -329,7 +324,7 @@ PRO returns one location that meets the requested criteria, and three options fo
 }
 ```
 
-</div>  
+--- 
 
 Note the `{Reference}` for each pickup option. When the customer selects their preferred delivery option you will need to pass the relevant `{Reference}` back to PRO via the **Select Option** endpoint.
 
