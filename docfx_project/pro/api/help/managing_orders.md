@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-managing-orders
+title: Managing Orders
+tags: orders,pro,api,consignments
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 02/06/2020
+---
 # Managing Orders
 
 SortedPRO's Orders function enables you to process deliveries that would ship from multiple fulfilment centres or warehouses. This section explains how to create order objects, how to create consignments from orders, and how to manage existing orders.

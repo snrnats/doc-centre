@@ -1,3 +1,11 @@
+---
+uid: pro-api-help-deallocating-consignments
+title: Deallocating Consignments
+tags: allocation,pro,api,consignments
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 28/05/2020
+---
+
 # Deallocating Consignments
 
 Change of plans for a consignment? This page explains how to deallocate consignments from their carrier services both individually and in bulk.
@@ -30,12 +38,7 @@ Once the request is received, PRO deallocates each of the listed consignments in
 
 This examples shows a request to deallocate three consignments.
 
-<div class="tab">
-    <button class="staticTabButton">Example Deallocate Consignments Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'deallocateConsignmentsRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="deallocateConsignmentsRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'deallocateConsignmentsRequest')">
+# [Deallocate Consignments Request](#tab/deallocate-consignments-request)
 
 ```json
 [
@@ -45,14 +48,7 @@ This examples shows a request to deallocate three consignments.
 ]  
 ```
 
-</div> 
-
-<div class="tab">
-    <button class="staticTabButton">Example Deallocate Consignments Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'deallocateConsignmentsResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="deallocateConsignmentsResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'deallocateConsignmentsResponse')">
+# [Deallocate Consignments Response](#tab/deallocate-consignments-response)
 
 ```json
 [
@@ -76,8 +72,7 @@ This examples shows a request to deallocate three consignments.
     }
 ]
 ```
-
-</div> 
+---
 
 ## Next Steps
 

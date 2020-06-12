@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-allocating-via-service-group
+title: Allocating Via Service Group
+tags: allocation,pro,api,consignments
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 28/05/2020
+---
 # Allocating Via Service Group
 
 Service groups enable you to specify a custom pool of carrier services to allocate a consignment from. This page explains how to configure service groups, and how to use the **Allocate Consignment With Service Group** endpoint to allocate from within those groups.
@@ -56,18 +63,11 @@ Once the request is received, PRO uses allocation rules to eliminate any carrier
 
 The example shows a request to allocate a consignment with a `{consignmentReference}` of _EC-000-05B-MMA_ within a group that has a `{mpdCarrierServiceGroupReference}` of _valuableGoods_.
 
-<div class="tab">
-    <button class="staticTabButton">Example Allocate Consignment With Service Group Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'allocationUSGRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Allocate Consignment With Service Group Request](#tab/allocate-consignment-with-service-group-request)
 
-<div id="allocationUSGRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'allocationUSGRequest')">
+`PUT https://api.electioapp.com/allocation/EC-000-05B-MMA/allocatewithservicegroup/valuableGoods`
 
-```
-PUT https://api.electioapp.com/allocation/EC-000-05B-MMA/allocatewithservicegroup/valuableGoods
-```
-
-</div>
+---
 
 ## Next Steps
 

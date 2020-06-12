@@ -1,3 +1,11 @@
+---
+uid: pro-api-help-creating-new-orders
+title: Creating New Orders
+tags: orders,pro,api,consignments
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 29/05/2020
+---
+
 # Creating New Orders
 
 The first step in using SortedPRO orders is to create the order itself. This page explains the various ways in which you can create orders.
@@ -35,12 +43,9 @@ Either the order's `origin` address, its `destination` address, or both, must in
 
 The example shows the creation of a fairly standard order. In this case, we have an outbound order comprising a single package with a single item inside it. After receiving the request, PRO returns an `{orderReference}` of _EO-000-002-0TS_. You will need the `{orderReference}` when you come to pack the order into shippable consignments.
 
-<div class="tab">
-    <button class="staticTabButton">Example Create Order Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'createOrderRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Create Order Request](#tab/create-order-request)
 
-<div id="createOrderRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'createOrderRequest')">
+`POST https://api.electioapp.com/orders`
 
 ```json
 {
@@ -124,14 +129,7 @@ The example shows the creation of a fairly standard order. In this case, we have
 }
 ```
 
-</div>   
-
-<div class="tab">
-    <button class="staticTabButton">Example Create Order Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'createOrderResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="createOrderResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'createOrderResponse')">
+# [Create Order Response](#tab/create-order-response)
 
 ```json
 [
@@ -141,8 +139,7 @@ The example shows the creation of a fairly standard order. In this case, we have
   }
 ]
 ```
-
-</div>  
+--- 
 
 ## Creating Orders From Delivery Options
 

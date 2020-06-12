@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-allocating-consignments
+title: Allocating Consignments
+tags: allocation,pro,api,consignments
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 02/06/2020
+---
 # Allocating Consignments to Carriers
 
 Once you've created a consignment, you'll need to allocate it to a carrier service. This section explains how to configure allocation rules that PRO can use when selecting carrier services, and the various methods you can use to allocate consignments to those services.
@@ -8,7 +15,7 @@ Once you've created a consignment, you'll need to allocate it to a carrier servi
 
 In the context of SortedPRO, **allocation** is the process of selecting the carrier service that will be used to deliver a consignment. Allocation is a key part of all PRO workflows, as a consignment cannot be shipped if it has not previously been allocated to a suitable carrier service.
 
-> [!NOTE]
+> [!CAUTION]
 >
 > You can only allocate consignments that are in a consignment state of either _Unallocated_ or _Allocation Failed_. If you attempt to allocate a consignment that is not in one of those states, PRO returns an error.
 
@@ -160,12 +167,7 @@ To tag a consignment, add the required tag into the shipment's `tags` property, 
 
 The code sample below shows a `tags` property for a consignment that contains flammable materials, oil and alcohol.
 
-<div class="tab">
-    <button class="staticTabButton">Example Tags array</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'tagsExample')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="tagsExample" class="staticTabContent" onclick="CopyToClipboard(this, 'tagsExample')">
+# [Tags](#tab/tags)
 
 ```json
 "Tags": [
@@ -174,8 +176,7 @@ The code sample below shows a `tags` property for a consignment that contains fl
    "Alcohol"
 ]
 ```
-
-</div>
+---
 
 ### Tags Example
 
@@ -205,12 +206,7 @@ In the example, a consignment with a `{consignmentReference}` of _EC-000-05B-MMA
 
 ### Allocation Summary Example
 
-<div class="tab">
-    <button class="staticTabButton">Example Allocation Summary</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'allocationSummary')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="allocationSummary" class="staticTabContent" onclick="CopyToClipboard(this, 'allocationSummary')">
+# [Allocation Summary](#tab/allocation-summary)
 
 ```json
 [
@@ -245,7 +241,7 @@ In the example, a consignment with a `{consignmentReference}` of _EC-000-05B-MMA
     }
 ]
 ```
-</div>
+---
 
 ## Allocation Section Contents
 

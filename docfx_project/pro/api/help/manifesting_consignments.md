@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-manifesting-consignments
 title: Manifesting Consignments
-tags: consignments,pro,api
+tags: consignments,pro,api,manifesting
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 02/06/2020
 ---

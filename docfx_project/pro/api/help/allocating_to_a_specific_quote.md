@@ -1,3 +1,11 @@
+---
+uid: pro-api-help-allocating-to-a-specific-quote
+title: Allocating to a Specific Quote
+tags: allocation,pro,api,consignments
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 28/05/2020
+---
+
 # Allocating to a Specific Quote
 
 Obtaining quotes to carry an individual consignment and then allocating to the most suitable response is a key part of many customer service workflows in PRO. This page explains how to use the **Allocate With Quote** endpoint to select a quote.
@@ -29,18 +37,11 @@ Once the request is received PRO attempts to allocate the consignment to the car
 
 The example shows a request to allocate a consignment with a `{consignmentReference}` of _EC-000-05B-N40_ to the carrier service associated with a quote that has the `{quoteReference}` _112236d5-4460-492f-a6bd-aa3f00f62dfb_.
 
-<div class="tab">
-    <button class="staticTabButton">Example Allocate With Quote Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'allocateWithQuoteRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Allocate With Quote Request](#tab/allocate-with-quote-request)
 
-<div id="allocateWithQuoteRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'allocateWithQuoteRequest')">
+`PUT https://api.electioapp.com/allocation/EC-000-05B-N40/allocatewithquote/112236d5-4460-492f-a6bd-aa3f00f62dfb`
 
-```
-PUT https://api.electioapp.com/allocation/EC-000-05B-N40/allocatewithquote/112236d5-4460-492f-a6bd-aa3f00f62dfb
-```
-
-</div>   
+--- 
 
 ## Next Steps
 

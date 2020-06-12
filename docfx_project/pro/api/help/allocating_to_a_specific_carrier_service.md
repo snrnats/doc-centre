@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-allocating-to-a-specific-carrier-service
+title: Allocating to a Specific Carrier Service
+tags: allocation,pro,api,consignments
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 28/05/2020
+---
 # Allocating to a Specific Carrier Service
 
 Want to specify the carrier service that should take your consignment? This page explains how to allocate consignments to services manually.
@@ -12,6 +19,7 @@ There are two ways of obtaining a carrier service's `{MpdCarrierServiceReference
 
 * **Via the UI** - The [Carrier Services](https://www.electioapp.com/Configuration/carrierservices/) page (**Settings** > **Carrier Services**) displays a list of all available services. The `{MpdCarrierServiceReference}` for each service is displayed in the **Service Code** field.
 * **Via API** - The **Get Available MPD Carrier Services** endpoint returns a list of all available services.  The `{MpdCarrierServiceReference}` for each service is displayed in the `Reference` field.
+
   > [!NOTE]
   >  For full reference information on the <strong>Get Available MPD Carrier Services</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/GetAvailableMPDCarrierServices">Get Available MPD Carrier Services</a></strong> page of the API reference. 
 
@@ -35,16 +43,11 @@ If PRO is unable to allocate the consignment to the specified carrier service, i
 
 The example shows a request to allocate three consignments to a carrier service with an `{MpdCarrierServiceReference}` of _Example-Carrier-Service_ .
 
-<div class="tab">
-    <button class="staticTabButton">Example Allocate With Carrier Service Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'allocationUCSRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Allocate With Carrier Service Request](#tab/allocate-with-carrier-service-request)
 
-<div id="allocationUCSRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'allocationUCSRequest')">
+`PUT https://api.electioapp.com/allocation/allocatewithcarrierservice`
 
 ```json
-PUT https://api.electioapp.com/allocation/allocatewithcarrierservice
-
 {
   "MpdCarrierServiceReference": "Example-Carrier-Service",
   "ConsignmentReferences": [
@@ -54,8 +57,7 @@ PUT https://api.electioapp.com/allocation/allocatewithcarrierservice
   ]
 }
 ```
-
-</div>
+---
 
 ## Next Steps
 

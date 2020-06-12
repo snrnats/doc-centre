@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-getting-labels
+title: Getting Labels
+tags: labels,pro,api,consignments
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 02/06/2020
+---
 # Getting Labels
 
 SortedPRO can generate despatch labels for all of its carriers, enabling PRO customers to download labels without having to request them directly from the carrier. This page explains how to get labels for a specific consignment or an individual package within a consignment.
@@ -8,7 +15,7 @@ SortedPRO can generate despatch labels for all of its carriers, enabling PRO cus
 
 Getting labels is a key part of all PRO workflows, as an unlabelled consignment cannot be dispatched. Labels are usually retrieved after a consignment has been allocated but before it has been manifested.
 
-> <span class="note-header">Note: </span>
+> [!CAUTION]
 > 
 > You can only retrieve labels for consignments that have been allocated to a carrier. If you attempt to return labels for an unallocated consignment, PRO returns an error.
 
@@ -44,12 +51,7 @@ All Labels API endpoints return labels objects. The labels object has two proper
 
 The below example shows a typical label object.
 
-<div class="tab">
-    <button class="staticTabButton">Example Tags array</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'labelExample')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="labelExample" class="staticTabContent" onclick="CopyToClipboard(this, 'labelExample')">
+# [Label Object](#tab/label-object)
 
 ```json
 {
@@ -57,7 +59,7 @@ The below example shows a typical label object.
   "ContentType": "application/pdf"
 }
 ```
-</div>
+---
 
 ## Using the Label Data
 

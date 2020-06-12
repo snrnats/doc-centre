@@ -1,3 +1,11 @@
+---
+uid: pro-api-help-packing-orders
+title: Creating Consignments From Orders
+tags: orders,pro,api,consignments
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 29/05/2020
+
+---
 # Creating Consignments From Orders
 
 Packing orders into shippable consignments is the final step in the Orders process. This page explains how to create consignments from an order.
@@ -38,12 +46,9 @@ The inbound consignment is identical to the outbound consignment, with the excep
 
 The example shows a **Pack Order** request to create a consignment with one package containing a single item from order _EO-000-002-0TT_. PRO creates the consignment and responds with a `{consignmentReference}` of _EC-000-05B-MQ4_.
 
-<div class="tab">
-    <button class="staticTabButton">Example Pack Order Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'packOrderRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Pack Order Request](#tab/pack-order-request)
 
-<div id="packOrderRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'packOrderRequest')">
+`POST https://api.electioapp.com/orders/EO-000-002-0TT/pack`
 
   ```json
   {
@@ -80,14 +85,7 @@ The example shows a **Pack Order** request to create a consignment with one pack
   }
   ```
 
-</div>   
-
-<div class="tab">
-    <button class="staticTabButton">Example Pack Order Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'packOrderResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="packOrderResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'packOrderResponse')">
+# [Pack Order Response](#tab/pack-order-response)
 
 ```json
 {
@@ -105,7 +103,7 @@ The example shows a **Pack Order** request to create a consignment with one pack
 }
 ```
 
-</div>
+---
 
 > [!NOTE]
 >
