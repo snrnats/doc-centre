@@ -12,7 +12,7 @@ To call **Pack Order**, send a `POST` request to `https://api.electioapp.com/ord
 
 Each item must be identified by a `Reference`, an `ItemReferenceProvidedByCustomer`, or a `Sku`. These fields are not mandatory in themselves, but one of them must be present for each item.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > PRO validates the items on a <strong>Pack Order</strong> request against its associated order. For example, the system will return an error if you make a <strong>Pack Order</strong> request including an item with a <code>Sku</code> of <em>12345</em> if there is no item with that <code>Sku</code> on the corresponding order.
 >
@@ -107,7 +107,7 @@ The example shows a **Pack Order** request to create a consignment with one pack
 
 </div>
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > * For full reference information on the <strong>Pack Order</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/PackOrder">Pack Order</a></strong> page of the API reference.
 > * For an example call flow showing orders being packed into consignments, see the <a href="/pro/api/help/flows/order_flex_flow.html">Order Flex</a> call flow page.

@@ -10,7 +10,7 @@ In PRO, delivery quotes are generally used outside of a "regular" consignment al
 
 PRO's Quotes API enables you to get delivery quotes for both uncreated and existing consignments. All Quotes endpoints return one or more `Quote` objects, of which each represents an offer for carriage of a consignment with a specific carrier service. Each quote can be uniquely identified by a `{quoteReference}`, which is used when selecting a quote via the **Allocate With Quote** endpoint.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > * For a full user guide on working with quotes, see the <a href="/pro/api/help/managing_quotes.html">Managing Quotes</a> page.
 > * For reference information on the Quotes API, see the <a href="https://docs.electioapp.com/#/api/GetQuotes">API reference</a>.
@@ -22,7 +22,7 @@ The **Allocate With Quote** endpoint enables you to allocate an individual consi
 
 Once the request is received PRO attempts to allocate the consignment to the carrier service specified in the quote (as denoted by the `{MpdCarrierService}` and `MpdCarrierServiceReference` fields contained within the `Quote` object), and returns an Allocation Summary.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >  For full reference information on the <strong>Allocate With Quote</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/AllocateWithQuote">Allocate With Quote</a></strong> page of the API reference.
 
 ### Allocate With Quote Example

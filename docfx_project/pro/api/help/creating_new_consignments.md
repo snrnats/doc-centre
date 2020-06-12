@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-creating-new-consignments
+title: Creating New Consignments
+tags: consignments,pro,api
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 04/06/2020
+---
 # Creating New Consignments
 
 In order for SortedPRO to manage a consignment, you'll need to record the details of that consignment on the system. This page explains the various ways that you can record consignment information in PRO.
@@ -12,13 +19,13 @@ Perhaps the simplest way to record consignment details in PRO is to use the **Cr
 
 To create a consignment, send a `POST` request to `https://api.electioapp.com/consignments`. The body of the request should contain the consignment details, structured as per the PRO data contract.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > For full reference information on the **Create Consignments** endpoint, including the properties accepted and the structure required, see the <a href="https://docs.electioapp.com/#/api/CreateConsignment">Create Consignment API reference</a>.
 
 As a minimum, the **Create Consignments** endpoint requires you to send package weights and dimensions, origin address, and destination address data. You can either specify package weights and dimension via the `Weight` and `Dimensions` properties, or by supplying a `PackageSizeReference`. 
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >  A <code>PackageSizeReference</code> is a unique identifier for a pre-defined, standardised package size. 
 >
 > To configure standard package sizes, use the <strong><a href="https://www.electioapp.com/Configuration/packagingsizes">Configuration > Packaging Sizes</a></strong> page of the PRO UI. You can also view a list of your available standard package sizes by making a call to the <a href="https://docs.electioapp.com/#/api/GetPackageSizes">Get Package Sizes</a> API.
@@ -38,7 +45,7 @@ There are lots of optional properties you can send when creating a consignment, 
 
 Adding optional properties when you create a consignment can help you to get more out of PRO. For example, recording your own consignment reference enables you to search for consignments by those references in the UI and via the **Search Consignments** endpoint. 
 
-> <span class="note-header">Note:</span>
+> [!CAUTION]
 >
 > You should exercise caution when using the `ShippingDate` and `RequiredDeliveryDate` parameters to specify dates for your consignment. These parameters limit delivery options for the consignment, meaning that the consignment can only be allocated to carrier services that would be able to ship it on the specified `ShippingDate` and / or deliver it by the `RequiredDeliveryDate`. If the `IsToBeExactlyOnTheDateSpecified` flag of the `RequiredDeliveryDate` is set, then the consignment is further limited, as it can only be allocated to a service that would deliver it on the exact date specified.
 >
@@ -48,12 +55,9 @@ Adding optional properties when you create a consignment can help you to get mor
 
 The example below shows a simple **Create Consignments** request containing just package and address details. For an example of a full **Create Consignment** request, see the [Create Consignment](https://docs.electioapp.com/#/api/CreateConsignment) API reference.
 
-<div class="tab">
-    <button class="staticTabButton">Request Example</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'createConRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Create Consignments Request](#tab/create-consignments-request)
 
-<div id="createConRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'createConRequest')">
+`POST https://api.electioapp.com/consignments`
 
 ```json
 {
@@ -109,7 +113,8 @@ The example below shows a simple **Create Consignments** request containing just
   ]
 }
 ```
-</div>
+
+---
 
 ### The Create Consignments Response
 
@@ -119,12 +124,7 @@ The `{consignmentReference}` is a unique identifier for that consignment within 
 
 In the example below, PRO has returned a `{consignmentReference}` of _EC-000-05B-MMA_. 
 
-<div class="tab">
-    <button class="staticTabButton">Response Example</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'createConResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="createConResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'createConResponse')">
+# [Create Consignments Response](#tab/create-consignments-response)
 
 ```json
 [
@@ -134,11 +134,11 @@ In the example below, PRO has returned a `{consignmentReference}` of _EC-000-05B
   }
 ]
 ```
-</div>
+---
 
 All PRO consignments have a `{consignmentState}`, indicating the point in the delivery process that that particular consignment is at. Newly-created consignments have an initial state of _Unallocated_. For more information on PRO consignment states, see the [Consignment States](/pro/api/help/consignment_states.html) page.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > You can also create consignments via the <a href="https://www.electioapp.com/Allocation/ManualUpload">Manual Upload</a> page of the PRO UI. This feature is effectively a front-end for the **Create Consignments** API, and is most useful for handling exceptions and cases in which your conventional API workflow cannot be used.
 >
@@ -148,7 +148,7 @@ All PRO consignments have a `{consignmentState}`, indicating the point in the de
 
 The **Create Consignments** endpoint isn't the only PRO endpoint that can generate consignments. You can also create consignments via the **Delivery Options** API, which enables you to get a list of delivery options for a potential consignment that you can present to your customer at checkout. When you select the required option, PRO automatically creates and allocates a new consignment without requiring you to make additional API calls.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > Access to PRO's delivery and pickup option endpoints requires a SortedHERO license. This component is sold separately to the main SortedPRO product. 
 
@@ -160,7 +160,7 @@ To create a consignment in this way, you'll need to make two API calls:
 
 You can also generate consignments from pickup options. The process is the same as that used for delivery options - make a **Pickup Options** call and then select the required option via the **Select Option** endpoint.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > * For a full user guide on working with delivery and pickup options, including further information on selecting options, see the <a href="/pro/api/help/using_delivery_and_pickup_options.html">Using Delivery and Pickup Options</a> section.
 > * For reference information on the Delivery Options and Pickup Options APIs, see the <a href="https://docs.electioapp.com/#/api/DeliveryOptions">API reference</a>.
@@ -182,7 +182,7 @@ To create a consignment in this way, you'll need to make two API calls:
 
 2. Call the **Pack Order** endpoint to create the consignment. In the body of the request you'll need to supply at least the relevant `orderReference` and the package details of the consignment that you want to pack. Each package must contain at least one item. If the **Pack Order** request would create a valid consignment, then PRO creates the consignment and returns a consignment reference.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > * For a full user guide on working with orders, see the <a href="/pro/api/help/creating_new_orders.html">Creating New Orders</a> and <a href="/pro/api/help/managing_existing_orders.html">Managing Existing Orders</a> page.
 > * For reference information on the Orders API, see the <a href="https://docs.electioapp.com/#/api/CreateOrder">API reference</a>.

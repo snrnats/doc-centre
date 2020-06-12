@@ -40,7 +40,7 @@ As with delivery options, when you request pickup options, you give PRO the deta
 * **[Getting Pickup Options](/pro/api/help/getting_pickup_options.html)** - Explains how to generate pickup options for a consignment
 * **[Selecting Options](/pro/api/help/selecting_options.html)** - Explains how to generate either a consignment or and order from a specific option
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > All of the URLs and examples given in this documentation relate to PRO's live production environment. To call APIs in the sandbox environment, substitute the `api.electioapp.com` portion of the API's base URL with `apisandbox.electioapp.com`. Don't forget to use your sandbox API key (as opposed to your production API key) when making the call.
 >

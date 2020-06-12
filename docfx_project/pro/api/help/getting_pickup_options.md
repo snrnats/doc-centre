@@ -8,7 +8,7 @@ Want to let your customers collect their deliveries from a pickup location? This
 
 The **[Pickup Options](https://docs.electioapp.com/#/api/PickupOptions)** endpoint takes the details of an as-yet uncreated consignment and returns available pickup options. This information can be used to offer pickup timeslots and locations for the product that the customer is about to purchase.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > For further information on what constitutes a pickup option, see the [Using Delivery and Pickup Options](using_delivery_and_pickup_options.md) page.
 
@@ -47,11 +47,11 @@ Each `{DeliveryOptions}` object contains details of a particular option that cou
 
 The pickup options available for a given consignment can change over time. This is primarily due to different carriers collecting at different times at each shipping location, or the pickup locations provider updating the list of active locations. 
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > Pickup locations are classified as having either finite or infinite capacity. For locations with finite capacity, PRO may disable or enable a location at any time in line with demand for the location. Sorted strongly advise that location details are never cached for re-use in the web store or checkout due to the dynamic nature of this information.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 >  For full reference information on the <strong>Pickup Options</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/PickupOptions">Pickup Options</a></strong> page of the API reference.
 

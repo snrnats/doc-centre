@@ -11,7 +11,7 @@ PRO has two endpoints that take the details of an as-yet uncreated consignment a
 * **Get Quotes** returns a simple list of delivery quotes for the potential consignment.
 * **Get Service Group Quotes** returns a list of current service groups, along with quotes from the eligible services in each group.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > Both the **Get Quotes** and **Get Service Group Quotes** endpoints take a consignment object in the body of the request. However, they do not create consignments in and of themselves. In order to allocate to one of the quotes returned by these endpoints, you would need to first create the consignment. 
 >
@@ -23,7 +23,7 @@ To call **Get Quotes**, send a `POST` request to `https://api.electioapp.com/quo
 
 As a minimum, the **Get Quotes** endpoint requires you to send package weights and dimensions, origin address, and destination address data. You can either specify package weights and dimension via the `Weight` and `Dimensions` properties, or by supplying a `PackageSizeReference`. 
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >  A <code>PackageSizeReference</code> is a unique identifier for a pre-defined, standardised package size. 
 >
 > To configure standard package sizes, use the <strong><a href="https://www.electioapp.com/Configuration/packagingsizes">Configuration > Packaging Sizes</a></strong> page of the PRO UI. You can also view a list of your available standard package sizes by making a call to the <a href="https://docs.electioapp.com/#/api/GetPackageSizes">Get Package Sizes</a> API.
@@ -60,7 +60,7 @@ Each `Quote` object contains the following information:
 
 At this point, you would be able to display the relevant quote information to your customer service operative.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > For full reference information on the **Get Quotes** endpoint, see the [API Reference](https://docs.electioapp.com/#/api/GetQuotes).
 
@@ -293,7 +293,7 @@ To call **Get Service Group Quotes**, send a `POST` request to `https://api.elec
 
 Once it has received the request, PRO returns a list of available service groups, identified by `Name` and `Reference`. Each service group contains a `CheapestQuote` detailing the cheapest service in that group. The service group object also contains a list of `Quotes` for the services in the group (including the service detailed in the `CheapestQuote` property) and a list of `UnqualifiedServices` (that is, eligible services within the group for which it was not possible to obtain a delivery quote).
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > For full reference information on the **Get Service Group Quotes** endpoint, see the [API Reference](https://docs.electioapp.com/#/api/GetServiceGroupQuotes).
 

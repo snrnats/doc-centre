@@ -8,7 +8,7 @@ This page explains how to get a list of delivery options for a consignment, both
 
 The Delivery Options endpoint takes the details of an as-yet-nonexistent consignment and returns a list of delivery options. To call **Delivery Options**, send a `POST` request to `https://api.electioapp.com/deliveryoptions`.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > For further information on what constitutes a delivery option, see the [Using Delivery and Pickup Options](using_delivery_and_pickup_options.html) page.
 
@@ -38,7 +38,7 @@ Once it has received the request, PRO returns an array of `{DeliveryOptions}` ob
 
 PRO only returns a single carrier service for each delivery window on each date. This is generally the cheapest service, unless using the cheapest service would conflict with existing business rules. 
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 >  For full reference information on the <strong>Delivery Options</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/DeliveryOptions">Delivery Options</a></strong> page of the API reference.
 
@@ -217,7 +217,7 @@ To call **Delivery Options Summary**, send a `POST` request to `https://api.elec
 
 Once it has received the request, PRO returns a list of all dates that have `DeliveryOptions` and `TimeSlots`available for that consignment, and a separate list with all dates that have `PickUp` options available for that consignment. Note that PRO does not return details of the delivery options themselves.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 >  For full reference information on the <strong>Delivery Options Summary</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/DeliveryOptionSummary">Delivery Options Summary</a></strong> page of the API reference.
 
@@ -262,7 +262,7 @@ The **Get Existing Delivery Option** endpoint enables you to get the details of 
 
 Once it has received the request, PRO returns the details of the delivery option as a `deliveryOption` object. For further information on the structure of delivery options, see the [Getting Detailed Options](#getting-detailed-options) section.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 >  For full reference information on the <strong>Get Existing Delivery Option</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/GetExistingDeliveryOption">Get Existing Delivery Option</a></strong> page of the API reference.
 

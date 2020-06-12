@@ -8,7 +8,7 @@ Change of plans for a consignment? This page explains how to deallocate consignm
 
 A consignment cannot be edited once it is allocated. In order to edit or cancel an allocated consignment, or to allocate it to a different carrier service, you will first need to deallocate it.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > For more information on editing existing consignments, see the <a href="/pro/api/help/updating_existing_consignments.html"> Updating Existing Consignments</a> page.
 

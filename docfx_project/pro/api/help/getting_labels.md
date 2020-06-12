@@ -69,7 +69,7 @@ Once you have downloaded the file data, you will need to decode the file's Base6
 * Learn how to retrieve a consignment's customs documentation and invoices at the [Getting Customs Docs And Invoices](/pro/api/help/getting_customs_docs_and_invoices.html) page.
 * Learn how to track consignments at the [Tracking Consignments](/pro/api/help/tracking_consignments.html) page.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > All of the URLs and examples given in this documentation relate to PRO's live production environment. To call APIs in the sandbox environment, substitute the `api.electioapp.com` portion of the API's base URL with `apisandbox.electioapp.com`. Don't forget to use your sandbox API key (as opposed to your production API key) when making the call.
 >

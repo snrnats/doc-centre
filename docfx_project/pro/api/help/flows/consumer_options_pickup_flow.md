@@ -8,7 +8,7 @@
 
 The **Consumer Options** flow can also be used to power Pick Up / Drop-Off (PUDO) services. By integrating PRO's **Pickup Options** endpoint, you can build click-and-collect functionality that lets your customers select a pickup location and collection date.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > Access to PRO's delivery and pickup option endpoints requires a SortedHERO license. This component is sold separately to the main SortedPRO product. 
 

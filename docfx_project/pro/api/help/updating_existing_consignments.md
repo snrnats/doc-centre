@@ -25,7 +25,7 @@ PRO uses the following rules when updating consignment properties:
 
 Once the consignment is updated, PRO returns a link to the consignment object.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 >  For full reference information on the <strong>Update Consignment</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/UpdateConsignment">Update Consignment</a></strong> page of the API reference.
 
@@ -151,7 +151,7 @@ The example shows an  **Update Consignment** request for a single shipment that 
 
 If you just want to add a package to a single existing consignment, you could use the **Add Package** endpoint rather than **Update Consignment**.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > You can only add packages to consignments that are in a status of either _Unallocated_ or _Allocation Failed_. If you need to add a package to a consignment that has been allocated, you will need to first deallocate that consignment. For more information on deallocating consignments, see the [Deallocating Consignments](/pro/api/help/deallocating_consignments.html) page.
 
@@ -159,7 +159,7 @@ To call **Add Package**, send a `POST` request to `https://api.electioapp.com/co
 
 Once it receives the request, PRO adds a new package with the supplied details to the specified consignment, and returns the full package object. Note that this object now includes the package's `Reference`. A package reference is a unique identifier for each package in PRO, and takes the format _EP-xxx-xxx-xxx_. 
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > For full reference information on the **Add Package** endpoint, see the <a href="https://docs.electioapp.com/#/api/AddPackage">API reference</a>.
 
@@ -250,7 +250,7 @@ You can only delete packages from consignments that are in a status of either _U
 
 You cannot delete the last package in a consignment. If you attempt to do so, PRO returns an error.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > For full reference information on the **Delete Package** endpoint, see the <a href="https://docs.electioapp.com/#/api/DeletePackage">API reference</a>.
 

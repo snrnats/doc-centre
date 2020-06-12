@@ -22,7 +22,7 @@ The **Allocate With Quote** endpoint is a key part of all PRO quotes workflows, 
 * [Getting Quotes](/pro/api/help/getting_quotes.html) - Explains how to get delivery quotes without creating a new consignment.
 * [Getting Quotes for an Existing Consignment](/pro/api/help/getting_quotes_for_an_existing_consignment.html) - Explains how to get delivery quotes for an existing consignment.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > All of the URLs and examples given in this documentation relate to PRO's live production environment. To call APIs in the sandbox environment, substitute the `api.electioapp.com` portion of the API's base URL with `apisandbox.electioapp.com`. Don't forget to use your sandbox API key (as opposed to your production API key) when making the call.
 >

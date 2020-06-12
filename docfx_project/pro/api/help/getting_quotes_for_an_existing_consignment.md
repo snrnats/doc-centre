@@ -23,7 +23,7 @@ Each `Quote` object contains the following information:
 
 At this point, you would be able to display the relevant quote information to your customer service operative.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > * For full reference information on the <strong>Get Quotes by Consignment Reference</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/GetQuotesbyConsignmentReference">Get Quotes by Consignment Reference</a></strong> page of the API reference.
 > * For an example call flow showing the **Get Quotes by Consignment Reference** endpoint being used, see the [Quotes Flow](/pro/api/help/flows/quotes_flow.html) page. 

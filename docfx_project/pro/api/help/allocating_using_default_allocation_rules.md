@@ -22,7 +22,7 @@ The **Allocate Using Default Rules** endpoint enables you to allocate multiple c
 
 Once the request is received, SortedPRO takes each consignment in turn and allocates it to the cheapest eligible carrier, as per the process detailed in the [Overview](#overview). It then returns an array of Allocation Summaries, one for each allocated consignment. 
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >  For full reference information on the <strong>Allocate Using Default Rules</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/AllocateUsingDefaultRules">Allocate Using Default Rules</a></strong> page of the API reference. 
 
 ### Allocate Using Default Rules Example
@@ -73,7 +73,7 @@ PUT https://api.electioapp.com/allocation/EC-000-05A-Z6S/allocatewithcheapestquo
 
 </div>
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 >  For full reference information on the <strong>Allocate Consignment</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/AllocateConsignment">Allocate Consignment</a></strong> page of the API reference. 
 

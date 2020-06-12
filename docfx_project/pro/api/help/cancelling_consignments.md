@@ -14,7 +14,7 @@ Once a consignment has been cancelled, then no further changes can be made to it
 
 To cancel an individual consignment, use the **Cancel Consignment** endpoint. You can call **Cancel Consignment** by sending a `PUT` request to `https://api.electioapp.com/consignments/{consignmentReference}/cancel`. Once the request has been received, PRO changes the consignment's `ConsignmentState` to _Cancelled_ and returns a code 200 response with no body.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > For full reference information on the **Cancel Consignment** endpoint, see the <a href="https://docs.electioapp.com/#/api/CancelConsignment">API reference</a>.
 
@@ -24,7 +24,7 @@ If you need to cancel multiple consignments in one operation, use the **Cancel C
 
 Once the request has been received, PRO changes the each consignment's `consignmentState` to _Cancelled_ and returns a list with a confirmation message in it for each consignment.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > For full reference information on the **Cancel Consignments** endpoint, see the <a href="https://docs.electioapp.com/#/api/CancelConsignments">API reference</a>.
 

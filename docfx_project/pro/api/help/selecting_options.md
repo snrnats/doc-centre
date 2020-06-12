@@ -14,7 +14,7 @@ Once it has received the request, PRO creates a consignment using the consignmen
 
 PRO then returns links to the consignment resource that was allocated, a summary of the carrier service that the consignment was allocated to, a link to the relevant package labels, and a `ConsignmentLegs` array indicating how many legs the shipment will need. Where a shipment would need multiple legs to complete, the `ConsignmentLegs` array shows tracking details for each individual leg.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > * For full reference information on the <strong>Select Option</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/SelectOption">Select Option</a></strong> page of the API reference.
 > * For an example call flow in which consignments are created using **Select Order**, see the [Consumer Options](/pro/api/help/flows/consumer_options_flow.html) call flow page.
@@ -83,7 +83,7 @@ The **Select Option As Order** endpoint enables you to record a customer's choic
 
 Using **Select Option As Order** combines the benefits of PRO's delivery options and orders features, enabling you to offer your customers delivery options even if their orders need to be shipped in multiple consignments.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > For more information on using orders in PRO, see the [Managing Orders](/pro/api/help/managing_orders.html) section.
 
@@ -91,7 +91,7 @@ To call **Select Option As Order**, send a `POST` request to `https://api.electi
 
 Once it has received the **Select Delivery Option as an Order** request, PRO uses the details of the selected option to create an order and returns an object containing the associated `{orderReferences}`. 
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > * For full reference information on the <strong>Select Delivery Option as an Order</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/SelectDeliveryOptionasanOrder">Select Delivery Option as an Order</a></strong> page of the API reference.
 

@@ -14,7 +14,7 @@ The Customs Docs API has three endpoints:
 * **Get Customs Document** - returns a CN22 or CN23 document for a particular package.
 * **Get Customs Documents** - returns all customs documents for a particular consignment.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > You can only retrieve documents for consignments that have been allocated to a carrier. If you attempt to return labels for an unallocated consignment, PRO returns an error.
 
@@ -78,7 +78,7 @@ This example shows a **Get Customs Documents** response for a single-package con
 
 </div>
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > Once you have downloaded the file data, you will need to decode the file's Base64 in order to view the document itself. If you are unsure how to do so, see the **[MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding)** for more information.
 
@@ -88,7 +88,7 @@ This example shows a **Get Customs Documents** response for a single-package con
 * Learn how to add consignments to a carrier manifest at the [Manifesting Consignments](/pro/api/help/manifesting_consignments.html) page.
 * Learn how to track consignments at the [Tracking Consignments](/pro/api/help/tracking_consignments.html) page.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > All of the URLs and examples given in this documentation relate to PRO's live production environment. To call APIs in the sandbox environment, substitute the `api.electioapp.com` portion of the API's base URL with `apisandbox.electioapp.com`. Don't forget to use your sandbox API key (as opposed to your production API key) when making the call.
 >

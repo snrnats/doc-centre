@@ -33,7 +33,7 @@ This section gives more detail on each step of the flow and provides worked exam
 
 [!include[_getting_delivery_options](../../includes/_getting_delivery_options.md)]
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >   Although this guide focuses on generating an order from the <strong>Delivery Options</strong> endpoint, you can also generate orders from pickup options via the <strong>Pickup Options</strong> endpoint. For more information on the <strong>Pickup Options</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/PickupOptions">Pickup Options</a></strong> page of the API reference.
 
 
@@ -81,7 +81,7 @@ You'll need to allocate all of the consignments packed from your order. Bear in 
 
 [!include[_get_labels_in_format](../../includes/_get_labels_in_format.md)]
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >  You'll need to make one <strong>Get Labels</strong> call per consignment on the order.
 
 ---
@@ -96,7 +96,7 @@ You'll need to allocate all of the consignments packed from your order. Bear in 
 
 [!include[_manifest_consignments_from_query](../../includes/_manifest_consignments_from_query.md)]
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 > You'll need to manifest all the consignments on the order.
 
 ### Next Steps

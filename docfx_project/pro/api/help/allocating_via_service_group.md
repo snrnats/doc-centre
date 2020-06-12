@@ -42,14 +42,14 @@ To delete an existing carrier service group, click its **Delete This Group** lin
 
 To call **Allocate Consignment With Service Group**, send a `PUT` request to `https://api.electioapp.com/allocation/{consignmentReference}/allocatewithservicegroup/{mpdCarrierServiceGroupReference}`, where `{consignmentReference}` is the unique reference for the consignment you want to allocate and `{mpdCarrierServiceGroupReference}` is the **Service Group Code** of the group you want to allocate within.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 > For full reference information on the <strong>Allocate Consignment With Service Group</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/AllocateConsignmentWithServiceGroup">Allocate Consignment With Service Group</a></strong> page of the API reference. 
 
 To find the **Service Group Code** for a particular group, log in to the PRO UI, navigate to the **[Carrier Service Groups](https://www.electioapp.com/Configuration/CarrierServiceGroups)** page (**Settings** > **Carrier Service Groups**), and locate the tile for that group. The **Service Group Code** is shown in the **Code** field.
 
 Once the request is received, PRO uses allocation rules to eliminate any carrier services in the group that would not be suitable to take the consignment, allocates the consignment to the cheapest remaining service, and returns an Allocation Summary.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 > For information on using allocation rules, see the [What Is An Allocation Rule?](/pro/api/help/allocating_consignments.html#what-is-an-allocation-rule) section of the [Allocating Consignments To Carriers](/pro/api/help/allocating_consignments.html) page.
 
 ### Allocate Consignment With Service Group Example

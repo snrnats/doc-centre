@@ -12,7 +12,7 @@ PRO's Tracking API has three endpoints:
 * **Get Events Per Package** - Returns flattened tracking event information for a specific consignment, broken down by package. Does not take multiple legs into account.
 * **Post Tracking Events** - Enables carriers to post events directly to PRO.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > The **Post Tracking Events** endpoint is intended for carrier use only, and is outside the scope of this documentation.
 
@@ -30,7 +30,7 @@ PRO integrates with many carriers, and each carrier provides tracking events in 
 
 A consignment's current `ConsignmentState` is derived from these tracking events. For example, a "Delivered" tracking event will change the state of the relevant consignment to _Delivered_.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > For a full list and description of available consignment states, see the [Consignment States](/pro/api/help/consignment_states.html) page.
 
@@ -40,7 +40,7 @@ To call **Get Tracking Events**, send a `GET` request to `https://api.electioapp
 
 PRO responds with a `TrackedPackages` array, containing details of all the tracked packages in the consignment. Each package contains an array of `Legs`, of which each contains tracking `Events` for that particular leg of the package's journey.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > For full reference information on the **Get Tracking Events** API, see the [API reference](https://docs.electioapp.com/#/api/GetTrackingEvents).
 
@@ -88,7 +88,7 @@ To call **Get Events Per Package**, send a `GET` request to `https://api.electio
 
 Like the **Get Tracking Events** endpoint, **Get Events Per Package** returns all tracking events for the specified consignment. However, unlike **Get Tracking Events**, **Get Events Per Package** does not break the events returned down into legs. Instead, it returns a list of `TrackedPackages`, of which each contains a package reference and a list of relevant `Events`.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > For full reference information on the **Get Events Per Package** API, see the [API reference](https://docs.electioapp.com/#/api/GetEventsPerPackage).
 

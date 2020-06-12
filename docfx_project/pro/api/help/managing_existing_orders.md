@@ -8,7 +8,7 @@ Need to make changes to an order before you pack it? This page explains how to r
 
 The **Get Order** endpoint returns full current details for a specific order. To call **Get Order**, send a `GET` request to `https://api.electioapp.com/orders/{orderReference}`.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > For full reference information on the **Get Order** endpoint, see the <a href="https://docs.electioapp.com/#/api/GetOrder">API reference</a>.
 
@@ -209,7 +209,7 @@ PRO uses the following rules when updating order properties:
 * `{Direction}` - If any values are provided, then PRO replaces the entire property with the updated values. If no values are provided, PRO makes no changes to the order.
 * `{Tags}` - If any values are provided, then PRO replaces the entire property with the updated values. If no values are provided, PRO makes no changes to the order.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 >  For full reference information on the <strong>Update Order</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/UpdateOrder">Update Order</a></strong> page of the API reference.
 
@@ -301,7 +301,7 @@ For both of these endpoints, the body of the request should contain an `address`
 
 Both **Add Address To Order** and **Update Address On Order** return an empty code _200_ message as confirmation that the address change was successful.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > * For full reference information on the <strong>Add Address To Order</strong> endpoint, see the <a href="https://docs.electioapp.com/#/api/AddAddresstoOrder">Add Address To Order</a> page of the API reference.
 > * For full reference information on the <strong>Update Address On Order</strong> endpoint, see the <a href="https://docs.electioapp.com/#/api/UpdateAddressonOrder">Update Address On Order</a> page of the API reference.

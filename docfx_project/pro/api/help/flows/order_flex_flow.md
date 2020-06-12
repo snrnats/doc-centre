@@ -69,7 +69,7 @@ You'll need to allocate all of the consignments packed from your order. Bear in 
 
 [!include[_get_labels_in_format](../../includes/_get_labels_in_format.md)]
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 > You'll need to make one <strong>Get Labels</strong> call per consignment on the order.
 
 ---
@@ -84,7 +84,7 @@ You'll need to allocate all of the consignments packed from your order. Bear in 
 
 [!include[_manifest_consignments_from_query](../../includes/_manifest_consignments_from_query.md)]
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 > You'll need to manifest all the consignments on the order.
 
 ### Next Steps
