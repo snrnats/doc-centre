@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-getting-customs-docs-and-invoices
+title: Getting Customs Docs and Invoices
+tags: customs,docs,documents,pro,api,consignments
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 02/06/2020
+---
 # Getting Customs Docs and Invoices
 
 This page explains the various way in which SortedPRO can return return customs documents and commercial invoices.
@@ -14,7 +21,7 @@ The Customs Docs API has three endpoints:
 * **Get Customs Document** - returns a CN22 or CN23 document for a particular package.
 * **Get Customs Documents** - returns all customs documents for a particular consignment.
 
-> [!NOTE]
+> [!CAUTION]
 >
 > You can only retrieve documents for consignments that have been allocated to a carrier. If you attempt to return labels for an unallocated consignment, PRO returns an error.
 
@@ -22,7 +29,7 @@ The Customs Docs API has three endpoints:
 
 To call **Get Commercial Invoice**, send a `GET` request to `https://api.electioapp.com/consignments/docs/commercialinvoice/{consignmentReference}`. PRO returns the commercial invoice for the relevant consignment as a base-64 encoded byte array.
 
-> <span class="note-header">More information:</span>
+> [!NOTE]
 >
 > For full reference information on the **Get Commercial Invoice** endpoint, see the [API reference](https://docs.electioapp.com/#/api/GetCommercialInvoice).
 
@@ -32,7 +39,7 @@ To call **Get Customs Document**, send a `GET` request to `https://api.electioap
 
 PRO returns the relevant document as a base-64 encoded byte array.
 
-> <span class="note-header">More information:</span>
+> [!NOTE]
 >
 > For full reference information on the **Get Customs Document** endpoint, see the [API reference](https://docs.electioapp.com/#/api/GetCustomsDocument).
 
@@ -44,7 +51,7 @@ PRO returns an object containing two properties: a `CommercialInvoiceDocuments` 
 
 All documents are represented as key / value pairs, with the key as the filename for the document and the value containing the document data.
 
-> <span class="note-header">More information:</span>
+> [!NOTE]
 >
 > For full reference information on the **Get Customs Documents** endpoint, see the [API reference](https://docs.electioapp.com/#/api/GetCustomsDocuments).
 
@@ -52,12 +59,7 @@ All documents are represented as key / value pairs, with the key as the filename
 
 This example shows a **Get Customs Documents** response for a single-package consignment. PRO has returned a commercial invoice for the consignment and a CN22 document for the package.
 
-<div class="tab">
-    <button class="staticTabButton">Get Customs Documents Example Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'customsDocsResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="customsDocsResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'customsDocsResponse')">
+# [Get Customs Documents Response](#tab/get-customs-documents-response)
 
 ```json
 {
@@ -75,8 +77,7 @@ This example shows a **Get Customs Documents** response for a single-package con
   ]
 }
 ```
-
-</div>
+---
 
 > [!NOTE]
 >
@@ -93,7 +94,3 @@ This example shows a **Get Customs Documents** response for a single-package con
 > All of the URLs and examples given in this documentation relate to PRO's live production environment. To call APIs in the sandbox environment, substitute the `api.electioapp.com` portion of the API's base URL with `apisandbox.electioapp.com`. Don't forget to use your sandbox API key (as opposed to your production API key) when making the call.
 >
 > For more information on PRO's sandbox, see [Using the Sandbox Environment](/pro/api/help/introduction.html#using-the-sandbox-environment).
-
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>
