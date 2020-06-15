@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-getting-quotes
+title: Getting Quotes
+tags: quotes,pro,api,consignments
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 29/05/2020
+---
 # Getting Quotes
 
 This page explains how got get delivery quotes based on consignment details.
@@ -66,14 +73,11 @@ At this point, you would be able to display the relevant quote information to yo
 
 ### Example Get Quotes Call
 
-The example below shows a **Get Quotes** call for a fairly simple consignment.
+The example below shows a **Get Quotes** call for a fairly simple consignment. PRO has responded with one quote and two unavailable services.
 
-<div class="tab">
-    <button class="staticTabButton">Get Quote Request Example</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'quoteRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Get Quote Request](#tab/get-quote-request)
 
-<div id="quoteRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'quoteRequest')">
+`POST https://api.electioapp.com/quotes/`
 
 ```json
 {
@@ -130,16 +134,7 @@ The example below shows a **Get Quotes** call for a fairly simple consignment.
 }
 ```
 
-</div>
-
-PRO has responded with one quote and two unavailable services.
-
-<div class="tab">
-    <button class="staticTabButton">Get Quote Response Example</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'quoteResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="quoteResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'quoteResponse')">
+# [Get Quote Response](#tab/get-quote-response)
 
 ```json
 {
@@ -284,8 +279,7 @@ PRO has responded with one quote and two unavailable services.
     ]
 }
 ```
-
-</div>
+---
 
 ## Getting Service Group Quotes
 
@@ -301,12 +295,11 @@ Once it has received the request, PRO returns a list of available service groups
 
 This simplified example shows a **Get Service Group Quotes** request for an outbound consignment. In this case, there is one service group configured in PRO, with the name _Example Service Group_. The group contains two services, with the service references <em>SAMPLE_SERVICE01</em> and <em>SAMPLE_SERVICE02</em>.
 
-<div class="tab">
-    <button class="staticTabButton">Get Service Group Quotes Request Example</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'SGQuoteRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+PRO returns a single service group object. In this case, <em>SAMPLE_SERVICE01</em> is the only eligible service, and so is displayed as both the `CheapestQuote` and the only entry in the `Quotes` array. <em>SAMPLE_SERVICE02</em> is returned in the list of unqualified services.
 
-<div id="SGQuoteRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'SGQuoteRequest')">
+# [Get Service Group Quotes Request](#tab/get-service-group-quotes-request)
+
+`POST https://api.electioapp.com/quotes/serviceGroups`
 
 ```json
 {
@@ -560,16 +553,7 @@ This simplified example shows a **Get Service Group Quotes** request for an outb
 }
 ```
 
-</div>
-
-PRO returns a single service group object. In this case, <em>SAMPLE_SERVICE01</em> is the only eligible service, and so is displayed as both the `CheapestQuote` and the only entry in the `Quotes` array. <em>SAMPLE_SERVICE02</em> is returned in the list of unqualified services.
-
-<div class="tab">
-    <button class="staticTabButton">Get Service Group Quotes Response Example</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'SGQuoteResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="SGQuoteResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'SGQuoteResponse')">
+# [Get Service Group Quotes Response](#tab/get-service-group-quotes-response)
 
 ```json
 [
@@ -761,16 +745,10 @@ PRO returns a single service group object. In this case, <em>SAMPLE_SERVICE01</e
   }
 ]
 ```
-
-</div>
-
+---
 
 ## Next Steps
 
 * Learn how to get quotes using a consignment reference at the [Getting Quotes For An Existing Consignment](/pro/api/help/getting_quotes_for_an_existing_consignment.html) page.
 * Learn how to create consignments at the [Creating New Consignments](/pro/api/help/creating_new_consignments.html) page.
 * Learn how to allocate consignments to your chosen quote at the [Allocating to a Specific Quote](/pro/api/help/allocating_to_a_specific_quote.html) page.
-
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>

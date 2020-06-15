@@ -1,4 +1,10 @@
-
+---
+uid: pro-api-help-flows-classic-flow
+title: Classic Flow
+tags: pro,api,consignments,flows,classic
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 07/05/2020
+---
 # Classic Flow
 
 <p>

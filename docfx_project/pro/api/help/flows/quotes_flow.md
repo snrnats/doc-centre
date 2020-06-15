@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-flows-quotes-flow
+title: Quotes Flow
+tags: pro,api,consignments,flows,quotes
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 15/04/2020
+---
 # Quotes Flow
 
 <p>

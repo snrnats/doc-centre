@@ -4,7 +4,6 @@ title: Using PRO's Tracking API
 tags: tracking,pro,api,consignments
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 29/05/2020
-
 ---
 # Using PRO's Tracking API
 
@@ -58,6 +57,8 @@ This example shows a simplified **Get Tracking Events** response for consignment
 
 # [Get Tracking Events Response](#tab/get-tracking-events-response)
 
+`GET https://api.electioapp.com/tracking/EC-000-002-4DF`
+
 ```json
 {
   "ConsignmentReferenceForAllLegsAssignedByMpd": "EC-000-002-4DF",
@@ -99,6 +100,8 @@ Like the **Get Tracking Events** endpoint, **Get Events Per Package** returns al
 This example shows a simplified **Get Events Per Package** response for consignment _EC-000-002-4DF_. PRO has returned details of a single sample tracking event.
 
 # [Get Events Per Package Response](#tab/get-events-per-package-response)
+
+`GET https://api.electioapp.com/tracking/flattened/EC-000-002-4DF`
 
 ```json
 {
