@@ -19,7 +19,7 @@ PRO creates and allocates a consignment using the details supplied previously in
 * A summary of the carrier service the consignment was allocated to
 * A link to the relevant package labels
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 > * For full reference information on the <strong>Select Option</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/SelectOption">Select Option</a></strong> page of the API reference.
 > * For a user guide on selecting options, see the [Selecting Options](/pro/api/help/selecting_options.html) page.
 

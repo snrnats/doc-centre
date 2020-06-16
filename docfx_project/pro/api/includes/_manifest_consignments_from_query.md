@@ -14,7 +14,7 @@ Once you've created a consignment, allocated it to a carrier service and printed
 
 The **Manifest Consignments From Query** endpoint enables you to use a query to select consignments to be manifested. Once PRO has added those consignments to a manifest and queued the data to be sent, the **Manifest Consignments From Query** endpoint returns a `Message` detailing how many consignments met the terms of the query, how many of those consignments were successfully queued, and how many could not be queued. 
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 > * For full reference information on the <strong>Manifest Consignments From Query</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery">Manifest Consignments From Query</a></strong> page of the API Reference.
 > * For a user guide on manifesting consignments, see the [Manifesting Consignments](/pro/api/help/manifesting_consignments.html) page. 
 

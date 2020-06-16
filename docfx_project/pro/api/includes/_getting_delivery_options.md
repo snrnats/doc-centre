@@ -21,7 +21,7 @@ If you do not provide a `DeliveryDate` in the request, then PRO returns delivery
 
 The delivery options available for a given consignment can change over time. This is primarily due to differing carrier collection times at each shipping location.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 > * For full reference information on the <strong>Delivery Options</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/DeliveryOptions">Delivery Options</a></strong> page of the API reference.
 > * For a user guide on PRO delivery options, see the [Using Delivery and Pickup Options](/pro/api/help/using_delivery_and_pickup_options.html) section.
 

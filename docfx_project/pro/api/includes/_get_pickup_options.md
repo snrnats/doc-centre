@@ -25,7 +25,7 @@ The **Pickup Options** endpoint returns a `{Locations}` array containing details
 
 Each `{Location}` object contains a `{DeliveryOptions}` array listing the delivery promises available to that location for the proposed consignment. 
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 > * For full reference information on the <strong>Pickup Options</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/PickupOptions">Pickup Options</a></strong> page of the API reference.
 > * For a user guide on pickup options, see the [Getting Pickup Options](/pro/api/help/getting_pickup_options.html) page.
 

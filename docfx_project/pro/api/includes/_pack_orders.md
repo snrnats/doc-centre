@@ -17,7 +17,7 @@ To make a **Pack Order** request, send a GET request to `https://api.electioapp.
 
 Once SortedPRO has received a **Pack Order** request, it creates the consignment and returns the relevant `{consignmentReference}`.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 > * For full reference information on the **Pack Order** endpoint, see the [Pack Order](https://docs.electioapp.com/#/api/PackOrder) page of the API reference.
 > * For a user guide on orders in PRO, see the [Managing Orders](/pro/api/help/managing_orders.html) section.
 

@@ -15,7 +15,7 @@ Once you've created a consignment, you'll need to use the **[Get Quotes by Consi
 
 **Get Quotes by Consignment Reference** returns quotes based on the details of an existing consignment. Specifically, it takes a `{consignmentReference}` as a path parameter and returns an array of `{Quotes}` for that consignment, as well as a list of services that were unable to quote for the consignment. 
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 > * For full reference information on the <strong>Get Quotes by Consignment Reference</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/GetQuotesbyConsignmentReference">Get Quotes by Consignment Reference</a></strong> page of the API reference.
 > * For a user guide on quotes in PRO, see the [Managing Quotes](/pro/api/help/managing_quotes.html) section.
 

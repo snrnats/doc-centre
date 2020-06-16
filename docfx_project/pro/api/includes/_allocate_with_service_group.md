@@ -16,7 +16,7 @@ To configure carrier service groups, use the <strong><a href="https://www.electi
 
 The **Allocate Consignment With Service Group** endpoint takes the `{consignmentReference}` of the consignment you want to allocate and the `{mpdCarrierServiceGroupReference}` of the service group you want to allocate from as path parameters, and returns an Allocation Summary with details of the service that was allocated. 
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 > * For full reference information on the <strong>Allocate Consignment With Service Group</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/AllocateConsignmentWithServiceGroup">Allocate Consignment With Service Group</a></strong> page of the API reference.
 > * For a user guide on allocating consignments within a service group, see the [Allocating Via Service Group](/pro/api/help/allocating_via_service_group.html). 
 

@@ -1,9 +1,4 @@
-<div class="tab">
-    <button class="staticTabButton">Allocation Using Default Rules Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'allocationUDREndpoint')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="allocationUDREndpoint" class="staticTabContent" onclick="CopyToClipboard(this, 'allocationUDREndpoint')">
+# [Allocation using Default Rules](#tab/allocation-using-default-rules)
 
 ```
 PUT https://api.electioapp.com/allocation/allocate
@@ -17,7 +12,7 @@ The **Allocate Using Default Rules** endpoint can be used to allocate multiple c
 
 Once the request is received, SortedPRO takes each consignment in turn and allocates it to the cheapest eligible carrier, based on your default rules. It then returns an array of Allocation Summaries, one for each allocated consignment. 
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 > * For full reference information on the <strong>Allocate Using Default Rules</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/AllocateUsingDefaultRules">Allocate Using Default Rules</a></strong> page of the API reference. 
 > * For a guide to using allocation rules, see the [Allocating Using Default Allocation Rules](/pro/api/help/allocating_using_default_allocation_rules.html) page.
 

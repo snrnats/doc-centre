@@ -15,7 +15,7 @@ The **[Create Order](https://docs.electioapp.com/#/api/CreateOrder)** endpoint e
 
 As a minimum, the **Create Order** endpoint requires you to send package and item details, origin address, and destination address data.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 > * For full reference information on the <strong>Create Order</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/CreateOrder">Create Order</a></strong> page of the API reference.
 > * For a user guide on creating orders, see the [Creating New Orders](/pro/api/help/creating_new_orders.html) page.
 

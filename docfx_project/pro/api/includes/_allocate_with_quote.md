@@ -15,7 +15,7 @@ To allocate an individual consignment based on a specific delivery quote from a 
 
 The **Allocate With Quote** endpoint takes the `{consignmentReference}` of the consignment you want to allocate and the `{quoteReference}` of a particular quote. Once the request is received PRO attempts to allocate the consignment to the carrier service specified in the quote, and returns an Allocation Summary.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 > * For full reference information on the <strong>Allocate With Quote</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/AllocateWithQuote">Allocate With Quote</a></strong> page of the API reference.
 > * For a user guide on allocating to specific delivery quotes, see the [Allocating to a Specific Quote](/pro/api/help/allocating_to_a_specific_quote.html) page.
 
