@@ -1053,14 +1053,14 @@ code > div {
   .hljs-subst {
     color: var(--code-default);
     font-family: var(--font-code);
-    font-size: var(--code-size);
+    /*font-size: var(--code-size);*/
   }
   
   .hljs-strong,
   .hljs-emphasis {
     color: var(--code-emphasis);
     font-family: var(--font-code);
-    font-size: var(--code-size);
+    /*font-size: var(--code-size);*/
   }
   
   .hljs-bullet,
@@ -1071,7 +1071,7 @@ code > div {
   .hljs-link {
     color: var(--code-literal);
     font-family: var(--font-code);
-    font-size: var(--code-size);
+    /*font-size: var(--code-size);*/
   }
   
   .hljs-code,
@@ -1080,19 +1080,19 @@ code > div {
   .hljs-selector-class {
     color: var(--code-title);
     font-family: var(--font-code);
-    font-size: var(--code-size);
+    /*font-size: var(--code-size);*/
   }
   
   .hljs-strong {
     font-weight: bold;
     font-family: var(--font-code);
-    font-size: var(--code-size);
+    /*font-size: var(--code-size);*/
   }
   
   .hljs-emphasis {
     font-style: italic;
     font-family: var(--font-code);
-    font-size: var(--code-size);
+    /*font-size: var(--code-size);*/
   }
   
   .hljs-keyword,
@@ -1101,21 +1101,21 @@ code > div {
   .hljs-attr {
     color: var(--colour-main);
     font-family: var(--font-code);
-    font-size: var(--code-size);
+    /*font-size: var(--code-size);*/
   }
   
   .hljs-symbol,
   .hljs-attribute {
     color: var(--code-attribute);
     font-family: var(--font-code);
-    font-size: var(--code-size);
+    /*font-size: var(--code-size);*/
   }
   
   .hljs-params,
   .hljs-class .hljs-title {
     color: var(--code-class);
     font-family: var(--font-code);
-    font-size: var(--code-size);
+    /*font-size: var(--code-size);*/
   }
   
   .hljs-string,
@@ -1130,7 +1130,7 @@ code > div {
   .hljs-template-variable {
     color: var(--code-variable);
     font-family: var(--font-code);
-    font-size: var(--code-size);
+    /*font-size: var(--code-size);*/
   }
   
   .hljs-comment,
@@ -1138,7 +1138,7 @@ code > div {
   .hljs-meta {
     color: var(--code-comment);
     font-family: var(--font-code);
-    font-size: var(--code-size);
+    /*font-size: var(--code-size);*/
   }
 
 
