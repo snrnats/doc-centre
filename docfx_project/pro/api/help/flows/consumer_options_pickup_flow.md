@@ -61,5 +61,3 @@ This section gives more detail on each step of the flow and provides worked exam
 ### Next Steps
 
 Read on to learn how to use delivery options to fulfil multiple-consignment orders.
-
-[!include[scripts](../../includes/scripts.md)]

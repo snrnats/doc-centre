@@ -334,7 +334,3 @@ This example shows a standard delivery option as returned by the **Get Existing 
 * Learn how to get pickup options for a consignment at the [Getting Pickup Options](/pro/api/help/getting_pickup_options.html) page
 * Learn how to create consignments and orders from delivery options at the [Selecting Options](/pro/api/help/selecting_options.html) page
 * Learn how to manifest consignments at the [Manifesting Consignments](/pro/api/help/manifesting_consignments.html) page
-
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>

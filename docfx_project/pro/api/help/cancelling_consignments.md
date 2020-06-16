@@ -82,7 +82,3 @@ This example shows three consignments being cancelled at once via **Cancel Consi
 * Learn how to allocate consignments at the [Allocating Consignments to Carriers](/pro/api/help/allocating_consignments.html) page.
 * Learn how to get and print delivery labels at the [Getting Labels](/pro/api/help/getting_labels.html) page.
 * Learn how to add consignments to a carrier manifest at the [Manifesting Consignments](/pro/api/help/manifesting_consignments.html) page.
-
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>

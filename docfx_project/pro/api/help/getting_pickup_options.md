@@ -335,7 +335,3 @@ At this point, you would present some or all of the options returned to your cus
 * Learn how to get delivery options for a consignment at the [Getting Delivery Options](/pro/api/help/getting_delivery_options.html) page
 * Learn how to create consignments and orders from delivery options at the [Selecting Options](/pro/api/help/selecting_options.html) page
 * Learn how to manifest consignments at the [Manifesting Consignments](/pro/api/help/manifesting_consignments.html) page
-
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>

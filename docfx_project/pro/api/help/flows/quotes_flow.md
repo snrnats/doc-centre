@@ -66,5 +66,3 @@ This section gives more detail on each step of the flow and provides worked exam
 ## Step 5: Manifesting a Consignment
 
 [!include[_manifest_consignments_from_query](../../includes/_manifest_consignments_from_query.md)]
-
-[!include[scripts](../../includes/scripts.md)]

@@ -81,5 +81,3 @@ This section gives more detail on each step of the flow and provides worked exam
 ## Next Steps
 
 And we're done! Read on to learn how to allocate consignments based on options presented to the customer at point of purchase, and deal with orders that may require multiple consignments to fulfil. 
-
-[!include[scripts](../../includes/scripts.md)]

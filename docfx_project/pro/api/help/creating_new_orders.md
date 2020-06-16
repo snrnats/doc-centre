@@ -169,7 +169,3 @@ You can also generate orders from pickup options. The process is the same as tha
 * Learn how to work with existing orders at the [Managing Existing Orders](/pro/api/help/managing_existing_orders.html) page.
 * Learn how to pack orders into consignments at the [Creating Consignments From Orders](/pro/api/help/packing_orders.html) page.
 * Learn how to retrieve delivery options at the [Getting Delivery Options](/pro/api/help/getting_delivery_options.html) page.
-
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>

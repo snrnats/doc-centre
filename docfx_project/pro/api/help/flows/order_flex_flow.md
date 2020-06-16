@@ -97,5 +97,3 @@ You'll need to allocate all of the consignments packed from your order. Bear in 
 ### Next Steps
 
 Finished! The next section explains a similar process, whereby the order is generated from delivery options that the customer selects rather than created up front.
-
-[!include[scripts](../../includes/scripts.md)]

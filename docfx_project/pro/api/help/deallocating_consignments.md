@@ -79,7 +79,3 @@ This examples shows a request to deallocate three consignments.
 * Learn about alternative methods of allocating consignments at the [Allocating Consignments](/pro/api/help/allocating_consignments.html) page.
 * Learn how to get and print delivery labels at the [Getting Labels](/pro/api/help/getting_labels.html) page.
 * Learn how to add consignments to a carrier manifest at the [Manifesting Consignments](/pro/api/help/manifesting_consignments.html) page.
-
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>

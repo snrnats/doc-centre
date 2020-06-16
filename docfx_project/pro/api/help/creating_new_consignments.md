@@ -193,7 +193,3 @@ To create a consignment in this way, you'll need to make two API calls:
 * Learn how to work with existing consignments at the [Managing Existing Consignments](/pro/api/help/updating_existing_consignments.html) page
 * Learn how to allocate consignments at the [Allocating Consignments to Carriers](/pro/api/help/allocating_consignments.html) page.
 * Learn how to get and print delivery labels at the [Getting Labels](/pro/api/help/getting_labels.html) page
-
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>

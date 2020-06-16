@@ -103,4 +103,3 @@ You'll need to allocate all of the consignments packed from your order. Bear in 
 
 The final section explains how to set up a call flow that enables you to retrieve and select quotes manually.
 
-[!include[scripts](../../includes/scripts.md)]

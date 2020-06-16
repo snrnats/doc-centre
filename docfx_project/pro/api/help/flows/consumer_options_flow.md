@@ -67,5 +67,3 @@ This section gives more detail on each step of the flow and provides worked exam
 ## Next Steps
 
 The next section explains a similar call flow that enables you to offer pickup options (aka click-and-collect) rather than home delivery timeslots.
-
-[!include[scripts](../../includes/scripts.md)]
