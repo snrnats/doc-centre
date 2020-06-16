@@ -1,15 +1,9 @@
-<div class="tab">
-    <button class="staticTabButton">Get Quotes by Consignment Reference Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'quoteConRefEndpoint')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Get Quotes by Consignment Reference Endpoint](#tab/get-quotes-by-consignment-reference-endpoint)
 
-<div id="quoteConRefEndpoint" class="staticTabContent" onclick="CopyToClipboard(this, 'quoteConRefEndpoint')">
-
-```
+```json
 GET https://api.electioapp.com/quotes/consignment/{consignmentReference}
 ```
-
-</div>  
+--- 
 
 Once you've created a consignment, you'll need to use the **[Get Quotes by Consignment Reference](https://docs.electioapp.com/#/api/GetQuotesbyConsignmentReference)** endpoint to get some delivery quotes for it.
 
@@ -23,25 +17,13 @@ Once you've created a consignment, you'll need to use the **[Get Quotes by Consi
 
 The example shows a **Get Quotes by Consignment Reference** request and its accompanying response. In this case, SortedPRO has returned two quotes for the service. The next step in the process is to select one of those quotes.
 
-<div class="tab">
-    <button class="staticTabButton">Example Get Quotes by Consignment Reference Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'quoteConRefRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Get Quotes by Consignment Reference Response](#tab/get-quotes-by-consignment-reference-response)
 
-<div id="quoteConRefRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'quoteConRefRequest')">
-
-```
+```json
 https://api.electioapp.com/quotes/consignment/EC-000-05B-1CM
 ```
 
-</div>  
-
-<div class="tab">
-    <button class="staticTabButton">Example Get Quotes by Consignment Reference Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'quoteConRefResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="quoteConRefResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'quoteConRefResponse')">
+# [Get Quotes by Consignment Reference Request](#tab/get-quotes-by-consignment-reference-request)
 
 ```json
 {
@@ -324,6 +306,4 @@ https://api.electioapp.com/quotes/consignment/EC-000-05B-1CM
     ]
 }
 ```
-
-</div> 
-
+---

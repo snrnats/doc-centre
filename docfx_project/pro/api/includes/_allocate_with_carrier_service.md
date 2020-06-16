@@ -1,15 +1,9 @@
-<div class="tab">
-    <button class="staticTabButton">Allocate With Carrier Service Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'allocationUCSEndpoint')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Allocate with Carrier Service Endpoint](#tab/allocate-with-carrier-service-endpoint)
 
-<div id="allocationUCSEndpoint" class="staticTabContent" onclick="CopyToClipboard(this, 'allocationUCSEndpoint')">
-
-```
+```json
 PUT https://api.electioapp.com/allocation/allocatewithcarrierservice
 ```
-
-</div>
+---
 
 To allocate one or more consignments to a specific carrier service, use the **[Allocate With Carrier Service](https://docs.electioapp.com/#/api/AllocateWithCarrierService)** endpoint. 
 
@@ -23,16 +17,11 @@ The **Allocate With Carrier Service** request body contains an array of one or m
 
 The example shows a request to allocate three consignments to a carrier service with an `{MpdCarrierServiceReference}` of _Example-Carrier-Service_ .
 
-<div class="tab">
-    <button class="staticTabButton">Example Allocate With Carrier Service Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'allocationUCSRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Allocate with Carrier Service Request](#tab/allocate-with-carrier-service-request)
 
-<div id="allocationUCSRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'allocationUCSRequest')">
+`PUT https://api.electioapp.com/allocation/allocatewithcarrierservice`
 
 ```json
-PUT https://api.electioapp.com/allocation/allocatewithcarrierservice
-
 {
   "MpdCarrierServiceReference": "Example-Carrier-Service",
   "ConsignmentReferences": [
@@ -42,5 +31,4 @@ PUT https://api.electioapp.com/allocation/allocatewithcarrierservice
   ]
 }
 ```
-
-</div>
+---

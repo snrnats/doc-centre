@@ -1,14 +1,9 @@
-<div class="tab">
-    <button class="staticTabButton">Allocate Consignment With Service Group Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'allocationUSGEndpoint')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Allocate Consignment with Service Group Endpoint](#tab/allocate-consignment-with-service-group-endpoint)
 
-<div id="allocationUSGEndpoint" class="staticTabContent" onclick="CopyToClipboard(this, 'allocationUSGEndpoint')">
-
+```json
+https://api.electioapp.com/allocation/{consignmentReference}/allocatewithservicegroup/{mpdCarrierServiceGroupReference}`
 ```
-PUT https://api.electioapp.com/allocation/{consignmentReference}/allocatewithservicegroup/{mpdCarrierServiceGroupReference}
-```
-</div>
+---
 
 SortedPRO carrier service groups are user-defined pools of carrier services that can be used in the allocation process. To allocate a consignment to the cheapest available carrier service in a particular carrier service group, use the **[Allocate Consignment With Service Group](https://docs.electioapp.com/#/api/AllocateConsignmentWithServiceGroup)** endpoint.  
 
@@ -24,15 +19,10 @@ The **Allocate Consignment With Service Group** endpoint takes the `{consignment
 
 The example shows a request to allocate a consignment with a `{consignmentReference}` of _EC-000-05B-MMA_ to a carrier service within a group named `valuableGoods`.
 
-<div class="tab">
-    <button class="staticTabButton">Example Allocate Consignment With Service Group Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'allocationUSGRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Allocate Consignment with Service Group Request](#tab/allocate-consignment-with-service-group-request)
 
-<div id="allocationUSGRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'allocationUSGRequest')">
-
-```
+```json
 PUT https://api.electioapp.com/allocation/EC-000-05B-MMA/allocatewithservicegroup/valuableGoods
 ```
 
-</div>
+---

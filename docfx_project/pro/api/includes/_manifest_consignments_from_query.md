@@ -1,14 +1,9 @@
-<div class="tab">
-    <button class="staticTabButton">Manifest Consignments From Query Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'ManifestQueryEndpoint')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Manifest Consignments From Query Endpoint](#tab/manifest-consignments-from-query-endpoint)
 
-<div id="ManifestQueryEndpoint" class="staticTabContent" onclick="CopyToClipboard(this, 'ManifestQueryEndpoint')">
-
-```
+```json
 PUT https://api.electioapp.com/consignments/manifestFromQuery
 ```
-</div>
+---
 
 Once you've created a consignment, allocated it to a carrier service and printed labels for it, you're ready to manifest it. To manifest a consignment, use the **[Manifest Consignments From Query](https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery)** endpoint. In the context of SortedPRO, the term "manifesting" refers to collating, formatting and transmitting the consignment data to carriers.
 
@@ -22,12 +17,7 @@ The **Manifest Consignments From Query** endpoint enables you to use a query to 
 
 The example shows a request to manifest all consignments that are allocated to Carrier X, shipping from a location with the `ShippingLocationReference` _Location1_, and have already had their labels printed. The response indicates that PRO found 10 consignments meeting these criteria, and that all 10 were successfully queued for manifest.
 
-<div class="tab">
-    <button class="staticTabButton">Example Manifest Consignments From Query Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'ManifestQueryRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="ManifestQueryRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'ManifestQueryRequest')">
+# [Manifest Consignments From Query Request](#tab/manifest-consignments-from-query-request)
 
 ```json
 {
@@ -43,19 +33,11 @@ The example shows a request to manifest all consignments that are allocated to C
   "LabelsPrinted": true
 }
 ```
-</div>
-
-<div class="tab">
-    <button class="staticTabButton">Example Manifest Consignments From Query Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'ManifestQueryResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="ManifestQueryResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'ManifestQueryResponse')">
+# [Manifest Consignments From Query Response](#tab/manifest-consignments-from-query-response)
 
 ```json
 {
   "Message": "Query found 10 consignment(s). 10 successfully queued to manifest. 0 failed to be added to the queue"
 }
 ```
-
-</div>
+---

@@ -1,10 +1,9 @@
-# [Allocation using Default Rules](#tab/allocation-using-default-rules)
+# [Allocate using Default Rules Endpoint](#tab/allocate-using-default-rules-endpoint)
 
-```
+```json
 PUT https://api.electioapp.com/allocation/allocate
 ```
-
-</div>
+---
 
 To allocate one or more consignments based on your organisation's custom allocation rules, use the **[Allocate Using Default Rules](https://docs.electioapp.com/#/api/AllocateUsingDefaultRules)** endpoint. PRO enables you to configure custom allocation rules - such as valid package dimensions, maximum consignment value, and geographical availability - for individual carrier services. You can configure them via the <strong>Manage Carrier Service Rules</strong></a> page of the PRO UI. 
 
@@ -20,16 +19,11 @@ Once the request is received, SortedPRO takes each consignment in turn and alloc
 
 The example shows a request to allocate three consignments via default rules. 
 
-<div class="tab">
-    <button class="staticTabButton">Example Allocate Using Default Rules Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'allocationUDRRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Allocate using Default Rules Request](#tab/allocate-using-default-rules-request)
 
-<div id="allocationUDRRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'allocationUDRRequest')">
+`PUT https://api.electioapp.com/allocation/allocate`
 
 ```json
-PUT https://api.electioapp.com/allocation/allocate
-
 {
   "ConsignmentReferences": [
     "EC-000-05B-MMA",
@@ -38,5 +32,4 @@ PUT https://api.electioapp.com/allocation/allocate
   ]
 }
 ```
-
-</div>
+---
