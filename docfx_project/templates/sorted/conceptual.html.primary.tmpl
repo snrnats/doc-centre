@@ -1,0 +1,49 @@
+{{!Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.}}
+{{!master(layout/_master.tmpl)}}
+{{{rawTitle}}}
+{{#draft}}
+<div class="alert alert-info">
+    <span class="glyphicon glyphicon-warning-sign"></span><span>&nbsp;This article is in a draft state</span>
+</div>
+{{/draft}}
+<div class="page-stats row visible-xs">
+    <ul class="page-metadata">
+        <li class="li-page-date">
+            {{#created}}{{.}}{{/created}}
+        </li>
+        <li class="li-time-to-read">
+            {{#wordCount}} {{timeToRead}} {{/wordCount}} to read
+        </li>
+    </ul>
+</div>
+<div class="page-stats row visible-sm visible-md visible-lg visible-xl">
+    <ul class="page-metadata">
+        <li class="li-page-date">
+            {{#created}}{{.}}{{/created}}
+        </li>
+        <li class="li-time-to-read">
+            {{#wordCount}} {{timeToRead}} {{/wordCount}} to read
+        </li>
+        {{#contributors}}
+        <li class="contributor-li">
+            <img src="{{url}}" class="img-circle img-contributor" title="{{email}}"/>
+            <span class="tooltip-text">{{email}}</span>
+        </li>
+        {{/contributors}}
+    </ul>
+</div>
+{{#displayTags}}
+<div class="page-tags">
+    <span class="glyphicon glyphicon-tags"></span>
+    <ul class="tags">
+{{/displayTags}}
+    {{#pageTags}}
+        <li class="tag-search">{{.}}</li>
+    {{/pageTags}}
+{{#displayTags}}
+    </ul>
+{{/displayTags}}
+{{#displayTags}}
+</div>
+{{/displayTags}}
+{{{conceptual}}}

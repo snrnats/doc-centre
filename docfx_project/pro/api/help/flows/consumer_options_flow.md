@@ -1,4 +1,10 @@
-
+---
+uid: pro-api-help-flows-consumer-options-flow
+title: Consumer Options Flow
+tags: pro,api,consignments,flows,options,delivery
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 29/05/2020
+---
 # Consumer Options Flow
 
 <p>
@@ -9,7 +15,7 @@
 
 The **Consumer Options** flow enables you to provide real-time delivery choices - including delivery date, time, and carrier brand - to your customer at point of purchase. After the customer has chosen their preferred option, PRO can create a consignment based on their details, and allocate that consignment to a carrier service based on the customers choice.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > Access to PRO's delivery and pickup option endpoints requires a SortedHERO license. This component is sold separately to the main SortedPRO product. 
 
@@ -61,5 +67,3 @@ This section gives more detail on each step of the flow and provides worked exam
 ## Next Steps
 
 The next section explains a similar call flow that enables you to offer pickup options (aka click-and-collect) rather than home delivery timeslots.
-
-[!include[scripts](../../includes/scripts.md)]

@@ -1,22 +1,17 @@
-<div class="tab">
-    <button class="staticTabButton">Create Consignment Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'createConEndpoint')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Create Consignments Endpoint](#tab/create-consignments-endpoint)
 
-<div id="createConEndpoint" class="staticTabContent" onclick="CopyToClipboard(this, 'createConEndpoint')">
-
-```
+```json
 POST https://api.electioapp.com/consignments
 ```
-</div>
+---
 
 The first step toward manifesting a consignment is to create that consignment in SortedPRO. 
 
-Consignments are created using the **[Create Consignment](https://docs.electioapp.com/#/api/CreateConsignment)** endpoint, which takes information about new consignments, adds them to the database, and returns a link to the newly-created consignment, including its `{consignmentReference}`. 
+Consignments are created using the **[Create Consignment](https://docs.electioapp.com/#/api/CreateConsignment)** endpoint, which takes information about new consignments, adds them to the database, and returns a link to the newly-created consignment, including its `{consignmentReference}`. A newly created consignment has a `{consignmentState}` of _Unallocated_.
 
 As a minimum, the **Create Consignments** endpoint requires you to send package weights and dimensions, origin address, and destination address data. 
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 > * For full reference information on the <strong>Create Consignment</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/CreateConsignment">Create Consignment</a></strong> page of the API reference.
 > * For a user guide explaining the **Create Consignment** endpoint, see the [Creating New Consignments](/pro/api/help/creating_new_consignments.html) page.
 
@@ -24,12 +19,11 @@ As a minimum, the **Create Consignments** endpoint requires you to send package 
 
 These examples show the creation of a fairly standard consignment. In this case, we have an outbound consignment comprising a single package with a single item inside it.
 
-<div class="tab">
-    <button class="staticTabButton">Request Example</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'createConRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+After receiving the request, PRO returns a `{consignmentReference}` of _EC-000-05B-MMA_. Many of PRO's functions require you to provide a `{consignmentReference}` as a parameter. Therefore, you should store the `{consignmentReference}` for later use.
 
-<div id="createConRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'createConRequest')">
+# [Create Consignments Request](#tab/create-consignments-request)
+
+`POST https://api.electioapp.com/consignments`
 
 ```json
 {
@@ -191,16 +185,7 @@ These examples show the creation of a fairly standard consignment. In this case,
 }
 ```
 
-</div>   
-
-After receiving the request, PRO returns a `{consignmentReference}` of _EC-000-05B-MMA_. Many of PRO's functions require you to provide a `{consignmentReference}` as a parameter. Therefore, you should store the `{consignmentReference}` for later use.
-
-<div class="tab">
-    <button class="staticTabButton">Response Example</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'createConResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="createConResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'createConResponse')">
+# [Create Consignments Response](#tab/create-consignments-response)
 
 ```json
 [
@@ -210,6 +195,4 @@ After receiving the request, PRO returns a `{consignmentReference}` of _EC-000-0
   }
 ]
 ```
-</div>
-
-A newly created consignment has a `{consignmentState}` of _Unallocated_.
+---

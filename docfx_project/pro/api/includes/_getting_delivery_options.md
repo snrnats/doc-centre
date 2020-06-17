@@ -1,15 +1,9 @@
-<div class="tab">
-    <button class="staticTabButton">Delivery Options Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'DelOptionsEndpoint')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Delivery Options Endpoint](#tab/delivery-options-endpoint)
 
-<div id="DelOptionsEndpoint" class="staticTabContent" onclick="CopyToClipboard(this, 'DelOptionsEndpoint')">
-
-   ```
-   POST https://api.electioapp.com/deliveryoptions
-   ```
-
-</div>  
+```json
+POST https://api.electioapp.com/deliveryoptions
+```
+---
 
 In the context of SortedPRO, a "delivery option" is a combination of a delivery date, a start time and an end time. These details form a delivery promise for a consignment. PRO then recommends a carrier service that can meet the delivery promise, the delivery cost, and the required shipping date, completing the data for each delivery option.
 
@@ -21,7 +15,7 @@ If you do not provide a `DeliveryDate` in the request, then PRO returns delivery
 
 The delivery options available for a given consignment can change over time. This is primarily due to differing carrier collection times at each shipping location.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 > * For full reference information on the <strong>Delivery Options</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/DeliveryOptions">Delivery Options</a></strong> page of the API reference.
 > * For a user guide on PRO delivery options, see the [Using Delivery and Pickup Options](/pro/api/help/using_delivery_and_pickup_options.html) section.
 
@@ -29,12 +23,9 @@ The delivery options available for a given consignment can change over time. Thi
 
 The example shows a request to get delivery options for a fairly standard consignment. The API has returned two delivery options, both for Carrier X: one with an `{estimatedDeliveryDate}` of _2019-06-19_ and one with an `{estimatedDeliveryDate}` of _2019-06-20_.
 
-<div class="tab">
-    <button class="staticTabButton">Example Delivery Options Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'DelOptionsRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Delivery Options Request](#tab/delivery-options-request)
 
-<div id="DelOptionsRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'DelOptionsRequest')">
+`POST https://api.electioapp.com/deliveryoptions`
 
 ```json
 {  
@@ -192,14 +183,7 @@ The example shows a request to get delivery options for a fairly standard consig
 }
 ```
 
-</div>
-
-<div class="tab">
-    <button class="staticTabButton">Example Delivery Options Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'DelOptionsResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="DelOptionsResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'DelOptionsResponse')">
+# [Delivery Options Response](#tab/delivery-options-response)
 
 ```json
 {
@@ -281,8 +265,7 @@ The example shows a request to get delivery options for a fairly standard consig
     ]
 }    
 ```
-
-</div>  
+---
 
 Both of these options have a time window starting at 00:00 and ending at 23:59. In practice, the carrier is offering to make the delivery at some point on either the 19th or 20th of June (as selected by the customer), but isn't offering a more specific timeslot on that service. 
 

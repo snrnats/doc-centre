@@ -1,8 +1,15 @@
+---
+uid: pro-api-help-tracking-pro-consignments-using-react
+title: Tracking PRO Consignments Using REACT
+tags: tracking,pro,react,api,consignments
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 01/06/2020
+---
 # Tracking PRO Consignments Using REACT
 
 SortedPRO integrates seamlessly with REACT, Sorted's dedicated shipment tracking platform. PRO can automatically register shipments with REACT, and share carrier and tracking information. This page explains how PRO and REACT can interact with each other, and the benefits this brings.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > For integration guides and user help on REACT, see the [REACT](/react/help/overview.html) section of this site.
 
@@ -179,12 +186,7 @@ This table shows how the properties in a PRO consignment resource map to the pro
 
 This example shows a PRO consignment and a REACT shipment that has been generated from that consignment at the point it was manifested.
 
-<div class="tab">
-    <button class="staticTabButton">Example PRO Consignment</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'PROmapping')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="PROmapping" class="staticTabContent" onclick="CopyToClipboard(this, 'PROmapping')">
+# [Example Consignment](#tab/example-consignment)
 
 ```json
 {
@@ -426,14 +428,7 @@ This example shows a PRO consignment and a REACT shipment that has been generate
 }
 ```
 
-</div>
-
-<div class="tab">
-    <button class="staticTabButton">Corresponding REACT Shipment </button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'REACTmapping')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="REACTmapping" class="staticTabContent" onclick="CopyToClipboard(this, 'REACTmapping')">
+# [Corresponding REACT Shipment](#tab/corresponding-react-shipment)
 
 ```json
 {
@@ -480,10 +475,9 @@ This example shows a PRO consignment and a REACT shipment that has been generate
   ]
 }
 ```
+---
 
-</div>
-
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > * For more information on the structure of a REACT shipment, see the [Register Shipments](https://docs.sorted.com/react/api/#RegisterShipments) section of the REACT API reference and the [Registering Shipments](/react/help/registering-shipments.html) page of the REACT help.
 > * For more information on the structure of a PRO consignment, see the [Create Consignment](https://docs.electioapp.com/#/api/CreateConsignment) page of the PRO API reference and the [Creating New Consignments](/pro/api/help/creating_new_consignments.html) page of the PRO help.
@@ -497,7 +491,3 @@ Once a PRO consignment has been registered as a REACT shipment, PRO automaticall
 * View the [REACT User Guide](/react/help/overview.html) for a full overview of how to use REACT.
 * Learn how to get customs docs and invoices for international shipments at the [Getting Customs Docs and Invoices](/pro/api/help/getting_customs_docs_and_invoices.html) page.
 * Learn how to manifest consignments at the [Manifesting Consignments](/pro/api/help/manifesting_consignments.html) page.
-
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>

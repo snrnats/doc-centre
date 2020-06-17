@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-selecting-options
+title: Selecting Options
+tags: options,pro,api,consignments,pickup options,delivery options
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 29/05/2020
+---
 # Selecting Options
 
 This page explains how to to generate consignments and orders by selecting a delivery option. 
@@ -14,7 +21,7 @@ Once it has received the request, PRO creates a consignment using the consignmen
 
 PRO then returns links to the consignment resource that was allocated, a summary of the carrier service that the consignment was allocated to, a link to the relevant package labels, and a `ConsignmentLegs` array indicating how many legs the shipment will need. Where a shipment would need multiple legs to complete, the `ConsignmentLegs` array shows tracking details for each individual leg.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > * For full reference information on the <strong>Select Option</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/SelectOption">Select Option</a></strong> page of the API reference.
 > * For an example call flow in which consignments are created using **Select Order**, see the [Consumer Options](/pro/api/help/flows/consumer_options_flow.html) call flow page.
@@ -23,25 +30,13 @@ PRO then returns links to the consignment resource that was allocated, a summary
 
 The example shows a request to select a delivery option that has a `{deliveryOptionReference}` of _EDO-000-6DX-6XP_. PRO creates a consignment with a `{consignmentReference}` of _EC-000-05B-MMQ_, which it then allocates to the carrier service associated with delivery option _EDO-000-6DX-6XP_. PRO then returns the relevant `{consignmentReference}` and label link, enabling you to get labels for and manifest the consignment.
 
-<div class="tab">
-    <button class="staticTabButton">Example Select Option Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'selectOptionRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="selectOptionRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'selectOptionRequest')">
+# [Select Option Request](#tab/select-option-request)
 
 ```json
 POST https://api.electioapp.com/deliveryoptions/select/EDO-000-6DX-6XP
 ```
 
-</div>   
-
-<div class="tab">
-    <button class="staticTabButton">Example Select Option Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'selectOptionResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="selectOptionResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'selectOptionResponse')">
+# [Select Option Response](#tab/select-option-response)
 
 ```json
 {
@@ -75,7 +70,7 @@ POST https://api.electioapp.com/deliveryoptions/select/EDO-000-6DX-6XP
 }
 ```
 
-</div> 
+---
 
 ## Selecting Options As an Order    
 
@@ -83,7 +78,7 @@ The **Select Option As Order** endpoint enables you to record a customer's choic
 
 Using **Select Option As Order** combines the benefits of PRO's delivery options and orders features, enabling you to offer your customers delivery options even if their orders need to be shipped in multiple consignments.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > For more information on using orders in PRO, see the [Managing Orders](/pro/api/help/managing_orders.html) section.
 
@@ -91,7 +86,7 @@ To call **Select Option As Order**, send a `POST` request to `https://api.electi
 
 Once it has received the **Select Delivery Option as an Order** request, PRO uses the details of the selected option to create an order and returns an object containing the associated `{orderReferences}`. 
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > * For full reference information on the <strong>Select Delivery Option as an Order</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/SelectDeliveryOptionasanOrder">Select Delivery Option as an Order</a></strong> page of the API reference.
 
@@ -99,12 +94,7 @@ Once it has received the **Select Delivery Option as an Order** request, PRO use
 
 The example shows a request to select a delivery option that has a `{Reference}` of _EDO-000-6DX-6XP_ as an order. PRO takes that delivery option's details and creates an order with an `{orderReference}` of _EO-000-002-0TT_.
 
-<div class="tab">
-    <button class="staticTabButton">Example Select Delivery Option as an Order Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'optAsOrderRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="optAsOrderRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'optAsOrderRequest')">
+# [Select Option As Order Request](#tab/select-option-as-order-request)
 
 ```json
 {
@@ -123,14 +113,7 @@ The example shows a request to select a delivery option that has a `{Reference}`
 }
 ```
 
-</div>   
-
-<div class="tab">
-    <button class="staticTabButton">Example Select Delivery Option as an Order Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'optAsOrderResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="optAsOrderResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'optAsOrderResponse')">
+# [Select Option As Order Response](#tab/select-option-as-order-response)
 
   ```json
   {
@@ -151,14 +134,10 @@ The example shows a request to select a delivery option that has a `{Reference}`
   }
   ```
 
-</div> 
+---
 
 ## Next Steps
 
 * Learn how to manifest consignments at the [Manifesting Consignments](/pro/api/help/manifesting_consignments.html) page.
 * Learn how to pack orders into consignments at the [Creating Consignments From Orders](/pro/api/help/packing_orders.html) page.
 * Learn how to retrieve customs docs and invoices at the [Getting Customs Docs and Invoices](/pro/api/help/getting_customs_docs_and_invoices.html) page.
-
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>

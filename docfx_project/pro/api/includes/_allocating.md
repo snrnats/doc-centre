@@ -1,17 +1,11 @@
-<div class="tab">
-    <button class="staticTabButton">Allocation Endpoints</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'allocationEndpoints')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Allocation Endpoints](#tab/allocation-endpoints)
 
-<div id="allocationEndpoints" class="staticTabContent" onclick="CopyToClipboard(this, 'allocationEndpoints')">
-
-   ```
-   PUT https://api.electioapp.com/allocation/allocate
-   PUT https://api.electioapp.com/allocation/{consignmentReference}/allocatewithservicegroup/{mpdCarrierServiceGroupReference}
-   PUT https://api.electioapp.com/allocation/allocatewithcarrierservice
-   ```
-
-</div>   
+```json
+PUT https://api.electioapp.com/allocation/allocate
+PUT https://api.electioapp.com/allocation/{consignmentReference}/allocatewithservicegroup/{mpdCarrierServiceGroupReference}
+PUT https://api.electioapp.com/allocation/allocatewithcarrierservice
+```
+---
 
 Once you've created a consignment, it must be allocated to a carrier service. In the context of SortedPRO, <strong>allocation</strong> is the process of selecting the carrier service that will deliver the packages that make up the consignment. 
 
@@ -33,7 +27,7 @@ Once allocated, the consignment's status is updated to _Allocated_, enabling you
 
 This section of the site explains the circumstances in which you might choose to use each allocation endpoint, and gives worked examples. 
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > For a full user guide on allocating consignments in PRO, see the [Allocating Consignments](/pro/api/help/allocating_consignments.html) section.
 
@@ -43,15 +37,10 @@ All allocation endpoints return an Allocation Summary, either singularly or (whe
 
 In the example, a consignment with a `{consignmentReference}` of _EC-000-05B-MMA_ has been allocated to a (dummy) carrier service called _Carrier X Next Day Super_.
 
-> <span class="note-header">Note:</span>
->  Allocation tags enable you to filter the list of available carrier services on a per-consignment basis, no matter which allocation endpoint you use in your integration. For more information on using allocation tags, see the <strong><a href="/pro/api/help/tags.html">Tags</a></strong> page. 
+> [!TIP]
+>  Allocation tags enable you to filter the list of available carrier services on a per-consignment basis, no matter which allocation endpoint you use in your integration. For more information on using allocation tags, see the <strong><a href="/pro/api/help/tags.html">Tags</a></strong> page.
 
-<div class="tab">
-    <button class="staticTabButton">Example Allocation Summary Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'allocationSummary')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="allocationSummary" class="staticTabContent" onclick="CopyToClipboard(this, 'allocationSummary')">
+# [Allocation Summary Response](#tab/allocation-summary-response)
 
 ```json
 [
@@ -86,4 +75,4 @@ In the example, a consignment with a `{consignmentReference}` of _EC-000-05B-MMA
     }
 ]
 ```
-</div>
+---

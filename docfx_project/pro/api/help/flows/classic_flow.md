@@ -1,4 +1,10 @@
-
+---
+uid: pro-api-help-flows-classic-flow
+title: Classic Flow
+tags: pro,api,consignments,flows,classic
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 07/05/2020
+---
 # Classic Flow
 
 <p>
@@ -75,5 +81,3 @@ This section gives more detail on each step of the flow and provides worked exam
 ## Next Steps
 
 And we're done! Read on to learn how to allocate consignments based on options presented to the customer at point of purchase, and deal with orders that may require multiple consignments to fulfil. 
-
-[!include[scripts](../../includes/scripts.md)]
