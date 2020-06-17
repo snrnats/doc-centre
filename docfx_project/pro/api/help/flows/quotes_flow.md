@@ -17,7 +17,7 @@ The **Quotes** flow is intended as a back-end customer service integration to he
 
 The **Quotes** flow is useful to your business for:
 
-* Customer contact centre use. 
+* Customer contact centre use.
 * In store delivery booking.
 * ERP workflows (e.g. SAP, Oracle).
 
@@ -28,8 +28,8 @@ There are five steps to the flow:
 3. **Select a quote** - Use the [Allocate With Quote](https://docs.electioapp.com/#/api/AllocateWithQuote) endpoint to select one of the returned quotes.
 4. **Get the consignment's labels** - Use the [Get Labels in Format](https://docs.electioapp.com/#/api/GetLabelsinFormat) endpoint to get the delivery label for your consignment.
 5. **Manifest the consignment** - Use the [Manifest Consignments from Query](https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery) endpoint to confirm the consignment with the selected carrier. At this point, the consignment is ready to ship.
- 
-This section gives more detail on each step of the flow and provides worked examples. 
+
+This section gives more detail on each step of the flow and provides worked examples.
 
 ---
 

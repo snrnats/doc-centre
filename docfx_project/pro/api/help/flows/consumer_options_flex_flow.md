@@ -4,9 +4,9 @@
    <a href="../../../images/Flow5.png" target="_blank" >
       <img src="../../../images/Flow5.png" class="noborder"/>
    </a>
-</p> 
+</p>
 
-Like the **Consumer Options** flow, the **Consumer Options Flex** flow enables you to provide delivery timeslots to your customer at point of purchase. However, rather than generating a single consignment from the options selected, this flow generates orders, which can then be packed into multiple consignments. 
+Like the **Consumer Options** flow, the **Consumer Options Flex** flow enables you to provide delivery timeslots to your customer at point of purchase. However, rather than generating a single consignment from the options selected, this flow generates orders, which can then be packed into multiple consignments.
 
 The **Consumer Options Flex** flow can be used to provide front-end delivery options in circumstances where you cannot guarantee that the contents of your customer's online basket will map directly to a single consignment. For example, you might operate more than one warehouse and so may need to ship some orders in multiple consignments.
 
@@ -25,7 +25,7 @@ There are six steps to the flow:
 5. **Get the consignment's labels** - Use the [Get Labels in Format](https://docs.electioapp.com/#/api/GetLabelsinFormat) endpoint to get the delivery label for your consignment.
 6. **Manifest the consignments** - Use the [Manifest Consignments from Query](https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery) endpoint to confirm the consignment with the selected carrier. At this point, the consignment is ready to ship.
 
-This section gives more detail on each step of the flow and provides worked examples. 
+This section gives more detail on each step of the flow and provides worked examples.
 
 ---
 
@@ -34,8 +34,7 @@ This section gives more detail on each step of the flow and provides worked exam
 [!include[_getting_delivery_options](../../includes/_getting_delivery_options.md)]
 
 > [!NOTE]
->   Although this guide focuses on generating an order from the <strong>Delivery Options</strong> endpoint, you can also generate orders from pickup options via the <strong>Pickup Options</strong> endpoint. For more information on the <strong>Pickup Options</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/PickupOptions">Pickup Options</a></strong> page of the API reference.
-
+> Although this guide focuses on generating an order from the **Delivery Options** endpoint, you can also generate orders from pickup options via the **Pickup Options** endpoint. For more information on the **Pickup Options** endpoint, see the **[Pickup Options](https://docs.electioapp.com/#/api/PickupOptions)** page of the API reference.
 
 ---
 
@@ -55,7 +54,7 @@ This section gives more detail on each step of the flow and provides worked exam
 
 [!include[_allocating](../../includes/_allocating.md)]
 
-You'll need to allocate all of the consignments packed from your order. Bear in mind that <strong><a href="https://docs.electioapp.com/#/api/AllocateUsingDefaultRules">Allocate Using Default Rules</a></strong> and <strong><a href="https://docs.electioapp.com/#/api/AllocateWithCarrierService">Allocate With Carrier Service</a></strong> enable you to allocate multiple consignments at once, but you can only allocate one consignment at a time via <strong><a href="https://docs.electioapp.com/#/api/AllocateConsignmentWithServiceGroup">Allocate Consignment With Service Group</a></strong>. If you allocate via <strong>Allocate Consignment With Service Group</strong> you'll need to make one API call per consignment on the order.
+You'll need to allocate all of the consignments packed from your order. Bear in mind that **[Allocate using Default Rules](https://docs.electioapp.com/#/api/AllocateUsingDefaultRules)** and **[Allocate with Carrier Service](https://docs.electioapp.com/#/api/AllocateWithCarrierService)** enable you to allocate multiple consignments at once, but you can only allocate one consignment at a time via **[Allocate Consignment with Service Group](https://docs.electioapp.com/#/api/AllocateConsignmentWithServiceGroup)**. If you allocate via **Allocate Consignment with Service Group** you'll need to make one API call per consignment on the order.
 
 ---
 
@@ -82,7 +81,7 @@ You'll need to allocate all of the consignments packed from your order. Bear in 
 [!include[_get_labels_in_format](../../includes/_get_labels_in_format.md)]
 
 > [!NOTE]
->  You'll need to make one <strong>Get Labels</strong> call per consignment on the order.
+> You'll need to make one **Get Labels** call per consignment on the order.
 
 ---
 
@@ -102,4 +101,3 @@ You'll need to allocate all of the consignments packed from your order. Bear in 
 ### Next Steps
 
 The final section explains how to set up a call flow that enables you to retrieve and select quotes manually.
-

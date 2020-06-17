@@ -29,7 +29,7 @@ There are five steps to the flow:
 4. **Get delivery labels** - Use the [Get Labels in Format](https://docs.electioapp.com/#/api/GetLabelsinFormat) endpoint to get the delivery label for your consignments.
 5. **Manifest the consignments** - Use the [Manifest Consignments from Query](https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery) endpoint to confirm the consignments with the selected carrier. At this point, the consignments are ready to ship.
 
-This section gives more detail on each step of the flow and provides worked examples. 
+This section gives more detail on each step of the flow and provides worked examples.
 
 ---
 
@@ -49,8 +49,7 @@ This section gives more detail on each step of the flow and provides worked exam
 
 [!include[_allocating](../../includes/_allocating.md)]
 
-
-You'll need to allocate all of the consignments packed from your order. Bear in mind that <strong><a href="https://docs.electioapp.com/#/api/AllocateUsingDefaultRules">Allocate Using Default Rules</a></strong> and <strong><a href="https://docs.electioapp.com/#/api/AllocateWithCarrierService">Allocate With Carrier Service</a></strong> enable you to allocate multiple consignments at once, but you can only allocate one consignment at a time via <strong><a href="https://docs.electioapp.com/#/api/AllocateConsignmentWithServiceGroup">Allocate Consignment With Service Group</a></strong>. If you allocate via <strong>Allocate Consignment With Service Group</strong> you'll need to make one API call per consignment on the order.
+You'll need to allocate all of the consignments packed from your order. Bear in mind that **[Allocate Using Default Rules](https://docs.electioapp.com/#/api/AllocateUsingDefaultRules)** and **[Allocate with Carrier Service](https://docs.electioapp.com/#/api/AllocateWithCarrierService)** enable you to allocate multiple consignments at once, but you can only allocate one consignment at a time via **[Allocate Consignment with Service Group](https://docs.electioapp.com/#/api/AllocateConsignmentWithServiceGroup)**. If you allocate via **Allocate Consignment with Service Group** you'll need to make one API call per consignment on the order.
 
 ---
 
@@ -77,7 +76,7 @@ You'll need to allocate all of the consignments packed from your order. Bear in 
 [!include[_get_labels_in_format](../../includes/_get_labels_in_format.md)]
 
 > [!NOTE]
-> You'll need to make one <strong>Get Labels</strong> call per consignment on the order.
+> You'll need to make one **Get Labels** call per consignment on the order.
 
 ---
 

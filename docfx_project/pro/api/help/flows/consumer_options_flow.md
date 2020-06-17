@@ -17,7 +17,7 @@ The **Consumer Options** flow enables you to provide real-time delivery choices 
 
 > [!NOTE]
 >
-> Access to PRO's delivery and pickup option endpoints requires a SortedHERO license. This component is sold separately to the main SortedPRO product. 
+> Access to PRO's delivery and pickup option endpoints requires a SortedHERO license. This component is sold separately to the main SortedPRO product.
 
 The **Consumer Options** flow is most useful to your business if:
 
@@ -32,7 +32,7 @@ There are four steps to the flow:
 3. **Get the consignment's labels** - Use the [Get Labels in Format](https://docs.electioapp.com/#/api/GetLabelsinFormat) endpoint to get the delivery label for your consignment.
 4. **Manifest the consignment** - Use the [Manifest Consignments from Query](https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery) endpoint to send consignment data to the selected carrier.
 
-This section gives more detail on each step of the flow and provides worked examples. 
+This section gives more detail on each step of the flow and provides worked examples.
 
 ---
 
