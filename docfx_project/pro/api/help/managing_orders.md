@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-managing-orders
+title: Managing Orders
+tags: orders,pro,api,consignments
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 02/06/2020
+---
 # Managing Orders
 
 SortedPRO's Orders function enables you to process deliveries that would ship from multiple fulfilment centres or warehouses. This section explains how to create order objects, how to create consignments from orders, and how to manage existing orders.
@@ -40,12 +47,8 @@ In this example, you would need to run **Pack Order** twice - once for each cons
 * [Managing Existing Orders](/pro/api/help/managing_existing_orders.html) - Explains how to retrieve and update order details.
 * [Creating Consignments From Orders](/pro/api/help/packing_orders.html) - Explains how to use the **Pack Order** endpoint to split an order into shippable consignments.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > All of the URLs and examples given in this documentation relate to PRO's live production environment. To call APIs in the sandbox environment, substitute the `api.electioapp.com` portion of the API's base URL with `apisandbox.electioapp.com`. Don't forget to use your sandbox API key (as opposed to your production API key) when making the call.
 >
 > For more information on PRO's sandbox, see [Using the Sandbox Environment](/pro/api/help/introduction.html#using-the-sandbox-environment).
-
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>

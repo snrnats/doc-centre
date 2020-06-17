@@ -1,15 +1,9 @@
-<div class="tab">
-    <button class="staticTabButton">Pickup Options Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'pickupOptionsEndpoint')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Pickup Options Endpoint](#tab/pickup-options-endpoint)
 
-<div id="pickupOptionsEndpoint" class="staticTabContent" onclick="CopyToClipboard(this, 'pickupOptionsEndpoint')">
-
-   ```
-   POST https://api.electioapp.com/deliveryoptions/pickupoptions/
-   ```
-
-</div>    
+```json
+POST https://api.electioapp.com/deliveryoptions/pickupoptions/
+```
+---    
 
 In the context of PRO, a "pickup option" is a combination of a delivery promise (i.e. a delivery date and pickup location), and a carrier service that could meet that delivery promise for a consignment. The **[Pickup Options](https://docs.electioapp.com/#/api/PickupOptions)** endpoint takes the details of an as-yet uncreated consignment and returns available pickup options.
 
@@ -25,7 +19,7 @@ The **Pickup Options** endpoint returns a `{Locations}` array containing details
 
 Each `{Location}` object contains a `{DeliveryOptions}` array listing the delivery promises available to that location for the proposed consignment. 
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 > * For full reference information on the <strong>Pickup Options</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/PickupOptions">Pickup Options</a></strong> page of the API reference.
 > * For a user guide on pickup options, see the [Getting Pickup Options](/pro/api/help/getting_pickup_options.html) page.
 
@@ -33,12 +27,9 @@ Each `{Location}` object contains a `{DeliveryOptions}` array listing the delive
 
 The example shows a request to get no more than 10 pickup options for a fairly standard consignment, all within 1km of the recipient's location. 
 
-<div class="tab">
-    <button class="staticTabButton">Example Pickup Options Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'pickupOptionsRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Pickup Options Request](#tab/pickup-options-request)
 
-<div id="pickupOptionsRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'pickupOptionsRequest')">
+`POST https://api.electioapp.com/deliveryoptions/pickupoptions/`
 
 ```json
 {
@@ -197,14 +188,7 @@ The example shows a request to get no more than 10 pickup options for a fairly s
 }
 ```
 
-</div>  
-
-<div class="tab">
-    <button class="staticTabButton">Example Pickup Options Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'pickupOptionsResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="pickupOptionsResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'pickupOptionsResponse')">
+# [Pickup Options Response](#tab/pickup-options-response)
 
 ```json
 {
@@ -392,8 +376,7 @@ The example shows a request to get no more than 10 pickup options for a fairly s
     "NonGuaranteedLocation": null
 }
 ```
-
-</div>  
+---
 
 The API has returned one location that meets the requested criteria, and three options for delivery to that location. All three options use the same carrier service and have a delivery time window of 09:30 - 17:30, but are scheduled for different days. In practice, PRO is saying that the carrier can deliver to the pickup location during business hours on the 17th, 20th or 21st of May (as required by the customer).
 

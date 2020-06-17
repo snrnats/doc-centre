@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-flows
+title: PRO Call Flows
+tags: consignments,pro,api,flows
+contributors: andy.walton@sorted.com
+created: 28/02/2020
+---
 # PRO Call Flows
 
 Ready to get started with SortedPRO? This guide explains some common use cases for PRO's APIs, helping you to see what PRO can do for your business.
@@ -24,9 +31,9 @@ We will cover:
 
    The **[Quotes](./flows/quotes_flow.md)** flow is used to obtain a full list of potential delivery services for a consignment. It is often used to validate a consignment's detail or to enable a customer service operator to get manual quotes for a customer.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 > This guide is intended as a primer for PRO. If you're already familiar with the basics of PRO, or you just need reference info for PRO's APIs, see the [API Reference](https://docs.electioapp.com/#/api).
 >
->All of the URLs and examples given in this documentation relate to PRO's live production environment. To call APIs in the sandbox environment, substitute the `api.electioapp.com` portion of the API's base URL with `apisandbox.electioapp.com`. Don't forget to use your sandbox API key (as opposed to your production API key) when making the call.
+> All of the URLs and examples given in this documentation relate to PRO's live production environment. To call APIs in the sandbox environment, substitute the `api.electioapp.com` portion of the API's base URL with `apisandbox.electioapp.com`. Don't forget to use your sandbox API key (as opposed to your production API key) when making the call.
 >
 > For more information on PRO's sandbox, see [Using the Sandbox Environment](/pro/api/help/introduction.html#using-the-sandbox-environment).

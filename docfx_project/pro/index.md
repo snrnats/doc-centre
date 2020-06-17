@@ -28,25 +28,25 @@
 </div>
 <div class="landing-container">
     <h2>Get Started</h2>
-    <div class="bg-light globalSpacer1">
+    <div class="global-spacer">
         <div class="landing-button-container">
-            <div class="styles-module--dualQuad--OrVsV">
-                <a href="/pro/api/help/flows/classic_flow.html" class="styles-module--messageBlock--7l7wn">
+            <div class="dual-quad">
+                <a href="/pro/api/help/flows/classic_flow.html" class="message-block">
                     <i class="fas fa-shopping-basket"></i>
                     <h4>Build a simple checkout flow</h4>
                     <p class="link-pink" href="/pro/api/help/flows/classic_flow.html">Learn more</p>
                 </a>
-                <a href="/pro/api/help/flows/consumer_options_flow.html" class="styles-module--messageBlock--7l7wn">
+                <a href="/pro/api/help/flows/consumer_options_flow.html" class="message-block">
                     <i class="fas fa-truck"></i>
                     <h4>Offer delivery slot options</h4>
                     <p class="link-pink" href="/pro/api/help/flows/consumer_options_flow.html">Learn more</p>
                 </a>
-                <a href="/pro/api/help/flows/order_flex_flow.html" class="styles-module--messageBlock--7l7wn">
+                <a href="/pro/api/help/flows/order_flex_flow.html" class="message-block">
                     <i class="fas fa-boxes"></i>
                     <h4>Ship from multiple fulfilment centres</h4>
                     <p class="link-pink" href="/pro/api/help/flows/order_flex_flow.html">Learn more</p>
                 </a>
-                <a href="/pro/api/help/flows/quotes_flow.html" class="styles-module--messageBlock--7l7wn">
+                <a href="/pro/api/help/flows/quotes_flow.html" class="message-block">
                     <i class="fas fa-credit-card"></i>
                     <h4>Get and use carrier delivery quotes</h4>
                     <p class="link-pink" href="/pro/api/help/flows/quotes_flow.html">Learn more</p>
