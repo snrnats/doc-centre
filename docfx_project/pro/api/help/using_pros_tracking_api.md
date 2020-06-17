@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-using-pros-tracking-api
+title: Using PRO's Tracking API
+tags: tracking,pro,api,consignments
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 29/05/2020
+---
 # Using PRO's Tracking API
 
 SortedPRO's Tracking API enables you to drive embedded delivery tracking from your own website, without the need to pass customers off to a carrier portal. This page explains how to use the Tracking API to get updates on a consignment's progress.
@@ -12,7 +19,7 @@ PRO's Tracking API has three endpoints:
 * **Get Events Per Package** - Returns flattened tracking event information for a specific consignment, broken down by package. Does not take multiple legs into account.
 * **Post Tracking Events** - Enables carriers to post events directly to PRO.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > The **Post Tracking Events** endpoint is intended for carrier use only, and is outside the scope of this documentation.
 
@@ -30,7 +37,7 @@ PRO integrates with many carriers, and each carrier provides tracking events in 
 
 A consignment's current `ConsignmentState` is derived from these tracking events. For example, a "Delivered" tracking event will change the state of the relevant consignment to _Delivered_.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > For a full list and description of available consignment states, see the [Consignment States](/pro/api/help/consignment_states.html) page.
 
@@ -40,7 +47,7 @@ To call **Get Tracking Events**, send a `GET` request to `https://api.electioapp
 
 PRO responds with a `TrackedPackages` array, containing details of all the tracked packages in the consignment. Each package contains an array of `Legs`, of which each contains tracking `Events` for that particular leg of the package's journey.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > For full reference information on the **Get Tracking Events** API, see the [API reference](https://docs.electioapp.com/#/api/GetTrackingEvents).
 
@@ -48,12 +55,9 @@ PRO responds with a `TrackedPackages` array, containing details of all the track
 
 This example shows a simplified **Get Tracking Events** response for consignment _EC-000-002-4DF_. PRO has returned details of one journey leg with a single sample tracking event.
 
-<div class="tab">
-    <button class="staticTabButton">Example Get Tracking Events Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'trackEventResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Get Tracking Events Response](#tab/get-tracking-events-response)
 
-<div id="trackEventResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'trackEventResponse')">
+`GET https://api.electioapp.com/tracking/EC-000-002-4DF`
 
 ```json
 {
@@ -79,8 +83,7 @@ This example shows a simplified **Get Tracking Events** response for consignment
   ]
 }
 ```
-
-</div>
+---
 
 ## Getting Single Leg Tracking Events
 
@@ -88,7 +91,7 @@ To call **Get Events Per Package**, send a `GET` request to `https://api.electio
 
 Like the **Get Tracking Events** endpoint, **Get Events Per Package** returns all tracking events for the specified consignment. However, unlike **Get Tracking Events**, **Get Events Per Package** does not break the events returned down into legs. Instead, it returns a list of `TrackedPackages`, of which each contains a package reference and a list of relevant `Events`.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > For full reference information on the **Get Events Per Package** API, see the [API reference](https://docs.electioapp.com/#/api/GetEventsPerPackage).
 
@@ -96,12 +99,9 @@ Like the **Get Tracking Events** endpoint, **Get Events Per Package** returns al
 
 This example shows a simplified **Get Events Per Package** response for consignment _EC-000-002-4DF_. PRO has returned details of a single sample tracking event.
 
-<div class="tab">
-    <button class="staticTabButton">Example Get Tracking Events Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'trackEventResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Get Events Per Package Response](#tab/get-events-per-package-response)
 
-<div id="trackEventResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'trackEventResponse')">
+`GET https://api.electioapp.com/tracking/flattened/EC-000-002-4DF`
 
 ```json
 {
@@ -123,15 +123,10 @@ This example shows a simplified **Get Events Per Package** response for consignm
   ]
 }
 ```
-
-</div>
+---
 
 ## Next Steps
 
 * Learn how to get customs docs and invoices for international shipments at the [Getting Customs Docs and Invoices](/pro/api/help/getting_customs_docs_and_invoices.html) page.
 * View the list of available consignment states at the [Consignment States](/pro/api/help/consignment_states.html) page.
 * Learn how to manifest consignments at the [Manifesting Consignments](/pro/api/help/manifesting_consignments.html) page.
-
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>

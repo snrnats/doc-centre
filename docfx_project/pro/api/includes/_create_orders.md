@@ -1,21 +1,15 @@
-<div class="tab">
-    <button class="staticTabButton">Create Order Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'createOrderEndpoint')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Create Order Endpoint](#tab/create-order-endpoint)
 
-<div id="createOrderEndpoint" class="staticTabContent" onclick="CopyToClipboard(this, 'createOrderEndpoint')">
-
-   ```
-   POST https://api.electioapp.com/orders
-   ```
-
-</div>    
+```json
+POST https://api.electioapp.com/orders
+```
+---  
 
 The **[Create Order](https://docs.electioapp.com/#/api/CreateOrder)** endpoint enables you to record details of a customer's order in SortedPRO. 
 
 As a minimum, the **Create Order** endpoint requires you to send package and item details, origin address, and destination address data.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 > * For full reference information on the <strong>Create Order</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/CreateOrder">Create Order</a></strong> page of the API reference.
 > * For a user guide on creating orders, see the [Creating New Orders](/pro/api/help/creating_new_orders.html) page.
 
@@ -23,12 +17,9 @@ As a minimum, the **Create Order** endpoint requires you to send package and ite
 
 The example shows the creation of a fairly standard order. In this case, we have an outbound order comprising a single package with a single item inside it.
 
-<div class="tab">
-    <button class="staticTabButton">Example Create Order Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'createOrderRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Create Order Request](#tab/create-order-request)
 
-<div id="createOrderRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'createOrderRequest')">
+`POST https://api.electioapp.com/orders`
 
 ```json
 {
@@ -199,14 +190,7 @@ The example shows the creation of a fairly standard order. In this case, we have
 }
 ```
 
-</div>   
-
-<div class="tab">
-    <button class="staticTabButton">Example Create Order Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'createOrderResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="createOrderResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'createOrderResponse')">
+# [Create Order Response](#tab/create-order-response)
 
 ```json
 [
@@ -216,7 +200,6 @@ The example shows the creation of a fairly standard order. In this case, we have
   }
 ]
 ```
-
-</div>  
+---
 
 After receiving the request, PRO returns an `{orderReference}` of _EO-000-002-0TS_. You should store the `{orderReference}`, as it will be required later when we pack the order into shippable consignments.

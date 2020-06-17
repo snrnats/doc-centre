@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-flows-order-flex-flow
+title: Order Flex Flow
+tags: pro,api,consignments,flows,orders
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 15/04/2020
+---
 # Order Flex Flow
 
 <p>
@@ -69,7 +76,7 @@ You'll need to allocate all of the consignments packed from your order. Bear in 
 
 [!include[_get_labels_in_format](../../includes/_get_labels_in_format.md)]
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 > You'll need to make one <strong>Get Labels</strong> call per consignment on the order.
 
 ---
@@ -84,11 +91,9 @@ You'll need to allocate all of the consignments packed from your order. Bear in 
 
 [!include[_manifest_consignments_from_query](../../includes/_manifest_consignments_from_query.md)]
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 > You'll need to manifest all the consignments on the order.
 
 ### Next Steps
 
 Finished! The next section explains a similar process, whereby the order is generated from delivery options that the customer selects rather than created up front.
-
-[!include[scripts](../../includes/scripts.md)]

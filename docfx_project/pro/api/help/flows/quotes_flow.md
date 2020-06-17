@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-flows-quotes-flow
+title: Quotes Flow
+tags: pro,api,consignments,flows,quotes
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 15/04/2020
+---
 # Quotes Flow
 
 <p>
@@ -59,5 +66,3 @@ This section gives more detail on each step of the flow and provides worked exam
 ## Step 5: Manifesting a Consignment
 
 [!include[_manifest_consignments_from_query](../../includes/_manifest_consignments_from_query.md)]
-
-[!include[scripts](../../includes/scripts.md)]

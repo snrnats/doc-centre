@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-getting-consignment-data
+title: Getting Consignment Data
+tags: consignments,pro,api
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 08/06/2020
+---
 # Getting Consignment Data
 
 PRO offers several endpoints that return consignment data. This page explains how to fetch data on an individual consignment, and how to search for consignments that meet a particular set of criteria.
@@ -16,20 +23,21 @@ Perhaps the most straightforward way of getting PRO consignment data is to use t
 
 To call **Get Consignment**, send a `GET` request to `https://api.electioapp.com/consignments/{consignmentReference}`.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > For full reference information on the **Get Consignment** endpoint, see the <a href="https://docs.electioapp.com/#/api/GetConsignment">API reference</a>.
 
-### Example Get Consignment Response
+### Example Get Consignment Call
 
 The example below shows a simple **Get Consignment** request for an unallocated consignment containing just package and address details. For an example of a full **Get Consignment** request, see the [Get Consignment](https://docs.electioapp.com/#/api/GetConsignment) API reference.
 
-<div class="tab">
-    <button class="staticTabButton">Get Consignment Response Example</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'getConResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Get Consignment Request](#tab/get-consignment-request)
 
-<div id="getConResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'getConResponse')">
+```json
+GET https://api.electioapp.com/consignments/EC-000-05C-ZB4
+```
+
+# [Get Consignment Response](#tab/get-consignment-response)
 
 ```json
 {
@@ -175,7 +183,7 @@ The example below shows a simple **Get Consignment** request for an unallocated 
     ]
 }
 ```
-</div>
+---
 
 ### Checking a Consignment's Status
 
@@ -183,12 +191,13 @@ If you only need to check a consignment's status, you could use the **Get Consig
 
 To make a **Get Consignment Status** request, send a `GET` request to `https://api.electioapp.com/consignments/{consignmentReference}/status`.
 
-<div class="tab">
-    <button class="staticTabButton">Get Consignment Status Response Example</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'getConStatResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Get Consignment Status Request](#tab/get-consignment-status-request)
 
-<div id="getConStatResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'getConStatResponse')">
+```json
+GET https://api.electioapp.com/consignments/EC-000-087-01A/status
+```
+
+# [Get Consignment Status Response](#tab/get-consignment-status-response)
 
 ```json
 
@@ -203,7 +212,7 @@ To make a **Get Consignment Status** request, send a `GET` request to `https://a
 }
 
 ```
-</div>
+---
 
 ## Searching For Consignments
 
@@ -215,7 +224,7 @@ The two search endpoints differ in their responses: **Get Consignments Reference
 
 To call **Get Consignments References**, send a `GET` request to `https://api.electioapp.com/consignments/getConsignmentReferences?{property}={value}`, where `{property}` is the name of the consignment property you want to search on and `{value}` is its associated value. You can separate additional properties using the `&` operator. PRO then returns the `consignmentReferences` of any consignments that meet all the criteria that you specify.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > For a full list of search properties accepted by the **Get Consignments References** endpoint, see the <a href="https://docs.electioapp.com/#/api/GetConsignmentsReferences">API reference</a>
 
@@ -223,26 +232,13 @@ To call **Get Consignments References**, send a `GET` request to `https://api.el
 
 The example below shows a request for all inbound consignments in an _Allocated_ state. PRO has returned two consignments.
 
-<div class="tab">
-    <button class="staticTabButton">Get Consignments References Request Example</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'getConRefsRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Get Consignments References Request](#tab/get-consignments-status-request)
 
-<div id="getConRefsRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'getConRefsRequest')">
-
-```
-
+```json
 https://api.electioapp.com/consignments/getConsignmentReferences?State=Allocated&Direction=Inbound
-
 ```
-</div>
 
-<div class="tab">
-    <button class="staticTabButton">Get Consignments References Response Example</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'getConRefsResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="getConRefsResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'getConRefsResponse')">
+# [Get Consignments References Response](#tab/get-consignments-status-response)
 
 ```json
 
@@ -252,7 +248,7 @@ https://api.electioapp.com/consignments/getConsignmentReferences?State=Allocated
 ]
 
 ```
-</div>
+---
 
 ### Using Search Consignments
 
@@ -266,7 +262,7 @@ To call **Search Consignments**, send a `GET` request to `https://api.electioapp
 As with the **Get Consignments References** API, you can add additional search properties and values, as long as each property/value pair is separated by an `&` operator.
 
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > The `{take}` and `{skip}` values can be used to drive paging functions in systems that present a list of consignments to the user. For example, suppose that you have 100 active consignments in an _Allocated_  state. A call to `GET https://api.electioapp.com/consignments/100/0?&State=Allocated` would return all of those consignments, as a `{take}` value of _100_ and a `{skip}` value of _0_ means that the API will return up to 100 results without skipping over any.
 >
@@ -283,7 +279,7 @@ The **Search Consignments** endpoint returns a summary of each consignment that 
 * Creation and shipping dates
 * The consignment's value and weight
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > For full reference information on the **Search Consignments** endpoint, see the <a href="https://docs.electioapp.com/#/api/SearchConsignments">API reference</a>. 
 
@@ -291,26 +287,13 @@ The **Search Consignments** endpoint returns a summary of each consignment that 
 
 The example below shows a request for all inbound consignments in an _Allocated_ state, with a potential maximum of 100 results returned and none skipped. PRO has returned a summary of two consignments.
 
-<div class="tab">
-    <button class="staticTabButton">Search Consignments Request Example</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'searchConsRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Search Consignments Request](#tab/search-consignments-request)
 
-<div id="searchConsRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'searchConsRequest')">
-
-```
-
+```json
 https://apis.electioapp.com/consignments/100/0/?State=Allocated&Direction=Inbound
-
 ```
-</div>
 
-<div class="tab">
-    <button class="staticTabButton">Search Consignments Response Example</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'searchConsResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="searchConsResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'searchConsResponse')">
+# [Search Consignments Response](#tab/search-consignments-response)
 
 ```json
 
@@ -427,14 +410,10 @@ https://apis.electioapp.com/consignments/100/0/?State=Allocated&Direction=Inboun
 }
 
 ```
-</div>
+---
 
 ## Next Steps
 
 * Learn how to allocate consignments at the [Allocating Consignments to Carriers](/pro/api/help/allocating_consignments.html) page.
 * Learn how to get and print delivery labels at the [Getting Labels](/pro/api/help/getting_labels.html) page.
 * Learn how to add consignments to a carrier manifest at the [Manifesting Consignments](/pro/api/help/manifesting_consignments.html) page.
-
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>

@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-metadata
+title: Metadata
+tags: metadata,pro,api,consignments
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 29/05/2020
+---
 # Metadata
 
 PRO's Consignments object (and its related objects - Delivery Options, Pickup Options and Orders) includes a `MetaData` array. This array can be used to record additional data about the consignment in custom fields. This page explains how to do so.
@@ -22,12 +29,7 @@ Each metadata object can contain multiple data items, but can only contain one d
 
 The example shows a `MetaData` array that is being used to store a consignment's picking data. The `StringValue` property is being used to record the name of the picker, and the `DateTimeValue` is being used to record the date and time that the consignment was picked.
 
-<div class="tab">
-    <button class="staticTabButton">Example MetaData array</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'metadataExample')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="metadataExample" class="staticTabContent" onclick="CopyToClipboard(this, 'metadataExample')">
+# [Metadata Property](#tab/metadata-property)
 
 ```json
 "MetaData": [
@@ -38,9 +40,4 @@ The example shows a `MetaData` array that is being used to store a consignment's
    }
 ]
 ```
-
-</div>
-
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>
+---
