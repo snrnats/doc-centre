@@ -32,7 +32,9 @@ The example shows a request to select a delivery option that has a `{deliveryOpt
 
 # [Select Option Request](#tab/select-option-request)
 
-`POST https://api.electioapp.com/deliveryoptions/select/EDO-000-6DX-6XP`
+```json
+POST https://api.electioapp.com/deliveryoptions/select/EDO-000-6DX-6XP
+```
 
 # [Select Option Response](#tab/select-option-response)
 

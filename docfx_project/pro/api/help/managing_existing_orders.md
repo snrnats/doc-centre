@@ -26,7 +26,9 @@ The example below shows a **Get Order** request for a fairly simple order with a
 
 # [Get Order Request](#tab/get-order-request)
 
-`GET https://api.electioapp.com/orders/EO-000-002-K0R`
+```json
+GET https://api.electioapp.com/orders/EO-000-002-K0R
+```
 
 # [Get Order Response](#tab/get-order-response)
 
@@ -224,7 +226,9 @@ The example shows an **Update Order** request to update delivery and shipping da
 
 # [Update Order Request](#tab/update-order-request)
 
-`PUT https://api.electioapp.com/orders/EO-000-002-K0R`
+```json
+PUT https://api.electioapp.com/orders/EO-000-002-K0R
+```
 
 # [Update Order Response](#tab/update-order-response)
 

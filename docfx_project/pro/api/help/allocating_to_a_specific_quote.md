@@ -39,8 +39,9 @@ The example shows a request to allocate a consignment with a `{consignmentRefere
 
 # [Allocate With Quote Request](#tab/allocate-with-quote-request)
 
-`PUT https://api.electioapp.com/allocation/EC-000-05B-N40/allocatewithquote/112236d5-4460-492f-a6bd-aa3f00f62dfb`
-
+```json
+PUT https://api.electioapp.com/allocation/EC-000-05B-N40/allocatewithquote/112236d5-4460-492f-a6bd-aa3f00f62dfb
+```
 --- 
 
 ## Next Steps

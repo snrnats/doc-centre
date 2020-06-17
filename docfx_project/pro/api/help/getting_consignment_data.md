@@ -33,7 +33,9 @@ The example below shows a simple **Get Consignment** request for an unallocated 
 
 # [Get Consignment Request](#tab/get-consignment-request)
 
-`GET https://api.electioapp.com/consignments/EC-000-05C-ZB4`
+```json
+GET https://api.electioapp.com/consignments/EC-000-05C-ZB4
+```
 
 # [Get Consignment Response](#tab/get-consignment-response)
 
@@ -191,7 +193,9 @@ To make a **Get Consignment Status** request, send a `GET` request to `https://a
 
 # [Get Consignment Status Request](#tab/get-consignment-status-request)
 
-`GET https://api.electioapp.com/consignments/EC-000-087-01A/status`
+```json
+GET https://api.electioapp.com/consignments/EC-000-087-01A/status
+```
 
 # [Get Consignment Status Response](#tab/get-consignment-status-response)
 
@@ -230,7 +234,9 @@ The example below shows a request for all inbound consignments in an _Allocated_
 
 # [Get Consignments References Request](#tab/get-consignments-status-request)
 
-`https://api.electioapp.com/consignments/getConsignmentReferences?State=Allocated&Direction=Inbound`
+```json
+https://api.electioapp.com/consignments/getConsignmentReferences?State=Allocated&Direction=Inbound
+```
 
 # [Get Consignments References Response](#tab/get-consignments-status-response)
 
@@ -283,7 +289,9 @@ The example below shows a request for all inbound consignments in an _Allocated_
 
 # [Search Consignments Request](#tab/search-consignments-request)
 
-`https://apis.electioapp.com/consignments/100/0/?State=Allocated&Direction=Inbound`
+```json
+https://apis.electioapp.com/consignments/100/0/?State=Allocated&Direction=Inbound
+```
 
 # [Search Consignments Response](#tab/search-consignments-response)
 

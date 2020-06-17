@@ -40,6 +40,8 @@ This examples shows a request to deallocate three consignments.
 
 # [Deallocate Consignments Request](#tab/deallocate-consignments-request)
 
+`PUT https://api.electioapp.com/consignments/deallocatelist`
+
 ```json
 [
     "EC-000-05D-EP2",

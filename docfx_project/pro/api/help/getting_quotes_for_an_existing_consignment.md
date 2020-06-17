@@ -41,7 +41,9 @@ The example shows a **Get Quotes by Consignment Reference** request and its acco
 
 # [Request](#tab/get-quotes-by-consignment-reference-request)
 
-`GET https://api.electioapp.com/quotes/consignment/EC-000-05B-1CM`
+```json
+GET https://api.electioapp.com/quotes/consignment/EC-000-05B-1CM
+```
 
 # [Response](#tab/get-quotes-by-consignment-reference-response)
 

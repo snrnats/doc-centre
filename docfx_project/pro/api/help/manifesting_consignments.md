@@ -298,7 +298,9 @@ This example shows a request for details of all manifests associated with shippi
 
 # [Get Customer Manifests Request](#tab/get-customer-manifests-request)
 
-`GET https://api.electioapp.com/consignments/customer/manifests?shippingLocationReference=EDC5-SL1`
+```json
+GET https://api.electioapp.com/consignments/customer/manifests?shippingLocationReference=EDC5-SL1
+```
 
 # [Get Customer Manifests Response](#tab/get-customer-manifests-response)
 

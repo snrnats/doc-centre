@@ -49,7 +49,6 @@ The example shows a request to allocate three consignments via default rules.
   ]
 }
 ```
-
 ---
 
 ## Allocating a Single Consignment
@@ -64,8 +63,9 @@ The example shows a request to allocate a consignment with a `{consignmentRefere
 
 # [Allocate Consignment Request](#tab/allocate-consignment-request)
 
-`PUT https://api.electioapp.com/allocation/EC-000-05A-Z6S/allocatewithcheapestquote`
-
+```json
+PUT https://api.electioapp.com/allocation/EC-000-05A-Z6S/allocatewithcheapestquote
+```
 ---
 
 > [!NOTE]

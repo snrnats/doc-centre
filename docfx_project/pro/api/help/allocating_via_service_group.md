@@ -65,8 +65,9 @@ The example shows a request to allocate a consignment with a `{consignmentRefere
 
 # [Allocate Consignment With Service Group Request](#tab/allocate-consignment-with-service-group-request)
 
-`PUT https://api.electioapp.com/allocation/EC-000-05B-MMA/allocatewithservicegroup/valuableGoods`
-
+```json
+PUT https://api.electioapp.com/allocation/EC-000-05B-MMA/allocatewithservicegroup/valuableGoods
+```
 ---
 
 ## Next Steps

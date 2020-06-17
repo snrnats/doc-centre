@@ -262,7 +262,9 @@ This example shows a standard delivery option as returned by the **Get Existing 
 
 # [Get Existing Delivery Options Request](#tab/get-existing-delivery-options-request)
 
-`GET https://api.electioapp.com/deliveryoptions/details/EDO-000-79G-V89`
+```json
+GET https://api.electioapp.com/deliveryoptions/details/EDO-000-79G-V89
+```
 
 # [Get Existing Delivery Options Response](#tab/get-existing-delivery-options-response)
 
