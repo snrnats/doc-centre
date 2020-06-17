@@ -1,7 +1,7 @@
 # [Allocate Consignment with Service Group Endpoint](#tab/allocate-consignment-with-service-group-endpoint)
 
 ```json
-https://api.electioapp.com/allocation/{consignmentReference}/allocatewithservicegroup/{mpdCarrierServiceGroupReference}`
+https://api.electioapp.com/allocation/{consignmentReference}/allocatewithservicegroup/{mpdCarrierServiceGroupReference}
 ```
 ---
 
