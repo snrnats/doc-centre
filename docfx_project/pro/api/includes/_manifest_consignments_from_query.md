@@ -19,6 +19,8 @@ The example shows a request to manifest all consignments that are allocated to C
 
 # [Manifest Consignments From Query Request](#tab/manifest-consignments-from-query-request)
 
+`PUT https://api.electioapp.com/consignments/manifestFromQuery`
+
 ```json
 {
   "ShippingLocationReferences": [

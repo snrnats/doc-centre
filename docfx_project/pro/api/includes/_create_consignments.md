@@ -23,6 +23,8 @@ After receiving the request, PRO returns a `{consignmentReference}` of _EC-000-0
 
 # [Create Consignments Request](#tab/create-consignments-request)
 
+`POST https://api.electioapp.com/consignments`
+
 ```json
 {
   "ConsignmentReferenceProvidedByCustomer": "MYCONS-098998",

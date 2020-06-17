@@ -29,6 +29,8 @@ The example shows a request to get no more than 10 pickup options for a fairly s
 
 # [Pickup Options Request](#tab/pickup-options-request)
 
+`POST https://api.electioapp.com/deliveryoptions/pickupoptions/`
+
 ```json
 {
   "Distance": {

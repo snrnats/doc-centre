@@ -17,13 +17,13 @@ Once you've created a consignment, you'll need to use the **[Get Quotes by Consi
 
 The example shows a **Get Quotes by Consignment Reference** request and its accompanying response. In this case, SortedPRO has returned two quotes for the service. The next step in the process is to select one of those quotes.
 
-# [Get Quotes by Consignment Reference Response](#tab/get-quotes-by-consignment-reference-response)
+# [Get Quotes by Consignment Reference Request](#tab/get-quotes-by-consignment-reference-request)
 
 ```json
 https://api.electioapp.com/quotes/consignment/EC-000-05B-1CM
 ```
 
-# [Get Quotes by Consignment Reference Request](#tab/get-quotes-by-consignment-reference-request)
+# [Get Quotes by Consignment Reference Response](#tab/get-quotes-by-consignment-reference-response)
 
 ```json
 {

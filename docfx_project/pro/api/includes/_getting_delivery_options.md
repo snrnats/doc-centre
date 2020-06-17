@@ -25,6 +25,8 @@ The example shows a request to get delivery options for a fairly standard consig
 
 # [Delivery Options Request](#tab/delivery-options-request)
 
+`POST https://api.electioapp.com/deliveryoptions`
+
 ```json
 {  
   "ConsignmentReferenceProvidedByCustomer": "Your Reference",

@@ -19,6 +19,8 @@ The example shows the creation of a fairly standard order. In this case, we have
 
 # [Create Order Request](#tab/create-order-request)
 
+`POST https://api.electioapp.com/orders`
+
 ```json
 {
   "OrderReferenceProvidedByCustomer": "MY_ORDER_REF_001",

@@ -21,6 +21,8 @@ The example shows a **Pack Order** request to create a consignment with one pack
 
 # [Pack Order Request](#tab/pack-order-request)
 
+`POST https://api.electioapp.com/orders/EO-000-002-0TT/pack`
+
 ```json
 {
   "OrderReference": "EO-000-002-0TT",
