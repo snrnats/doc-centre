@@ -5,9 +5,10 @@ PUT https://api.electioapp.com/allocation/allocate
 PUT https://api.electioapp.com/allocation/{consignmentReference}/allocatewithservicegroup/{mpdCarrierServiceGroupReference}
 PUT https://api.electioapp.com/allocation/allocatewithcarrierservice
 ```
+
 ---
 
-Once you've created a consignment, it must be allocated to a carrier service. In the context of SortedPRO, <strong>allocation</strong> is the process of selecting the carrier service that will deliver the packages that make up the consignment. 
+Once you've created a consignment, it must be allocated to a carrier service. In the context of SortedPRO, **allocation** is the process of selecting the carrier service that will deliver the packages that make up the consignment.
 
 PRO allocates all packages in a consignment together, as carriers expect that all packages in a consignment will ship on the same service.
 
@@ -25,7 +26,7 @@ This page explains the following endpoints:
 
 Once allocated, the consignment's status is updated to _Allocated_, enabling you to retrieve its package labels and (where applicable) customs documentation.
 
-This section of the site explains the circumstances in which you might choose to use each allocation endpoint, and gives worked examples. 
+This section of the site explains the circumstances in which you might choose to use each allocation endpoint, and gives worked examples.
 
 > [!NOTE]
 >
@@ -33,12 +34,12 @@ This section of the site explains the circumstances in which you might choose to
 
 ### The Allocation Summary Response 
 
-All allocation endpoints return an Allocation Summary, either singularly or (where multiple consignments have been allocated at once) in an array. The Allocation Summary contains links to the consignment resource that was allocated, a summary of the carrier service that the consignment was allocated to, a link to the relevant package labels, and a `ConsignmentLegs` array indicating how many legs the delivery will need. 
+All allocation endpoints return an Allocation Summary, either singularly or (where multiple consignments have been allocated at once) in an array. The Allocation Summary contains links to the consignment resource that was allocated, a summary of the carrier service that the consignment was allocated to, a link to the relevant package labels, and a `ConsignmentLegs` array indicating how many legs the delivery will need.
 
 In the example, a consignment with a `{consignmentReference}` of _EC-000-05B-MMA_ has been allocated to a (dummy) carrier service called _Carrier X Next Day Super_.
 
 > [!TIP]
->  Allocation tags enable you to filter the list of available carrier services on a per-consignment basis, no matter which allocation endpoint you use in your integration. For more information on using allocation tags, see the <strong><a href="/pro/api/help/tags.html">Tags</a></strong> page.
+> Allocation tags enable you to filter the list of available carrier services on a per-consignment basis, no matter which allocation endpoint you use in your integration. For more information on using allocation tags, see the **[Tags](/pro/api/help/tags.html)** page.
 
 # [Allocation Summary Response](#tab/allocation-summary-response)
 
@@ -75,4 +76,5 @@ In the example, a consignment with a `{consignmentReference}` of _EC-000-05B-MMA
     }
 ]
 ```
+
 ---

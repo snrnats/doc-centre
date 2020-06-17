@@ -3,16 +3,18 @@
 ```json
 POST https://api.electioapp.com/consignments
 ```
+
 ---
 
-The first step toward manifesting a consignment is to create that consignment in SortedPRO. 
+The first step toward manifesting a consignment is to create that consignment in SortedPRO.
 
 Consignments are created using the **[Create Consignment](https://docs.electioapp.com/#/api/CreateConsignment)** endpoint, which takes information about new consignments, adds them to the database, and returns a link to the newly-created consignment, including its `{consignmentReference}`. A newly created consignment has a `{consignmentState}` of _Unallocated_.
 
-As a minimum, the **Create Consignments** endpoint requires you to send package weights and dimensions, origin address, and destination address data. 
+As a minimum, the **Create Consignments** endpoint requires you to send package weights and dimensions, origin address, and destination address data.
 
 > [!NOTE]
-> * For full reference information on the <strong>Create Consignment</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/CreateConsignment">Create Consignment</a></strong> page of the API reference.
+>
+> * For full reference information on the **Create Consignment** endpoint, see the **[Create Consignment](https://docs.electioapp.com/#/api/CreateConsignment)** page of the API reference.
 > * For a user guide explaining the **Create Consignment** endpoint, see the [Creating New Consignments](/pro/api/help/creating_new_consignments.html) page.
 
 ###  Create Consignments Example
@@ -195,4 +197,5 @@ After receiving the request, PRO returns a `{consignmentReference}` of _EC-000-0
   }
 ]
 ```
+
 ---

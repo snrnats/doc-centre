@@ -3,15 +3,17 @@
 ```json
 PUT https://api.electioapp.com/consignments/manifestFromQuery
 ```
+
 ---
 
 Once you've created a consignment, allocated it to a carrier service and printed labels for it, you're ready to manifest it. To manifest a consignment, use the **[Manifest Consignments From Query](https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery)** endpoint. In the context of SortedPRO, the term "manifesting" refers to collating, formatting and transmitting the consignment data to carriers.
 
-The **Manifest Consignments From Query** endpoint enables you to use a query to select consignments to be manifested. Once PRO has added those consignments to a manifest and queued the data to be sent, the **Manifest Consignments From Query** endpoint returns a `Message` detailing how many consignments met the terms of the query, how many of those consignments were successfully queued, and how many could not be queued. 
+The **Manifest Consignments From Query** endpoint enables you to use a query to select consignments to be manifested. Once PRO has added those consignments to a manifest and queued the data to be sent, the **Manifest Consignments From Query** endpoint returns a `Message` detailing how many consignments met the terms of the query, how many of those consignments were successfully queued, and how many could not be queued.
 
 > [!NOTE]
-> * For full reference information on the <strong>Manifest Consignments From Query</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery">Manifest Consignments From Query</a></strong> page of the API Reference.
-> * For a user guide on manifesting consignments, see the [Manifesting Consignments](/pro/api/help/manifesting_consignments.html) page. 
+>
+> * For full reference information on the **Manifest Consignments From Query** endpoint, see the **[Manifest Consignments From Query](https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery)** page of the API Reference.
+> * For a user guide on manifesting consignments, see the [Manifesting Consignments](/pro/api/help/manifesting_consignments.html) page.
 
 ### Manifest Consignments From Query Example
 
@@ -35,6 +37,7 @@ The example shows a request to manifest all consignments that are allocated to C
   "LabelsPrinted": true
 }
 ```
+
 # [Manifest Consignments From Query Response](#tab/manifest-consignments-from-query-response)
 
 ```json
@@ -42,4 +45,5 @@ The example shows a request to manifest all consignments that are allocated to C
   "Message": "Query found 10 consignment(s). 10 successfully queued to manifest. 0 failed to be added to the queue"
 }
 ```
+
 ---

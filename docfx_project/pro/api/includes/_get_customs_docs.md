@@ -3,6 +3,7 @@
 ```json
 GET https://api.electioapp.com/consignments/docs/{consignmentReference}
 ```
+
 ---
 
 When shipping internationally, SortedPRO will automatically determine if customs documentation is necessary for a consignment, and generate documents where required. You can retrieve customs documentation via the **Get Customs Documents** endpoint.
@@ -10,7 +11,8 @@ When shipping internationally, SortedPRO will automatically determine if customs
 The **Get Customs Documents** endpoint takes a `{consignmentReference}` as a path parameter. If CN22/CN23 or commercial invoice documents exist for the specified consignment, then PRO returns these documents as a base64-encoded byte array that will decode to a PDF document.
 
 > [!NOTE]
-> * For full reference information on the <strong>Get Customs Documents</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/GetCustomsDocuments">Get Customs Documents</a></strong> page of the API reference.
+>
+> * For full reference information on the **Get Customs Documents** endpoint, see the **[Get Customs Documents](https://docs.electioapp.com/#/api/GetCustomsDocuments)** page of the API reference.
 > * For a user guide on retrieving customs documents and commercial invoices in PRO, see the [Getting Customs Docs and Invoices](/pro/api/help/getting_customs_docs_and_invoices.html) page.  
   
 ### Get Customs Documents Example
@@ -43,4 +45,5 @@ GET https://api.electioapp.com/consignments/docs/EC-000-05B-MMA
   ]
 }
 ```
+
 ---

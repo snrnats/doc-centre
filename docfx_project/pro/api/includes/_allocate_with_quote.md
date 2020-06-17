@@ -3,14 +3,16 @@
 ```json
 PUT https://api.electioapp.com/allocation/{consignmentReference}/allocatewithquote/{quoteReference}
 ```
---- 
+
+---
 
 To allocate an individual consignment based on a specific delivery quote from a carrier, use the **[Allocate With Quote](https://docs.electioapp.com/#/api/AllocateWithQuote)** endpoint.
 
 The **Allocate With Quote** endpoint takes the `{consignmentReference}` of the consignment you want to allocate and the `{quoteReference}` of a particular quote. Once the request is received PRO attempts to allocate the consignment to the carrier service specified in the quote, and returns an Allocation Summary.
 
 > [!NOTE]
-> * For full reference information on the <strong>Allocate With Quote</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/AllocateWithQuote">Allocate With Quote</a></strong> page of the API reference.
+>
+> * For full reference information on the **Allocate With Quote** endpoint, see the **[Allocate With Quote](https://docs.electioapp.com/#/api/AllocateWithQuote)** page of the API reference.
 > * For a user guide on allocating to specific delivery quotes, see the [Allocating to a Specific Quote](/pro/api/help/allocating_to_a_specific_quote.html) page.
 
 ### Allocate With Quote Example
@@ -58,4 +60,5 @@ PUT https://api.electioapp.com/allocation/EC-000-05B-N40/allocatewithquote/11223
     }
 ]
 ```
+
 ---

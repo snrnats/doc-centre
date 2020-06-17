@@ -3,9 +3,10 @@
 ```json
 POST https://api.electioapp.com/deliveryoptions/select/{deliveryOptionReference}
 ```
+
 ---
 
-Once the customer has selected an available option, you'll need to record their choice in SortedPRO via the **[Select Option](https://docs.electioapp.com/#/api/SelectOption)** endpoint. 
+Once the customer has selected an available option, you'll need to record their choice in SortedPRO via the **[Select Option](https://docs.electioapp.com/#/api/SelectOption)** endpoint.
 
 PRO creates and allocates a consignment using the details supplied previously in the delivery options call, and returns: 
 
@@ -14,7 +15,8 @@ PRO creates and allocates a consignment using the details supplied previously in
 * A link to the relevant package labels
 
 > [!NOTE]
-> * For full reference information on the <strong>Select Option</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/SelectOption">Select Option</a></strong> page of the API reference.
+>
+> * For full reference information on the **Select Option** endpoint, see the **[Select Option](https://docs.electioapp.com/#/api/SelectOption)** page of the API reference.
 > * For a user guide on selecting options, see the [Selecting Options](/pro/api/help/selecting_options.html) page.
 
 ### Select Option Example
@@ -60,4 +62,5 @@ POST https://api.electioapp.com/deliveryoptions/select/EDO-000-6DX-6XP
     "CarrierServiceName": "Tracked 48 Signed For"
 }
 ```
---- 
+
+---

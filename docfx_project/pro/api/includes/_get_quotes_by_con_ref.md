@@ -3,14 +3,16 @@
 ```json
 GET https://api.electioapp.com/quotes/consignment/{consignmentReference}
 ```
+
 --- 
 
 Once you've created a consignment, you'll need to use the **[Get Quotes by Consignment Reference](https://docs.electioapp.com/#/api/GetQuotesbyConsignmentReference)** endpoint to get some delivery quotes for it.
 
-**Get Quotes by Consignment Reference** returns quotes based on the details of an existing consignment. Specifically, it takes a `{consignmentReference}` as a path parameter and returns an array of `{Quotes}` for that consignment, as well as a list of services that were unable to quote for the consignment. 
+**Get Quotes by Consignment Reference** returns quotes based on the details of an existing consignment. Specifically, it takes a `{consignmentReference}` as a path parameter and returns an array of `{Quotes}` for that consignment, as well as a list of services that were unable to quote for the consignment.
 
 > [!NOTE]
-> * For full reference information on the <strong>Get Quotes by Consignment Reference</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/GetQuotesbyConsignmentReference">Get Quotes by Consignment Reference</a></strong> page of the API reference.
+>
+> * For full reference information on the **Get Quotes by Consignment Reference** endpoint, see the **[Get Quotes by Consignment Reference](https://docs.electioapp.com/#/api/GetQuotesbyConsignmentReference)** page of the API reference.
 > * For a user guide on quotes in PRO, see the [Managing Quotes](/pro/api/help/managing_quotes.html) section.
 
 ### Get Quotes By Consignment Reference Example
@@ -306,4 +308,5 @@ https://api.electioapp.com/quotes/consignment/EC-000-05B-1CM
     ]
 }
 ```
+
 ---

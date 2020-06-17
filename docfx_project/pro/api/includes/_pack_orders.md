@@ -3,6 +3,7 @@
 ```json
 POST https://api.electioapp.com/orders/{orderReference}/pack
 ```
+
 ---
 
 Once your order is created, you'll need to use the **[Pack Order](https://docs.electioapp.com/#/api/PackOrder)** endpoint to create consignments from it. The **Pack Order** endpoint enables you to group those items on an order that share an origin and are to be shipped together, generating a shippable consignment for them. You will need to send a **Pack Order** request for each consignment that you want to create from the order.
@@ -12,6 +13,7 @@ To make a **Pack Order** request, send a GET request to `https://api.electioapp.
 Once SortedPRO has received a **Pack Order** request, it creates the consignment and returns the relevant `{consignmentReference}`.
 
 > [!NOTE]
+>
 > * For full reference information on the **Pack Order** endpoint, see the [Pack Order](https://docs.electioapp.com/#/api/PackOrder) page of the API reference.
 > * For a user guide on orders in PRO, see the [Managing Orders](/pro/api/help/managing_orders.html) section.
 
@@ -75,4 +77,5 @@ The example shows a **Pack Order** request to create a consignment with one pack
   ]
 }
 ```
+
 ---

@@ -3,11 +3,12 @@
 ```json
 POST https://api.electioapp.com/deliveryoptions
 ```
+
 ---
 
 In the context of SortedPRO, a "delivery option" is a combination of a delivery date, a start time and an end time. These details form a delivery promise for a consignment. PRO then recommends a carrier service that can meet the delivery promise, the delivery cost, and the required shipping date, completing the data for each delivery option.
 
-The **[Delivery Options](https://docs.electioapp.com/#/api/DeliveryOptions)** endpoint takes the details of the (as yet uncreated) consignment. As a minimum, PRO requires you to send package, origin address and destination address data in order to return delivery options. 
+The **[Delivery Options](https://docs.electioapp.com/#/api/DeliveryOptions)** endpoint takes the details of the (as yet uncreated) consignment. As a minimum, PRO requires you to send package, origin address and destination address data in order to return delivery options.
 
 The endpoint returns an array of `{DeliveryOptions}` objects. Each `{DeliveryOptions}` object contains details of a delivery option that can be used to take a consignment with the details you passed in the request. PRO always returns the cheapest carrier service for each delivery promise, unless using the cheapest service would conflict with existing business rules.
 
@@ -16,7 +17,8 @@ If you do not provide a `DeliveryDate` in the request, then PRO returns delivery
 The delivery options available for a given consignment can change over time. This is primarily due to differing carrier collection times at each shipping location.
 
 > [!NOTE]
-> * For full reference information on the <strong>Delivery Options</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/DeliveryOptions">Delivery Options</a></strong> page of the API reference.
+>
+> * For full reference information on the **Delivery Options** endpoint, see the **[Delivery Options](https://docs.electioapp.com/#/api/DeliveryOptions)** page of the API reference.
 > * For a user guide on PRO delivery options, see the [Using Delivery and Pickup Options](/pro/api/help/using_delivery_and_pickup_options.html) section.
 
 ### Get Delivery Options Example
@@ -263,11 +265,12 @@ The example shows a request to get delivery options for a fairly standard consig
             "ServiceDirection": "Inbound, Outbound"
         }
     ]
-}    
+}
 ```
+
 ---
 
-Both of these options have a time window starting at 00:00 and ending at 23:59. In practice, the carrier is offering to make the delivery at some point on either the 19th or 20th of June (as selected by the customer), but isn't offering a more specific timeslot on that service. 
+Both of these options have a time window starting at 00:00 and ending at 23:59. In practice, the carrier is offering to make the delivery at some point on either the 19th or 20th of June (as selected by the customer), but isn't offering a more specific timeslot on that service.
 
 Note the `{Reference}` for each delivery option. When the customer selects their preferred delivery option you will need to pass the relevant `{Reference}` back to PRO via the **Select Option** endpoint.
 
