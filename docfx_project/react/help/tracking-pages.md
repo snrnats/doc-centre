@@ -20,11 +20,12 @@ You can create as many tracking page layouts as you need. For example, a shoe re
 
 ## Creating New Tracking Pages
 
-To create a new page layout, select **Settings > Tracking Pages** and select the **Create New Tracking Page** tile to display the **Create & Manage Tracking Pages** menu.
+To create a new page layout, select **Settings > Tracking Pages** and select the **Create New Tracking Page** tile to display the **Create Tracking Page** menu.
 
    ![Create Page Tile](images/create-page-tile.png)
 
-The **Create & Manage Tracking Pages** menu has five sections:
+The **Create Tracking Page** menu has six sections:
+* **Link** - Displays sharable tracking links to your page.
 * **General** - Configure general details about your page, including default titles, colours and fonts.  
 * **Nav Bar** - Customise the look and feel of your page's nav bar.
 * **Nav Items** - Configure the links that will appear on your page's nav bar. 
@@ -48,29 +49,21 @@ To publish your page, click **Publish**. Publishing your page makes it accessibl
 
 To configure general page details:
 
-1. Enter a **Title** for the layout. This value is used as part of the page's link. 
+1. Enter a **Tracking Page Name** for the layout. This value is used as part of the page's link. 
      
-     The link to the page is displayed underneath the **Title** field, and is not manually editable. REACT tracking page links use the following format: `https://react.sorted.com/tracking/[pageTitle]?customer_id=[customer_id]&shipment_id=[shipment_id]&tracking_reference=[tracking_reference]&custom_reference=[custom_reference]`.
-
      ><span class="note-header">Note:</span>
      >
-     > Choose your page's **Title** carefully, as you can't update it once you've saved the page. Note that you can't have two pages with the same **Title**.
+     > Choose your page's **Tracking Page Name** carefully, as you can't update it once you've saved the page. Note that you can't have two pages with the same **Tracking Page Name**.
      >
      > For more information on how your customers can access tracking pages once they are published, see the [Publishing Your Page](#publishing-your-page) section.
      
-2. Select a **Favicon** by clicking the **Upload** button and selecting an image from the dialog box. There is no size limit on this individual image, but your page cannot exceed more than 5MB of images in total.
-3. Enter the **Font Name** of the default font that REACT should use on the page. If you do not specify a custom font, REACT uses its default font for your page.
-4. If you specified a custom font to use, enter a link to the file for that font into the **Font URL** field. 
-
-   In general, you should link to the "regular" version of the font and use the **Font Weight** selector to control font weights. However, if you want to use a light version of a particular font, you should link to that font's "light" font file, as certain fonts may display incorrectly if you attempt to select a light font weight.
-   > <span class="note-header">More Information:</span>
-   >
-   > Currently, REACT only supports external fonts from Google Fonts. For more information on linking to font files, see the [Configuring Fonts](#configuring-fonts) section. 
-5. Specify a default **Font Size**.
-6. Select a **Font Colour** by clicking the **Select** button and choosing a colour from the picker.
-7. Select a default **Font Weight**.
-
-To reset your font options back to default, click the **Clear Font** button.
+2. Enter a **Title** for your page. This value is displayed on the page's browser tab, and is also used as the title of the page's tile on the **Create & Manage Tracking Pages** menu.
+3. Select whether you want the **Carrier Link** to be _Active_ or _Inactive_. All REACT tracking pages include a carrier tracking reference. If you set the **Carrier Link** to _Active_, then clicking on this reference takes customers to the relevant carrier tracking portal.
+4. Select a **Favicon** by clicking the **Upload** button and selecting an image from the dialog box. There is no size limit on this individual image, but your page cannot exceed more than 5MB of images in total.
+5. Select the default font that REACT should use on the page.
+6. Specify a default **Font Size**.
+7. Select a **Font Colour** by clicking the **Select** button and choosing a colour from the picker.
+8. Select a default **Font Weight**.
 
 ## Configuring the Nav Bar
 
@@ -86,21 +79,13 @@ To configure the appearance of your page's nav bar, use the **Navbar** panel:
 2. Enter a web link into the **Root URL** field. Users are redirected to this link when they click the page's logo.
 3. Select a **Background Colour** by clicking the **Select** button and choosing a colour from the picker. This is the colour of the nav bar itself.
 4. Select a **Border Colour** by clicking the **Select** button and choosing a colour from the picker. This is the colour of the border at the bottom of the nav bar.
-5. Enter the **Font Name** of the font that REACT should use on the nav bar. If you do not specify a font for the nav bar, then REACT uses the page's global font, as specified on the **General** panel.
-6. If you specified a custom font to use, enter a link to the font file for that font into the **Font URL** field. 
-
-   You should link to the "regular" variant of the font. If you use alternative weights, the **Font Weight** option will not work correctly, and the typography on your page may not look quite right.
-   > <span class="note-header">More Information:</span>
-   >
-   > For more information on linking to font files, see the [Configuring Fonts](#configuring-fonts) section. 
-7. Select a **Font Colour** by clicking the **Select** button and choosing a colour from the picker. This is the colour of the nav bar's text.
-8. Select a **Font Size** and **Font Weight** for the nav bar's text.
+5. Select the font that REACT should use on the nav bar. 
+6. Select a **Font Colour** by clicking the **Select** button and choosing a colour from the picker. This is the colour of the nav bar's text.
+7. Select a **Font Size** and **Font Weight** for the nav bar's text.
 
    ><span class="note-header">Note:</span>
    >
    > The font options on the **Navbar** panel override any page-wide options you may have selected in the **General** panel. If you do not select an alternative font colour, size or weight in the **Navbar** panel, REACT uses the page's default options. 
-
-To reset your font options back to default, click the **Clear Font** button.
 
 ### Configuring Nav Bar Links
 
@@ -138,16 +123,17 @@ As an example, the following graphic shows a desktop page made up of the followi
 
    ![Sorted Page2](images/sorted-page2.png)
 
-REACT supports two page element types:
+REACT supports the following page element types:
 
 * **Status_timeline** - A tracking widget displaying the shipment's current status, estimated delivery date and a timeline of tracking events. 
 
    ![Tracking Widget](images/tracking-widget.png)
    If no tracking information is available, REACT displays a blank widget.
+* **Text + Image** - Displays an image with accompanying overlay text.   
+* **Text** - Text only.
+* **Image** - An image with no text.
 
-* **Standard** - A container for text and/or graphics, with optional links back to your site.
-
-By default, the top row of desktop layouts contains a **Status_timeline** element and two **Standard** elements, and the top row of mobile layouts contains a single **Status_timeline** element. These rows cannot be deleted or moved, but you can edit the default row elements and add additional rows underneath.
+By default, the top row of desktop layouts contains a **Status_timeline** element and two **Text** elements, and the top row of mobile layouts contains a single **Status_timeline** element. These rows cannot be deleted or moved, but you can edit the default row elements and add additional rows underneath.
 
 To add new rows:
 
@@ -159,28 +145,63 @@ To add new rows:
 3. If you are setting up a row in the desktop layout, select the number of **Columns** the row should have. This option is not available for mobile layouts, as all mobile rows have one column.
 4. Click **Add** to close the dialog and add the new row.
 
-To configure row elements:
-
-1. Click **Edit** on the element you want to configure. REACT displays the **Edit Column** dialog.
+To configure row elements, click **Edit** on the element you want to configure to display the **Edit Column** dialog.
 
    ![Edit Column](images/edit-column.png)
 
-2. Select the **Type** of element you want to add - either **Status_timeline** or **Standard**. 
-3. If you are settling up a **Standard** element, enter image and text details:
-   1. If required, select an **Image** by clicking the **Upload** button and selecting an image from the dialog box. There is no size limit on this individual image, but your page cannot exceed more than 5MB of images in total.
-   2. If required, enter some **Text**. If you selected an image, then the text will be displayed over the top of the image.
-   3. Select a **Text Position**. This is the position in which the text will be displayed within the element, enabling you to avoid having key parts of your image obscured by text.
-   4. Enter a **Redirection URL**. Users are redirected to this link when they click the element.
-4. Enter the **Name** of the font that REACT should use on the element. If you do not specify a font for the element, then REACT uses the page's global font, as specified on the **General** panel.
-5. If you specified a custom font to use, enter a link to the font file for that font into the **Font URL** field. 
+Next, select the **Type** of element you want to add. The fields required differ depending on element type.
 
-   You should link to the "regular" variant of the font. If you use alternative weights, the **Font Weight** option will not work correctly, and the typography on your page may not look quite right.
+**Status Timeline**
+
+To configure a **Status Timeline** element:
+
+1. Select **Status Timeline** from the **Type** menu.
+2. Select whether you want to view _Locale_ labels or _Shipment State_ labels from the **Choose Display Type** menu.
+   
+   If you select _Locale_ labels, then the page will display your custom shipment state labels instead of state names. If you select _Shipment State_labels, then the page will display default state names.
+
    > <span class="note-header">More Information:</span>
    >
-   > For more information on linking to font files, see the [Configuring Fonts](#configuring-fonts) section. 
-6. Select a **Font Colour** by clicking the **Select** button and choosing a colour from the picker. This is the colour of the element's text.
+   > For more information on configuring custom shipment labels, see the [Setting up Custom State Labels](/react/help/settings.html#setting-up-custom-state-labels) section of the **Settings** page.
+3. If you selected _Locale_ in the previous step, select which locale you want to use for the page's labels from the **Locale** menu.
+4. Select the font that REACT should use on the element. 
+5. Select a **Font Colour** by clicking the **Select** button and choosing a colour from the picker.
+6. Select a **Font Size** and **Font Weight** for the element's text.
+
+**Image + Text**
+
+To configure an **Image + Text** element:
+
+1. Select **Image + Text** from the **Type** menu.
+2. Select an **Image** by clicking the **Upload** button and selecting an image from the dialog box. There is no size limit on this individual image, but your page cannot exceed more than 5MB of images in total.
+3. Enter the **Text** you want the element to display. 
+4. Select a **Text Position**. This is the position in which the text will be displayed within the element, enabling you to avoid having key parts of your image obscured by text.
+5. Enter a **Redirection URL**. Users are redirected to this link when they click the element.
+6. Select the font that REACT should use on the element. 
+7. Select a **Font Colour** by clicking the **Select** button and choosing a colour from the picker.
+8. Select a **Font Size** and **Font Weight** for the element's text.
+
+**Text**
+
+To configure a **Text** element:
+
+1. Select **Text** from the **Type** menu.
+2. Enter the **Text** you want the element to display.
+3. Select a **Text Position**. This is the position in which the text will be displayed within the element.
+4. Enter a **Redirection URL**. Users are redirected to this link when they click the element.
+5. Select the font that REACT should use on the element. 
+6. Select a **Font Colour** by clicking the **Select** button and choosing a colour from the picker.
 7. Select a **Font Size** and **Font Weight** for the element's text.
-8. Click **Save** to close the dialog and save the element's details.         
+
+**Image**
+
+To configure an **Image** element:
+
+1. Select **Image** from the **Type** menu.
+2. Select an **Image** by clicking the **Upload** button and selecting an image from the dialog box. There is no size limit on this individual image, but your page cannot exceed more than 5MB of images in total.
+3. Enter a **Redirection URL**. Users are redirected to this link when they click the element.
+
+Lastly, click **Save** to close the dialog and save the element's details.         
 
 ## Publishing Your Page
 
@@ -188,14 +209,16 @@ Once you're happy with your page, click **Publish** to publish it.
 
    ![Publish Button2](images/publish-button2.png)
 
-Your customers can now track their shipments by visiting `https://react.sorted.com/tracking/[page_Title]?customer_Id=[customer_Id]&shipment_Id=[shipment_Id]&tracking_reference=[tracking_reference]&custom_reference=[custom_reference]`, where `page_Title` is the title of your tracking page and `customer_Id` is your REACT customer ID. 
+You can now share the link to the page with your customers. The **Links** panel displays sharable links to your page, using various combinations of shipment properties to identify the shipment to be tracked. 
+
+REACT tracking page links take the format `https://react.sorted.com/tracking/[page_Title]?customer_Id=[customer_Id]&shipment_Id=[shipment_Id]&tracking_reference=[tracking_reference]&custom_reference=[custom_reference]`, where `page_Title` is the title of your tracking page and `customer_Id` is your REACT customer ID.  
 
 There are three search parameters you can use when passing links to your consumer so that they can identify an individual shipment; `shipment_Id`, `tracking_reference` and `custom_reference`.
 
 REACT uses the following logic when identifying shipments to be tracked:
 
-* If a `shipment_Id` is specified, then REACT uses that, as the REACT Shipment ID is a unique identifier for every shipment registered with REACT.
-* If `tracking_reference`, `custom_reference`, or both are provided, then REACT searches for all shipments with those details created in the last month and displays details for the first shipment found.
+* If you specify a `shipment_Id` then REACT uses that value alone to identify the shipment, as the REACT Shipment ID is a unique identifier for every shipment registered with REACT.
+* If you specify a `tracking_reference`, `custom_reference`, or both, then REACT searches for all shipments with those details created in the last month and displays details for the first shipment found.
 * If no parameters are provided, the REACT returns an error.
 
 ### Example Tracking Link
@@ -206,7 +229,7 @@ As an example, suppose that a retailer with a `customer_Id` of *cs_1234567890* c
 * `tracking_reference` of *demo_tracking_ref*
 * `custom_reference` of *demo_custom_ref*
 
-In order for that shipment's consumer to tracking the page, the retailer passes the following link to the consumer:
+In order for that shipment's consumer to track the page, the retailer passes the following link to the consumer:
 
 `https://react.sorted.com/tracking/awesomepage?customer_Id=cs_1234567890&shipment_Id=sp_0987654321`
 
@@ -222,29 +245,17 @@ In this example, both of these links would point to the same shipment.
 
 ## Managing Existing Pages
 
-To edit an existing page, navigate to **Create & Manage Tracking Pages** and click the **Edit** button on the page's tile. The process of editing an existing page is the same as that used to set up a new page.
+To edit an existing page, select **Settings > Tracking Pages** to display the **Create & Manage Tracking Pages** menu, and click the **View** button on the page's tile. The process of editing an existing page is the same as that used to set up a new page.
 
    ![Edit Tracking Page](images/edit-tracking-page.png)
 
-To deactivate and reactivate a page, click the **Active / Inactive** toggle on the page's tile. Deactivating a page means that users will no longer be able to use that page to track their shipments, with an error displayed if they attempt to use the page's tracking link. However, users can still use any other pages you may have set up to track their shipments.
+To preview an existing page, click the context menu on the page's tile and select **Preview** from the drop-down menu.
 
-   ![Activate Tracking Page](images/activate-tracking-page.png)
+To duplicate an existing page, click the context menu on the page's tile and select **Duplicate** from the drop-down menu.
 
-To delete an existing page, click the **Delete** button on the page's tile and click **Confirm** on the pop-up confirmation dialog.
+To delete an existing page, click the context menu on the page's tile and select **Delete** from the drop-down menu.
 
    ![Delete Tracking Page](images/delete-tracking-page.png)
-
-## Configuring Fonts 
-
-You can specify custom font links when configuring your general page settings, when setting up your page's nav bar, and when setting up new page elements.
-
-At present, REACT only supports custom fonts from [Google Fonts](http://fonts.google.com). In the below example, pasting the highlighted link into the **Font URL** field would enable you to use the free Raleway font on your tracking page. To do so, you would enter _Raleway_ into The **Font Name** field.
-
-   ![Google Fonts Example](images/GoogleFontsExample.png)
-
-> <span class="note-header">More Information:</span>
->
-> For more information on using Google Fonts, see Google's [Getting Started](https://developers.google.com/fonts/docs/getting_started) documentation
 
 ## User Access
 
