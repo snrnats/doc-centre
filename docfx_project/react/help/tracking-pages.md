@@ -25,6 +25,7 @@ To create a new page layout, select **Settings > Tracking Pages** and select the
    ![Create Page Tile](images/create-page-tile.png)
 
 The **Create Tracking Page** menu has six sections:
+
 * **Link** - Displays sharable tracking links to your page.
 * **General** - Configure general details about your page, including default titles, colours and fonts.  
 * **Nav Bar** - Customise the look and feel of your page's nav bar.
@@ -32,8 +33,8 @@ The **Create Tracking Page** menu has six sections:
 * **Desktop Layout** - Select the elements you want your tracking page to display when viewed on a desktop computer, and specify where these elements should be placed.
 * **Mobile Layout** - Select the elements you want your tracking page to display when viewed on a mobile device.
 
-  ![Whole Page 1a](images/whole-page-1a.png)
-  ![Whole Page 2a](images/whole-page-2a.png)
+![Whole Page 1a](images/tracking-pages/whole-page-1a.png)
+![Whole Page 2a](images/tracking-pages/whole-page-2a.png)
 
 To see what your page would look like while you're configuring it, click **Preview** at the top of the page. 
 
@@ -45,17 +46,17 @@ To publish your page, click **Publish**. Publishing your page makes it accessibl
 
 ## Configuring General Page Details
 
-   ![General Panel2](images/general-panel2.png)
+   ![General Panel2](images/tracking-pages/general-panel2.png)
 
 To configure general page details:
 
 1. Enter a **Tracking Page Name** for the layout. This value is used as part of the page's link. 
      
-     ><span class="note-header">Note:</span>
-     >
-     > Choose your page's **Tracking Page Name** carefully, as you can't update it once you've saved the page. Note that you can't have two pages with the same **Tracking Page Name**.
-     >
-     > For more information on how your customers can access tracking pages once they are published, see the [Publishing Your Page](#publishing-your-page) section.
+><span class="note-header">Note:</span>
+>
+> Choose your page's **Tracking Page Name** carefully, as you can't update it once you've saved the page. Note that you can't have two pages with the same **Tracking Page Name**.
+>
+> For more information on how your customers can access tracking pages once they are published, see the [Publishing Your Page](#publishing-your-page) section.
      
 2. Enter a **Title** for your page. This value is displayed on the page's browser tab, and is also used as the title of the page's tile on the **Create & Manage Tracking Pages** menu.
 3. Select whether you want the **Carrier Link** to be _Active_ or _Inactive_. All REACT tracking pages include a carrier tracking reference. If you set the **Carrier Link** to _Active_, then clicking on this reference takes customers to the relevant carrier tracking portal.
@@ -73,7 +74,7 @@ All REACT tracking pages have a nav bar at the top. The nav bar contains links t
 
 To configure the appearance of your page's nav bar, use the **Navbar** panel:
 
-   ![Navbar Panel2](images/navbar-panel2.png)
+   ![Navbar Panel2](images/tracking-pages/navbar-panel2.png)
 
 1. Select a **Logo** by clicking the **Upload** button and selecting an image from the dialog box. There is no size limit on this individual image, but your page cannot exceed more than 5MB of images in total. The logo is automatically resized to fit the nav bar, and is displayed on the top-left of the page.
 2. Enter a web link into the **Root URL** field. Users are redirected to this link when they click the page's logo.
@@ -83,19 +84,19 @@ To configure the appearance of your page's nav bar, use the **Navbar** panel:
 6. Select a **Font Colour** by clicking the **Select** button and choosing a colour from the picker. This is the colour of the nav bar's text.
 7. Select a **Font Size** and **Font Weight** for the nav bar's text.
 
-   ><span class="note-header">Note:</span>
-   >
-   > The font options on the **Navbar** panel override any page-wide options you may have selected in the **General** panel. If you do not select an alternative font colour, size or weight in the **Navbar** panel, REACT uses the page's default options. 
+><span class="note-header">Note:</span>
+>
+> The font options on the **Navbar** panel override any page-wide options you may have selected in the **General** panel.
 
 ### Configuring Nav Bar Links
 
 To add items to your page's nav bar, use the **Nav Items** panel:
 
-   ![Nav Items Button2](images/nav-items-button2.png)
+   ![Nav Items Button2](images/tracking-pages/nav-items-button2.png)
 
 1. Click the **Add a new nav item** tile. REACT displays the **Add Link** dialog.
 
-   ![Add Link2](images/add-link2.png)
+![Add Link2](images/add-link2.png)
 
 2. Enter the **Text** that you want the item to display.
 3. Enter the **URL** that you want the item to link to.
@@ -105,13 +106,13 @@ To rearrange an existing nav bar item, click **Edit** and select **Move Up** or 
 
 To delete an existing nav bar item, click **Edit** and select **Delete**.
 
-   ![Edit Panel2](images/edit-panel2.png)
+   ![Edit Panel2](images/tracking-pages/edit-panel2.png)
 
 ## Configuring Page Layout
 
 REACT tracking pages offer separate, fully responsive layouts for desktop and mobile. You can configure these layouts via the **Desktop** and **Mobile** panels. 
 
-   ![Layout Panels](images/layout-panels.png)
+   ![Layout Panels](images/tracking-pages/layout-panels.png)
 
 Tracking pages are laid out on a grid system, with each layout having up to five rows, and each row having up to four columns on desktop, and a single column on mobile. Each column can contain a single page element (such as tracking widgets, text or images). 
 
@@ -121,54 +122,67 @@ As an example, the following graphic shows a desktop page made up of the followi
 * A small-height middle row containing four columns, all of which contain text links.
 * A medium-height bottom row containing two columns, with both containing images.
 
-   ![Sorted Page2](images/sorted-page2.png)
+![Sorted Page2](images/sorted-page2.png)
+
+### Editing Rows
+
+To add new rows:
+
+1. Click the **Add a row** tile on either the **Desktop** or **Mobile** panel to display the **Add Row** dialog.
+
+![Add Row Dialog](images/add-row-dialog.png)
+
+2. Select the row **Height** required.
+3. If you are setting up a row in the desktop layout, select the number of **Columns** the row should have. This option is not available for mobile layouts, as all mobile rows have one column.
+4. Click **Add** to close the dialog and add the new row.
+
+To delete an existing row, click the row's **Edit** button and then click **Delete**.
+
+![Delete Row](images/tracking-pages/delete-row.png)
+
+### Configuring Page Elements
 
 REACT supports the following page element types:
 
-* **Status_timeline** - A tracking widget displaying the shipment's current status, estimated delivery date and a timeline of tracking events. 
+* **Status_timeline** - A tracking widget displaying the shipment's current status, estimated delivery date and a timeline of tracking events. If no tracking information is available, REACT displays a blank widget.
 
-   ![Tracking Widget](images/tracking-widget.png)
-   If no tracking information is available, REACT displays a blank widget.
+![Tracking Widget](images/tracking-widget.png)
+
 * **Text + Image** - Displays an image with accompanying overlay text.   
 * **Text** - Text only.
 * **Image** - An image with no text.
 
 By default, the top row of desktop layouts contains a **Status_timeline** element and two **Text** elements, and the top row of mobile layouts contains a single **Status_timeline** element. These rows cannot be deleted or moved, but you can edit the default row elements and add additional rows underneath.
 
-To add new rows:
-
-1. Click the **Add a row** tile on either the **Desktop** or **Mobile** panel to display the **Add Row** dialog.
-
-   ![Add Row Dialog](images/add-row-dialog.png)
-
-2. Select the row **Height** required. You can only add tracking components to Large rows.
-3. If you are setting up a row in the desktop layout, select the number of **Columns** the row should have. This option is not available for mobile layouts, as all mobile rows have one column.
-4. Click **Add** to close the dialog and add the new row.
-
 To configure row elements, click **Edit** on the element you want to configure to display the **Edit Column** dialog.
-
-   ![Edit Column](images/edit-column.png)
 
 Next, select the **Type** of element you want to add. The fields required differ depending on element type.
 
 **Status Timeline**
 
+![Status Timeline](images/tracking-pages/status_timeline.png)
+
 To configure a **Status Timeline** element:
 
 1. Select **Status Timeline** from the **Type** menu.
-2. Select whether you want to view _Locale_ labels or _Shipment State_ labels from the **Choose Display Type** menu.
-   
-   If you select _Locale_ labels, then the page will display your custom shipment state labels instead of state names. If you select _Shipment State_labels, then the page will display default state names.
+2. Select whether you want to view _Locale_ labels or _Shipment State_ labels from the **Choose Display Type** menu. If you select _Locale_ labels, then the page will display your custom shipment state labels instead of state names. If you select _Shipment State_labels, then the page will display default state names.
 
-   > <span class="note-header">More Information:</span>
-   >
-   > For more information on configuring custom shipment labels, see the [Setting up Custom State Labels](/react/help/settings.html#setting-up-custom-state-labels) section of the **Settings** page.
+> <span class="note-header">More Information:</span>
+>
+> For more information on configuring custom shipment labels, see the [Setting up Custom State Labels](/react/help/settings.html#setting-up-custom-state-labels) section of the **Settings** page.
+
 3. If you selected _Locale_ in the previous step, select which locale you want to use for the page's labels from the **Locale** menu.
 4. Select the font that REACT should use on the element. 
 5. Select a **Font Colour** by clicking the **Select** button and choosing a colour from the picker.
 6. Select a **Font Size** and **Font Weight** for the element's text.
 
+> <span class="note-header">Note:</span>
+>
+> You can only add **Status Timeline** elements to the top row of your tracking page. The option is not displayed when editing elements on lower rows.
+
 **Image + Text**
+
+![Image Text](images/tracking-pages/image_text.png)
 
 To configure an **Image + Text** element:
 
@@ -183,6 +197,8 @@ To configure an **Image + Text** element:
 
 **Text**
 
+![Image Text](images/tracking-pages/text.png)
+
 To configure a **Text** element:
 
 1. Select **Text** from the **Type** menu.
@@ -194,6 +210,8 @@ To configure a **Text** element:
 7. Select a **Font Size** and **Font Weight** for the element's text.
 
 **Image**
+
+![Image Text](images/tracking-pages/image.png)
 
 To configure an **Image** element:
 
@@ -207,9 +225,11 @@ Lastly, click **Save** to close the dialog and save the element's details.
 
 Once you're happy with your page, click **Publish** to publish it. 
 
-   ![Publish Button2](images/publish-button2.png)
+![Publish Button2](images/tracking-pages/publish-button2.png)
 
-You can now share the link to the page with your customers. The **Links** panel displays sharable links to your page, using various combinations of shipment properties to identify the shipment to be tracked. 
+You can now share the link to the page with your customers. The **Link** panel displays sharable links to your page, using various combinations of shipment properties to identify the shipment to be tracked.
+
+![Links Panel](images/tracking-pages/links-panel.png)
 
 REACT tracking page links take the format `https://react.sorted.com/tracking/[page_Title]?customer_Id=[customer_Id]&shipment_Id=[shipment_Id]&tracking_reference=[tracking_reference]&custom_reference=[custom_reference]`, where `page_Title` is the title of your tracking page and `customer_Id` is your REACT customer ID.  
 
@@ -247,7 +267,7 @@ In this example, both of these links would point to the same shipment.
 
 To edit an existing page, select **Settings > Tracking Pages** to display the **Create & Manage Tracking Pages** menu, and click the **View** button on the page's tile. The process of editing an existing page is the same as that used to set up a new page.
 
-   ![Edit Tracking Page](images/edit-tracking-page.png)
+![Edit Tracking Page](images/tracking-pages/edit-tracking-page.png)
 
 To preview an existing page, click the context menu on the page's tile and select **Preview** from the drop-down menu.
 
@@ -255,7 +275,7 @@ To duplicate an existing page, click the context menu on the page's tile and sel
 
 To delete an existing page, click the context menu on the page's tile and select **Delete** from the drop-down menu.
 
-   ![Delete Tracking Page](images/delete-tracking-page.png)
+![Preview / Duplicate / Delete Tracking Page](images/tracking-pages/preview-duplicate-delete-tracking-page.png)
 
 ## User Access
 
