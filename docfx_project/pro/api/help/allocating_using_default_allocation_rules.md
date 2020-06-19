@@ -18,7 +18,9 @@ PRO uses the following selection process when allocating via these endpoints:
 
 ## Allocating Multiple Consignments at Once
 
-The **Allocate Using Default Rules** endpoint enables you to allocate multiple consignments to the cheapest eligible carrier service in one request. The request body should contain an array of one or more `{consignmentReference}`s to be allocated. 
+The **Allocate Using Default Rules** endpoint enables you to allocate multiple consignments to the cheapest eligible carrier service in one request. 
+
+To call **Allocate using Default Rules**, send a `PUT` request to `https://api.electioapp.com/allocation/allocate`. The request body should contain an array of one or more `{consignmentReference}`s to be allocated. 
 
 Once the request is received, SortedPRO takes each consignment in turn and allocates it to the cheapest eligible carrier, as per the process detailed in the [Overview](#overview). It then returns an array of Allocation Summaries, one for each allocated consignment. 
 
@@ -52,7 +54,7 @@ PUT https://api.electioapp.com/allocation/allocate
 
 ## Allocating a Single Consignment
 
-The **[Allocate Consignment](https://docs.electioapp.com/#/api/AllocateConsignment)** endpoint allocates a single consignment to the cheapest eligible carrier service, taking the `{consignmentReference}` of that service as a path parameter. 
+The **[Allocate Consignment](https://docs.electioapp.com/#/api/AllocateConsignment)** endpoint allocates a single consignment to the cheapest eligible carrier service. To call **Allocate Consignment**, send a `PUT` request to `https://api.electioapp.com/allocation/{consignmentReference}/allocatewithcheapestquote`, where `{consignmentReference}` refers to the consignment you want to allocate.
 
 Once the request has been received, SortedPRO uses the process detailed in the [Overview](#overview) to determine the appropriate service and allocate the consignment. It then returns an Allocation Summary. 
 
