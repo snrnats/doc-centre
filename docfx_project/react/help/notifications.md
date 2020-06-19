@@ -1,20 +1,72 @@
 # Configuring Notifications
 
-REACT's **Notifications Info** UI page enables you to set up automated email and SMS delivery notifications for your customers without any development work. To configure notifications, you'll need to set up an account with one of REACT's compatible email or SMS providers, give REACT your account details, and configure the details of the notification itself.
+REACT's **Notifications Info** UI page enables you to set up automated email and SMS delivery notifications for your customers without any development work. To configure notifications, you'll need to set up an account with one of REACT's compatible email or SMS providers, give REACT your account details, and configure the details of the notification itself.  
 
 ---
 
+## Notifications Overview
+
+The REACT notification centre has three components:
+
+* **Notification Connectors** store the technical details REACT uses to send emails and SMS messages, including send-from addresses and account details for third party providers. All REACT notifications are powered by a notification connector.
+* **Notification Templates** define the content of your notification. These can either be set up via a third-party provider, or (in the case of REACT and Postmark notifications) edited from within the REACT UI via the **Notification Templates** page. 
+* **Notifications** are the individual messages sent to customers. When you set up a notification, you define the connector that will power it, the template it should use, and define when the notification should be sent.
+
 ## Setting up Notification Connectors
 
-The first step in setting up REACT notifications is to create a notification connector for one of REACT's three compatible providers: [Postmark](https://postmarkapp.com/) (email), [Twilio](https://www.twilio.com/) (SMS), and [SendGrid](https://sendgrid.com/) (email). When you create a connector to one of these providers, you provide REACT with your account details and other technical information. REACT can then use your account with the associated provider to send communications to your customers.
+The first step in setting up REACT notifications is to create a notification connector. You can set up connectors for your existing [Postmark](https://postmarkapp.com/) (email), [Twilio](https://www.twilio.com/) (SMS), and [SendGrid](https://sendgrid.com/) (email) accounts. Alternatively, you can set up a REACT connector, which enables you to send emails without the need for a third-party service.
 
 > <span class="note-header">Note:</span>
 >
-> Before you can set up a notification connector, you'll need to set up an account with the relevant provider and have your details to hand. This section explains the information you need to set up a connector to each of the providers.
+> Before you can set up a notification connector to a third-party service, you'll need to set up an account with the relevant provider and have your details to hand. This section explains the information you need to set up a connector to each of the providers.
 
 To set up a new connector, select **Settings > Notification Centre > Notification Connectors**, scroll down to the **All Notification Connectors**, and click **Connect** on the connector you want to set up. See below for specific information on each provider.
 
 Once you have set a connector up, its tile moves to the **Existing Connectors** section of the **Notification Connectors** page.
+
+### REACT
+
+REACT connectors enable you to send emails without the need for a third-party service. To set up a REACT connector: 
+
+1. Select **Settings > Notification Centre > Notification Connectors** and click **Connect** on the **REACT Email Notifications** connector. 
+    
+    ![react-connect](images/notifications/react-connect.png)   
+
+    REACT displays the **REACT Email Notifications Connection** tile.
+
+    ![react-tile](images/notifications/react-tile.png)   
+
+2. Enter a **Name** for your connection.
+3. Enter the **Email Address** you want to send emails from. 
+
+    If you use an email associated with your own domain then you will need to verify that domain once the connector has been set up. Alternatively, you can use a `@react.sorted.com` address, which does not require domain verification.
+4. Enter the sender **Display Name** you want to use in your sent emails.
+5. Click **Save** to create the connector and return to the **Notification Connectors** page.
+
+**Verifying Custom Domains**
+
+If you entered an address from a custom domain into the **Email Address** field, then you will need to verify that domain before you can use the new connector. Verifying your domain enables REACT to confirm that you own the domain you want to send emails from. 
+
+To verify your domain:
+
+1. Click the context menu on the tile and then click **Verify**.
+
+    ![verify-option](images/notifications/verify-option.png)   
+
+    REACT displays the **Domain Verification** dialog.
+
+    ![verify-tile](images/notifications/verify-tile.png)
+
+2. Make a note of the values in the **DKIM Host** and **DKIM Text** fields.
+3. Create a new TXT DNS record on your domain, where Name = DKIM Host and Value = DKIM Text.
+
+> <span class="note-header">Note:</span>
+> For information on creating TXT DNS records, see your domain host's documentation.
+
+4. In the REACT UI, click the **Verify** button to verify your domain. REACT checks the domain and indicates whether the domain was successfully verified.
+
+> <span class="note-header">Note:</span>
+> It may take up to 48 hours for the DNS record you created to become verifiable. You can **Cancel** the dialog and return to complete the verification later if required.
 
 ### Postmark
 
@@ -37,17 +89,17 @@ Before you can set up a connector to Postmark, you'll need to do the following:
 
 4.  Make a note of your Postmark server API token. You can view your server API token by logging in to Postmark and selecting **Servers > [your server] > API Tokens**. 
 
-   ![postmark2](images/postmark2.png)
+   ![postmark2](images/notifications/postmark2.png)
 
 You're now ready to set up a Postmark connector. To do so: 
 
 1. Select **Settings > Notification Centre > Notification Connectors** and click **Connect** on the **Postmark Email Notifications** connector. 
     
-   ![postmark-connect2](images/postmark-connect2.png)    
+   ![postmark-connect2](images/notifications/postmark-connect2.png)    
     
     REACT displays the **Postmark Email Notifications Connection** tile.
 
-   ![postmark-tile](images/postmark-tile.png)  
+   ![postmark-tile](images/notifications/postmark-tile.png)  
 
 2. Enter a **Name** for your connection.
 3. Enter the **Server Token** for your Postmark account.
@@ -73,7 +125,7 @@ Before you can set up a connector to SendGrid, you'll need to do the following:
 
 4. Set up a SendGrid API key with full access to the SendGrid service, and make a note of it. You'll need this information in order to set up a connector to SendGrid.
 
-   ![sendgrid3a](images/sendgrid3a.png)
+   ![sendgrid3a](images/notifications/sendgrid3a.png)
 
     > <span class="note-header">More Information: </span>
     >
@@ -83,11 +135,11 @@ You're now ready to set up a SendGrid connector. To do so:
 
 1. Select **Settings > Notification Centre > Notification Connectors** and click **Connect** on the **SendGrid Email Notifications** connector. 
     
-   ![sendgrid-connect2](images/sendgrid-connect2.png)    
+   ![sendgrid-connect2](images/notifications/sendgrid-connect2.png)    
     
     REACT displays the **SendGrid Email Notifications Connection** tile.
 
-   ![sendgrid-tile](images/sendgrid-tile.png)  
+   ![sendgrid-tile](images/notifications/sendgrid-tile.png)  
 
 2. Enter a **Name** for your connection.
 3. Enter the **API Key** for your SendGrid account.
@@ -107,7 +159,7 @@ Before you can set up a connector to Twilio, you'll need to do the following:
 
 3. Make a note of your Twilio **Account SID** and **Auth Token**.
 
-   ![twilio1](images/twilio1.png)    
+   ![twilio1](images/notifications/twilio1.png)    
 
     > <span class="note-header">More Information: </span>
     >
@@ -117,11 +169,11 @@ You're now ready to set up a Twilio connector. To do so:
 
 1. Select **Settings > Notification Centre > Notification Connectors** and click **Connect** on the **Twilio SMS Notifications** connector. 
     
-   ![twilio-connect2](images/twilio-connect2.png)    
+   ![twilio-connect2](images/notifications/twilio-connect2.png)    
     
     REACT displays the **Twilio SMS Notifications Connection** tile.
 
-   ![twilio-tile](images/twilio-tile.png)  
+   ![twilio-tile](images/notifications/twilio-tile.png)  
 
 2. Enter a **Name** for your connection.
 3. Enter the **Account SID** and **Auth Token** for your Twilio account.
@@ -134,7 +186,7 @@ You're now ready to set up a Twilio connector. To do so:
 
 To edit an existing notification connector, open the **Settings > Notification Centre > Notification Connectors** UI page and click **Edit** on the connector you want to edit.
 
-   ![connector-edit](images/connector-edit.png) 
+   ![connector-edit](images/notifications/connector-edit.png) 
 
 REACT displays the **Edit Notification Connection** page for that connector. Make the required edits and click **Save** to save your changes.
 
@@ -142,7 +194,7 @@ REACT displays the **Edit Notification Connection** page for that connector. Mak
 
 To deactivate an existing notification connector, open the **Settings > Notification Centre > Notification Connectors** UI page and click the **Active** toggle on the connector's tile. 
 
-   ![deactivate](images/deactivate.png)  
+   ![deactivate](images/notifications/deactivate.png)  
 
 The toggle switches to the **Inactive** position, confirming that the connector has been deactivated. 
 
@@ -152,94 +204,41 @@ Deactivating a notification connector means that REACT can no longer retrieve da
 
 To permanently disconnect a connector, open the **Settings > Notification Centre > Notification Connectors** UI page and click the **Disconnect** button on the connector's tile.
 
-   ![connector-disconnect](images/connector-disconnect.png) 
+   ![connector-disconnect](images/notifications/connector-disconnect.png) 
 
 A confirmation dialog is displayed. Click **Yes** to disconnect the connector.
 
 Disconnecting a notification connector deactivates it and deletes all of its configuration. To reinstate a disconnected notification connector you would need to set it up again as a new connector.
 
-## Creating Notifications
+## Creating Notification Templates
 
-Once you've created your notification connectors, you're ready to configure your notifications themselves. When you create a notification, you tell REACT what provider you'd like to use, when REACT should send the notification, and what the content of the notification should be. If required, you can also include a link to a REACT tracking page within the notification.
+The **Notification Templates** page enables you to create HTML email templates to use with your REACT and Postmark connectors. Email templates define the content of the emails you send. You can add personalised customer details, such as names and tracking links, to your templates using merge tags.
 
-REACT notifications are triggered by shipment filters. Each shipment filter contains a list of shipment states and calculated events. When a shipment enters once of the filter's states or events, REACT sends any notifications using that filter as a trigger.
+To create a new notification template:
 
-For example, suppose that you want to send an SMS notification to your customers when their shipment is out for delivery but appears to be late. To do this, you would set up a shipment filter with the *Out For Delivery* state and *Late* calculated event selected, and then create a Twilio notification with that filter selected as the notification's trigger.  
-
-To create a new notification:
-
-1. Select **Settings > Notification Centre > Notification Set Up** to display the **Notification Set Up** page.
-
-    ![existing-notifications](images/existing-notifications.png) 
-
-2. Click the **Add New Communication** tile. REACT displays a list of available connectors.
-
-    ![notification-select-connector2](images/notification-select-connector2.png)
-
-3. Select the connector you want to use for the notification, and then click **Next** to display editable fields relating to notification details.
-
-    ![notification-create](images/notification-create.png)    
-
-4. Enter a **Name** for the notification.
-5. Select the **Shipment Filter** that you want to use as a trigger for the notification.
-    > <span class="note-header">Note:</span>
-    >
-    > If you have not yet created the shipment filter you want to use, click **Create Shipment Filter**. REACT redirects you to the **Create & Manage Shipment Filters** page. When you have set your shipment filter up, return to the **Settings > Notification Centre > Notification Set Up** page to configure your notification. 
-6. Enter your notification content. This step differs depending on whether you are setting up SMS or email notifications:
-    * If you are setting up email notifications, select the SendGrid or Postmark (as applicable) email template you want to use from the **Select Email Template** drop-down list. The list is automatically populated using the templates you have set up in SendGrid / Postmark.
+1. Open the **Settings > Notification Centre > Notification Templates** UI page and click **Create New Template**.
+       
+    ![create-new-template](images/notifications/create-new-template.png) 
     
-    ![notification-email-template](images/notification-email-template.png)  
+    The **Create Template** page is displayed.
 
-    * If you are setting up Twilio SMS notifications, enter the text of your SMS into the **Enter Text for SMS** field.
+    ![create-template-screen](images/notifications/create-template-screen.png) 
 
-    ![notification-sms-text](images/notification-sms-text.png) 
+2. Enter a **Name** for the template. Names are used to identify the template in the REACT UI.
+3. Enter a **Subject** for the template. This is the subject line that the sent emails will use.
+4. Select the **Notification Connector** that the template is to be associated with.
+5. Enter your email content into the **HTML** dialog box. You can use standard HTML and internal CSS. 
+6. Click **Save** to save your changes and return to the **Notification Templates** page. The template you set up is now displayed on the page. When you set up a notification using the connector you selected in Step 3, your template is available in the **Select Email Template** list.
 
-    > <span class="note-header">Note:</span>
-    >
-    > You can use merge tags to inject specific customer details such as names and addresses into your notifications. For more information on merge tags, see the [Using Merge Tags](#using-merge-tags) section. 
+To preview your new template, click the option menu on the template's tile and select **Preview**. Use the buttons at the top of the page to choose between previewing your template in desktop and mobile views.
 
-7. If required, select a REACT tracking page from the **Select Tracking Page** drop-down list. If you select a tracking page, then REACT will insert a tracking link into the notification.
-    > <span class="note-header">More Information:</span>
-    >
-    > For more information on setting up REACT tracking pages, see the [Creating Tracking Pages](/react/help/tracking-pages.html) page.
-8. If you want to activate the notification immediately after saving, select the **Activate This Notification** check box.
-
-    If you want to save the notification without activating it, leave the **Activate This Notification** check box unselected.
-9. Click **Save** to save the notification.
-
-### Managing Existing Notifications
-
-**Editing Existing Notifications**
-
-To edit an existing notification, open the **Settings > Notification Centre > Notification Set Up** UI page and click **Edit** on the notification you want to edit.
-
-   ![notification-edit](images/notification-edit.png) 
-
-REACT displays the **Edit Notification** page for that notification. Make the required edits and click **Save** to save your changes.
-
-**Deactivating Existing Notifications**
-
-To deactivate an existing notification, open the **Settings > Notification Centre > Notification Set Up** UI page and click the **Active** toggle on the notification's tile. The toggle switches to the **Inactive** position, confirming that the notification has been deactivated. 
-
-   ![notification-deactivate](images/notification-deactivate.png) 
-
-Deactivating a notification means that REACT will no longer send it, even if shipments meet the criteria set out in its shipment filter. However, its configuration is saved, and the notification can be reactivated by clicking the toggle again.
-
-**Disconnecting Existing Notifications**
-
-To permanently disconnect a notification, open the **Settings > Notification Centre > Notification Set Up** UI page and click the **Disconnect** button on the notification's tile.
-
-   ![notification-disconnect](images/notification-disconnect.png) 
-
-A confirmation dialog is displayed. Click **Yes** to disconnect the notification.
-
-Disconnecting a notification deactivates it and deletes all of its configuration. To reinstate a disconnected notification you would need to set it up again.
+![preview-button](images/notifications/preview-button.png) 
 
 ### Using Merge Tags
 
 Merge tags enable you to personalise the notifications sent out to customers. For example, you might want to insert a customer's name or address details into the text and email sent to them,  rather than sending a generic message. 
 
-A merge tag is a snippet of JSON that denotes the data that should be inserted into a notification, and where that data should be inserted. To use a merge tag, simply add the relevant field or fields to the text of your notification. For emails, you will need to do this in the SendGrid / Postmark UI. For SMS notifications, you would insert your merge tags into the REACT UI's **Enter Text for SMS** field.
+A merge tag is a snippet of JSON that denotes the data that should be inserted into a notification, and where that data should be inserted. To use a merge tag, simply add the relevant field or fields to the text of your notification. For emails, you will need to do so in the relevant template (i.e. via the SendGrid / Postmark UI or the **Notification Templates** REACT UI page, as applicable). For SMS notifications, you would insert your merge tags into the REACT UI's **Enter Text for SMS** field.
 
 The full merge tag structure is:
 
@@ -261,7 +260,7 @@ The full merge tag structure is:
 }
 ```
 
-In practice, you would probably use merge tags one field at a time, rather than as a single JSON object. For example, you might enter the following example as notification text:
+In practice, you would likely use merge tags one field at a time, rather than as a single JSON object. For example, you might enter the following example as notification text:
 
 Hi `{{Consumer.FirstName}}`! Your package is on its way. To keep an eye on it, go to `{{TrackingPageUrl}}`.
 
@@ -273,14 +272,6 @@ Hi `{{Consumer.FirstName}}`! Your package is on its way. To keep an eye on it, g
 
 The metadata keys at the bottom enable you to further customise the information available in your notifications by adding metadata from your shipments. For example, supposed that you register a shipment with a `Contents` metadata property, which you use to supply a description of the shipment contents, as follows:
 
-<div class="tab">
-    <button class="staticTabButton">Metadata Example</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'metadataExample')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="metadataExample" class="staticTabContent" onclick="CopyToClipboard(this, 'metadataExample')">
-
-
 ```json
       "metadata": [
         {
@@ -291,8 +282,6 @@ The metadata keys at the bottom enable you to further customise the information 
       ],
 ```
 
-</div>
-
 You could then further enhance your notification by adding shipment contents to the text. For example:
 
 Hi `{{Consumer.FirstName}}`! The package with your `{{Contents}}` in is on its way. To keep an eye on it, go to `{{TrackingPageUrl}}`.
@@ -301,21 +290,114 @@ Hi `{{Consumer.FirstName}}`! The package with your `{{Contents}}` in is on its w
 >
 > Merge tags can only display information about a shipment if that shipment has the relevant information registered. In the example above, this would require you to register a customer's first name, and a `Contents` metadata property. 
 >
-> For more information on registering shipment data, including setting up metadata, see the [Registering Shipments](/react/help/registering-shipments.html) page.
+> For more information on registering shipment data, including setting up metadata, see the [Registering Shipments](https://docs.sorted.com/react/registering-shipments/) page.
 
-## User Access
+### Managing Existing Notification Templates
 
-Admin and Marketing users can view, edit and delete notifications and connectors. Dashboard users do not have access to this feature.
+**Editing Existing Templates**
+
+To edit an existing template, open the **Settings > Notification Centre > Notification Templates** UI page and click **Edit** on the template you want to edit.
+
+![edit-button](images/notifications/edit-button.png) 
+
+REACT displays the **Edit Template** page. Make the required edits and click **Save** to save your changes.
+
+**Deleting Templates**
+
+To delete a template, open the **Settings > Notification Centre > Notification Templates** UI page, click the option menu on the relevant template, and click **Delete**.
+
+![delete-button](images/notifications/delete-button.png) 
+
+REACT displays a confirmation dialog. Click **Yes** to delete the template.
+
+## Creating Notifications
+
+Once you've created your notification connectors, you're ready to configure your notifications themselves. When you create a notification, you tell REACT what connector you'd like to use, when REACT should send the notification, and what the content of the notification should be. If required, you can also include a link to a REACT tracking page within the notification.
+
+REACT notifications are triggered by shipment filters. Each shipment filter contains a list of shipment states and calculated events. When a shipment enters once of the filter's states or events, REACT sends any notifications using that filter as a trigger.
+
+For example, suppose that you want to send an SMS notification to your customers when their shipment is out for delivery but appears to be late. To do this, you would set up a shipment filter with the *Out For Delivery* state and *Late* calculated event selected, and then create a Twilio notification with that filter selected as the notification's trigger.  
+
+To create a new notification:
+
+1. Select **Settings > Notification Centre > Notification Set Up** to display the **Notification Set Up** page.
+
+    ![existing-notifications](images/notifications/existing-notifications.png) 
+
+2. Click the **Add New Communication** tile. REACT displays a list of available connectors.
+
+    ![notification-select-connector2](images/notifications/notification-select-connector2.png)
+
+3. Select the connector you want to use for the notification, and then click **Next** to display editable fields relating to notification details.
+
+    ![notification-create](images/notifications/notification-create.png)    
+
+4. Enter a **Name** for the notification.
+5. Select the **Shipment Filter** that you want to use as a trigger for the notification.
+    > <span class="note-header">Note:</span>
+    >
+    > If you have not yet created the shipment filter you want to use, click **Create Shipment Filter**. REACT redirects you to the **Create & Manage Shipment Filters** page. When you have set your shipment filter up, return to the **Settings > Notification Centre > Notification Set Up** page to configure your notification. 
+6. Enter your notification content. This step differs depending on whether you are setting up SMS or email notifications:
+    * If you are setting up email notifications, select the email template you want to use from the **Select Email Template** drop-down list. 
+
+        ><span class="note-header">Note:</span>
+        >
+        > * For REACT notifications, this list displays the templates you have configured for the selected connector on the **Notification Templates** UI page. 
+        > * For SendGrid notifications, the list is automatically populated using the templates you have set up in SendGrid. 
+        > * For Postmark notifications, the list displays both templates configured in Postmark and templates configured in the REACT UI.
+    
+    ![notification-email-template](images/notifications/notification-email-template.png)  
+
+    * If you are setting up Twilio SMS notifications, enter the text of your SMS into the **Enter Text for SMS** field.
+
+    ![notification-sms-text](images/notifications/notification-sms-text.png) 
+
+    > <span class="note-header">Note:</span>
+    >
+    > Merge tags enable you to inject specific customer details such as names and addresses into your notifications. For more information on merge tags, see the [Using Merge Tags](#using-merge-tags) section. 
+
+7. If required, select a REACT tracking page from the **Select Tracking Page** drop-down list. If you select a tracking page, then REACT will insert a tracking link into the notification.
+    > <span class="note-header">More Information:</span>
+    >
+    > For more information on setting up REACT tracking pages, see the [Creating Tracking Pages](https://docs.sorted.com/react/tracking-pages/) page.
+8. If you want to activate the notification immediately after saving, select the **Activate This Notification** check box.
+
+    If you want to save the notification without activating it, leave the **Activate This Notification** check box unselected.
+9. Click **Save** to save the notification.
+
+### Managing Existing Notifications
+
+**Editing Existing Notifications**
+
+To edit an existing notification, open the **Settings > Notification Centre > Notification Set Up** UI page and click **Edit** on the notification you want to edit.
+
+   ![notification-edit](images/notifications/notification-edit.png) 
+
+REACT displays the **Edit Notification** page for that notification. Make the required edits and click **Save** to save your changes.
+
+**Deactivating Existing Notifications**
+
+To deactivate an existing notification, open the **Settings > Notification Centre > Notification Set Up** UI page and click the **Active** toggle on the notification's tile. The toggle switches to the **Inactive** position, confirming that the notification has been deactivated. 
+
+   ![notification-deactivate](images/notifications/notification-deactivate.png) 
+
+Deactivating a notification means that REACT will no longer send it, even if shipments meet the criteria set out in its shipment filter. However, its configuration is saved, and the notification can be reactivated by clicking the toggle again.
+
+**Disconnecting Existing Notifications**
+
+To permanently disconnect a notification, open the **Settings > Notification Centre > Notification Set Up** UI page and click the **Disconnect** button on the notification's tile.
+
+   ![notification-disconnect](images/notifications/notification-disconnect.png) 
+
+A confirmation dialog is displayed. Click **Yes** to disconnect the notification.
+
+Disconnecting a notification deactivates it and deletes all of its configuration. To reinstate a disconnected notification you would need to set it up again.
 
 ## Next Steps
 
 Read on for more info:
 
-* [REACT Overview](/react/help/overview.html)
-* [Registering Shipments](/react/help/registering-shipments.html)
-* [Managing Webhooks](/react/help/managing-webhooks.html)
-* [Retrieving Shipment and Event Data](/react/help/retrieving-data.html)
-
-<script src="../../pro/scripts/requesttabs.js"></script>
-<script src="../../pro/scripts/responsetabs.js"></script>
-<script src="../../pro/scripts/copy.js"></script>
+* [REACT Overview](https://docs.sorted.com/react/overview/)
+* [Registering Shipments](https://docs.sorted.com/react/registering-shipments/)
+* [Managing Webhooks](https://docs.sorted.com/react/managing-webhooks/)
+* [Retrieving Shipment and Event Data](https://docs.sorted.com/react/retrieving-data/)

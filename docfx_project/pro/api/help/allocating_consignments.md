@@ -57,7 +57,7 @@ PRO offers the following allocation endpoints:
     <tr>
         <td>
             <p><a href="/pro/api/help/allocating_to_a_specific_quote.html">Allocate With Quote</a></p>
-            <p><pre>PUT https://api.electioapp.com/allocation/{consignmentReference}/Route parameter: {consignmentReference}allocatewithquote/{quoteReference}</pre></p>
+            <p><pre>PUT https://api.electioapp.com/allocation/{consignmentReference}/allocatewithquote/{quoteReference}</pre></p>
         </td>
         <td>Allocates an individual consignment based on a specific delivery quote from a carrier</td>
         <td><a href="https://docs.electioapp.com/#/api/AllocateConsignmentWithServiceGroup">Link</a></td>                
