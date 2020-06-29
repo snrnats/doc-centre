@@ -167,12 +167,12 @@ You can also generate consignments from pickup options. The process is the same 
 
 ## Creating Consignments From Orders
 
-You can also create consignments from orders via the **Pack Order** endpoint. **Pack Order** enables you to take a PRO order and generate consignments from it. This function is particularly useful if your business uses multiple fulfilment centres, or uses drop ship vending.
+You can also create consignments from orders via the **Pack Order** endpoint. **Pack Order** enables you to take a PRO order and generate consignments from it. This function is particularly useful if your business uses multiple fulfilment centres, or uses drop ship vendors.
 
 It's important to understand the difference between a consignment and an order when using **Pack Order**:
 
 * An **order** is a collection of items that is to be transported to the same destination on behalf of the same customer.
-* A **consignment** is a collection of packages that is to be transported to the same destination, on behalf of the same customer, _from the same origin, on the same day, and by the same carrier_.
+* A **consignment** is a collection of packages that is to be transported to the same destination, on behalf of the same customer, _from the same origin, on the same day, and using the same carrier service_.
 
 The **Pack Order** endpoint enables you to take those items on an order that share an origin and are to be shipped together, and generate a shippable consignment from them. You will need to send one Pack Order request per consignment that you want to create from the order.
 
@@ -180,7 +180,7 @@ To create a consignment in this way, you'll need to make two API calls:
 
 1. Call the **Create Order** endpoint to create an order in PRO. The structure of the **Create Order** request is very similar to that of the **Create Consignment** request, and must include package, origin address, and destination address data at a minimum. PRO creates the order and returns an `orderReference`.
 
-2. Call the **Pack Order** endpoint to create the consignment. In the body of the request you'll need to supply at least the relevant `orderReference` and the package details of the consignment that you want to pack. Each package must contain at least one item. If the **Pack Order** request would create a valid consignment, then PRO creates the consignment and returns a consignment reference.
+2. Call the **Pack Order** endpoint to create a consignment. In the body of the request you'll need to supply at least the relevant `orderReference` and the package details of the consignment that you want to pack. Each package must contain at least one item, and only items supplied on the original order can be packed. If the **Pack Order** request is successful, PRO creates a consignment and returns the consignment reference.
 
 > <span class="note-header">More Information:</span>
 >
@@ -190,7 +190,7 @@ To create a consignment in this way, you'll need to make two API calls:
 
 ## Next Steps
 
-* Learn how to work with existing consignments at the [Managing Existing Consignments](/pro/api/help/updating_existing_consignments.html) page
+* Learn how to work with existing consignments at the [Updating Existing Consignments](/pro/api/help/updating_existing_consignments.html) page
 * Learn how to allocate consignments at the [Allocating Consignments to Carriers](/pro/api/help/allocating_consignments.html) page.
 * Learn how to get and print delivery labels at the [Getting Labels](/pro/api/help/getting_labels.html) page
 
