@@ -293,15 +293,21 @@ The **Register Shipments** endpoint enables you to register:
 * **References** - As well as the mandatory carrier tracking reference array, you can also register additional `custom_references` for the shipment. Custom references do not need to be unique (i.e. you can register the same custom reference for multiple shipments if required), but we would recommend that you use unique custom references where possible to help you retrieve shipment data easily.
 * **Tags** - Tags enable you to associate related shipments (such as all shipments of a particular product, or all shipments of products on special offer) with each other. You can also use tags to select the shipments that go into your shipment filters.
 
-   > <span class="note-header">Note:</span>
-   >
-   > You can add up to 20 tags to a shipment, and each tag must be between three and 30 characters long. If you attempt to add more than 20 tags then only the first 20 are stored. Tags are not case-sensitive, and you cannot add duplicate tags within the same shipment.
+    > <span class="note-header">Note:</span>
+    >
+    > You can add up to 20 tags to a shipment, and each tag must be between three and 30 characters long. If you attempt to add more than 20 tags then only the first 20 are stored. Tags are not case-sensitive, and you cannot add duplicate tags within the same shipment.
 * **Carrier Details** - If required, you can register `carrier`  and `carrier_service` details.
 * **Dates** - The `order_date`, `shipped_date` and `promised_date` properties enable you to record when a shipment was ordered and shipped, and when the customer was told that it would be delivered.
 * **Addresses** - The `addresses` array enables you to record multiple addresses against a single shipment. You can record origin, destination, return, billing, delivery hub, and alternative delivery addresses.
 * **Consumer Info** - The `consumer` array enables you to record your customer's contact details. 
-* **Custom Metadata** - You can specify custom metadata properties using the `metadata` array. Each property requires a `key`, `value`, and data `type`. 
 * **Shipment Types** - The `shipment_type` property enables you to record whether a shipment is a delivery, return, pick up, drop off, combined drop off / pick up, or return drop off. 
+* **Custom Metadata** - You can specify custom metadata properties using the `metadata` array. Each property requires a `key`, `value`, and data `type`. 
+
+    > <span class="note-header">More Information:</span>
+    > Adding metadata enables you to group shipments together so that they can be tracked from the same page, and to use custom properties to enrich the notifications that you send to your customers.
+    >
+    > * For more information on grouping shipments, see the [Grouping Shipments](/react/help/grouping-shipments.html) page.
+    > * For more information on configuring notifications, see the [Configuring Notifications](/react/help/notifications.html) page.
 
 ### Why Register Additional Information?
 
