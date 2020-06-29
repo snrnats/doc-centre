@@ -1,0 +1,27 @@
+{
+    "markdown-pdf.displayHeaderFooter": true,
+    "markdown-pdf.styles": [
+        ".styles/markdown.css",
+        ".styles/markdown-pdf.css"
+      ],
+    
+      
+    "markdown-pdf.headerTemplate": "<div></div>",
+    "markdown-pdf.footerTemplate": "<div style=\"color: #404040; font-size: 9px; font-family:'Circular Pro Book'; margin: 0 auto;\"> Page <span class='pageNumber'></span> of <span class='totalPages'></span></div>",
+    "markdown.styles": [".styles/markdown.css"],
+    "cSpell.language": "en-GB",
+    "cSpell.words": [
+      "Kubernetes",
+      "forma",
+      "lowercase",
+      "onwardly",
+      "personas",
+      "ruleset",
+      "rulesets",
+      "waybill"
+    ],
+    "[markdown]": {
+      "editor.quickSuggestions": true,
+      "editor.wordBasedSuggestions": false
+  }
+}

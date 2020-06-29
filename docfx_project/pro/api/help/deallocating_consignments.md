@@ -1,3 +1,11 @@
+---
+uid: pro-api-help-deallocating-consignments
+title: Deallocating Consignments
+tags: allocation,pro,api,consignments
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 28/05/2020
+---
+
 # Deallocating Consignments
 
 Change of plans for a consignment? This page explains how to deallocate consignments from their carrier services both individually and in bulk.
@@ -8,7 +16,7 @@ Change of plans for a consignment? This page explains how to deallocate consignm
 
 A consignment cannot be edited once it is allocated. In order to edit or cancel an allocated consignment, or to allocate it to a different carrier service, you will first need to deallocate it.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > For more information on editing existing consignments, see the <a href="/pro/api/help/updating_existing_consignments.html"> Updating Existing Consignments</a> page.
 
@@ -30,12 +38,9 @@ Once the request is received, PRO deallocates each of the listed consignments in
 
 This examples shows a request to deallocate three consignments.
 
-<div class="tab">
-    <button class="staticTabButton">Example Deallocate Consignments Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'deallocateConsignmentsRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Deallocate Consignments Request](#tab/deallocate-consignments-request)
 
-<div id="deallocateConsignmentsRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'deallocateConsignmentsRequest')">
+`PUT https://api.electioapp.com/consignments/deallocatelist`
 
 ```json
 [
@@ -45,14 +50,7 @@ This examples shows a request to deallocate three consignments.
 ]  
 ```
 
-</div> 
-
-<div class="tab">
-    <button class="staticTabButton">Example Deallocate Consignments Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'deallocateConsignmentsResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="deallocateConsignmentsResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'deallocateConsignmentsResponse')">
+# [Deallocate Consignments Response](#tab/deallocate-consignments-response)
 
 ```json
 [
@@ -76,15 +74,10 @@ This examples shows a request to deallocate three consignments.
     }
 ]
 ```
-
-</div> 
+---
 
 ## Next Steps
 
 * Learn about alternative methods of allocating consignments at the [Allocating Consignments](/pro/api/help/allocating_consignments.html) page.
 * Learn how to get and print delivery labels at the [Getting Labels](/pro/api/help/getting_labels.html) page.
 * Learn how to add consignments to a carrier manifest at the [Manifesting Consignments](/pro/api/help/manifesting_consignments.html) page.
-
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>

@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-allocating-using-default-allocation-rules
+title: Allocate Using Default Allocation Rules
+tags: allocation,pro,api,consignments
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 29/05/2020
+---
 # Allocate Using Default Allocation Rules
 
 To page explains how to use the **[Allocate Using Default Rules](https://docs.electioapp.com/#/api/AllocateUsingDefaultRules)**  and [Allocate Consignment](https://docs.electioapp.com/#/api/AllocateConsignment) endpoints to allocate consignments based on your pre-defined allocation rules.
@@ -24,23 +31,18 @@ To call **Allocate using Default Rules**, send a `PUT` request to `https://api.e
 
 Once the request is received, SortedPRO takes each consignment in turn and allocates it to the cheapest eligible carrier, as per the process detailed in the [Overview](#overview). It then returns an array of Allocation Summaries, one for each allocated consignment. 
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >  For full reference information on the <strong>Allocate Using Default Rules</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/AllocateUsingDefaultRules">Allocate Using Default Rules</a></strong> page of the API reference. 
 
 ### Allocate Using Default Rules Example
 
 The example shows a request to allocate three consignments via default rules. 
 
-<div class="tab">
-    <button class="staticTabButton">Example Allocate Using Default Rules Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'allocationUDRRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Allocate Using Default Rules Request](#tab/allocate-using-default-rules-request)
 
-<div id="allocationUDRRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'allocationUDRRequest')">
+`PUT https://api.electioapp.com/allocation/allocate`
 
 ```json
-PUT https://api.electioapp.com/allocation/allocate
-
 {
   "ConsignmentReferences": [
     "EC-000-05B-MMA",
@@ -49,8 +51,7 @@ PUT https://api.electioapp.com/allocation/allocate
   ]
 }
 ```
-
-</div>
+---
 
 ## Allocating a Single Consignment
 
@@ -62,20 +63,14 @@ Once the request has been received, SortedPRO uses the process detailed in the [
 
 The example shows a request to allocate a consignment with a `{consignmentReference}` of _EC-000-05A-Z6S_ via the **Allocate Consignment** endpoint. 
 
-<div class="tab">
-    <button class="staticTabButton">Example Allocate Consignment Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'allocateConRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="allocateConRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'allocateConRequest')">
+# [Allocate Consignment Request](#tab/allocate-consignment-request)
 
 ```json
 PUT https://api.electioapp.com/allocation/EC-000-05A-Z6S/allocatewithcheapestquote
 ```
+---
 
-</div>
-
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 >  For full reference information on the <strong>Allocate Consignment</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/AllocateConsignment">Allocate Consignment</a></strong> page of the API reference. 
 
@@ -84,7 +79,3 @@ PUT https://api.electioapp.com/allocation/EC-000-05A-Z6S/allocatewithcheapestquo
 * Learn about alternative methods of allocating consignments at the [Allocating Consignments](/pro/api/help/allocating_consignments.html) page.
 * Learn how to get and print delivery labels at the [Getting Labels](/pro/api/help/getting_labels.html) page.
 * Learn how to add consignments to a carrier manifest at the [Manifesting Consignments](/pro/api/help/manifesting_consignments.html) page.
-
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>

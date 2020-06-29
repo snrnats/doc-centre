@@ -29,7 +29,7 @@
   items:
   - name: Allocating Using Default Allocation Rules
     href: allocating_using_default_allocation_rules.md
-  - name: Allocating Via Service Group
+  - name: Allocating via Service Group
     href: allocating_via_service_group.md        
   - name: Allocating to a Specific Carrier Service
     href: allocating_to_a_specific_carrier_service.md

@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-flows-consumer-options-pickup-flow
+title: Consumer Options Pickup Flow
+tags: pro,api,consignments,flows,options,delivery,pickup
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 29/05/2020
+---
 # Consumer Options Pickup Flow
 
 <p>
@@ -8,9 +15,9 @@
 
 The **Consumer Options** flow can also be used to power Pick Up / Drop-Off (PUDO) services. By integrating PRO's **Pickup Options** endpoint, you can build click-and-collect functionality that lets your customers select a pickup location and collection date.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
-> Access to PRO's delivery and pickup option endpoints requires a SortedHERO license. This component is sold separately to the main SortedPRO product. 
+> Access to PRO's delivery and pickup option endpoints requires a SortedHERO license. This component is sold separately to the main SortedPRO product.
 
 There are four steps to the flow:
 
@@ -19,7 +26,7 @@ There are four steps to the flow:
 3. **Get the consignment's labels** - Use the [Get Labels in Format](https://docs.electioapp.com/#/api/GetLabelsinFormat) endpoint to get the delivery label for your consignment.
 4. **Manifest the consignment** - Use the [Manifest Consignments from Query](https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery) endpoint to send consignment data to the selected carrier.
 
-This section gives more detail on each step of the flow and provides worked examples. 
+This section gives more detail on each step of the flow and provides worked examples.
 
 ---
 
@@ -54,5 +61,3 @@ This section gives more detail on each step of the flow and provides worked exam
 ### Next Steps
 
 Read on to learn how to use delivery options to fulfil multiple-consignment orders.
-
-[!include[scripts](../../includes/scripts.md)]
