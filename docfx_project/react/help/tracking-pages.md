@@ -6,7 +6,7 @@ REACT's handy **Create Tracking Page** feature enables you to build branded ship
 
 ## What Is A Tracking Page?
 
-A REACT tracking page is a customisable microsite, hosted by Sorted, that displays status and event information about an individual shipment. Your customers can track their order simply by visiting the link that corresponds to their shipment. 
+A REACT tracking page is a customisable microsite, hosted by Sorted, that displays status and event information about an individual shipment or group of shipments. Your customers can track their order simply by visiting the link that corresponds to their shipment. 
 
 All REACT tracking pages have the same basic layout, with a navigation bar at the top of the page and a grid of page elements (such as tracking information, text or graphics) underneath.
 
@@ -165,7 +165,7 @@ Next, select the **Type** of element you want to add. The fields required differ
 To configure a **Status Timeline** element:
 
 1. Select **Status Timeline** from the **Type** menu.
-2. Select whether you want to view _Locale_ labels or _Shipment State_ labels from the **Choose Display Type** menu. If you select _Locale_ labels, then the page will display your custom shipment state labels instead of state names. If you select _Shipment State_labels, then the page will display default state names.
+2. Select whether you want to view _Locale_ labels or _Shipment State_ labels from the **Choose Display Type** menu. If you select _Locale_ labels, then the page will display your custom shipment state labels instead of state names. If you select _Shipment State_ labels, then the page will display default state names.
 
 > <span class="note-header">More Information:</span>
 >
@@ -227,11 +227,13 @@ Once you're happy with your page, click **Publish** to publish it.
 
 ![Publish Button2](images/tracking-pages/publish-button2.png)
 
-You can now share the link to the page with your customers. The **Link** panel displays sharable links to your page, using various combinations of shipment properties to identify the shipment to be tracked.
+You can now share the link to the page with your customers. The **Link** panel displays sharable links to your page, using various combinations of shipment properties to identify the shipment or shipment group to be tracked.
 
 ![Links Panel](images/tracking-pages/links-panel.png)
 
-REACT tracking page links take the format `https://react.sorted.com/tracking/[page_Title]?customer_Id=[customer_Id]&shipment_Id=[shipment_Id]&tracking_reference=[tracking_reference]&custom_reference=[custom_reference]`, where `page_Title` is the title of your tracking page and `customer_Id` is your REACT customer ID.  
+### Linking to Individual Shipments
+
+Links to individual pages take the format `https://react.sorted.com/tracking/[page_Title]?customer_Id=[customer_Id]&shipment_Id=[shipment_Id]&tracking_reference=[tracking_reference]&custom_reference=[custom_reference]`, where `page_Title` is the title of your tracking page and `customer_Id` is your REACT customer ID.  
 
 There are three search parameters you can use when passing links to your consumer so that they can identify an individual shipment; `shipment_Id`, `tracking_reference` and `custom_reference`.
 
@@ -240,8 +242,6 @@ REACT uses the following logic when identifying shipments to be tracked:
 * If you specify a `shipment_Id` then REACT uses that value alone to identify the shipment, as the REACT Shipment ID is a unique identifier for every shipment registered with REACT.
 * If you specify a `tracking_reference`, `custom_reference`, or both, then REACT searches for all shipments with those details created in the last month and displays details for the first shipment found.
 * If no parameters are provided, the REACT returns an error.
-
-### Example Tracking Link
 
 As an example, suppose that a retailer with a `customer_Id` of *cs_1234567890* creates a page with a `page_Title` of *awesomepage*. That retailer then registers a shipment with the following details: 
     
@@ -259,9 +259,23 @@ However, if the retailer did not have the REACT shipment ID of that shipment to 
 
 In this example, both of these links would point to the same shipment.
 
-> <span class="note-header">Note:</span>
-> 
-> Currently, all tracking pages use a `www.sorted.com` domain. Support for custom domains will be considered for a future release.
+## Linking to Shipment Groups
+
+REACT shipment groups are collections of shipments that share a common metadata property. Grouped shipments can be tracked from the same tracking page, with a drop-down picker on the tracking widget enabling the customer to select which shipment's tracking information they want to view. This is useful in circumstances where an order would take more than one shipment to fulfil, for example.
+
+![grouped_shipments](images/grouped_shipments.png)
+
+Tracking page links to shipment groups take the format `https://react.sorted.com/tracking/[page_title]?customer_id=[customer_id_here]&metadata_key=[metadata_key_here]&metadata_value=[metadata_value_here]`, where `[page_title]` is the title of your tracking page, `[customer_id_here]` is your REACT customer ID, and the metadata key and value are the properties that the shipments share.
+
+As an example, suppose that a customer with a `customer_id` of _cs_1234567890_ creates a tracking page called _examplePage_. The customer then registers two shipments from the same order, grouping them together using a metadata key of `order_ref` with a value of _1234_. To enable their customer to track both shipments on the order from the same page, they would share the following link: 
+
+`https://react.sorted.com/tracking/examplePage?customer_id=cs_1234567890&metadata_key=order_ref&metadata_value=1234`
+
+Note that REACT only displays the drop-down shipment picker and grouping information if you access the shipment via the shipment group link (that is, you use the shared metadata `key` and `value` to identify the shipments to be displayed). You can still use other valid tracking page link formats to view a shipment that is in a group, but REACT does not display links to other shipments in the group in this case.
+
+> <span class="note-header">More Information:</span>
+>
+> For more information on grouping REACT shipments, see the [Grouping Shipments](/react/help/grouping-shipments.html) page.
 
 ## Managing Existing Pages
 
