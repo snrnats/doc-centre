@@ -1,47 +1,31 @@
-<div class="tab">
-    <button class="staticTabButton">Allocate With Quote Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'allocateWithQuoteEndpoint')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Allocate with Quote Endpoint](#tab/allocate-with-quote-endpoint)
 
-<div id="allocateWithQuoteEndpoint" class="staticTabContent" onclick="CopyToClipboard(this, 'allocateWithQuoteEndpoint')">
-
-```
+```json
 PUT https://api.electioapp.com/allocation/{consignmentReference}/allocatewithquote/{quoteReference}
 ```
 
-</div>  
+---
 
 To allocate an individual consignment based on a specific delivery quote from a carrier, use the **[Allocate With Quote](https://docs.electioapp.com/#/api/AllocateWithQuote)** endpoint.
 
 The **Allocate With Quote** endpoint takes the `{consignmentReference}` of the consignment you want to allocate and the `{quoteReference}` of a particular quote. Once the request is received PRO attempts to allocate the consignment to the carrier service specified in the quote, and returns an Allocation Summary.
 
-> <span class="note-header">Note:</span>
-> * For full reference information on the <strong>Allocate With Quote</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/AllocateWithQuote">Allocate With Quote</a></strong> page of the API reference.
+> [!NOTE]
+>
+> * For full reference information on the **Allocate With Quote** endpoint, see the **[Allocate With Quote](https://docs.electioapp.com/#/api/AllocateWithQuote)** page of the API reference.
 > * For a user guide on allocating to specific delivery quotes, see the [Allocating to a Specific Quote](/pro/api/help/allocating_to_a_specific_quote.html) page.
 
 ### Allocate With Quote Example
 
 The example shows a request to allocate a consignment with a `{consignmentReference}` of _EC-000-05B-N40_ to the carrier service associated with a quote that has the `{quoteReference}` _112236d5-4460-492f-a6bd-aa3f00f62dfb_.
 
-<div class="tab">
-    <button class="staticTabButton">Example Allocate With Quote Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'allocateWithQuoteRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Allocate with Quote Request](#tab/allocate-with-quote-request)
 
-<div id="allocateWithQuoteRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'allocateWithQuoteRequest')">
-
-```
+```json
 PUT https://api.electioapp.com/allocation/EC-000-05B-N40/allocatewithquote/112236d5-4460-492f-a6bd-aa3f00f62dfb
 ```
 
-</div>  
-
-<div class="tab">
-    <button class="staticTabButton">Example Allocate With Quote Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'allocateWithQuoteResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="allocateWithQuoteResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'allocateWithQuoteResponse')">
+# [Allocate with Quote Response](#tab/allocate-with-quote-response)
 
 ```json
 [
@@ -77,4 +61,4 @@ PUT https://api.electioapp.com/allocation/EC-000-05B-N40/allocatewithquote/11223
 ]
 ```
 
-</div>  
+---
