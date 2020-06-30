@@ -34,7 +34,7 @@ REACT has two endpoints that you can use to get shipment details:
 
 ### Get Shipment by Shipment ID Endpoint
 
-The **Get Shipment by Shipment ID** endpoint returns details of a single shipment by that shipment's REACT `{id}`. To use the **Get Shipment by Shipment ID** endpoint, send a <span class="text--blue text--bold">GET</span> request to `https://api.sorted.com/react/shipments/{id}`.
+The **Get Shipment by Shipment ID** endpoint returns details of a single shipment by that shipment's REACT `{id}`. To use the **Get Shipment by Shipment ID** endpoint, send a `GET` request to `https://api.sorted.com/react/shipments/{id}`.
 
 You can only use this API to get details of your own shipments. If you attempt to get details of another customer's shipments, REACT returns an error.
 
@@ -51,7 +51,7 @@ The **Get Shipments** endpoint returns details of all shipments that meet your s
 | Custom References   | Returns all shipments that have the specified custom reference          | String                                                                          | `custom_references=HB-003`          |
 | Page                | Returns a particular page of results          | Integer                                                                          | `page=2`          |
 
-To use the **Get Shipments** endpoint, send a <span class="text--blue text--bold">GET</span> request to `https://api.sorted.com/react/shipments/search?start=timestamp&end=timestamp&tracking_references=strings&custom_references=strings&page=int`.
+To use the **Get Shipments** endpoint, send a `GET` request to `https://api.sorted.com/react/shipments/search?start=timestamp&end=timestamp&tracking_references=strings&custom_references=strings&page=int`.
 
 > [!NOTE]
 >
@@ -108,7 +108,7 @@ As well as the shipment's registration information, the **Shipment** resource co
 
 The **[Get Tracking Events by Shipment ID](https://docs.sorted.com/react/api/#GetTrackingEventsbyShipmentID)** endpoint enables you to get details of carrier tracking events. **Get Tracking Events by Shipment ID** takes a shipment `{id}` and returns all tracking events associated with that shipment, as well as a summary of shipment details.
 
-To use the **Get Tracking Events by Shipment ID** endpoint, send a <span class="text--blue text--bold">GET</span> request to `https://api.sorted.com/react/tracking/search?shipment_id=string`.
+To use the **Get Tracking Events by Shipment ID** endpoint, send a `GET` request to `https://api.sorted.com/react/tracking/search?shipment_id=string`.
 
 ### The Tracking Events Resource
 
@@ -172,7 +172,7 @@ The **Get Shipment Events** endpoint returns details of all events related to a 
 | Custom References   | Returns all events associated with the specified shipment(s)          | String                                                                          | `custom_references=HB-003`          |
 | Carrier             | Returned all events associated with the specified carrier's shipments | String                                                                          | `carrier=CarrierX`                  |
 
-To use the **Get Shipment Events** endpoint, send a <span class="text--blue text--bold">GET</span> request to `https://api.sorted.com/react/events/search?start=timestamp&end=timestamp&tracking_references=strings&custom_references=strings&carrier=strings`. 
+To use the **Get Shipment Events** endpoint, send a `GET` request to `https://api.sorted.com/react/events/search?start=timestamp&end=timestamp&tracking_references=strings&custom_references=strings&carrier=strings`. 
 
 None of the search parameters are mandatory in themselves, but at least one search parameter must be provided. If you do not provide at least one search parameter, then REACT returns a validation error. 
 
@@ -190,7 +190,7 @@ If REACT finds shipments that meet your criteria, but those shipments do not hav
 
 The **Get Shipment Events by Shipment ID** endpoint takes a shipment `{id}` and returns details of all events related to a particular shipment, as well as a summary of the shipment itself. 
 
-To use the **Get Shipment Events by Shipment ID** endpoint, send a <span class="text--blue text--bold">GET</span> request to `https://api.sorted.com/react/events/search?shipment_id=string`.
+To use the **Get Shipment Events by Shipment ID** endpoint, send a `GET` request to `https://api.sorted.com/react/events/search?shipment_id=string`.
 
 ### The ShipmentEvents Resource
 
@@ -237,7 +237,7 @@ The carrier update would cause two events to be generated: one with an `EventTyp
 
 You can also use the Events API to get further information on shipment states. The **[Get Shipment States History](https://docs.sorted.com/react/api/#GetShipmentStatesHistory)** endpoint takes a shipment `{id}` and returns a history of the shipment states that a particular shipment has been in.
 
-To use the **Get Shipment States History** endpoint, send a <span class="text--blue text--bold">GET</span> request to `https://api.sorted.com/react/events/shipment-states?{id}`. 
+To use the **Get Shipment States History** endpoint, send a `GET` request to `https://api.sorted.com/react/events/shipment-states?{id}`. 
 
 ### The Shipment State Events Resource
 
@@ -288,7 +288,7 @@ REACT enables you to retrieve a maximum of 200 records with any individual API c
 
 All paging links follow a standard format. They are returned in a `_links` object, located after either the 200th or final record returned, whichever is earlier. Each link takes the format `[URL requested]&page=[PAGE NUMBER]`
 
-For example, let's say you want to view all events for the shipments you have with Carrier X. You've sent a <span class="text--blue text--bold">GET</span> request to `https://api.sorted.com/react/events/search?carrier=Carrier%20X&page=1`, which has found around 900 results. After the 200th record, the response from the API would include the following:
+For example, let's say you want to view all events for the shipments you have with Carrier X. You've sent a `GET` request to `https://api.sorted.com/react/events/search?carrier=Carrier%20X&page=1`, which has found around 900 results. After the 200th record, the response from the API would include the following:
 
 # [Paging Links](#tab/paging-links)
 

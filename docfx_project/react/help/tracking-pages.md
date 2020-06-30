@@ -91,7 +91,7 @@ To configure the appearance of your page's nav bar, use the **Navbar** panel:
 6. Select a **Font Colour** by clicking the **Select** button and choosing a colour from the picker. This is the colour of the nav bar's text.
 7. Select a **Font Size** and **Font Weight** for the nav bar's text.
 
-><span class="note-header">Note:</span>
+> [!NOTE]
 >
 > The font options on the **Navbar** panel override any page-wide options you may have selected in the **General** panel.
 

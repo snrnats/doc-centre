@@ -210,7 +210,7 @@ Webhooks are managed in the REACT UI via the **Settings > Webhooks** page. This 
 
    ![create-WH8](images/create-WH8.png)
 
-8. Enter the **Request URL** you want the webhook to send its payload to and select whether you want it to use a <span class="text--green text--bold">POST</span> or <span class="text--orange text--bold">PUT</span> **HTTP method** when sending data to your service.
+8. Enter the **Request URL** you want the webhook to send its payload to and select whether you want it to use a `POST` or `PUT` **HTTP method** when sending data to your service.
 
    If you need to, click **Send Test Webhook** to test your webhook configuration. The panel on the card shows what the payload will look like.
 

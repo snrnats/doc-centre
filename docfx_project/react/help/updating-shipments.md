@@ -13,7 +13,7 @@ This page explains how to use REACT's **Update Shipment** and **Delete Shipment*
 
 ## Updating Shipments
 
-To update a registered shipment, send a <span class="text--orange text--bold">PUT</span> request to `https://api.sorted.com/react/shipments/{id}`, where `{id}` is the REACT ID of the shipment you want to update.
+To update a registered shipment, send a `PUT` request to `https://api.sorted.com/react/shipments/{id}`, where `{id}` is the REACT ID of the shipment you want to update.
 
 The body of the request should be a [Shipment](https://docs.sorted.com/react/api/#UpdateShipment) resource. This resource will to a large extent overwrite the existing shipment details.
 
@@ -66,7 +66,7 @@ Once the shipment has been updated, REACT returns a confirmation response:
 
 ## Deleting Shipments
 
-To delete a shipment, send a <span class="text--red text--bold">DELETE</span> request to `https://api.sorted.com/react/shipments/{id}`, where `{id}` is the REACT ID of the shipment you want to delete. You do not need to include any data in the body of the request.
+To delete a shipment, send a `DELETE` request to `https://api.sorted.com/react/shipments/{id}`, where `{id}` is the REACT ID of the shipment you want to delete. You do not need to include any data in the body of the request.
 
 You can only delete shipments that belong to your organisation. Deleting a shipment means that REACT will no longer track that shipment, and you will no longer be able to use REACT's APIs and Dashboard to get information on it.
 

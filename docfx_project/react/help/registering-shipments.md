@@ -17,7 +17,7 @@ The [Register Shipments](https://docs.sorted.com/react/api/#RegisterShipments) A
 
 ### Sending the Request
 
-To register a shipment, send a <span class="text--green text--bold">POST</span> request to `https://api.sorted.com/react/shipments`. There are lots of properties you can send when you register, but only the (carrier) `tracking_references` array is mandatory. REACT treats the value of the `tracking_references` array as the shipment's primary reference.
+To register a shipment, send a `POST` request to `https://api.sorted.com/react/shipments`. There are lots of properties you can send when you register, but only the (carrier) `tracking_references` array is mandatory. REACT treats the value of the `tracking_references` array as the shipment's primary reference.
 
 Currently, you can only provide one tracking reference in the `tracking_references` array, although multiple references may be supported in a future enhancement to REACT. If you add additional references, REACT returns an error. You can add additional references for the shipment - including your own internal reference numbers - in the `custom_references` array.
 

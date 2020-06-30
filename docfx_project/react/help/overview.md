@@ -109,7 +109,7 @@ REACT's webhooks enable you to build services that respond to shipping events pr
 Webhooks can be configured from the **Settings > Webhooks** tab on the REACT Dashboard. The settings you select on this page depend on the service that is to receive the webhook data. You'll need to know:
 
 * The URL to send the data to.
-* Whether the webhook needs to send using a <span class="text--green text--bold">POST</span> or <span class="text--orange text--bold">PUT</span> method.
+* Whether the webhook needs to send using a `POST` or `PUT` method.
 * The authentication details for the service that will receive the webhook.
 * Whether the request should use any additional headers.
 

@@ -46,7 +46,7 @@ You can use your key by adding an `x-api-key` header to any requests you make. T
 
 **Using the Register Shipments Endpoint**
 
-To register a shipment, send a <span class="text--green text--bold">POST</span> request to the **Register Shipments** endpoint. As a minimum, you'll need to send the following information:
+To register a shipment, send a `POST` request to the **Register Shipments** endpoint. As a minimum, you'll need to send the following information:
 
 * The shipment's tracking reference. REACT will only accept one `tracking_reference` per shipment.
 * JSON `Content-Type` and `Accept` headers. REACT works with JSON data.
@@ -124,7 +124,7 @@ Once the connector is set up, REACT keeps you in the loop by automatically acces
 
 ### Getting Tracking Events
 
-Once you've registered your shipments, your customers will probably want to see how they're getting on. One way to track a shipment in REACT is via the [Get Tracking Events by Shipment ID](https://docs.sorted.com/react/api/#GetTrackingEventsbyShipmentID) endpoint. Send a <span class="text--blue text--bold">GET</span> request to `https://api.sorted.com/react/tracking/search?shipment_id={id}`, where `{id}` is the shipment `id` you obtained when registering the shipment. Don't forget to include your [API key](#registering-a-shipment).
+Once you've registered your shipments, your customers will probably want to see how they're getting on. One way to track a shipment in REACT is via the [Get Tracking Events by Shipment ID](https://docs.sorted.com/react/api/#GetTrackingEventsbyShipmentID) endpoint. Send a `GET` request to `https://api.sorted.com/react/tracking/search?shipment_id={id}`, where `{id}` is the shipment `id` you obtained when registering the shipment. Don't forget to include your [API key](#registering-a-shipment).
 
 This endpoint returns a [Shipment Tracking Events](https://docs.sorted.com/react/api/#GetTrackingEventsbyShipmentID) response, which includes an
 array of all the tracking events that have been logged for that shipment. You can embed this data into your website or app, enabling you to serve real-time tracking information to your customers without directing them away from your site.
@@ -206,7 +206,7 @@ To set one up:
 
    ![create-WH8](images/create-WH8.png)
 
-7. Enter the URL you want the webhook to send its payload to and select whether you want it to use a <span class="text--green text--bold">POST</span> or <span class="text--orange text--bold">PUT</span> HTTP method. If you need to, click **Send Test Webhook** to test your webhook configuration. The panel on the card shows what the payload will look like.
+7. Enter the URL you want the webhook to send its payload to and select whether you want it to use a `POST` or `PUT` HTTP method. If you need to, click **Send Test Webhook** to test your webhook configuration. The panel on the card shows what the payload will look like.
 
    > [!NOTE]
    >
