@@ -1,4 +1,11 @@
-# Integration Guide
+---
+uid: react-help-integration-guide
+title: API User Guide
+tags: react,api,integration
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 29/05/2020
+---
+# API User Guide
 
 SortedREACT's APIs enable you to integrate REACT functionality into your own systems and sites. This section explains how to call REACT's API endpoints.
 
@@ -7,8 +14,6 @@ SortedREACT's APIs enable you to integrate REACT functionality into your own sys
 ## REACT Endpoints
 
 REACT offers the following API endpoints:
-
-<div class="table-1">
 
 | Endpoint                                                                                               | Purpose                                                        |
 | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------- |
@@ -23,9 +28,6 @@ REACT offers the following API endpoints:
 | [Get Shipment Events by Shipment ID](https://docs.sorted.com/react/api/#GetShipmentEventsbyShipmentID) | Retrieve event details by REACT Shipment ID                    |
 | [Get Shipment States History](https://docs.sorted.com/react/api/#GetShipmentStatesHistory)             | Retrieve a shipment's shipment state history                   |
 
-</div>
-<p></p>
-
 ## Calling REACT's APIs
 
 To call any of the APIs, you'll need an API key. You can create one from the **Settings** > **API Keys** tab in the REACT UI.
@@ -36,7 +38,7 @@ To call any of the APIs, you'll need an API key. You can create one from the **S
 
 To use your API key, include it in an `x-api-key` header when making an API call. We also recommend that you include JSON `Content-Type` and `Accept` headers too, as REACT only works with JSON data. 
 
-## Section Contents
+## API User Guide Contents
 
 * [Registering Shipments](registering-shipments.md) - Explains how to use the **Register Shipments** endpoint and the SFTP bulk upload service to add shipments to REACT. 
 * [Retrieving Shipment and Event Data](retrieving-data.md) - Explains how to get data from the **Shipment**, **Tracking**, and **Events** APIs.
