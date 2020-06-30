@@ -1,8 +1,15 @@
+---
+uid: react-help-settings
+title: Settings
+tags: react,ui,settings
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 29/05/2020
+---
 # Settings
 
 This page explains how to use the pages in the REACT UI's **Settings** section to set up API keys, SFTP accounts, carrier connectors and custom state labels. 
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > The **Settings** section also features webhook and shipment filter setup pages. These pages are covered in detail on the [Managing Webhooks](/react/help/managing-webhooks.html) page.
 
@@ -35,7 +42,7 @@ All REACT API keys offer access to all of REACT's API endpoints. For a full list
 
    You should then paste the key into a secure file (that is, a file that can't be accessed by anyone who you wouldn't want to give you API key to).
 
-> <span class="note-header">Note:</span>
+> [!WARNING]
 >
 > It's *really important* that you make a note of your API key, as you can't come back and view it later.
 
@@ -84,7 +91,7 @@ You should then copy and paste the key into a secure file (that is, a file that 
 
 REACT only allows one SFTP account per organisation. If you attempt to create a second SFTP account, REACT displays an error.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > For more information on uploading shipment data to REACT via SFTP, see the [Registering Shipments by SFTP](/react/help/registering-shipments.html#registering-shipments-by-sftp) section of the **Registering Shipments** page.
 
@@ -106,8 +113,8 @@ You must already have an account with the carrier in order to successfully set u
 
 2. Click **Connect** on the tile of the carrier connector you want to set up. Available carrier connectors are displayed as tiles in the **All Carrier Connectors available** section of the screen.
     
-    > <span class="note-header">Note:</span>
-    >Some carriers may display more than one connector. This is because, for these carriers, there are multiple integration methods that REACT can use to get the carrier's data. For example, a particular carrier may allow REACT to get data by API, file download, and web scraping. You should use whichever connection method your carrier account grants you access to.
+    > [!NOTE]
+    > Some carriers may display more than one connector. This is because, for these carriers, there are multiple integration methods that REACT can use to get the carrier's data. For example, a particular carrier may allow REACT to get data by API, file download, and web scraping. You should use whichever connection method your carrier account grants you access to.
    
    ![cc-connect-button](images/cc-connect-button.png)
    
@@ -174,7 +181,7 @@ To set up custom shipment state labels:
    
    ![csl-page](images/csl-page.png)
 
-   > <span class="note-header">Note:</span>
+   > [!TIP]
    >
    > The **Filter States** buttons at the top of the page enable you to filter the states displayed by red / amber / green status.   
 

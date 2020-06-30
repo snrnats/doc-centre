@@ -1,8 +1,17 @@
+---
+uid: react-help-shipment-states
+title: Shipment States
+tags: react,api,states,shipment states
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 29/05/2020
+---
 # Shipment States
 
 This table displays available REACT shipment states and indicates which carriers have tracking events mapped to each state.
 
-<div class="table-1">
+The **Carriers with Mapped Events** column displays the carriers that have a tracking event mapped for each shipment state. If a carrier does not have an event mapped for a particular state then shipments with that carrier can never assume that state, because the carrier does not have any events that correspond to it.
+ 
+You should bear this information in mind when setting up shipment filters, in order to avoid setting up a filter for an state that your carriers do not use. For more information on configuring shipment filters, see [Managing Your Shipment Filters](/react/help/managing-webhooks.html#managing-your-shipment-filters). 
 
 | Shipment Delivery State        | Description                                                                                                            | Carriers with Mapped Events        |
 | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
@@ -58,11 +67,3 @@ This table displays available REACT shipment states and indicates which carriers
 | Shipment issue</br><div class="tamber">(Amber)</div>               | There is an issue with the shipment (e.g. it is over-sized). The carrier will still transport it, but may charge extra | Hermes |
 | Unable to track</br><div class="tred">(Red)</div>               | REACT cannot track the shipment due to an error                                                                        |      |
 | Will be returned to sender</br><div class="tamber">(Amber)</div>   | The shipment will be returned to sender                                                                                | Hermes, Arrow XL, Parcel Force, FedEX (API), DHL Parcel UK, DHL Express, P2P Trackpak (API)|
-
-</div>
-
-> <span class="note-header">Note: </span>
->
-> The **Carriers with Mapped Events** column displays the carriers that have a tracking event mapped for each shipment state. If a carrier does not have an event mapped for a particular state then shipments with that carrier can never assume that state, because the carrier does not have any events that correspond to it.
-> 
-> You should bear this information in mind when setting up shipment filters, in order to avoid setting up a filter for an state that your carriers do not use. For more information on configuring shipment filters, see [Managing Your Shipment Filters](/react/help/managing-webhooks.html#managing-your-shipment-filters). 

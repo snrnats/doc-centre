@@ -1,3 +1,10 @@
+---
+uid: react-help-configuring-notifications
+title: Configuring Notifications
+tags: react,ui,notifications
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 29/05/2020
+---
 # Configuring Notifications
 
 REACT's **Notifications Info** UI page enables you to set up automated email and SMS delivery notifications for your customers without any development work. To configure notifications, you'll need to set up an account with one of REACT's compatible email or SMS providers, give REACT your account details, and configure the details of the notification itself.  
@@ -16,7 +23,7 @@ The REACT notification centre has three components:
 
 The first step in setting up REACT notifications is to create a notification connector. You can set up connectors for your existing [Postmark](https://postmarkapp.com/) (email), [Twilio](https://www.twilio.com/) (SMS), and [SendGrid](https://sendgrid.com/) (email) accounts. Alternatively, you can set up a REACT connector, which enables you to send emails without the need for a third-party service.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > Before you can set up a notification connector to a third-party service, you'll need to set up an account with the relevant provider and have your details to hand. This section explains the information you need to set up a connector to each of the providers.
 
@@ -60,13 +67,13 @@ To verify your domain:
 2. Make a note of the values in the **DKIM Host** and **DKIM Text** fields.
 3. Create a new TXT DNS record on your domain, where Name = DKIM Host and Value = DKIM Text.
 
-> <span class="note-header">Note:</span>
-> For information on creating TXT DNS records, see your domain host's documentation.
+    > [!NOTE]
+    > For information on creating TXT DNS records, see your domain host's documentation.
 
 4. In the REACT UI, click the **Verify** button to verify your domain. REACT checks the domain and indicates whether the domain was successfully verified.
 
-> <span class="note-header">Note:</span>
-> It may take up to 48 hours for the DNS record you created to become verifiable. You can **Cancel** the dialog and return to complete the verification later if required.
+    > [!NOTE]
+    > It may take up to 48 hours for the DNS record you created to become verifiable. You can **Cancel** the dialog and return to complete the verification later if required.
 
 ### Postmark
 
@@ -75,7 +82,7 @@ Before you can set up a connector to Postmark, you'll need to do the following:
 1. Go the the [Postmark](https://postmarkapp.com/) site and set up an account.
 2. Add Sender Signatures or Verified Domains. In order to send emails via Postmark you'll need to have a Sender Signature set up for each email address you want to send from. Alternatively, you can verify all addresses in a particular domain by setting up a Verified Domain.
 
-    > <span class="note-header">More Information: </span>
+    > [!NOTE]
     >
     > For more information on setting up Sender Signatures, see [this page](https://postmarkapp.com/support/article/846-how-can-i-send-on-behalf-of-my-users) of the Postmark documentation.
     >
@@ -83,7 +90,7 @@ Before you can set up a connector to Postmark, you'll need to do the following:
 
 3. Set up Postmark email templates. Any templates you set up will automatically be made available to select when you set up notifications in REACT.
 
-    > <span class="note-header">More Information: </span>
+    > [!NOTE]
     >
     > For more information on configuring Postmark email templates, see [Postmark's documentation](https://postmarkapp.com/support/sending-emails#templates)
 
@@ -113,13 +120,13 @@ Before you can set up a connector to SendGrid, you'll need to do the following:
 1. Go the the [SendGrid](https://sendgrid.com) site and set up an account.
 2. Verify your sender details.
 
-    > <span class="note-header">More Information: </span>
+    > [!NOTE]
     >
     > For more information on verifying your SendGrid sender details, see [SendGrid's documentation](https://sendgrid.com/docs/ui/account-and-settings/verifying-your-account/)
 
 3. Set up SendGrid email templates. Any templates you set up are automatically made available to select when you set up notifications in REACT.
 
-    > <span class="note-header">More Information: </span>
+    > [!NOTE]
     >
     > For more information on configuring SendGrid email templates, see [SendGrid's documentation](https://sendgrid.com/docs/ui/sending-email/create-and-edit-legacy-transactional-templates/)
 
@@ -127,7 +134,7 @@ Before you can set up a connector to SendGrid, you'll need to do the following:
 
    ![sendgrid3a](images/notifications/sendgrid3a.png)
 
-    > <span class="note-header">More Information: </span>
+    > [!NOTE]
     >
     > You can only view your SendGrid API key immediately after creating it. For more information on setting up SendGrid API keys, see [SendGrid's documentation](https://sendgrid.com/docs/ui/account-and-settings/api-keys/)
 
@@ -153,7 +160,7 @@ Before you can set up a connector to Twilio, you'll need to do the following:
 1. Go to the [Twilio](https://www.twilio.com/) site and sign up for an account.
 2. Create a Twilio messaging service.
 
-    > <span class="note-header">More Information: </span>
+    > [!NOTE]
     >
     > For more information on creating Twilio messaging services, see [Twilio's documentation](https://www.twilio.com/docs/notify/quickstart/sms#create-a-messaging-service)
 
@@ -161,7 +168,7 @@ Before you can set up a connector to Twilio, you'll need to do the following:
 
    ![twilio1](images/notifications/twilio1.png)    
 
-    > <span class="note-header">More Information: </span>
+    > [!NOTE]
     >
     > For more information on obtaining your Twilio authentiication details, see [Twilio's documentation](https://support.twilio.com/hc/en-us/articles/223136027-Auth-Tokens-and-How-to-Change-Them)
 
@@ -242,6 +249,7 @@ A merge tag is a snippet of JSON that denotes the data that should be inserted i
 
 The full merge tag structure is:
 
+# [Example Merge Tag](#tab/example-merge-tag)
 ```json
 {
  "Consumer": {
@@ -259,12 +267,13 @@ The full merge tag structure is:
  "Key2": "Value2"
 }
 ```
+---
 
 In practice, you would likely use merge tags one field at a time, rather than as a single JSON object. For example, you might enter the following example as notification text:
 
 Hi `{{Consumer.FirstName}}`! Your package is on its way. To keep an eye on it, go to `{{TrackingPageUrl}}`.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > When configuring Twilio notifications, the `TrackingPageUrl` property _only_ requires triple curly brackets, rather than the standard double curly brackets. For Twilio, you would need to enter the above example as:
 >
@@ -272,6 +281,7 @@ Hi `{{Consumer.FirstName}}`! Your package is on its way. To keep an eye on it, g
 
 The metadata keys at the bottom enable you to further customise the information available in your notifications by adding metadata from your shipments. For example, supposed that you register a shipment with a `Contents` metadata property, which you use to supply a description of the shipment contents, as follows:
 
+# [Example Metadata Property](#tab/example-metadata-property)
 ```json
       "metadata": [
         {
@@ -281,12 +291,13 @@ The metadata keys at the bottom enable you to further customise the information 
         },
       ],
 ```
+---
 
 You could then further enhance your notification by adding shipment contents to the text. For example:
 
 Hi `{{Consumer.FirstName}}`! The package with your `{{Contents}}` in is on its way. To keep an eye on it, go to `{{TrackingPageUrl}}`.
 
-> <span class="note-header">More Information:</span>
+> [!TIP]
 >
 > Merge tags can only display information about a shipment if that shipment has the relevant information registered. In the example above, this would require you to register a customer's first name, and a `Contents` metadata property. 
 >
@@ -334,13 +345,13 @@ To create a new notification:
 
 4. Enter a **Name** for the notification.
 5. Select the **Shipment Filter** that you want to use as a trigger for the notification.
-    > <span class="note-header">Note:</span>
+    > [!NOTE]
     >
     > If you have not yet created the shipment filter you want to use, click **Create Shipment Filter**. REACT redirects you to the **Create & Manage Shipment Filters** page. When you have set your shipment filter up, return to the **Settings > Notification Centre > Notification Set Up** page to configure your notification. 
 6. Enter your notification content. This step differs depending on whether you are setting up SMS or email notifications:
     * If you are setting up email notifications, select the email template you want to use from the **Select Email Template** drop-down list. 
 
-        ><span class="note-header">Note:</span>
+        > [!NOTE]
         >
         > * For REACT notifications, this list displays the templates you have configured for the selected connector on the **Notification Templates** UI page. 
         > * For SendGrid notifications, the list is automatically populated using the templates you have set up in SendGrid. 
@@ -352,12 +363,12 @@ To create a new notification:
 
     ![notification-sms-text](images/notifications/notification-sms-text.png) 
 
-    > <span class="note-header">Note:</span>
+    > [!NOTE]
     >
     > Merge tags enable you to inject specific customer details such as names and addresses into your notifications. For more information on merge tags, see the [Using Merge Tags](#using-merge-tags) section. 
 
 7. If required, select a REACT tracking page from the **Select Tracking Page** drop-down list. If you select a tracking page, then REACT will insert a tracking link into the notification.
-    > <span class="note-header">More Information:</span>
+    > [!NOTE]
     >
     > For more information on setting up REACT tracking pages, see the [Creating Tracking Pages](https://docs.sorted.com/react/tracking-pages/) page.
 8. If you want to activate the notification immediately after saving, select the **Activate This Notification** check box.
