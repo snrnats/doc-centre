@@ -1,3 +1,10 @@
+---
+uid: react-help-monitoring-shipments
+title: Monitoring Shipments
+tags: react,ui,shipments
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 29/05/2020
+---
 # Monitoring Shipments
 
 REACT's dashboards make keeping track of your shipment performance easy. This page explains how to use REACT's **States** and **All Shipments** dashboards to get timely information on how your shipments are progressing, and to spot potential problems.
@@ -22,7 +29,7 @@ For a full list of REACT shipment states, including their colour classification,
 
 The **States** dashboard has two sections: a map indicating the delivery locations of your shipments and a row of tiles indicating how many of your shipments are in each colour status.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > Only those shipments for which REACT holds an origin address are displayed on the map. For more information on registering shipment data, see the [Registering Extra Shipment Information](/react/help/registering-shipments.html#registering-extra-shipment-information) section of the [Registering Shipments](/react/help/registering-shipments.html) page. 
 
@@ -116,7 +123,7 @@ Shipment notes are grouped by date. To view notes for a particular date, click t
 
 Adding shipment notes can help you to manage exceptions and customer service enquiries, enabling you to record any action or communication that has taken place for that specific shipment.
 
-> <span class="note-header">Note:</span>
+> [!TIP]
 >
 > The shipment information displayed in the REACT UI is largely populated from the information provided at registration. The more information you provide at registration, the more useful this page will be. For more information on the information you can provide at registration, see the [Registering Shipments](/react/help/registering-shipments.html) page.
 
@@ -134,7 +141,7 @@ If REACT finds multiple shipments matching your criteria, then it opens the **Al
 
 REACT's dashboards enable you to filter the data displayed. Filtering can be particularly handy if you have large volumes of data to work with. You can filter data by **Carriers**, **States**, **Shipment Origin**, **Shipment Destination**, **Order Date**, **Shipped Date**, **Promised Date**, **Estimated Date**, and **Shipment Type**.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > By default, REACT's dashboards only display those shipments created in the last 14 days. You can override this default filtration by adding your own date filters.
 
@@ -154,7 +161,7 @@ To filter data:
      
        Selected options are displayed in the right-hand column. To deselect an option, click on it.
 
-       > <span class="note-header">Note:</span>
+       > [!NOTE]
        >
        > The **Carriers** list only displays those carriers for which you have an active carrier connector.
 

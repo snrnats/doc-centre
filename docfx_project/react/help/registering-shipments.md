@@ -14,7 +14,7 @@ To register a shipment, send a <span class="text--green text--bold">POST</span> 
 
 Currently, you can only provide one tracking reference in the `tracking_references` array, although multiple references may be supported in a future enhancement to REACT. If you add additional references, REACT returns an error. You can add additional references for the shipment - including your own internal reference numbers - in the `custom_references` array.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > As with other REACT APIs, you'll need to include JSON `Content-Type` and `Accept` headers and a valid API key in order to use the **Register Shipments** endpoint. You can get an API key from the **Settings > API Keys** page of the REACT UI. 
 >
@@ -110,13 +110,13 @@ In order to upload to the REACT SFTP service, you will need:
 
 You can request these details from Sorted. Note that your SFTP username and passphrase are not the same as the username and password you use to log into the REACT UI.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > REACT private keys are provided in OpenSSH format. If your SFTP client does not support OpenSSH keys you will need to convert the key provided into the appropriate format. Consult your SFTP client's documentation for further information. 
 
 The shipment data you want to upload should be stored in either a JSON or CSV file. The shipment data in this file should be structured in the same way as the data accepted by the **Register Shipments** endpoint, with one exception: when uploading a CSV file, the property that accepts tracking references should be called `tracking_reference`, rather than `tracking_references` (plural) as is the case when uploading a JSON file or making a direct request to the **Register Shipments** endpoint. 
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > For more information on representing shipment data in CSV format, see the [CSV File Structure](/react/help/registering-shipments.html#csv-file-structure) section.
 >
@@ -284,7 +284,7 @@ However, REACT will process files that have the same name as a file that has bee
 
 Registering shipments with a carrier tracking reference alone is enough to get started with REACT's tracking features, but REACT works best when you give it more shipment data to use. 
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 >This section gives an overview of the extra information you can provide when registering a shipment. For full details of all the properties accepted by the **Register Shipments** endpoint, and the structure you should use when making the request, see the [API Reference](https://docs.sorted.com/react/api/#RegisterShipments).
 
@@ -293,7 +293,7 @@ The **Register Shipments** endpoint enables you to register:
 * **References** - As well as the mandatory carrier tracking reference array, you can also register additional `custom_references` for the shipment. Custom references do not need to be unique (i.e. you can register the same custom reference for multiple shipments if required), but we would recommend that you use unique custom references where possible to help you retrieve shipment data easily.
 * **Tags** - Tags enable you to associate related shipments (such as all shipments of a particular product, or all shipments of products on special offer) with each other. You can also use tags to select the shipments that go into your shipment filters.
 
-   > <span class="note-header">Note:</span>
+   > [!NOTE]
    >
    > You can add up to 20 tags to a shipment, and each tag must be between three and 30 characters long. If you attempt to add more than 20 tags then only the first 20 are stored. Tags are not case-sensitive, and you cannot add duplicate tags within the same shipment.
 * **Carrier Details** - If required, you can register `carrier`  and `carrier_service` details.

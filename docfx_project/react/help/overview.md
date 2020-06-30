@@ -1,3 +1,10 @@
+---
+uid: react-help-overview
+title: Overview
+tags: react,api,ui,getting started
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 29/05/2020
+---
 # REACT Overview
 
 Welcome to SortedREACT! Here you'll find a brief overview of REACT's component parts and what you can do with them.
@@ -24,14 +31,11 @@ REACT is based around three fundamental concepts: shipments, tracking events, an
 
 A typical REACT shipment lifecycle might look something like this:
 
-<div class="noborder">
-  <img src="images/react-overview-diagram-v2.png"/>
-</div>
-<!-- This dodgy hack is necessary because Gatsby ignores any classes you apply to images themselves, apparently -->
+![react-overview-diagram-v2](images/react-overview-diagram-v2.png)
 
 1. A shipment is registered for tracking in REACT. You can register shipments via either the [Register Shipments](https://docs.sorted.com/react/api/#RegisterShipments) API endpoint or REACT's SFTP upload service. 
 
-   > <span class="note-header">More Information:</span>
+   > [!NOTE]
    > For more information on registering shipments, see the [Registering Shipments](/react/help/registering-shipments.html) page.
 2. REACT continually checks its carrier data for new tracking events relating to the shipment. You'll need to set up carrier connectors via the **Settings > Carrier Connectors** UI page to give REACT access to your tracking information.
 3. Where REACT finds new tracking information, it analyses the tracking event sent by the carrier and uses it to determine the shipment's current state.  
@@ -40,25 +44,25 @@ A typical REACT shipment lifecycle might look something like this:
 
    You can also customise the names used for REACT shipment states via the UI’s **Settings > Custom State Labels** page. For example. you could rename the *Collected By Carrier* REACT shipment state to *With Our Providers*. State labels enable you to communicate tracking information to your customers in your brand's tone of voice or in an alternative language. REACT state labels support up to 8 locales.
 
-   > <span class="note-header">More Information:</span>
+   > [!NOTE]
    > For a full list of available REACT shipment states, see the [Shipment States](/react/help/shipment-states.html) page.
 4. REACT converts the contents of the carrier's tracking update into a standardised REACT tracking event, and associates the contents of that event with the relevant shipment, based on the shipment's carrier tracking reference. If two or more shipments have the same carrier tracking reference, then REACT associates the tracking event with all relevant shipments.
 
-   > <span class="note-header">More Information:</span>
+   > [!NOTE]
    > For information on the structure of REACT's tracking events, see the [Get Tracking Events](https://docs.sorted.com/react/api/#GetTrackingEventsbyShipmentID) API reference.
 5. If a shipment's properties need to be updated as a result of the tracking event (for example, because the shipment's state or promised date have changed), then REACT creates an internal event and updates the shipment's details accordingly. 
 
-   > <span class="note-header">More Information:</span>
+   > [!NOTE]
    >For more information on the structure of REACT's Event objects, see the [Get Event](https://docs.sorted.com/react/api/#GetEvent) API reference.
 6. If the change in shipment properties has triggered any of your webhooks (for example, because you have a webhook set up to listen out for failed deliveries and the shipment's state has changed to *Delivery Failed Card Left*), then REACT sends the shipment's data to you. 
 
-   > <span class="note-header">More Information:</span>
+   > [!NOTE]
    >For more information on setting up webhooks, see the [Managing Webhooks](/react/help/managing-webhooks.html) page.
 7. You can use the webhook data REACT sends to drive services that send automated email, SMS, push, or social media notifications to your customers.
 8. You can also use REACT's webhook data to build services that automatically escalate issues to your carriers or create tickets for your customer service team to manage.
 9. You can use the data from REACT's APIs to drive embedded delivery tracking from your own website, without the need to pass customers off to a carrier portal.
 
-   > <span class="note-header">More Information:</span>
+   > [!NOTE]
    >For more information on retrieving tracking data from REACT, see the [Retrieving Shipment and Event Data](/react/help/retrieving-data.html) page.
 
 ## REACT Components
@@ -74,8 +78,6 @@ REACT is designed to be flexible, enabling you to manage and track shipments in 
 
 REACT offers the following API endpoints, enabling you to offer advanced shipment tracking and management features through your own website or apps:
 
-<div class="table-1">
-
 | Endpoint                                                                                               | Purpose                                                        |
 | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------- |
 | [Register Shipments](https://docs.sorted.com/react/api/#RegisterShipments)                             | Register shipments for tracking                                |
@@ -89,12 +91,9 @@ REACT offers the following API endpoints, enabling you to offer advanced shipmen
 | [Get Shipment Events by Shipment ID](https://docs.sorted.com/react/api/#GetShipmentEventsbyShipmentID) | Retrieve event details by REACT Shipment ID                    |
 | [Get Shipment States History](https://docs.sorted.com/react/api/#GetShipmentStatesHistory)             | Retrieve a shipment's shipment state history                   |
 
-</div>
-<p></p>
-
 To query any of the APIs, you'll need an API key. You can create one from the **Settings > API Keys** tab in the REACT UI. You'll also need to make sure your `accept` and `content-type` headers are set to `application/json`, as REACT only works with JSON data.
 
-> <span class="note-header"> More information:</span>
+> [!NOTE]
 >
 > * For full request and response details for each endpoint, see the [API Reference](https://docs.sorted.com/react/api).
 > * For information on how to register shipment details via API and SFTP, see the [Registering Shipments](/react/help/registering-shipments.html) page.
@@ -118,7 +117,7 @@ In REACT, webhooks are triggered by shipment filters. A shipment filter is a lis
 
 You can create shipment filters from the **Settings > Shipment Filters** tab on the REACT Dashboard.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > For more information on creating and maintaining Shipment Filters and webhooks, see the [Managing Webhooks](/react/help/managing-webhooks.html) page.
 
@@ -137,7 +136,7 @@ REACT's dashboards can be found under the UI's **Dashboard** tab. They give you 
 
 ![states-dashboard](images/states-dashboard.png)
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > For more information on monitoring shipments in the UI, see the [Monitoring Shipments](/react/help/monitoring-shipments.html) page.
 
@@ -153,7 +152,7 @@ The UI's **Settings** tab enables you to configure REACT to receive carrier trac
 
 ![api-key-page](images/api-key-page.png)
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > For more information on configuring REACT in the UI, see the [Settings](/react/help/settings.html) page.
 
@@ -170,7 +169,7 @@ From this screen, as an Administrator, you can:
 
 ![add-user-scn](images/add-user-scn.png)
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > For more information on managing users in the UI, see the [User Management](/react/help/user-management.html) page.
 

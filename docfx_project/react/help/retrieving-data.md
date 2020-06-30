@@ -12,7 +12,7 @@ REACT has three APIs that enable you to retrieve information.
 * The **Tracking** API enables you to retrieve carrier tracking event details in a standardised format. This is the API that you would likely use to drive embedded tracking on your site or apps.
 * The **Events** API enables you to retrieve details of events within REACT (for example, an address or shipment state change).
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > All REACT APIs require you to include JSON `Content-Type` and `Accept` headers and a valid API key as request headers. You can get an API key from the **Settings > API Keys** page of the REACT UI.
 >
@@ -49,7 +49,7 @@ The **Get Shipments** endpoint returns details of all shipments that meet your s
 
 To use the **Get Shipments** endpoint, send a <span class="text--blue text--bold">GET</span> request to `https://api.sorted.com/react/shipments/search?start=timestamp&end=timestamp&tracking_references=strings&custom_references=strings&page=int`.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > You can only retrieve shipments by `custom_references` if you have previously registered that information for the relevant shipments. For more information on registering shipment information, see the [Registering Shipments](/react/help/registering-shipments.html) page.
 
@@ -93,7 +93,7 @@ As well as the shipment's registration information, the **Shipment** resource co
 
 * `shipment.shipment_state.state` - Contains the shipment's current REACT shipment state. REACT uses carrier tracking events to calculate this value. For a full list of available REACT shipment states, see the [Shipment States](/react/help/shipment-states.html) page.
 * `shipment.shipment_state.state_label` - Contains the customer-facing label for the shipment's current state. You can customise shipment state labels using the **Custom State Labels** UI page. If you have not set a custom label up for the shipment state then this field contains the default label text.
-   > <span class="note-header">Note:</span>
+   > [!NOTE]
    >
    > The **Custom State Labels** UI page enables you to set up custom labels in multiple languages. By default, REACT's APIs and webhooks return labels in `en-gb` (English - United Kingdom). To retrieve labels in languages other than `en-gb`, add an `accept-language` header with the relevant language code as its value to your API request.
    > 
@@ -102,7 +102,7 @@ As well as the shipment's registration information, the **Shipment** resource co
 * `shipment.may_be_missing` - Indicates whether REACT believes that the shipment may be missing. REACT marks shipments as `may_be_missing` if they are not updated within a set time period after registration, or if they are not marked as delivered, lost, or refused within a different set time period. REACT can only perform `may_be_missing` calculations for shipments that have a `country_iso_code` recorded for their origin and destination addresses.
 * `shipment.lateness.late` and `shipment.lateness.hours_late` - These properties indicate whether REACT believes a shipment to be late, and (where applicable) how many hours late this shipment is. REACT can only perform lateness calculations for shipments that have a `promised_date` recorded. 
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > This section gives a high-level overview of the information returned by the Get Shipments endpoints. For full reference details of the data returned, see the [Get Shipment Events](https://docs.sorted.com/react/api/#GetShipmentEvents) and [Get Shipment Events by Shipment ID](https://docs.sorted.com/react/api/#GetShipmentEventsbyShipmentID) sections of the API reference.
 
@@ -140,7 +140,7 @@ The `events` object contains any tracking events that are associated with the se
 
 If REACT finds a shipment that meets your criteria, but that shipment does not have associated tracking events, then the Tracking API returns a response containing shipment details only. This feature enables you to distinguish between a _404 Not Found_ response in which data matching the supplied details could not be found, and a _200 OK_ response in which a matching shipment was found but that shipment did not contain any tracking event data.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > This section gives a brief overview of the contents of the **Tracking Event** resource. For full reference information, see the [Get Tracking Events by Shipment ID](https://docs.sorted.com/react/api/#GetTrackingEventsbyShipmentID) section of the API reference.
 
@@ -158,7 +158,7 @@ REACT events are not the same as carrier tracking events. REACT uses events to t
 * A shipment's `shipment_state` changes.
 * A shipment's `promised_date` or `shipped_date` changes.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 > 
 > The Events API returns the same data as REACT's webhooks. You may want to consider implementing webhooks rather than integrating Events endpoints, as webhooks enable REACT to send event data proactively rather than requiring you to make a request. For more information on implementing webhooks, see the [Managing Webhooks](/react/help/managing-webhooks.html) page.
 
@@ -188,7 +188,7 @@ As with all REACT APIs, the **Get Shipment Events** endpoint retrieves a maximum
 
 If REACT finds shipments that meet your criteria, but those shipments do not have associated events, then the Events API returns a response containing shipment details only. This feature enables you to distinguish between a _404 Not Found_ response in which data matching the supplied details could not be found, and a _200 OK_ response in which a matching shipment was found but that shipment did not contain any event data.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > This section gives a brief overview of **Get Shipment Events** requests. For full reference information, see the [Get Shipment Events](https://docs.sorted.com/react/api/#GetShipmentEvents) section of the API reference.
 
@@ -235,7 +235,7 @@ As an example of event grouping, let's suppose that the following sequence of ev
 
 The carrier update would cause two events to be generated: one with an `EventType` of *state_change*, and one with an `EventType` of *key_property_change*. These events would be grouped into the same `EventGroup` object, because they were triggered by the same action.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > This section gives a brief overview of the **ShipmentEvents** resource. For full reference information, see the [Get Shipment Events](https://docs.sorted.com/react/api/#GetShipmentEvents) section of the API reference.
 
@@ -251,7 +251,7 @@ The **Get Shipment States History** endpoint returns a **Shipment State Events**
 
 * **State** - The state that the shipment assumed.
 * **Label** - The custom label corresponding to that shipment state, where applicable.
-   > <span class="note-header">More Information:</span>
+   > [!NOTE]
    >
    > Custom shipment state labels enable you to explain shipment states to your customers in your brand's own tone of voice. For more information on setting up custom shipment state labels, see the [Setting up Custom State Labels](/react/help/settings.html#setting-up-custom-state-labels) section of the **Settings** page.
 * **Timestamp** - The date and time at which the shipment assumed the state in question.
@@ -290,7 +290,7 @@ The following example shows the **Shipment State Events** resource for a shipmen
 
 </div>
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > This section gives a brief overview of the **Shipment State Events** resource. For full reference information, see the [Get Shipment States History](https://docs.sorted.com/react/api/#GetShipmentStatesHistory) section of the API reference.
 

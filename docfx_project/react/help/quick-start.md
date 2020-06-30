@@ -1,3 +1,10 @@
+---
+uid: react-help-quick-start
+title: Quick Start
+tags: react,api,ui,getting started
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 29/05/2020
+---
 # Quick Start
 
 Ready to get started with SortedREACT? This guide explains how to set up [real-time shipment tracking](#setting-up-tracking) and configure [shipment state monitoring](#setting-up-webhooks) via webhooks.
@@ -7,9 +14,9 @@ Ready to get started with SortedREACT? This guide explains how to set up [real-t
 
 To track a shipment in REACT, you'll need to do the following:
 
-1. <strong>Register the shipment.</strong> Registering a shipment lets REACT monitor tracking events in real time and enables you to use APIs to get updates on the shipment's progress.
-2. <strong>Set up a carrier connector</strong> for each of the carriers you work with. Carrier connectors enable REACT to obtain tracking events.
-3. <strong>Get the shipment's details.</strong> You can track shipments using the [Get Tracking Events by Shipment ID](https://docs.sorted.com/react/api/#GetTrackingEventsbyShipmentID) endpoint and the REACT UI.
+1. **Register the shipment**. Registering a shipment lets REACT monitor tracking events in real time and enables you to use APIs to get updates on the shipment's progress.
+2. **Set up a carrier connector** for each of the carriers you work with. Carrier connectors enable REACT to obtain tracking events.
+3. **Get the shipment's details**. You can track shipments using the [Get Tracking Events by Shipment ID](https://docs.sorted.com/react/api/#GetTrackingEventsbyShipmentID) endpoint and the REACT UI.
 
 ### Registering a Shipment
 
@@ -31,7 +38,7 @@ To generate a new API key:
 
    ![api-key-copied2](images/api-key-copied2.png)
 
-> <span class="note-header">Note:</span>
+> [!CAUTION]
 >
 > It's really important that you make a note of your API key, as you can't come back and view it later.
 
@@ -47,12 +54,7 @@ To register a shipment, send a <span class="text--green text--bold">POST</span> 
 
 The full HTTP request for your new shipment should look something like this:
 
-<div class="tab">
-    <button class="staticTabButton">Register Shipments Request & Headers</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'HTTPRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="HTTPRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'HTTPRequest')">
+# [Register Shipments Request & Headers](#tab/register-shipments-request-and-headers)
 
 ```json
 POST /react/shipments HTTPS/1.1
@@ -66,18 +68,12 @@ X-Api-Key: [your-api-key]
     }]
 }
 ```
-
-</div>
+---
 
 Once you've sent the request, REACT will return a <em>201</em> code and a [Shipment Created](https://docs.sorted.com/react/api/#RegisterShipments) response,
 which contains some useful information about the Shipment resource produced. 
 
-<div class="tab">
-    <button class="staticTabButton">Register Shipments Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'rsResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="rsResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'rsResponse')">
+# [Register Shipments Response](#tab/register-shipments-response)
 
 ```json
   {
@@ -94,12 +90,11 @@ which contains some useful information about the Shipment resource produced.
     ]
   }
 ```
-
-</div>
+---
 
 The `id` is particularly important - this is a REACT-generated identifier for this shipment that can be used throughout REACT's APIs. 
 
-> <span class="note-header">Tip:</span>
+> [!TIP]
 > 
 > This example shows the simplest possible Register Shipments request - just a carrier tracking reference. The more data you give REACT when registering shipments, the more the system can do for you. You'll get much better information from webhooks and more flexible retrieval options, including the ability to track shipments via your own company reference. 
 >
@@ -125,7 +120,7 @@ To set up a carrier connector:
 
    ![cc-confirm](images/cc-confirm.png)
 
-Once the connector is set up, REACT keeps you in the loop by automatically accessing tracking data for any registered shipments with that carrier. To enable and disable existing connectors, use the <strong>Active</strong> toggle on the connector's tile.
+Once the connector is set up, REACT keeps you in the loop by automatically accessing tracking data for any registered shipments with that carrier. To enable and disable existing connectors, use the **Active</strong> toggle on the connector's tile.
 
 ### Getting Tracking Events
 
@@ -134,7 +129,7 @@ Once you've registered your shipments, your customers will probably want to see 
 This endpoint returns a [Shipment Tracking Events](https://docs.sorted.com/react/api/#GetTrackingEventsbyShipmentID) response, which includes an
 array of all the tracking events that have been logged for that shipment. You can embed this data into your website or app, enabling you to serve real-time tracking information to your customers without directing them away from your site.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > For more information on retrieving shipment and tracking data from REACT, see the [Retrieving Shipment and Event Data](/react/help/retrieving-data.html) page.
 
@@ -213,7 +208,7 @@ To set one up:
 
 7. Enter the URL you want the webhook to send its payload to and select whether you want it to use a <span class="text--green text--bold">POST</span> or <span class="text--orange text--bold">PUT</span> HTTP method. If you need to, click **Send Test Webhook** to test your webhook configuration. The panel on the card shows what the payload will look like.
 
-   > <span class="note-header">Note:</span>
+   > [!NOTE]
    >
    >The body of the webhook payload is always the [Shipment Events](https://docs.sorted.com/react/api/#GetShipmentEvents) resource for the shipment that triggered the webhook.
 8. When you're happy with your setup, click **Create** to create the webhook.
@@ -232,7 +227,3 @@ We've barely scratched the surface of what you can do with REACT. Read on for mo
 * [Registering Shipments](/react/help/registering-shipments.html)
 * [Managing Webhooks](/react/help/managing-webhooks.html)
 * [Retrieving Shipment and Event Data](/react/help/retrieving-data.html)
-
-<script src="../../pro/scripts/requesttabs.js"></script>
-<script src="../../pro/scripts/responsetabs.js"></script>
-<script src="../../pro/scripts/copy.js"></script>

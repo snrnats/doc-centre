@@ -10,7 +10,7 @@ To update a registered shipment, send a <span class="text--orange text--bold">PU
 
 The body of the request should be a [Shipment](https://docs.sorted.com/react/api/#UpdateShipment) resource. This resource will to a large extent overwrite the existing shipment details.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > You must include the shipment's `tracking_reference` in the body of every **Update Shipment** request you make. If you send a request with no `tracking_reference`, or an amended `tracking_reference` property, then REACT returns a [400 - Validation](/react/help/error-codes.html) error.
 >
@@ -92,7 +92,7 @@ Once the request has been validated, REACT returns a code *202 - Accepted* with 
 
 </div>
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > For a more information on the properties returned by the **Delete Shipment** confirmation message, see the [API Reference](https://docs.sorted.com/react/api/#DeleteShipment).
 

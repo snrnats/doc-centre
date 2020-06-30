@@ -30,7 +30,7 @@ REACT offers the following API endpoints:
 
 To call any of the APIs, you'll need an API key. You can create one from the **Settings** > **API Keys** tab in the REACT UI.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > For more information on getting a REACT API key, see the [Setting up API keys](/react/help/settings.html#setting-up-api-keys) section of the **Settings** page.
 

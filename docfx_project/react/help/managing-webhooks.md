@@ -1,3 +1,10 @@
+---
+uid: react-help-managing-webhooks
+title: Managing Webhooks
+tags: react,ui,webhooks
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 29/05/2020
+---
 # Managing Webhooks
 
 SortedREACT uses webhooks to notify you of shipment events. This page explains how REACT webhooks work, how you can control them using shipment filters, and how to set webhooks and shipment filters up in the UI.
@@ -20,7 +27,7 @@ These timely updates mean that you can automate processes such as customer commu
 
 When a shipment state change triggers a webhook, the webhook sends the **Shipment Events** resource for the event that caused that shipment state change in its payload body. The data sent has the same structure as the response from the **Get Shipment Events** API. 
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > For full reference details of the **Shipment Events** resource, click [here](https://docs.sorted.com/react/api/#GetShipmentEvents). 
 
@@ -39,7 +46,7 @@ However, if a webhook returns a shipment that was registered with additional det
 
 Each REACT webhook must be associated with at least one shipment filter. A shipment filter is a set of shipment conditions that is used as a webhook trigger. When a tracking event causes a shipment to change state so that it meets the criteria set out for a particular shipment filter, any webhooks that are associated with that filter will send their data. 
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 > 
 > All REACT shipments have a current shipment state, which is updated as shipment events occur.
 >
@@ -65,7 +72,7 @@ You'll need to set up your filters before configuring webhooks, as selecting shi
    
    ![filter-name](images/filter-name.png)
 
-   > <span class="note-header">Tip:</span>
+   > [!TIP]
    >
    > Give your filter a name that is related to the business process you want to drive with the filter rather than the communication method you want to use with the customer. For example, "Contact Required" would be a better choice of filter name than "SMS".
 3. Give your filter a name and click **Next** to display a list of available shipment states.
@@ -90,9 +97,9 @@ You'll need to set up your filters before configuring webhooks, as selecting shi
 
 7. If required, add shipment tags by entering a tag name and clicking the plus button. If you select tags then only shipments that are tagged with at least one of those tags can trigger webhooks via your filter.
 
-   > <span class="note-header">Note:</span>
+   > [!NOTE]
    >
-   > Tags can be added to shipments via the **Register Shipments** and **Update Shipments** endpoints. For more information on adding tags to shipments, see the [Registering Extra Shipment Information](/react/help/registering-shipments.html#registering-extra-shipment-information) section of the [Registering Shipments](/react/help/registering-shipments.html) page, and the [Updating Shipments](/react/help/updating-shipments.html) page.
+   > You can add tags to shipments via the **Register Shipments** and **Update Shipments** endpoints. For more information on adding tags to shipments, see the [Registering Extra Shipment Information](/react/help/registering-shipments.html#registering-extra-shipment-information) section of the [Registering Shipments](/react/help/registering-shipments.html) page, and the [Updating Shipments](/react/help/updating-shipments.html) page.
 
    When you have added any tags you need, click **Create Filter** to finish. Your new filter appears as a tile on the **Shipment Filters** page.
 
@@ -128,7 +135,7 @@ Webhooks are managed in the REACT UI via the **Settings > Webhooks** page. This 
 
    ![filters-WH](images/filters-WH.png)
 
-   > <span class="note-header">Tip:</span>
+   > [!TIP]
    >
    > If you haven't set the required shipment filters up yet, click the **Create Shipment Filter** link to jump to the filter creation process. You will lose any unsaved configuration for your webhook.
 4. Select the shipment filter(s) that you want to trigger your webhook and click **Next** to select shipping state label languages.
@@ -161,21 +168,15 @@ Webhooks are managed in the REACT UI via the **Settings > Webhooks** page. This 
          
            For example, if your JWT service requires callers to supply a username and password in the body of the request, you could enter the following into this field:
 
-      <div class="tab">
-         <button class="staticTabButton">Example JWT JSON Request Body</button>
-         <div class="copybutton" onclick="CopyToClipboard(this, 'JWTexample')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-      </div>
+         # [Example JWT JSON Request Body](#tab/example-jwt-json-request-body)
 
-      <div id="JWTexample" class="staticTabContent" onclick="CopyToClipboard(this, 'JWTexample')">
-
-           ```json
-           {
-             "username": "EXAMPLE_USERNAME",
-             "password": "EXAMPLE_PASSWORD"
-           }
-           ```
-
-       </div>
+            ```json
+            {
+               "username": "EXAMPLE_USERNAME",
+               "password": "EXAMPLE_PASSWORD"
+            }
+            ```
+         ---
 
        4. Enter the **HTTP Method** that REACT should use when requesting the token.
             
@@ -183,7 +184,7 @@ Webhooks are managed in the REACT UI via the **Settings > Webhooks** page. This 
 
        5. Enter the header that the webhook should send the resulting JWT token in into the **Request Header** field.
        6. Enter the value mask that REACT should use when sending the resulting token into the **Value Mask Format** field. The token itself should be represented as `$JWT$`.
-          > <span class="note-header">Note:</span>
+          > [!NOTE]
           >
           > The **Request Header** and **Value Mask Format** fields enable you to specify exactly how REACT should use the token it receives from your authentication service. When a JWT-authenticated webhook sends data it places the token inside the header key specified. The corresponding value for this header key is the contents of the **Value Mask Format** field, where `$JWT$` represents the token itself. 
           >
@@ -195,7 +196,7 @@ Webhooks are managed in the REACT UI via the **Settings > Webhooks** page. This 
        
        7. Enter any headers that REACT should use when requesting the token by entering a **Key** and **Value** and clicking the **Add** button.
        8. Click **Next** to finish setting up authentication.
-          > <span class="note-header">Note:</span>
+          > [!NOTE]
           >
           > Your JWT service should be configured to return JWT tokens in the following format: `{"access_token": "[jwt-here]"}`. REACT cannot accept tokens in alternative formats.
   
@@ -213,7 +214,7 @@ Webhooks are managed in the REACT UI via the **Settings > Webhooks** page. This 
 
    If you need to, click **Send Test Webhook** to test your webhook configuration. The panel on the card shows what the payload will look like.
 
-   > <span class="note-header">Note:</span>
+   > [!CAUTION]
    >
    > You should enter your **Request URL** details carefully, as REACT doesn't attempt to re-send data in cases where a webhook could not be received.
 10. When you're happy with your setup, click **Create** to create the webhook. Your new webhook appears as a tile on the **Webhooks** page.
@@ -255,18 +256,13 @@ You could then set the following webhooks up:
 
 During the webhook setup process, you would link the webhooks to the shipment filters as follows:
 
-<div class="noborder">
-  <img src="images/webhooks-diagram-update3.png"/>
-</div>
-<!-- This dodgy hack is necessary because Gatsby ignores any classes you apply to images themselves, apparently -->
-
-<span class="text--caption text--center">Example webhook and shipment filter configuration diagram.</span>
+![webhooks-diagram-update3](images/webhooks-diagram-update3.png)
 
 Note that the shipment filters are based around business processes, and the webhooks are based around the services you want REACT to communicate with. This means that if you want to, say, change the **Updates** filter so that it sends out Whatsapp messages instead of SMS, you could use your existing filter with a new webhook. Equally, if you wanted to use email updates with a new shipment filter, you could simply create the filter and add it to the existing **Email** webhook. 
 
 However, this is only a suggested workflow. REACT enables you to combine shipment filters and webhooks in whatever way you feel is best for your business.
 
-> <span class="note-header">Note:</span>
+> [!TIP]
 >
 > If you use webhooks to set up automated customer communications, consider asking your carrier to disable any automated tracking updates they may send to customers. Otherwise, customers might receive duplicate communications.
 
@@ -281,7 +277,3 @@ Learn more about the REACT UI:
 * [Monitoring Shipments](/react/help/monitoring-shipments.html)
 * [Settings](/react/help/settings.html)
 * [User Management](/react/help/user-management.html)
-
-<script src="../../pro/scripts/requesttabs.js"></script>
-<script src="../../pro/scripts/responsetabs.js"></script>
-<script src="../../pro/scripts/copy.js"></script>

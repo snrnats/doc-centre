@@ -1,3 +1,11 @@
+---
+uid: react-help-ui-help
+title: UI Help
+tags: react,ui
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 29/05/2020
+---
+
 # UI Help
 
 The SortedREACT UI gives a graphical front-end to REACT, enabling administrators to configure the system and also offering shipment monitoring functions for users with _Marketing_ and _Dashboard_ user permissions. This section of the site explains how to use the UI's various functions.
@@ -14,13 +22,13 @@ Enter your **Email** and **Password** and click **Login** to open the **Home Das
 
 You must have a REACT account set up in order to log in to the UI. If you do not have an account set up, contact your REACT administrator. 
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > Each REACT customer has a primary user. This is the "original" admin user that was created during the initial customer setup process. For any login issues with your primary account, contact Sorted support.
 >
 > For more information on user management in REACT, see the [User Management](/react/help/user-management.html) page.
 
-## UI Functions
+## UI Help Contents
 
 The PRO UI enables you to perform the following tasks:
 
