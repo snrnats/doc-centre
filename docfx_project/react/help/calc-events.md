@@ -1,3 +1,10 @@
+---
+uid: react-help-calc-events
+title: Calculated Events
+tags: react,api,calculated events,events
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 29/05/2020
+---
 # Calculated Events
 
 REACT's Calculated Events feature helps you to stay on top of shipments that may have gone missing, or which have passed their delivery promise date. This page explains the shipment properties that REACT can calculate, how calculated events work, and how best to use calculated events
@@ -23,7 +30,7 @@ When REACT updates one of these properties, it creates a calculated event to rec
 
 If REACT believes that a shipment may be lost, it sets that shipment's `may_be_missing` property to _true_. By default, the `may_be_missing` property is set to _false_. 
 
-> [!NOTE]
+> [!CAUTION]
 >
 > `may_be_missing` is always set based on REACT's internal calculations. A `may_be_missing` value of _true_ does not mean that the carrier has notified Sorted that the shipment may be missing.
 
@@ -71,12 +78,12 @@ A shipment is deemed to be non-trackable if any of the following criteria are me
 * The shipment is international (i.e. the `addresses.country_iso_code` of its origin and destination addresses is different) **AND** Sorted has not received a tracking event for it in 10 or more days.
    > [!NOTE]
    >
-   > If we do not know whether a shipment is domestic or international (i.e. it does not have a `addresses.country_iso_code` recorded for both its origin and destination addresses), then it is assumed to be domestic.
+   > If Sorted do not know whether a shipment is domestic or international (that is, it does not have a `addresses.country_iso_code` recorded for both its origin and destination addresses), then it is assumed to be domestic.
 * The shipment is in a [final state](/react/help/calc-events.html#final-states) **AND** Sorted has not received a tracking event for it in three or more days.
 
 ## Final States
 
-REACT uses the concept of "final shipment states" when determining whether shipments are lost or potentially missing. The list of final states covers all the potential outcomes for a shipment delivery. Once a shipment enters a final state, its journey is considered to have ended and REACT no longer tracks it.
+REACT uses "final shipment states" when determining whether shipments are lost or potentially missing. The list of final states covers all the potential outcomes for a shipment delivery. Once a shipment enters a final state, its journey is considered to have ended and REACT no longer tracks it.
 
 The full list of final states is:
 

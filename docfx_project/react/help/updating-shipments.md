@@ -1,3 +1,10 @@
+---
+uid: react-help-updating-shipments
+title: Updating Shipments
+tags: react,api,shipments,updating
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 29/05/2020
+---
 # Updating Shipments
 
 This page explains how to use REACT's **Update Shipment** and **Delete Shipment** endpoints to keep your registered shipment data up to date.
@@ -18,9 +25,7 @@ The body of the request should be a [Shipment](https://docs.sorted.com/react/api
 
 REACT follows the below rules when updating shipments:
 
-<div class="table-1">
-
-| Property                 | Consideration                                                                                                                                                                                                                                                                                                                                                                                        |
+| Property                 | Rule                                                                                                                                                                                                                                                                                                                                                                                        |
 | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `id`                     | You must include the `id` of the shipment in the URL so that REACT can identify the shipment to be updated. However, `id` is a read-only property and cannot be changed manually.                                                                                                                                                                                                                                 |
 | `tracking_references`    | You must include the shipment's `tracking_reference` in the body of the request so that REACT can identify the shipment to be updated. However, `tracking_reference` is a read-only property and cannot be changed manually. If you send a new `tracking_reference`, or add additional `tracking_reference` values, then REACT returns a [400 - Validation](/react/help/error-codes.html) error.            |
@@ -38,16 +43,10 @@ REACT follows the below rules when updating shipments:
 | `metadata`               | You can update metadata at any point. REACT replaces all existing metadata with data sent in the **Update Shipment** request. As such, you should include all required metadata when making an update request, not just new metadata. To delete all metadata, send an empty `metadata` array. If REACT receives a null `metadata` property, no changes are made.                                        |
 | `retailer`               | You can update retailer details at any point.                                                                                                                                                                                                                                                                                                                                                        |
 
-</div>
 
 Once the shipment has been updated, REACT returns a confirmation response:
 
-<div class="tab">
-    <button class="staticTabButton">Update Shipment Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'updShipmentResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="updShipmentResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'updShipmentResponse')">
+# [Update Shipment Response](#tab/update-shipment-response)
 
 ```json
 {
@@ -63,8 +62,7 @@ Once the shipment has been updated, REACT returns a confirmation response:
   ]
 }
 ```
-
-</div>
+---
 
 ## Deleting Shipments
 
@@ -74,12 +72,7 @@ You can only delete shipments that belong to your organisation. Deleting a shipm
 
 Once the request has been validated, REACT returns a code *202 - Accepted* with the following confirmation response in its body:
 
-<div class="tab">
-    <button class="staticTabButton">Delete Shipment Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'delShipmentResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="delShipmentResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'delShipmentResponse')">
+# [Delete Shipment Response](#tab/delete-shipment-response)
 
 ```json
 {
@@ -89,12 +82,11 @@ Once the request has been validated, REACT returns a code *202 - Accepted* with 
   "tracking_references": ["QWERTYUIOOP"]
 }
 ```
-
-</div>
+---
 
 > [!NOTE]
 >
-> For a more information on the properties returned by the **Delete Shipment** confirmation message, see the [API Reference](https://docs.sorted.com/react/api/#DeleteShipment).
+> For more information on the properties returned by the **Delete Shipment** confirmation message, see the [API Reference](https://docs.sorted.com/react/api/#DeleteShipment).
 
 ## Next Steps
 
@@ -103,7 +95,3 @@ Learn more about integrating with REACT:
 * [Registering Shipments](/react/help/registering-shipments.html)
 * [Retrieving Shipment and Event Data](/react/help/retrieving-data.html)
 * [Error Codes](/react/help/error-codes.html)
-
-<script src="../../pro/scripts/requesttabs.js"></script>
-<script src="../../pro/scripts/responsetabs.js"></script>
-<script src="../../pro/scripts/copy.js"></script>

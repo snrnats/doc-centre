@@ -1,3 +1,10 @@
+---
+uid: react-help-retrieving-data
+title: Retrieving Shipment and Event Data
+tags: react,api,shipments
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 29/05/2020
+---
 # Retrieving Shipment and Event Data
 
 SortedREACT's APIs can retrieve shipment, event, and tracking information, enabling you to embed live shipment tracking into your websites and apps. This page explains the endpoints you can use to get this information, and the format in which the information is returned.
@@ -35,7 +42,6 @@ You can only use this API to get details of your own shipments. If you attempt t
 
 The **Get Shipments** endpoint returns details of all shipments that meet your search criteria. It accepts the following parameters:
 
-<div class="table-1">
 
 | Parameter           | Description                                                           | Format                                                                          | Example                             |
 | ------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ----------------------------------- |
@@ -44,8 +50,6 @@ The **Get Shipments** endpoint returns details of all shipments that meet your s
 | Tracking References | Returns the shipment that has the specified tracking reference          | String                                                                          | `tracking_reference=TRK098JKH54ADD` |
 | Custom References   | Returns all shipments that have the specified custom reference          | String                                                                          | `custom_references=HB-003`          |
 | Page                | Returns a particular page of results          | Integer                                                                          | `page=2`          |
-
-</div><br/>
 
 To use the **Get Shipments** endpoint, send a <span class="text--blue text--bold">GET</span> request to `https://api.sorted.com/react/shipments/search?start=timestamp&end=timestamp&tracking_references=strings&custom_references=strings&page=int`.
 
@@ -61,12 +65,7 @@ You can only add a maximum of one `tracking_reference` to your request. As such,
 
 Where a valid request is made but no matching shipments are found, REACT returns an empty array with a link to the resource itself. Note that in this scenario the response has a code _200 OK_ rather than _404 Not Found_, as the request itself is valid even though there are no shipments currently matching your search criteria.
 
-<div class="tab">
-    <button class="staticTabButton">No Matching Shipments Example</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'nmsExample')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="nmsExample" class="staticTabContent" onclick="CopyToClipboard(this, 'nmsExample')">
+# [No Matching Shipments Example](#tab/no-matching-shipments-example)
 
 ```json
 {
@@ -80,8 +79,7 @@ Where a valid request is made but no matching shipments are found, REACT returns
   ]
 }
 ```
-
-</div>
+---
 
 As with all REACT APIs, the **Get Shipments** endpoint retrieves a maximum of 200 records with any single request. Where more than 200 records exist, paging links to the next and previous set of results, as well as the first and last set of results, are returned. The `page` parameter enables you to request a particular page of results. See the [Paging Results](#paging-results) section for more information on paging in REACT's APIs.
 
@@ -158,15 +156,13 @@ REACT events are not the same as carrier tracking events. REACT uses events to t
 * A shipment's `shipment_state` changes.
 * A shipment's `promised_date` or `shipped_date` changes.
 
-> [!NOTE]
+> [!TIP]
 > 
 > The Events API returns the same data as REACT's webhooks. You may want to consider implementing webhooks rather than integrating Events endpoints, as webhooks enable REACT to send event data proactively rather than requiring you to make a request. For more information on implementing webhooks, see the [Managing Webhooks](/react/help/managing-webhooks.html) page.
 
 ### The Get Shipment Events Endpoint
 
 The **Get Shipment Events** endpoint returns details of all events related to a particular shipment or group of shipments, as well as a summary of the shipments themselves. It accepts the following parameters:
-
-<div class="table-1">
 
 | Parameter           | Description                                                           | Format                                                                          | Example                             |
 | ------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ----------------------------------- |
@@ -175,8 +171,6 @@ The **Get Shipment Events** endpoint returns details of all events related to a 
 | Tracking References | Returns all events associated with the specified shipment             | String                                                                          | `tracking_reference=TRK098JKH54ADD` |
 | Custom References   | Returns all events associated with the specified shipment(s)          | String                                                                          | `custom_references=HB-003`          |
 | Carrier             | Returned all events associated with the specified carrier's shipments | String                                                                          | `carrier=CarrierX`                  |
-
-</div><br/>
 
 To use the **Get Shipment Events** endpoint, send a <span class="text--blue text--bold">GET</span> request to `https://api.sorted.com/react/events/search?start=timestamp&end=timestamp&tracking_references=strings&custom_references=strings&carrier=strings`. 
 
@@ -258,12 +252,7 @@ The **Get Shipment States History** endpoint returns a **Shipment State Events**
 
 The following example shows the **Shipment State Events** resource for a shipment that has gone from *Dispatched* to *In Transit* to *Delivered*, with accompanying timestamps and custom labels.  
 
-<div class="tab">
-    <button class="staticTabButton">Shipment State Events Resource</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'shipState')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="shipState" class="staticTabContent" onclick="CopyToClipboard(this, 'shipState')">
+# [Shipment State Events Resource](#tab/shipment-state-events-resource)
 
 ```json
 {
@@ -287,8 +276,7 @@ The following example shows the **Shipment State Events** resource for a shipmen
   ]
 }
 ```
-
-</div>
+---
 
 > [!NOTE]
 >
@@ -302,12 +290,7 @@ All paging links follow a standard format. They are returned in a `_links` objec
 
 For example, let's say you want to view all events for the shipments you have with Carrier X. You've sent a <span class="text--blue text--bold">GET</span> request to `https://api.sorted.com/react/events/search?carrier=Carrier%20X&page=1`, which has found around 900 results. After the 200th record, the response from the API would include the following:
 
-<div class="tab">
-    <button class="staticTabButton">Paging Links</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'pagingLinks')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="pagingLinks" class="staticTabContent" onclick="CopyToClipboard(this, 'pagingLinks')">
+# [Paging Links](#tab/paging-links)
 
 ```json
 {
@@ -335,10 +318,9 @@ For example, let's say you want to view all events for the shipments you have wi
   ]
 }
 ```
+---
 
-</div>
-
-To access the rest of the results, you would need to make a <span class="text--blue text--bold">GET</span> request to the relevant paging link. For example, to get the third page of results, you would use <span class="text--blue text--bold">GET</span> `https://api.sorted.com/react/events/search?carrier=Carrier%20X&page=3`. Results are sorted by created on date.
+To access the rest of the results, you would need to make a `GET` request to the relevant paging link. For example, to get the third page of results, you would use `GET` `https://api.sorted.com/react/events/search?carrier=Carrier%20X&page=3`. The results returned are sorted by `created_on` date.
 
 This paging format is used across all of REACT's APIs.
 
@@ -349,7 +331,3 @@ Learn more about integrating with REACT:
 * [Registering Shipments](/react/help/registering-shipments.html)
 * [Updating Shipments](/react/help/updating-shipments.html)
 * [Error Codes](/react/help/error-codes.html)
-
-<script src="../../pro/scripts/requesttabs.js"></script>
-<script src="../../pro/scripts/responsetabs.js"></script>
-<script src="../../pro/scripts/copy.js"></script>

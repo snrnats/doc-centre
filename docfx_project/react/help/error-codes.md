@@ -1,3 +1,10 @@
+---
+uid: react-help-error-codes
+title: Error Codes
+tags: react,api,errors,codes
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 29/05/2020
+---
 # Error Codes
 
 This page lists the errors that REACT's APIs can return and suggests potential fixes. For an explanation of the structure of the error response itself, see the [REACT Error Structure](/react/help/error-codes.html#react-error-structure) section.
@@ -10,8 +17,6 @@ This page lists the errors that REACT's APIs can return and suggests potential f
 * **Parent Error Message** - "One or more validation error(s) occurred."
 
 ### Child Errors
-
-<div class="table-1">
 
 | Error Code                   | Message                                                                                                                                                                                                  | How to Resolve                                                                                                                                                                                                                                                                                                                                  |
 | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -35,8 +40,6 @@ This page lists the errors that REACT's APIs can return and suggests potential f
 | incorrect\_range\_of_elements  | "{PropertyName} must contain more than {MinElements} and less than {MaxElements} items. The list contains {TotalElements} element(s)." <p>Returned by **Register Shipments** and **Update Shipment**</p> | Returned when REACT receives a request in which the number of elements in a particular array is not within the acceptable range for that property. Enter a number of elements that is within the required range.                                                                                                                                |
 | incorrect\_id_format          | _Message varies per resource_ <p>Returned by all endpoints</p>                                                                                                                                           | Returned when REACT receives a request for a resource ID that is not in the correct format (for example, a Shipment resource that does not begin with the prefix "sp\_"). Enter a valid resource ID.                                                                                                                                            |
 
-</div>
-
 ## 401 - Unauthorized
 
 * **Parent Error Code** - `unauthorized`
@@ -44,13 +47,9 @@ This page lists the errors that REACT's APIs can return and suggests potential f
 
 ### Child Errors
 
-<div class="table-1">
-
 | Error Code      | Message                                                            | How to Resolve                                                                                   |
 | --------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
 | api\_key_invalid | “Access denied due to missing subscription key. Make sure to include subscription key when making requests to an API.” <p>Returned by all endpoints</p> | Returned when REACT receives a request that does not have a valid API key in the header. Ensure that your request includes an `x-api-key` header with a valid REACT API key as its value. |
-
-</div>
 
 ## 404 - Not Found
 
@@ -59,13 +58,9 @@ This page lists the errors that REACT's APIs can return and suggests potential f
 
 ### Child Errors
 
-<div class="table-1">
-
 | Error            | Message                                                                                   | How to Resolve                                                                                                                                                  |
 | ---------------- | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | resource_missing | 1. “No {ResourceName} with the id {ResourceId} could be found”<p>2. “No data found based on the parameters provided.”</p><p>Returned by all endpoints except **Register Shipments**</p> | Returned when REACT receives a request for a resource that could not be found.</p>  |
-
-</div>
 
 ## 500 - Internal
 
@@ -74,15 +69,9 @@ This page lists the errors that REACT's APIs can return and suggests potential f
 
 ### Child Errors
 
-<div class="table-1">
-
 | Error    | Message                                                                                                                                                     | How to Resolve |
 | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
 | Internal | “It’s broken but it’s not your fault. Please try again or feel free to contact support@sorted.com if the problem persists.”<p>Returned by all endpoints</p> | Returned in the event of a server error. Retry or contact the email address provided.     |
-
-</div>
-
----
 
 ## REACT Error Structure
 
@@ -101,13 +90,7 @@ The error object contains the following information:
 
 ### Example Validation Error
 
-<div class="tab">
-    <button class="staticTabButton">Code 400 Error</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'code400')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="code400" class="staticTabContent" onclick="CopyToClipboard(this, 'code400')">
-
+# [Code 400 Error](#tab/code-400-error)
 
 ```json
 {
@@ -136,8 +119,7 @@ The error object contains the following information:
   ]
 }
 ```
-
-</div>
+---
 
 ## Next Steps
 
@@ -146,7 +128,3 @@ Learn more about integrating with REACT:
 * [Registering Shipments](/react/help/registering-shipments.html)
 * [Retrieving Shipment and Event Data](/react/help/retrieving-data.html)
 * [Updating Shipments](/react/help/updating-shipments.html)
-
-<script src="../../pro/scripts/requesttabs.js"></script>
-<script src="../../pro/scripts/responsetabs.js"></script>
-<script src="../../pro/scripts/copy.js"></script>
