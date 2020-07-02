@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-shipments-creating-shipment-groups
+title: Creating Shipment Groups
+tags: shipments,pro,api,shipment groups
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 02/07/2020
+---
 # Creating Shipment Groups
 
 In the list of `shipments` provided:
@@ -98,6 +105,3 @@ When the customer provides multiple `shipment` references and one or more of tho
     "_links": //omitted for brevity
 }
 ```
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>

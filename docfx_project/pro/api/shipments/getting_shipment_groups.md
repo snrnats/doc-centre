@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-shipments-getting-shipment-groups
+title: Getting Shipment Groups
+tags: shipments,pro,api,shipment groups
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 02/07/2020
+---
 # Getting Shipment Groups
 
 Get Shipment Group	
@@ -63,7 +70,3 @@ The following example demonstrates how this response should be generated:
     }
 ]
 ```
-
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>

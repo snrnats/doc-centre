@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-shipments-getting-collection-notes
+title: Getting Collection Notes
+tags: shipments,pro,api,shipment groups,collection notes
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 02/07/2020
+---
 # Getting Collection Notes
 
 Get Shipment Group Collection Note
@@ -13,7 +20,3 @@ The `latest` `version` will always be the `shipment_group` with the **highest** 
 
 Get Collection Note by Query
 Get Collection Note by Manifests
-
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>
