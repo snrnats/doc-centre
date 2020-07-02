@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-shipments-allocating-using-filters
+title: Allocating Using Filters
+tags: shipments,pro,api,allocation,filters
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 02/07/2020
+---
 # Allocating Using Filters
 
 Allocate with Filters
@@ -54,7 +61,3 @@ This configuration would produce the following results:
 * **Consignment tagged with** `Flammables` - B and C are returned
 * **Consignment tagged with** `Alcohol` **and** `Flammables` - C is returned
 * **Consignment tagged with** `Alcohol`**,** `Flammables`**, and** `Oil` - No services are returned
-
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>

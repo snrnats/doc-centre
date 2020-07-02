@@ -1,3 +1,11 @@
+---
+uid: pro-api-help-shipments-allocating-within-a-carrier-service-group
+title: Allocating Within A Carrier Service Group
+tags: shipments,pro,api,allocation,service group
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 02/07/2020
+---
+
 # Allocating Within A Carrier Service Group
 
 
@@ -34,7 +42,3 @@ When requesting an allocation of multiple shipments, the allocation will not hap
 ## Next Steps
 
 
-
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>

@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-shipments-allocating-via-a-quote
+title: Allocating via a Quote
+tags: shipments,pro,api,allocation,rules
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 02/07/2020
+---
 # Allocating via a Quote
 
 
@@ -19,6 +26,3 @@ Allocate with Quote This endpoint is used when you wish to allocate a shipment w
 
 
 
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>
