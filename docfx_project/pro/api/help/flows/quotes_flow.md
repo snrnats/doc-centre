@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-flows-quotes-flow
+title: Quotes Flow
+tags: pro,api,consignments,flows,quotes
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 15/04/2020
+---
 # Quotes Flow
 
 <p>
@@ -10,7 +17,7 @@ The **Quotes** flow is intended as a back-end customer service integration to he
 
 The **Quotes** flow is useful to your business for:
 
-* Customer contact centre use. 
+* Customer contact centre use.
 * In store delivery booking.
 * ERP workflows (e.g. SAP, Oracle).
 
@@ -20,7 +27,7 @@ There are five steps to the flow:
 2. **Get quotes for the consignment** - Use the [Get Quotes by Consignment Reference](https://docs.electioapp.com/#/api/GetQuotesbyConsignmentReference) endpoint to get delivery quotes for the consignment.
 3. **Select a quote** - Use the [Allocate With Quote](https://docs.electioapp.com/#/api/AllocateWithQuote) endpoint to select one of the returned quotes.
 4. **Get the consignment's labels** - Use the [Get Labels in Format](https://docs.electioapp.com/#/api/GetLabelsinFormat) endpoint to get the delivery label for your consignment.
-5. **Manifest the consignment** - Use the [Manifest Consignments from Query](https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery) endpoint to confirm the consignment with the selected carrier. At this point, the consignment is ready to ship.
+5. **Manifest the consignment** - Use the [Manifest Consignments from Query](https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery) endpoint to send consignment data to the selected carrier.
  
 This section gives more detail on each step of the flow and provides worked examples. 
 
@@ -59,5 +66,3 @@ This section gives more detail on each step of the flow and provides worked exam
 ## Step 5: Manifesting a Consignment
 
 [!include[_manifest_consignments_from_query](../../includes/_manifest_consignments_from_query.md)]
-
-[!include[scripts](../../includes/scripts.md)]

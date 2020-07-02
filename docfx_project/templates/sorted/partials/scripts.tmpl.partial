@@ -1,0 +1,147 @@
+{{!Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.}}
+
+<script type="text/javascript" src="{{_rel}}styles/docfx.vendor.js"></script>
+<script type="text/javascript" src="{{_rel}}styles/docfx.js"></script>
+<script type="text/javascript" src="{{_rel}}styles/main.js"></script>
+<script type="text/javascript" src="{{_rel}}styles/styleswitcher.js"></script>
+<script type="text/javascript" src="{{_rel}}styles/mermaid.min.js"></script>
+<script>
+    mermaid.initialize({
+        startOnLoad: false
+    });
+
+    window.onload = function() {
+        const elements = document.getElementsByClassName("lang-mermaid");
+        let index = 0;
+
+        while (elements.length != 0) {
+            let element = elements[0];
+            mermaid.render('graph'+ index, element.innerText, (svgGraph) => {
+                element.parentElement.outerHTML = "<div class='mermaid'>" + svgGraph + "</div>";
+            });
+            index++;
+        }
+
+        addCodeCopyWrapper();
+        identifyStatusCodes();
+    };
+
+    function addCodeCopyWrapper() {
+        document.querySelectorAll('code.hljs').forEach(function (codeBlock) {
+
+            var pre = codeBlock.parentNode;
+
+            var containingDiv = document.createElement('div');
+            containingDiv.className = 'code-copy';
+
+            wrap(pre, containingDiv);
+        });
+        
+        if (navigator && navigator.clipboard) {
+            addCopyButtons(navigator.clipboard);
+        } else {
+            var script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/clipboard-polyfill/2.7.0/clipboard-polyfill.promise.js';
+            script.integrity = 'sha256-waClS2re9NUbXRsryKoof+F9qc1gjjIhc2eT7ZbIv94=';
+            script.crossOrigin = 'anonymous';
+            script.onload = function() {
+                addCopyButtons(clipboard);
+            };
+
+            document.body.appendChild(script);
+        }
+    }
+
+    function wrap(el, wrapper) {
+        el.parentNode.insertBefore(wrapper, el);
+        wrapper.appendChild(el);
+    }
+
+    function addCopyButtons(clipboard) {
+        document.querySelectorAll('pre > code').forEach(function (codeBlock) {
+            var button = document.createElement('button');
+            button.className = 'copy-code-button';
+            button.type = 'button';
+
+            button.addEventListener('click', function () {
+                clipboard.writeText(codeBlock.innerText).then(function () {
+                    successCopyButtonState(button);
+                }, function (error) {
+                    defaultCopyButtonState(button);
+                });
+            });
+
+            var pre = codeBlock.parentNode;
+            if (pre.parentNode.classList.contains('highlight')) {
+                var highlight = pre.parentNode;
+                highlight.parentNode.insertBefore(button, highlight);
+            } else {
+                pre.parentNode.insertBefore(button, pre);
+            }
+
+            defaultCopyButtonState(button);
+        });
+    }
+
+    function defaultCopyButtonState(button) {
+
+        button.classList.remove('copy-success');
+        button.innerText = '';
+
+        var buttonSpanIcon = document.createElement('span');
+        buttonSpanIcon.className = 'glyphicon glyphicon-copy';
+        var buttonSpanText = document.createElement('span');
+        buttonSpanText.innerText = 'Copy';
+        buttonSpanText.classList.add('copy');
+
+        button.appendChild(buttonSpanIcon);
+        button.appendChild(buttonSpanText);
+    }
+
+    function successCopyButtonState(button) {
+        button.blur();
+
+        button.innerText = '';
+
+        var buttonSpanOkIcon = document.createElement('span');
+        buttonSpanOkIcon.className = 'glyphicon glyphicon-ok';
+
+        button.appendChild(buttonSpanOkIcon);
+
+        button.classList.add('copy-success');
+
+        setTimeout(function () {
+            defaultCopyButtonState(button);
+        }, 2000);
+    }
+
+    function identifyStatusCodes() {
+        document.querySelectorAll('.endpoint code').forEach(function (e) {
+            highlightStatusCodes(e);
+        });
+    }
+
+    function highlightStatusCodes(el) {
+
+        var codePrefix = el.innerText.substring(0,1);
+        
+        if (typeof codePrefix === 'undefined' || codePrefix == null) {
+            return;
+        }
+
+        if (codePrefix == "2") {
+            el.classList.add('code-success');
+            return;
+        }
+
+        if (codePrefix == "3") {
+            el.classList.add('code-warning');
+            return;
+        }
+
+        if (codePrefix == "4" || codePrefix == "5") {
+            el.classList.add('code-error');
+            return;
+        }
+    }
+</script>

@@ -1,3 +1,11 @@
+---
+uid: pro-api-help-managing-existing-orders
+title: Managing Existing Orders
+tags: orders,pro,api,consignments
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 08/06/2020
+---
+
 # Managing Existing Orders
 
 Need to make changes to an order before you pack it? This page explains how to retrieve and edit order details.
@@ -8,25 +16,23 @@ Need to make changes to an order before you pack it? This page explains how to r
 
 The **Get Order** endpoint returns full current details for a specific order. To call **Get Order**, send a `GET` request to `https://api.electioapp.com/orders/{orderReference}`.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > For full reference information on the **Get Order** endpoint, see the <a href="https://docs.electioapp.com/#/api/GetOrder">API reference</a>.
 
-### Example Get Order Response
+### Example Get Order Call
 
 The example below shows a **Get Order** request for a fairly simple order with an `{orderReference}` of _EO-000-002-K0R_. 
 
-<div class="tab">
-    <button class="staticTabButton">Get Order Response Example</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'getOrdResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="getOrdResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'getOrdResponse')">
+# [Get Order Request](#tab/get-order-request)
 
 ```json
+GET https://api.electioapp.com/orders/EO-000-002-K0R
+```
 
-https://api.electioapp.com/orders/EO-000-002-K0R
+# [Get Order Response](#tab/get-order-response)
 
+```json
 {
     "OrderReference": "EO-000-002-K0R",
     "OrderReferenceProvidedByCustomer": null,
@@ -186,8 +192,7 @@ https://api.electioapp.com/orders/EO-000-002-K0R
     "Tags": []
 }
 ```
-
-</div>
+---
 
 ## Updating Order Details
 
@@ -209,27 +214,25 @@ PRO uses the following rules when updating order properties:
 * `{Direction}` - If any values are provided, then PRO replaces the entire property with the updated values. If no values are provided, PRO makes no changes to the order.
 * `{Tags}` - If any values are provided, then PRO replaces the entire property with the updated values. If no values are provided, PRO makes no changes to the order.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 >  For full reference information on the <strong>Update Order</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/UpdateOrder">Update Order</a></strong> page of the API reference.
 
 Once it has received the request, PRO updates the order and returns a code _200_ message as confirmation. 
 
-### Update Orders Example
+### Update Order Example
 
 The example shows an **Update Order** request to update delivery and shipping dates on an order with an `{orderReference}` of _EO-000-002-K0R_.  
 
-<div class="tab">
-    <button class="staticTabButton">Example Update Order Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'updateOrdRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="updateOrdRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'updateOrdRequest')">
+# [Update Order Request](#tab/update-order-request)
 
 ```json
-
 PUT https://api.electioapp.com/orders/EO-000-002-K0R
+```
 
+# [Update Order Response](#tab/update-order-response)
+
+```json
 {
   "OrderReference": "EO-000-002-K0R",
   "RequiredDeliveryDate": {
@@ -239,8 +242,7 @@ PUT https://api.electioapp.com/orders/EO-000-002-K0R
   "ShippingDate": "2020-05-31T00:00:00+01:00"
 }
 ```
-
-</div>
+---
 
 ### Adding and Updating Order Addresses
 
@@ -256,12 +258,7 @@ In addition to the **Update Order** endpoint, PRO also features specific endpoin
 
 For both of these endpoints, the body of the request should contain an `address` object. The example below shows a new _Sender_ address.
 
-<div class="tab">
-    <button class="staticTabButton">Example Address Object</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'exampleAddress')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="exampleAddress" class="staticTabContent" onclick="CopyToClipboard(this, 'exampleAddress')">
+# [Example Address Object](#tab/example-address-object)
 
 ```json
 {
@@ -296,12 +293,11 @@ For both of these endpoints, the body of the request should contain an `address`
   "IsCached": false
 }
 ```
-
-</div>
+---
 
 Both **Add Address To Order** and **Update Address On Order** return an empty code _200_ message as confirmation that the address change was successful.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > * For full reference information on the <strong>Add Address To Order</strong> endpoint, see the <a href="https://docs.electioapp.com/#/api/AddAddresstoOrder">Add Address To Order</a> page of the API reference.
 > * For full reference information on the <strong>Update Address On Order</strong> endpoint, see the <a href="https://docs.electioapp.com/#/api/UpdateAddressonOrder">Update Address On Order</a> page of the API reference.
@@ -311,7 +307,3 @@ Both **Add Address To Order** and **Update Address On Order** return an empty co
 * Learn how to pack orders into consignments at the [Creating Consignments From Orders](/pro/api/help/packing_orders.html) page.
 * Learn how to retrieve delivery options at the [Getting Delivery Options](/pro/api/help/getting_delivery_options.html) page.
 * Learn how to allocate consignments at the [Allocating Consignments](/pro/api/help/allocating_consignments.html) page.
-
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>

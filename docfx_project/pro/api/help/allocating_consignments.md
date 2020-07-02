@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-allocating-consignments
+title: Allocating Consignments
+tags: allocation,pro,api,consignments
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 02/06/2020
+---
 # Allocating Consignments to Carriers
 
 Once you've created a consignment, you'll need to allocate it to a carrier service. This section explains how to configure allocation rules that PRO can use when selecting carrier services, and the various methods you can use to allocate consignments to those services.
@@ -8,7 +15,7 @@ Once you've created a consignment, you'll need to allocate it to a carrier servi
 
 In the context of SortedPRO, **allocation** is the process of selecting the carrier service that will be used to deliver a consignment. Allocation is a key part of all PRO workflows, as a consignment cannot be shipped if it has not previously been allocated to a suitable carrier service.
 
-> <span class="note-header">Note:</span>
+> [!CAUTION]
 >
 > You can only allocate consignments that are in a consignment state of either _Unallocated_ or _Allocation Failed_. If you attempt to allocate a consignment that is not in one of those states, PRO returns an error.
 
@@ -57,14 +64,14 @@ PRO offers the following allocation endpoints:
     <tr>
         <td>
             <p><a href="/pro/api/help/allocating_to_a_specific_quote.html">Allocate With Quote</a></p>
-            <p><pre>PUT https://api.electioapp.com/allocation/{consignmentReference}/Route parameter: {consignmentReference}allocatewithquote/{quoteReference}</pre></p>
+            <p><pre>PUT https://api.electioapp.com/allocation/{consignmentReference}/allocatewithquote/{quoteReference}</pre></p>
         </td>
         <td>Allocates an individual consignment based on a specific delivery quote from a carrier</td>
         <td><a href="https://docs.electioapp.com/#/api/AllocateConsignmentWithServiceGroup">Link</a></td>                
     </tr>            
 </table>
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > For detailed information on using each of PRO's allocation endpoints, click the endpoint names in the table above. 
 
@@ -113,7 +120,7 @@ Allocation rules must be configured in the PRO UI. To configure allocation rules
 
     To remove a tag from a carrier service, click the **x** on its icon. 
 
-    > <span class="note-header">More Information:</span>
+    > [!NOTE]
     >
     > For more information on how allocation tags work, see [What Is an Allocation Tag?](#what-is-an-allocation-tag).
 
@@ -123,7 +130,7 @@ Allocation rules must be configured in the PRO UI. To configure allocation rules
 
     To remove a restriction, click **Remove**.
 
-    > <span class="note-header">Note:</span>
+    > [!NOTE]
     >
     > The **Geographic Availability** fields enable you to be flexible when restricting postcodes for a carrier service. For example, if you wanted to prevent a carrier service from being allocated to any consignments bound for the specific postcode _M2 6LW_, you would enter the following:
     >
@@ -160,12 +167,7 @@ To tag a consignment, add the required tag into the shipment's `tags` property, 
 
 The code sample below shows a `tags` property for a consignment that contains flammable materials, oil and alcohol.
 
-<div class="tab">
-    <button class="staticTabButton">Example Tags array</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'tagsExample')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="tagsExample" class="staticTabContent" onclick="CopyToClipboard(this, 'tagsExample')">
+# [Tags](#tab/tags)
 
 ```json
 "Tags": [
@@ -174,8 +176,7 @@ The code sample below shows a `tags` property for a consignment that contains fl
    "Alcohol"
 ]
 ```
-
-</div>
+---
 
 ### Tags Example
 
@@ -205,12 +206,7 @@ In the example, a consignment with a `{consignmentReference}` of _EC-000-05B-MMA
 
 ### Allocation Summary Example
 
-<div class="tab">
-    <button class="staticTabButton">Example Allocation Summary</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'allocationSummary')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="allocationSummary" class="staticTabContent" onclick="CopyToClipboard(this, 'allocationSummary')">
+# [Allocation Summary](#tab/allocation-summary)
 
 ```json
 [
@@ -245,7 +241,7 @@ In the example, a consignment with a `{consignmentReference}` of _EC-000-05B-MMA
     }
 ]
 ```
-</div>
+---
 
 ## Allocation Section Contents
 
@@ -255,12 +251,8 @@ In the example, a consignment with a `{consignmentReference}` of _EC-000-05B-MMA
 * [Allocating to a Specific Quote](/pro/api/help/allocating_to_a_specific_quote.html) - Explains how to allocate a consignment based on a specific delivery quote from a carrier.
 * [Deallocating Consignments](/pro/api/help/deallocating_consignments.html) - Explains how to return a consignment to a deallocated state.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > All of the URLs and examples given in this documentation relate to PRO's live production environment. To call APIs in the sandbox environment, substitute the `api.electioapp.com` portion of the API's base URL with `apisandbox.electioapp.com`. Don't forget to use your sandbox API key (as opposed to your production API key) when making the call.
 >
 > For more information on PRO's sandbox, see [Using the Sandbox Environment](/pro/api/help/introduction.html#using-the-sandbox-environment).
-
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>

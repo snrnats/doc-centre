@@ -1,3 +1,11 @@
+---
+uid: react-help-user-management
+title: User Management
+tags: react,ui,users,permissions
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 29/05/2020
+---
+
 # User Management
 
 REACT's **Account** page enables you to manage the users associated with your organisation's REACT account. This page explains how to invite new users, how to define user permissions, and how to revoke user access.
@@ -22,7 +30,7 @@ To invite a new user to REACT:
 3. Enter the **First Name**, **Last Name** and **User Email** of the person you want to invite. You cannot use an email account that is already associated with a REACT account.
 4. Enter the **User Role** you want that person to have. REACT has three user roles: *Admin*, *Marketing* and *Dashboard*. 
 
-   > <span class="note-header">Note:</span>
+   > [!NOTE]
    > 
    > A user's role defines what that person can view and/or edit within REACT. In general, _Admin_ users have extensive read/write access to the system, _Marketing_ users can view most parts of the UI and edit certain parts, and _Dashboard_ users have limited read-only access. 
    >
@@ -72,7 +80,7 @@ To delete an existing user account, click the context menu button on the user's 
 
    ![delete-registered2](images/delete-registered2.png)
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > You cannot delete your organisation's primary REACT user account (i.e. the user account that was created during the initial customer setup process).
 
@@ -88,7 +96,7 @@ Admin users have the highest level of access to REACT. They are the only users t
 
 Each REACT customer is limited to four admin users. However, admin users can transfer admin access between accounts, or delete admin accounts altogether where required.
 
-> <span class="note-header">Note:</span>
+> [!CAUTION]
 >
 > For security reasons, we recommend that you only create as many admin user accounts as you need to.
 
@@ -110,8 +118,6 @@ There is no limit to the number of dashboard users that an organisation can have
 
 The table below shows what each user role can view and edit within the REACT UI.
 
-<div class="table-1">
-
 | REACT Screens            | Admin                                                                   | Marketing             | Dashboard             |
 |--------------------------|-------------------------------------------------------------------------|-----------------------|-----------------------|
 | States Dashboard         | View                                                                    | View                  | View                  |
@@ -127,8 +133,6 @@ The table below shows what each user role can view and edit within the REACT UI.
 | Notifications Centre     | View / edit / delete                                                    | View / edit / delete  | No Access             |
 | Account                  | Access / add users / assign users / delete users / resend reg email  | Access            | Access            |
 | Help & Support           | View                                                                    | View                  | View                  |
-
-</div>
 
 ## Next Steps
 
