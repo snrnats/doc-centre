@@ -1,7 +1,11 @@
-# Manifesting Shipments By Shipment Groups
+---
+uid: pro-api-help-shipments-manifesting-shipments-by-shipment-groups
+title: Manifesting Shipments by Shipment Groups
+tags: shipments,pro,api,manifesting,shipment groups
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 02/07/2020
+---
+# Manifesting Shipments by Shipment Groups
 
 Manifest Shipments by Shipment Group
 
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>

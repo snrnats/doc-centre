@@ -1,3 +1,11 @@
+---
+uid: pro-api-help-shipments-getting-shipment-customs-docs
+title: Getting Shipment Customs Docs
+tags: shipments,pro,api,customs,documents
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 02/07/2020
+---
+
 # Getting Shipment Customs Docs
 
 <span class="highlight">THESE ARE ALL JUST NOTES TO SELF AND AREN'T INTENDED FOR PUBLIC CONSUMPTION (AT LEAST, NOT IN THIS FORM)</span>
@@ -39,7 +47,3 @@ In implementing this endpoint, the application must identify the customs documen
 
 Get Document
 Get Customs Documents 
-
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>
