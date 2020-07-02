@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-shipments-shipment-states
+title: Shipment States
+tags: shipments,pro,api
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 02/07/2020
+---
 # Shipment States
 
 All PRO shipments have a `{state}`, indicating the point in the delivery process that that particular shipment is at. This page lists PRO's shipment states 
@@ -56,7 +63,3 @@ All PRO shipments have a `{state}`, indicating the point in the delivery process
 * Learn how to retrieve shipment data: [Getting Shipments](/pro/api/shipments/getting_shipments.html)
 * Learn how to cancel shipments: [Cancelling Shipments](/pro/api/shipments/cancelling_shipments.html)
 * Learn how to allocate shipments: [Allocating Shipments](/pro/api/shipments/allocating_shipments.html)
-
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>

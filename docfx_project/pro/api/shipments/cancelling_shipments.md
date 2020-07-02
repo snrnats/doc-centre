@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-shipments-cancelling-shipments
+title: Cancelling Shipments
+tags: shipments,pro,api
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 02/07/2020
+---
 # Cancelling Shipments
 
 This page explains how to cancel and delete shipments in PRO.
@@ -14,7 +21,7 @@ You can only cancel a shipment prior to it being manifested. Once a shipment has
 
 Once a shipment has been cancelled, then no further changes can be made to it other than deleting it. If you want to reinstate a cancelled shipment then you will need to create a new shipment with the same details.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > For full reference information on the **Cancel Shipment** endpoint, see [LINK HERE]
 
@@ -22,24 +29,13 @@ Once a shipment has been cancelled, then no further changes can be made to it ot
 
 The example below shows a successful **Cancel Shipment** request for shipment _sp_00595452779180472847666078547968_.
 
-<div class="tab">
-    <button class="staticTabButton">Example Cancel Shipment Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'cancelShipmentRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="cancelShipmentRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'cancelShipmentRequest')">
+# [Cancel Shipment Request](#tab/cancel-shipment-request)
 
 ```json
 PUT https://api.sorted.com/pro/shipments/sp_00595452779180472847666078547968/cancel
 ```
-</div>
 
-<div class="tab">
-    <button class="staticTabButton">Example Cancel Shipment Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'cancelShipmentResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="cancelShipmentResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'cancelShipmentResponse')">
+# [Cancel Shipment Response](#tab/cancel-shipment-response)
 
 ```json
 {
@@ -56,7 +52,7 @@ PUT https://api.sorted.com/pro/shipments/sp_00595452779180472847666078547968/can
   ]
 }
 ```
-</div>
+---
 
 ## Deleting Shipments
 
@@ -64,7 +60,7 @@ To delete a cancelled shipment, use the **Delete Shipment** endpoint. You can ca
 
 You can only delete shipments that are in a `state` of _cancelled_. If you attempt to delete a shipment that has not been cancelled then PRO returns an error
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > For full reference information on the **Delete Shipment** endpoint, see [LINK HERE]
 
@@ -72,24 +68,12 @@ You can only delete shipments that are in a `state` of _cancelled_. If you attem
 
 The example below shows a successful **Delete Shipment** request for shipment _sp_00595452779180472847666078547968_.
 
-<div class="tab">
-    <button class="staticTabButton">Example Delete Shipment Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'deleteShipmentRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="deleteShipmentRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'deleteShipmentRequest')">
+# [Delete Shipment Request](#tab/delete-shipment-request)
 
 ```json
 DELETE https://api.sorted.com/pro/shipments/sp_00595452779180472847666078547968
 ```
-</div>
-
-<div class="tab">
-    <button class="staticTabButton">Example Delete Shipment Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'deleteShipmentResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="deleteShipmentResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'deleteShipmentResponse')">
+# [Delete Shipment Response](#tab/delete-shipment-response)
 
 ```json
 {
@@ -98,14 +82,10 @@ DELETE https://api.sorted.com/pro/shipments/sp_00595452779180472847666078547968
   "_links": []
 }
 ```
-</div>
+---
 
 ## Next Steps
 
 * Learn how to create, clone, and update shipments: [Creating Shipments](/pro/api/shipments/creating_shipments.html)
 * Learn how to retrieve shipment data: [Getting Shipments](/pro/api/shipments/getting_shipments.html)
 * Learn how to allocate shipments: [Allocating Shipments](/pro/api/shipments/allocating_shipments.html)
-
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>

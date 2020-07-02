@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-shipments-consignments_vs_shipments
+title: Consignments vs Shipments
+tags: shipments,pro,api,getting started,consignments
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 02/07/2020
+---
 # Consignments vs Shipments
 
 PRO's new Shipments model represents a significant overhaul to PRO, with a new data contract and UI enabling the system to offer enhancements such as on-demand shipping, auto-manifesting, and bulk grouping of shipments. This page is intended for users who are familiar with the older Consignments model, explaining what has changed and how the new system works.
@@ -10,17 +17,13 @@ The Consignments model was based around high volume shipping from warehouses to 
 
 In order to ship a consignment, PRO requires a shipping location and a scheduled collection datetime.
 
-<img src="/pro/images/consignments-workflow.png" class="noborder"/>
-
-<p class="text--center text--bold">Consignments Workflow</p>
+![consignments-workflow.png](/pro/images/consignments-workflow.png)
 
 Shipments extends this functionality, giving you greater control over the collection part of the delivery cycle. PRO can now offer ad-hoc collections and deliveries from distributed stock locations, such as a ship-from-store model. 
 
 On-demand shipping enables you to be more flexible in the way that goods are collected, and helps you to avoid the risk that warehousing from a single location can bring in a modern retail environment. Shipments gives you the ability to run thousands of shipping locations all over the world, and to ship from any of them,
 
-<img src="/pro/images/shipments-workflow.png" class="noborder"/>
-
-<p class="text--center text--bold">Shipments Workflow</p>
+![shipments-workflow.png](/pro/images/shipments-workflow.png)
 
 However, PRO hasn't lost any functionality. Shipments can also handle high volume traditional scheduled shipments just as well as consignments. 
 
@@ -39,7 +42,7 @@ As well as support for on-demand shipping, the enhancements to PRO's data contra
 
 To facilitate these changes, the _shipment_ has replaced the _consignment_ as PRO's basic delivery unit. 
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > Currently, Consignments customers will need to re-integrate in order to use Shipments. To aid this process, we have designed the Shipments API suite as an extension and enhancement to Consignments, keeping it as close as possible to the original structure. 
 
@@ -51,7 +54,7 @@ Like consignments, shipments are a collection of one or more packages that are s
 * `contents.label_property` - Provides additional properties to be placed on the shipment's label. SortedPRO supports custom label decorators, which utilise additional label space to add fields and text. 
 * `reservation` - The `reservation` object enables PRO to store the details of reservations, such as those for click and collect options.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > For full reference information on the new Shipments data contract, see [LINK HERE]
 

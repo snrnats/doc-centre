@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-shipments-allocating-shipments
+title: Allocating Shipments
+tags: shipments,pro,api, allocation
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 02/07/2020
+---
 # Allocating Shipments
 
 Once you've created a shipment, you'll need to allocate it to a carrier service. This section explains how to configure allocation rules that PRO can use when selecting carrier services, and the various methods you can use to allocate shipments to those services.
@@ -8,7 +15,7 @@ Once you've created a shipment, you'll need to allocate it to a carrier service.
 
 In the context of SortedPRO, **allocation** is the process of selecting the carrier service that will be used to deliver a shipment. Allocation is a key part of all PRO workflows, as a shipment cannot be shipped if it has not previously been allocated to a suitable carrier service.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > You can only allocate shipments that are in a `{state}` of either _unallocated_ or _allocation_failed_. If you attempt to allocate a shipment that is not in one of those states, PRO returns an error.
 
@@ -47,7 +54,7 @@ The action PRO takes once the allocation request is received depends on the type
 
 <span class="highlight">NEEDS A NOTE AS TO WHY IT DOES THE ASYNC QUEUE THING. I'M GUESSING IT'S FOR PERFORMANCE REASONS BUT WE NEED TO CHECK THAT</span>
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > For more information on PRO's responses to allocation requests, see [LINK HERE]
 
@@ -81,7 +88,7 @@ When allocating shipments, PRO takes your dangerous goods rulesets into account 
 
 <span class="highlight">INSTRUCTIONS FOR SETTING UP RULESETS IN HERE (WHEN IT'S IN THE UI)</span>
 
-> <span class="note-header">Note:</span>
+> [!TIP]
 >
 > When you allocate an `on-demand` shipment, PRO automatically books a collection as a background process. You do not need to specify `on_demand` booking details manually.
 
@@ -92,7 +99,3 @@ When allocating shipments, PRO takes your dangerous goods rulesets into account 
 * [Allocating Within a Carrier Service Group](/pro/api/shipments/allocating_within_a_carrier_service_group.html) - Explains how to allocate shipments with a carrier service from a specific carrier service group.
 * [Allocating Using Filters](/pro/api/shipments/allocating_using_filters.html) - Explains how to use filters to specify allocation rules on a per-shipment basis. 
 * [Allocating via a Quote](/pro/api/shipments/allocating_via_a_quote.html) - Explains how to allocate a shipment with the carrier service referenced in a specific pre-existing quote.
-
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>

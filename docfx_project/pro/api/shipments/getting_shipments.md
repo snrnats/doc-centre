@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-shipments-getting-shipments
+title: Getting Shipments
+tags: shipments,pro,api,retrieving
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 02/07/2020
+---
 # Getting Shipments
 
 You can retrieve an existing PRO shipment via the **Get Shipment** endpoint. This page explains how to call **Get Shipment** and how to use the shipment data it returns.
@@ -20,7 +27,7 @@ The **Get Shipment** endpoint takes the `{reference}` of the shipment you want t
 
 To call **Get Shipment**, send a `GET` request to `https://api.sorted.com/pro/shipments/{reference}`, where `{reference}` is the unique reference of the shipment you want to retrieve.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > For full reference information on the **Get Shipment** endpoint, see [LINK HERE]
 
@@ -28,12 +35,7 @@ To call **Get Shipment**, send a `GET` request to `https://api.sorted.com/pro/sh
 
 The example below shows a **Get Shipment** request for a shipment with a `{reference}` of _sp_9953035299125395456009822134452_.
 
-<div class="tab">
-    <button class="staticTabButton">Example Get Shipment Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'getShipmentResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="getShipmentResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'getShipmentResponse')">
+# [Get Shipment Response](#tab/get-shipment-response)
 
 ```json
 {
@@ -207,14 +209,10 @@ The example below shows a **Get Shipment** request for a shipment with a `{refer
     "channel": "CHAN002"
 }
 ```
-</div>
+---
 
 ## Next Steps
 
 * Learn how to create, clone, and update shipments: [Creating Shipments](/pro/api/shipments/creating_shipments.html)
 * Learn how to cancel shipments: [Cancelling Shipments](/pro/api/shipments/cancelling_shipments.html)
 * Learn how to allocate shipments: [Allocating Shipments](/pro/api/shipments/allocating_shipments.html)
-
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>

@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-shipments-creating-shipments
+title: Creating Shipments
+tags: shipments,pro,api
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 02/07/2020
+---
 # Creating Shipments
 
 In order for SortedPRO to manage a shipment, you'll need to record the details of that shipment on the system. This page explains how to use the **Create Shipment** endpoint to create a new shipment record, how to clone existing shipments using the **Clone Shipment** endpoint, and how to update existing shipments using the **Update Shipment** endpoint.
@@ -18,7 +25,7 @@ As a minimum, the **Create Shipments** endpoint requires you to send:
 * `contents` - The contents of the shipment itself.
 * `addresses` - All shipments require both `origin` and `destination` addresses.
 
-> <span class="note-header">Note:</span>
+> [!TIP]
 >
 > PRO handles collection booking for `on-demand` shipments as a background process when the shipment is allocated to a carrier service. You do not need to specify `on_demand` booking details manually.
 
@@ -35,12 +42,7 @@ As an example, suppose that a clothing retailer has received a customer order fo
 
 The example below shows how this shipment would be represented in JSON. This is a highly simplified example, with only the minimum properties (`value` and `description`) given for each `contents` object. In practice, you would probably look to provide additional detail on the shipment contents by specifying optional properties. 
 
-<div class="tab">
-    <button class="staticTabButton">Contents Example</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'contentsExample')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="contentsExample" class="staticTabContent" onclick="CopyToClipboard(this, 'contentsExample')">
+# [Contents Example](#tab/contents-example)
 
 ```json
     "contents": [
@@ -76,7 +78,7 @@ The example below shows how this shipment would be represented in JSON. This is 
         }
     ],
 ```
-</div>
+---
 
 <span class="highlight">NEED TO CHECK THE EXAMPLE ABOVE.</span> 
 
@@ -110,7 +112,7 @@ There are lots of optional properties you can send when creating a shipment, inc
 
 Adding optional properties when you create a shipment can help you to ensure that your shipment is allocated to the most appropriate carrier service.
 
-> <span class="note-header">Note:</span>
+> [!CAUTION]
 >
 > You should exercise caution when using the `required_delivery_date` and `required_shipping_date` parameters to specify dates for your shipment. These parameters limit delivery options for the shipment, meaning that it can only be allocated to carrier services that would be able to ship it within the specified `required_shipping_date` range and / or deliver it by the specified `required_delivery_date` range. 
 >
@@ -122,12 +124,9 @@ Adding optional properties when you create a shipment can help you to ensure tha
 
 The example below shows a simple **Create Shipment** request containing only a `shipment_type`, `contents`, and `addresses`. For an example of a full **Create Shipment** request, see [LINK HERE]
 
-<div class="tab">
-    <button class="staticTabButton">Example Create Shipment Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'createShipmentRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Create Shipment Request](#tab/create-shipment-request)
 
-<div id="createShipmentRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'createShipmentRequest')">
+`POST https://api.sorted.com/pro/shipments`
 
 ```json
 
@@ -220,8 +219,7 @@ The example below shows a simple **Create Shipment** request containing only a `
 }
 
 ```
-
-</div>
+---
 
 ## The Create Shipments Response
 
@@ -231,12 +229,7 @@ The `{reference}` is a unique identifier for that shipment within PRO, and is a 
 
 In the example below, PRO has returned a shipment `{reference}` of _sp_00595452779180472847666078547968_. 
 
-<div class="tab">
-    <button class="staticTabButton">Example Create Shipment Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'createShipmentResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="createShipmentResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'createShipmentResponse')">
+# [Create Shipment Response](#tab/create-shipment-response)
 
 ```json
 {
@@ -252,13 +245,13 @@ In the example below, PRO has returned a shipment `{reference}` of _sp_005954527
   ]
 }
 ```
-</div>
+---
 
 All PRO shipments have a `{state}`, indicating the point in the delivery process that that particular shipment is at. Newly-created shipments have an initial state of `Unallocated`. For more information on PRO shipment states, see [LINK HERE].
 
 <span class="highlight">SHOULD PROBABLY PUT A NOTE IN HERE ABOUT CREATING SHIPMENTS IN THE UI ONCE WE KNOW WHAT THE NEW UI IS GOING TO LOOK LIKE</span>
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > For full reference information on the **Create Shipments** endpoint, including the properties accepted and the structure required, see [LINK HERE]
 
@@ -268,7 +261,7 @@ All PRO shipments have a `{state}`, indicating the point in the delivery process
 
 As well as creating entirely new shipments through the **Create Shipment** endpoint, you can also clone existing shipments via the **Clone Shipment** endpoint. **Clone Shipment** takes the basic properties of a given shipment, creates a new shipment with identical properties, and returns that new shipment's `{reference}`. 
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > **Clone Shipment** only clones those shipment properties that can be specified via the **Create Shipment** endpoint. For example, it will copy `address` and `contents` details to the new shipment, but not allocation details.
 
@@ -278,7 +271,7 @@ To call **Clone Shipment**, send a `POST` request to `https://api.sorted.com/pro
 
 The example below shows a request to clone a shipment <span class="highlight">NEED TO PUT IN EXAMPLE ONCE THE ENDPOINT STUB IS UP AND RUNNING</span>
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > For full reference information on the **Clone Shipment** endpoint, see [LINK HERE]
 
@@ -294,13 +287,13 @@ You can only pass properties that would be accepted by a **Create Shipment**  re
 
 When it has received the request, PRO replaces the _entire_ shipment object for the specified shipment with the new details you provided, and returns a confirmation message.
 
-> <span class="note-header">Note:</span>
+> [!CAUTION]
 >
 > If you do not pass a value for an optional property when making an **Update Shipment** request then PRO will not store any value for that property, even if that property had a value before you updated the shipment.
 
 You cannot update a shipment that has already been allocated, because PRO uses a shipment's current details to decide the carrier services that that shipment can be allocated to. You would first need to deallocate an allocated shipment in order to update it.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > For more information on deallocating a shipment, see [LINK HERE]
 
@@ -308,47 +301,38 @@ You cannot update a shipment that has already been allocated, because PRO uses a
 
 The example shows a simple **Update Shipment** request for a shipment with a `{reference}` of  _sp_00595452779180472847666078547968_. The request is successful, meaning that PRO has any previous details for that shipment with the details in the request.
 
-<div class="tab">
-    <button class="staticTabButton">Example Update Shipment Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'updateShipmentResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Example Update Shipment Request](#tab/example-update-shipment-request)
 
-<div id="updateShipmentResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'updateShipmentResponse')">
+`PUT https://api.sorted.com/pro/shipments`
 
 ```json
 {
-	"reference": "sp_00595452779180472847666078547968",
-	"custom_reference": "MyCustomRef002",
-	"shipment_type": "on_demand",
-	"direction": "outbound",
-	"contents": [
-		{
-			"value": {
-				"amount": 2.99,
-				"currency": "GBP"
-			}
-		}
-	],
-	"addresses": [
-		{
-			"address_type": "origin",
-			"shipping_location_reference": "myref"
-		},
-		{
-			"address_type": "destination",
-			"shipping_location_reference": "myref002"
-		}
-	]
+  "reference": "sp_00595452779180472847666078547968",
+  "custom_reference": "MyCustomRef002",
+  "shipment_type": "on_demand",
+  "direction": "outbound",
+  "contents": [
+    {
+	  "value": {
+	    "amount": 2.99,
+		"currency": "GBP"
+	  }
+	}
+  ],
+  "addresses": [
+    {
+	  "address_type": "origin",
+	  "shipping_location_reference": "myref"
+	},
+	{
+	  "address_type": "destination",
+	  "shipping_location_reference": "myref002"
+    }
+  ]
 }
 ```
-</div>
 
-<div class="tab">
-    <button class="staticTabButton">Example Update Shipment Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'updateShipmentRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="updateShipmentRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'updateShipmentRequest')">
+# [Example Update Shipment Response](#tab/example-update-shipment-response)
 
 ```json
 {
@@ -365,9 +349,9 @@ The example shows a simple **Update Shipment** request for a shipment with a `{r
   ]
 }
 ```
-</div>
+---
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > For full reference information on the **Update Shipment** endpoint, see [LINK HERE]
 
@@ -376,7 +360,3 @@ The example shows a simple **Update Shipment** request for a shipment with a `{r
 * Learn how to retrieve shipment data: [Getting Shipments](/pro/api/shipments/getting_shipments.html)
 * Learn how to cancel shipments: [Cancelling Shipments](/pro/api/shipments/cancelling_shipments.html)
 * Learn how to allocate shipments: [Allocating Shipments](/pro/api/shipments/allocating_shipments.html)
-
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>

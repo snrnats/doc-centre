@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-shipments-introduction
+title: Introduction
+tags: shipments,pro,api,getting started
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 02/07/2020
+---
 # Getting Started with PRO's Shipments APIs
 
 Welcome to SortedPRO! Here you'll find a brief overview of PRO's Shipments APIs and how you can call them.
@@ -10,7 +17,7 @@ PRO's Shipments functionality was introduced as an extension to the previous Con
 
 Shipments also offers the ability to auto-manifest with carriers, the ability to group shipments together for ease of management, and improved dangerous goods and customs functionality, among many other features.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > For more information on the differences between PRO's Shipments API suite and the older Consignments API suite, see the [Consignments vs Shipments](/pro/api/shipments/consignments_vs_shipments.html) page.
 
@@ -28,20 +35,16 @@ PRO's Shipments APIs enable you to:
 
 <span class="highlight">NEED SOME SORT OF NOTE ABOUT REACT TRACKING IN HERE</span>
 
-> <span class="note-header">More Information</span>
+> [!NOTE]
 >
 > * For example API call flows, see LINK HERE.
 > * For API reference information, see LINK HERE.
-
 
 ## Making an API Request in PRO
 
 This section explains the various API headers used when making a request to one of PRO's Shipments APIs.
 
-<div class="tab">
-    <button class="staticTabButton">Example PRO Shipments API Headers</button>
-</div>
-<div id="apikeyexample" class="staticTabContent">
+# [Example PRO Shipments API Headers](#tab/example-pro-shipments-api-headers)
 
 ```
 x-api-key: [qwerrtyuiioop0987654321]
@@ -51,8 +54,7 @@ Accept-Encoding: gzip
 x-api-version: 1.1
 
 ```
-
-</div>
+---
 
 ### Authentication
 
@@ -85,7 +87,3 @@ Depending on the content returned, PRO's responses may include the following hea
 * Learn more about the differences between shipments and consignments: [Shipments vs Consignments](/pro/api/shipments/consignments_vs_shipments.html)
 * Learn how to create, update and delete shipments: [Managing Shipments](/pro/api/shipments/managing_shipments.html)
 * Learn how to allocate shipments to carrier services: [Allocating Shipments](/pro/api/shipments/allocating_shipments.html)
-
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>
