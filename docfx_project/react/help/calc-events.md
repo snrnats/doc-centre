@@ -1,3 +1,10 @@
+---
+uid: react-help-calc-events
+title: Calculated Events
+tags: react,api,calculated events,events
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 29/05/2020
+---
 # Calculated Events
 
 REACT's Calculated Events feature helps you to stay on top of shipments that may have gone missing, or which have passed their delivery promise date. This page explains the shipment properties that REACT can calculate, how calculated events work, and how best to use calculated events
@@ -15,7 +22,7 @@ Each shipment has two properties that REACT can change without receiving a carri
 
 When REACT updates one of these properties, it creates a calculated event to record the change. You can retrieve calculated events in the same way you would retrieve regular, carrier-derived events.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > For more information on retrieving events, see the [Retrieving Shipment and Event Data](/react/help/retrieving-data.html) page of the docs portal, and the [Get Shipment Events](https://docs.sorted.com/react/api/#GetShipmentEvents) section of the API reference.
 
@@ -23,7 +30,7 @@ When REACT updates one of these properties, it creates a calculated event to rec
 
 If REACT believes that a shipment may be lost, it sets that shipment's `may_be_missing` property to _true_. By default, the `may_be_missing` property is set to _false_. 
 
-> <span class="note-header">Note:</span>
+> [!CAUTION]
 >
 > `may_be_missing` is always set based on REACT's internal calculations. A `may_be_missing` value of _true_ does not mean that the carrier has notified Sorted that the shipment may be missing.
 
@@ -57,7 +64,7 @@ If a shipment is marked as late, then REACT records how many hours late it is in
 
 The `is_late` flag is reset if the shipment is updated with new `promised_date` information (as long as the new `promised_date` has not also already elapsed). If `is_late` is reset to _false_, then `hours_late` is reset to NULL. 
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > The `is_late` shipment property should not be confused with the _Late_ shipment state. Like all other shipment states, the _Late_ shipment state is assigned on the basis of a carrier tracking event that REACT has received. Simply put, the `is_late` property is used when REACT notices a shipment is late, while the _Late_ shipment state is used when a carrier tells Sorted that the shipment is late. 
 
@@ -69,14 +76,14 @@ A shipment is deemed to be non-trackable if any of the following criteria are me
 
 * The shipment is domestic (i.e. the `addresses.country_iso_code` of its origin and destination addresses is identical) **AND** Sorted has not received a tracking event for it in seven or more days.
 * The shipment is international (i.e. the `addresses.country_iso_code` of its origin and destination addresses is different) **AND** Sorted has not received a tracking event for it in 10 or more days.
-   > <span class="note-header">Note:</span>
+   > [!NOTE]
    >
-   > If we do not know whether a shipment is domestic or international (i.e. it does not have a `addresses.country_iso_code` recorded for both its origin and destination addresses), then it is assumed to be domestic.
+   > If Sorted do not know whether a shipment is domestic or international (that is, it does not have a `addresses.country_iso_code` recorded for both its origin and destination addresses), then it is assumed to be domestic.
 * The shipment is in a [final state](/react/help/calc-events.html#final-states) **AND** Sorted has not received a tracking event for it in three or more days.
 
 ## Final States
 
-REACT uses the concept of "final shipment states" when determining whether shipments are lost or potentially missing. The list of final states covers all the potential outcomes for a shipment delivery. Once a shipment enters a final state, its journey is considered to have ended and REACT no longer tracks it.
+REACT uses "final shipment states" when determining whether shipments are lost or potentially missing. The list of final states covers all the potential outcomes for a shipment delivery. Once a shipment enters a final state, its journey is considered to have ended and REACT no longer tracks it.
 
 The full list of final states is:
 
@@ -103,7 +110,7 @@ The full list of final states is:
 
 Although set by REACT, the `lateness` and `may_be_missing` flags are standard properties and can be integrated in exactly the same way as any other shipment data. They are returned by the Shipments and Events APIs,as part of the Shipment and Shipment Events resources.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > For more information on retrieving data via REACT's APIs, see the [Retrieving Shipment and Event Data](/react/help/retrieving-data.html) page.
 

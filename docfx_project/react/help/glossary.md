@@ -1,6 +1,11 @@
+---
+uid: react-help-glossary
+title: Glossary
+tags: react,api,ui,glossary
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 29/05/2020
+---
 # Glossary
-
-<div class="table-1">
 
 | Term                   | Definition                                                                                                                                                                                                                                                                                                                                                         |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -21,5 +26,3 @@
 | Tracking Page          | In REACT, a customisable microsite, hosted by Sorted, that displays status and event information about an individual shipment. Your customers can track their order by visiting the link that corresponds to their shipment.                                                                                                                                       |
 | Tracking Reference     | The carrier's reference for a shipment.                                                                                                                                                                                                                                                                                                                            |
 | Webhook                | An automated message sent whenever a particular event occurs. In REACT, webhooks are triggered by changes in shipment state. When a shipment assumes a selected state, the webhook deploys. |
-
-</div>

@@ -1,0 +1,124 @@
+{
+	"Data Contract (Out)": {
+		"prefix": "!cout",
+		"body": [
+			"<div class=\"contract\">",
+			"",
+			"| Property | Type | Description | Occurrence |",
+			"| -------- | ---- | ----------- | :--------: |",
+			"",
+			"",
+			"</div>"
+		],
+		"description": "Creates an empty table for outbound (no validation) data contracts"
+	},
+	"Data Contract": {
+		"prefix": "!dc",
+		"body": [
+			"<div class=\"contract\">",
+			"",
+			"| Property | Type | Description | Validation | Occurrence |",
+			"| -------- | ---- | ----------- | ---------- | :--------: |",
+			"",
+			"",
+			"</div>"
+		],
+		"description": "Creates an empty table for inbound data contracts"
+	},
+	"Enum Table": {
+		"prefix": "!val",
+		"body": [
+			"| Value | Description |",
+			"| ----- | ----------- |",
+		]
+	},
+	"Endpoint Table": {
+		"prefix": "!ep",
+		"body": [
+			"| Property | Value |",
+			"| -------: | ----- |",
+			"| Endpoint: | `/` |",
+			"| Verb: | `GET` |",
+			"| Query strings: | `-` |",
+			"| Request Type: | [`-`](./index.md#) |",
+			"| Response Type: | [``](./index.md#) |",
+			"| ATU Score: | `1.0` |"
+		],
+		"description": "Creates a template table for describing an API endpoint"
+	},
+	"Response Table": {
+		"prefix": "!res",
+		"body": [
+			"<div class=\"contract endpoint\">",
+			"",
+			"| Status Code | Data Contract | Description |",
+			"| :--: | --- | --- |",
+			"| **`200*`** | [`contract`](./index.md#) |  |",
+			"| `400` | [`api_error`](./index.md#api-error) | Returned when the request is not valid. This includes malformed requests and requests that fail validation. |",
+			"| `403` | [`api_error`](./index.md#api-error) | Returned when your account does not have permission to use this API endpoint. |",
+			"",
+			"</div>"
+		],
+		"description": "Creates a template table for listing responses"
+	},
+	"Note": {
+		"prefix": "!note",
+		"body": [
+			"> [!NOTE]",
+			"> "
+		],
+		"description": "Markdown note"
+	},
+	"Warning": {
+		"prefix": "!warn",
+		"body": [
+			"> [!WARNING]",
+			"> "
+		],
+		"description": "Markdown warning"
+	},
+	"Tip": {
+		"prefix": "!tip",
+		"body": [
+			"> [!TIP]",
+			"> "
+		],
+		"description": "Markdown tip"
+	},
+	"Caution": {
+		"prefix": "!caution",
+		"body": [
+			"> [!CAUTION]",
+			"> "
+		],
+		"description": "Markdown caution"
+  },
+  "PageBreak": {
+    "prefix": "!break",
+    "body": [
+      "<div class=\"page\"></div>"
+    ],
+    "description": "Adds a page break div"
+  },
+  "MermaidSorted": {
+    "prefix": "!mmsorted",
+    "body": [
+      "classDef sorted fill:#ff055e,color:#fff,stroke-width:2,stroke:#ff055e"
+    ],
+    "description": "Adds mermaid Sorted class"
+  },
+  "MermaidSortedOutline": {
+    "prefix": "!mmoutline",
+    "body": [
+      "classDef outline fill:#fff,color:#ff0552,stroke-width:1,stroke:#ff055e"
+    ],
+    "description": "Adds mermaid Sorted outline class"
+  },
+  "MermaidError": {
+    "prefix": "!mmerror",
+    "body": [
+      "classDef error fill:#ce283c,color:#fff,stroke-width:1,stroke:#ce283c"
+    ],
+    "description": "Adds mermaid error class"
+  }
+}

@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-tags
+title: Tags
+tags: tags,pro,api,consignments
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 29/05/2020
+---
 # Tags
 
 Allocation tags enable you to filter out carrier services that would not be suitable for a particular consignment. This page explains how to use and combine tags.
@@ -32,12 +39,7 @@ This configuration would produce the following results:
 
 The example shows a `tags` property for a consignment that contains flammable materials, oil and alcohol.
 
-<div class="tab">
-    <button class="staticTabButton">Example Tags array</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'tagsExample')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="tagsExample" class="staticTabContent" onclick="CopyToClipboard(this, 'tagsExample')">
+# [Tags Property](#tab/tags-property)
 
 ```json
 "Tags": [
@@ -46,9 +48,4 @@ The example shows a `tags` property for a consignment that contains flammable ma
    "Alcohol"
 ]
 ```
-
-</div>
-
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>
+---

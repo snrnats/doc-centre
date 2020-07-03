@@ -10,7 +10,7 @@ REACT's **Create Tracking Page** feature is now live! **Create Tracking Page** e
 
 Each REACT tracking page is a customisable microsite, hosted by Sorted, that displays status and event information about an individual shipment. Your customers can track their order simply by visiting the link that corresponds to their shipment.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 > 
 > For information on setting up tracking pages, see the [Creating Tracking Pages](/react/help/tracking-pages.html) page.
 
@@ -22,7 +22,7 @@ REACT now enables you to tag individual shipments. A shipment tag is a text iden
 
 Shipment tags can be used in conjunction with webhooks to fine-tune the updates REACT sends out, enabling you to build webhooks that only fire when a shipment with a particular tag enters a selected shipment state.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 > 
 > For information on tagging shipments, see the [Registering Shipments](/react/help/registering-shipments.html) and [Updating Shipments](/react/help/updating-shipments.html) pages.
 > 

@@ -1,5 +1,12 @@
-# Glossary 
+---
+uid: pro-api-help-glossary
+title: Glossary
+tags: glossary,terms,pro,api,consignments
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 02/06/2020
+---
 
+# Glossary 
 
 * **Allocate** - The process of selecting the carrier service that will be used to deliver a consignment.
 * **Allocation Rules** - Rules applied to carrier services that determine when a carrier service will be eligible for a consignment. 
@@ -16,9 +23,3 @@
 * **Pickup Option** - A combination of a PUDO (pickup/drop-off) location that a consignment could potentially be delivered to, a delivery date and time window that it could be delivered to that location on, and a carrier service that could meet that delivery promise.
 * **Shipping Location** - A pre-set address used by your organisation as an origin for outbound consignments and a destination for inbound consignments.
 * **Tracking Event** - An informational messages returned from carriers that provide details about the status of the consignment.
-
-
-
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>

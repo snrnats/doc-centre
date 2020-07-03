@@ -1,3 +1,11 @@
+---
+uid: pro-api-help-packing-orders
+title: Creating Consignments From Orders
+tags: orders,pro,api,consignments
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 29/05/2020
+
+---
 # Creating Consignments From Orders
 
 Packing orders into shippable consignments is the final step in the Orders process. This page explains how to create consignments from an order.
@@ -12,7 +20,7 @@ To call **Pack Order**, send a `POST` request to `https://api.electioapp.com/ord
 
 Each item must be identified by a `Reference`, an `ItemReferenceProvidedByCustomer`, or a `Sku`. These fields are not mandatory in themselves, but one of them must be present for each item.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > PRO validates the items on a <strong>Pack Order</strong> request against its associated order. For example, the system will return an error if you make a <strong>Pack Order</strong> request including an item with a <code>Sku</code> of <em>12345</em> if there is no item with that <code>Sku</code> on the corresponding order.
 >
@@ -38,12 +46,9 @@ The inbound consignment is identical to the outbound consignment, with the excep
 
 The example shows a **Pack Order** request to create a consignment with one package containing a single item from order _EO-000-002-0TT_. PRO creates the consignment and responds with a `{consignmentReference}` of _EC-000-05B-MQ4_.
 
-<div class="tab">
-    <button class="staticTabButton">Example Pack Order Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'packOrderRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Pack Order Request](#tab/pack-order-request)
 
-<div id="packOrderRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'packOrderRequest')">
+`POST https://api.electioapp.com/orders/EO-000-002-0TT/pack`
 
   ```json
   {
@@ -80,14 +85,7 @@ The example shows a **Pack Order** request to create a consignment with one pack
   }
   ```
 
-</div>   
-
-<div class="tab">
-    <button class="staticTabButton">Example Pack Order Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'packOrderResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="packOrderResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'packOrderResponse')">
+# [Pack Order Response](#tab/pack-order-response)
 
 ```json
 {
@@ -105,9 +103,9 @@ The example shows a **Pack Order** request to create a consignment with one pack
 }
 ```
 
-</div>
+---
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > * For full reference information on the <strong>Pack Order</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/PackOrder">Pack Order</a></strong> page of the API reference.
 > * For an example call flow showing orders being packed into consignments, see the <a href="/pro/api/help/flows/order_flex_flow.html">Order Flex</a> call flow page.
@@ -117,7 +115,3 @@ The example shows a **Pack Order** request to create a consignment with one pack
 * Learn how to retrieve delivery options at the [Getting Delivery Options](/pro/api/help/getting_delivery_options.html) page.
 * Learn how to retrieve a consignment's customs documentation and invoices at the [Getting Customs Docs And Invoices](/pro/api/help/getting_customs_docs_and_invoices.html) page.
 * Learn how to track consignments at the [Tracking Consignments](/pro/api/help/tracking_consignments.html) page.
-
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>
