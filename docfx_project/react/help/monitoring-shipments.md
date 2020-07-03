@@ -129,7 +129,15 @@ Adding shipment notes can help you to manage exceptions and customer service enq
 
 ### Searching For a Specific Shipment
 
-The **Search by order or tracking reference** bar is displayed at the top of the **States** and **All Shipments** dashboards. To view a specific shipment's details, enter the shipment's order or tracking reference into the search bar and click the **Search** icon. 
+All of REACT's UI pages display a search bar at the top. To view a specific shipment's details:
+
+1. Select the parameter you want to search by from the drop-down menu. REACT enables you to search by **Tracking Reference**, **Custom Reference**, or by one of your named shipment groupings.
+
+> <span class="note-header">Note:</span>
+>
+> For more information on REACT shipment groups, see the [Grouping Shipments](/react/help/grouping-shipments.html) page.
+
+2. Enter a search value and click the search icon or press Enter to search on the relevant shipment details.
 
 ![search-bar](images/search-bar.png)  
 
