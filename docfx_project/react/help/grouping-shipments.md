@@ -12,7 +12,7 @@ For example, suppose that a clothing retailer has received an order for a coat a
 
 However, both items are still a single order from the customer's perspective. As such, it would be a better user experience to provide the customer with a single link that they could use to track both shipments, rather than two separate links.
 
-By using shipment groups, you can link these two shipments together via a shared metadata property, enabling you to send tracking details for both as a single link. You can then use this metadata property as an identifier for a REACT tracking page link. The page displayed by the link displays tracking information for all shipments tagged with that property, with a drop-down menu enabling customers to switch between all shipments in the group without following a separate link. 
+By using shipment groups, you can link these two shipments together via a shared metadata property, enabling you to send tracking details for both as a single link. The page displayed by the link displays tracking information for all shipments tagged with that property, with a drop-down menu enabling customers to switch between all shipments in the group without navigating to a separate page. 
 
 ## Registering Grouped Shipments
 
@@ -86,7 +86,7 @@ The following example shows a request to register four simple shipments at once.
 
 </div>
 
-To add a pre-existing shipment to a group, use the **Update Shipment** endpoint to add the relevant metadata property to the shipment.
+To add a pre-existing shipment to a group, use the **Update Shipment** endpoint to add the relevant metadata property to the shipment. Note that REACT's **Update Shipment** endpoint requires you to pass an entire new shipment object, which overwrites the existing shipment resource. As such, you would need to pass all of the shipment's current details as well as the metadata property when adding a shipment to a group.
 
 > <span class="note-header">More Information:</span>
 >
