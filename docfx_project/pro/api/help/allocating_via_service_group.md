@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-allocating-via-service-group
+title: Allocating Via Service Group
+tags: allocation,pro,api,consignments
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 28/05/2020
+---
 # Allocating Via Service Group
 
 Service groups enable you to specify a custom pool of carrier services to allocate a consignment from. This page explains how to configure service groups, and how to use the **Allocate Consignment With Service Group** endpoint to allocate from within those groups.
@@ -42,39 +49,29 @@ To delete an existing carrier service group, click its **Delete This Group** lin
 
 To call **Allocate Consignment With Service Group**, send a `PUT` request to `https://api.electioapp.com/allocation/{consignmentReference}/allocatewithservicegroup/{mpdCarrierServiceGroupReference}`, where `{consignmentReference}` is the unique reference for the consignment you want to allocate and `{mpdCarrierServiceGroupReference}` is the **Service Group Code** of the group you want to allocate within.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 > For full reference information on the <strong>Allocate Consignment With Service Group</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/AllocateConsignmentWithServiceGroup">Allocate Consignment With Service Group</a></strong> page of the API reference. 
 
 To find the **Service Group Code** for a particular group, log in to the PRO UI, navigate to the **[Carrier Service Groups](https://www.electioapp.com/Configuration/CarrierServiceGroups)** page (**Settings** > **Carrier Service Groups**), and locate the tile for that group. The **Service Group Code** is shown in the **Code** field.
 
 Once the request is received, PRO uses allocation rules to eliminate any carrier services in the group that would not be suitable to take the consignment, allocates the consignment to the cheapest remaining service, and returns an Allocation Summary.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 > For information on using allocation rules, see the [What Is An Allocation Rule?](/pro/api/help/allocating_consignments.html#what-is-an-allocation-rule) section of the [Allocating Consignments To Carriers](/pro/api/help/allocating_consignments.html) page.
 
 ### Allocate Consignment With Service Group Example
 
 The example shows a request to allocate a consignment with a `{consignmentReference}` of _EC-000-05B-MMA_ within a group that has a `{mpdCarrierServiceGroupReference}` of _valuableGoods_.
 
-<div class="tab">
-    <button class="staticTabButton">Example Allocate Consignment With Service Group Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'allocationUSGRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Allocate Consignment With Service Group Request](#tab/allocate-consignment-with-service-group-request)
 
-<div id="allocationUSGRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'allocationUSGRequest')">
-
-```
+```json
 PUT https://api.electioapp.com/allocation/EC-000-05B-MMA/allocatewithservicegroup/valuableGoods
 ```
-
-</div>
+---
 
 ## Next Steps
 
 * Learn about alternative methods of allocating consignments at the [Allocating Consignments](/pro/api/help/allocating_consignments.html) page.
 * Learn how to get and print delivery labels at the [Getting Labels](/pro/api/help/getting_labels.html) page.
 * Learn how to add consignments to a carrier manifest at the [Manifesting Consignments](/pro/api/help/manifesting_consignments.html) page.
-
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>

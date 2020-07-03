@@ -1,3 +1,10 @@
+---
+uid: react-help-tracking-pages
+title: Tracking Pages
+tags: react,ui,tracking,tracking page
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 29/05/2020
+---
 # Creating Tracking Pages
 
 REACT's handy **Create Tracking Page** feature enables you to build branded shipment tracking pages in minutes, with no coding required. This page explains how REACT tracking pages work, how to set up new pages, and how to manage your existing pages.
@@ -14,7 +21,7 @@ All REACT tracking pages have the same basic layout, with a navigation bar at th
 
 You can create as many tracking page layouts as you need. For example, a shoe retailer could use different custom layouts to track men's, women's, and kid's shoes.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > This page explains how to set up tracking pages using REACT's **Create Tracking Page** UI option. It does not cover integrating your own websites or apps with REACT's tracking API. For information on using REACT to power tracking within your own websites or apps, see the [Retrieving Shipment and Event Data](/react/help/retrieving-data.html) page.
 
@@ -52,7 +59,7 @@ To configure general page details:
 
 1. Enter a **Tracking Page Name** for the layout. This value is used as part of the page's link. 
      
-><span class="note-header">Note:</span>
+> [!NOTE]
 >
 > Choose your page's **Tracking Page Name** carefully, as you can't update it once you've saved the page. Note that you can't have two pages with the same **Tracking Page Name**.
 >
@@ -84,7 +91,7 @@ To configure the appearance of your page's nav bar, use the **Navbar** panel:
 6. Select a **Font Colour** by clicking the **Select** button and choosing a colour from the picker. This is the colour of the nav bar's text.
 7. Select a **Font Size** and **Font Weight** for the nav bar's text.
 
-><span class="note-header">Note:</span>
+> [!NOTE]
 >
 > The font options on the **Navbar** panel override any page-wide options you may have selected in the **General** panel.
 
@@ -167,7 +174,7 @@ To configure a **Status Timeline** element:
 1. Select **Status Timeline** from the **Type** menu.
 2. Select whether you want to view _Locale_ labels or _Shipment State_ labels from the **Choose Display Type** menu. If you select _Locale_ labels, then the page will display your custom shipment state labels instead of state names. If you select _Shipment State_ labels, then the page will display default state names.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > For more information on configuring custom shipment labels, see the [Setting up Custom State Labels](/react/help/settings.html#setting-up-custom-state-labels) section of the **Settings** page.
 
@@ -176,7 +183,7 @@ To configure a **Status Timeline** element:
 5. Select a **Font Colour** by clicking the **Select** button and choosing a colour from the picker.
 6. Select a **Font Size** and **Font Weight** for the element's text.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > You can only add **Status Timeline** elements to the top row of your tracking page. The option is not displayed when editing elements on lower rows.
 

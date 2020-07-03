@@ -1,17 +1,12 @@
-<div class="tab">
-    <button class="staticTabButton">Select Option Endpoint</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'selectOptionEndpoint')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Select Option Endpoint](#tab/select-option-endpoint)
 
-<div id="selectOptionEndpoint" class="staticTabContent" onclick="CopyToClipboard(this, 'selectOptionEndpoint')">
+```json
+POST https://api.electioapp.com/deliveryoptions/select/{deliveryOptionReference}
+```
 
-   ```
-   POST https://api.electioapp.com/deliveryoptions/select/{deliveryOptionReference}
-   ```
+---
 
-</div>  
-
-Once the customer has selected an available option, you'll need to record their choice in SortedPRO via the **[Select Option](https://docs.electioapp.com/#/api/SelectOption)** endpoint. 
+Once the customer has selected an available option, you'll need to record their choice in SortedPRO via the **[Select Option](https://docs.electioapp.com/#/api/SelectOption)** endpoint.
 
 PRO creates and allocates a consignment using the details supplied previously in the delivery options call, and returns: 
 
@@ -19,33 +14,22 @@ PRO creates and allocates a consignment using the details supplied previously in
 * A summary of the carrier service the consignment was allocated to
 * A link to the relevant package labels
 
-> <span class="note-header">Note:</span>
-> * For full reference information on the <strong>Select Option</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/SelectOption">Select Option</a></strong> page of the API reference.
+> [!NOTE]
+>
+> * For full reference information on the **Select Option** endpoint, see the **[Select Option](https://docs.electioapp.com/#/api/SelectOption)** page of the API reference.
 > * For a user guide on selecting options, see the [Selecting Options](/pro/api/help/selecting_options.html) page.
 
 ### Select Option Example
 
 The example shows a request to select a delivery option that has a `{deliveryOptionReference}` of _EDO-000-6DX-6XP_. PRO creates a consignment with a `{consignmentReference}` of _EC-000-05B-MMQ_, which it then  allocates to the carrier service associated with delivery option _EDO-000-6DX-6XP_. PRO then returns the relevant `{consignmentReference}` and label link, enabling you to retrieve labels for the consignment.
 
-<div class="tab">
-    <button class="staticTabButton">Example Select Option Request</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'selectOptionRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Select Option Request](#tab/select-option-request)
 
-<div id="selectOptionRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'selectOptionRequest')">
+```json
+POST https://api.electioapp.com/deliveryoptions/select/EDO-000-6DX-6XP
+```
 
-   ```
-   POST https://api.electioapp.com/deliveryoptions/select/EDO-000-6DX-6XP
-   ```
-
-</div>   
-
-<div class="tab">
-    <button class="staticTabButton">Example Select Option Response</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'selectOptionResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="selectOptionResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'selectOptionResponse')">
+# [Select Option Response](#tab/select-option-response)
 
 ```json
 {
@@ -79,4 +63,4 @@ The example shows a request to select a delivery option that has a `{deliveryOpt
 }
 ```
 
-</div> 
+---

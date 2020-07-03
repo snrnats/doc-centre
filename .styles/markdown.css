@@ -1,0 +1,337 @@
+:root {
+    --colour-main: #ff055e;
+    --colour-body: #404040;
+    --colour-title: #404040;
+    --colour-quote-background: #ffebf3;
+    --colour-grey-2: #605d58;
+    --colour-code-background: #e3e3e3;
+    --font-code: 'Consolas', 'Menlo', sans-serif;
+    --code-light: #f2f2f2;
+    --code-default: #404040;
+    --code-emphasis: #a8a8a2;
+    --code-literal: #7930ff;
+    --code-title: #007027;
+    --code-attribute: #66d9ef;
+    --code-class: #757575;
+    --code-variable: #404040;
+    --code-comment: #999;
+    --code-size: 1.0em;
+    --mermaid-font-family: 'Circular Pro Book';
+    --font-main: 'Circular Pro Book';
+    --font-title: 'Circular Pro Black';
+    --font-size: 1.0em;
+    --table-colour-border: #dfe2e5;
+    --table-colour-row-border: #c6cbd1;
+    --table-colour-row: #fff;
+    --table-colour-row-alt: #f6f8fa;
+    --table-colour-header: #dbdbdb;
+}
+
+@font-face {
+    font-family: 'Circular Pro Book';
+    src: url("./fonts/Book/lineto-circular-pro-book.eot?") format("embedded-opentype");
+    src: url("./fonts/Book/lineto-circular-pro-book.woff2?") format("woff2");
+    src: url("./fonts/Book/lineto-circular-pro-book.woff?") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circular Pro Bold';
+    src: url("./fonts/Bold/lineto-circular-pro-bold.eot?") format("embedded-opentype");
+    src: url("./fonts/Bold/lineto-circular-pro-bold.woff2?") format("woff2");
+    src: url("./fonts/Bold/lineto-circular-pro-bold.woff?") format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circular Pro Black';
+    src: url("./fonts/Black/lineto-circular-pro-black.eot?") format("embedded-opentype");
+    src: url("./fonts/Black/lineto-circular-pro-black.woff2?") format("woff2");
+    src: url("./fonts/Black/lineto-circular-pro-black.woff?") format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circular Pro Medium';
+    src: url("./fonts/Medium/lineto-circular-pro-medium.eot?") format("embedded-opentype");
+    src: url("./fonts/Medium/lineto-circular-pro-medium.woff2?") format("woff2");
+    src: url("./fonts/Medium/lineto-circular-pro-medium.woff?") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, * {
+    font-family: var(--font-main);
+    font-size: var(--font-size);
+}
+
+body {
+    line-height: 1.5;
+    color: var(--colour-body);
+    word-wrap: break-word;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: var(--font-title);
+    color: var(--colour-title);
+}
+
+.vscode-body h2,
+.vscode-body h3,
+.vscode-body h4,
+.vscode-body h5,
+.vscode-body h6 {
+    border-bottom: 0 none;
+}
+
+.vscode-body h1,
+h1 {
+    border-bottom: 2px solid var(--colour-main);
+    border-bottom-width: 4px;
+    border-color: var(--colour-main);
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.6em;
+}
+
+h3 {
+    font-size: 1.4em;
+}
+
+h4 {
+    font-size: 1.2em;
+}
+
+h5 {
+    font-size: 1.1em;
+}
+
+a,
+a:link,
+a:visited {
+    color: var(--colour-main);
+    font-weight: 400;
+}
+
+.vscode-body ul ul,
+ul ul {
+    list-style-type: disc;
+    padding-inline-start: 20px;
+}
+
+.vscode-body blockquote,
+blockquote {
+    border-left: 4px solid var(--colour-main);
+    background: var(--colour-quote-background);
+    color: var(--colour-grey-2);
+    border-radius: 0 10px 10px 0;
+    margin: 0 7px;
+    margin-inline-start: 0px;
+}
+
+.vscode-body blockquote > p,
+blockquote > p {
+    padding: 5px;
+}
+
+.vscode-body blockquote>:last-child {
+    margin-bottom: 10px;
+}
+
+:not(pre):not(.hljs) > code {
+    color: var(--colour-main);
+    font-size: 1.0em;
+    background-color: var(--colour-code-background);
+    word-break: break-word;
+    padding: 3px;
+    border-radius: 3px;
+    font-family: var(--font-code);
+}
+
+:not(pre):not(.hljs) > code:hover {
+    color: var(--colour-code-background);
+    background-color: var(--colour-main);
+}
+
+/* mermaid */
+.mermaid {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 600px !important;
+}
+
+pre:not(.hljs), pre.hljs code > div {
+    padding: auto;
+}
+
+.footer {
+    display: block;
+    text-align: right;
+    align-items: flex-end;
+    color: var(--colour-body);
+    font-size: 9px;
+}
+
+/* table styles */
+.vscode-body table,
+table {
+    display: block;
+    width: 100%;
+    overflow: auto;
+}
+  
+.vscode-body table th,
+table th {
+    font-weight: 600;
+}
+
+.vscode-body table th,
+.vscode-body table td,
+table th,
+table td {
+    padding: 6px 13px;
+    border: 1px solid var(--table-colour-border);
+}
+
+.vscode-body table tr td:nth-child(1),
+table tr td:nth-child(1) {
+    white-space: nowrap;
+}
+
+.contract > table tr td:nth-child(1),
+.contract > table tr td:nth-child(2) {
+    white-space: nowrap;
+} 
+
+.vscode-body table tr,
+table tr {
+    background-color: var(--table-colour-row);
+    border-top: 1px solid var(--table-colour-row-border);
+}
+
+.vscode-body table tr:nth-child(2n),
+table tr:nth-child(2n) {
+    background-color: var(--table-colour-row-alt);
+}
+
+table > thead > tr > th {
+    border-bottom: none;
+    background: var(--table-colour-header);
+}
+
+/* code styles */
+code {
+    word-break: keep-all;
+}
+
+code,
+code > div {
+    font-family: var(--font-code);
+}
+
+.hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    background: var(--code-light);
+    font-family: var(--font-code);
+    font-size: var(--code-size);
+  }
+  
+  .hljs,
+  .hljs-tag,
+  .hljs-subst {
+    color: var(--code-default);
+    font-family: var(--font-code);
+    font-size: var(--code-size);
+  }
+  
+  .hljs-strong,
+  .hljs-emphasis {
+    color: var(--code-emphasis);
+    font-family: var(--font-code);
+    font-size: var(--code-size);
+  }
+  
+  .hljs-bullet,
+  .hljs-quote,
+  .hljs-number,
+  .hljs-regexp,
+  .hljs-literal,
+  .hljs-link {
+    color: var(--code-literal);
+    font-family: var(--font-code);
+    font-size: var(--code-size);
+  }
+  
+  .hljs-code,
+  .hljs-title,
+  .hljs-section,
+  .hljs-selector-class {
+    color: var(--code-title);
+    font-family: var(--font-code);
+    font-size: var(--code-size);
+  }
+  
+  .hljs-strong {
+    font-weight: bold;
+    font-family: var(--font-code);
+    font-size: var(--code-size);
+  }
+  
+  .hljs-emphasis {
+    font-style: italic;
+    font-family: var(--font-code);
+    font-size: var(--code-size);
+  }
+  
+  .hljs-keyword,
+  .hljs-selector-tag,
+  .hljs-name,
+  .hljs-attr {
+    color: var(--colour-main);
+    font-family: var(--font-code);
+    font-size: var(--code-size);
+  }
+  
+  .hljs-symbol,
+  .hljs-attribute {
+    color: var(--code-attribute);
+    font-family: var(--font-code);
+    font-size: var(--code-size);
+  }
+  
+  .hljs-params,
+  .hljs-class .hljs-title {
+    color: var(--code-class);
+    font-family: var(--font-code);
+    font-size: var(--code-size);
+  }
+  
+  .hljs-string,
+  .hljs-type,
+  .hljs-built_in,
+  .hljs-builtin-name,
+  .hljs-selector-id,
+  .hljs-selector-attr,
+  .hljs-selector-pseudo,
+  .hljs-addition,
+  .hljs-variable,
+  .hljs-template-variable {
+    color: var(--code-variable);
+    font-family: var(--font-code);
+    font-size: var(--code-size);
+  }
+  
+  .hljs-comment,
+  .hljs-deletion,
+  .hljs-meta {
+    color: var(--code-comment);
+    font-family: var(--font-code);
+    font-size: var(--code-size);
+  }

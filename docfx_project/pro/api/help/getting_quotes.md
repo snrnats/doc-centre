@@ -1,3 +1,10 @@
+---
+uid: pro-api-help-getting-quotes
+title: Getting Quotes
+tags: quotes,pro,api,consignments
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 29/05/2020
+---
 # Getting Quotes
 
 This page explains how got get delivery quotes based on consignment details.
@@ -11,7 +18,7 @@ PRO has two endpoints that take the details of an as-yet uncreated consignment a
 * **Get Quotes** returns a simple list of delivery quotes for the potential consignment.
 * **Get Service Group Quotes** returns a list of current service groups, along with quotes from the eligible services in each group.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > Both the **Get Quotes** and **Get Service Group Quotes** endpoints take a consignment object in the body of the request. However, they do not create consignments in and of themselves. In order to allocate to one of the quotes returned by these endpoints, you would need to first create the consignment. 
 >
@@ -23,7 +30,7 @@ To call **Get Quotes**, send a `POST` request to `https://api.electioapp.com/quo
 
 As a minimum, the **Get Quotes** endpoint requires you to send package weights and dimensions, origin address, and destination address data. You can either specify package weights and dimension via the `Weight` and `Dimensions` properties, or by supplying a `PackageSizeReference`. 
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >  A <code>PackageSizeReference</code> is a unique identifier for a pre-defined, standardised package size. 
 >
 > To configure standard package sizes, use the <strong><a href="https://www.electioapp.com/Configuration/packagingsizes">Configuration > Packaging Sizes</a></strong> page of the PRO UI. You can also view a list of your available standard package sizes by making a call to the <a href="https://docs.electioapp.com/#/api/GetPackageSizes">Get Package Sizes</a> API.
@@ -60,20 +67,17 @@ Each `Quote` object contains the following information:
 
 At this point, you would be able to display the relevant quote information to your customer service operative.
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > For full reference information on the **Get Quotes** endpoint, see the [API Reference](https://docs.electioapp.com/#/api/GetQuotes).
 
 ### Example Get Quotes Call
 
-The example below shows a **Get Quotes** call for a fairly simple consignment.
+The example below shows a **Get Quotes** call for a fairly simple consignment. PRO has responded with one quote and two unavailable services.
 
-<div class="tab">
-    <button class="staticTabButton">Get Quote Request Example</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'quoteRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+# [Get Quote Request](#tab/get-quote-request)
 
-<div id="quoteRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'quoteRequest')">
+`POST https://api.electioapp.com/quotes/`
 
 ```json
 {
@@ -130,16 +134,7 @@ The example below shows a **Get Quotes** call for a fairly simple consignment.
 }
 ```
 
-</div>
-
-PRO has responded with one quote and two unavailable services.
-
-<div class="tab">
-    <button class="staticTabButton">Get Quote Response Example</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'quoteResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="quoteResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'quoteResponse')">
+# [Get Quote Response](#tab/get-quote-response)
 
 ```json
 {
@@ -284,8 +279,7 @@ PRO has responded with one quote and two unavailable services.
     ]
 }
 ```
-
-</div>
+---
 
 ## Getting Service Group Quotes
 
@@ -293,7 +287,7 @@ To call **Get Service Group Quotes**, send a `POST` request to `https://api.elec
 
 Once it has received the request, PRO returns a list of available service groups, identified by `Name` and `Reference`. Each service group contains a `CheapestQuote` detailing the cheapest service in that group. The service group object also contains a list of `Quotes` for the services in the group (including the service detailed in the `CheapestQuote` property) and a list of `UnqualifiedServices` (that is, eligible services within the group for which it was not possible to obtain a delivery quote).
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 >
 > For full reference information on the **Get Service Group Quotes** endpoint, see the [API Reference](https://docs.electioapp.com/#/api/GetServiceGroupQuotes).
 
@@ -301,12 +295,11 @@ Once it has received the request, PRO returns a list of available service groups
 
 This simplified example shows a **Get Service Group Quotes** request for an outbound consignment. In this case, there is one service group configured in PRO, with the name _Example Service Group_. The group contains two services, with the service references <em>SAMPLE_SERVICE01</em> and <em>SAMPLE_SERVICE02</em>.
 
-<div class="tab">
-    <button class="staticTabButton">Get Service Group Quotes Request Example</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'SGQuoteRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+PRO returns a single service group object. In this case, <em>SAMPLE_SERVICE01</em> is the only eligible service, and so is displayed as both the `CheapestQuote` and the only entry in the `Quotes` array. <em>SAMPLE_SERVICE02</em> is returned in the list of unqualified services.
 
-<div id="SGQuoteRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'SGQuoteRequest')">
+# [Get Service Group Quotes Request](#tab/get-service-group-quotes-request)
+
+`POST https://api.electioapp.com/quotes/serviceGroups`
 
 ```json
 {
@@ -560,16 +553,7 @@ This simplified example shows a **Get Service Group Quotes** request for an outb
 }
 ```
 
-</div>
-
-PRO returns a single service group object. In this case, <em>SAMPLE_SERVICE01</em> is the only eligible service, and so is displayed as both the `CheapestQuote` and the only entry in the `Quotes` array. <em>SAMPLE_SERVICE02</em> is returned in the list of unqualified services.
-
-<div class="tab">
-    <button class="staticTabButton">Get Service Group Quotes Response Example</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'SGQuoteResponse')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="SGQuoteResponse" class="staticTabContent" onclick="CopyToClipboard(this, 'SGQuoteResponse')">
+# [Get Service Group Quotes Response](#tab/get-service-group-quotes-response)
 
 ```json
 [
@@ -761,16 +745,10 @@ PRO returns a single service group object. In this case, <em>SAMPLE_SERVICE01</e
   }
 ]
 ```
-
-</div>
-
+---
 
 ## Next Steps
 
 * Learn how to get quotes using a consignment reference at the [Getting Quotes For An Existing Consignment](/pro/api/help/getting_quotes_for_an_existing_consignment.html) page.
 * Learn how to create consignments at the [Creating New Consignments](/pro/api/help/creating_new_consignments.html) page.
 * Learn how to allocate consignments to your chosen quote at the [Allocating to a Specific Quote](/pro/api/help/allocating_to_a_specific_quote.html) page.
-
-<script src="../../scripts/requesttabs.js"></script>
-<script src="../../scripts/responsetabs.js"></script>
-<script src="../../scripts/copy.js"></script>

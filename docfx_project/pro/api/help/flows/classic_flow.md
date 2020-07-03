@@ -1,4 +1,10 @@
-
+---
+uid: pro-api-help-flows-classic-flow
+title: Classic Flow
+tags: pro,api,consignments,flows,classic
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 07/05/2020
+---
 # Classic Flow
 
 <p>
@@ -20,7 +26,7 @@ There are four steps to the flow:
 1. **Create the consignment** - Use the [Create Consignment](https://docs.electioapp.com/#/api/CreateConsignment) endpoint to record the details of your new consignment.
 2. **Allocate the consignment** - Use one of PRO's [Allocation](https://docs.electioapp.com/#/api/AllocateConsignment) endpoints to select the carrier service that your consignment will use. You can nominate a specific service, ask PRO to determine the best service to use from a pre-defined group, or allocate based on pre-set allocation rules.
 3. **Get the consignment's labels** - Use the [Get Labels in Format](https://docs.electioapp.com/#/api/GetLabelsinFormat) endpoint to get the delivery label for your consignment.
-4. **Manifest the consignment** - Use the [Manifest Consignments from Query](https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery) endpoint to send consignment data to the selected carrier.     
+4. **Manifest the consignment** - Use the [Manifest Consignments from Query](https://docs.electioapp.com/#/api/ManifestConsignmentsFromQuery) endpoint to send consignment data to the selected carrier.
 
 This section gives more detail on each step of the flow and provides worked examples.
 
@@ -74,6 +80,4 @@ This section gives more detail on each step of the flow and provides worked exam
 
 ## Next Steps
 
-And we're done! Read on to learn how to allocate consignments based on options presented to the customer at point of purchase, and deal with orders that may require multiple consignments to fulfil. 
-
-[!include[scripts](../../includes/scripts.md)]
+And we're done! Read on to learn how to allocate consignments based on options presented to the customer at point of purchase, and deal with orders that may require multiple consignments to fulfil.

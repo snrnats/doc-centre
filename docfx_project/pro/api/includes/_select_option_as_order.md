@@ -15,7 +15,7 @@ Once the customer has selected an available delivery option, you'll need to reco
 
 Once it has received the **Select Delivery Option as an Order** request, PRO uses the details of the selected option to create an order and returns an object containing the associated `{orderReference}`. 
 
-> <span class="note-header">Note:</span>
+> [!NOTE]
 > * For full reference information on the <strong>Select Delivery Option as an Order</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/SelectDeliveryOptionasanOrder">Select Delivery Option as an Order</a></strong> page of the API reference.
 > * For a user guide on selecting options, see the [Selecting Options](/pro/api/help/selecting_options.html) page.
 
