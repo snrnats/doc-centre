@@ -1,3 +1,10 @@
+---
+uid: react-help-grouping-shipments
+title: Grouping Shipments
+tags: react,ui,shipments,shipment groups
+contributors: andy.walton@sorted.com,michael.rose@sorted.com
+created: 03/07/2020
+---
 # Grouping Shipments
 
 REACT shipment groups help you to track orders that will take more than one shipment to fulfil. This page explains how to use metadata to group shipments together, how to view shipment groups in the REACT UI, and how to present grouped shipments to your customers using REACT's tracking pages.
@@ -22,12 +29,7 @@ When grouping REACT shipments, the metadata `key` is the grouping (that is, the 
 
 The following example shows a request to register four simple shipments at once. The shipments all have a metadata key named `group_name` denoting the group they are in. The first two shipments belong to `example_group1`, and the second two below to `example_group2`.
 
-<div class="tab">
-    <button class="staticTabButton">Shipment Groups Example</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'HTTPRequest')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
-
-<div id="HTTPRequest" class="staticTabContent" onclick="CopyToClipboard(this, 'HTTPRequest')">
+# [Shipment Groups Example](#tab/shipment-groups-example)
 
 ```json
 {
@@ -83,12 +85,11 @@ The following example shows a request to register four simple shipments at once.
     ]
 }
 ```
-
-</div>
+---
 
 To add a pre-existing shipment to a group, use the **Update Shipment** endpoint to add the relevant metadata property to the shipment. Note that REACT's **Update Shipment** endpoint requires you to pass an entire new shipment object, which overwrites the existing shipment resource. As such, you would need to pass all of the shipment's current details as well as the metadata property when adding a shipment to a group.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > * For more information on registering REACT shipments, see the [Registering Shipments](/react/help/registering-shipments.html) page.
 > * For more information on registering REACT shipments, see the [Updating Shipments](/react/help/updating-shipments.html) page.
@@ -109,7 +110,7 @@ The page also displays the key and value that the shipments are grouped by, and 
 
 Note that REACT only displays the drop-down shipment picker and grouping information if you access the shipment via the shipment group link (that is, you use the shared metadata `key` and `value` to identify the shipments to be displayed). You can still use other valid tracking page link formats to view a shipment that is in a group (such as `shipment_id` or `tracking_reference`), but REACT does not display links to other shipments in the group in this case.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > For more information on creating and distributing REACT tracking pages, see the [Tracking Pages](/react/help/tracking-pages.html) page.
 
@@ -153,7 +154,3 @@ Read on for more info:
 * [Registering Shipments](https://docs.sorted.com/react/registering-shipments/)
 * [Managing Webhooks](https://docs.sorted.com/react/managing-webhooks/)
 * [Retrieving Shipment and Event Data](https://docs.sorted.com/react/retrieving-data/)
-
-<script src="../../pro/scripts/requesttabs.js"></script>
-<script src="../../pro/scripts/responsetabs.js"></script>
-<script src="../../pro/scripts/copy.js"></script>
