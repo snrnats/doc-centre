@@ -7,37 +7,177 @@ created: 02/07/2020
 ---
 # Allocating to Default Rules
 
+To page explains how to use the **Allocate Shipment**  and **Allocate Shipments** endpoints to allocate shipments based on your pre-defined allocation rules.
 
 ---
 
 ## Overview
 
+The **Allocate Shipment** and **Allocate Shipments** endpoints enable you to allocate shipments to the cheapest eligible carrier service. PRO selects a service for you when you use these endpoints, rather than requiring you to select a service or service group manually. **Allocate Shipment** allocates a single shipment, while **Allocate Shipments** enables you to queue multiple shipments for allocation at once.
 
+PRO uses the following selection process when allocating via these endpoints:
 
-## Allocating a Single Consignment
+1. **Who can deliver?** - First, PRO compiles a list of all carrier services that could potentially take the shipment (that is, configured and enabled services that ship to the delivery address and could meet any specified shipping and delivery dates).
+2. **Who meets the allocation rules?** - Next, PRO creates a final shortlist of carrier services by eliminating any services that do not meet your organisation's allocation rules. For information on using allocation rules, see <span class="highlight">LINK HERE</span>.
+3. **Who is cheapest?** - Finally, PRO allocates the shipment to the cheapest service on the shortlist.
 
-Allocate Shipment This endpoint is used when you wish to allocate a single shipment using Sorted's allocation engine. If you require allocation of multiple shipments in a single operation, you should use the Allocate Shipments endpoint. When allocating using this endpoint, Sorted will automatically determine the most appropriate carrier service based on several factors, including:
+## Allocating a Single Shipment
 
-Configured allocation rules
-Required shipping dates
-Required delivery dates
-Carrier availability
-Carrier service price
+The **Allocate Shipment** endpoint allocates a single shipment using the PRO allocation engine. To call **Allocate Shipment**, send a `PUT` request to `https://api.sorted.com/pro/shipments/{reference}/allocate`, where `{reference}` refers to the shipment you want to allocate.
+
+Once the request has been received, PRO uses the process detailed in the [Overview](#overview) to determine the appropriate service and allocate the shipment. It then returns an Allocate Result object. 
+
+[!include[_shipments_allocate_result](../includes/_shipments_allocate_result.md)]
 
 ### Allocate Shipment Example
 
+The example shows a successful request to allocate a shipment with a `{reference}` of _sp_9233500258180005889777767900009_ via the **Allocate Shipment** endpoint. 
 
+# [Allocate Shipment Request](#tab/allocate-shipment-request)
 
-## Allocating Multiple Consignments At Once
+```json
+PUT https://api.sorted.com/pro/shipments/sp_9233500258180005889777767900009/allocate
+```
 
-Allocate Shipments This endpoint is used when you wish to allocate multiple shipments using Sorted's allocation engine. If you only require allocation of an individual shipment, you should prefer the single Allocate Shipment endpoint. When allocating using this endpoint, Sorted will automatically determine the most appropriate carrier service based on several factors, including configured allocation rules, required shipping and delivery dates, carrier availability and carrier service price.
+# [Allocate Shipment Response](#tab/allocate-shipment-response)
 
-NOTE
-When requesting an allocation of multiple shipments, the allocation will not happen in- process. This is to ensure the performance of the API endpoint. shipments allocated as a batch will be allocated via a background process.
+```json
+{
+    "state": "Allocated",
+    "price": {
+        "net": 10.0,
+        "gross": 12.0,
+        "taxes": [
+            {
+                "rate": {
+                    "reference": "gb_standard",
+                    "country_iso_code": "GB",
+                    "type": "standard",
+                    "value": 0.2
+                },
+                "amount": 2.0
+            }
+        ],
+        "currency": "GBP"
+    },
+    "message": "Shipment allocated successfully",
+    "carrier": {
+        "reference": "DNQ",
+        "name": "DNQ Worldwide",
+        "service_reference": "DNQWW72",
+        "service_name": "DNQ Worldwide 72-Hour Express"
+    },
+    "shipment_reference": "sp_9233500258180005889777767900009",
+    "tracking_details": {
+        "shipment": {
+            "reference": "sp_9233500258180005889777767900009",
+            "tracking_references": [
+                "DNK23098098"
+            ],
+            "_links": []
+        },
+        "contents": [
+            {
+                "reference": "sc_9233500258180006765777878909811",
+                "tracking_references": [
+                    "DNK23098099"
+                ],
+                "_links": []
+            }
+        ]
+    },
+    "_links": [
+        {
+            "href": "https://api.sorted.com/pro/labels/sp_9233500258180005889777767900009/pdf",
+            "rel": "PDF",
+            "reference": null,
+            "type": "Label"
+        },
+        {
+            "href": "https://api.sorted.com/pro/labels/sp_9233500258180005889777767900009/zpl",
+            "rel": "ZPL",
+            "reference": null,
+            "type": "Label"
+        },
+        {
+            "href": "https://api.sorted.com/pro/shipments/sp_9233500258180005889777767900009",
+            "rel": "Shipment",
+            "reference": "sp_9233500258180005889777767900009",
+            "type": "Shipment"
+        }
+    ]
+}
+```
+---
+
+> [!NOTE]
+>
+>  For full reference information on the **Allocate Shipment** endpoint, see LINK HERE. 
+
+## Allocating Multiple Shipments At Once
+
+The **Allocate Shipments** endpoint enables you to queue multiple shipments for to the cheapest eligible carrier service in one request. 
+
+To call **Allocate Shipments**, send a `PUT` request to `https://api.sorted.com/pro/shipments/allocate`. The request body should contain an array of one or more shipment `{reference}`s to be allocated. 
+
+<span class="highlight">YOU CAN ALSO SPECIFY SERVICE CAPABILITIES AT THIS POINT BUT I'M GOING TO LEAVE THEM FOR NOW AS MAY NEED MORE INFO AROUND HOW THEY WORK</span>
+
+Once the request is received, PRO takes each shipment in turn and attempts to queue it for allocation to the cheapest eligible carrier, as per the process detailed in the [Overview](#overview). It then returns an Allocate Shipments result. 
+
+[!include[_shipments_allocate_shipments_result](../includes/_shipments_allocate_shipments_result.md)]
 
 ### Allocate Shipments Example
 
+The example shows a request to queue three shipments for allocation. Two shipments have been successfully queued, but one was rejected because its `{reference}` could not be found.
 
+# [Allocate Shipments Request](#tab/allocate-shipments-request)
+
+`PUT https://api.sorted.com/pro/shipments/allocate`
+
+```json
+    "shipments": [
+        "sp_10014418679662051328667654221112",
+        "sp_10014418692546953216098308745978",
+        "sp_10014418709726822400232323009988"
+    ]
+```
+
+# [Allocate Shipments Response](#tab/allocate-shipments-response)
+
+```json
+{
+  "message": "2 shipment(s) queued for allocation successfully. 1 shipment(s) rejected for allocation.",
+  "queued": [
+    "sp_10014418679662051328667654221112",
+    "sp_10014418692546953216098308745978"
+  ],
+  "rejected": [
+    {
+      "code": "shipment_not_found",
+      "message": "The shipment cannot be found",
+      "references": [
+        "sp_10014418709726822400232323009988"
+      ]
+    }
+  ],
+  "_links": [
+    {
+      "href": "https://beta.sorted.com/pro/shipments/sp_10014418709726822400232323009988",
+      "rel": "shipment",
+      "reference": "sp_10014418709726822400232323009988",
+      "type": "rejected"
+    }
+  ]
+}
+```
+---
+
+> [!NOTE]
+>
+>  For full reference information on the **Allocate Shipments** endpoint, see LINK HERE. 
 
 ## Next Steps
 
+* Learn how to retrieve shipment data: [Getting Shipments](/pro/api/shipments/getting_shipments.html)
+* Learn how to manifest shipments: [Manifesting Shipments](/pro/api/shipments/manifesting_shipments.html)
+* Learn how to create shipment groups: [Allocating Shipments](/pro/api/shipments/allocating_shipments.html)
