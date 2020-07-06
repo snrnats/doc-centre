@@ -19,17 +19,18 @@ created: 02/07/2020
 
 Allocate Shipment with Carrier Service This endpoint is used when you wish to allocate a shipment with a specific carrier service.
 
+[!include[_shipments_allocate_result](../includes/_shipments_allocate_result.md)]
+
 
 ### Allocate Shipment with Carrier Service Example
 
 
 
-## Allocating A Single Shipment with a Specific Carrier Service
+## Allocating Multiple Shipments with a Specific Carrier Service
 
 Allocate with Carrier Service This endpoint is used when you wish to allocate one or more shipments with a specific carrier service.
 
-NOTE
-When requesting an allocation of multiple shipments, the allocation will not happen in-process. This is to ensure the performance of the API endpoint. Any shipments allocated as a batch will be allocated via a background process.
+[!include[_shipments_allocate_shipments_result](../includes/_shipments_allocate_shipments_result.md)]
 
 ### Allocate with Carrier Service Example
 

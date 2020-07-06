@@ -24,6 +24,8 @@ created: 02/07/2020
 
 Allocate Shipment with Service Group This endpoint is used to allocate a shipment with a carrier service from a specific carrier service group.
 
+[!include[_shipments_allocate_result](../includes/_shipments_allocate_result.md)]
+
 ### Allocate Shipment with Service Group Example
 
 
@@ -32,8 +34,7 @@ Allocate Shipment with Service Group This endpoint is used to allocate a shipmen
 
 Allocate with Service Group This endpoint is used to allocate multiple shipments with a carrier service from a specific carrier service_group.
 
-NOTE
-When requesting an allocation of multiple shipments, the allocation will not happen in-process. This is to ensure the performance of the API endpoint. Any shipments allocated as a batch will be allocated via a background process.
+[!include[_shipments_allocate_shipments_result](../includes/_shipments_allocate_shipments_result.md)]
 
 ### Allocate with Service Group Example
 

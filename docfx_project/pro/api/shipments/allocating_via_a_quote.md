@@ -18,6 +18,8 @@ created: 02/07/2020
 
 Allocate with Quote This endpoint is used when you wish to allocate a shipment with a specific pre-existing quote. For obtaining a quote, see Get Quote.
 
+[!include[_shipments_allocate_result](../includes/_shipments_allocate_result.md)]
+
 ### Allocate with Quote Example
 
 
