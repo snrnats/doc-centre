@@ -8,6 +8,8 @@ created: 02/07/2020
 
 # Getting Shipment Customs Docs
 
+`GET https://api.sorted.com/pro/documents/{shipment_reference}`
+
 <span class="highlight">THESE ARE ALL JUST NOTES TO SELF AND AREN'T INTENDED FOR PUBLIC CONSUMPTION (AT LEAST, NOT IN THIS FORM)</span>
 
 Generate customs documentation as quickly as possible

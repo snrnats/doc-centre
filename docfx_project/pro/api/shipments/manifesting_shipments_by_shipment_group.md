@@ -9,3 +9,4 @@ created: 02/07/2020
 
 Manifest Shipments by Shipment Group
 
+`POST https://api.sorted.com/pro/shipment_groups/{reference}/manifest`

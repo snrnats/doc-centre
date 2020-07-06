@@ -9,6 +9,9 @@ created: 02/07/2020
 
 Get Shipment Group Collection Note
 
+`GET https://api.sorted.com/pro/collection_notes/shipment_group/{reference}`
+`GET https://api.sorted.com/pro/collection_notes/shipment_group/custom_reference/{reference}/{version}`
+
 This endpoint allows the user to retrieve a `collection_note` for a `shipment_group` by using the reference of the `shipment_group`.
 
 In addition to the endpoint that utilises Sorted’s unique `shipment_group` reference to return a `collection_note`, the API must also support using the customer's own `custom_reference` and `version` for a `shipment_group`.
@@ -17,6 +20,10 @@ this endpoint should automatically determine the latest `version` of a `shipment
 
 The `latest` `version` will always be the `shipment_group` with the **highest** `version` that *also* has the provided `custom_reference` and is registered for the customer making the query.
 
-
 Get Collection Note by Query
+
+`POST https://api.sorted.com/pro/collection_notes/query`
+
 Get Collection Note by Manifests
+
+`POST https://api.sorted.com/pro/collection_notes/manifest`

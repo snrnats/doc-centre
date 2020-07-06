@@ -8,3 +8,5 @@ created: 02/07/2020
 # Closing Shipment Groups
 
 Close Shipment Group
+
+`POST https://api.sorted.com/pro/shipment_groups/{reference}/close`

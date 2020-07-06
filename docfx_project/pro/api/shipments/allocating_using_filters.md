@@ -11,6 +11,8 @@ Allocate with Filters
 
 ## What Is an Allocation Tag?
 
+`PUT https://api.sorted.com/pro/shipments/allocate/filters`
+
 <span class="highlight">ALL OF THE BELOW IS JUST TAKEN FROM THE EQUIVALENT CONSIGNMENTS DOCS AND NEEDS A FULL SHIPMENTS REWORK</span>
 
 Allocation tags are a type of allocation rule that enables you to filter the list of available carrier services on a per-consignment basis, no matter which allocation endpoint you use in your integration. They are generally used as a flexible means of excluding carrier services that would not be suitable for a particular consignment. 

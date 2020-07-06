@@ -10,3 +10,4 @@ created: 02/07/2020
 
 Get Quote
 
+`GET https://api.sorted.com/pro/shipments/{reference}/quote`

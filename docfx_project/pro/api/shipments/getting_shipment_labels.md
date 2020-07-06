@@ -8,4 +8,9 @@ created: 02/07/2020
 # Getting Shipment Labels
 
 Get Labels
+
+`GET https://api.sorted.com/pro/labels/{shipment_reference}/{format}(/{dpi})?include_extension=bool`
+
 Get Contents Label
+
+`GET https://api.sorted.com/pro/labels/{shipment_reference}/{contents_reference}/{format}(/{dpi})?include_extension=bool`

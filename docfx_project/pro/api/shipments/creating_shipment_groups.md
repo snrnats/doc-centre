@@ -7,6 +7,8 @@ created: 02/07/2020
 ---
 # Creating Shipment Groups
 
+`POST https://api.sorted.com/pro/shipment_groups`
+
 In the list of `shipments` provided:
 
 - A maximum of `10,000` references is permitted

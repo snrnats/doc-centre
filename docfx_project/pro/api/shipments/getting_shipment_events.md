@@ -9,3 +9,4 @@ created: 02/07/2020
 
 Get Tracking Events
 
+`GET https://api.sorted.com/pro/tracking/{shipment_reference}`

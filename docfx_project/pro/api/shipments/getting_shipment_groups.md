@@ -8,7 +8,12 @@ created: 02/07/2020
 # Getting Shipment Groups
 
 Get Shipment Group	
+
+`GET https://api.sorted.com/pro/shipment_groups/{reference}`
+
 Get Shipment Group by Custom Reference
+
+`GET https://api.sorted.com/pro/shipment_groups/custom_reference/{custom_reference}`
 
 allowing users to retrieve a specific version of the shipment_group corresponding to their custom_reference.
 

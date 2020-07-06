@@ -8,3 +8,5 @@ created: 02/07/2020
 # Getting Shipment Manifests
 
 Get Manifests
+
+`GET https://api.sorted.com/pro/shipments/manifests/{reference}`

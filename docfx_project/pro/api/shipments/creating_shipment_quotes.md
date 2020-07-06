@@ -9,5 +9,9 @@ created: 02/07/2020
 # Creating Shipment Quotes
 
 Create Quote
+
+`POST https://api.sorted.com/pro/shipments/quote`
+
 Create Quote by Service Group
 
+`POST https://api.sorted.com/pro/shipments/quote/service_group/{group_ref}`

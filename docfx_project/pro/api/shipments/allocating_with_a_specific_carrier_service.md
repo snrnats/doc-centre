@@ -8,6 +8,7 @@ created: 02/07/2020
 
 # Allocating with a Specific Carrier Service
 
+Want to specify the carrier service that should take your shipment? This page explains how to allocate shipments to services manually.
 
 ---
 
@@ -16,6 +17,8 @@ created: 02/07/2020
 
 
 ## Allocating A Single Shipment with a Specific Carrier Service
+
+`PUT https://api.sorted.com/pro/shipments/{reference}/allocate/service/{service_ref}`
 
 Allocate Shipment with Carrier Service This endpoint is used when you wish to allocate a shipment with a specific carrier service.
 
@@ -27,6 +30,8 @@ Allocate Shipment with Carrier Service This endpoint is used when you wish to al
 
 
 ## Allocating Multiple Shipments with a Specific Carrier Service
+
+`PUT https://api.sorted.com/pro/shipments/allocate/service`
 
 Allocate with Carrier Service This endpoint is used when you wish to allocate one or more shipments with a specific carrier service.
 

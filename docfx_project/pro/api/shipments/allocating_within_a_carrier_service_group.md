@@ -22,6 +22,8 @@ created: 02/07/2020
 
 ## Allocating a Single Shipment with a Carrier Service Group
 
+`PUT https://api.sorted.com/pro/shipments/{reference}/allocate/service_group/{group_ref}`
+
 Allocate Shipment with Service Group This endpoint is used to allocate a shipment with a carrier service from a specific carrier service group.
 
 [!include[_shipments_allocate_result](../includes/_shipments_allocate_result.md)]
@@ -31,6 +33,8 @@ Allocate Shipment with Service Group This endpoint is used to allocate a shipmen
 
 
 ## Allocating Multiple Shipments with a Carrier Service Group At Once
+
+`PUT https://api.sorted.com/pro/shipments/allocate/service_group`
 
 Allocate with Service Group This endpoint is used to allocate multiple shipments with a carrier service from a specific carrier service_group.
 

@@ -8,4 +8,9 @@ created: 02/07/2020
 # Manifesting Shipments Manually
 
 Manifest Shipment
+
+`PUT https://api.sorted.com/pro/shipments/{reference}/manifest`
+
 Manifest Shipments
+
+`PUT https://api.sorted.com/pro/shipments/manifest`

@@ -9,3 +9,4 @@ created: 02/07/2020
 
 Manifest Shipments by Query
 
+`POST https://api.sorted.com/pro/shipments/manifest/query`
