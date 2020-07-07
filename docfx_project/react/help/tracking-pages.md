@@ -266,7 +266,7 @@ However, if the retailer did not have the REACT shipment ID of that shipment to 
 
 In this example, both of these links would point to the same shipment.
 
-## Linking to Shipment Groups
+### Linking to Shipment Groups
 
 REACT shipment groups are collections of shipments that share a common metadata property. Grouped shipments can be tracked from the same tracking page, with a drop-down picker on the tracking widget enabling the customer to select which shipment's tracking information they want to view. This is useful in circumstances where an order would take more than one shipment to fulfil, for example.
 
@@ -280,7 +280,7 @@ As an example, suppose that a customer with a `customer_id` of _cs_1234567890_ c
 
 Note that REACT only displays the drop-down shipment picker and grouping information if you access the shipment via the shipment group link (that is, you use the shared metadata `key` and `value` to identify the shipments to be displayed). You can still use other valid tracking page link formats to view a shipment that is in a group, but REACT does not display links to other shipments in the group in this case.
 
-> <span class="note-header">More Information:</span>
+> [!NOTE]
 >
 > For more information on grouping REACT shipments, see the [Grouping Shipments](/react/help/grouping-shipments.html) page.
 
