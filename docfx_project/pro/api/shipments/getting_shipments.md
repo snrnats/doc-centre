@@ -7,11 +7,15 @@ created: 02/07/2020
 ---
 # Getting Shipments
 
-You can retrieve an existing PRO shipment via the **Get Shipment** endpoint. This page explains how to call **Get Shipment** and how to use the shipment data it returns.
+PRO offers several endpoints that return consignment data. This page explains how to retrieve consignment data by shipment reference, custom reference, and carrier tracking reference.
 
 ---
 
-The **Get Shipment** endpoint takes the `{reference}` of the shipment you want to view as a path parameter, and returns full details for the specified shipment. The information returned is structured in a broadly similar way to a **Create Shipment** request, but may also contain additional properties (that is, properties that are managed by PRO rather than explicitly stated by the customer when a shipment is created). These properties include:
+## Getting Shipments by Shipment Reference
+
+The **Get Shipment** endpoint takes the `{reference}` of the shipment you want to view as a path parameter, and returns full details for the specified shipment. To call **Get Shipment**, send a `GET` request to `https://api.sorted.com/pro/shipments/{reference}`, where `{reference}` is the unique reference of the shipment you want to retrieve.
+
+The information returned is structured in a broadly similar way to a **Create Shipment** request, but may also contain additional properties (that is, properties that are managed by PRO rather than explicitly stated by the customer when a shipment is created). These properties include:
 
 * `reference` - The shipment's unique reference.
 * `state` - The shipment's current `state`. For a full list of shipment states see [LINK HERE]
@@ -25,15 +29,17 @@ The **Get Shipment** endpoint takes the `{reference}` of the shipment you want t
 * `reservation` - Details of any reservation for the shipment (for example, click and collect options), where applicable.
 * `_links` - Links to any related resources.
 
-To call **Get Shipment**, send a `GET` request to `https://api.sorted.com/pro/shipments/{reference}`, where `{reference}` is the unique reference of the shipment you want to retrieve.
-
 > [!NOTE]
 >
 > For full reference information on the **Get Shipment** endpoint, see [LINK HERE]
 
-## Example Get Shipment Response
+### Example Get Shipment Call
 
 The example below shows a **Get Shipment** request for a shipment with a `{reference}` of _sp_9953035299125395456009822134452_.
+
+# [Get Shipment Request](#tab/get-shipment-request)
+
+`GET https://api.sorted.com/pro/shipments/sp_9953035299125395456009822134452`
 
 # [Get Shipment Response](#tab/get-shipment-response)
 
@@ -210,6 +216,24 @@ The example below shows a **Get Shipment** request for a shipment with a `{refer
 }
 ```
 ---
+
+## Getting Shipments by Custom Reference
+
+The **Get Shipments by Custom Reference** endpoint enables you to search for shipment data by your own custom reference number.
+
+In PRO, a `custom_reference` is a user-specified reference for a shipment or item of shipment contents. Custom references do not need to be unique. For example, you might add your own order number as a custom reference to all shipments corresponding to a particular order.
+
+`GET https://api.sorted.com/pro/shipments?custom_reference={reference}&take={int}&skip={int}`
+
+The {take} and {skip} values can be used to drive paging functions in systems that present a list of consignments to the user. For example, suppose that you have 100 active consignments in an Allocated state. A call to GET https://api.electioapp.com/consignments/100/0?&State=Allocated would return all of those consignments, as a {take} value of 100 and a {skip} value of 0 means that the API will return up to 100 results without skipping over any.
+
+However, suppose that you want to split the list up into two groups of 50 (for example, because you are using the data to populate a list in a system whose UI only enables you to display 50 results at any one time). In this case, you would populate the first page of results with a call to GET https://api.electioapp.com/consignments/50/0?&State=Allocated (max. 50 results, none skipped). If the user elects to view the second page, you would call GET https://api.electioapp.com/consignments/50/50?&State=Allocated. The API would again return 50 results, but would skip over the first 50 in the list (i.e. those results that were displayed on the first page) and instead return results 51-100.
+
+## Getting Shipments by Tracking Reference
+
+Get Shipment by Carrier Tracking Reference
+
+`GET https://api.sorted.com/pro/shipments/tracking_reference/{tracking_reference}?take={int}&skip={int}`
 
 ## Next Steps
 
