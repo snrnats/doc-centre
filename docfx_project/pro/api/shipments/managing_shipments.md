@@ -19,11 +19,11 @@ Each shipment object contains details of the shipment's current state (for examp
 
 > [!NOTE]
 >
-> Shipments were introduced to PRO in 2020 as an extension of the consignments object, which was previously used to represent items being shipped together in PRO. For a comparison of shipments and consignments, see the [Consignments vs Shipments](/pro/api/shipments/consignments_vs_shipments.html) page.
+> Shipments were introduced to PRO in 2020 as an extension of the Consignment object, which was previously used to represent items being shipped together in PRO. For a comparison of shipments and consignments, see the [Consignments vs Shipments](/pro/api/shipments/consignments_vs_shipments.html) page.
 
 ## Shipments Section Contents
 
 * [Creating Shipments](/pro/api/shipments/creating_shipments.html) - Explains how to create, clone, and update shipments.
-* [Getting Shipments](/pro/api/shipments/getting_shipments.html) - Explains how to use the **Get Shipment** endpoint to retrieve shipment details.
+* [Getting Shipments](/pro/api/shipments/getting_shipments.html) - Explains the various ways in which you can retrieve shipment details.
 * [Cancelling Shipments](/pro/api/shipments/cancelling_shipments.html) - Explains how to use the **Cancel Shipment** endpoint to set a shipment's status to _Cancelled_.
 * [Shipment States](/pro/api/shipments/shipment_states.html) - Lists the various `{states}` that a shipment can assume.
