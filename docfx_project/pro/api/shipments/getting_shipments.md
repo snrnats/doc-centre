@@ -219,21 +219,76 @@ The example below shows a **Get Shipment** request for a shipment with a `{refer
 
 ## Getting Shipments by Custom Reference
 
-The **Get Shipments by Custom Reference** endpoint enables you to search for shipment data by your own custom reference number.
+The **Get Shipments by Custom Reference** endpoint enables you to search for shipment data by your own custom reference number. To call **Get Shipments by Custom Reference**, send a `GET` request to `https://api.sorted.com/pro/shipments?custom_reference={reference}`, where `{reference}` is the `custom_reference` you want to search on.
 
-In PRO, a `custom_reference` is a user-specified reference for a shipment or item of shipment contents. Custom references do not need to be unique. For example, you might add your own order number as a custom reference to all shipments corresponding to a particular order.
+> [!NOTE]
+> In PRO, a `custom_reference` is a user-specified reference for a shipment or item of shipment contents. Custom references do not need to be unique. For example, you might use the `custom_reference` property to add your own order number to all shipments corresponding to a particular order.
 
-`GET https://api.sorted.com/pro/shipments?custom_reference={reference}&take={int}&skip={int}`
+The `custom_reference` property can be applied to both shipments and `shipment_contents` objects. The **Get Shipments by Custom Reference** endpoint returns both those shipments that are directly tagged with the specified `custom_reference` _and_ those shipments that contain a `shipment_contents` object with the specified `custom_reference`.
 
-The {take} and {skip} values can be used to drive paging functions in systems that present a list of consignments to the user. For example, suppose that you have 100 active consignments in an Allocated state. A call to GET https://api.electioapp.com/consignments/100/0?&State=Allocated would return all of those consignments, as a {take} value of 100 and a {skip} value of 0 means that the API will return up to 100 results without skipping over any.
+> [!NOTE]
+> For more information on the structure of shipment contents, see the [Specifying Shipment Contents](/pro/api/shipments/creating_shipments.html#specifying-shipment-contents) section of the [Creating Shipments](/pro/api/shipments/creating_shipments.html) page.
 
-However, suppose that you want to split the list up into two groups of 50 (for example, because you are using the data to populate a list in a system whose UI only enables you to display 50 results at any one time). In this case, you would populate the first page of results with a call to GET https://api.electioapp.com/consignments/50/0?&State=Allocated (max. 50 results, none skipped). If the user elects to view the second page, you would call GET https://api.electioapp.com/consignments/50/50?&State=Allocated. The API would again return 50 results, but would skip over the first 50 in the list (i.e. those results that were displayed on the first page) and instead return results 51-100.
+Once it has received the request, PRO returns a `shipment_list` object containing a list of shipments, the total number of results, the number of shipments requested and the number of shipments skipped.
 
-## Getting Shipments by Tracking Reference
+### Example Get Shipments by Custom Reference Call
 
-Get Shipment by Carrier Tracking Reference
+The example shows a successful request to get all shipments that either have the `custom_reference` or contain contents with the `custom_reference` _CR1234_.
 
-`GET https://api.sorted.com/pro/shipments/tracking_reference/{tracking_reference}?take={int}&skip={int}`
+# [Get Shipments by Custom Reference Request](#tab/get-shipments-by-custom-reference-request)
+
+`GET https://api.sorted.com/pro/shipments?custom_reference=CR1234`
+
+# [Get Shipments by Custom Reference Response](#tab/get-shipments-by-custom-reference-response)
+
+<span class="highlight">NO JSON EXAMPLES OR WORKING ENDPOINTS FOR THIS YET</span>
+
+---
+
+> [!NOTE]
+> For full reference information on the **Get Shipments by Custom Reference** endpoint, see <span class="highlight">LINK HERE</span>.
+
+## Getting Shipments by Carrier Tracking Reference
+
+The **Get Shipments by Carrier Tracking Reference** endpoint enables you to search for shipment data using a carrier tracking reference. To call **Get Shipments by Carrier Tracking Reference**, send a `GET` request to `https://api.sorted.com/pro/shipments/tracking_reference/{tracking_reference}`, where `{tracking_reference}` is the carrier tracking reference you want to search on.
+
+Once it has received the request, PRO returns a `shipment_list` object containing a list of shipments, the total number of results, the number of shipments requested and the number of shipments skipped.
+
+**Get Shipments by Carrier Tracking Reference** can only return allocated shipments, as carrier tracking references are assigned to shipments at the point of allocation. The carrier `tracking_reference` can be found in the shipment's `allocation.tracking_references` property. It can also be found in the `tracking_details.shipment.tracking_references` property of the Allocation Summary object that is returned when a shipment is allocated. 
+
+> [!NOTE]
+> As carrier tracking references can repeat, the **Get Shipments by Carrier Tracking Reference** endpoint only returns shipments that have been allocated within the last 30 days. Any older shipments may still be present in the database, but are not returned by the endpoint.
+
+**Get Shipments by Carrier Tracking Reference** only works with those tracking references provided by carriers. It will not return shipments for internally-generated PRO or REACT references.
+
+### Example Get Shipments by Carrier Tracking Reference Call
+
+The example shows a successful request to get all shipments that have the carrier `tracking_reference` _CTR1234_.
+
+# [Get Shipments by Carrier Tracking Reference Request](#tab/get-shipments-by-carrier-tracking-reference-request)
+
+`GET https://api.sorted.com/pro/shipments/tracking_reference/CTR1234`
+
+# [Get Shipments by Carrier Tracking Reference Response](#tab/get-shipments-by-carrier-tracking-reference-response)
+
+<span class="highlight">NO JSON EXAMPLES OR WORKING ENDPOINTS FOR THIS YET</span>
+
+---
+
+> [!NOTE]
+> For full reference information on the **Get Shipments by Carrier Tracking Reference** endpoint, see <span class="highlight">LINK HERE</span>.
+
+## Paging Results
+
+Both the **Get Shipments by Custom Reference** endpoint and the **Get Shipment by Carrier Tracking Reference** endpoint support optional `{take}` and `{skip}` parameters, which can be used to drive paging functions. The `{take}` parameter indicates the number of shipments to return (up to a maximum of 10), and the `{skip}` parameter indicates the number of shipment records PRO should "skip over" before it returns records.
+
+For example, suppose that you have 15 shipments with a `custom_reference` of _CR1234_, and you want to return them as three pages of five shipments: 
+
+* To view the first page of five, you would make a call to `GET https://api.sorted.com/pro/shipments?custom_reference=CR1234&take=5&skip=0` (that is, take five shipments and do not skip over any). 
+* To view the second page, you would call `GET https://api.sorted.com/pro/shipments?custom_reference=CR1234&take=5&skip=5` (skip the first five shipments and then take the next five).
+* To view the third page, you would call `GET https://api.sorted.com/pro/shipments?custom_reference=CR1234&take=5&skip=10` (skip the first ten shipments and then take the next five).
+
+By default, `{take}` has a value of 10 and `{skip}` has a value of 0.
 
 ## Next Steps
 
