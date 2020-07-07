@@ -114,6 +114,16 @@ Although set by REACT, the `lateness` and `may_be_missing` flags are standard pr
 >
 > For more information on retrieving data via REACT's APIs, see the [Retrieving Shipment and Event Data](/react/help/retrieving-data.html) page.
 
+## Viewing Calculated Properties in the UI
+
+The UI's **Calculated Events** dashboard displays the number of your shipments that REACT has flagged as _Late_ or _May Be Missing_. To open the **Calculated Events** dashboard, select the **Dashboards > Calculated Events** menu option.
+
+![calc-events-dash](images/calc-events-dash.png)
+
+> [!NOTE]
+>
+> For more information on monitoring shipments in the REACT UI, see the [Monitoring Shipments](/react/help/monitoring-shipments.html) page.
+
 ## Next Steps
 
 Learn more about integrating with REACT:
