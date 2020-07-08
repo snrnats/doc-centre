@@ -10,3 +10,7 @@ created: 02/07/2020
 Get Content-Level Tracking Events
 
 `GET https://api.sorted.com/pro/tracking/{shipment_reference}/shipment_contents`
+
+Get Content-Level Tracking Events by Custom Reference
+
+`GET https://api.sorted.com/pro/tracking/custom_reference/{custom_reference}/shipment_contents`

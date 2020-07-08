@@ -43,6 +43,9 @@ PRO offers the following allocation endpoints:
 * **Allocate with Service Group**
 
     `https://api.sorted.com/pro/shipments/allocation/service_group` - Allocates multiple shipments with a carrier service from a specific carrier service group.
+* **Allocate with Virtual Service**
+
+    `https://api.sorted.com/pro/shipments/{reference}/allocate/virtual_service/{virtual_service_reference}` - Allocates a single shipment with a virtual service. <span class="highlight">NEED A PROPER DEFINITION OF VIRTUAL SERVCIE IN HERE</span>   
 * **Allocate with Filters**
     
     `https://api.sorted.com/pro/shipments/allocation/filters` - Allocates one or more shipments with a carrier service that matches the specified filters. 
@@ -50,13 +53,7 @@ PRO offers the following allocation endpoints:
 
     `https://api.sorted.com/pro/shipments/allocate/{reference}/quote/{quote_reference}` - Allocates a single shipment with the carrier service referenced in a specific pre-existing quote.
 
-The action PRO takes once the allocation request is received depends on the type of endpoint you used. If you used an endpoint that allocated individual shipments, then PRO allocates the shipment immediately and returns an Allocation Summary listing details of the allocation, such as prices, dates and tracking information. However, if you used an endpoint that can allocate multiple shipments at once, then PRO queues the shipments for allocation at a later time and returns an Allocate Shipments Result confirming the shipments that were queued.
-
-<span class="highlight">NEEDS A NOTE AS TO WHY IT DOES THE ASYNC QUEUE THING. I'M GUESSING IT'S FOR PERFORMANCE REASONS BUT WE NEED TO CHECK THAT</span>
-
-> [!NOTE]
->
-> For more information on PRO's responses to allocation requests, see [LINK HERE]
+The action PRO takes once the allocation request is received depends on the type of endpoint you used. If you used an endpoint that allocated individual shipments, then PRO allocates the shipment immediately and returns an Allocation Summary listing details of the allocation, such as prices, dates and tracking information. However, if you used an endpoint that can allocate multiple shipments at once, then PRO queues the shipments for allocation at a later time in order to maintain performance. When PRO queues shipments, it returns an Allocate Shipments Result confirming the shipments that were queued.
 
 When a shipment is allocated to a carrier service, its status changes to _allocated_, enabling you to retrieve its package labels and (where applicable) customs documentation.
 
@@ -97,5 +94,6 @@ When allocating shipments, PRO takes your dangerous goods rulesets into account 
 * [Allocating to Default Rules](/pro/api/shipments/allocating_to_default_rules.html) - Explains how to allocate shipments based on custom business rules.
 * [Allocating with a Specific Carrier Service](/pro/api/shipments/allocating_with_a_specific_carrier_service.html) - Explains how to allocate shipments with a specific carrier service.
 * [Allocating Within a Carrier Service Group](/pro/api/shipments/allocating_within_a_carrier_service_group.html) - Explains how to allocate shipments with a carrier service from a specific carrier service group.
+* [Allocating with a Virtual Service](/pro/api/shipments/allocating_with_a_virtual_service.html) - Explains how to allocate a shipment with a virtual service.
 * [Allocating Using Filters](/pro/api/shipments/allocating_using_filters.html) - Explains how to use filters to specify allocation rules on a per-shipment basis. 
 * [Allocating via a Quote](/pro/api/shipments/allocating_via_a_quote.html) - Explains how to allocate a shipment with the carrier service referenced in a specific pre-existing quote.
