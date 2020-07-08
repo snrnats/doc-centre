@@ -15,7 +15,7 @@ In SortedPRO, a consignment represents a collection of goods that are to be ship
 
 In the context of PRO, the term **"consignment"** refers to a collection of one or more packages that are shipped from the same origin address, to the same destination address, on behalf of the same Sorted customer, using the same carrier service, on the same day. A consignment must contain at least one package.
 
-A **package** is a physical object to be shipped. Packages have dimensions, weight and value properties, and can contain one or more **items**. However, items are not mandatory properties within a package.
+A **package** is a physical object to be shipped. Packages have dimensions, weight and value properties, and can contain zero or more **items** and therefore, items are not mandatory properties within a package.
 
 As an example, suppose that a clothing retailer has received a customer order for a necklace, a bracelet, a coat, and a hat. As the necklace and bracelet are both physically small, the retailer elects to ship them in the same package. As such, this sales order would break down to:
 
