@@ -22,7 +22,7 @@ In order to allocate a shipment to a specific carrier service, you'll need to kn
 
 The **Allocate Shipment with Carrier Service** endpoint enables you to allocate a shipment to a specific carrier service. To call **Allocate Shipment with Carrier Service**, send a `PUT` request to `https://api.sorted.com/pro/shipments/{reference}/allocate/service/{service_ref}`, where `{reference}`refers to the shipment you want to allocate and `{service_ref}` is the reference of the carrier service that you want to allocate to.
 
-PRO then attempts to allocate the specified consignment to the specified carrier service and returns an Allocate Result. 
+PRO then attempts to allocate the specified shipment to the specified carrier service and returns an Allocate Result. 
 
 [!include[_shipments_allocate_result](../includes/_shipments_allocate_result.md)]
 
@@ -171,6 +171,6 @@ The example shows a request to queue four shipments for allocation to a carrier 
 
 ## Next Steps
 
-* Learn about alternative methods of allocating consignments at the [Allocating Consignments](/pro/api/help/allocating_consignments.html) page.
-* Learn how to get and print delivery labels at the [Getting Labels](/pro/api/help/getting_labels.html) page.
-* Learn how to add consignments to a carrier manifest at the [Manifesting Consignments](/pro/api/help/manifesting_consignments.html) page.
+* Learn about alternative methods of allocating shipments at the [Allocating Shipments](/pro/api/shipments/allocating_shipments.html) page.
+* Learn how to get and print delivery labels at the [Getting Labels](/pro/api/shipments/getting_shipment_labels.html) page.
+* Learn how to add shipments to a carrier manifest at the [Manifesting Shipments](/pro/api/shipments/manifesting_shipments.html) page.
