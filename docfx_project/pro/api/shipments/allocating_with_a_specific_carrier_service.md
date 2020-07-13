@@ -24,6 +24,9 @@ The **Allocate Shipment with Carrier Service** endpoint enables you to allocate 
 
 PRO then attempts to allocate the specified shipment to the specified carrier service and returns an Allocate Result. 
 
+> [!NOTE]
+> **Allocate Shipment with Carrier Service** does not override existing allocation rules. If the carrier service you selected does not meet your existing allocation rules, then PRO returns an error.
+
 [!include[_shipments_allocate_result](../includes/_shipments_allocate_result.md)]
 
 ### Allocate Shipment with Carrier Service Example
@@ -113,6 +116,9 @@ The example shows a successful request to allocate shipment _sp_1001441867966205
 The **Allocate With Carrier Service** endpoint enables you to queue one or more shipments for allocation to a specific carrier service. To call **Allocate With Carrier Service**, send a `PUT` request to `https://api.sorted.com/pro/shipments/allocate/service`. The body of the request should contain a list of the `{shipments}` that you want to allocate and the `{carrier_service_reference}` of the carrier service you want to allocate to. <span class="highlight">YOU CAN ALSO SEND SERVICE CAPABILITIES - NEED TO DOUBLE CHECK HOW THAT WORKS</span>
 
 PRO takes each shipment in turn and checks whether the specified service is eligible to take that shipment. It then returns an Allocate Shipments result detailing the results of the request.
+
+> [!NOTE]
+> **Allocate with Carrier Service** does not override existing allocation rules. If the carrier service you selected does not meet your existing allocation rules, then PRO returns an error.
 
 [!include[_shipments_allocate_shipments_result](../includes/_shipments_allocate_shipments_result.md)]
 

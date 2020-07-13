@@ -72,6 +72,8 @@
     href: getting_shipment_events.md
   - name: Getting Content-Level Events
     href: getting_content_level_events.md
+- name: Using Shipment Tags
+  href: using_shipment_tags.md    
 - name: Glossary
   href: shipments_glossary.md    
   

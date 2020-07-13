@@ -7,6 +7,7 @@ created: 08/07/2020
 ---
 # Allocating with a Virtual Service
 
+<span class="highlight">NEED TO CONFIRM WHAT THE LONGER-TERM PLANS FOR THIS ARE. AT THE MOMENT IT'S JUST SERVICES AND SERVICE GROUPS</span>
 
 ---
 

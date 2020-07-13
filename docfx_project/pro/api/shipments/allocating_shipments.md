@@ -57,6 +57,15 @@ The action PRO takes once the allocation request is received depends on the type
 
 When a shipment is allocated to a carrier service, its status changes to _allocated_, enabling you to retrieve its package labels and (where applicable) customs documentation.
 
+## Selecting a Carrier Service
+
+Most allocation endpoints require PRO to select a carrier service from a range of potential options. PRO uses the following process to select carrier services:
+
+1. **What was requested?** - First, PRO determines which carrier services meet the terms of the allocation request. The results returned by this step depend heavily on the allocation endpoint used. For example, an **Allocate with Service Group** request limits PRO to only those shipments in a particular service group, whereas an **Allocate Shipments** request does not limit the pool of available services in itself and could potentially include any carrier service. 
+2. **Who can deliver?** - Next, PRO eliminates any carrier services that could not take the shipment (for example, because they have not been configured and enabled, they do not ship to the delivery address, or they could meet any specified shipping and delivery dates).
+3. **Who meets the allocation rules?** - Next, PRO creates a final shortlist of carrier services by eliminating any services that do not meet your organisation's allocation rules. For information on using allocation rules, see <span class="highlight">LINK HERE</span>.
+4. **Who is cheapest?** - Finally, PRO allocates the shipment to the cheapest service on the shortlist.
+
 ## What Is an Allocation Rule?
 
 When you make an allocation request for a shipment, PRO uses its allocation rules to ascertain which carrier services are eligible to take that shipment and which are not. Allocation rules are optional criteria that define the shipments that a particular carrier service is eligible to take. You can specify the following:

@@ -7,59 +7,38 @@ created: 02/07/2020
 ---
 # Allocating Using Filters
 
-Allocate with Filters
+SortedPRO's allocation filters enable you to select a carrier service that meets a particular list of criteria. This page explains PRO's allocation filters and how to use them.
 
-## What Is an Allocation Tag?
+---
 
-`PUT https://api.sorted.com/pro/shipments/allocate/filters`
+## Making an Allocate with Filters Request
 
-<span class="highlight">ALL OF THE BELOW IS JUST TAKEN FROM THE EQUIVALENT CONSIGNMENTS DOCS AND NEEDS A FULL SHIPMENTS REWORK</span>
+The **Allocate with Filters** endpoint enables you to specify a list of shipments and a set of allocation criteria. When you make an **Allocate with Filters** request, PRO attempts to allocate all shipments in the list to a carrier service that meets the filters you specified. 
 
-Allocation tags are a type of allocation rule that enables you to filter the list of available carrier services on a per-consignment basis, no matter which allocation endpoint you use in your integration. They are generally used as a flexible means of excluding carrier services that would not be suitable for a particular consignment. 
+To call **Allocate with Filters**, send a `PUT` request to `https://api.sorted.com/pro/shipments/allocation/filters`. The body of the request should contain a `shipments` property listing the shipment `{reference}`s of the shipments you want to allocate, and a `filters` property defining the criteria you want to use to select a service. PRO accepts the following allocation filters:
 
-Tagged consignments can only be allocated to those carrier services that have a matching tag. You can still allocate untagged shipments to a carrier service that has tags.
+* `direction` - The direction of the carrier services. Can be either `inbound` or `outbound`.
+* `pickup` - A boolean value indicating whether to include pick-up services.
+* `drop-off` - A boolean value indicating whether to include drop-off services.
+* `tags` - A list of allocation tags to include, up to a maximum of 10. Any services that do not match all of the specified tags are excluded.
 
-For example, a retailer might use the UI to add a `Flammables` tag to all the carrier services that they wanted to use for flammable products. They would then add the `Flammables` tag to all consignments containing flammable products. PRO would only allocate those consignments tagged as `Flammables` to a consignment in the pre-approved `Flammables` list.
+> [!NOTE]
+> For more information on allocation tags, see the [Using Shipment Tags](/pro/api/shipments/using_shipment_tags.html) page.
 
-### Configuring Allocation Tags
+`direction` is mandatory, but all other properties are optional.
 
-To associate tags with carrier services, use the **Settings > [Carrier Services](https://www.electioapp.com/Configuration/carrierservices/) > [select carrier service] > Allocation Rules > Allocation Filtering Tags** panel of the PRO UI, as detailed in [Configuring Allocation Rules](#configuring-allocation-rules).
+## The Allocate with Filters Response
 
-To tag a consignment, add the required tag into the shipment's `tags` property, either at creation or via the [Update Consignment](https://docs.electioapp.com/#/api/UpdateConsignment) endpoint. The `tags` property is a simple array listing all the tags that apply to the shipment.
+Once the request is received, PRO uses the filters provided to determine a list of available carrier services for the shipments to be allocated to. It then takes each shipment in the list and allocates it to a suitable service using the process defined in the [Selecting a Carrier Service](/pro/api/shipments/allocating_shipments.html#selecting-a-carrier-service) section of the [Allocating Shipments](/pro/api/shipments/allocating_shipments.html) page.
 
-The code sample below shows a `tags` property for a consignment that contains flammable materials, oil and alcohol.
+Finally, PRO returns a  
 
-<div class="tab">
-    <button class="staticTabButton">Example Tags array</button>
-    <div class="copybutton" onclick="CopyToClipboard(this, 'tagsExample')"><span class='glyphicon glyphicon-copy'></span><span class='copy'>Copy</span></div>
-</div>
+<span class="highlight">SKIPPING THE REST OF THIS OF NOW AS THERE ARE SOME INCONSISTENCIES IN THE DATA CONTRACT - THE REQUEST FILTERS AVAILABLE CARRIER SERVICES BUT THE RESPONSE IMPLIES THAT IT'S THE SHIPMENTS FOR ALLOCATION BEING FILTERED</span>
 
-<div id="tagsExample" class="staticTabContent" onclick="CopyToClipboard(this, 'tagsExample')">
+## Allocate with Filters Example
 
-```json
-"Tags": [
-   "Flammables",
-   "Oil",
-   "Alcohol"
-]
-```
+## Next Steps
 
-</div>
-
-### Tags Example
-
-Suppose that you set your carrier services up in the following way:
-
-* You tag Carrier Service A with `Alcohol`
-* You tag Carrier Service B with `Flammables`
-* You tag Carrier Service C with `Alcohol` and `Flammables`
-* You tag Carrier Service D with `Oil`
-* You don't add any tags to Carrier Service E
-
-This configuration would produce the following results:
-
-* **Consignment with no tags** - A B C D and E are returned
-* **Consignment tagged with** `Alcohol` - A and C are returned
-* **Consignment tagged with** `Flammables` - B and C are returned
-* **Consignment tagged with** `Alcohol` **and** `Flammables` - C is returned
-* **Consignment tagged with** `Alcohol`**,** `Flammables`**, and** `Oil` - No services are returned
+* Learn how to retrieve shipment data: [Getting Shipments](/pro/api/shipments/getting_shipments.html)
+* Learn how to manifest shipments: [Manifesting Shipments](/pro/api/shipments/manifesting_shipments.html)
+* Learn how to create shipment groups: [Allocating Shipments](/pro/api/shipments/allocating_shipments.html)

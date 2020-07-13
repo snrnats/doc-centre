@@ -15,12 +15,6 @@ To page explains how to use the **Allocate Shipment**  and **Allocate Shipments*
 
 The **Allocate Shipment** and **Allocate Shipments** endpoints enable you to allocate shipments to the cheapest eligible carrier service. PRO selects a service for you when you use these endpoints, rather than requiring you to select a service or service group manually. **Allocate Shipment** allocates a single shipment, while **Allocate Shipments** enables you to queue multiple shipments for allocation at once.
 
-PRO uses the following selection process when allocating via these endpoints:
-
-1. **Who can deliver?** - First, PRO compiles a list of all carrier services that could potentially take the shipment (that is, configured and enabled services that ship to the delivery address and could meet any specified shipping and delivery dates).
-2. **Who meets the allocation rules?** - Next, PRO creates a final shortlist of carrier services by eliminating any services that do not meet your organisation's allocation rules. For information on using allocation rules, see <span class="highlight">LINK HERE</span>.
-3. **Who is cheapest?** - Finally, PRO allocates the shipment to the cheapest service on the shortlist.
-
 ## Allocating a Single Shipment
 
 The **Allocate Shipment** endpoint allocates a single shipment using the PRO allocation engine. To call **Allocate Shipment**, send a `PUT` request to `https://api.sorted.com/pro/shipments/{reference}/allocate`, where `{reference}` refers to the shipment you want to allocate.
