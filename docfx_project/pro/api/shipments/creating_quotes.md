@@ -26,7 +26,7 @@ The body of the request should contain a shipment object.
 >
 > For more information on creating shipments, see the [Creating Shipments](/pro/api/shipments/creating_shipments.html) page.
 
-As a minimum, PRO's quote endpoints requires you to send the following information in the request body:
+As a minimum, the **Create Quote** and **Create Quote by Service Group** endpoints require you to send the following information in the request body:
 
 * `shipment_type` - Specifies whether the shipment will be `on_demand` (i.e. will require an ad-hoc carrier collection to be booked) or `scheduled` (i.e. will be picked up as part of a regularly scheduled carrier collection ).
 * `contents` - The contents of the shipment itself.
@@ -73,7 +73,7 @@ At this point, you would be able to display the relevant quote information to yo
 
 ## Example Quotes
 
-The example below shows a quote request for a shipment. PRO has returned two quotes, with a further service excluded as it cannot meet the delivery promise.
+The example below shows a quote request for a shipment. Note that  PRO has returned two quotes, with a further service excluded as it cannot meet the delivery promise.
 
 # [Quote Requests](#tab/create-quote-request)
 

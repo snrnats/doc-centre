@@ -35,8 +35,13 @@
     href: creating_quotes.md
   - name: Getting Shipment Quotes
     href: getting_shipment_quotes.md
-- name: Getting Customs Docs
-  href: getting_shipment_customs_docs.md  
+- name: Managing Customs Docs
+  href: managing_shipment_customs_docs.md
+  items:  
+  - name: Getting Customs Docs
+    href: getting_shipment_customs_docs.md
+  - name: Using Paperless Docs
+    href: using_paperless_docs.md  
 - name: Getting Labels
   href: getting_shipment_labels.md
 - name: Manifesting Shipments
@@ -49,9 +54,7 @@
   - name: Manifesting Shipments by Shipment Group
     href: manifesting_shipments_by_shipment_group.md
   - name: Getting Shipment Manifests
-    href: getting_shipment_manifests.md
-- name: Using Paperless Docs
-  href: using_paperless_docs.md    
+    href: getting_shipment_manifests.md  
 - name: Managing Shipment Groups
   href: managing_shipment_groups.md
   items: 
