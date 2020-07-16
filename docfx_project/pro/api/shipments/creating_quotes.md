@@ -1,11 +1,11 @@
 ---
-uid: pro-api-help-shipments-creating-shipment-quotes
-title: Creating Shipment Quotes
+uid: pro-api-help-shipments-creating-quotes
+title: Creating Quotes
 tags: shipments,pro,api,quotes
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 02/07/2020
 ---
-# Creating Shipment Quotes
+# Creating Quotes
 
 This page explains how got get delivery quotes based on shipment details.
 

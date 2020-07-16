@@ -7,7 +7,7 @@ created: 02/07/2020
 ---
 # Managing Shipment Quotes
 
-SortedPRO's Quotes API enables you to get delivery quotes for a shipment manually. This section explains the various ways in which you can get delivery quotes for a shipment, and how to view details of existing quotes.
+SortedPRO's Quotes API enables you to get delivery quotes for a shipment manually. This section explains the various ways in which you can get delivery quotes for a shipment.
 
 ---
 
@@ -27,7 +27,5 @@ The **Allocate Shipment with Quote** endpoint is a key part of all PRO quotes wo
 
 ## Section Contents
 
-* [Creating Shipment Quotes](/pro/api/shipments/creating_shipment_quotes.html) - Explains how to create delivery quotes for a shipment.
-* [Getting Shipment Quotes](/pro/api/shipments/getting_shipment_quotes.html) - Explains how to retrieve existing delivery quotes.
-
-
+* [Creating Quotes](/pro/api/shipments/creating_shipment_quotes.html) - Explains how to get delivery quotes for an as-yet uncreated shipment.
+* [Getting Shipment Quotes](/pro/api/shipments/getting_shipment_quotes.html) - Explains how to get delivery quotes for an existing shipment.

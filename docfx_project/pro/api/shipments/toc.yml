@@ -31,8 +31,8 @@
 - name: Managing Quotes
   href: managing_shipment_quotes.md
   items:
-  - name: Creating Shipment Quotes
-    href: creating_shipment_quotes.md
+  - name: Creating Quotes
+    href: creating_quotes.md
   - name: Getting Shipment Quotes
     href: getting_shipment_quotes.md
 - name: Getting Customs Docs
