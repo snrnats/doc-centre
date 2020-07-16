@@ -35,8 +35,8 @@
     href: creating_quotes.md
   - name: Getting Shipment Quotes
     href: getting_shipment_quotes.md
-- name: Managing Customs Docs
-  href: managing_shipment_customs_docs.md
+- name: Managing Documents
+  href: managing_documents.md
   items:  
   - name: Getting Customs Docs
     href: getting_shipment_customs_docs.md
@@ -79,5 +79,3 @@
   href: using_shipment_tags.md    
 - name: Glossary
   href: shipments_glossary.md    
-  
-  
