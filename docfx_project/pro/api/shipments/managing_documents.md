@@ -23,8 +23,8 @@ PRO offers two endpoints to retrieve customs documents once they have been gener
 
 ## Paperless Documents
 
-PRO also supports paperless trade. 
+PRO also supports paperless trade. Paperless documents are customer-generated documents (such as packing lists or certificates of conformity) that are transmitted to carriers as part of a shipment's data rather than being generated separately by the carrier.
 
-"Paperless" documents are provided by customers when creating shipments and enable the transmission of customer-generated documents to carriers. The intention of allowing customers to supply documents is to allow original copies of documents such as certificates of conformity to be supplied to carriers in a paperless trade flow.
+PRO offers three endpoints 
 
 ## Documents Section Contents

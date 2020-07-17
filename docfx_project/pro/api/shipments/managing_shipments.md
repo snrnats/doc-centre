@@ -26,4 +26,5 @@ Each shipment object contains details of the shipment's current state (for examp
 * [Creating Shipments](/pro/api/shipments/creating_shipments.html) - Explains how to create, clone, and update shipments.
 * [Getting Shipments](/pro/api/shipments/getting_shipments.html) - Explains the various ways in which you can retrieve shipment details.
 * [Cancelling Shipments](/pro/api/shipments/cancelling_shipments.html) - Explains how to use the **Cancel Shipment** endpoint to set a shipment's status to _Cancelled_.
+* [Adding Paperless Documents](/pro/api/shipments/cancelling_shipments.html) - Explains how to add, retrieve, and remove a shipment's paperless documents. 
 * [Shipment States](/pro/api/shipments/shipment_states.html) - Lists the various `{states}` that a shipment can assume.

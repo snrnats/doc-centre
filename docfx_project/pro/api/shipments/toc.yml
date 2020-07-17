@@ -11,6 +11,8 @@
     href: getting_shipments.md    
   - name: Cancelling Shipments
     href: cancelling_shipments.md
+  - name: Adding Paperless Docs
+    href: adding_paperless_documents.md    
   - name: Shipment States
     href: shipment_states.md                            
 - name: Allocating Shipments
@@ -28,22 +30,10 @@
     href: allocating_using_filters.md 
   - name: Allocating via a Quote
     href: allocating_via_a_quote.md
-- name: Managing Quotes
-  href: managing_shipment_quotes.md
-  items:
-  - name: Creating Quotes
-    href: creating_quotes.md
-  - name: Getting Shipment Quotes
-    href: getting_shipment_quotes.md
-- name: Managing Documents
-  href: managing_documents.md
-  items:  
-  - name: Getting Customs Docs
-    href: getting_shipment_customs_docs.md
-  - name: Using Paperless Docs
-    href: using_paperless_docs.md  
 - name: Getting Labels
-  href: getting_shipment_labels.md
+  href: getting_shipment_labels.md    
+- name: Getting Customs Docs
+  href: getting_shipment_customs_docs.md 
 - name: Manifesting Shipments
   href: manifesting_shipments.md
   items:
@@ -54,7 +44,14 @@
   - name: Manifesting Shipments by Shipment Group
     href: manifesting_shipments_by_shipment_group.md
   - name: Getting Shipment Manifests
-    href: getting_shipment_manifests.md  
+    href: getting_shipment_manifests.md      
+- name: Managing Quotes
+  href: managing_shipment_quotes.md
+  items:
+  - name: Creating Quotes
+    href: creating_quotes.md
+  - name: Getting Shipment Quotes
+    href: getting_shipment_quotes.md 
 - name: Managing Shipment Groups
   href: managing_shipment_groups.md
   items: 

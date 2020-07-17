@@ -107,8 +107,15 @@ There are lots of optional properties you can send when creating a shipment, inc
 * Shipment direction.
 * Custom label properties.
 * Tenant and channel.
-* Metadata. PRO metadata enables you to use custom fields to record additional data about a shipment. For more information on using metadata in PRO, see [LINK HERE].
-* Tags. Allocation tags enable you to filter the list of carrier services that a particular shipment could be allocated to. For more information on allocation tags, see [LINK HERE].
+* Metadata. PRO metadata enables you to use custom fields to record additional data about a shipment. 
+  > [!NOTE]
+  > For more information on using metadata in PRO, see [LINK HERE].
+* Tags. Allocation tags enable you to filter the list of carrier services that a particular shipment could be allocated to. 
+  > [!NOTE]
+  > For more information on allocation tags, see [LINK HERE].
+* Paperless documents. Paperless documents are customer-generated documents (such as packing lists or certificates of conformity) that are transmitted to carriers as part of a shipment's data rather than being generated separately by the carrier. 
+  > [!NOTE]
+  > For more information on working with paperless documents in PRO, see the [Adding Paperless Documents](/pro/api/shipments/adding_paperless_documents.html) page.
 
 Adding optional properties when you create a shipment can help you to ensure that your shipment is allocated to the most appropriate carrier service.
 
@@ -279,7 +286,12 @@ The example below shows a request to clone a shipment <span class="highlight">NE
 
 You can update an existing unallocated shipment via the **Update Shipment** endpoint. When you make an **Update Shipment** request, SortedPRO overwrites the relevant shipment's details with new details provided in the body of the request.
 
-To call **Update Shipment**, send a `PUT` request to `https://api.sorted.com/pro/shipments`. You will need to specify the shipment `{reference}` in the body of the request, but the request should otherwise be structured in the same way as a **Create Shipment** request. Other than the `reference`, **Update Shipment** uses the same validation as **Create Shipment** (that is, `shipment_type`, `contents`, and `addresses` are required and all other valid properties are optional). 
+To call **Update Shipment**, send a `PUT` request to `https://api.sorted.com/pro/shipments`. You will need to specify the shipment `reference` in the body of the request, but the request should otherwise be structured in the same way as a **Create Shipment** request. 
+
+> [!NOTE]
+> The **Update Shipment** endpoint cannot be used to edit a shipment's paperless documents. To edit paperless documents on an existing shipment, use the Paperless Documents endpoints. For more information on working with paperless documents in PRO, see the [Adding Paperless Documents](/pro/api/shipments/adding_paperless_documents.html) page.
+
+Other than the `reference` and `paperless_documents`, **Update Shipment** uses the same validation as **Create Shipment** (that is, `shipment_type`, `contents`, and `addresses` are required and all other valid properties are optional). 
 
 <span class="highlight">CAN YOU PASS MULTIPLE SHIPMENTS AT ONCE? THE STUB WON'T LET ME BUT I DON'T KNOW IF THAT'S CONCLUSIVE</span>
 
