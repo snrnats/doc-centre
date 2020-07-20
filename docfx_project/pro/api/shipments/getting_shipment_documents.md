@@ -1,17 +1,21 @@
 ---
-uid: pro-api-help-shipments-getting-shipment-customs-docs
-title: Getting Shipment Customs Docs
+uid: pro-api-help-shipments-getting-shipment-documents
+title: Getting Shipment Documents
 tags: shipments,pro,api,customs,documents
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 02/07/2020
 ---
-# Getting Shipment Customs Docs
+# Getting Shipment Documents
 
+When shipping internationally, SortedPRO will automatically determine if customs documentation is required for a shipment. This page explains the various way in which SortedPRO can return return customs documents and commercial invoices.
 
+<span class="highlight">PRO ALSO NOW HAS COLLECITON NOTES AND HAZARD LABELS AS DOCUMENT TYPES WHICH CAN PRESUMABLY BE RETURNED BY THE GET DOCUMENT ENDPOINT. ARE THESE ALSO AUTO GENERATED? PROBABLY NEED TO FIGURE THAT OUT BEFORE WE WRITE THIS SECTION</span>
+
+---
 
 ## Customs Docs in PRO
 
-When shipping internationally, SortedPRO will automatically determine if customs documentation is required for a shipment. SortedPRO can automatically generate CN22, CN23, or Commercial Invoice documents in PDF format and will determine which document is appropriate for any allocated shipment. The Customs Docs APIs enable you to retrieve the pre-generated documents.
+SortedPRO can automatically generate CN22, CN23, or Commercial Invoice documents in PDF format and will determine which document is appropriate for any allocated shipment. The Customs Docs APIs enable you to retrieve the pre-generated documents.
 
 PRO offers two endpoints to retrieve customs documents once they have been generated:
 

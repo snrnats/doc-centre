@@ -79,7 +79,7 @@ POST https://api.sorted.com/pro/documents/paperless/sp_0059545277918047284766607
 
 ## Getting Paperless Documents
 
-<span class="highlight">THIS CURRENTLY RUNS OFF A DOCUMENT REFERENCE PROPERTY THAT ISN'T MENTIONED IN THE DATA CONTRACT</span>
+<span class="highlight">THIS CURRENTLY RUNS OFF A DOCUMENT REFERENCE PROPERTY THAT ISN'T MENTIONED IN THE DATA CONTRACT. LEAVING THIS FOR NOW</span>
 
 This endpoint is used to retrieve paperless documents.
 
@@ -110,7 +110,7 @@ The example shows
 
 ## Removing Paperless Documents from Shipments
 
-<span class="highlight">THIS CURRENTLY RUNS OFF A DOCUMENT REFERENCE PROPERTY THAT ISN'T MENTIONED IN THE DATA CONTRACT</span>
+<span class="highlight">THIS CURRENTLY RUNS OFF A DOCUMENT REFERENCE PROPERTY THAT ISN'T MENTIONED IN THE DATA CONTRACT. LEAVING THIS FOR NOW</span>
 
 This endpoint is used to remove an existing paperless_document from a shipment.
 

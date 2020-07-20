@@ -33,7 +33,7 @@
 - name: Getting Labels
   href: getting_shipment_labels.md    
 - name: Getting Customs Docs
-  href: getting_shipment_customs_docs.md 
+  href: getting_shipment_documents.md 
 - name: Manifesting Shipments
   href: manifesting_shipments.md
   items:
