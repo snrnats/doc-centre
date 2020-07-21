@@ -32,7 +32,7 @@
     href: allocating_via_a_quote.md
 - name: Getting Labels
   href: getting_shipment_labels.md    
-- name: Getting Customs Docs
+- name: Getting Shipment Docs
   href: getting_shipment_documents.md 
 - name: Manifesting Shipments
   href: manifesting_shipments.md
