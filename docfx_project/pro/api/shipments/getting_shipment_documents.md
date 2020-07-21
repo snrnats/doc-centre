@@ -1,71 +1,58 @@
 ---
 uid: pro-api-help-shipments-getting-shipment-documents
 title: Getting Shipment Documents
-tags: shipments,pro,api,customs,documents
+tags: shipments,pro,api,customs,documents,dangerous,hazardous,collection note
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 02/07/2020
 ---
 # Getting Shipment Documents
 
-When shipping internationally, SortedPRO will automatically determine if customs documentation is required for a shipment. This page explains the various way in which SortedPRO can return return customs documents and commercial invoices.
+SortedPRO can automatically generate customs documentation, collection notes, and hazard labels for shipments. This page explains the various way in which SortedPRO can return this documentation.
 
-<span class="highlight">PRO ALSO NOW HAS COLLECITON NOTES AND HAZARD LABELS AS DOCUMENT TYPES WHICH CAN PRESUMABLY BE RETURNED BY THE GET DOCUMENT ENDPOINT. ARE THESE ALSO AUTO GENERATED? PROBABLY NEED TO FIGURE THAT OUT BEFORE WE WRITE THIS SECTION</span>
+> [!NOTE]
+> PRO also generates delivery labels, which have the same data structure as shipment documents and are also generated after allocation. However, labels are managed through their own dedicated endpoints, and cannot be returned through PRO's Documents endpoints. For information on using delivery labels in PRO, see the [Getting Shipment Labels](/pro/api/shipments/getting_shipment_labels.html) page. 
 
 ---
 
-## Customs Docs in PRO
+## Documentation in PRO
 
-SortedPRO can automatically generate CN22, CN23, or Commercial Invoice documents in PDF format and will determine which document is appropriate for any allocated shipment. The Customs Docs APIs enable you to retrieve the pre-generated documents.
+Once a shipment is allocated, PRO automatically determines what documentation is required for it. PRO can generate the following document types:
 
-PRO offers two endpoints to retrieve customs documents once they have been generated:
+* `cn22` - Customs documentation. Only generated for applicable international shipments.
+* `cn23` - Customs documentation. Only generated for applicable international shipments.
+* `commercial_invoice` - Customs documentation. Only generated for applicable international shipments.
+* `hazard_label` - Generated for shipments containing dangerous goods <span class="highlight">I ASSUME THIS IS GOING TO RUN OFF THE NEW DANGEROUS GOODS UI FUNCTIONALITY. NEED FURTHER INFO AS TO WHAT CONDITIONS IT GENERATES A HAZARD LABEL UNDER. UNLESS IT ALWAYS GENERATES A HAZARD LABEL AND IT'S JUST NULL IF THERE AREN'T ANY HAZARDOUS GOODS?</span>
+* `collection_note` - A driver's manifest for the shipment. Generated for all shipments.
 
-* **Get Customs Documents** retrieves all customs documents that have been generated for a particular shipment.
-* **Get Document** retrieves a specific customs document.
+PRO offers two endpoints to retrieve documents once they have been generated:
 
-> [!CAUTION]
+* **Get Document** retrieves a specific document.
+* **Get Customs Documents** retrieves all customs documents (that is, CN22, CN23, and commercial invoice documents) that have been generated for a particular shipment.
+
+> [!NOTE]
+> PRO's auto-generated documents should not be confused with paperless documents. Paperless documents are documents that are attached to a shipment prior to allocation and transmitted to a carrier as part of that shipment's data. Auto-generated documents are created by PRO at the point of allocation and are intended to be printed before the carrier picks the shipment up. 
 >
-> You can only retrieve documents for shipments that have been allocated to a carrier. If you attempt to return labels for an unallocated shipment, PRO returns an error.
+> For more information on using paperless documents in PRO, see the [Adding Paperless Documents](/pro/api/shipments/adding_paperless_documents.html) page. 
 
-## Getting Shipment Customs Docs
+## Getting a Specific Shipment Document
 
-`GET https://api.sorted.com/pro/documents/{shipment_reference}`
+To call **Get Document**, send a `GET` request to `https://api.sorted.com/pro/documents/{shipment_reference}/{document_type}`, where `{shipment_reference}` is the unique reference of the shipment that the document belongs to and `{document_type}` is the type of document you want to return for that shipment.
 
-<span class="highlight">THESE ARE ALL JUST NOTES TO SELF AND AREN'T INTENDED FOR PUBLIC CONSUMPTION (AT LEAST, NOT IN THIS FORM)</span>
+PRO returns the relevant document as a base-64 encoded byte array.
 
-Generate customs documentation as quickly as possible
-Produce optimised customs documentation (small file size, high quality)
-Enable rules to be updated quickly and easily without requiring a full deployment
+> [!NOTE]
+>
+> For full reference information on the **Get Document** endpoint, see LINK HERE.
 
-### rules
+## Getting a Shipment's Customs Documents
 
-In order to identify whether customs document(s) are required when allocating a `shipment`, the following factors must be considered:
 
-- The origin ISO country code
-- The destination ISO country code, including wildcard support (e.g. to any country)
-- The value of goods in the specified currency
-- The specified currency
 
-### generating sdocs
+## The Document Response
 
-Generating customs documents should be an immutable operation. When generating customs documents, we should be checking to ensure that the shipment has been allocated. If it has not, customs documents cannot be generated. If it has, then the shipment is now effectively immutable, and the data for customs documents generation cannot be changed. 
 
-A Commercial Invoice is another type of document that can be returned in certain circumstances, depending upon the data mapping in place.
+## Examples
 
-### paperless trade
 
-However, in general terms "paperless" means that the client does not need to generate customs documents – the carrier will generate any relevant documents on the client's behalf.
+## Next Steps
 
-As a result, when requesting documents for carrier services that are deemed "paperless", no documents should be returned.
-
-### Example Rules
-
-The following rules are currently configured in SortedPRO:
-
-- When the `origin` country is `AT`, the destination is anywhere (`*`), and the goods are between `£0.00` and `£380.00`, then a CN22 is required
-- When the `origin` country is `GB`, the destination is `JE`, and the goods are between `£0.00` and `£270.00`, then a CN22 is required
-- When the `origin` country is `GB`, the destination is anywhere (`*`), and the goods are between `$0.00AUD` and `$519.11AUD`, then a CN22 is required
-
-In implementing this endpoint, the application must identify the customs document(s) that are required based on the properties of the shipment, and then return that document (or those documents) only, and nothing else. I.e. when a specific document is not required, don’t just generate it anyway and send it back.
-
-Get Document
-Get Customs Documents 
