@@ -38,7 +38,7 @@ PRO offers two endpoints to retrieve documents once they have been generated:
 
 To call **Get Document**, send a `GET` request to `https://api.sorted.com/pro/documents/{shipment_reference}/{document_type}`, where `{shipment_reference}` is the unique reference of the shipment that the document belongs to and `{document_type}` is the type of document you want to return for that shipment.
 
-PRO returns the relevant document as a base-64 encoded byte array.
+If the specified shipment has a document of the specified type, then PRO returns a `document` object representing that document. Otherwise, the system returns an error.
 
 > [!NOTE]
 >
@@ -46,13 +46,78 @@ PRO returns the relevant document as a base-64 encoded byte array.
 
 ## Getting a Shipment's Customs Documents
 
+To call **Get Customs Documents**, send a `GET` request to `https://api.sorted.com/pro/documents/{shipment_reference}`, where `{shipment_reference}` is the unique reference of the shipment that you want to get customs documents for.
 
+If the specified shipment has customs documents (that is, it is an international shipment), then PRO returns a list of `document` objects representing those documents. Otherwise, the system returns an error.
+
+> [!NOTE]
+>
+> For full reference information on the **Get Customs Documents** endpoint, see LINK HERE.
 
 ## The Document Response
 
+Both Documents endpoints return `document` objects. **Get Document** returns a single `document`, while **Get Customs Documents** returns a list.
+
+[!include[_shipments_document_object](../includes/_shipments_document_object.md)]
 
 ## Examples
 
+The example below shows a successful **Get Document** request for the `cn22` document associated with shipment _sp_00670175533382557003917067812864_. PRO returns a `document` object representing that document. In this example, the Base64 data returned has been removed for clarity.
+
+# [Get Document Request](#tab/get-document-request)
+
+```json
+GET https://api.sorted.com/pro/documents/sp_00670175533382557003917067812864/cn22
+```
+
+# [Get Document Response](#tab/get-document-response)
+
+```json
+{
+  "file": {Base64 file contents},
+  "content_type": "application/pdf",
+  "document_type": "cn22",
+  "dpi": 203
+}
+```
+---
+
+The example below shows a successful **Get Customs Documents** request for all customs documents associated with shipment _sp_00670175533382557003917067812864_. PRO returns a list of `document` objects representing the `cn22`, `cn23`, and `commercial_invoice` documents associated with that shipment. In this example, the Base64 data returned has been removed for clarity.
+
+# [Get Customs Documents Request](#tab/get-customs-documents-request)
+
+```json
+GET https://api.sorted.com/pro/documents/sp_00670175533382557003917067812864
+```
+
+# [Get Customs Documents Response](#tab/get-customs-documents-response)
+
+```json
+[
+  {
+    "file": {Base64 file contents},
+    "content_type": "application/pdf",
+    "document_type": "cn22",
+    "dpi": 203
+  },
+  {
+    "file": {Base64 file contents},
+    "content_type": "application/pdf",
+    "document_type": "cn23",
+    "dpi": 203
+  },
+  {
+    "file": {Base64 file contents},
+    "content_type": "application/pdf",
+    "document_type": "commercial_invoice",
+    "dpi": 203
+  }
+]
+```
+---
 
 ## Next Steps
 
+* Learn how to add shipments to a carrier manifest at the [Manifesting Shipments](/pro/api/shipments/manifesting_shipments.html) page.
+* Learn how to retrieve a shipment's labels at the [Getting Shipment Labels](/pro/api/shipments/getting_shipment_labels.html) page.
+* Learn how to work with shipment groups at the [Managing Shipment Groups](/pro/api/shipments/managing_shipment_groups.html) page.
