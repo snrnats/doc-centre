@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-creating-new-orders
 title: Creating New Orders
-tags: orders,pro,api,consignments
+tags: orders,pro,api,consignments,EORI number
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 29/05/2020
 ---
@@ -38,6 +38,39 @@ Either the order's `origin` address, its `destination` address, or both, must in
 >
 > * For full reference information on the <strong>Create Order</strong> endpoint, see the <strong><a href="https://docs.electioapp.com/#/api/CreateOrder">Create Order</a></strong> page of the API reference.
 > * For an example call flow showing orders being created, see the <a href="/pro/api/help/flows/order_flex_flow.html">Order Flex</a> call flow page.
+
+### Adding an EORI Number
+
+If required, you can record a order's EORI number using the `Metadata` property. To do so, add a property with a `KeyValue` of _ShippersEORI_ and a `StringValue` representing the number itself.
+
+# [EORI Number Example](#tab/eori-number-example)
+
+```json
+{
+    "OrderReferenceProvidedByCustomer": "YOUR-REF",
+    "Addresses": [
+        // addresses
+    ],
+    "Packages": [
+        // package properties
+    ],
+    "Metadata": [
+        {
+            "KeyValue": "ShippersEORI",
+            "StringValue": "GB987654312000"
+        }
+    ]
+    // other order properties
+}
+
+```
+---
+
+If you add a `ShippersEORI` metadata property to an international order, then PRO automatically adds that property to any consignments that are packed from that order. PRO also automatically adds an **EORI Number** field to any commercial invoices that it generates from those consignments.
+
+> [!NOTE]
+> * For more information on commercial invoices and other customs documents in PRO, see the [Getting Customs Docs and Invoices](/pro/api/help/getting_customs_docs_and_invoices.html) page. 
+> * For more information on packing orders, see the [Creating Consignments From Orders](/pro/api/help/packing_orders.html)
 
 ### Create Order Example
 
