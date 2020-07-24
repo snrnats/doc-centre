@@ -37,7 +37,7 @@ Once the request is received, PRO attempts to manifest any shipments that meet t
 >
 >  For full reference information on the **Manifest Shipments by Query** endpoint, see LINK HERE
 
-### Manifest Shipments by Query Example
+## Manifest Shipments by Query Example
 
 The example shows a request to manifest all allocated shipments that have had their labels retrieved and are shipping from an address with the  `address_custom_reference` _76dc0fd4-1788-48bf-978c-f8601411f9b1_ on 23-07-2020.
 

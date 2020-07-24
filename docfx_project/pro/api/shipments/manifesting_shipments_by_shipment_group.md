@@ -26,7 +26,7 @@ Once the request is received, PRO attempts to manifest any unmanifested shipment
 > * For full reference information on the **Manifest Shipments by Shipment Group** endpoint, see LINK HERE
 > * For a user guide on working shipment groups, see LINK HERE
 
-### Manifest Shipments by Shipment Group Example
+## Manifest Shipments by Shipment Group Example
 
 The example shows a request to manifest shipments belonging to shipment group _example123_. PRO has identified four unmanifested shipments within that group, and has successfully queued them all for manifest.
 

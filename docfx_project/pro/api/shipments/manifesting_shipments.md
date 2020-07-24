@@ -40,6 +40,8 @@ Manifesting a shipment changes its state to `manifested`. At this point the carr
 
 <span class="highlight">NEED TO CONFIRM WHAT THE DEAL IS WITH DEALLOCATING SHIPMENTS AS THERE AREN'T ANY ENDPOINTS IN THE NEW COLLECTION</span>
 
+Whenever you manifest one or more shipments, PRO creates a new manifest item. Each manifest item contains shipments for one carrier only. You can retrieve manifest items using the **Get Manifest** endpoint 
+
 Once a shipment is manifested you should also look to print labels for the shipment, if you have not already done so. See [Getting Labels](/pro/api/shipments/getting_shipment_labels.html) for an explanation of how to retrieve package labels.
 
 ## Section Contents

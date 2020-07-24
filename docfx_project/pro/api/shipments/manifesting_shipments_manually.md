@@ -15,9 +15,13 @@ This page explains how to use the **Manifest Shipment** and **Manifest Shipments
 
 The **Manifest Shipment** endpoint enables you to manifest an individual shipment. To call **Manifest Shipment**, send a `PUT` request to `https://api.sorted.com/pro/shipments/{reference}/manifest`, where `{reference}` is the unique reference for the shipment you want to manifest.
 
-Once PRO has received the request, it attempts to manifest the specified shipment and returns a Manifest Response
+Once PRO has received the request, it attempts to manifest the specified shipment and returns a `manifest_result` containing the following information:
 
-[!include[_shipments_manifest_result](../includes/_shipments_manifest_result.md)]
+* A unique reference for the manifest item.
+* Details of the carrier and service that the shipment was manifested with. <span class="highlight">I'M GUESSING THIS WORKS IN THE SAME WAY AS THE ALLOCATION ENDPOINTS WHERE BULK ENDPOINTS QUEUE AND SINGLE ENDPOINTS MANIFEST IN-PROCESS? NEED TO CONFIRM THAT</span>
+* A message providing details of the result.
+* The current state of the shipment as a result of the manifest operation. Ordinarily, this would be _manifesting_.
+* A link to the generated manifest.
 
 > [!NOTE]
 >
