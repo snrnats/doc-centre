@@ -11,6 +11,8 @@ This page explains how to manifest those shipments that meet a particular set of
 
 ---
 
+## The Manifest Shipments by Query Endpoint
+
 The **Manifest Shipments by Query** endpoint enables you to manifest shipments using a query, rather than by providing shipment references directly. To call **Manifest Shipments by Query**, send a `POST` request to `https://api.sorted.com/pro/shipments/manifest/query`. 
 
 The body of the request should contain shipment search criteria. All properties are optional. You can use the following query fields:
