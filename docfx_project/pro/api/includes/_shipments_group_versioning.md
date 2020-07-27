@@ -1,0 +1,7 @@
+When you create a shipment group, PRO assigns that group a `version` number. A group's `version` number indicates how many times you have used that group's `custom_reference`. Combined, the `custom_reference` and `version` provide a unique identifier for the group.
+
+Versioning exists as a means to identify any shipment group by `custom_reference`, even though `custom_references` can be re-used as long as they are not shared with any open groups.
+
+For example, suppose that you choose to use shipment groups to represent carrier trailers, so that you can manifest an entire trailer's worth of shipments at once. To this end, you create a shipment group with a `custom_reference` of _CarrierX-PM_ to represent Carrier X's daily afternoon collection. The first time you do this, the group has a `version` number of _1_. You add the relevant shipments to the group, manifest them using the **Manifest Shipments by Shipment Group** endpoint as they are picked up, and then close the shipment group.
+
+The following day, you create a new shipment group for Carrier X's daily afternoon collection. As before, you use a `custom_reference` of _CarrierX-PM_. This time, however, PRO responds with a `version` number of _2_, as this is the second time that that `custom_reference` has been used. 

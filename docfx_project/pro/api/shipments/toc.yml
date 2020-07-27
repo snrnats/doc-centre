@@ -61,10 +61,10 @@
     href: getting_shipment_groups.md
   - name: Editing Shipment Groups
     href: editing_shipment_groups.md
-  - name: Getting Collection Notes
-    href: getting_collection_notes.md
   - name: Closing Shipment Groups
     href: closing_shipment_groups.md
+- name: Getting Collection Notes
+  href: getting_collection_notes.md    
 - name: Tracking PRO Shipments
   href: tracking_pro_shipments.md
   items:
