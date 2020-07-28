@@ -34,16 +34,18 @@ Shipment groups cannot share a `custom_reference` with another open shipment gro
 
 Once it has received and validated the request, PRO creates the shipment group and returns a Resource Result including the following information:
 
-* `reference`. This is an auto generated-unique reference for the group. It is not to be confused with the `custom_reference`.
+* `reference`. This is an auto-generated unique reference for the group. It is not to be confused with the `custom_reference`.
 * `custom_reference` - The custom reference specified in the request.
 * `version` - An integer indicating the number of times that the `custom_reference` has been used.
 * `errors` - Indicates any shipments in the request that failed validation and could not be added to the group.
 
 ### Versioning
 
+Versioning exists as a means to identify any shipment group by `custom_reference`, even though `custom_references` can be re-used as long as they are not shared with any open groups.
+
 [!include[_shipments_group_versioning](../includes/_shipments_group_versioning.md)]
 
-Shipment group versioning is used when retrieving shipments groups, when adding or removing shipments from a group, and when generating collection notes.
+Shipment group versioning is used when retrieving shipment groups, when adding or removing shipments from a group, and when generating collection notes.
 
 > [!NOTE]
 > * For more information on retrieving shipment groups, see the [Getting Shipment Groups](/pro/api/shipments/getting_shipment_groups.html) page.
