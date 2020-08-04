@@ -76,7 +76,7 @@ The **Add Shipment to Group** endpoints enable you to add individual shipments t
 
 > [!NOTE]
 >
-> For more information on how versioning works in PRO shipment groups, see the [Versioning in Shipment Groups](/pro/api/shipments/getting_shipment_groups.html#versioning-in-shipment-groups) section of the [Getting Shipment Groups](/pro/api/shipments/getting_shipment_groups.html) page.
+> For an explanation of versioning in PRO shipment groups, see the [Versioning in Shipment Groups](/pro/api/shipments/getting_shipment_groups.html#versioning-in-shipment-groups) section of the [Getting Shipment Groups](/pro/api/shipments/getting_shipment_groups.html) page.
 
 In both cases, `{shipment_ref}` is the unique reference of the shipment you want to add to the group. This shipment must not be a member of either the specified shipment group or any other open shipment group. 
 

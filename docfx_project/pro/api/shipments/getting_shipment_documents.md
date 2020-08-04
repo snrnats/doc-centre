@@ -42,7 +42,10 @@ If the specified shipment has a document of the specified type, then PRO returns
 
 > [!NOTE]
 >
-> For full reference information on the **Get Document** endpoint, see LINK HERE.
+> If you use the **Get Document** endpoint to get a *collection_note* for a shipment, then PRO generates and returns a collection note for the contents of that shipment only. Where you have multiple shipments being picked up by the same carrier (as part of a scheduled collection, for example), you should use one of PRO's dedicated Collection Notes endpoints instead.
+> 
+> * For more information on using collection notes in PRO, see the [Getting Collection Notes](/pro/api/shipments/getting_collection_notes.html) page.
+> * For full reference information on the **Get Document** endpoint, see LINK HERE.
 
 ## Getting a Shipment's Customs Documents
 
@@ -115,6 +118,8 @@ GET https://api.sorted.com/pro/documents/sp_00670175533382557003917067812864
 ]
 ```
 ---
+
+<span class="highlight">HOW SHOULD WE HANDLE DECODING THE FILE HERE? DO WE LEAVE IT UP TO INDIVIDUAL CUSTOMERS OR ATTEMPT TO PUT </span>
 
 ## Next Steps
 
