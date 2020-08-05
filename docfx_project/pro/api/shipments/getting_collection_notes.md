@@ -40,7 +40,12 @@ PRO returns a collection note listing the contents of all of the shipments in th
 
 # [Example Get Shipment Group Collection Note Request](#tab/get-shipment-group-collection-note-request)
 
+The example shows a collection note request for shipment group *sg_00693870520933731157514090446848*.
 
+```json
+GET https://api.sorted.com/pro/collection_notes/shipment_group/sg_00693870520933731157514090446848
+```
+---
 
 ### Getting Collection Notes by Query
 
@@ -62,7 +67,14 @@ PRO returns a collection note listing the contents of all of the shipments that 
 
 # [Example Get Collection Note by Query Request](#tab/get-collection-note-by-query-request)
 
+`POST https://api.sorted.com/pro/collection_notes/query`
 
+```json
+
+```
+---
+
+<span class="highlight">NO EXAMPLE PROPERTIES IN THE DATA CONTRACT & ENDPOINT DOESN'T RETURN YET</span>
 
 ### Getting Collection Notes by Manifest
 
@@ -76,7 +88,14 @@ PRO returns a collection note listing the contents of all of the shipments that 
 
 # [Example Get Collection Note by Manifests Request](#tab/get-collection-note-by-manifests-request)
 
+`POST https://api.sorted.com/pro/collection_notes/manifest`
 
+```json
+
+```
+---
+
+<span class="highlight">NO EXAMPLE PROPERTIES IN THE DATA CONTRACT & ENDPOINT DOESN'T RETURN YET</span>
 
 ## The Collection Note Response
 
@@ -85,6 +104,18 @@ All Collection Notes endpoints return a collection note as a `document` object w
 [!include[_shipments_document_object](../includes/_shipments_document_object.md)]
 
 <span class="highlight">THE TECH DOCS HAVE AN EXAMPLE COLLECTION NOTE - SHOULD WE INCLUDE THAT IN HERE OR SHOULD IT BE FOR INTERNAL EYES ONLY?</span>
+
+# [Example Collection Note Response](#tab/example-collection-note-response)
+
+```json
+  {
+    "file": {Base64 file contents},
+    "content_type": "application/pdf",
+    "document_type": "collection_note",
+    "dpi": 203
+  }
+```
+---
 
 ## Next Steps
 
