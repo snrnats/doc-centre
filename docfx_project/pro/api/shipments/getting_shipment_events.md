@@ -20,7 +20,7 @@ In shipment-level tracking, PRO returns tracking events for the entire shipment,
 PRO offers two endpoints that enable you to get shipment-level tracking events: 
 
 * **Get Tracking Events** - Returns shipment-level tracking events by unique shipment `{reference}`.
-* **Get Tracking Events by Custom Reference** - Returns shipment-level tracking events by `{custom_reference}`. This endpoint may return details of more than one shipment, because shipment `custom_references` do not need to be unique.
+* **Get Tracking Events by Custom Reference** - Returns shipment-level tracking events by `{custom_reference}`.
 
 ## Getting Tracking Events by Shipment Reference
 
@@ -115,6 +115,10 @@ GET https://api.sorted.com/pro/tracking/sp_00695767408794862515340410880000
 ---
 
 ## Getting Tracking Events by Custom Reference
+
+The **Get Tracking Events by Custom Reference** endpoint enables you to retrieve tracking details by your own internal order reference numbers. Your shipments must be tagged with the relevant references via the `{custom_reference}` property. 
+
+The endpoint can also be used where a consumer order corresponds to multiple shipments, for example because the order contains items that will need to ship from different fulfilment centres. In order to use the **Get Tracking Events by Custom Reference** endpoint in this way, all of the order's component shipments would need to be tagged with the same `{custom_reference}`.
 
 To call the **Get Tracking Events by Custom Reference** endpoint, send a `GET` request to `https://api.sorted.com/pro/tracking/custom_reference/{custom_reference}`.
 
