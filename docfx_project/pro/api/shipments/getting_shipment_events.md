@@ -28,7 +28,7 @@ To call the **Get Tracking Events** endpoint, send a `GET` request to `https://a
 
 PRO returns a `tracking_response` object for the shipment. The `tracking_response` includes the following information:
 
-* The shipment's unique `{reference}` and (where applicable) `{custom_reference}`. 
+* The shipment's unique `reference` and (where applicable) `custom_reference`. 
 * Details of the carrier and carrier service for the shipment.
 * An updated expected delivery date for the shipment, where available.
 * A list of tracking events for the shipment.
@@ -131,6 +131,9 @@ Each `tracking_response` includes the following information:
 * An updated expected delivery date for the shipment, where available.
 * A list of tracking events for the shipment.
 
+> [!NOTE]
+> * For more information on the structure of PRO shipment tracking events, see the [What Is a Tracking Event?](/pro/api/shipments/tracking_pro_shipments.html#what-is-a-tracking-event) section of the [Tracking PRO Shipments](/pro/api/shipments/tracking_pro_shipments.html) page.
+
 ### Paging Results
 
 The **Get Tracking Events by Custom Reference** endpoint supports optional `{take}` and `{skip}` parameters, which can be used to drive paging functions. The `{take}` parameter indicates the number of shipments to return (up to a maximum of 10), and the `{skip}` parameter indicates the number of shipment records PRO should "skip over" before it returns records.
@@ -144,8 +147,6 @@ For example, suppose that you have 15 shipments with a `custom_reference` of _CR
 By default, `{take}` has a value of 10 and `{skip}` has a value of 0.
 
 > [!NOTE]
->
-> * For more information on the structure of PRO shipment tracking events, see the [What Is a Tracking Event?](/pro/api/shipments/tracking_pro_shipments.html#what-is-a-tracking-event) section of the [Tracking PRO Shipments](/pro/api/shipments/tracking_pro_shipments.html) page.
 > * For full reference information on the **Get Tracking Events by Custom Reference** endpoint, see LINK HERE.
 
 ### Example Get Tracking Events by Custom Reference Call
