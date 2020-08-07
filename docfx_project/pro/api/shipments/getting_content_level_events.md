@@ -16,7 +16,7 @@ In contents-level tracking, PRO returns separate tracking responses for every it
 Contents-level tracking is useful for shipments with multiple items of contents that may ship at different times. PRO offers two endpoints that enable you to get contents-level tracking events: 
 
 * **Get Contents-Level Tracking Events** - Returns contents-level tracking events by unique shipment `{reference}`. 
-* **Get Contents-Level Tracking Events by Custom Reference** - Returns contents-level tracking events by `{custom_reference}`. This endpoint may return tracking responses for the contents of more than one shipment, because shipment `custom_references` do not need to be unique.
+* **Get Contents-Level Tracking Events by Custom Reference** - Returns contents-level tracking events by `{custom_reference}`. This endpoint may return tracking responses for more than one item of contents, because contents `custom_references` do not need to be unique.
 
 ## Getting Contents-Level Tracking Events
 
@@ -119,14 +119,72 @@ GET https://api.sorted.com/pro/tracking/sp_00076976827069691057723959934976/ship
 
 ## Getting Contents-Level Tracking Events by Custom Reference
 
-Get Contents-Level Tracking Events by Custom Reference
+The **Get Contents-Level Tracking Events by Custom Reference** endpoint enables you to retrieve contents-level tracking details by your own internal order reference numbers. The items of contents in question must be tagged with the relevant references via the `{custom_reference}` property. 
 
-`GET https://api.sorted.com/pro/tracking/custom_reference/{custom_reference}/shipment_contents`
+The endpoint can also be used where a consumer order corresponds to multiple items of contents. In order to use the **Get Contents-Level Tracking Events by Custom Reference** endpoint in this way, all of the order's component contents would need to be tagged with the same `{custom_reference}`.
+
+To call **Get Contents-Level Tracking Events by Custom Reference**, send a `GET` request to `https://api.sorted.com/pro/tracking/custom_reference/{custom_reference}/shipment_contents`.
 
 > [!NOTE]
+> The `{custom_reference}` parameter in the **Get Contents-Level Tracking Events by Custom Reference** path refers to the `custom_reference` of the item of shipment contents and **NOT** the `custom_reference` of the shipment itself.
 >
-> * For more information on the structure of PRO shipment tracking events, see the [What Is a Tracking Event?](/pro/api/shipments/tracking_pro_shipments.html#what-is-a-tracking-event) section of the [Tracking PRO Shipments](/pro/api/shipments/tracking_pro_shipments.html) page.
+> For example, suppose that you have a shipment with a `custom_reference` of _1234_, which contains three items of contents that all have the `custom_reference` _ABCD_. To view tracking details for those items of contents via the **Get Contents-Level Tracking Events by Custom Reference** endpoint, you would call `https://api.sorted.com/pro/tracking/custom_reference/ABCD/shipment_contents` rather than `https://api.sorted.com/pro/tracking/custom_reference/1234/shipment_contents`
+
+### Response Structure
+
+PRO returns a `tracking_contents_response_list` object containing tracking information for any items of shipment contents that have the specified `{custom_reference}`. The `tracking_contents_response_list` comprises a list of `tracking_contents_responses`, as well as fields indicating the total number of matching records and (where applicable) the number of records that were taken or skipped using paging parameters.
+
+Each `tracking_contents_response` represents tracking details for a shipment that has contents that have the supplied `{custom_reference}`. The `tracking_contents_response` includes the following information:
+
+* The shipment's unique `{reference}` and (where applicable) `{custom_reference}`. 
+* Details of the carrier and carrier service for the shipment.
+* An updated expected delivery date for the shipment, where available.
+* A list of `contents_tracking_event` objects. 
+
+Each `contents_tracking_event` object represents tracking details of an item of shipment contents. The `contents_tracking_event` object includes the following information:
+
+* The item's unique `{reference}` and (where applicable) `{custom_reference}`.
+  > [!NOTE]
+  > The contents object's unique reference begins with _sc_ and is located in the shipment's `contents.reference` property. It is not to be confused with the shipment's own `reference`, which begins with _sp_ and is a unique identifier for the entire shipment. 
+* The carrier tracking references for the item
+* A list of standard PRO `tracking_events` for the item of contents.   
+
+> [!NOTE]
+> For more information on the structure of PRO shipment tracking events, see the [What Is a Tracking Event?](/pro/api/shipments/tracking_pro_shipments.html#what-is-a-tracking-event) section of the [Tracking PRO Shipments](/pro/api/shipments/tracking_pro_shipments.html) page.
+
+### Paging Results
+
+The **Get Contents-Level Tracking Events by Custom Reference** endpoint supports optional `{take}` and `{skip}` parameters, which can be used to drive paging functions. The `{take}` parameter indicates the number of shipments to return (up to a maximum of 10), and the `{skip}` parameter indicates the number of shipment records PRO should "skip over" before it returns records.
+
+For example, suppose that you have 15 shipments with a `custom_reference` of _CR1234_, and you want to return their tracking information as three pages of five shipments: 
+
+* To view the first page of five, you would make a call to `GET https://api.sorted.com/pro/tracking/custom_reference/CR1234/shipment_contents&take=5&skip=0` (that is, take five shipments and do not skip over any). 
+* To view the second page, you would call `GET https://api.sorted.com/pro/tracking/custom_reference/CR1234/shipment_contents&take=5&skip=5` (skip the first five shipments and then take the next five).
+* To view the third page, you would call `GET https://api.sorted.com/pro/tracking/custom_reference/CR1234/shipment_contents&take=5&skip=10` (skip the first ten shipments and then take the next five).
+
+By default, `{take}` has a value of 10 and `{skip}` has a value of 0.
+
+> [!NOTE]
 > * For full reference information on the **Get Contents-Level Tracking Events by Custom Reference** endpoint, see LINK HERE.
+
+### Example Get Contents-Level Tracking Events by Custom Reference Call
+
+The example shows a **Get Contents-Level Tracking Events by Custom Reference** call for all shipments with the `{custom_reference}` _CR1234_, using default paging settings. PRO has returned tracking details for a single shipment.
+
+# [Request](#tab/get-contents-level-tracking-events-by-custom-reference-request)
+
+```json
+GET https://api.sorted.com/pro/tracking/custom_reference/CR1234/shipment_contents
+```
+
+# [Response](#tab/get-contents-level-tracking-events-by-custom-reference-response)
+
+```json
+
+```
+---
+
+<span class="highlight">NO EXAMPLE OBJECT IN THE DATA CONTRACT AND API STUB ISNT RESPONDING SO WILL HAVE TO ADD EXAMPLE RESPONSE LATER</span>
 
 ## Next Steps
 

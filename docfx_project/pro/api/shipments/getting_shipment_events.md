@@ -122,7 +122,7 @@ The endpoint can also be used where a consumer order corresponds to multiple shi
 
 To call the **Get Tracking Events by Custom Reference** endpoint, send a `GET` request to `https://api.sorted.com/pro/tracking/custom_reference/{custom_reference}`.
 
-PRO returns a `tracking_response_list` object containing tracking information for any shipments that have the specified `{custom_reference}`. The `tracking_response_list` comprises a list of `tracking_responses`, as well as fields indicating the total number of matching shipments and (where applicable) the number of records that were taken or skipped.
+PRO returns a `tracking_response_list` object containing tracking information for any shipments that have the specified `{custom_reference}`. The `tracking_response_list` comprises a list of `tracking_responses`, as well as fields indicating the total number of matching shipments and (where applicable) the number of records that were taken or skipped using paging parameters.
 
 Each `tracking_response` includes the following information:
 
