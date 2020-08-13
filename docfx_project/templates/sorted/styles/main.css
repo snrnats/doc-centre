@@ -1890,3 +1890,20 @@ ul.tags > li:hover {
 span.fa-li .fa, span.fa-li .fas, span.fa-li .far {
     font-size: 16px;
 }
+
+/* API Ref Styles*/
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row {
+    padding: 15px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}

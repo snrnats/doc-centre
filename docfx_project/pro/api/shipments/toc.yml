@@ -1,7 +1,3 @@
-- name: Shipments API Reference
-  href: shipments_dc.md
-- name: Shipments API Reference Test
-  href: shipments_dc.html#data-contract 
 - name: Introduction
   href: introduction.md
 - name: Consignments vs Shipments

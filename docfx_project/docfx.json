@@ -7,7 +7,8 @@
           "pro/api/shipments/**.yml",
           "pro/api/shipments/**.md",          
           "pro/toc.yml",
-          "pro/index.md"
+          "pro/index.md",
+          "pro/api/shipments_dc.md"
         ]
       },
       {
