@@ -1893,17 +1893,17 @@ span.fa-li .fa, span.fa-li .fas, span.fa-li .far {
 
 /* API Ref Styles*/
 
-.row:after {
+.dc-row:after {
     content: "";
     display: table;
     clear: both;
 }
 
-.row {
+.dc-row {
     padding: 15px;
 }
 
-.column {
+.dc-column {
     float: left;
     width: 50%;
 }

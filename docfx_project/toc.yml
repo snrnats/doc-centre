@@ -10,7 +10,7 @@
   - name: Shipments (Temporary link)
     href: /pro/api/shipments/introduction.html
   - name: Shipments API Reference
-    href: pro/api/shipments_dc.html         
+    href: pro/api/data-contracts/shipments/shipments-apis.html         
   - name: Reports
     href: pro/reports/
     homepage: pro/reports/index.md

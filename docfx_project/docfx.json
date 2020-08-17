@@ -8,7 +8,6 @@
           "pro/api/shipments/**.md",          
           "pro/toc.yml",
           "pro/index.md",
-          "pro/api/shipments_dc.md"
         ]
       },
       {
@@ -18,7 +17,12 @@
           "react/help/**.md",
           "react/help/**.yml"          
         ]
-      },      
+      },
+      {
+        "files": [
+          "pro/api/data-contracts/**.md"          
+        ]
+      },        
       {
         "files": [
           "pro/reports/**.md",
