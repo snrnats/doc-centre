@@ -65,19 +65,25 @@ Returned when the label has been located and returned successfully.
 
 # [400](#tab/get-labels-400)
 
-`api_error` - Returned when the request is not valid. This could be, for example, an invalid `{format}` or `{dpi}` route parameter.
+#### API Error 
+
+Returned when the request is not valid. This could be, for example, an invalid `{format}` or `{dpi}` route parameter.
 
 [!include[_api_error](includes/_api_error.md)]
 
 # [403](#tab/get-labels-403)
 
-`api_error` - Returned when your account does not have permission to use this API endpoint.
+#### API Error 
+
+Returned when your account does not have permission to use this API endpoint.
 
 [!include[_api_error](includes/_api_error.md)]
 
 # [404](#tab/get-labels-404)
 
-`api_error` - Returned when a `shipment` with the provided reference is not found. This can occur when the reference is valid but your account does not have access to the `shipment`, or when the `shipment` does not exist at all.
+#### API Error
+
+Returned when a `shipment` with the provided reference is not found. This can occur when the reference is valid but your account does not have access to the `shipment`, or when the `shipment` does not exist at all.
 
 [!include[_api_error](includes/_api_error.md)]
 

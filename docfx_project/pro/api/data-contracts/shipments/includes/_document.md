@@ -6,8 +6,8 @@ This object represents a single document.
 | Property | Type | Description | Occurrence |
 | -------- | ---- | ----------- | :--------: |
 | `file` | `string` | The contents of the file encoded in base64 | `1` |
-| `content_type` | `string`| The format of the `document`, e.g. `application/pdf`. See [`content_type`](/pro/api/data-contracts/shipments/shipments-dc.html#content-type). | `1` |
-| `document_type` | `string` | The type of `document`. See [`document_type`](/pro/api/data-contracts/shipments/shipments-dc.html#document-type). | `1` |
+| `content_type` | `string`| The format of the `document`, e.g. `application/pdf`. See [`content_type`](../shipments-dc.html#content-type). | `1` |
+| `document_type` | `string` | The type of `document`. See [`document_type`](../shipments-dc.html#document-type). | `1` |
 | `dpi` | `integer` | The DPI of the `document`. | `1` |
 
 </div>
