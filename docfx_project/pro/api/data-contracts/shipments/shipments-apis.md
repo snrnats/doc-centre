@@ -11,7 +11,25 @@ created: 12/08/2020
 
 # Shipments
 
-Shipments
+## Get Shipments
+
+This endpoint is used to create new `shipments` within SortedPRO.
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Request Body
+
+[!include[_create_shipment_request](includes/_create_shipment_request.md)]
+
+### Response
+
+### More Information
 
 ---
 
@@ -47,7 +65,7 @@ This endpoint is used to retrieve the labels for a `shipment`. The endpoint supp
 
 ### Request
 
-| Endpoint | `/labels/{shipment_reference}/{format}` |
+| Endpoint | `GET /labels/{shipment_reference}/{format}` |
 |---|---|
 | Parameter: `{shipment_reference}` |  The unique reference of the shipment to retrieve labels for. |
 | Parameter: `{format}` |  The label file format required. <br/> **Supported Values:** `ZPL`, `ZPLII`, `PDF` |
