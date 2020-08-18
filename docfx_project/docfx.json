@@ -20,7 +20,7 @@
       },
       {
         "files": [
-          "pro/api/data-contracts/**.md"          
+          "pro/api/data-contracts/**"          
         ]
       },        
       {

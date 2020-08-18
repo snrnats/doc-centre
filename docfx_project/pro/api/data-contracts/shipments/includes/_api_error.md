@@ -6,10 +6,10 @@ This object is returned by Sorted whenever an error occurs during a request. Err
 | Property | Type | Description | Occurrence |
 | -------- | ---- | ----------- | :--------: |
 | `correlation_id` | `string` | A unique reference for this error. Customers can use this when reporting errors to Sorted, if applicable | `1` |
-| `code` | `string` | A pre-defined code for this error. See [API Error Codes](../error-codes.md). | `1` |
+| `code` | `string` | A pre-defined code for this error. See [API Error Codes](/pro/api/data-contracts/shipments/error-codes.md). | `1` |
 | `message` | `string` | A plain text summary of the error. | `1` |
-| `details` | List of [`api_error_message`](#api-error-message) | A collection of `api_error_messages` which provide further details of the error(s) if applicable. | `0..n` |
-| `_links` | List of [`link`](#link) | Provides `links` to further relevant information of operations, if applicable. | `0..n` |
+| `details` | List of [`api_error_message`](/pro/api/data-contracts/shipments/shipments-dc.html#api-error-message) | A collection of `api_error_messages` which provide further details of the error(s) if applicable. | `0..n` |
+| `_links` | List of [`link`](/pro/api/data-contracts/shipments/shipments-dc.html#link) | Provides `links` to further relevant information of operations, if applicable. | `0..n` |
 
 </div>
 <div class="dc-column">

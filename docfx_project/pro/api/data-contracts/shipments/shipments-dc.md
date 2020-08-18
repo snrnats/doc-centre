@@ -1,5 +1,5 @@
 ---
-uid: pro-api-data-contracts-shipments-shipments-dc
+uid: pro-api-data-contracts-shipments-dc
 title: Shipments Data Contracts
 tags: shipments,pro,api,reference,data-contract
 contributors: andy.walton@sorted.com,michael.rose@sorted.com

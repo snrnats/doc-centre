@@ -47,45 +47,45 @@ This endpoint is used to retrieve the labels for a `shipment`. The endpoint supp
 
 ### Request
 
-| Endpoint | `/labels/{shipment_reference}/{format}(/{dpi})` |
+| Endpoint | `/labels/{shipment_reference}/{format}` |
 |---|---|
-| Parameters | `{format}` - words words words words words words words words words words words words <br /> `{dpi}` - words words words words words words words words words words words words |
-| Query Strings | None |
+| Parameter: `{shipment_reference}` |  The unique reference of the shipment to retrieve labels for. |
+| Parameter: `{format}` |  The label file format required. <br/> **Supported Values:** `ZPL`, `ZPLII`, `PDF` |
+| Query String: `?dpi={int}` |  The label resolution required. <br/> **Supported Values:** `203`, `300`, `600` | 
+| Query String: `?include_extension={bool}` |  Specifies whether PRO should return custom label extensions. 
 | ATU Score | 1.0 |
 
 ### Responses
 
-# [200](#tab/get-labels-200)
-
-#### Document
+# [200 - Document](#tab/get-labels-200)
 
 Returned when the label has been located and returned successfully.
 
 [!include[_document](includes/_document.md)]
 
-# [400](#tab/get-labels-400)
+# [400 - API Error](#tab/get-labels-400)
 
-#### API Error 
-
-Returned when the request is not valid. This could be, for example, an invalid `{format}` or `{dpi}` route parameter.
+Returned when the request is not valid. This could be, for example, an invalid route parameter.
 
 [!include[_api_error](includes/_api_error.md)]
 
-# [403](#tab/get-labels-403)
-
-#### API Error 
+# [403 - API Error](#tab/get-labels-403)
 
 Returned when your account does not have permission to use this API endpoint.
 
 [!include[_api_error](includes/_api_error.md)]
 
-# [404](#tab/get-labels-404)
-
-#### API Error
+# [404 - API Error](#tab/get-labels-404)
 
 Returned when a `shipment` with the provided reference is not found. This can occur when the reference is valid but your account does not have access to the `shipment`, or when the `shipment` does not exist at all.
 
 [!include[_api_error](includes/_api_error.md)]
+
+---
+
+### More Information
+
+For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Labels](/pro/api/shipments/getting_shipment_labels.html) page of the API User Guide. 
 
 ## Get Contents Label
 
