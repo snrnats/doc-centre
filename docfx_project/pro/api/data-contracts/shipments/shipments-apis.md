@@ -29,6 +29,26 @@ This endpoint is used to create new `shipments` within SortedPRO.
 
 ### Response
 
+# [201 - Resource Result](#tab/create-shipment-201)
+
+Returned when the shipment is created successfully. Provides details of the created resource including the new unique shipment reference and _links to the shipment and related resources.
+
+[!include[_resource_result](includes/_resource_result.md)]
+
+# [400 - API Error](#tab/create-shipment-400)
+
+Returned when the request is not valid. This includes malformed requests and requests that fail validation.
+
+[!include[_api_error](includes/_api_error.md)]
+
+# [403 - API Error](#tab/create-shipment-403)
+
+Returned when your account does not have permission to use this API endpoint.
+
+[!include[_api_error](includes/_api_error.md)]
+
+---
+
 ### More Information
 
 ---

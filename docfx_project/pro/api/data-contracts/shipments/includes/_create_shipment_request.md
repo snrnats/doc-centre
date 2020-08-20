@@ -1,23 +1,5 @@
 A `shipment` is a collection of one or more packages sent together from a single `origin` address to a single `destination` address. A `create_shipment_request` is used to create a new `shipment` or to create quotes for a `shipment` that does not yet exist in SortedPRO.
 
-| Property | Type | Description | Validation | Occurrence |
-| -------- | ---- | ----------- | ---------- | :--------: |
-| `custom_reference` | `string` | Custom reference provided by the customer | Optional. If provided, limited to 50 characters. | `0..1` |
-| `required_delivery_date` | [`date_range`](#date-range) | A date range used to specify the required delivery date | Optional. | `0..1` |
-| `required_shipping_date` | [`date_range`](#date-range) | A date range used to specify the required shipping date | Optional. | `0..1` |
-| `tags` | List of `string` | Custom `tags` to apply to the shipment. | Optional. If provided, each `tag` is limited to 50 characters and there is a limit of 10 `tags` per `shipment`. | `0..10` |
-| `order_date` | `ISO8601 DateTime` | The date that the items in the `shipment` were ordered. This can be used to track `shipments` vs. order dates in customers' own systems. | Optional. If provided, must be a valid ISO8601 date time including offset. Sorted will not validate the logic of the date compared to other relevant dates. | `0..1` |
-| `metadata` | List of [`metadata`](#metadata) | Additional properties to apply to a `shipment`. Additional functionality can be linked to properties specified in `metadata`. | Optional. A maximum of 10 `metadata` values can be provided per `shipment`. | `0..10` |
-| `customs_documentation` | [`customs_documentation`](#customs-documentation) | Properties used to generate customs document(s) for this `shipment`. | Optional. | `0..1` |
-| `direction` | [`direction`](#direction) | Indicates the `direction` of the `shipment`. | Optional. Will default to `outbound` if not specified. | `0..1` |
-| `shipment_type` | [`shipment_type`](#shipment-type) | Indicates the type of `shipment`. | Required. See [`shipment_type`](#shipment-type) | `1` |
-| `contents` | List of [`shipment_contents`](#shipment-contents) | The contents of the `shipment`. | At least one `shipment_contents` required. | `1..n` |
-| `addresses` | List of [`address`](#address) | The addresses for this `shipment`. | Required. Must contain at least an `origin` and `destination` address. | `2..n` |
-| `label_properties` | List of [`label_property`](#label-property) | Values to be used in the generation or decoration of labels. | Optional. | `0..10` |
-| `source` | `string` | Indicates the source of the `shipment`. | Optional. If not provided, will default to `api`. If provided, maximum length is 50 characters. | `0..1` |
-| `tenant` | `string` | Indicates the tenant that the `shipment` belongs to | Optional. If provided, must be a valid pre-existing `tenant` reference for the customer | `0..1` |
-| `channel` | `string` | Indicates the channel for the `shipment`. | Optional. If provided, must be a valid pre-existing `channel` for the provided `tenant`. Must **only** be provided when `tenant` is provided. | `0..1` |
-
 <div class="dc-row">
     <div class="dc-column">
     <h4>Properties</h4>
@@ -99,210 +81,252 @@ Customs docs info
             </div>
         </div> 
         <div class="property">
-            <div class="name"><code></code></div>
-            <div class="type"></div>
-            <div class="occurs"></div>
-            <div class="description"></div>
-            <div class="validation"></div>
-        </div>
-                <div class="property">
-            <div class="name"><code></code></div>
-            <div class="type"></div>
-            <div class="occurs"></div>
-            <div class="description"></div>
-            <div class="validation"></div>
-        </div> 
-                <div class="property">
-            <div class="name"><code></code></div>
-            <div class="type"></div>
-            <div class="occurs"></div>
-            <div class="description"></div>
-            <div class="validation"></div>
-        </div> 
-                <div class="property">
-            <div class="name"><code></code></div>
-            <div class="type"></div>
-            <div class="occurs"></div>
-            <div class="description"></div>
-            <div class="validation"></div>
-        </div> 
-                <div class="property">
-            <div class="name"><code></code></div>
-            <div class="type"></div>
-            <div class="occurs"></div>
-            <div class="description"></div>
-            <div class="validation"></div>
-        </div> 
-                <div class="property">
-            <div class="name"><code></code></div>
-            <div class="type"></div>
-            <div class="occurs"></div>
-            <div class="description"></div>
-            <div class="validation"></div>
-        </div> 
-                <div class="property">
-            <div class="name"><code></code></div>
-            <div class="type"></div>
-            <div class="occurs"></div>
-            <div class="description"></div>
-            <div class="validation"></div>
-        </div>                 
-    </div>
-    <div class="dc-column">
-    <h4>Example</h4>
+            <div class="name"><code>direction</code></div>
+            <div class="type">direction</div>
+            <div class="occurs">0..1</div>
+            <div class="description">Indicates the `direction` of the `shipment`</div>
+            <div class="validation">Optional. Will default to `outbound` if not specified</div>
+            <div class="dropdown">            
+                <button onclick="dropFunction('csr_directionChild')" class="dropbtn">Show child properties</button>
+                <div id="csr_directionChild" class="dropdown-content">
 
-    ```json
-    {
-        "custom_reference": "0af07451-cf80-43cb-af24-acdfdbd41a14",
-        "required_delivery_date": {
-            "start": "2019-04-27T07:00:00+01:00",
-            "end": "2019-04-28T12:00:00+01:00"
+Direction info
+</div>           
+            </div>            
+        </div>
+        <div class="property">
+            <div class="name"><code>shipment_type</code></div>
+            <div class="type">shipment_type</div>
+            <div class="occurs">1</div>
+            <div class="description">Indicates the type of `shipment`</div>
+            <div class="validation">Required</div>
+            <div class="dropdown">            
+                <button onclick="dropFunction('csr_shipmentTypeChild')" class="dropbtn">Show child properties</button>
+                <div id="csr_shipmentTypeChild" class="dropdown-content">
+
+Shipment type info
+</div>           
+            </div>             
+        </div> 
+        <div class="property">
+            <div class="name"><code>contents</code></div>
+            <div class="type">List of shipment contents</div>
+            <div class="occurs">1..n</div>
+            <div class="description">The contents of the `shipment`</div>
+            <div class="validation">At least one `shipment_contents` required</div>
+            <div class="dropdown">            
+                <button onclick="dropFunction('csr_contentsChild')" class="dropbtn">Show child properties</button>
+                <div id="csr_contentsChild" class="dropdown-content">
+
+Contents info
+</div>           
+            </div>               
+        </div> 
+        <div class="property">
+            <div class="name"><code>addresses</code></div>
+            <div class="type">List of address objects</div>
+            <div class="occurs">2..n</div>
+            <div class="description">The addresses for this `shipment`</div>
+            <div class="validation">Required. Must contain at least an `origin` and `destination` address</div>
+            <div class="dropdown">            
+                <button onclick="dropFunction('csr_addressChild')" class="dropbtn">Show child properties</button>
+                <div id="csr_addressChild" class="dropdown-content">
+
+Address info
+</div>           
+            </div>              
+        </div> 
+        <div class="property">
+            <div class="name"><code>label_properties</code></div>
+            <div class="type">List of label_property</div>
+            <div class="occurs">0..10</div>
+            <div class="description">Values to be used in the generation or decoration of labels</div>
+            <div class="validation">Optional</div>
+            <div class="dropdown">            
+                <button onclick="dropFunction('csr_labelPropertiesChild')" class="dropbtn">Show child properties</button>
+                <div id="csr_labelPropertiesChild" class="dropdown-content">
+
+Label property info
+</div>           
+            </div>              
+        </div> 
+        <div class="property">
+            <div class="name"><code>source</code></div>
+            <div class="type">string</div>
+            <div class="occurs">0..1</div>            
+            <div class="description"> Indicates the source of the `shipment`</div>
+            <div class="validation">Optional. If not provided, will default to `api`. If provided, maximum length is 50 characters</div>
+        </div> 
+        <div class="property">
+            <div class="name"><code>tenant</code></div>
+            <div class="type">string</div>
+            <div class="occurs">0..1</div>            
+            <div class="description">Indicates the tenant that the `shipment` belongs to</div>
+            <div class="validation">Optional. If provided, must be a valid pre-existing `tenant` reference for the customer</div>
+        </div>
+        <div class="property">
+            <div class="name"><code>channel</code></div>
+            <div class="type">string</div>
+            <div class="occurs">0..1</div>
+            <div class="description">Indicates the channel for the `shipment`</div>
+            <div class="validation">Optional. If provided, must be a valid pre-existing `channel` for the provided `tenant`. Must **only** be provided when `tenant` is provided</div>
+        </div>                         
+    </div>
+<div class="dc-column">
+<h4>Example</h4>
+
+```json
+{
+    "custom_reference": "0af07451-cf80-43cb-af24-acdfdbd41a14",
+    "required_delivery_date": {
+        "start": "2019-04-27T07:00:00+01:00",
+        "end": "2019-04-28T12:00:00+01:00"
+    },
+    "required_shipping_date": {
+        "start": "2019-04-26T00:00:00+01:00",
+        "end": "2019-04-26T23:59:59+01:00"
+    },
+    "tags": [
+        "b&w",
+        "T2"
+    ],
+    "order_date": "2019-04-05T09:34:55+01:00",
+    "metadata": [
+        {
+            "key": "warehouse_id",
+            "value": "WHF-0098762345D",
+            "type": "string"
         },
-        "required_shipping_date": {
-            "start": "2019-04-26T00:00:00+01:00",
-            "end": "2019-04-26T23:59:59+01:00"
-        },
-        "tags": [
-            "b&w",
-            "T2"
+        {
+            "key": "refundable",
+            "value": "false",
+            "type": "boolean"
+        }
+    ],
+    "customs_documentation": {
+        "designated_person_responsible": "John McBride",
+        "importers_vat_number": "0234555",
+        "category_type": "gift",
+        "shippers_customs_reference": "CREF0001",
+        "importers_tax_code": "TC001",
+        "importers_telephone": "+441772611444",
+        "importers_fax": null,
+        "importers_email": "jmcb@tilda.net",
+        "cn23_comments": "Some comments here",
+        "attached_invoice_references": [
+            "63bc2ad5-dbff-4d30-a9b2-8081607d9921"
         ],
-        "order_date": "2019-04-05T09:34:55+01:00",
-        "metadata": [
-            {
-                "key": "warehouse_id",
-                "value": "WHF-0098762345D",
-                "type": "string"
+        "attached_certificate_references": [
+            "bbc0eaa5-1a1d-4b56-b33a-a360680c1270"
+        ],
+        "attached_licence_references": [
+            "0e5084d6-6509-4ff3-9771-66e63f452eb9"
+        ],
+        "category_type_explanation": "Free text",
+        "declaration_date": "2019-04-26T14:57:54+01:00",
+        "reason_for_export": "sale",
+        "shipping_terms": "fca",
+        "shippers_vat_number": "98798273434",
+        "receivers_tax_code": "TC8793847",
+        "receivers_vat_number": "9879879878675",
+        "invoice_date": "2019-04-26T15:01:45+01:00"
+    },
+    "direction": "outbound",
+    "shipment_type": "on_demand",
+    "contents": [
+        {
+            "custom_reference": "b9fa91b0-0dd0-4dd5-986f-363fa8cb2386",
+            "package_size_reference": null,
+            "weight": {
+                "value": 2.40,
+                "unit": "Kg"
             },
-            {
-                "key": "refundable",
-                "value": "false",
-                "type": "boolean"
-            }
-        ],
-        "customs_documentation": {
-            "designated_person_responsible": "John McBride",
-            "importers_vat_number": "0234555",
-            "category_type": "gift",
-            "shippers_customs_reference": "CREF0001",
-            "importers_tax_code": "TC001",
-            "importers_telephone": "+441772611444",
-            "importers_fax": null,
-            "importers_email": "jmcb@tilda.net",
-            "cn23_comments": "Some comments here",
-            "attached_invoice_references": [
-                "63bc2ad5-dbff-4d30-a9b2-8081607d9921"
-            ],
-            "attached_certificate_references": [
-                "bbc0eaa5-1a1d-4b56-b33a-a360680c1270"
-            ],
-            "attached_licence_references": [
-                "0e5084d6-6509-4ff3-9771-66e63f452eb9"
-            ],
-            "category_type_explanation": "Free text",
-            "declaration_date": "2019-04-26T14:57:54+01:00",
-            "reason_for_export": "sale",
-            "shipping_terms": "fca",
-            "shippers_vat_number": "98798273434",
-            "receivers_tax_code": "TC8793847",
-            "receivers_vat_number": "9879879878675",
-            "invoice_date": "2019-04-26T15:01:45+01:00"
-        },
-        "direction": "outbound",
-        "shipment_type": "on_demand",
-        "contents": [
-            {
-                "custom_reference": "b9fa91b0-0dd0-4dd5-986f-363fa8cb2386",
-                "package_size_reference": null,
-                "weight": {
-                    "value": 2.40,
-                    "unit": "Kg"
-                },
-                "dimensions": {
-                    "unit": "Cm",
-                    "width": 15.0,
-                    "height": 15.5,
-                    "length": 20.0
-                },
-                "description": "Jeans",
-                "value": {
-                    "amount": 8.99,
-                    "currency": "GBP"
-                },
-                "sku": "SKU09876",
-                "model": "MOD-009",
-                "country_of_origin": "PO",
-                "harmonisation_code": "09.02.10",
-                "quantity": 2,
-                "unit": "Box",
-                "dangerous_goods": {
-                    "hazard_classes": [
-                        { "code": "2.1" }
-                    ],
-                    "packing_group": "iii",
-                    "id_number": "UN2202",
-                    "proper_shipping_name": "Hydrogen selenide, anhydrous",
-                    "technical_name": null,
-                    "physical_form": "gas",
-                    "radioactivity": "surface_reading",
-                    "accessibility": "accessible",
-                    "custom_label_text": null
-                },
-                "metadata": [
-                    {
-                        "key": "Category",
-                        "value": "Menswear",
-                        "type": "string"
-                    }
+            "dimensions": {
+                "unit": "Cm",
+                "width": 15.0,
+                "height": 15.5,
+                "length": 20.0
+            },
+            "description": "Jeans",
+            "value": {
+                "amount": 8.99,
+                "currency": "GBP"
+            },
+            "sku": "SKU09876",
+            "model": "MOD-009",
+            "country_of_origin": "PO",
+            "harmonisation_code": "09.02.10",
+            "quantity": 2,
+            "unit": "Box",
+            "dangerous_goods": {
+                "hazard_classes": [
+                    { "code": "2.1" }
                 ],
-                "label_properties": null,
-                "Contents": null
-            }
-        ],
-        "addresses": [
-            {
-                "address_type": "origin",
-                "shipping_location_reference": "SLOC001"
+                "packing_group": "iii",
+                "id_number": "UN2202",
+                "proper_shipping_name": "Hydrogen selenide, anhydrous",
+                "technical_name": null,
+                "physical_form": "gas",
+                "radioactivity": "surface_reading",
+                "accessibility": "accessible",
+                "custom_label_text": null
             },
-            {
-                "address_type": "destination",
-                "shipping_location_reference": null,
-                "custom_reference": "21bbd58a-6dec-4097-9106-17501ddca38d",
-                "contact": {
-                    "reference": "co_9953035290535460865000098664453",
-                    "title": "Mr",
-                    "first_name": "Steve",
-                    "last_name": "Kingston",
-                    "middle_name": null,
-                    "position": null,
-                    "contact_details": {
-                        "landline": null,
-                        "mobile": "+447495747987",
-                        "email": "steve@kingston.com"
-                    }
-                },
-                "company_name": null,
-                "property_number": "8",
-                "property_name": null,
-                "address_line_1": "Norbert Road",
-                "address_line_2": "Bertwistle",
-                "address_line_3": null,
-                "locality": "Preston",
-                "region": "Lancashire",
-                "postal_code": "PR4 5LE",
-                "country_iso_code": "GB",
-                "lat_long": null
-            }
-        ],
-        "label_properties": [
-            {
-                "key": "chute",
-                "value": "9D"
-            }
-        ],
-        "source": "WMS",
-        "tenant": "TENANT_001",
-        "channel": "CHAN_003"
-    }
-    ```
+            "metadata": [
+                {
+                    "key": "Category",
+                    "value": "Menswear",
+                    "type": "string"
+                }
+            ],
+            "label_properties": null,
+            "Contents": null
+        }
+    ],
+    "addresses": [
+        {
+            "address_type": "origin",
+            "shipping_location_reference": "SLOC001"
+        },
+        {
+            "address_type": "destination",
+            "shipping_location_reference": null,
+            "custom_reference": "21bbd58a-6dec-4097-9106-17501ddca38d",
+            "contact": {
+                "reference": "co_9953035290535460865000098664453",
+                "title": "Mr",
+                "first_name": "Steve",
+                "last_name": "Kingston",
+                "middle_name": null,
+                "position": null,
+                "contact_details": {
+                    "landline": null,
+                    "mobile": "+447495747987",
+                    "email": "steve@kingston.com"
+                }
+            },
+            "company_name": null,
+            "property_number": "8",
+            "property_name": null,
+            "address_line_1": "Norbert Road",
+            "address_line_2": "Bertwistle",
+            "address_line_3": null,
+            "locality": "Preston",
+            "region": "Lancashire",
+            "postal_code": "PR4 5LE",
+            "country_iso_code": "GB",
+            "lat_long": null
+        }
+    ],
+    "label_properties": [
+        {
+            "key": "chute",
+            "value": "9D"
+        }
+    ],
+    "source": "WMS",
+    "tenant": "TENANT_001",
+    "channel": "CHAN_003"
+}
+```
 </div>
 </div>

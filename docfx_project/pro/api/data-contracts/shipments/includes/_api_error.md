@@ -1,18 +1,56 @@
 This object is returned by Sorted whenever an error occurs during a request. Errors can have many causes, such as badly-formed requests, incorrect permissions, or unforeseen issues during request processing.
 
 <div class="dc-row">
-<div class="dc-column">
+    <div class="dc-column">
+        <h4>Properties</h4>
+        <div class="property">
+            <div class="name"><code>correlation_id</code></div>
+            <div class="type">string</div>
+            <div class="occurs">1</div>
+            <div class="description">A unique reference for this error. Customers can use this when reporting errors to Sorted, if applicable	</div>
+        </div>
+        <div class="property">
+            <div class="name"><code>code</code></div>
+            <div class="type">string</div>
+            <div class="occurs">1</div>
+            <div class="description">A pre-defined code for this error</div>
+        </div>
+        <div class="property">
+            <div class="name"><code>message</code></div>
+            <div class="type">string</div>
+            <div class="occurs">1</div>
+            <div class="description">A plain text summary of the error</div>
+        </div>
+        <div class="property">
+            <div class="name"><code>details</code></div>
+            <div class="type">List of api_error_message</div>
+            <div class="occurs">0..n</div>
+            <div class="description">Provides further details of the error(s) if applicable.</div>
+            <div class="dropdown">
+                <button onclick="dropFunction('apiError_propertyChild')" class="dropbtn">Show child properties</button>
+                <div id="apiError_propertyChild" class="dropdown-content">
 
-| Property | Type | Description | Occurrence |
-| -------- | ---- | ----------- | :--------: |
-| `correlation_id` | `string` | A unique reference for this error. Customers can use this when reporting errors to Sorted, if applicable | `1` |
-| `code` | `string` | A pre-defined code for this error. See [API Error Codes](/pro/api/data-contracts/shipments/error-codes.md). | `1` |
-| `message` | `string` | A plain text summary of the error. | `1` |
-| `details` | List of [`api_error_message`](/pro/api/data-contracts/shipments/shipments-dc.html#api-error-message) | A collection of `api_error_messages` which provide further details of the error(s) if applicable. | `0..n` |
-| `_links` | List of [`link`](/pro/api/data-contracts/shipments/shipments-dc.html#link) | Provides `links` to further relevant information of operations, if applicable. | `0..n` |
-
+[!include[_api_error_message](_api_error_message.md)]
 </div>
+            </div>            
+        </div>
+        <div class="property">
+            <div class="name"><code>links</code></div>
+            <div class="type">List of link</div>
+            <div class="occurs">0..n</div>
+            <div class="description">Provides links to further relevant information of operations, if applicable.</div>
+            <div class="dropdown">
+                <button onclick="dropFunction('apiError_linksChild')" class="dropbtn">Show child properties</button>
+                <div id="apiError_linksChild" class="dropdown-content">
+
+[!include[_links](_links.md)]
+</div>
+            </div>            
+        </div>                                
+    </div>      
+
 <div class="dc-column">
+<h4>Example</h4>
 
 ```json
 {

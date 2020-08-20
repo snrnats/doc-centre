@@ -2,16 +2,48 @@ This object represents a single document.
 
 <div class="dc-row">
 <div class="dc-column">
+        <h4>Properties</h4>
+        <div class="property">
+            <div class="name"><code>file</code></div>
+            <div class="type">string</div>
+            <div class="occurs">1</div>
+            <div class="description">The contents of the file encoded in base64</div>
+        </div>
+        <div class="property">
+            <div class="name"><code>content_type</code></div>
+            <div class="type">string</div>
+            <div class="occurs">1</div>
+            <div class="description">The format of the `document`, e.g. `application/pdf`</div>
+            <div class="dropdown">
+                <button onclick="dropFunction('document_contentTypeChild')" class="dropbtn">Show values</button>
+                <div id="document_contentTypeChild" class="dropdown-content">
 
-| Property | Type | Description | Occurrence |
-| -------- | ---- | ----------- | :--------: |
-| `file` | `string` | The contents of the file encoded in base64 | `1` |
-| `content_type` | `string`| The format of the `document`, e.g. `application/pdf`. See [`content_type`](/pro/api/data-contracts/shipments/shipments-dc.html#content-type). | `1` |
-| `document_type` | `string` | The type of `document`. See [`document_type`](/pro/api/data-contracts/shipments/shipments-dc.html#document-type). | `1` |
-| `dpi` | `integer` | The DPI of the `document`. | `1` |
-
+[!include[_content_type](_content_type.md)]
 </div>
+            </div>              
+        </div>
+        <div class="property">
+            <div class="name"><code>document_type</code></div>
+            <div class="type">string</div>
+            <div class="occurs">1</div>
+            <div class="description">The type of `document`</div>
+            <div class="dropdown">
+                <button onclick="dropFunction('document_documentTypeChild')" class="dropbtn">Show values</button>
+                <div id="document_documentTypeChild" class="dropdown-content">
+
+[!include[_document_type](_document_type.md)]
+</div>
+            </div>              
+        </div>
+        <div class="property">
+            <div class="name"><code>dpi</code></div>
+            <div class="type">integer</div>
+            <div class="occurs">1</div>
+            <div class="description">The DPI of the `document`</div>          
+        </div>
+    </div>
 <div class="dc-column">
+<h4>Example</h4>
 
 ```json
 {
@@ -25,6 +57,3 @@ This object represents a single document.
 
 </div>
 </div>
-
-> [!WARNING]
-> All documents are provided in base64 encoding and will need to be decoded before being saved to disk or printed.
