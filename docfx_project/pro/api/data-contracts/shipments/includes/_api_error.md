@@ -26,8 +26,8 @@ This object is returned by Sorted whenever an error occurs during a request. Err
             <div class="type">List of api_error_message</div>
             <div class="occurs">0..n</div>
             <div class="description">Provides further details of the error(s) if applicable.</div>
-            <div class="dropdown">
-                <button onclick="dropFunction('apiError_propertyChild')" class="dropbtn">Show child properties</button>
+            <div class="dropbtn" onclick="dropFunction(this)">Show child properties
+                <!--<button onclick="dropFunction(this)" class="dropbtn">Show child properties</button>-->
                 <div id="apiError_propertyChild" class="dropdown-content">
 
 [!include[_api_error_message](_api_error_message.md)]

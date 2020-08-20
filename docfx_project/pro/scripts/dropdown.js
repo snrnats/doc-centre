@@ -1,5 +1,5 @@
-function dropFunction(id) {
-    document.getElementById(id).classList.toggle("show");
+function dropFunction(a) {
+  a.parentNode.getElementsByClassName('dropdown-content')[0].classList.toggle("show");
 }
 
 // Close the dropdown menu if the user clicks outside of it
