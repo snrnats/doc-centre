@@ -1905,12 +1905,16 @@ span.fa-li .fa, span.fa-li .fas, span.fa-li .far {
 
 .dc-column {
     float: left;
-    width: 50%;
+    width: 49%;
+}
+
+.dc-column:nth-child(even) {
+    margin-left: 2%;
 }
 
 div.property {
     width: 100%;
-    padding: 10px 5px;
+    padding: 10px;
 
 }
 
@@ -1918,14 +1922,28 @@ div.dc-column div.property:nth-child(odd) {
     background: var(--table-row-alt);
 }
 
-div.property div.name, div.property div.type, div.property div.occurs {
+div.property div.name, div.property div.type {
     float: left;
-    width: 33%;
+    width: 45%;
+    margin-bottom: 5px;
+}
+
+div.property div.occurs {
+    float: left;
+    width: 10%;
+    margin-bottom: 5px;      
 }
 
 div.property div.validation, div.property div.description {
     width: 100%;
     clear:left;
+    margin-bottom: 5px;    
+}
+
+div.type {
+    color: var(--colour-main);
+    font-size: 10pt;
+    font-style: italic;
 }
 
 /* Dropdown Button */
@@ -1950,6 +1968,7 @@ div.property div.validation, div.property div.description {
     position: relative;
     display: inline-block;
     width: 100%;
+    color: var(--colour-main);
   }
   
   /* Dropdown Content (Hidden by Default) */
@@ -1958,6 +1977,8 @@ div.property div.validation, div.property div.description {
     z-index: 1;
     border: solid 2px var(--colour-tab-border);
     margin-left: 10px;
+    color: var(--colour-dark);   
+
   }
   
   /* Change color of dropdown links on hover */
