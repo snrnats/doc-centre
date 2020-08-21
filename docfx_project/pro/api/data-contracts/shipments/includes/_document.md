@@ -14,9 +14,8 @@ This object represents a single document.
             <div class="type">string</div>
             <div class="occurs">1</div>
             <div class="description">The format of the `document`, e.g. `application/pdf`</div>
-            <div class="dropdown">
-                <button onclick="dropFunction('document_contentTypeChild')" class="dropbtn">Show values</button>
-                <div id="document_contentTypeChild" class="dropdown-content">
+            <div class="dropdown" onclick="dropFunction(this)">Show child properties
+                <div class="dropdown-content">
 
 [!include[_content_type](_content_type.md)]
 </div>
@@ -27,9 +26,8 @@ This object represents a single document.
             <div class="type">string</div>
             <div class="occurs">1</div>
             <div class="description">The type of `document`</div>
-            <div class="dropdown">
-                <button onclick="dropFunction('document_documentTypeChild')" class="dropbtn">Show values</button>
-                <div id="document_documentTypeChild" class="dropdown-content">
+            <div class="dropdown" onclick="dropFunction(this)">Show child properties
+                <div class="dropdown-content">
 
 [!include[_document_type](_document_type.md)]
 </div>

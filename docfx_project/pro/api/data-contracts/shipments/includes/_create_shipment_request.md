@@ -16,9 +16,8 @@ A `shipment` is a collection of one or more packages sent together from a single
             <div class="occurs">0..1</div>
             <div class="description">A date range used to specify the required delivery date</div>
             <div class="validation">Optional</div>
-            <div class="dropdown">
-                <button onclick="dropFunction('csr_requiredDeliveryDateChild')" class="dropbtn">Show child properties</button>
-                <div id="csr_requiredDeliveryDateChild" class="dropdown-content">
+            <div class="dropdown" onclick="dropFunction(this)">Show child properties
+                <div class="dropdown-content">
 
 [!include[_date_range](_date_range.md)]
 </div>
@@ -30,9 +29,8 @@ A `shipment` is a collection of one or more packages sent together from a single
             <div class="occurs">0..1</div>
             <div class="description">A date range used to specify the required shipping date</div>
             <div class="validation">Optional</div>
-            <div class="dropdown">
-                <button onclick="dropFunction('csr_requiredShippingDateChild')" class="dropbtn">Show child properties</button>
-                <div id="csr_requiredShippingDateChild" class="dropdown-content">
+            <div class="dropdown" onclick="dropFunction(this)">Show child properties
+                <div class="dropdown-content">
 
 [!include[_date_range](_date_range.md)]
 </div>
@@ -58,11 +56,10 @@ A `shipment` is a collection of one or more packages sent together from a single
             <div class="occurs">0..10</div>
             <div class="description">Additional properties to apply to a `shipment`. Additional functionality can be linked to properties specified in `metadata`</div>
             <div class="validation">Optional. A maximum of 10 `metadata` values can be provided per `shipment</div>
-            <div class="dropdown">            
-                <button onclick="dropFunction('csr_metadataChild')" class="dropbtn">Show child properties</button>
-                <div id="csr_metadataChild" class="dropdown-content">
+            <div class="dropdown" onclick="dropFunction(this)">Show child properties
+                <div class="dropdown-content">
 
-Metadata info
+[!include[_metadata](_metadata.md)]
 </div>
             </div>               
         </div> 
@@ -72,11 +69,10 @@ Metadata info
             <div class="occurs">0..1</div>
             <div class="description">Properties used to generate customs document(s) for this `shipment`</div>
             <div class="validation">Optional</div>
-            <div class="dropdown">            
-                <button onclick="dropFunction('csr_customsDocsChild')" class="dropbtn">Show child properties</button>
-                <div id="csr_customsDocsChild" class="dropdown-content">
+            <div class="dropdown" onclick="dropFunction(this)">Show child properties
+                <div class="dropdown-content">
 
-Customs docs info
+[!include[_customs_documentation](_customs_documentation.md)]
 </div>           
             </div>
         </div> 
@@ -86,11 +82,10 @@ Customs docs info
             <div class="occurs">0..1</div>
             <div class="description">Indicates the `direction` of the `shipment`</div>
             <div class="validation">Optional. Will default to `outbound` if not specified</div>
-            <div class="dropdown">            
-                <button onclick="dropFunction('csr_directionChild')" class="dropbtn">Show child properties</button>
-                <div id="csr_directionChild" class="dropdown-content">
+            <div class="dropdown" onclick="dropFunction(this)">Show child properties
+                <div class="dropdown-content">
 
-Direction info
+[!include[_direction](_direction.md)]
 </div>           
             </div>            
         </div>
@@ -100,11 +95,10 @@ Direction info
             <div class="occurs">1</div>
             <div class="description">Indicates the type of `shipment`</div>
             <div class="validation">Required</div>
-            <div class="dropdown">            
-                <button onclick="dropFunction('csr_shipmentTypeChild')" class="dropbtn">Show child properties</button>
-                <div id="csr_shipmentTypeChild" class="dropdown-content">
+            <div class="dropdown" onclick="dropFunction(this)">Show child properties
+                <div class="dropdown-content">
 
-Shipment type info
+[!include[_shipment_type](_shipment_type.md)]
 </div>           
             </div>             
         </div> 
@@ -114,11 +108,10 @@ Shipment type info
             <div class="occurs">1..n</div>
             <div class="description">The contents of the `shipment`</div>
             <div class="validation">At least one `shipment_contents` required</div>
-            <div class="dropdown">            
-                <button onclick="dropFunction('csr_contentsChild')" class="dropbtn">Show child properties</button>
-                <div id="csr_contentsChild" class="dropdown-content">
+            <div class="dropdown" onclick="dropFunction(this)">Show child properties
+                <div class="dropdown-content">
 
-Contents info
+[!include[_shipment_contents](_shipment_contents.md)]
 </div>           
             </div>               
         </div> 
@@ -128,11 +121,10 @@ Contents info
             <div class="occurs">2..n</div>
             <div class="description">The addresses for this `shipment`</div>
             <div class="validation">Required. Must contain at least an `origin` and `destination` address</div>
-            <div class="dropdown">            
-                <button onclick="dropFunction('csr_addressChild')" class="dropbtn">Show child properties</button>
-                <div id="csr_addressChild" class="dropdown-content">
+            <div class="dropdown" onclick="dropFunction(this)">Show child properties
+                <div class="dropdown-content">
 
-Address info
+[!include[_address](_address.md)]
 </div>           
             </div>              
         </div> 
@@ -142,11 +134,10 @@ Address info
             <div class="occurs">0..10</div>
             <div class="description">Values to be used in the generation or decoration of labels</div>
             <div class="validation">Optional</div>
-            <div class="dropdown">            
-                <button onclick="dropFunction('csr_labelPropertiesChild')" class="dropbtn">Show child properties</button>
-                <div id="csr_labelPropertiesChild" class="dropdown-content">
+            <div class="dropdown" onclick="dropFunction(this)">Show child properties
+                <div class="dropdown-content">
 
-Label property info
+[!include[_label_property](_label_property.md)]
 </div>           
             </div>              
         </div> 

@@ -29,9 +29,8 @@ A resource_result is generally returned for all successful requests to create or
             <div class="type">List of api_error_message</div>
             <div class="occurs">0..n</div>
             <div class="description">Any error(s) relating to the operation</div>
-            <div class="dropdown">
-                <button onclick="dropFunction('resourceResult_propertyChild')" class="dropbtn">Show child properties</button>
-                <div id="resourceResult_propertyChild" class="dropdown-content">
+            <div class="dropdown" onclick="dropFunction(this)">Show child properties
+                <div class="dropdown-content">
 
 [!include[_api_error_message](_api_error_message.md)]
 </div>
@@ -48,9 +47,8 @@ A resource_result is generally returned for all successful requests to create or
             <div class="type">List of link</div>
             <div class="occurs">1..n</div>
             <div class="description">Links to the current resource and any related resources, if applicable</div>
-            <div class="dropdown">
-                <button onclick="dropFunction('resourceResult_linksChild')" class="dropbtn">Show child properties</button>
-                <div id="resourceResult_linksChild" class="dropdown-content">
+            <div class="dropdown" onclick="dropFunction(this)">Show child properties
+                <div class="dropdown-content">
 
 [!include[_links](_links.md)]
 </div>
