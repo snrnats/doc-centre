@@ -21,7 +21,8 @@
     <div class="type">string</div>
     <div class="occurs">1</div>
     <div class="description">The type of resource that this link points to</div>
-    <div class="dropdown" onclick="dropFunction(this)">Show child properties
+    <div class="dropdown"> 
+        <button onclick="dropFunction(this)">Show child properties</button>
         <div class="dropdown-content">
 
 [!include[_resource_type](_resource_type.md)]

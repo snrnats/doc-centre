@@ -18,7 +18,8 @@
     <div class="occurs">1</div>
     <div class="description">The type of this metadata item.</div>
     <div class="validation">Optional. If not provided, will default to string</div>     
-    <div class="dropdown" onclick="dropFunction(this)">Show child properties
+    <div class="dropdown"> 
+        <button onclick="dropFunction(this)">Show child properties</button>
         <div class="dropdown-content">
 
 [!include[_metadata_type](_metadata_type.md)]

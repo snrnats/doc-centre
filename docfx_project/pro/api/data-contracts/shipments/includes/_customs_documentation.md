@@ -19,7 +19,8 @@
     <div class="occurs">1</div>
     <div class="description">Indicates the category of goods for customs purposes</div>
     <div class="validation">Required. Must be a valid category type</div>     
-    <div class="dropdown" onclick="dropFunction(this)">Show values
+    <div class="dropdown"> 
+        <button onclick="dropFunction(this)">Show values</button>
         <div class="dropdown-content">
 
 [!include[_category_type](_category_type.md)]

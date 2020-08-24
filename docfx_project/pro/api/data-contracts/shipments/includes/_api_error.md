@@ -26,7 +26,8 @@ This object is returned by Sorted whenever an error occurs during a request. Err
             <div class="type">List of api_error_message</div>
             <div class="occurs">0..n</div>
             <div class="description">Provides further details of the error(s) if applicable.</div>
-            <div class="dropdown" onclick="dropFunction(this)">Show child properties
+            <div class="dropdown"> 
+                <button onclick="dropFunction(this)">Show child properties</button>
                 <div class="dropdown-content">
 
 [!include[_api_error_message](_api_error_message.md)]
@@ -38,7 +39,8 @@ This object is returned by Sorted whenever an error occurs during a request. Err
             <div class="type">List of link</div>
             <div class="occurs">0..n</div>
             <div class="description">Provides links to further relevant information of operations, if applicable.</div>
-            <div class="dropdown" onclick="dropFunction(this)">Show child properties
+            <div class="dropdown"> 
+                <button onclick="dropFunction(this)">Show child properties</button>
                 <div class="dropdown-content">
 
 [!include[_links](_links.md)]

@@ -30,7 +30,8 @@ A `shipment` is a collection of one or more packages sent together from a single
             <div class="occurs">0..1</div>
             <div class="description">A date range used to specify the required shipping date</div>
             <div class="validation">Optional</div>
-            <div class="dropdown" onclick="dropFunction(this)">Show child properties
+            <div class="dropdown"> 
+                <button onclick="dropFunction(this)">Show child properties</button>
                 <div class="dropdown-content">
 
 [!include[_date_range](_date_range.md)]
@@ -57,7 +58,8 @@ A `shipment` is a collection of one or more packages sent together from a single
             <div class="occurs">0..10</div>
             <div class="description">Additional properties to apply to a `shipment`. Additional functionality can be linked to properties specified in `metadata`</div>
             <div class="validation">Optional. A maximum of 10 `metadata` values can be provided per `shipment</div>
-            <div class="dropdown" onclick="dropFunction(this)">Show child properties
+            <div class="dropdown"> 
+                <button onclick="dropFunction(this)">Show child properties</button>
                 <div class="dropdown-content">
 
 [!include[_metadata](_metadata.md)]
@@ -70,7 +72,8 @@ A `shipment` is a collection of one or more packages sent together from a single
             <div class="occurs">0..1</div>
             <div class="description">Properties used to generate customs document(s) for this `shipment`</div>
             <div class="validation">Optional</div>
-            <div class="dropdown" onclick="dropFunction(this)">Show child properties
+            <div class="dropdown"> 
+                <button onclick="dropFunction(this)">Show child properties</button>
                 <div class="dropdown-content">
 
 [!include[_customs_documentation](_customs_documentation.md)]
@@ -83,7 +86,8 @@ A `shipment` is a collection of one or more packages sent together from a single
             <div class="occurs">0..1</div>
             <div class="description">Indicates the `direction` of the `shipment`</div>
             <div class="validation">Optional. Will default to `outbound` if not specified</div>
-            <div class="dropdown" onclick="dropFunction(this)">Show child properties
+            <div class="dropdown"> 
+                <button onclick="dropFunction(this)">Show child properties</button>
                 <div class="dropdown-content">
 
 [!include[_direction](_direction.md)]
@@ -96,7 +100,8 @@ A `shipment` is a collection of one or more packages sent together from a single
             <div class="occurs">1</div>
             <div class="description">Indicates the type of `shipment`</div>
             <div class="validation">Required</div>
-            <div class="dropdown" onclick="dropFunction(this)">Show child properties
+            <div class="dropdown"> 
+                <button onclick="dropFunction(this)">Show child properties</button>
                 <div class="dropdown-content">
 
 [!include[_shipment_type](_shipment_type.md)]
@@ -109,7 +114,8 @@ A `shipment` is a collection of one or more packages sent together from a single
             <div class="occurs">1..n</div>
             <div class="description">The contents of the `shipment`</div>
             <div class="validation">At least one `shipment_contents` required</div>
-            <div class="dropdown" onclick="dropFunction(this)">Show child properties
+            <div class="dropdown"> 
+                <button onclick="dropFunction(this)">Show child properties</button>
                 <div class="dropdown-content">
 
 [!include[_shipment_contents](_shipment_contents.md)]
@@ -136,7 +142,8 @@ A `shipment` is a collection of one or more packages sent together from a single
             <div class="occurs">0..10</div>
             <div class="description">Values to be used in the generation or decoration of labels</div>
             <div class="validation">Optional</div>
-            <div class="dropdown" onclick="dropFunction(this)">Show child properties
+            <div class="dropdown"> 
+                <button onclick="dropFunction(this)">Show child properties</button>
                 <div class="dropdown-content">
 
 [!include[_label_property](_label_property.md)]

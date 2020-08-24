@@ -25,7 +25,8 @@
     <div class="occurs">0..1</div>
     <div class="description">The weight of the contents</div>
     <div class="validation">Required unless package_size_reference has been specified</div> 
-    <div class="dropdown" onclick="dropFunction(this)">Show child properties
+    <div class="dropdown"> 
+        <button onclick="dropFunction(this)">Show child properties</button>
         <div class="dropdown-content">
 
 [!include[_weight](_weight.md)]
@@ -38,7 +39,8 @@
     <div class="occurs">0..1</div>
     <div class="description">The dimensions of the package</div>
     <div class="validation">Required unless package_size_reference has been specified</div> 
-    <div class="dropdown" onclick="dropFunction(this)">Show child properties
+    <div class="dropdown"> 
+        <button onclick="dropFunction(this)">Show child properties</button>
         <div class="dropdown-content">
 
 [!include[_dimensions](_dimensions.md)]
@@ -51,7 +53,8 @@
     <div class="occurs">0..1</div>
     <div class="description"></div>
     <div class="validation"></div> 
-    <div class="dropdown" onclick="dropFunction(this)">Show child properties
+    <div class="dropdown"> 
+        <button onclick="dropFunction(this)">Show child properties</button>
         <div class="dropdown-content">
 
 [!include[_metadata_type](_metadata_type.md)]
@@ -92,7 +95,8 @@
     <div class="occurs">0..1</div>
     <div class="description"></div>
     <div class="validation"></div> 
-    <div class="dropdown" onclick="dropFunction(this)">Show child properties
+    <div class="dropdown"> 
+        <button onclick="dropFunction(this)">Show child properties</button>
         <div class="dropdown-content">
 
 [!include[_metadata_type](_metadata_type.md)]
@@ -119,7 +123,8 @@
     <div class="occurs">0..1</div>
     <div class="description"></div>
     <div class="validation"></div> 
-    <div class="dropdown" onclick="dropFunction(this)">Show child properties
+    <div class="dropdown"> 
+        <button onclick="dropFunction(this)">Show child properties</button>
         <div class="dropdown-content">
 
 [!include[_metadata_type](_metadata_type.md)]
@@ -132,7 +137,8 @@
     <div class="occurs">0..1</div>
     <div class="description"></div>
     <div class="validation"></div> 
-    <div class="dropdown" onclick="dropFunction(this)">Show child properties
+    <div class="dropdown"> 
+        <button onclick="dropFunction(this)">Show child properties</button>
         <div class="dropdown-content">
 
 [!include[_metadata_type](_metadata_type.md)]
@@ -145,7 +151,8 @@
     <div class="occurs">0..1</div>
     <div class="description"></div>
     <div class="validation"></div> 
-    <div class="dropdown" onclick="dropFunction(this)">Show child properties
+    <div class="dropdown"> 
+        <button onclick="dropFunction(this)">Show child properties</button>
         <div class="dropdown-content">
 
 [!include[_metadata_type](_metadata_type.md)]

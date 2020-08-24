@@ -4,7 +4,8 @@
     <div class="occurs">1</div>
     <div class="description">Indicates the type of address, e.g. origin or destination	</div>
     <div class="validation">Required. All addresses must include a valid address_type value. All shipments must have at least an origin and a destination address. Only one address of each type may be included in any shipment.</div>     
-    <div class="dropdown" onclick="dropFunction(this)">Show values
+    <div class="dropdown"> 
+        <button onclick="dropFunction(this)">Show values</button>
         <div class="dropdown-content">
 
 [!include[_address_type](_address_type.md)]
@@ -115,7 +116,8 @@
     <div class="occurs">0..1</div>
     <div class="description">The latitude and longitude of the location, if known and applicable</div>
     <div class="validation">Optional</div>     
-    <div class="dropdown" onclick="dropFunction(this)">Show child properties
+    <div class="dropdown"> 
+        <button onclick="dropFunction(this)">Show child properties</button>
         <div class="dropdown-content">
 
 [!include[_lat_long](_lat_long.md)]

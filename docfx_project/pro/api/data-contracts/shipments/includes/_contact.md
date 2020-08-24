@@ -46,7 +46,8 @@
     <div class="occurs">1</div>
     <div class="description">The details used to contact the person</div>
     <div class="validation">Required</div>     
-    <div class="dropdown" onclick="dropFunction(this)">Show child properties
+    <div class="dropdown"> 
+        <button onclick="dropFunction(this)">Show child properties</button>
         <div class="dropdown-content">
 
 [!include[_metadata_type](_metadata_type.md)]
