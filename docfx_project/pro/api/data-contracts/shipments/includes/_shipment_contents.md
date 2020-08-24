@@ -48,128 +48,128 @@
     </div>              
 </div>
 <div class="property">
-    <div class="name"><code></code></div>
-    <div class="type">string</div>
-    <div class="occurs">0..1</div>
-    <div class="description"></div>
-    <div class="validation"></div> 
+    <div class="name"><code>value</code></div>
+    <div class="type">value object</div>
+    <div class="occurs">1</div>
+    <div class="description">The value of the contents</div>
+    <div class="validation">Required</div> 
     <div class="dropdown"> 
         <button onclick="dropFunction(this)">Show child properties</button>
         <div class="dropdown-content">
 
-[!include[_metadata_type](_metadata_type.md)]
+[!include[_value](_value.md)]
 </div>
     </div>              
 </div>
 <div class="property">
-    <div class="name"><code></code></div>
+    <div class="name"><code>sku</code></div>
     <div class="type">string</div>
     <div class="occurs">0..1</div>
-    <div class="description"></div>
-    <div class="validation"></div>
+    <div class="description">The stock-keeping unit of the contents</div>
+    <div class="validation">Optional. If provided, must be >= 1 and <= 50 characters</div>
 </div>
 <div class="property">
-    <div class="name"><code></code></div>
+    <div class="name"><code>model</code></div>
     <div class="type">string</div>
     <div class="occurs">0..1</div>
-    <div class="description"></div>
-    <div class="validation"></div>
+    <div class="description">The model of the contents</div>
+    <div class="validation">Optional. If provided, must be >= 1 and <= 50 characters</div>
 </div>
 <div class="property">
-    <div class="name"><code></code></div>
+    <div class="name"><code>country_of_origin</code></div>
     <div class="type">string</div>
     <div class="occurs">0..1</div>
-    <div class="description"></div>
-    <div class="validation"></div>
+    <div class="description">The ISO code representing the country of origin of the contents</div>
+    <div class="validation">If provided, must be a valid 2-letter ISO code</div>
 </div>
 <div class="property">
-    <div class="name"><code></code></div>
+    <div class="name"><code>harmonisation_code</code></div>
     <div class="type">string</div>
     <div class="occurs">0..1</div>
-    <div class="description"></div>
-    <div class="validation"></div>
+    <div class="description">The harmonisation code for the shipment_contents</div>
+    <div class="validation">If provided, must be a valid format of harmonisation code including dots, e.g. 09.02.10</div>
 </div>
 <div class="property">
-    <div class="name"><code></code></div>
-    <div class="type">string</div>
+    <div class="name"><code>shipping_terms</code></div>
+    <div class="type">shipping_terms object</div>
     <div class="occurs">0..1</div>
-    <div class="description"></div>
-    <div class="validation"></div> 
+    <div class="description">The shipping terms according to the Incoterms rules</div>
+    <div class="validation">Optional. If provided, must be a valid shipping_terms value</div> 
     <div class="dropdown"> 
         <button onclick="dropFunction(this)">Show child properties</button>
         <div class="dropdown-content">
 
-[!include[_metadata_type](_metadata_type.md)]
+[!include[_shipping_terms](_shipping_terms.md)]
 </div>
     </div>              
 </div>
 <div class="property">
-    <div class="name"><code></code></div>
-    <div class="type">string</div>
+    <div class="name"><code>quantity</code></div>
+    <div class="type">integer</div>
     <div class="occurs">0..1</div>
-    <div class="description"></div>
-    <div class="validation"></div>
+    <div class="description">The quantity of these contents</div>
+    <div class="validation">If not provided, will default to 1. If provided, must be a valid positive integer</div>
 </div>
 <div class="property">
-    <div class="name"><code></code></div>
+    <div class="name"><code>unit</code></div>
     <div class="type">string</div>
     <div class="occurs">0..1</div>
-    <div class="description"></div>
-    <div class="validation"></div>
+    <div class="description">The unit of packing of these contents, e.g. box</div>
+    <div class="validation">If provided, must be >= 1 and <= 50 characters</div>
 </div>
 <div class="property">
-    <div class="name"><code></code></div>
-    <div class="type">string</div>
+    <div class="name"><code>dangerous_goods</code></div>
+    <div class="type">dangerous_goods object</div>
     <div class="occurs">0..1</div>
-    <div class="description"></div>
-    <div class="validation"></div> 
+    <div class="description">Properties used to describe dangerous goods, if applicable</div>
+    <div class="validation">Optional</div> 
     <div class="dropdown"> 
         <button onclick="dropFunction(this)">Show child properties</button>
         <div class="dropdown-content">
 
-[!include[_metadata_type](_metadata_type.md)]
+[!include[_dangerous_goods](_dangerous_goods.md)]
 </div>
     </div>              
 </div>
 <div class="property">
-    <div class="name"><code></code></div>
-    <div class="type">string</div>
+    <div class="name"><code>metadata</code></div>
+    <div class="type">List of metadata</div>
     <div class="occurs">0..1</div>
-    <div class="description"></div>
-    <div class="validation"></div> 
+    <div class="description">Additional properties to apply to shipment_contents. Additional functionality can be linked to properties specified in metadata</div>
+    <div class="validation">Optional. A maximum of 10 metadata values can be provided per shipment_contents</div> 
     <div class="dropdown"> 
         <button onclick="dropFunction(this)">Show child properties</button>
         <div class="dropdown-content">
 
-[!include[_metadata_type](_metadata_type.md)]
+[!include[_metadata](_metadata.md)]
 </div>
     </div>              
 </div>
 <div class="property">
-    <div class="name"><code></code></div>
-    <div class="type">string</div>
-    <div class="occurs">0..1</div>
-    <div class="description"></div>
-    <div class="validation"></div> 
+    <div class="name"><code>label_properties</code></div>
+    <div class="type">List of label_property</div>
+    <div class="occurs">0..10</div>
+    <div class="description">Values to be used in the generation or decoration of labels at contents level.	</div>
+    <div class="validation">Optional</div> 
     <div class="dropdown"> 
         <button onclick="dropFunction(this)">Show child properties</button>
         <div class="dropdown-content">
 
-[!include[_metadata_type](_metadata_type.md)]
+[!include[_label_property](_label_property.md)]
 </div>
     </div>              
 </div>
 <div class="property">
-    <div class="name"><code></code></div>
+    <div class="name"><code>description</code></div>
     <div class="type">string</div>
-    <div class="occurs">0..1</div>
-    <div class="description"></div>
-    <div class="validation"></div>
+    <div class="occurs">1</div>
+    <div class="description">A description of the contents. Used for display purposes and for inclusion in customs documents</div>
+    <div class="validation">Required. Must be <= 100 characters</div>
 </div>
 <div class="property">
-    <div class="name"><code></code></div>
-    <div class="type">string</div>
-    <div class="occurs">0..1</div>
-    <div class="description"></div>
-    <div class="validation"></div>
+    <div class="name"><code>contents</code></div>
+    <div class="type">List of shipment_contents</div>
+    <div class="occurs">0..n</div>
+    <div class="description">The contents of this shipment contents, if applicable</div>
+    <div class="validation">Optional. If provided, a maximum "depth" of 2 is permitted, i.e. shipment_contents can contain shipment_contents, but those shipment_contents cannot additionally contain shipment_contents</div>
 </div>
