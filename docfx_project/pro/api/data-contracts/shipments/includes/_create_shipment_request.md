@@ -16,7 +16,8 @@ A `shipment` is a collection of one or more packages sent together from a single
             <div class="occurs">0..1</div>
             <div class="description">A date range used to specify the required delivery date</div>
             <div class="validation">Optional</div>
-            <div class="dropdown" onclick="dropFunction(this)">Show child properties
+            <div class="dropdown"> 
+                <button onclick="dropFunction(this)">Show child properties</button>
                 <div class="dropdown-content">
 
 [!include[_date_range](_date_range.md)]
@@ -121,7 +122,8 @@ A `shipment` is a collection of one or more packages sent together from a single
             <div class="occurs">2..n</div>
             <div class="description">The addresses for this `shipment`</div>
             <div class="validation">Required. Must contain at least an `origin` and `destination` address</div>
-            <div class="dropdown" onclick="dropFunction(this)">Show child properties
+            <div class="dropdown"> 
+                <button onclick="dropFunction(this)">Show child properties</button>
                 <div class="dropdown-content">
 
 [!include[_address](_address.md)]

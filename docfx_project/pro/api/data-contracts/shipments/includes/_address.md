@@ -31,7 +31,8 @@
     <div class="occurs">0..1</div>
     <div class="description">Details of the contact at the address. This should be used to specify the name of the recipient, for example.	</div>
     <div class="validation">Required when shipping_location_reference is not provided.</div>     
-    <div class="dropdown" onclick="dropFunction(this)">Show child properties
+    <div class="dropdown"> 
+        <button onclick="dropFunction(this)">Show child properties</button>
         <div class="dropdown-content">
 
 [!include[_contact](_contact.md)]
