@@ -5,14 +5,19 @@ A `shipment` is a collection of one or more packages sent together from a single
     <h4>Properties</h4>
         <div class="property">
             <div class="name"><code>custom_reference</code></div>
-            <div class="type">string</div>
+            <div class="type">
+                <div class="dropdown"><span class="type-name">string</span>
+
+[!include[_datatype_string](_datatype_string.md)]
+</div>
+            </div>
             <div class="occurs">0..1</div>
             <div class="description">Custom reference provided by the customer</div>
             <div class="validation">Optional. If provided, limited to 50 characters</div>
         </div>
         <div class="property">
             <div class="name"><code>required_delivery_date</code></div>
-            <div class="type">date_range object</div>
+            <div class="type"><code>date_range</code> object</div>
             <div class="occurs">0..1</div>
             <div class="description">A date range used to specify the required delivery date</div>
             <div class="validation">Optional</div>
@@ -40,7 +45,7 @@ A `shipment` is a collection of one or more packages sent together from a single
         </div>
         <div class="property">
             <div class="name"><code>tags</code></div>
-            <div class="type">List of string</div>
+            <div class="type">List of <span class="type-name">string</span></div>
             <div class="occurs">0..10</div>
             <div class="description">Custom tags to apply to the shipment</div>
             <div class="validation"> Optional. If provided, each tag is limited to 50 characters and there is a limit of 10 tags per shipment</div>

@@ -1941,9 +1941,12 @@ div.property div.validation, div.property div.description {
 }
 
 div.type {
-    color: var(--colour-main);
     font-size: 10pt;
     font-style: italic;
+}
+
+span.type-name {
+    color: var(--colour-main);
 }
 
 /* Dropdown Button */
@@ -1989,4 +1992,28 @@ div.type {
 
   .dropdown:hover {
       cursor: pointer;
+  }
+
+  /* Type hovers */
+
+.type-description {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    margin-left: -16px; 
+    z-index: 1;
+    border: 1px solid var(--colour-tab-border);
+    color: var(--colour-dark);   
+  }   
+  
+.type code {
+    font-style: normal;
+    font-size: 9pt;
+}  
+
+.dropdown:hover .type-description {
+    display:block; 
   }

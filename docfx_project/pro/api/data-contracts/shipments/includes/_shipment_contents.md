@@ -10,7 +10,7 @@
     <div class="type">string</div>
     <div class="occurs">0..1</div>
     <div class="description">The customer's own custom reference for these contents</div>
-    <div class="validation">Optional. If provided, must be >= 1 and <= 50 characters</div>
+    <div class="validation">Optional. If provided, must be &gt;= 1 and &lt;= 50 characters</div>
 </div>
 <div class="property">
     <div class="name"><code>package_size_reference</code></div>
@@ -66,14 +66,14 @@
     <div class="type">string</div>
     <div class="occurs">0..1</div>
     <div class="description">The stock-keeping unit of the contents</div>
-    <div class="validation">Optional. If provided, must be >= 1 and <= 50 characters</div>
+    <div class="validation">Optional. If provided, must be &gt;= 1 and &lt;= 50 characters</div>
 </div>
 <div class="property">
     <div class="name"><code>model</code></div>
     <div class="type">string</div>
     <div class="occurs">0..1</div>
     <div class="description">The model of the contents</div>
-    <div class="validation">Optional. If provided, must be >= 1 and <= 50 characters</div>
+    <div class="validation">Optional. If provided, must be &gt;= 1 and &lt;= 50 characters</div>
 </div>
 <div class="property">
     <div class="name"><code>country_of_origin</code></div>
@@ -115,7 +115,7 @@
     <div class="type">string</div>
     <div class="occurs">0..1</div>
     <div class="description">The unit of packing of these contents, e.g. box</div>
-    <div class="validation">If provided, must be >= 1 and <= 50 characters</div>
+    <div class="validation">If provided, must be &gt;= 1 and &lt;= 50 characters</div>
 </div>
 <div class="property">
     <div class="name"><code>dangerous_goods</code></div>
@@ -164,7 +164,7 @@
     <div class="type">string</div>
     <div class="occurs">1</div>
     <div class="description">A description of the contents. Used for display purposes and for inclusion in customs documents</div>
-    <div class="validation">Required. Must be <= 100 characters</div>
+    <div class="validation">Required. Must be &lt;= 100 characters</div>
 </div>
 <div class="property">
     <div class="name"><code>contents</code></div>
