@@ -6,11 +6,9 @@ A `shipment` is a collection of one or more packages sent together from a single
         <div class="property">
             <div class="name"><code>custom_reference</code></div>
             <div class="type">
-                <div class="dropdown"><span class="type-name">string</span>
 
 [!include[_datatype_string](_datatype_string.md)]
 </div>
-            </div>
             <div class="occurs">0..1</div>
             <div class="description">Custom reference provided by the customer</div>
             <div class="validation">Optional. If provided, limited to 50 characters</div>
@@ -52,7 +50,10 @@ A `shipment` is a collection of one or more packages sent together from a single
         </div>
         <div class="property">
             <div class="name"><code>order_date</code></div>
-            <div class="type">ISO8601 DateTime</div>
+            <div class="type">
+
+[!include[_datatype_datetime](_datatype_datetime.md)]
+</div>
             <div class="occurs">0..1</div>
             <div class="description">The date that the items in the `shipment` were ordered. This can be used to track `shipments` vs. order dates in customers' own systems.</div>
             <div class="validation"> Optional. If provided, must be a valid ISO8601 date time including offset. Sorted will not validate the logic of the date compared to other relevant dates.</div>
@@ -157,21 +158,30 @@ A `shipment` is a collection of one or more packages sent together from a single
         </div> 
         <div class="property">
             <div class="name"><code>source</code></div>
-            <div class="type">string</div>
+            <div class="type">
+
+[!include[_datatype_string](_datatype_string.md)]
+</div>
             <div class="occurs">0..1</div>            
             <div class="description"> Indicates the source of the `shipment`</div>
             <div class="validation">Optional. If not provided, will default to `api`. If provided, maximum length is 50 characters</div>
         </div> 
         <div class="property">
             <div class="name"><code>tenant</code></div>
-            <div class="type">string</div>
+            <div class="type">
+
+[!include[_datatype_string](_datatype_string.md)]
+</div>
             <div class="occurs">0..1</div>            
             <div class="description">Indicates the tenant that the `shipment` belongs to</div>
             <div class="validation">Optional. If provided, must be a valid pre-existing `tenant` reference for the customer</div>
         </div>
         <div class="property">
             <div class="name"><code>channel</code></div>
-            <div class="type">string</div>
+            <div class="type">
+
+[!include[_datatype_string](_datatype_string.md)]
+</div>
             <div class="occurs">0..1</div>
             <div class="description">Indicates the channel for the `shipment`</div>
             <div class="validation">Optional. If provided, must be a valid pre-existing `channel` for the provided `tenant`. Must **only** be provided when `tenant` is provided</div>
