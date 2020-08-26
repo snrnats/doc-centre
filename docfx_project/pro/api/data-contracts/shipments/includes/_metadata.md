@@ -1,13 +1,19 @@
 <div class="property">
     <div class="name"><code>key</code></div>
-    <div class="type">string</div>
+    <div class="type">
+
+[!include[_datatype_string](_datatype_string.md)]
+</div>
     <div class="occurs">1</div>
     <div class="description">The key of this metadata item</div>
     <div class="validation">Required. Each metadata key must be unique within a metadata collection. The length of the key must be &gt;= 1 and &lt;= 50 characters</div>
 </div>
 <div class="property">
     <div class="name"><code>value</code></div>
-    <div class="type">string</div>
+    <div class="type">
+
+[!include[_datatype_string](_datatype_string.md)]
+</div>
     <div class="occurs">1</div>
     <div class="description">The value of this metadata item</div>
     <div class="validation">Required. The length of the value must be &gt;=1 and &lt;= 100 characters</div>            

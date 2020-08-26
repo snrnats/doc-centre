@@ -21,21 +21,30 @@
 </div>
 <div class="property">
     <div class="name"><code>id_number</code></div>
-    <div class="type">string</div>
+    <div class="type">
+
+[!include[_datatype_string](_datatype_string.md)]
+</div>
     <div class="occurs">0..1</div>
     <div class="description">The UN code / ID code or NA code of the contents</div>
     <div class="validation">Optional. If provided, must be &gt;= 1 and &lt;= 50 characters</div>
 </div>
 <div class="property">
     <div class="name"><code>proper_shipping_name</code></div>
-    <div class="type">string</div>
+    <div class="type">
+
+[!include[_datatype_string](_datatype_string.md)]
+</div>
     <div class="occurs">0..1</div>
     <div class="description">The Proper Shipping Name for the goods</div>
     <div class="validation">Optional. If provided, must be &lt;= 255 characters</div>
 </div>
 <div class="property">
     <div class="name"><code>technical_name</code></div>
-    <div class="type">string</div>
+    <div class="type">
+
+[!include[_datatype_string](_datatype_string.md)]
+</div>
     <div class="occurs">0..1</div>
     <div class="description">The Technical Name for the goods.	</div>
     <div class="validation">Optional. If provided, must be &lt;= 255 characters</div>
@@ -84,7 +93,10 @@
 </div>
 <div class="property">
     <div class="name"><code>custom_label_text</code></div>
-    <div class="type">string</div>
+    <div class="type">
+
+[!include[_datatype_string](_datatype_string.md)]
+</div>
     <div class="occurs">0..1</div>
     <div class="description">Custom text to be displayed on labels for these goods</div>
     <div class="validation">Optional. If provided, must be &gt;= 1 and &lt;= 255 characters</div>
