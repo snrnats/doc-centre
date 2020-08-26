@@ -14,7 +14,10 @@
 </div>
 <div class="property">
     <div class="name"><code>shipping_location_reference</code></div>
-    <div class="type">string</div>
+    <div class="type">
+
+[!include[_datatype_string](_datatype_string.md)]
+</div>
     <div class="occurs">0..1</div>
     <div class="description">Used to reference a pre-defined shipping location	</div>
     <div class="validation">Optional for on_demand shipments but required for scheduled shipments. If provided, must be a valid existing shipping location.</div>

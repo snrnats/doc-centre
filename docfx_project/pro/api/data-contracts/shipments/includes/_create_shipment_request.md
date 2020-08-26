@@ -43,7 +43,10 @@ A `shipment` is a collection of one or more packages sent together from a single
         </div>
         <div class="property">
             <div class="name"><code>tags</code></div>
-            <div class="type">List of <span class="type-name">string</span></div>
+            <div class="type">
+
+[!include[_datatype_list_of_string](_datatype_list_of_string.md)]
+</div>
             <div class="occurs">0..10</div>
             <div class="description">Custom tags to apply to the shipment</div>
             <div class="validation"> Optional. If provided, each tag is limited to 50 characters and there is a limit of 10 tags per shipment</div>

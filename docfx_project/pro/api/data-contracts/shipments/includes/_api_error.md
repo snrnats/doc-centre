@@ -5,19 +5,28 @@ This object is returned by Sorted whenever an error occurs during a request. Err
         <h4>Properties</h4>
         <div class="property">
             <div class="name"><code>correlation_id</code></div>
-            <div class="type">string</div>
+            <div class="type">
+
+[!include[_datatype_string](_datatype_string.md)]
+</div>
             <div class="occurs">1</div>
             <div class="description">A unique reference for this error. Customers can use this when reporting errors to Sorted, if applicable	</div>
         </div>
         <div class="property">
             <div class="name"><code>code</code></div>
-            <div class="type">string</div>
+            <div class="type">
+
+[!include[_datatype_string](_datatype_string.md)]
+</div>
             <div class="occurs">1</div>
             <div class="description">A pre-defined code for this error</div>
         </div>
         <div class="property">
             <div class="name"><code>message</code></div>
-            <div class="type">string</div>
+            <div class="type">
+
+[!include[_datatype_string](_datatype_string.md)]
+</div>
             <div class="occurs">1</div>
             <div class="description">A plain text summary of the error</div>
         </div>
