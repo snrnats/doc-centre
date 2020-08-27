@@ -9,6 +9,33 @@ created: 12/08/2020
 
 ---
 
+# Calling APIs in PRO
+
+PRO's Shipments APIs accept the following headers:
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Headers</h4>
+
+[!include[_headers](includes/_headers.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_cs_headers](code-samples/_cs_headers.md)]
+</div>
+</div>
+
+## Response Headers
+
+Depending on the content returned, PRO's responses may include the following headers:
+
+* `x-api-version` - The version of the API that served the request 
+* `Content-Type` -  The format of the response body. This will ordinarily have the value _application/json_. 
+* `Content-Encoding` -  If you request responses in GZIP format, the `Content-Encoding` response header returns a value of _gzipped_. 
+
+---
+
 # Shipments
 
 ## Get Shipments
