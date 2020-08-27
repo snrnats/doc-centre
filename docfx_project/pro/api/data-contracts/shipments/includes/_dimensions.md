@@ -30,7 +30,7 @@
 </div>
 <div class="property">
     <div class="name"><code>unit</code></div>
-    <div class="type">dimension_unit object</div>
+    <div class="type"><code>dimension_unit</code> object </div>
     <div class="occurs">1</div>
     <div class="description">The unit of measurement</div>
     <div class="validation">Required. Must be a valid dimension_unit. All units specified within a single shipment must be the same, i.e. customers cannot combine dimension_unit values within a single shipment</div>     

@@ -60,7 +60,7 @@
 </div>
 <div class="property">
     <div class="name"><code>contact_details</code></div>
-    <div class="type">contact_details object</div>
+    <div class="type"><code>contact_details</code> object </div>
     <div class="occurs">1</div>
     <div class="description">The details used to contact the person</div>
     <div class="validation">Required</div>     

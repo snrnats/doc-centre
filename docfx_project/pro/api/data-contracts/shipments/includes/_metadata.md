@@ -20,7 +20,7 @@
 </div>
 <div class="property">
     <div class="name"><code>type</code></div>
-    <div class="type">metadata_type object</div>
+    <div class="type"><code>metadata_type</code> object </div>
     <div class="occurs">1</div>
     <div class="description">The type of this metadata item.</div>
     <div class="validation">Optional. If not provided, will default to string</div>     

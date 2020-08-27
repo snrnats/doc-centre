@@ -30,7 +30,7 @@
 </div>
 <div class="property">
     <div class="name"><code>weight</code></div>
-    <div class="type">weight object</div>
+    <div class="type"><code>weight</code> object </div>
     <div class="occurs">0..1</div>
     <div class="description">The weight of the contents</div>
     <div class="validation">Required unless package_size_reference has been specified</div> 
@@ -44,7 +44,7 @@
 </div>
 <div class="property">
     <div class="name"><code>dimensions</code></div>
-    <div class="type">dimensions object</div>
+    <div class="type"><code>dimensions</code> object </div>
     <div class="occurs">0..1</div>
     <div class="description">The dimensions of the package</div>
     <div class="validation">Required unless package_size_reference has been specified</div> 
@@ -58,7 +58,7 @@
 </div>
 <div class="property">
     <div class="name"><code>value</code></div>
-    <div class="type">value object</div>
+    <div class="type"><code>value</code> object </div>
     <div class="occurs">1</div>
     <div class="description">The value of the contents</div>
     <div class="validation">Required</div> 
@@ -112,7 +112,7 @@
 </div>
 <div class="property">
     <div class="name"><code>shipping_terms</code></div>
-    <div class="type">shipping_terms object</div>
+    <div class="type"><code>shipping_terms</code> object </div>
     <div class="occurs">0..1</div>
     <div class="description">The shipping terms according to the Incoterms rules</div>
     <div class="validation">Optional. If provided, must be a valid shipping_terms value</div> 
@@ -146,7 +146,7 @@
 </div>
 <div class="property">
     <div class="name"><code>dangerous_goods</code></div>
-    <div class="type">dangerous_goods object</div>
+    <div class="type"><code>dangerous_goods</code> object </div>
     <div class="occurs">0..1</div>
     <div class="description">Properties used to describe dangerous goods, if applicable</div>
     <div class="validation">Optional</div> 
@@ -160,7 +160,7 @@
 </div>
 <div class="property">
     <div class="name"><code>metadata</code></div>
-    <div class="type">List of metadata</div>
+    <div class="type">List of <code>metadata</code> objects</div>
     <div class="occurs">0..1</div>
     <div class="description">Additional properties to apply to shipment_contents. Additional functionality can be linked to properties specified in metadata</div>
     <div class="validation">Optional. A maximum of 10 metadata values can be provided per shipment_contents</div> 
@@ -174,7 +174,7 @@
 </div>
 <div class="property">
     <div class="name"><code>label_properties</code></div>
-    <div class="type">List of label_property</div>
+    <div class="type">List of <code>label_property</code> objects</div>
     <div class="occurs">0..10</div>
     <div class="description">Values to be used in the generation or decoration of labels at contents level.	</div>
     <div class="validation">Optional</div> 
@@ -198,7 +198,7 @@
 </div>
 <div class="property">
     <div class="name"><code>contents</code></div>
-    <div class="type">List of shipment_contents</div>
+    <div class="type">List of <code>shipment_contents</code> objects</div>
     <div class="occurs">0..n</div>
     <div class="description">The contents of this shipment contents, if applicable</div>
     <div class="validation">Optional. If provided, a maximum "depth" of 2 is permitted, i.e. shipment_contents can contain shipment_contents, but those shipment_contents cannot additionally contain shipment_contents</div>

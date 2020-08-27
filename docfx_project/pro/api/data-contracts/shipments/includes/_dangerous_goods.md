@@ -1,13 +1,13 @@
 <div class="property">
     <div class="name"><code>hazard_classes</code></div>
-    <div class="type">List of hazard_class</div>
+    <div class="type">List of <code>hazard_class</code> properties</div>
     <div class="occurs">0..</div>
     <div class="description">The IATA hazard classes assigned to the contents</div>
     <div class="validation">Optional. Each entry must be a valid hazard_class</div>
 </div>
 <div class="property">
     <div class="name"><code>packing_group</code></div>
-    <div class="type">packing_group object</div>
+    <div class="type"><code>packing_group</code> object </div>
     <div class="occurs">0..1</div>
     <div class="description">The packing_group for the contents</div>
     <div class="validation">Optional. If provided, must be a valid packing_group. If not provided will default to i (high).</div>     
@@ -51,7 +51,7 @@
 </div>
 <div class="property">
     <div class="name"><code>physical_form</code></div>
-    <div class="type">physical_form object</div>
+    <div class="type"><code>physical_form</code> object </div>
     <div class="occurs">0..1</div>
     <div class="description">The physical_form of the goods</div>
     <div class="validation">Optional. If not provided, will default to other. If provided, must be a valid physical_form</div>     
@@ -65,7 +65,7 @@
 </div>
 <div class="property">
     <div class="name"><code>radioactivity</code></div>
-    <div class="type">radioactivity object</div>
+    <div class="type"><code>radioactivity</code> object </div>
     <div class="occurs">0..1</div>
     <div class="description">The radioactivity of the goods</div>
     <div class="validation">Optional. If not provided, will default to None. If provided, must be a valid radioactivity</div>     
@@ -79,7 +79,7 @@
 </div>
 <div class="property">
     <div class="name"><code>accessibility</code></div>
-    <div class="type">accessibility object</div>
+    <div class="type"><code>accessibility</code> object </div>
     <div class="occurs">0..1</div>
     <div class="description">The accessibility of the goods during transit</div>
     <div class="validation">Optional. If not provided, will default to inaccessible. If provided, must be a valid accessibility</div>     

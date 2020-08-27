@@ -21,7 +21,7 @@
 </div>
 <div class="property">
     <div class="name"><code>category_type</code></div>
-    <div class="type">category type</div>
+    <div class="type"><code>category_type</code> property</div>
     <div class="occurs">1</div>
     <div class="description">Indicates the category of goods for customs purposes</div>
     <div class="validation">Required. Must be a valid category type</div>     
@@ -205,7 +205,10 @@
 </div>
 <div class="property">
     <div class="name"><code>invoice_date</code></div>
-    <div class="type">ISO8601 Date Time	</div>
+    <div class="type">
+
+[!include[_datatype_datetime](_datatype_datetime.md)]
+</div>
     <div class="occurs">0..1</div>
     <div class="description">The date and time of the invoice for the goods.</div>
     <div class="validation">Optional. If not provided, will default to the date and time of the creation of the shipment.</div>            

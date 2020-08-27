@@ -16,7 +16,7 @@
 </div>
 <div class="property">
     <div class="name"><code>self</code></div>
-    <div class="description">The link points to the containing object</div>
+    <div class="description">The link points to the containing object </div>
 </div>
 <div class="property">
     <div class="name"><code>paperless_document</code></div>

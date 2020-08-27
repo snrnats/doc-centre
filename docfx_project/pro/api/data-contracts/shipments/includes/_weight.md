@@ -10,7 +10,7 @@
 </div>
 <div class="property">
     <div class="name"><code>unit</code></div>
-    <div class="type">weight_unit object</div>
+    <div class="type"><code>weight_unit</code> object </div>
     <div class="occurs">1</div>
     <div class="description">The unit of measurement</div>
     <div class="validation">Required. Must be a valid weight_unit. All units specified within a single shipment must be the same, i.e. you cannot combine weight_unit values within a single shipment.</div>     

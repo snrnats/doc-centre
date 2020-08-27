@@ -1,6 +1,6 @@
 <div class="property">
     <div class="name"><code>address_type</code></div>
-    <div class="type">Address type</div>
+    <div class="type"><code>address_type</code> property</div>
     <div class="occurs">1</div>
     <div class="description">Indicates the type of address, e.g. origin or destination	</div>
     <div class="validation">Required. All addresses must include a valid address_type value. All shipments must have at least an origin and a destination address. Only one address of each type may be included in any shipment.</div>     
@@ -34,7 +34,7 @@
 </div>
 <div class="property">
     <div class="name"><code>contact</code></div>
-    <div class="type">Contact</div>
+    <div class="type"><code>contact</code> property</div>
     <div class="occurs">0..1</div>
     <div class="description">Details of the contact at the address. This should be used to specify the name of the recipient, for example.	</div>
     <div class="validation">Required when shipping_location_reference is not provided.</div>     
@@ -148,7 +148,7 @@
 </div>
 <div class="property">
     <div class="name"><code>lat_long</code></div>
-    <div class="type">lat_long object</div>
+    <div class="type"><code>lat_long</code> object </div>
     <div class="occurs">0..1</div>
     <div class="description">The latitude and longitude of the location, if known and applicable</div>
     <div class="validation">Optional</div>     
