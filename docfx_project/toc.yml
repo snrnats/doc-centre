@@ -10,6 +10,8 @@
   - name: Reports
     href: pro/reports/
     homepage: pro/reports/index.md
+  - name: UPS Onboarding Guide
+    href: pro/how-to/ups-guide.md
   - name: Release Notes
     href: pro/release-notes/
     homepage: pro/release-notes/index.md  
