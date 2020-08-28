@@ -25,19 +25,12 @@
           "toc.yml",
           "*.md"
         ]
-      },
-      {
-        "files": [
-          "pro/reports/**.md",
-          "pro/reports/toc.yml",
-          "toc.yml",
-          "*.md"
-        ]
       }
     ],
     "resource": [{
         "files": [
           "pro/images/**",
+          "pro/how-to/**",
           "react/help/images/**",
           "images/**"
         ]
