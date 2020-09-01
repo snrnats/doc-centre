@@ -17,7 +17,7 @@ The Delivery Options endpoint takes the details of an as-yet-nonexistent consign
 
 > [!NOTE]
 >
-> For further information on what constitutes a delivery option, see the [Using Delivery and Pickup Options](using_delivery_and_pickup_options.html) page.
+> For further information on what constitutes a delivery option, see the [Using Delivery and Pickup Options](/pro/api/help/using_delivery_and_pickup_options.html) page.
 
 At a minimum, PRO requires you to send the consignment's package, origin address and destination address data in your **Delivery Options** request. However, there are lots of other properties you can send when getting delivery options, including:
 

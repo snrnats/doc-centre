@@ -21,7 +21,7 @@ To open the **States** dashboard, select the **Dashboards > States** menu option
 
 The **States** dashboard uses shipment states to group shipments into red/amber/green categories, helping you to identify individual shipments that may require attention. Shipment states are colour-coded into the following:
 
-* **Red (Critical Exceptions)** - There is an issue with the shipment that cannot be resolved until you take action, or the shipment has been destroyed or lost. For example, a shipment in a state of *Held by carrier* would be classified as red.
+* **Red (Critical Exceptions)** - There is an issue with the shipment that cannot be resolved until you take action, or the shipment has been destroyed or lost. For example, a shipment in a state of *Action Required* would be classified as red.
 * **Amber (Other Exceptions)** - There is an issue with the shipment that does not require you to take action. However, you might want to notify your customers. For example, a shipment in a state of *Delivery failed* would be classified as amber.
 * **Green (All Good)** - There is no issue with the shipment. For example, a shipment in a state of *Dispatched* would be classified as green.
 

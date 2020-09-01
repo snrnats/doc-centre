@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-creating-new-consignments
 title: Creating New Consignments
-tags: consignments,pro,api
+tags: consignments,pro,api,EORI number
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 04/06/2020
 ---
@@ -50,6 +50,38 @@ Adding optional properties when you create a consignment can help you to get mor
 > You should exercise caution when using the `ShippingDate` and `RequiredDeliveryDate` parameters to specify dates for your consignment. These parameters limit delivery options for the consignment, meaning that the consignment can only be allocated to carrier services that would be able to ship it on the specified `ShippingDate` and / or deliver it by the `RequiredDeliveryDate`. If the `IsToBeExactlyOnTheDateSpecified` flag of the `RequiredDeliveryDate` is set, then the consignment is further limited, as it can only be allocated to a service that would deliver it on the exact date specified.
 >
 > If the dates you specify are too restrictive, there may not be any carrier services available to take the consignment, which would result in a failed allocation. As such, you should only specify shipping and delivery dates where it is necessary to do so.
+
+### Adding an EORI Number
+
+If required, you can record a consignment's EORI number using the `Metadata` property. To do so, add a property with a `KeyValue` of _ShippersEORI_ and a `StringValue` representing the number itself.
+
+# [EORI Number Example](#tab/eori-number-example)
+
+```json
+{
+    "ConsignmentReferenceProvidedByCustomer": "YOUR-REF",
+    "Addresses": [
+        // addresses
+    ],
+    "Packages": [
+        // package properties
+    ],
+    "Metadata": [
+        {
+            "KeyValue": "ShippersEORI",
+            "StringValue": "GB987654312000"
+        }
+    ]
+    // other consignment properties
+}
+
+```
+---
+
+If you add a `ShippersEORI` metadata property to an international consignment, then PRO automatically adds an **EORI Number** field to the commercial invoice that is automatically generated when the consignment is allocated.
+
+> [!NOTE]
+> For more information on commercial invoices and other customs documents in PRO, see the [Getting Customs Docs and Invoices](/pro/api/help/getting_customs_docs_and_invoices.html) page. 
 
 ### Example Create Consignments Request
 
