@@ -38,7 +38,7 @@ Depending on the content returned, PRO's responses may include the following hea
 
 # Shipments
 
-## Get Shipments
+## Create Shipment
 
 This endpoint is used to create new `shipments` within SortedPRO.
 
@@ -137,31 +137,954 @@ This object is returned by Sorted whenever an error occurs during a request. Err
 
 ---
 
-### More Information
+## Update Shipment
+
+This endpoint is used to update an existing shipment within SortedPRO. The shipment must already exist, and the account used to perform the API request must have permission to update shipments.
+
+> [!NOTE]
+> Once a shipment has been allocated, it can no longer be updated.
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+# [200 - Resource Result](#tab/update-shipment-200)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_resource_result](includes/_resource_result.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_cs_resource_result](code-samples/_cs_resource_result.md)]
+</div>
+</div>
+
+# [304 - Resource Result](#tab/update-shipment-304)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_resource_result](includes/_resource_result.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_cs_resource_result](code-samples/_cs_resource_result.md)]
+</div>
+</div>
+
+# [400 - API Error](#tab/update-shipment-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+
+# [403 - API Error](#tab/update-shipment-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+
+---
+
+## Cancel Shipment
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+# [200 - Resource Result](#tab/cancel-shipment-200)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_resource_result](includes/_resource_result.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_cs_resource_result](code-samples/_cs_resource_result.md)]
+</div>
+</div>
+
+# [202 - Resource Result](#tab/cancel-shipment-202)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_resource_result](includes/_resource_result.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_cs_resource_result](code-samples/_cs_resource_result.md)]
+</div>
+</div>
+
+# [304 - Resource Result](#tab/cancel-shipment-304)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_resource_result](includes/_resource_result.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_cs_resource_result](code-samples/_cs_resource_result.md)]
+</div>
+</div>
+
+# [400 - API Error](#tab/cancel-shipment-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+
+# [403 - API Error](#tab/cancel-shipment-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+
+# [404 - API Error](#tab/cancel-shipment-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+
+# [409 - API Error](#tab/cancel-shipment-409)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+
+---
+
+## Delete Shipment
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+# [200 - Resource Result](#tab/delete-shipment-200)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_resource_result](includes/_resource_result.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_cs_resource_result](code-samples/_cs_resource_result.md)]
+</div>
+</div>
+
+# [202 - Resource Result](#tab/delete-shipment-202)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_resource_result](includes/_resource_result.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_cs_resource_result](code-samples/_cs_resource_result.md)]
+</div>
+</div>
+
+# [400 - API Error](#tab/delete-shipment-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+
+# [403 - API Error](#tab/delete-shipment-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+
+# [404 - API Error](#tab/delete-shipment-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+
+# [409 - API Error](#tab/delete-shipment-409)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+
+---
+
+## Clone Shipment
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+# [201 - Resource Result](#tab/clone-shipment-201)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_resource_result](includes/_resource_result.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_cs_resource_result](code-samples/_cs_resource_result.md)]
+</div>
+</div>
+
+# [400 - API Error](#tab/clone-shipment-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+
+# [403 - API Error](#tab/clone-shipment-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+
+# [404 - API Error](#tab/clone-shipment-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+
+---
+
+## Change Shipment State
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+# [200 - Resource Result](#tab/change-shipment-state-200)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_resource_result](includes/_resource_result.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_cs_resource_result](code-samples/_cs_resource_result.md)]
+</div>
+</div>
+
+# [202 - Resource Result](#tab/change-shipment-state-202)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_resource_result](includes/_resource_result.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_cs_resource_result](code-samples/_cs_resource_result.md)]
+</div>
+</div>
+
+# [304 - Resource Result](#tab/change-shipment-state-304)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_resource_result](includes/_resource_result.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_cs_resource_result](code-samples/_cs_resource_result.md)]
+</div>
+</div>
+
+# [400 - API Error](#tab/change-shipment-state-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+
+# [403 - API Error](#tab/change-shipment-state-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+
+# [404 - API Error](#tab/change-shipment-state-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+
+---
+
+## Get Shipment
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+# [200 - Shipment](#tab/get-shipment-200)
+
+# [403 - API Error](#tab/get-shipment-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+
+# [404 - API Error](#tab/get-shipment-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+
+---
+
+## Get Shipments by Custom Reference or Tracking Reference
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+# [200 - Shipment List](#tab/get-shipments-by-custom-reference-or-tracking-reference-200)
+
+# [400 - API Error](#tab/get-shipments-by-custom-reference-or-tracking-reference-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+
+# [403 - API Error](#tab/get-shipments-by-custom-reference-or-tracking-reference-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+
+# [404 - API Error](#tab/get-shipments-by-custom-reference-or-tracking-reference-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+
+---
 
 ---
 
 # Paperless Documents
 
-Paperless
+## Get Paperless Document
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+# [200 - Paperless Document](#tab/get-paperless-document-200)
+# [400 - API Error](#tab/get-paperless-document-400)
+# [403 - API Error](#tab/get-paperless-document-403)
+# [404 - API Error](#tab/get-paperless-document-404)
+
+---
+
+## Add Paperless Document
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+# [201 - Paperless Document](#tab/add-paperless-document-201)
+# [400 - API Error](#tab/add-paperless-document-400)
+# [403 - API Error](#tab/add-paperless-document-403)
+# [404 - API Error](#tab/add-paperless-document-404)
+# [409 - API Error](#tab/add-paperless-document-409)
+
+---
+
+## Remove Paperless Document
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+# [201 - Paperless Document](#tab/remove-paperless-document-200)
+# [400 - API Error](#tab/remove-paperless-document-400)
+# [403 - API Error](#tab/remove-paperless-document-403)
+# [404 - API Error](#tab/remove-paperless-document-404)
+# [409 - API Error](#tab/remove-paperless-document-409)
+
+---
 
 ---
 
 # Allocation
 
-Allocation
+## Allocate Shipment
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+# [200 - Allocate Result](#tab/allocate-shipment-200)
+# [202 - Allocate Result](#tab/allocate-shipment-202)
+# [400 - API Error](#tab/allocate-shipment-400)
+# [403 - API Error](#tab/allocate-shipment-403)
+# [404 - API Error](#tab/allocate-shipment-404)
+# [521 - API Error](#tab/allocate-shipment-521)
+
+---
+
+## Allocate Shipments
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+# [202 - Allocate Shipments Result](#tab/allocate-shipments-202)
+# [207 - Allocate Shipments Result](#tab/allocate-shipments-207)
+# [400 - API Error](#tab/allocate-shipments-400)
+# [403 - API Error](#tab/allocate-shipments-403)
+# [404 - API Error](#tab/allocate-shipments-404)
+# [521 - API Error](#tab/allocate-shipments-521)
+
+---
+
+## Allocate Shipment with Carrier Service
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+# [200 - Allocate Result](#tab/allocate-shipment-with-carrier-service-200)
+# [202 - Allocate Result](#tab/allocate-shipment-with-carrier-service-202)
+# [400 - API Error](#tab/allocate-shipment-with-carrier-service-400)
+# [403 - API Error](#tab/allocate-shipment-with-carrier-service-403)
+# [404 - API Error](#tab/allocate-shipment-with-carrier-service-404)
+# [521 - API Error](#tab/allocate-shipment-with-carrier-service-521)
+
+---
+
+## Allocate with Carrier Service
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+# [202 - Allocate Shipments Result](#tab/allocate-with-carrier-service-202)
+# [207 - Allocate Shipments Result](#tab/allocate-with-carrier-service-207)
+# [400 - API Error](#tab/allocate-with-carrier-service-400)
+# [403 - API Error](#tab/allocate-with-carrier-service-403)
+# [404 - API Error](#tab/allocate-with-carrier-service-404)
+# [521 - API Error](#tab/allocate-with-carrier-service-521)
+
+---
+
+## Allocate Shipment with Service Group
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+# [200 - Allocate Result](#tab/allocate-shipment-with-service-group-200)
+# [202 - Allocate Result](#tab/allocate-shipment-with-service-group-202)
+# [400 - API Error](#tab/allocate-shipment-with-service-group-400)
+# [403 - API Error](#tab/allocate-shipment-with-service-group-403)
+# [404 - API Error](#tab/allocate-shipment-with-service-group-404)
+# [521 - API Error](#tab/allocate-shipment-with-service-group-521)
+
+---
+
+## Allocate with Service Group
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+# [202 - Allocate Shipments Result](#tab/allocate-with-service-group-202)
+# [207 - Allocate Shipments Result](#tab/allocate-with-service-group-207)
+# [400 - API Error](#tab/allocate-with-service-group-400)
+# [403 - API Error](#tab/allocate-with-service-group-403)
+# [404 - API Error](#tab/allocate-with-service-group-404)
+# [521 - API Error](#tab/allocate-with-service-group-521)
+
+---
+
+## Allocate with Filters
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+# [202 - Allocate with Filters Result](#tab/allocate-with-filters-202)
+# [207 - Allocate with Filters Result](#tab/allocate-with-filters-207)
+# [400 - API Error](#tab/allocate-with-filters-400)
+# [403 - API Error](#tab/allocate-with-filters-403)
+# [404 - API Error](#tab/allocate-with-filters-404)
+# [521 - API Error](#tab/allocate-with-filters-521)
+
+---
+
+## Allocate Shipment with Quote
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+# [200 - Allocate Result](#tab/allocate-shipment-with-quote-200)
+# [202 - Allocate Result](#tab/allocate-shipment-with-quote-202)
+# [400 - API Error](#tab/allocate-shipment-with-quote-400)
+# [403 - API Error](#tab/allocate-shipment-with-quote-403)
+# [404 - API Error](#tab/allocate-shipment-with-quote-404)
+# [521 - API Error](#tab/allocate-shipment-with-quote-521)
+
+---
+
+## Allocate Shipment with Virtual Service
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+# [200 - Allocate Result](#tab/allocate-shipment-with-virtual-service-200)
+# [202 - Allocate Result](#tab/allocate-shipment-with-virtual-service-202)
+# [400 - API Error](#tab/allocate-shipment-with-virtual-service-400)
+# [403 - API Error](#tab/allocate-shipment-with-virtual-service-403)
+# [404 - API Error](#tab/allocate-shipment-with-virtual-service-404)
+# [521 - API Error](#tab/allocate-shipment-with-virtual-service-521)
+
+---
 
 ---
 
 # Quotes
 
-Quotes
+## Create Quote
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+# [201 - Quote Result](#tab/create-quote-201)
+# [400 - API Error](#tab/create-quote-400)
+# [403 - API Error](#tab/create-quote-403)
+# [531 - Quote Result](#tab/create-quote-531)
+
+---
+
+## Create Quote by Service Group
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+# [201 - Quote Result](#tab/create-quote-by-service-group-201)
+# [400 - API Error](#tab/create-quote-by-service-group-400)
+# [403 - API Error](#tab/create-quote-by-service-group-403)
+# [404 - API Error](#tab/create-quote-by-service-group-404)
+# [531 - Quote Result](#tab/create-quote-by-service-group-531)
+
+---
+
+## Get Quote
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+# [201 - Quote Result](#tab/get-quote-201)
+# [400 - API Error](#tab/get-quote-400)
+# [403 - API Error](#tab/get-quote-403)
+# [531 - Quote Result](#tab/get-quote-531)
+
+---
 
 ---
 
 # Customs Documents
 
-Customs Documents
+## Get Document
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+# [200 - Document](#tab/get-document-200)
+# [204 - (no body)](#tab/get-document-204)
+# [400 - API Error](#tab/get-document-400)
+# [403 - API Error](#tab/get-document-403)
+# [404 - API Error](#tab/get-document-404)
+
+---
+
+## Get Customs Documents
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+# [200 - List of Document](#tab/get-customs-documents-200)
+# [204 - (no body)](#tab/get-customs-documents-204)
+# [400 - API Error](#tab/get-customs-documents-400)
+# [403 - API Error](#tab/get-customs-documents-403)
+# [404 - API Error](#tab/get-customs-documents-404)
+
+---
 
 ---
 
@@ -274,19 +1197,206 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 
 ## Get Contents Label
 
-Labels
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+# [200 - Document](#tab/get-contents-label-200)
+# [400 - API Error](#tab/get-contents-label-400)
+# [403 - API Error](#tab/get-contents-label-403)
+# [404 - API Error](#tab/get-contents-label-404)
+
+---
 
 ---
 
 # Manifest
 
-Manifest
+## Manifest Shipment
+
+### Request
+
+### Response
+
+# [200 - Manifest Response](#tab/manifest-shipment-200)
+# [202 - Manifest Response](#tab/manifest-shipment-202)
+# [400 - API Error](#tab/manifest-shipment-400)
+# [403 - API Error](#tab/manifest-shipment-403)
+# [404 - API Error](#tab/manifest-shipment-404)
+
+---
+
+## Manifest Shipments
+
+### Request
+
+### Response
+
+# [200 - Manifest Response](#tab/manifest-shipments-200)
+# [202 - Manifest Response](#tab/manifest-shipments-202)
+# [400 - API Error](#tab/manifest-shipments-400)
+# [403 - API Error](#tab/manifest-shipments-403)
+# [404 - API Error](#tab/manifest-shipments-404)
+
+---
+
+## Manifest Shipment by Query
+
+### Request
+
+### Response
+
+# [200 - Manifest Response](#tab/manifest-shipments-by-query-200)
+# [202 - Manifest Response](#tab/manifest-shipments-by-query-202)
+# [400 - API Error](#tab/manifest-shipments-by-query-400)
+# [403 - API Error](#tab/manifest-shipments-by-query-403)
+# [404 - API Error](#tab/manifest-shipments-by-query-404)
+
+---
+
+## Manifest Shipments by Shipment Group
+
+### Request
+
+### Response
+
+# [200 - Manifest Response](#tab/manifest-shipments-by-shipment-group-200)
+# [202 - Manifest Response](#tab/manifest-shipments-by-shipment-group-202)
+# [400 - API Error](#tab/manifest-shipments-by-shipment-group-400)
+# [403 - API Error](#tab/manifest-shipments-by-shipment-group-403)
+# [404 - API Error](#tab/manifest-shipments-by-shipment-group-404)
+
+---
+
+## Get Manifest
+
+### Request
+
+### Response
+
+# [200 - Manifest](#tab/get-manifest-200)
+# [403 - API Error](#tab/get-manifest-403)
+# [404 - API Error](#tab/get-manifest-404)
 
 ---
 
 # Shipment Groups
 
-Shipment Groups
+## Create Shipment Group
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+## Get Shipment Group
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+## Get Shipment Groups by Custom Reference
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+## Get Shipment Group by Custom Reference
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+## Update Shipment Group
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+## Add Shipment to Group
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+## Remove Shipment from Group
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+## Lock Shipment Group
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+## Close Shipment Group
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+## Unlock Shipment Group
 
 ---
 
@@ -294,14 +1404,90 @@ Shipment Groups
 
 ## Get Shipment Group Collection Note
 
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
 ## Get Collection Note by Query
 
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
 ## Get Collection Note by Manifests
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
 
 ---
 
 # Tracking
 
-Tracking
+## Get Tracking Events
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+## Get Content-Level T racking Events
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+## Get Tracking Events by Custom Reference
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+## Get Content-Level Tracking Events by Custom Reference
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
 
 <script src="/pro/scripts/dropdown.js"></script>
