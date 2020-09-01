@@ -4,6 +4,8 @@
         "files": [
           "pro/api/help/**.yml",
           "pro/api/help/**.md",
+          "pro/how-to/**.md",
+          "pro/how-to/**.yml",
           "pro/toc.yml",
           "pro/index.md"
         ]
@@ -30,7 +32,7 @@
     "resource": [{
         "files": [
           "pro/images/**",
-          "pro/how-to/**",
+          "pro/how-to/images/**",
           "react/help/images/**",
           "images/**"
         ]
