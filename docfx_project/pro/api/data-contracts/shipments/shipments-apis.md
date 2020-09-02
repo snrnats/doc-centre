@@ -146,11 +146,29 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `PUT /shipments` |
 |---|---|
 | Parameters: | None |
 | Query Strings: | None | 
 | ATU Score | 1.0 |
+
+### Request Body
+
+> [!WARNING]
+> All properties in an update_shipment_request should be provided when updating the shipment i.e. customers should provide the full details of the shipment rather than just including properties they wish to update. The properties provided will replace the entire shipment object. There are some system-generated properties of a shipment that cannot be modified, such as allocation and _links.
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_template](includes/_template.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_cs_template](code-samples/_cs_template.md)]
+</div>
+</div>
 
 ### Response
 
