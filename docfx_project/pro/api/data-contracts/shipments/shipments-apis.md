@@ -742,8 +742,49 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 
 # [200 - Paperless Document](#tab/get-paperless-document-200)
 # [400 - API Error](#tab/get-paperless-document-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+
 # [403 - API Error](#tab/get-paperless-document-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+
 # [404 - API Error](#tab/get-paperless-document-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
 
 ---
 
@@ -761,9 +802,64 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 
 # [201 - Paperless Document](#tab/add-paperless-document-201)
 # [400 - API Error](#tab/add-paperless-document-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [403 - API Error](#tab/add-paperless-document-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [404 - API Error](#tab/add-paperless-document-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [409 - API Error](#tab/add-paperless-document-409)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
 
 ---
 
@@ -781,9 +877,64 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 
 # [201 - Paperless Document](#tab/remove-paperless-document-200)
 # [400 - API Error](#tab/remove-paperless-document-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [403 - API Error](#tab/remove-paperless-document-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [404 - API Error](#tab/remove-paperless-document-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [409 - API Error](#tab/remove-paperless-document-409)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
 
 ---
 
@@ -806,9 +957,64 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 # [200 - Allocate Result](#tab/allocate-shipment-200)
 # [202 - Allocate Result](#tab/allocate-shipment-202)
 # [400 - API Error](#tab/allocate-shipment-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [403 - API Error](#tab/allocate-shipment-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [404 - API Error](#tab/allocate-shipment-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [521 - API Error](#tab/allocate-shipment-521)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
 
 ---
 
@@ -827,10 +1033,65 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 # [202 - Allocate Shipments Result](#tab/allocate-shipments-202)
 # [207 - Allocate Shipments Result](#tab/allocate-shipments-207)
 # [400 - API Error](#tab/allocate-shipments-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [403 - API Error](#tab/allocate-shipments-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [404 - API Error](#tab/allocate-shipments-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [521 - API Error](#tab/allocate-shipments-521)
 
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 ---
 
 ## Allocate Shipment with Carrier Service
@@ -848,9 +1109,64 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 # [200 - Allocate Result](#tab/allocate-shipment-with-carrier-service-200)
 # [202 - Allocate Result](#tab/allocate-shipment-with-carrier-service-202)
 # [400 - API Error](#tab/allocate-shipment-with-carrier-service-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [403 - API Error](#tab/allocate-shipment-with-carrier-service-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [404 - API Error](#tab/allocate-shipment-with-carrier-service-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [521 - API Error](#tab/allocate-shipment-with-carrier-service-521)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
 
 ---
 
@@ -869,10 +1185,65 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 # [202 - Allocate Shipments Result](#tab/allocate-with-carrier-service-202)
 # [207 - Allocate Shipments Result](#tab/allocate-with-carrier-service-207)
 # [400 - API Error](#tab/allocate-with-carrier-service-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [403 - API Error](#tab/allocate-with-carrier-service-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [404 - API Error](#tab/allocate-with-carrier-service-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [521 - API Error](#tab/allocate-with-carrier-service-521)
 
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 ---
 
 ## Allocate Shipment with Service Group
@@ -890,10 +1261,65 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 # [200 - Allocate Result](#tab/allocate-shipment-with-service-group-200)
 # [202 - Allocate Result](#tab/allocate-shipment-with-service-group-202)
 # [400 - API Error](#tab/allocate-shipment-with-service-group-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [403 - API Error](#tab/allocate-shipment-with-service-group-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [404 - API Error](#tab/allocate-shipment-with-service-group-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [521 - API Error](#tab/allocate-shipment-with-service-group-521)
 
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 ---
 
 ## Allocate with Service Group
@@ -911,10 +1337,65 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 # [202 - Allocate Shipments Result](#tab/allocate-with-service-group-202)
 # [207 - Allocate Shipments Result](#tab/allocate-with-service-group-207)
 # [400 - API Error](#tab/allocate-with-service-group-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [403 - API Error](#tab/allocate-with-service-group-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [404 - API Error](#tab/allocate-with-service-group-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [521 - API Error](#tab/allocate-with-service-group-521)
 
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 ---
 
 ## Allocate with Filters
@@ -932,10 +1413,65 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 # [202 - Allocate with Filters Result](#tab/allocate-with-filters-202)
 # [207 - Allocate with Filters Result](#tab/allocate-with-filters-207)
 # [400 - API Error](#tab/allocate-with-filters-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [403 - API Error](#tab/allocate-with-filters-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [404 - API Error](#tab/allocate-with-filters-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [521 - API Error](#tab/allocate-with-filters-521)
 
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 ---
 
 ## Allocate Shipment with Quote
@@ -953,9 +1489,64 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 # [200 - Allocate Result](#tab/allocate-shipment-with-quote-200)
 # [202 - Allocate Result](#tab/allocate-shipment-with-quote-202)
 # [400 - API Error](#tab/allocate-shipment-with-quote-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [403 - API Error](#tab/allocate-shipment-with-quote-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [404 - API Error](#tab/allocate-shipment-with-quote-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [521 - API Error](#tab/allocate-shipment-with-quote-521)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
 
 ---
 
@@ -974,10 +1565,65 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 # [200 - Allocate Result](#tab/allocate-shipment-with-virtual-service-200)
 # [202 - Allocate Result](#tab/allocate-shipment-with-virtual-service-202)
 # [400 - API Error](#tab/allocate-shipment-with-virtual-service-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [403 - API Error](#tab/allocate-shipment-with-virtual-service-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [404 - API Error](#tab/allocate-shipment-with-virtual-service-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [521 - API Error](#tab/allocate-shipment-with-virtual-service-521)
 
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 ---
 
 ---
@@ -998,7 +1644,37 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 
 # [201 - Quote Result](#tab/create-quote-201)
 # [400 - API Error](#tab/create-quote-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+
+hello
+
 # [403 - API Error](#tab/create-quote-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+
 # [531 - Quote Result](#tab/create-quote-531)
 
 ---
@@ -1017,8 +1693,50 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 
 # [201 - Quote Result](#tab/create-quote-by-service-group-201)
 # [400 - API Error](#tab/create-quote-by-service-group-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [403 - API Error](#tab/create-quote-by-service-group-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [404 - API Error](#tab/create-quote-by-service-group-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [531 - Quote Result](#tab/create-quote-by-service-group-531)
 
 ---
@@ -1037,7 +1755,35 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 
 # [201 - Quote Result](#tab/get-quote-201)
 # [400 - API Error](#tab/get-quote-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [403 - API Error](#tab/get-quote-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [531 - Quote Result](#tab/get-quote-531)
 
 ---
@@ -1061,9 +1807,50 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 # [200 - Document](#tab/get-document-200)
 # [204 - (no body)](#tab/get-document-204)
 # [400 - API Error](#tab/get-document-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [403 - API Error](#tab/get-document-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [404 - API Error](#tab/get-document-404)
 
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 ---
 
 ## Get Customs Documents
@@ -1081,8 +1868,49 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 # [200 - List of Document](#tab/get-customs-documents-200)
 # [204 - (no body)](#tab/get-customs-documents-204)
 # [400 - API Error](#tab/get-customs-documents-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [403 - API Error](#tab/get-customs-documents-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [404 - API Error](#tab/get-customs-documents-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
 
 ---
 
@@ -1209,9 +2037,50 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 
 # [200 - Document](#tab/get-contents-label-200)
 # [400 - API Error](#tab/get-contents-label-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [403 - API Error](#tab/get-contents-label-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [404 - API Error](#tab/get-contents-label-404)
 
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 ---
 
 ---
@@ -1227,9 +2096,50 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 # [200 - Manifest Response](#tab/manifest-shipment-200)
 # [202 - Manifest Response](#tab/manifest-shipment-202)
 # [400 - API Error](#tab/manifest-shipment-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [403 - API Error](#tab/manifest-shipment-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [404 - API Error](#tab/manifest-shipment-404)
 
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 ---
 
 ## Manifest Shipments
@@ -1241,9 +2151,50 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 # [200 - Manifest Response](#tab/manifest-shipments-200)
 # [202 - Manifest Response](#tab/manifest-shipments-202)
 # [400 - API Error](#tab/manifest-shipments-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [403 - API Error](#tab/manifest-shipments-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [404 - API Error](#tab/manifest-shipments-404)
 
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 ---
 
 ## Manifest Shipment by Query
@@ -1255,9 +2206,50 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 # [200 - Manifest Response](#tab/manifest-shipments-by-query-200)
 # [202 - Manifest Response](#tab/manifest-shipments-by-query-202)
 # [400 - API Error](#tab/manifest-shipments-by-query-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [403 - API Error](#tab/manifest-shipments-by-query-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [404 - API Error](#tab/manifest-shipments-by-query-404)
 
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 ---
 
 ## Manifest Shipments by Shipment Group
@@ -1269,9 +2261,50 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 # [200 - Manifest Response](#tab/manifest-shipments-by-shipment-group-200)
 # [202 - Manifest Response](#tab/manifest-shipments-by-shipment-group-202)
 # [400 - API Error](#tab/manifest-shipments-by-shipment-group-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [403 - API Error](#tab/manifest-shipments-by-shipment-group-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [404 - API Error](#tab/manifest-shipments-by-shipment-group-404)
 
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 ---
 
 ## Get Manifest
@@ -1282,7 +2315,36 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 
 # [200 - Manifest](#tab/get-manifest-200)
 # [403 - API Error](#tab/get-manifest-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
 # [404 - API Error](#tab/get-manifest-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+---
 
 ---
 
@@ -1300,6 +2362,40 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 
 ### Response
 
+# [201 - Resource Result](#tab/create-shipment-group-201)
+# [207 - Resource Result](#tab/create-shipment-group-207)
+# [400 - API Error](#tab/create-shipment-group-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [403 - API Error](#tab/create-shipment-group-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+
+---
+
 ## Get Shipment Group
 
 ### Request
@@ -1311,6 +2407,39 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 | ATU Score | 1.0 |
 
 ### Response
+
+# [200 - Shipment Group](#tab/get-shipment-group-200)
+# [403 - API Error](#tab/get-shipment-group-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [404 - API Error](#tab/get-shipment-group-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+---
 
 ## Get Shipment Groups by Custom Reference
 
@@ -1324,6 +2453,39 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 
 ### Response
 
+# [200 - List of Shipment Group Summary](#tab/get-shipment-groups-by-custom-reference-200)
+# [403 - API Error](#tab/get-shipment-groups-by-custom-reference-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [404 - API Error](#tab/get-shipment-groups-by-custom-reference-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+---
+
 ## Get Shipment Group by Custom Reference
 
 ### Request
@@ -1335,6 +2497,39 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 | ATU Score | 1.0 |
 
 ### Response
+
+# [200 - Shipment Group](#tab/get-shipment-group-by-custom-reference-200)
+# [403 - API Error](#tab/get-shipment-group-by-custom-reference-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [404 - API Error](#tab/get-shipment-group-by-custom-reference-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+---
 
 ## Update Shipment Group
 
@@ -1348,6 +2543,69 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 
 ### Response
 
+# [200 - Resource Result](#tab/update-shipment-group-200)
+# [400 - API Error](#tab/update-shipment-group-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [403 - API Error](#tab/update-shipment-group-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [404 - API Error](#tab/update-shipment-group-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [409 - API Error](#tab/update-shipment-group-409)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+---
+
 ## Add Shipment to Group
 
 ### Request
@@ -1359,6 +2617,70 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 | ATU Score | 1.0 |
 
 ### Response
+
+# [200 - Resource Result](#tab/add-shipment-to-group-200)
+# [304 - Resource Result](#tab/add-shipment-to-group-304)
+# [400 - API Error](#tab/add-shipment-to-group-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [403 - API Error](#tab/add-shipment-to-group-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [404 - API Error](#tab/add-shipment-to-group-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [409 - API Error](#tab/add-shipment-to-group-409)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+---
 
 ## Remove Shipment from Group
 
@@ -1372,6 +2694,70 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 
 ### Response
 
+# [200 - Resource Result](#tab/remove-shipment-from-group-200)
+# [304 - Resource Result](#tab/remove-shipment-from-group-304)
+# [400 - API Error](#tab/remove-shipment-from-group-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [403 - API Error](#tab/remove-shipment-from-group-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [404 - API Error](#tab/remove-shipment-from-group-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [409 - API Error](#tab/remove-shipment-from-group-409)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+---
+
 ## Lock Shipment Group
 
 ### Request
@@ -1383,6 +2769,146 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 | ATU Score | 1.0 |
 
 ### Response
+
+# [200 - Resource Result](#tab/lock-shipment-group-200)
+# [304 - Resource Result](#tab/lock-shipment-group-304)
+# [400 - API Error](#tab/lock-shipment-group-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [403 - API Error](#tab/lock-shipment-group-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [404 - API Error](#tab/lock-shipment-group-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [409 - API Error](#tab/lock-shipment-group-409)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+---
+
+## Unlock Shipment Group
+
+### Request
+
+| Endpoint | `POST /shipments` |
+|---|---|
+| Parameters: | None |
+| Query Strings: | None | 
+| ATU Score | 1.0 |
+
+### Response
+
+# [200 - Resource Result](#tab/unlock-shipment-group-200)
+# [304 - Resource Result](#tab/unlock-shipment-group-304)
+# [400 - API Error](#tab/unlock-shipment-group-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [403 - API Error](#tab/unlock-shipment-group-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [404 - API Error](#tab/unlock-shipment-group-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [409 - API Error](#tab/unlock-shipment-group-409)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+---
 
 ## Close Shipment Group
 
@@ -1396,7 +2922,69 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 
 ### Response
 
-## Unlock Shipment Group
+# [200 - Resource Result](#tab/close-shipment-group-200)
+# [304 - Resource Result](#tab/close-shipment-group-304)
+# [400 - API Error](#tab/close-shipment-group-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [403 - API Error](#tab/close-shipment-group-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [404 - API Error](#tab/close-shipment-group-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [409 - API Error](#tab/close-shipment-group-409)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+---
 
 ---
 
@@ -1414,6 +3002,54 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 
 ### Response
 
+# [200 - Document](#tab/get-shipment-group-collection-note-200)
+# [400 - API Error](#tab/get-shipment-group-collection-note-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [403 - API Error](#tab/get-shipment-group-collection-note-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [404 - API Error](#tab/get-shipment-group-collection-note-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+---
+
 ## Get Collection Note by Query
 
 ### Request
@@ -1426,6 +3062,54 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 
 ### Response
 
+# [200 - Document](#tab/get-collection-note-by-query-200)
+# [400 - API Error](#tab/get-collection-note-by-query-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [403 - API Error](#tab/get-collection-note-by-query-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [404 - API Error](#tab/get-collection-note-by-query-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+---
+
 ## Get Collection Note by Manifests
 
 ### Request
@@ -1437,6 +3121,54 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 | ATU Score | 1.0 |
 
 ### Response
+
+# [200 - Document](#tab/get-collection-note-by-manifests-200)
+# [400 - API Error](#tab/get-collection-note-by-manifests-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [403 - API Error](#tab/get-collection-note-by-manifests-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [404 - API Error](#tab/get-collection-note-by-manifests-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+---
 
 ---
 
@@ -1454,7 +3186,55 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 
 ### Response
 
-## Get Content-Level T racking Events
+# [200 - Tracking Response](#tab/get-tracking-events-200)
+# [400 - API Error](#tab/get-tracking-events-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [403 - API Error](#tab/get-tracking-events-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [404 - API Error](#tab/get-tracking-events-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+---
+
+## Get Contents-Level Tracking Events
 
 ### Request
 
@@ -1465,6 +3245,54 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 | ATU Score | 1.0 |
 
 ### Response
+
+# [200 - Tracking Contents Response](#tab/get-contents-level-tracking-events-200)
+# [400 - API Error](#tab/get-contents-level-tracking-events-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [403 - API Error](#tab/get-contents-level-tracking-events-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [404 - API Error](#tab/get-contents-level-tracking-events-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+---
 
 ## Get Tracking Events by Custom Reference
 
@@ -1478,7 +3306,55 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 
 ### Response
 
-## Get Content-Level Tracking Events by Custom Reference
+# [200 - Tracking Response List](#tab/get-tracking-events-by-custom-reference-200)
+# [400 - API Error](#tab/get-tracking-events-by-custom-reference-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [403 - API Error](#tab/get-tracking-events-by-custom-reference-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [404 - API Error](#tab/get-tracking-events-by-custom-reference-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+---
+
+## Get Contents-Level Tracking Events by Custom Reference
 
 ### Request
 
@@ -1489,5 +3365,53 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 | ATU Score | 1.0 |
 
 ### Response
+
+# [200 - Tracking Contents Response List](#tab/get-contents-level-tracking-events-by-custom-reference-200)
+# [400 - API Error](#tab/get-contents-level-tracking-events-by-custom-reference-400)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [403 - API Error](#tab/get-contents-level-tracking-events-by-custom-reference-403)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+# [404 - API Error](#tab/get-contents-level-tracking-events-by-custom-reference-404)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_api_error](includes/_api_error.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_api_error](code-samples/_cs_api_error.md)]
+</div>
+</div>
+ 
+---
 
 <script src="/pro/scripts/dropdown.js"></script>
