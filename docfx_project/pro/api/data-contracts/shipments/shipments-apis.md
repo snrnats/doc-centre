@@ -815,7 +815,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [403 - API Error](#tab/add-paperless-document-403)
 
 <div class="dc-row">
@@ -830,7 +830,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/add-paperless-document-404)
 
 <div class="dc-row">
@@ -845,7 +845,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [409 - API Error](#tab/add-paperless-document-409)
 
 <div class="dc-row">
@@ -890,7 +890,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [403 - API Error](#tab/remove-paperless-document-403)
 
 <div class="dc-row">
@@ -905,7 +905,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/remove-paperless-document-404)
 
 <div class="dc-row">
@@ -920,7 +920,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [409 - API Error](#tab/remove-paperless-document-409)
 
 <div class="dc-row">
@@ -970,7 +970,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [403 - API Error](#tab/allocate-shipment-403)
 
 <div class="dc-row">
@@ -985,7 +985,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/allocate-shipment-404)
 
 <div class="dc-row">
@@ -1000,7 +1000,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [521 - API Error](#tab/allocate-shipment-521)
 
 <div class="dc-row">
@@ -1061,7 +1061,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/allocate-shipments-404)
 
 <div class="dc-row">
@@ -1076,7 +1076,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [521 - API Error](#tab/allocate-shipments-521)
 
 <div class="dc-row">
@@ -1091,7 +1091,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 ---
 
 ## Allocate Shipment with Carrier Service
@@ -1122,7 +1122,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [403 - API Error](#tab/allocate-shipment-with-carrier-service-403)
 
 <div class="dc-row">
@@ -1137,7 +1137,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/allocate-shipment-with-carrier-service-404)
 
 <div class="dc-row">
@@ -1152,7 +1152,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [521 - API Error](#tab/allocate-shipment-with-carrier-service-521)
 
 <div class="dc-row">
@@ -1198,7 +1198,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [403 - API Error](#tab/allocate-with-carrier-service-403)
 
 <div class="dc-row">
@@ -1213,7 +1213,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/allocate-with-carrier-service-404)
 
 <div class="dc-row">
@@ -1228,7 +1228,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [521 - API Error](#tab/allocate-with-carrier-service-521)
 
 <div class="dc-row">
@@ -1243,7 +1243,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 ---
 
 ## Allocate Shipment with Service Group
@@ -1274,7 +1274,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [403 - API Error](#tab/allocate-shipment-with-service-group-403)
 
 <div class="dc-row">
@@ -1289,7 +1289,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/allocate-shipment-with-service-group-404)
 
 <div class="dc-row">
@@ -1304,7 +1304,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [521 - API Error](#tab/allocate-shipment-with-service-group-521)
 
 <div class="dc-row">
@@ -1319,7 +1319,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 ---
 
 ## Allocate with Service Group
@@ -1350,7 +1350,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [403 - API Error](#tab/allocate-with-service-group-403)
 
 <div class="dc-row">
@@ -1365,7 +1365,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/allocate-with-service-group-404)
 
 <div class="dc-row">
@@ -1380,7 +1380,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [521 - API Error](#tab/allocate-with-service-group-521)
 
 <div class="dc-row">
@@ -1395,7 +1395,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 ---
 
 ## Allocate with Filters
@@ -1426,7 +1426,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [403 - API Error](#tab/allocate-with-filters-403)
 
 <div class="dc-row">
@@ -1441,7 +1441,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/allocate-with-filters-404)
 
 <div class="dc-row">
@@ -1456,7 +1456,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [521 - API Error](#tab/allocate-with-filters-521)
 
 <div class="dc-row">
@@ -1471,7 +1471,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 ---
 
 ## Allocate Shipment with Quote
@@ -1502,7 +1502,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [403 - API Error](#tab/allocate-shipment-with-quote-403)
 
 <div class="dc-row">
@@ -1517,7 +1517,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/allocate-shipment-with-quote-404)
 
 <div class="dc-row">
@@ -1532,7 +1532,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [521 - API Error](#tab/allocate-shipment-with-quote-521)
 
 <div class="dc-row">
@@ -1578,7 +1578,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [403 - API Error](#tab/allocate-shipment-with-virtual-service-403)
 
 <div class="dc-row">
@@ -1593,7 +1593,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/allocate-shipment-with-virtual-service-404)
 
 <div class="dc-row">
@@ -1608,7 +1608,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [521 - API Error](#tab/allocate-shipment-with-virtual-service-521)
 
 <div class="dc-row">
@@ -1623,7 +1623,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 ---
 
 ---
@@ -1657,8 +1657,6 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
-
-hello
 
 # [403 - API Error](#tab/create-quote-403)
 
@@ -1706,7 +1704,7 @@ hello
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [403 - API Error](#tab/create-quote-by-service-group-403)
 
 <div class="dc-row">
@@ -1721,7 +1719,7 @@ hello
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/create-quote-by-service-group-404)
 
 <div class="dc-row">
@@ -1736,7 +1734,7 @@ hello
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [531 - Quote Result](#tab/create-quote-by-service-group-531)
 
 ---
@@ -1768,7 +1766,7 @@ hello
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [403 - API Error](#tab/get-quote-403)
 
 <div class="dc-row">
@@ -1783,7 +1781,7 @@ hello
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [531 - Quote Result](#tab/get-quote-531)
 
 ---
@@ -1805,6 +1803,20 @@ hello
 ### Response
 
 # [200 - Document](#tab/get-document-200)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_document](includes/_document.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_document](code-samples/_cs_document.md)]
+</div>
+</div>
+
 # [204 - (no body)](#tab/get-document-204)
 # [400 - API Error](#tab/get-document-400)
 
@@ -1820,7 +1832,7 @@ hello
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [403 - API Error](#tab/get-document-403)
 
 <div class="dc-row">
@@ -1835,7 +1847,7 @@ hello
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/get-document-404)
 
 <div class="dc-row">
@@ -1850,7 +1862,7 @@ hello
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 ---
 
 ## Get Customs Documents
@@ -1881,7 +1893,7 @@ hello
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [403 - API Error](#tab/get-customs-documents-403)
 
 <div class="dc-row">
@@ -1896,7 +1908,7 @@ hello
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/get-customs-documents-404)
 
 <div class="dc-row">
@@ -2036,6 +2048,20 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 ### Response
 
 # [200 - Document](#tab/get-contents-label-200)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_document](includes/_document.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_document](code-samples/_cs_document.md)]
+</div>
+</div>
+
 # [400 - API Error](#tab/get-contents-label-400)
 
 <div class="dc-row">
@@ -2050,7 +2076,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [403 - API Error](#tab/get-contents-label-403)
 
 <div class="dc-row">
@@ -2065,7 +2091,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/get-contents-label-404)
 
 <div class="dc-row">
@@ -2080,7 +2106,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 ---
 
 ---
@@ -2109,7 +2135,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [403 - API Error](#tab/manifest-shipment-403)
 
 <div class="dc-row">
@@ -2124,7 +2150,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/manifest-shipment-404)
 
 <div class="dc-row">
@@ -2139,7 +2165,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 ---
 
 ## Manifest Shipments
@@ -2164,7 +2190,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [403 - API Error](#tab/manifest-shipments-403)
 
 <div class="dc-row">
@@ -2179,7 +2205,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/manifest-shipments-404)
 
 <div class="dc-row">
@@ -2194,7 +2220,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 ---
 
 ## Manifest Shipment by Query
@@ -2219,7 +2245,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [403 - API Error](#tab/manifest-shipments-by-query-403)
 
 <div class="dc-row">
@@ -2234,7 +2260,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/manifest-shipments-by-query-404)
 
 <div class="dc-row">
@@ -2249,7 +2275,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 ---
 
 ## Manifest Shipments by Shipment Group
@@ -2274,7 +2300,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [403 - API Error](#tab/manifest-shipments-by-shipment-group-403)
 
 <div class="dc-row">
@@ -2289,7 +2315,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/manifest-shipments-by-shipment-group-404)
 
 <div class="dc-row">
@@ -2304,7 +2330,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 ---
 
 ## Get Manifest
@@ -2328,7 +2354,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/get-manifest-404)
 
 <div class="dc-row">
@@ -2343,7 +2369,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 ---
 
 ---
@@ -2363,7 +2389,35 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 ### Response
 
 # [201 - Resource Result](#tab/create-shipment-group-201)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_resource_result](includes/_resource_result.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_cs_resource_result](code-samples/_cs_resource_result.md)]
+</div>
+</div>
+
 # [207 - Resource Result](#tab/create-shipment-group-207)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_resource_result](includes/_resource_result.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_cs_resource_result](code-samples/_cs_resource_result.md)]
+</div>
+</div>
+
 # [400 - API Error](#tab/create-shipment-group-400)
 
 <div class="dc-row">
@@ -2378,7 +2432,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [403 - API Error](#tab/create-shipment-group-403)
 
 <div class="dc-row">
@@ -2423,7 +2477,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/get-shipment-group-404)
 
 <div class="dc-row">
@@ -2438,7 +2492,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 ---
 
 ## Get Shipment Groups by Custom Reference
@@ -2468,7 +2522,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/get-shipment-groups-by-custom-reference-404)
 
 <div class="dc-row">
@@ -2483,7 +2537,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 ---
 
 ## Get Shipment Group by Custom Reference
@@ -2513,7 +2567,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/get-shipment-group-by-custom-reference-404)
 
 <div class="dc-row">
@@ -2528,7 +2582,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 ---
 
 ## Update Shipment Group
@@ -2544,6 +2598,20 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 ### Response
 
 # [200 - Resource Result](#tab/update-shipment-group-200)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_resource_result](includes/_resource_result.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_cs_resource_result](code-samples/_cs_resource_result.md)]
+</div>
+</div>
+
 # [400 - API Error](#tab/update-shipment-group-400)
 
 <div class="dc-row">
@@ -2558,7 +2626,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [403 - API Error](#tab/update-shipment-group-403)
 
 <div class="dc-row">
@@ -2573,7 +2641,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/update-shipment-group-404)
 
 <div class="dc-row">
@@ -2588,7 +2656,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [409 - API Error](#tab/update-shipment-group-409)
 
 <div class="dc-row">
@@ -2603,7 +2671,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 ---
 
 ## Add Shipment to Group
@@ -2619,7 +2687,35 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 ### Response
 
 # [200 - Resource Result](#tab/add-shipment-to-group-200)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_resource_result](includes/_resource_result.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_cs_resource_result](code-samples/_cs_resource_result.md)]
+</div>
+</div>
+
 # [304 - Resource Result](#tab/add-shipment-to-group-304)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_resource_result](includes/_resource_result.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_cs_resource_result](code-samples/_cs_resource_result.md)]
+</div>
+</div>
+
 # [400 - API Error](#tab/add-shipment-to-group-400)
 
 <div class="dc-row">
@@ -2634,7 +2730,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [403 - API Error](#tab/add-shipment-to-group-403)
 
 <div class="dc-row">
@@ -2649,7 +2745,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/add-shipment-to-group-404)
 
 <div class="dc-row">
@@ -2664,7 +2760,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [409 - API Error](#tab/add-shipment-to-group-409)
 
 <div class="dc-row">
@@ -2679,7 +2775,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 ---
 
 ## Remove Shipment from Group
@@ -2695,7 +2791,35 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 ### Response
 
 # [200 - Resource Result](#tab/remove-shipment-from-group-200)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_resource_result](includes/_resource_result.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_cs_resource_result](code-samples/_cs_resource_result.md)]
+</div>
+</div>
+
 # [304 - Resource Result](#tab/remove-shipment-from-group-304)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_resource_result](includes/_resource_result.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_cs_resource_result](code-samples/_cs_resource_result.md)]
+</div>
+</div>
+
 # [400 - API Error](#tab/remove-shipment-from-group-400)
 
 <div class="dc-row">
@@ -2710,7 +2834,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [403 - API Error](#tab/remove-shipment-from-group-403)
 
 <div class="dc-row">
@@ -2725,7 +2849,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/remove-shipment-from-group-404)
 
 <div class="dc-row">
@@ -2740,7 +2864,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [409 - API Error](#tab/remove-shipment-from-group-409)
 
 <div class="dc-row">
@@ -2755,7 +2879,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 ---
 
 ## Lock Shipment Group
@@ -2771,7 +2895,35 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 ### Response
 
 # [200 - Resource Result](#tab/lock-shipment-group-200)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_resource_result](includes/_resource_result.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_cs_resource_result](code-samples/_cs_resource_result.md)]
+</div>
+</div>
+
 # [304 - Resource Result](#tab/lock-shipment-group-304)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_resource_result](includes/_resource_result.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_cs_resource_result](code-samples/_cs_resource_result.md)]
+</div>
+</div>
+
 # [400 - API Error](#tab/lock-shipment-group-400)
 
 <div class="dc-row">
@@ -2786,7 +2938,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [403 - API Error](#tab/lock-shipment-group-403)
 
 <div class="dc-row">
@@ -2801,7 +2953,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/lock-shipment-group-404)
 
 <div class="dc-row">
@@ -2816,7 +2968,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [409 - API Error](#tab/lock-shipment-group-409)
 
 <div class="dc-row">
@@ -2831,7 +2983,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 ---
 
 ## Unlock Shipment Group
@@ -2847,7 +2999,35 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 ### Response
 
 # [200 - Resource Result](#tab/unlock-shipment-group-200)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_resource_result](includes/_resource_result.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_cs_resource_result](code-samples/_cs_resource_result.md)]
+</div>
+</div>
+
 # [304 - Resource Result](#tab/unlock-shipment-group-304)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_resource_result](includes/_resource_result.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_cs_resource_result](code-samples/_cs_resource_result.md)]
+</div>
+</div>
+
 # [400 - API Error](#tab/unlock-shipment-group-400)
 
 <div class="dc-row">
@@ -2862,7 +3042,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [403 - API Error](#tab/unlock-shipment-group-403)
 
 <div class="dc-row">
@@ -2877,7 +3057,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/unlock-shipment-group-404)
 
 <div class="dc-row">
@@ -2892,7 +3072,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [409 - API Error](#tab/unlock-shipment-group-409)
 
 <div class="dc-row">
@@ -2907,7 +3087,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 ---
 
 ## Close Shipment Group
@@ -2923,7 +3103,35 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 ### Response
 
 # [200 - Resource Result](#tab/close-shipment-group-200)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_resource_result](includes/_resource_result.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_cs_resource_result](code-samples/_cs_resource_result.md)]
+</div>
+</div>
+
 # [304 - Resource Result](#tab/close-shipment-group-304)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_resource_result](includes/_resource_result.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_cs_resource_result](code-samples/_cs_resource_result.md)]
+</div>
+</div>
+
 # [400 - API Error](#tab/close-shipment-group-400)
 
 <div class="dc-row">
@@ -2938,7 +3146,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [403 - API Error](#tab/close-shipment-group-403)
 
 <div class="dc-row">
@@ -2953,7 +3161,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/close-shipment-group-404)
 
 <div class="dc-row">
@@ -2968,7 +3176,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [409 - API Error](#tab/close-shipment-group-409)
 
 <div class="dc-row">
@@ -2983,7 +3191,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 ---
 
 ---
@@ -3003,6 +3211,20 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 ### Response
 
 # [200 - Document](#tab/get-shipment-group-collection-note-200)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_document](includes/_document.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_document](code-samples/_cs_document.md)]
+</div>
+</div>
+
 # [400 - API Error](#tab/get-shipment-group-collection-note-400)
 
 <div class="dc-row">
@@ -3017,7 +3239,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [403 - API Error](#tab/get-shipment-group-collection-note-403)
 
 <div class="dc-row">
@@ -3032,7 +3254,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/get-shipment-group-collection-note-404)
 
 <div class="dc-row">
@@ -3047,7 +3269,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 ---
 
 ## Get Collection Note by Query
@@ -3063,6 +3285,20 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 ### Response
 
 # [200 - Document](#tab/get-collection-note-by-query-200)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_document](includes/_document.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_document](code-samples/_cs_document.md)]
+</div>
+</div>
+
 # [400 - API Error](#tab/get-collection-note-by-query-400)
 
 <div class="dc-row">
@@ -3077,7 +3313,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [403 - API Error](#tab/get-collection-note-by-query-403)
 
 <div class="dc-row">
@@ -3092,7 +3328,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/get-collection-note-by-query-404)
 
 <div class="dc-row">
@@ -3107,7 +3343,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 ---
 
 ## Get Collection Note by Manifests
@@ -3123,6 +3359,20 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 ### Response
 
 # [200 - Document](#tab/get-collection-note-by-manifests-200)
+
+<div class="dc-row">
+    <div class="dc-column">
+            <h4>Properties</h4>
+
+[!include[_document](includes/_document.md)]
+</div>
+    <div class="dc-column">
+            <h4>Example</h4>
+
+[!include[_document](code-samples/_cs_document.md)]
+</div>
+</div>
+
 # [400 - API Error](#tab/get-collection-note-by-manifests-400)
 
 <div class="dc-row">
@@ -3137,7 +3387,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [403 - API Error](#tab/get-collection-note-by-manifests-403)
 
 <div class="dc-row">
@@ -3152,7 +3402,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/get-collection-note-by-manifests-404)
 
 <div class="dc-row">
@@ -3167,7 +3417,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 ---
 
 ---
@@ -3201,7 +3451,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [403 - API Error](#tab/get-tracking-events-403)
 
 <div class="dc-row">
@@ -3216,7 +3466,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/get-tracking-events-404)
 
 <div class="dc-row">
@@ -3231,7 +3481,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 ---
 
 ## Get Contents-Level Tracking Events
@@ -3261,7 +3511,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [403 - API Error](#tab/get-contents-level-tracking-events-403)
 
 <div class="dc-row">
@@ -3276,7 +3526,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/get-contents-level-tracking-events-404)
 
 <div class="dc-row">
@@ -3291,7 +3541,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 ---
 
 ## Get Tracking Events by Custom Reference
@@ -3321,7 +3571,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [403 - API Error](#tab/get-tracking-events-by-custom-reference-403)
 
 <div class="dc-row">
@@ -3336,7 +3586,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/get-tracking-events-by-custom-reference-404)
 
 <div class="dc-row">
@@ -3351,7 +3601,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 ---
 
 ## Get Contents-Level Tracking Events by Custom Reference
@@ -3381,7 +3631,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [403 - API Error](#tab/get-contents-level-tracking-events-by-custom-reference-403)
 
 <div class="dc-row">
@@ -3396,7 +3646,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 # [404 - API Error](#tab/get-contents-level-tracking-events-by-custom-reference-404)
 
 <div class="dc-row">
@@ -3411,7 +3661,7 @@ For a user guide on the **Get Labels** endpoint, see the [Getting Shipment Label
 [!include[_api_error](code-samples/_cs_api_error.md)]
 </div>
 </div>
- 
+
 ---
 
 <script src="/pro/scripts/dropdown.js"></script>
