@@ -163,7 +163,7 @@ This endpoint is used to update an existing shipment within SortedPRO. The shipm
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_update_shipment_request](includes/_update_shipment_request.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -609,7 +609,7 @@ This endpoint can be used to manually change the state of a shipment to the prov
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_shipment_state_change_request](includes/_shipment_state_change_request.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -747,7 +747,7 @@ Returned when the shipment has been located and returned successfully.
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_shipment](includes/_shipment.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -822,7 +822,7 @@ Returned when the request was successful and one or more shipments have been loc
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_shipment_list](includes/_shipment_list.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -911,7 +911,7 @@ Returned when the request was successful. The response includes the relevant doc
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_paperless_document](includes/_paperless_document.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -995,7 +995,7 @@ This endpoint is used to enable customers to add paperless documents to existing
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_paperless_document](includes/_paperless_document.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -1006,7 +1006,7 @@ This endpoint is used to enable customers to add paperless documents to existing
 
 ### Response
 
-# [201 - Paperless Document](#tab/add-paperless-document-201)
+# [201 - Resource Result](#tab/add-paperless-document-201)
 
 Returned when the request was successful. The response includes the reference of the new document.
 
@@ -1014,7 +1014,7 @@ Returned when the request was successful. The response includes the reference of
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_resource_result](includes/_resource_result.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -1111,7 +1111,7 @@ This endpoint is used to remove an existing paperless_document from a shipment.
 
 ### Response
 
-# [200 - Paperless Document](#tab/remove-paperless-document-200)
+# [200 - Resource Result](#tab/remove-paperless-document-200)
 
 Returned when the request was successful. The paperless_document has been deleted successfully.
 
@@ -1119,7 +1119,7 @@ Returned when the request was successful. The paperless_document has been delete
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_resource_result](includes/_resource_result.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -1231,7 +1231,7 @@ Returned when the shipment has been allocated successfully.
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_allocate_result](includes/_allocate_result.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -1248,7 +1248,7 @@ The request to allocate the shipment has been accepted and will be processed as 
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_allocate_result](includes/_allocate_result.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -1352,7 +1352,7 @@ This endpoint is used when you wish to allocate multiple shipments using Sorted'
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_allocate_request](includes/_allocate_request.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -1371,7 +1371,7 @@ The request to allocate the shipments has been accepted and will be processed as
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_allocate_shipments_result](includes/_allocate_shipments_result.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -1388,7 +1388,7 @@ Returned when one or more shipments have been queued for allocation successfully
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_allocate_shipments_result](includes/_allocate_shipments_result.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -1490,7 +1490,7 @@ Returned when the shipment has been allocated successfully.
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_allocate_result](includes/_allocate_result.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -1507,7 +1507,7 @@ The request to allocate the shipment has been accepted and will be processed as 
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_allocate_result](includes/_allocate_result.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -1608,7 +1608,7 @@ This endpoint is used when you wish to allocate one or more shipments with a spe
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_allocate_with_carrier_service_request](includes/_allocate_with_carrier_service_request.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -1627,7 +1627,7 @@ The request to allocate the shipments has been accepted and will be processed as
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_allocate_shipments_result](includes/_allocate_shipments_result.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -1644,7 +1644,7 @@ Returned when one or more shipments have been queued for allocation successfully
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_allocate_shipments_result](includes/_allocate_shipments_result.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -1746,7 +1746,7 @@ Returned when the shipment has been allocated successfully.
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_allocate_result](includes/_allocate_result.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -1763,7 +1763,7 @@ The request to allocate the shipment has been accepted and will be processed as 
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_allocate_result](includes/_allocate_result.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -1864,7 +1864,7 @@ This endpoint is used to allocate multiple shipments with a carrier service from
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_	allocate_with_service_group_request](includes/_	allocate_with_service_group_request.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -1883,7 +1883,7 @@ The request to allocate the shipments has been accepted and will be processed as
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_allocate_shipments_result](includes/_allocate_shipments_result.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -1900,7 +1900,7 @@ Returned when one or more shipments have been queued for allocation successfully
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_allocate_shipments_result](includes/_allocate_shipments_result.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -2001,7 +2001,7 @@ This endpoint is used when you wish to allocate one or more shipments by selecti
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_allocate_with_filters_request](includes/_allocate_with_filters_requeste.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -2020,7 +2020,7 @@ The request to allocate the shipments has been accepted and will be processed as
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_allocate_with_filters_result](includes/_allocate_with_filters_result.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -2037,7 +2037,7 @@ Returned when one or more shipments have been queued for allocation successfully
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_allocate_with_filters_result](includes/_allocate_with_filters_result.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -2139,7 +2139,7 @@ Returned when the shipment has been allocated successfully.
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_allocate_result](includes/_allocate_result.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -2156,7 +2156,7 @@ The request to allocate the shipment has been accepted and will be processed as 
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_allocate_result](includes/_allocate_result.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -2261,7 +2261,7 @@ Returned when the shipment has been allocated successfully.
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_allocate_result](includes/_allocate_result.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -2278,7 +2278,7 @@ The request to allocate the shipment has been accepted and will be processed as 
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_allocate_result](includes/_allocate_result.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -2383,7 +2383,7 @@ This endpoint is used to retrieve a list of carrier services that are capable of
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_create_shipment_request](includes/_create_shipment_request.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -2401,8 +2401,8 @@ Returned when one or more quotes have been generated successfully.
 <div class="dc-row">
     <div class="dc-column">
             <h4>Properties</h4>
-
-[!include[_template](includes/_template.md)]
+t
+[!include[_quote_result](includes/_quote_result.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -2453,7 +2453,7 @@ Returned when the request was received successfully, but there are no quotes are
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_quote_result](includes/_quote_result.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -2486,7 +2486,7 @@ This endpoint is used to retrieve a list of carrier services within a specific s
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_create_shipment_request](includes/_create_shipment_request.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -2505,7 +2505,7 @@ Returned when one or more quotes have been generated successfully.
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_quote_result](includes/_quote_result.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -2573,7 +2573,7 @@ Returned when the request was received successfully, but there are no quotes are
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_quote_result](includes/_quote_result.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -2607,7 +2607,7 @@ Returned when one or more quotes have been generated successfully.
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_quote_result](includes/_quote_result.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -2658,7 +2658,7 @@ Returned when the request was received successfully, but the no quotes are avail
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_quote_result](includes/_quote_result.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -2791,7 +2791,7 @@ Returned when the request was successful. The response includes the relevant doc
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_document](includes/_document.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -3088,7 +3088,7 @@ Returned when the shipment has been manifested successfully.
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_manifest_response](includes/_manifest_response.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -3105,7 +3105,7 @@ Returned when the request has been processed successfully and manifest has been 
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_manifest_response](includes/_manifest_response.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -3189,7 +3189,7 @@ This endpoint is used to manually manifest multiple shipments.
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_manifest_request](includes/_manifest_request.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -3208,7 +3208,7 @@ Returned when the shipment has been manifested successfully.
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_manifest_response](includes/_manifest_response.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -3225,7 +3225,7 @@ Returned when the request has been processed successfully and manifest has been 
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_manifest_response](includes/_manifest_response.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -3306,7 +3306,7 @@ This endpoint allows multiple shipments to be manifest at once by using a specif
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_manifest_query_request](includes/_manifest_query_request.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -3325,7 +3325,7 @@ Returned when the shipment(s) have been manifested successfully.
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_manifest_response](includes/_manifest_response.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -3342,7 +3342,7 @@ Returned when the request has been processed successfully and manifest has been 
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_manifest_response](includes/_manifest_response.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -3430,7 +3430,7 @@ Returned when the shipment(s) have been manifested successfully.
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_manifest_response](includes/_manifest_response.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -3447,7 +3447,7 @@ Returned when the request has been processed successfully and manifest has been 
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_manifest_response](includes/_manifest_response.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -3535,7 +3535,7 @@ Returned when the request was successful. The response will contain the details 
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_manifest](includes/_manifest.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -3606,7 +3606,7 @@ A shipment_group is a group of one or more shipments that can be operated on tog
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_create_shipment_group_request](includes/_create_shipment_group_request.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -3710,7 +3710,7 @@ Returned when the request was successful. The shipment_group will be included in
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_shipment_group](includes/_shipment_group.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -3778,7 +3778,7 @@ Returned when the request was successful. Summary details will be included in th
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_shipment_group_summary](includes/_shipment_group_summary.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -3846,7 +3846,7 @@ Returned when the request was successful. The shipment_group details will be inc
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_shipment_group](includes/_shipment_group.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -3910,7 +3910,7 @@ This endpoint is used to update an existing shipment_group such as adding or rem
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_update_shipment_group_request](includes/_update_shipment_group_request.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -4723,7 +4723,7 @@ This endpoint can be used to retrieve an auto-generated collection_note for ship
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_collection_note_query_request](includes/_collection_note_query_request.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -4826,7 +4826,7 @@ This endpoint can be used to retrieve an auto-generated collection_note for ship
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_collection_note_from_manifest_request](includes/_collection_note_from_manifest_request.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -4937,7 +4937,7 @@ Returned when the request was successful. The tracking_response will include the
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_tracking_response](includes/_tracking_response.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -5025,7 +5025,7 @@ Returned when the request was successful. The tracking_contents_response will in
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_tracking_contents_response](includes/_tracking_contents_response.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -5115,7 +5115,7 @@ Returned when the request was successful. The tracking_response_list will includ
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_tracking_response_list](includes/_tracking_response_list.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
@@ -5203,7 +5203,7 @@ Returned when the request was successful. The tracking_contents_response_list wi
     <div class="dc-column">
             <h4>Properties</h4>
 
-[!include[_template](includes/_template.md)]
+[!include[_tracking_contents_response_list](includes/_tracking_contents_response_list.md)]
 </div>
     <div class="dc-column">
             <h4>Example</h4>
