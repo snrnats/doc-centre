@@ -1,34 +1,31 @@
 <div class="property">
-    <div class="name">property1</div>
-    <div class="type"><code>type</code> object</div>
-    <div class="occurs">occurs</div>
-    <div class="description">A description of the property</div>
-    <div class="validation">Validation rules for the property</div>
+    <div class="name">reference</div>
+    <div class="type">
+
+[!include[_datatype_string](_datatype_string.md)]
+</div>
+    <div class="occurs">1</div>
+    <div class="description">A unique reference for this result</div>
+</div>
+<div class="property">
+    <div class="name">shipments</div>
+    <div class="type">list of<code>link</code> objects</div>
+    <div class="occurs">0..n</div>
+    <div class="description">Provides the references of (and links to) the shipments identified by the filters. Each shipment will have been submitted for allocation.</div>
     <div class="dropdown"> 
-        <button onclick="dropFunction(this)">Show values</button>
+        <button onclick="dropFunction(this)">Show child properties</button>
         <div class="dropdown-content">
 
-[!include[_level2](_level2.md)]
+[!include[_links](_links.md)]
 </div>
     </div>    
 </div>
 <div class="property">
-    <div class="name">property2</div>
+    <div class="name">message</div>
     <div class="type">
 
 [!include[_datatype_string](_datatype_string.md)]
 </div>
-    <div class="occurs">occurs</div>
-    <div class="description">A description of the property</div>
-    <div class="validation">Validation rules for the property</div>
-</div>
-<div class="property">
-    <div class="name">property3</div>
-    <div class="type">
-
-[!include[_datatype_string](_datatype_string.md)]
-</div>
-    <div class="occurs">occurs</div>
-    <div class="description">A description of the property</div>
-    <div class="validation">Validation rules for the property</div>
+    <div class="occurs">1</div>
+    <div class="description">A plain-text message describing the result of the operation</div>
 </div>
