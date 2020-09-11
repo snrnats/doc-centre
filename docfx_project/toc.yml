@@ -6,7 +6,7 @@
   - name: API Reference
     href: https://docs.electioapp.com/#/api
   - name: Example Call Flows
-    href: /pro/api/help/flows.html      
+    href: /pro/api/help/flows.html     
   - name: Reports
     href: pro/reports/
     homepage: pro/reports/index.md
@@ -25,4 +25,6 @@
   - name: API Reference
     href: https://docs.sorted.com/react/api
   - name: UI Help
-    href: /react/help/ui-help.html          
+    href: /react/help/ui-help.html
+- name: Swagger
+  href: swagger/

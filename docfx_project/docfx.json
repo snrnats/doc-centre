@@ -27,6 +27,11 @@
           "toc.yml",
           "*.md"
         ]
+      },
+      {
+        "files": [
+          "swagger/**"
+        ]
       }
     ],
     "resource": [{
@@ -46,6 +51,23 @@
         "files": [
           "myfavicon.ico"
         ]
+      }
+    ],
+    "metadata": [
+      {
+        "src": [
+          {
+            "files": [
+              "swagger/**"
+            ],
+            "exclude": [
+              "**/bin/**",
+              "**/obj/**",
+              "_site/**"
+            ]
+          }
+        ],
+        "dest": "swagger"
       }
     ],
     "overwrite": [{
