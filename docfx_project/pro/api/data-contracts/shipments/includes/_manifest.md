@@ -1,34 +1,31 @@
 <div class="property">
-    <div class="name">property1</div>
-    <div class="type"><code>type</code> object</div>
-    <div class="occurs">occurs</div>
-    <div class="description">A description of the property</div>
-    <div class="validation">Validation rules for the property</div>
+    <div class="name">reference</div>
+    <div class="type">
+
+[!include[_datatype_string](_datatype_string.md)]
+</div>
+    <div class="occurs">1</div>
+    <div class="description">The unique reference for this manifest</div>
+</div>
+<div class="property">
+    <div class="name">shipments</div>
+    <div class="type">list of <code>shipment_state_summary</code> objects</div>
+    <div class="occurs">1..n</div>
+    <div class="description">Provides the shipment reference and current state of the shipment</div>
     <div class="dropdown"> 
-        <button onclick="dropFunction(this)">Show values</button>
+        <button onclick="dropFunction(this)">Show child properties</button>
         <div class="dropdown-content">
 
-[!include[_level2](_level2.md)]
+[!include[_shipment_state_summary](_shipment_state_summary.md)]
 </div>
     </div>    
 </div>
 <div class="property">
-    <div class="name">property2</div>
+    <div class="name">created</div>
     <div class="type">
 
-[!include[_datatype_string](_datatype_string.md)]
+[!include[_datatype_datetime](_datatype_datetime.md)]
 </div>
-    <div class="occurs">occurs</div>
-    <div class="description">A description of the property</div>
-    <div class="validation">Validation rules for the property</div>
-</div>
-<div class="property">
-    <div class="name">property3</div>
-    <div class="type">
-
-[!include[_datatype_string](_datatype_string.md)]
-</div>
-    <div class="occurs">occurs</div>
-    <div class="description">A description of the property</div>
-    <div class="validation">Validation rules for the property</div>
+    <div class="occurs">1</div>
+    <div class="description">The date and time that the manifest was created</div>
 </div>

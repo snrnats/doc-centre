@@ -1,34 +1,31 @@
 <div class="property">
-    <div class="name">property1</div>
-    <div class="type"><code>type</code> object</div>
-    <div class="occurs">occurs</div>
-    <div class="description">A description of the property</div>
-    <div class="validation">Validation rules for the property</div>
+    <div class="name">date_first_retrieved	</div>
+    <div class="type">
+
+[!include[_datatype_datetime](_datatype_datetime.md)]
+</div>
+    <div class="occurs">0..1</div>
+    <div class="description">The date and time that the label for this allocation was first retrieved</div>
+</div>
+<div class="property">
+    <div class="name">retrieval_count</div>
+    <div class="type">
+
+[!include[_datatype_integer](_datatype_integer.md)]
+</div>
+    <div class="occurs">1</div>
+    <div class="description">The number of times that the label for this allocation has been retrieved</div>
+</div>
+<div class="property">
+    <div class="name">_links</div>
+    <div class="type">list of <code>link</code> objects</div>
+    <div class="occurs">0..n</div>
+    <div class="description">Links to retrieve the label(s)	</div>
     <div class="dropdown"> 
-        <button onclick="dropFunction(this)">Show values</button>
+        <button onclick="dropFunction(this)">Show child properties</button>
         <div class="dropdown-content">
 
-[!include[_level2](_level2.md)]
+[!include[_links](_links.md)]
 </div>
     </div>    
-</div>
-<div class="property">
-    <div class="name">property2</div>
-    <div class="type">
-
-[!include[_datatype_string](_datatype_string.md)]
-</div>
-    <div class="occurs">occurs</div>
-    <div class="description">A description of the property</div>
-    <div class="validation">Validation rules for the property</div>
-</div>
-<div class="property">
-    <div class="name">property3</div>
-    <div class="type">
-
-[!include[_datatype_string](_datatype_string.md)]
-</div>
-    <div class="occurs">occurs</div>
-    <div class="description">A description of the property</div>
-    <div class="validation">Validation rules for the property</div>
 </div>

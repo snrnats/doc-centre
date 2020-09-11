@@ -1,34 +1,8 @@
 <div class="property">
-    <div class="name">property1</div>
-    <div class="type"><code>type</code> object</div>
-    <div class="occurs">occurs</div>
-    <div class="description">A description of the property</div>
-    <div class="validation">Validation rules for the property</div>
-    <div class="dropdown"> 
-        <button onclick="dropFunction(this)">Show values</button>
-        <div class="dropdown-content">
-
-[!include[_level2](_level2.md)]
-</div>
-    </div>    
+    <div class="name">fixed</div>
+    <div class="description">The value is fixed at a particular value, regardless of the overall value of the quote</div>
 </div>
 <div class="property">
-    <div class="name">property2</div>
-    <div class="type">
-
-[!include[_datatype_string](_datatype_string.md)]
-</div>
-    <div class="occurs">occurs</div>
-    <div class="description">A description of the property</div>
-    <div class="validation">Validation rules for the property</div>
-</div>
-<div class="property">
-    <div class="name">property3</div>
-    <div class="type">
-
-[!include[_datatype_string](_datatype_string.md)]
-</div>
-    <div class="occurs">occurs</div>
-    <div class="description">A description of the property</div>
-    <div class="validation">Validation rules for the property</div>
+    <div class="name">calculated</div>
+    <div class="description">The value is calculated based on the other factors in the surcharge and does not have a specific or fixed value</div>
 </div>
