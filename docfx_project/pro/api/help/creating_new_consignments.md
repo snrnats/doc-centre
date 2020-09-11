@@ -53,7 +53,7 @@ Adding optional properties when you create a consignment can help you to get mor
 
 ### Adding an EORI Number
 
-If required, you can record a consignment's EORI number using the `Metadata` property. To do so, add a property with a `KeyValue` of _ShippersEORI_ and a `StringValue` representing the number itself.
+If required, you can record a shipper EORI number for a consignment using the `Metadata` property. To do so, add a property with a `KeyValue` of _ShippersEORI_ and a `StringValue` representing the number itself.
 
 # [EORI Number Example](#tab/eori-number-example)
 
@@ -78,7 +78,7 @@ If required, you can record a consignment's EORI number using the `Metadata` pro
 ```
 ---
 
-If you add a `ShippersEORI` metadata property to an international consignment, then PRO automatically adds an **EORI Number** field to the commercial invoice that is automatically generated when the consignment is allocated.
+If you add a `ShippersEORI` metadata property to an international consignment, then PRO adds an **EORI Number** field to the commercial invoice which is generated when the consignment is allocated.
 
 > [!NOTE]
 > For more information on commercial invoices and other customs documents in PRO, see the [Getting Customs Docs and Invoices](/pro/api/help/getting_customs_docs_and_invoices.html) page. 
