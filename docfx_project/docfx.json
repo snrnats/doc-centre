@@ -17,7 +17,12 @@
           "react/help/**.md",
           "react/help/**.yml"          
         ]
-      },      
+      },
+      {
+        "files": [
+          "pro/api/data-contracts/**"
+        ]
+      },           
       {
         "files": [
           "pro/reports/**.md",
