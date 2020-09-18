@@ -15,15 +15,15 @@ created: 12/08/2020
 
 # Allocation
 
-## Allocate Consignment
+## Allocate Consignments
 
 Allocates the specified consignment using default rules.
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `PUT https://api.electioapp.com/allocation/{consignmentReference}/allocatewithcheapestquote` |
 |---|---|
-| Parameters: | None |
+| Parameters: | Consignment Reference	string |
 | Query Strings: | None | 
 | Body: | Create Shipment Request | 
 
@@ -39,9 +39,10 @@ Allocates the specified consignment with the specified Carrier Service Group.
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `PUT https://api.electioapp.com/allocation/{consignmentReference}/allocatewithservicegroup/{mpdCarrierServiceGroupReference}` |
 |---|---|
-| Parameters: | None |
+| Parameters: | Consignment Reference	string
+Mpd Carrier Service Group Reference	string |
 | Query Strings: | None | 
 | Body: | Create Shipment Request | 
 
@@ -57,7 +58,7 @@ Allocates the specified consignments using your default rules.
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `PUT https://api.electioapp.com/allocation/allocate` |
 |---|---|
 | Parameters: | None |
 | Query Strings: | None | 
@@ -76,7 +77,7 @@ Allocates the specified consignments with the specified carrier service.
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `PUT https://api.electioapp.com/allocation/allocatewithcarrierservice` |
 |---|---|
 | Parameters: | None |
 | Query Strings: | None | 
@@ -94,9 +95,10 @@ Allocates the consignment with the specified quote.
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `PUT https://api.electioapp.com/allocation/{consignmentReference}/allocatewithquote/{quoteReference}` |
 |---|---|
-| Parameters: | None |
+| Parameters: | Consignment Reference	string
+Quote Reference	Guid |
 | Query Strings: | None | 
 | Body: | Create Shipment Request | 
 
@@ -112,9 +114,9 @@ Deallocates the specified consignment. Note: the consignment must be in an alloc
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `PUT https://api.electioapp.com/consignments/{consignmentReference}/deallocate` |
 |---|---|
-| Parameters: | None |
+| Parameters: | Consignment Reference	string |
 | Query Strings: | None | 
 | Body: | Create Shipment Request | 
 
@@ -130,7 +132,7 @@ Deallocates the specified consignments
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `PUT https://api.electioapp.com/consignments/deallocatelist` |
 |---|---|
 | Parameters: | None |
 | Query Strings: | None | 
@@ -150,7 +152,7 @@ Returns the available MPD Carrier Services for your subscription.
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `GET https://api.electioapp.com/carrierservices` |
 |---|---|
 | Parameters: | None |
 | Query Strings: | None | 
@@ -171,7 +173,7 @@ Returns all Carriers
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `GET https://api.electioapp.com/carriers/getcarriers` |
 |---|---|
 | Parameters: | None |
 | Query Strings: | None | 
@@ -188,7 +190,7 @@ Returns all MPD Carrier Services in a subscription
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `GET https://api.electioapp.com/carriers` |
 |---|---|
 | Parameters: | None |
 | Query Strings: | None | 
@@ -209,9 +211,10 @@ Gets the collection calendar for the specified shipping location and MPD Carrier
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `GET https://api.electioapp.com/collectioncalendar/{shippingLocationReference}/{mpdCarrierReference}` |
 |---|---|
-| Parameters: | None |
+| Parameters: | Shipping Location Reference	string
+Mpd Carrier Reference	string |
 | Query Strings: | None | 
 | Body: | Create Shipment Request | 
 
@@ -230,9 +233,9 @@ Add a new package to an existing consignment.
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `POST https://api.electioapp.com/consignments/{consignmentReference}/addpackage` |
 |---|---|
-| Parameters: | None |
+| Parameters: | Consignment Reference	string |
 | Query Strings: | None | 
 | Body: | Create Shipment Request | 
 
@@ -248,9 +251,9 @@ Cancels the specified consignment.
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `PUT https://api.electioapp.com/consignments/{consignmentReference}/cancel` |
 |---|---|
-| Parameters: | None |
+| Parameters: | Consignment Reference	string |
 | Query Strings: | None | 
 | Body: | Create Shipment Request | 
 
@@ -266,7 +269,7 @@ Cancels the specified consignments
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `PUT https://api.electioapp.com/consignments/cancellist` |
 |---|---|
 | Parameters: | None |
 | Query Strings: | None | 
@@ -284,7 +287,7 @@ Create a new consignment
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `POST https://api.electioapp.com/consignments` |
 |---|---|
 | Parameters: | None |
 | Query Strings: | None | 
@@ -302,7 +305,7 @@ Dispatches the specified consignments.
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `PUT https://api.electioapp.com/consignments/Dispatch` |
 |---|---|
 | Parameters: | None |
 | Query Strings: | None | 
@@ -320,9 +323,9 @@ Retrieve the details of the specified consignment
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `GET https://api.electioapp.com/consignments/{consignmentReference}` |
 |---|---|
-| Parameters: | None |
+| Parameters: | Consignment Reference	string |
 | Query Strings: | None | 
 | Body: | Create Shipment Request | 
 
@@ -337,9 +340,9 @@ Returns the status of the specified consignment
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `GET https://api.electioapp.com/consignments/{consignmentReference}/status` |
 |---|---|
-| Parameters: | None |
+| Parameters: | Consignment Reference	string |
 | Query Strings: | None | 
 | Body: | Create Shipment Request | 
 
@@ -354,9 +357,9 @@ Returns the consignment including associated metadata.
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `GET https://api.electioapp.com/consignments/getconsignmentwithmetadata/{consignmentReference}` |
 |---|---|
-| Parameters: | None |
+| Parameters: | Consignment Reference	string |
 | Query Strings: | None | 
 | Body: | Create Shipment Request | 
 
@@ -371,7 +374,7 @@ Returns a list of consignment references based off search criteria
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `GET https://api.electioapp.com/consignments/getConsignmentReferences` |
 |---|---|
 | Parameters: | None |
 | Query Strings: | None | 
@@ -389,9 +392,9 @@ Returns the specified manifest.
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `GET https://api.electioapp.com/consignments/customer/manifest/{manifestReference}` |
 |---|---|
-| Parameters: | None |
+| Parameters: | Manifest Reference	string |
 | Query Strings: | None | 
 | Body: | Create Shipment Request | 
 
@@ -406,10 +409,10 @@ Returns all customer manifests with an optional shipping location query string p
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `GET https://api.electioapp.com/consignments/customer/manifests?shippingLocationReference=string` |
 |---|---|
 | Parameters: | None |
-| Query Strings: | None | 
+| Query Strings: | Shipping Location Reference	string | 
 | Body: | Create Shipment Request | 
 
 ### Response
@@ -423,9 +426,10 @@ Search for matching consignments.
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `GET https://api.electioapp.com/consignments/{take}/{skip}?startFrom=date&endAt=date&pageSize=int&startPage=int&createdDateFrom=date&createdDateTo=date&scheduledDeliveryDateFrom=date&scheduledDeliveryDateTo=date&shippedDateFrom=date&shippedDateTo=date&shippingDateFrom=date&shippingDateTo=date&requestedDeliveryDateFrom=date&requestedDeliveryDateTo=date&reference=string&referenceProvidedByCustomer=string&trackingReference=string&state=string&weightInGramsFrom=int&weightInGramsTo=int&carrierService=string&source=string&postCode=string&valueFrom=decimal&valueTo=decimal&labelsPrinted=boolean&searchTerm=string&stateAttribute=string&shippingLocationReference=string&destinationCountryCode=string&destinationRegion=string&packageNumber=string&consignmentNumber=string&creference=string&preference=string` |
 |---|---|
-| Parameters: | None |
+| Parameters: | Take	int
+Skip	int |
 | Query Strings: | None | 
 | Body: | Create Shipment Request | 
 
@@ -440,10 +444,44 @@ Sets the specified consignments as 'Allocated' from 'Ready to Ship'.
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `PUT https://api.electioapp.com/consignments/setnotreadytoship` |
 |---|---|
 | Parameters: | None |
-| Query Strings: | None | 
+| Query Strings: | Start From	date
+End At	date
+Page Size	int
+Start Page	int
+Created Date From	date
+Created Date To	date
+Scheduled Delivery Date From	date
+Scheduled Delivery Date To	date
+Shipped Date From	date
+Shipped Date To	date
+Shipping Date From	date
+Shipping Date To	date
+Requested Delivery Date From	date
+Requested Delivery Date To	date
+Reference	string
+Reference Provided By Customer	string
+Tracking Reference	string
+State	string
+Weight In Grams From	int
+Weight In Grams To	int
+Carrier Service	string
+Source	string
+Post Code	string
+Value From	decimal
+Value To	decimal
+Labels Printed	boolean
+Search Term	string
+State Attribute	string
+Shipping Location Reference	string
+Destination Country Code	string
+Destination Region	string
+Package Number	string
+Consignment Number	string
+Creference	string
+Preference	string | 
 | Body: | Create Shipment Request | 
 
 ### Response
@@ -457,7 +495,7 @@ Sets the specified consignments as 'Ready to Ship'. Only applicable to consignme
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `PUT https://api.electioapp.com/consignments/setreadytoship` |
 |---|---|
 | Parameters: | None |
 | Query Strings: | None | 
@@ -474,7 +512,7 @@ Updates the specified consignment. Note: this method will replace any provided p
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `PUT https://api.electioapp.com/consignments/` |
 |---|---|
 | Parameters: | None |
 | Query Strings: | None | 
@@ -496,9 +534,9 @@ Returns the commercial invoice for the specified consignment.
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `GET https://api.electioapp.com/consignments/docs/commercialinvoice/{consignmentReference}` |
 |---|---|
-| Parameters: | None |
+| Parameters: | Consignment Reference	string |
 | Query Strings: | None | 
 | Body: | Create Shipment Request | 
 
@@ -513,9 +551,11 @@ Gets the document of the requested type.
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `GET https://api.electioapp.com/consignments/docs/{customsDocumentType}/{consignmentReference}/{packageReference}` |
 |---|---|
-| Parameters: | None |
+| Parameters: | Customs Document Type	string
+Consignment Reference	string
+Package Reference	string |
 | Query Strings: | None | 
 | Body: | Create Shipment Request | 
 
@@ -530,9 +570,9 @@ Returns all customs documents for the specified consignment.
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `GET https://api.electioapp.com/consignments/docs/{consignmentReference}` |
 |---|---|
-| Parameters: | None |
+| Parameters: | Consignment Reference	string |
 | Query Strings: | None | 
 | Body: | Create Shipment Request | 
 
@@ -551,7 +591,7 @@ Return a summary of delivery options matching the request details.
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `POST https://api.electioapp.com/deliveryoptions/summary` |
 |---|---|
 | Parameters: | None |
 | Query Strings: | None | 
@@ -567,7 +607,7 @@ Returns delivery options matching the request details.
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `POST https://api.electioapp.com/deliveryoptions` |
 |---|---|
 | Parameters: | None |
 | Query Strings: | None | 
@@ -583,9 +623,9 @@ Returns the details of an existing delivery option.
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `GET https://api.electioapp.com/deliveryoptions/details/{deliveryOptionReference}` |
 |---|---|
-| Parameters: | None |
+| Parameters: | Delivery Option Reference	string |
 | Query Strings: | None | 
 | Body: | Create Shipment Request | 
 
@@ -600,7 +640,7 @@ Select orders using delivery option references
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `POST https://api.electioapp.com/deliveryoptions/selectorder` |
 |---|---|
 | Parameters: | None |
 | Query Strings: | None | 
@@ -618,9 +658,9 @@ Select a delivery option by reference
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `POST https://api.electioapp.com/deliveryoptions/select/{deliveryOptionReference}` |
 |---|---|
-| Parameters: | None |
+| Parameters: | Delivery Option Reference	string |
 | Query Strings: | None | 
 | Body: | Create Shipment Request | 
 
@@ -638,7 +678,7 @@ Returns Consignment Events of specified type
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `POST https://api.electioapp.com/events/consignments` |
 |---|---|
 | Parameters: | None |
 | Query Strings: | None | 
@@ -655,7 +695,7 @@ Returns Consignment State Events of specified type
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `POST https://api.electioapp.com/events/consignments/stateevents` |
 |---|---|
 | Parameters: | None |
 | Query Strings: | None | 
@@ -676,9 +716,9 @@ Returns labels for the specified consignment.
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `GET https://api.electioapp.com/labels/{consignmentReference}` |
 |---|---|
-| Parameters: | None |
+| Parameters: | Consignment Reference	string |
 | Query Strings: | None | 
 | Body: | Create Shipment Request | 
 
@@ -693,9 +733,10 @@ Returns labels for the specified consignment in the specified format.
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `GET https://api.electioapp.com/labels/{consignmentReference}/{labelFormat}` |
 |---|---|
-| Parameters: | None |
+| Parameters: | Consignment Reference	string
+Label Format	string |
 | Query Strings: | None | 
 | Body: | Create Shipment Request | 
 
@@ -710,9 +751,10 @@ Returns the label for the specified package.
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `GET https://api.electioapp.com/labels/package/{consignmentReference}/{packageReference}` |
 |---|---|
-| Parameters: | None |
+| Parameters: | Consignment Reference	string
+Package Reference	string |
 | Query Strings: | None | 
 | Body: | Create Shipment Request | 
 
@@ -727,9 +769,11 @@ Returns the label for the specified package in the specified format.
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `GET https://api.electioapp.com/labels/package/{consignmentReference}/{packageReference}/{labelFormat}` |
 |---|---|
-| Parameters: | None |
+| Parameters: | Consignment Reference	string
+Package Reference	string
+Label Format	string |
 | Query Strings: | None | 
 | Body: | Create Shipment Request | 
 
@@ -748,7 +792,7 @@ Manifests the specified consignments.
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `PUT https://api.electioapp.com/consignments/manifest` |
 |---|---|
 | Parameters: | None |
 | Query Strings: | None | 
@@ -766,7 +810,7 @@ Manifests all consignments that match the given criteria.
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `POST https://api.electioapp.com/consignments/manifestFromQuery` |
 |---|---|
 | Parameters: | None |
 | Query Strings: | None | 
@@ -787,9 +831,9 @@ Adds an Address to an Order
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `POST https://api.electioapp.com/orders/{orderReference}/address` |
 |---|---|
-| Parameters: | None |
+| Parameters: | Order Reference	string |
 | Query Strings: | None | 
 | Body: | Create Shipment Request | 
 
@@ -805,7 +849,7 @@ Creates an order
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `POST https://api.electioapp.com/orders` |
 |---|---|
 | Parameters: | None |
 | Query Strings: | None | 
@@ -822,9 +866,9 @@ Retrieve the details of the specified order
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `GET https://api.electioapp.com/orders/{orderReference}` |
 |---|---|
-| Parameters: | None |
+| Parameters: | Order Reference	string |
 | Query Strings: | None | 
 | Body: | Create Shipment Request | 
 
@@ -840,9 +884,9 @@ Packs a consignment from an order
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `POST https://api.electioapp.com/orders/{orderReference}/pack` |
 |---|---|
-| Parameters: | None |
+| Parameters: | Order Reference	string |
 | Query Strings: | None | 
 | Body: | Create Shipment Request | 
 
@@ -857,7 +901,7 @@ Select orders using delivery option references
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `POST https://api.electioapp.com/deliveryoptions/selectorder` |
 |---|---|
 | Parameters: | None |
 | Query Strings: | None | 
@@ -875,9 +919,9 @@ Updates an Address on an Order
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `PUT https://api.electioapp.com/orders/{orderReference}/address` |
 |---|---|
-| Parameters: | None |
+| Parameters: | Order Reference	string |
 | Query Strings: | None | 
 | Body: | Create Shipment Request | 
 
@@ -893,9 +937,9 @@ Updates the details of the specified order
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `PUT https://api.electioapp.com/orders/{orderReference}` |
 |---|---|
-| Parameters: | None |
+| Parameters: | Order Reference	string |
 | Query Strings: | None | 
 | Body: | Create Shipment Request | 
 
@@ -915,7 +959,7 @@ Returns your custom package sizes.
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `GET https://api.electioapp.com/packagesizes` |
 |---|---|
 | Parameters: | None |
 | Query Strings: | None | 
@@ -935,9 +979,9 @@ Deletes the specified package.
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `DELETE https://api.electioapp.com/packages/{packageReference}` |
 |---|---|
-| Parameters: | None |
+| Parameters: | Package Reference	string |
 | Query Strings: | None | 
 | Body: | Create Shipment Request | 
 
@@ -955,7 +999,7 @@ Returns pickup options matching the request details
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `POST https://api.electioapp.com/deliveryoptions/pickupoptions/` |
 |---|---|
 | Parameters: | None |
 | Query Strings: | None | 
@@ -971,9 +1015,9 @@ Reserves a specified pickup option
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `POST https://api.electioapp.com/deliveryoptions/reserve/{pickupOptionReference}` |
 |---|---|
-| Parameters: | None |
+| Parameters: | Pickup Option Reference	string |
 | Query Strings: | None | 
 | Body: | Create Shipment Request | 
 
@@ -987,9 +1031,9 @@ Select a delivery option by reference
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `POST https://api.electioapp.com/deliveryoptions/select/{deliveryOptionReference}` |
 |---|---|
-| Parameters: | None |
+| Parameters: | Delivery Option Reference	string |
 | Query Strings: | None | 
 | Body: | Create Shipment Request | 
 
@@ -1007,7 +1051,7 @@ Get quotes matching the request details.
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `POST https://api.electioapp.com/quotes/` |
 |---|---|
 | Parameters: | None |
 | Query Strings: | None | 
@@ -1024,9 +1068,9 @@ Returns quotes for an existing consignment identified by the provided reference.
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `GET https://api.electioapp.com/quotes/consignment/{consignmentReference}` |
 |---|---|
-| Parameters: | None |
+| Parameters: | Consignment Reference	string |
 | Query Strings: | None | 
 | Body: | Create Shipment Request | 
 
@@ -1041,7 +1085,7 @@ Get quotes matching the request details grouped by Service Group.
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `POST https://api.electioapp.com/quotes/serviceGroups` |
 |---|---|
 | Parameters: | None |
 | Query Strings: | None | 
@@ -1061,7 +1105,7 @@ Returns the list of shipping location with which the current user's account has 
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `GET https://api.electioapp.com/shippinglocations/assigned` |
 |---|---|
 | Parameters: | None |
 | Query Strings: | None | 
@@ -1077,7 +1121,7 @@ Returns all shipping locations for the current company, including those to which
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `GET https://api.electioapp.com/shippinglocations` |
 |---|---|
 | Parameters: | None |
 | Query Strings: | None | 
@@ -1097,9 +1141,9 @@ Returns events for each package in a consignment.
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `GET https://api.electioapp.com/tracking/flattened/{consignmentReference}` |
 |---|---|
-| Parameters: | None |
+| Parameters: | Consignment Reference	string |
 | Query Strings: | None | 
 | Body: | Create Shipment Request | 
 
@@ -1114,9 +1158,9 @@ Returns all tracking events for a consignment.
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `GET https://api.electioapp.com/tracking/{consignmentReference}` |
 |---|---|
-| Parameters: | None |
+| Parameters: | Consignment Reference	string |
 | Query Strings: | None | 
 | Body: | Create Shipment Request | 
 
@@ -1131,7 +1175,7 @@ Post tracking events for a consignment. Note: This endpoint is designed for us b
 
 ### Request
 
-| Endpoint | `POST /shipments` |
+| Endpoint | `POST https://api.electioapp.com/tracking/carrierevents` |
 |---|---|
 | Parameters: | None |
 | Query Strings: | None | 
