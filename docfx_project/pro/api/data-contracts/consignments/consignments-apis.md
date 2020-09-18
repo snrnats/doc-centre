@@ -29,9 +29,10 @@ Allocates the specified consignment using default rules.
 
 ### Response
 
-200 (OK)
-202 (ACCEPTED)
-400 (BADREQUEST)
+# [200 - OK](#tab/allocate-consignments-200)
+# [202 - Accepted](#tab/allocate-consignments-202)
+# [400 - Bad Request](#tab/allocate-consignments-400)
+---
 
 ## Allocate Consignment With Service Group
 
@@ -48,9 +49,10 @@ Mpd Carrier Service Group Reference	string |
 
 ### Response
 
-200 (OK)
-202 (ACCEPTED)
-400 (BADREQUEST)
+# [200 - OK](#tab/allocate-consignment-with-service-group-200)
+# [202 - Accepted](#tab/allocate-consignment-with-service-group-202)
+# [400 - Bad Request](#tab/allocate-consignment-with-service-group-400)
+---
 
 ## Allocate Using Default Rules
 
@@ -66,10 +68,11 @@ Allocates the specified consignments using your default rules.
 
 ### Response
 
-200 (OK)
-202 (ACCEPTED)
-400 (BADREQUEST)
-429 (NOT KNOWN (429))
+# [200 - OK](#tab/allocate-using-default-rules-200)
+# [202 - Accepted](#tab/allocate-using-default-rules-202)
+# [400 - Bad Request](#tab/allocate-using-default-rules-400)
+# [429 - Not Known](#tab/allocate-using-default-rules-429)
+---
 
 ## Allocate With Carrier Service
 
@@ -85,9 +88,10 @@ Allocates the specified consignments with the specified carrier service.
 
 ### Response
 
-200 (OK)
-202 (ACCEPTED)
-400 (BADREQUEST)
+# [200 - OK](#tab/allocate-with-carrier-service-200)
+# [202 - Accepted](#tab/allocate-with-carrier-service-202)
+# [400 - Bad Request](#tab/allocate-with-carrier-service-400)
+---
 
 ## Allocate With Quote
 
@@ -104,9 +108,10 @@ Quote Reference	Guid |
 
 ### Response
 
-200 (OK)
-202 (ACCEPTED)
-400 (BADREQUEST)
+# [200 - OK](#tab/allocate-with-quote-200)
+# [202 - Accepted](#tab/allocate-with-quote-202)
+# [400 - Bad Request](#tab/allocate-with-quote-400)
+---
 
 ## Deallocate Consignment
 
@@ -122,9 +127,10 @@ Deallocates the specified consignment. Note: the consignment must be in an alloc
 
 ### Response
 
-200 (OK)
-202 (ACCEPTED)
-404 (NOT FOUND)
+# [200 - OK](#tab/deallocate-consignment-200)
+# [202 - Accepted](#tab/deallocate-consignment-202)
+# [404 - Not Found](#tab/deallocate-consignment-404)
+---
 
 ## Deallocate Consignments
 
@@ -140,7 +146,8 @@ Deallocates the specified consignments
 
 ### Response
 
-200 (OK)
+# [200 - OK](#tab/deallocate-consignments-200)
+---
 
 ---
 
@@ -160,8 +167,9 @@ Returns the available MPD Carrier Services for your subscription.
 
 ### Response
 
-200 (OK)
-404 (NOT FOUND)
+# [200 - OK](#tab/get-available-mpd-carrier-services-200)
+# [404 - Not Found](#tab/get-available-mpd-carrier-services-404)
+---
 
 ---
 
@@ -181,8 +189,9 @@ Returns all Carriers
 
 ### Response
 
-200 (OK)
-404 (NOT FOUND)
+# [200 - OK](#tab/get-carriers-200)
+# [404 - Not Found](#tab/get-carriers-404)
+---
 
 ## Get MPD Carrier Services for Subscription
 
@@ -198,8 +207,9 @@ Returns all MPD Carrier Services in a subscription
 
 ### Response
 
-200 (OK)
-404 (NOT FOUND)
+# [200 - OK](#tab/get-mpd-carrier-services-for-subscription-200)
+# [404 - Not Found](#tab/get-mpd-carrier-services-for-subscription-404)
+---
 
 ---
 
@@ -220,8 +230,9 @@ Mpd Carrier Reference	string |
 
 ### Response
 
-200 (OK)
-404 (NOT FOUND)
+# [200 - OK](#tab/get-collection-calendar-200)
+# [404 - Not Found](#tab/get-collection-calendar-404)
+---
 
 ---
 
@@ -241,9 +252,10 @@ Add a new package to an existing consignment.
 
 ### Response
 
-201 (CREATED)
-400 (BADREQUEST)
-404 (NOTFOUND)
+# [201 - Created](#tab/add-package-201)
+# [400 - Bad Request](#tab/add-package-400)
+# [404 - Not Found](#tab/add-package-404)
+---
 
 ## Cancel Consignment
 
@@ -259,9 +271,10 @@ Cancels the specified consignment.
 
 ### Response
 
-201 (CREATED)
-400 (BADREQUEST)
-404 (NOTFOUND)
+# [201 - Created](#tab/cancel-consignment-201)
+# [400 - Bad Request](#tab/cancel-consignment-400)
+# [404 - Not Found](#tab/cancel-consignment-404)
+---
 
 ## Cancel Consignments
 
@@ -277,9 +290,10 @@ Cancels the specified consignments
 
 ### Response
 
-201 (CREATED)
-400 (BADREQUEST)
-404 (NOTFOUND)
+# [201 - Created](#tab/cancel-consignments-201)
+# [400 - Bad Request](#tab/cancel-consignments-400)
+# [404 - Not Found](#tab/cancel-consignments-404)
+---
 
 ## Create Consignment
 
@@ -295,9 +309,10 @@ Create a new consignment
 
 ### Response
 
-201 (CREATED)
-400 (BADREQUEST)
-500 (INTERNALSERVERERROR)
+# [201 - Created](#tab/create-consignment-201)
+# [400 - Bad Request](#tab/create-consignment-400)
+# [500 - Internal Server Error](#tab/create-consignment-500)
+---
 
 ## Dispatch Consignments
 
@@ -313,9 +328,10 @@ Dispatches the specified consignments.
 
 ### Response
 
-200 (OK)
-202 (ACCEPTED)
-404 (NOTFOUND)
+# [200 - OK](#tab/dispatch-consignments-200)
+# [202 - Accepted](#tab/dispatch-consignments-202)
+# [404 - Not Found](#tab/dispatch-consignments-404)
+---
 
 ## Get Consignment
 
@@ -331,8 +347,9 @@ Retrieve the details of the specified consignment
 
 ### Response
 
-200 (OK)
-404 (NOTFOUND)
+# [200 - OK](#tab/get-consignment-200)
+# [404 - Not Found](#tab/get-consignment-404)
+---
 
 ## Get Consignment Status
 
@@ -348,8 +365,9 @@ Returns the status of the specified consignment
 
 ### Response
 
-200 (OK)
-404 (NOTFOUND)
+# [200 - OK](#tab/get-consignment-status-200)
+# [404 - Not Found](#tab/get-consignment-status-404)
+---
 
 ## Get Consignment With Metadata
 
@@ -365,8 +383,9 @@ Returns the consignment including associated metadata.
 
 ### Response
 
-200 (OK)
-404 (NOTFOUND)
+# [200 - OK](#tab/get-consignment-with-metadata-200)
+# [404 - Not Found](#tab/get-consignment-with-metadata-404)
+---
 
 ## Get Consignments References
 
@@ -382,9 +401,10 @@ Returns a list of consignment references based off search criteria
 
 ### Response
 
-200 (OK)
-400 (BADREQUEST)
-404 (NOTFOUND)
+# [200 - OK](#tab/get-consignments-references-200)
+# [400 - Bad Request](#tab/get-consignments-references-400)
+# [404 - Not Found](#tab/get-consignments-references-404)
+---
 
 ## Get Customer Manifest
 
@@ -400,8 +420,9 @@ Returns the specified manifest.
 
 ### Response
 
-200 (OK)
-404 (NOTFOUND)
+# [200 - OK](#tab/get-customer-manifest-200)
+# [404 - Not Found](#tab/get-customer-manifest-404)
+---
 
 ## Get Customer Manifests
 
@@ -417,8 +438,9 @@ Returns all customer manifests with an optional shipping location query string p
 
 ### Response
 
-200 (OK)
-404 (NOTFOUND)
+# [200 - OK](#tab/get-customer-manifests-200)
+# [404 - Not Found](#tab/get-customer-manifests-404)
+---
 
 ## Search Consignments
 
@@ -435,8 +457,9 @@ Skip	int |
 
 ### Response
 
-200 (OK)
-404 (NOTFOUND)
+# [200 - OK](#tab/search-consignments-200)
+# [404 - Not Found](#tab/search-consignments-404)
+---
 
 ## Set Not Ready to Ship
 
@@ -486,8 +509,9 @@ Preference	string |
 
 ### Response
 
-200 (OK)
-404 (NOTFOUND)
+# [200 - OK](#tab/set-not-ready-to-ship-200)
+# [404 - Not Found](#tab/set-not-ready-to-ship-404)
+---
 
 ## Set Ready to Ship
 
@@ -503,8 +527,9 @@ Sets the specified consignments as 'Ready to Ship'. Only applicable to consignme
 
 ### Response
 
-200 (OK)
-404 (NOTFOUND)
+# [200 - OK](#tab/set-ready-to-ship-200)
+# [404 - Not Found](#tab/set-ready-to-ship-404)
+---
 
 ## Update Consignment
 
@@ -520,9 +545,10 @@ Updates the specified consignment. Note: this method will replace any provided p
 
 ### Response
 
-200 (OK)
-400 (BADREQUEST)
-404 (NOTFOUND)
+# [200 - OK](#tab/update-consignment-200)
+# [400 - Bad Request](#tab/update-consignment-400)
+# [404 - Not Found](#tab/update-consignment-404)
+---
 
 ---
 
@@ -542,8 +568,9 @@ Returns the commercial invoice for the specified consignment.
 
 ### Response
 
-200 (OK)
-404 (NOTFOUND)
+# [200 - OK](#tab/get-commercial-invoice-200)
+# [404 - Not Found](#tab/get-commercial-invoice-404)
+---
 
 ## Get Customs Document
 
@@ -561,8 +588,9 @@ Package Reference	string |
 
 ### Response
 
-200 (OK)
-404 (NOTFOUND)
+# [200 - OK](#tab/get-customs-document-200)
+# [404 - Not Found](#tab/get-customs-document-404)
+---
 
 ## Get Customs Documents
 
@@ -578,8 +606,9 @@ Returns all customs documents for the specified consignment.
 
 ### Response
 
-200 (OK)
-404 (NOTFOUND)
+# [200 - OK](#tab/get-customs-documents-200)
+# [404 - Not Found](#tab/get-customs-documents-404)
+---
 
 ---
 
@@ -599,7 +628,8 @@ Return a summary of delivery options matching the request details.
 
 ### Response
 
-201 (CREATED)
+# [201 - Created](#tab/delivery-option-summary-201)
+---
 
 ## Delivery Options
 
@@ -615,7 +645,7 @@ Returns delivery options matching the request details.
 
 ### Response
 
-201 (CREATED)
+201 - Created
 
 ## Get Existing Delivery Option
 
@@ -631,8 +661,9 @@ Returns the details of an existing delivery option.
 
 ### Response
 
-200 (OK)
-404 (NOTFOUND)
+# [200 - OK](#tab/get-existing-delivery-option-200)
+# [404 - Not Found](#tab/get-existing-delivery-option-404)
+---
 
 ## Select Delivery Option as an Order
 
@@ -648,9 +679,10 @@ Select orders using delivery option references
 
 ### Response
 
-201 (CREATED)
-207 (MULTI STATUS)
-400 (BADREQUEST)
+# [201 - Created](#tab/select-delivery-option-as-an-order-201)
+# [207 - Multi Status](#tab/select-delivery-option-as-an-order-207)
+# [400 - Bad Request](#tab/select-delivery-option-as-an-order-400)
+---
 
 ## Select Option
 
@@ -666,7 +698,8 @@ Select a delivery option by reference
 
 ### Response
 
-200 (OK)
+# [200 - OK](#tab/select-option-200)
+---
 
 ---
 
@@ -686,8 +719,9 @@ Returns Consignment Events of specified type
 
 ### Response
 
-200 (OK)
-400 (BADREQUEST)
+# [200 - OK](#tab/get-consignment-events-of-specified-type-200)
+# [400 - Bad Request](#tab/get-consignment-events-of-specified-type-400)
+---
 
 ## Get Consignment State Events of specified type
 
@@ -703,8 +737,9 @@ Returns Consignment State Events of specified type
 
 ### Response
 
-200 (OK)
-400 (BADREQUEST)
+# [200 - OK](#tab/get-consignment-state-events-of-specified-type-200)
+# [400 - Bad Request](#tab/get-consignment-state-events-of-specified-type-400)
+---
 
 ---
 
@@ -724,8 +759,9 @@ Returns labels for the specified consignment.
 
 ### Response
 
-200 (OK)
-404 (NOTFOUND)
+# [200 - OK](#tab/get-labels-200)
+# [404 - Not Found](#tab/get-labels-404)
+---
 
 ## Get Labels in Format
 
@@ -742,8 +778,9 @@ Label Format	string |
 
 ### Response
 
-200 (OK)
-404 (NOTFOUND)
+# [200 - OK](#tab/get-labels-in-format-200)
+# [404 - Not Found](#tab/get-labels-in-format-404)
+---
 
 ## Get Package Label
 
@@ -760,8 +797,9 @@ Package Reference	string |
 
 ### Response
 
-200 (OK)
-404 (NOTFOUND)
+# [200 - OK](#tab/get-package-label-200)
+# [404 - Not Found](#tab/get-package-label-404)
+---
 
 ## Get Package Label in Format
 
@@ -779,8 +817,9 @@ Label Format	string |
 
 ### Response
 
-200 (OK)
-404 (NOTFOUND)
+# [200 - OK](#tab/get-package-label-in-format-200)
+# [404 - Not Found](#tab/get-package-label-in-format-404)
+---
 
 ---
 
@@ -800,9 +839,10 @@ Manifests the specified consignments.
 
 ### Response
 
-200 (OK)
-202 (ACCEPTED)
-404 (NOTFOUND)
+# [200 - OK](#tab/manifest-consignments-200)
+# [202 - Accepted](#tab/manifest-consignments-202)
+# [404 - Not Found](#tab/manifest-consignments-404)
+---
 
 ## Manifest Consignments From Query
 
@@ -818,8 +858,9 @@ Manifests all consignments that match the given criteria.
 
 ### Response
 
-200 (OK)
-400 (BADREQUEST)
+# [200 - OK](#tab/manifest-consignments-from-query-200)
+# [400 - Bad Request](#tab/manifest-consignments-from-query-400)
+---
 
 ---
 
@@ -839,9 +880,10 @@ Adds an Address to an Order
 
 ### Response
 
-201 (CREATED)
-400 (BADREQUEST)
-404 (NOTFOUND)
+# [201 - Created](#tab/add-address-to-order-201)
+# [400 - Bad Request](#tab/add-address-to-order-400)
+# [404 - Not Found](#tab/add-address-to-order-404)
+---
 
 ## Create Order
 
@@ -857,8 +899,9 @@ Creates an order
 
 ### Response
 
-201 (CREATED)
-400 (BADREQUEST)
+# [201 - Created](#tab/create-order-201)
+# [400 - Bad Request](#tab/create-order-400)
+---
 
 ## Get Order
 
@@ -874,9 +917,9 @@ Retrieve the details of the specified order
 
 ### Response
 
-200 (OK)
-400 (BADREQUEST)
-404 (NOTFOUND)
+# [200 - OK](#tab/get-order-200)
+# [400 - Bad Request](#tab/get-order-400)
+# [404 - Not Found](#tab/get-order-404)
 
 ## Pack Order
 
@@ -892,8 +935,8 @@ Packs a consignment from an order
 
 ### Response
 
-201 (CREATED)
-400 (BADREQUEST)
+# [201 - Created](#tab/pack-order-201)
+# [400 - Bad Request](#tab/pack-order-400)
 
 ## Select Delivery Option as an Order
 
@@ -909,9 +952,10 @@ Select orders using delivery option references
 
 ### Response
 
-201 (CREATED)
-207 (MULTI STATUS)
-400 (BADREQUEST)
+# [201 - Created](#tab/select-delivery-option-as-an-order-201)
+# [207 - Multi Status](#tab/select-delivery-option-as-an-order-207)
+# [400 - Bad Request](#tab/select-delivery-option-as-an-order-400)
+---
 
 ## Update Address on Order
 
@@ -927,9 +971,10 @@ Updates an Address on an Order
 
 ### Response
 
-200 (OK)
-400 (BADREQUEST)
-404 (NOTFOUND)
+# [200 - OK](#tab/update-address-on-order-200)
+# [400 - Bad Request](#tab/update-address-on-order-400)
+# [404 - Not Found](#tab/update-address-on-order-404)
+---
 
 ## Update Order
 
@@ -945,9 +990,10 @@ Updates the details of the specified order
 
 ### Response
 
-200 (OK)
-400 (BADREQUEST)
-404 (NOTFOUND)
+# [200 - OK](#tab/update-order-200)
+# [400 - Bad Request](#tab/update-ordere-400)
+# [404 - Not Found](#tab/update-order-404)
+---
 
 ---
 
@@ -967,8 +1013,9 @@ Returns your custom package sizes.
 
 ### Response
 
-200 (OK)
-404 (NOTFOUND)
+# [200 - OK](#tab/get-package-sizes-200)
+# [404 - Not Found](#tab/get-package-sizes-404)
+---
 ---
 
 # Packages
@@ -1007,7 +1054,7 @@ Returns pickup options matching the request details
 
 ### Response
 
-200 (OK)
+# [200 - OK](#tab/pickup-options-200)
 
 ## Reserve Pickup Option
 
@@ -1039,7 +1086,7 @@ Select a delivery option by reference
 
 ### Response
 
-200 (OK)
+# [200 - OK](#tab/select-option-200)
 
 ---
 
@@ -1059,8 +1106,9 @@ Get quotes matching the request details.
 
 ### Response
 
-201 (CREATED)
-400 (BADREQUEST)
+# [201 - Created](#tab/get-quotes-201)
+# [400 - Bad Request](#tab/get-quotes-400)
+---
 
 ## Get Quotes by Consignment Reference
 
@@ -1076,8 +1124,9 @@ Returns quotes for an existing consignment identified by the provided reference.
 
 ### Response
 
-201 (CREATED)
-400 (BADREQUEST)
+# [201 - Created](#tab/get-quotes-by-consignment-reference-201)
+# [400 - Bad Request](#tab/get-quotes-by-consignment-reference-400)
+---
 
 ## Get Service Group Quotes
 
@@ -1093,7 +1142,8 @@ Get quotes matching the request details grouped by Service Group.
 
 ### Response
 
-200 (OK)
+# [200 - OK](#tab/get-service-group-quotes-200)
+---
 
 ---
 
@@ -1113,7 +1163,8 @@ Returns the list of shipping location with which the current user's account has 
 
 ### Response
 
-200 (OK)
+# [200 - OK](#tab/get-assigned-shipping-locations-200)
+---
 
 ## Get Shipping Locations
 
@@ -1129,7 +1180,8 @@ Returns all shipping locations for the current company, including those to which
 
 ### Response
 
-200 (OK)
+# [200 - OK](#tab/get-shipping-locations-200)
+---
 
 ---
 
@@ -1149,8 +1201,9 @@ Returns events for each package in a consignment.
 
 ### Response
 
-200 (OK)
-404 (NOTFOUND)
+# [200 - OK](#tab/get-events-per-package-200)
+# [404 - Not Found](#tab/get-events-per-package-404)
+---
 
 ## Get Tracking Events
 
@@ -1166,8 +1219,9 @@ Returns all tracking events for a consignment.
 
 ### Response
 
-200 (OK)
-404 (NOTFOUND)
+# [200 - OK](#tab/get-tracking-events-200)
+# [404 - Not Found](#tab/get-tracking-events-404)
+---
 
 ## Post Tracking Events
 

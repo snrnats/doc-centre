@@ -14,7 +14,7 @@
 [!include[_datatype_string](_datatype_string.md)]
 </div>
     <div class="occurs">0..1</div>
-    <div class="description">A pre-defined code for this error. See <a href="../shipments/error-codes.md">API Error Codes</a></div>
+    <div class="description">A pre-defined code for this error</div>
 </div>
 <div class="property">
     <div class="name">message</div>

@@ -6,7 +6,7 @@
 [!include[_datatype_string](_datatype_string.md)]
 </div>
     <div class="occurs">1</div>
-    <div class="description">A unique reference for this error. Customers can use this when reporting errors to Sorted, if applicable	</div>
+    <div class="description">A unique reference for this error. Customers can use this when reporting errors to Sorted, if applicable</div>
 </div>
 <div class="property">
     <div class="name"><code>code</code></div>
