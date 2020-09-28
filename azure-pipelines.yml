@@ -2,15 +2,16 @@ name: "Sorted PRO Docs"
 trigger:
   branches:
     include:
-    - master
-    - feature/*
-    - develop/*
+      - master
+      - feature/*
+      - develop/*
+      - content/shipments*
 
 variables:
   - name: pool
     value: linux-agents-standard
   - name: netlify-cli-version
-    value: '2.12.0'
+    value: "2.12.0"
   - group: DocFXSettings
   - group: AzureContainerRegistry-SortedGroup
   - group: docs-github-secrets
@@ -19,16 +20,16 @@ variables:
   - name: KubernetesClusterConnection
     value: sorted-pro-aks-dev-02
   - name: chartPath
-    value: helm/sorted-docs 
+    value: helm/sorted-docs
 
 stages:
-- stage: DockerBuild
-  jobs:
-  - job: "Prepare"
-    pool:
-      name: $(pool)
-    steps:
-    - template: pipeline/templates/gitversion.yml
-    - template: pipeline/templates/docker.yml
-    - template: pipeline/templates/helm.yml
-    - template: pipeline/templates/publish.yml
+  - stage: DockerBuild
+    jobs:
+      - job: "Prepare"
+        pool:
+          name: $(pool)
+        steps:
+          - template: pipeline/templates/gitversion.yml
+          - template: pipeline/templates/docker.yml
+          - template: pipeline/templates/helm.yml
+          - template: pipeline/templates/publish.yml
