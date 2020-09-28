@@ -2,8 +2,6 @@
 
 This repo contains the source for Sorted's public documentation.
 
-This is currently a work in progress and is not yet live.
-
 ## Build Status
 
 [![Build Status](https://dev.azure.com/sortedproapp/SortedPRO/_apis/build/status/Docs/Sorted%20Public%20Docs?branchName=master)](https://dev.azure.com/sortedproapp/SortedPRO/_build/latest?definitionId=589&branchName=master)
