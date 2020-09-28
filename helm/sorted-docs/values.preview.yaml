@@ -1,6 +1,8 @@
 serviceName: sorted-docs-preview
 replicaCount: 1
 namespace: feature
+nameOverride: sorted-docs-preview
+fullnameOverride: sorted-docs-preview
 
 image:
   repository: repo
