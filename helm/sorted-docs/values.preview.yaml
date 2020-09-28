@@ -1,6 +1,6 @@
-serviceName: sorted-docs
+serviceName: sorted-docs-preview
 replicaCount: 1
-namespace: docs
+namespace: feature
 
 image:
   repository: repo
@@ -9,7 +9,7 @@ image:
   pullSecret: pullSecret
 
 service:
-  name: sorted-docs
+  name: sorted-docs-preview
   type: ClusterIP
   port: 80
 
