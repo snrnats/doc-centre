@@ -47,40 +47,57 @@ The example below shows how this shipment would be represented in JSON. This is 
 ```json
     "contents": [
         {
-            "value": {
-                "amount": 79.99,
-                "currency": "GBP"
+            "reference": "sc_10014418860050677760000090908111",
+            "custom_reference": "b9fa91b0-0dd0-4dd5-986f-363fa8cb2386",
+            "package_size_reference": null,
+            "weight": {
+                "value": 2.40,
+                "unit": "Kg"
             },
-            "description": "Coat"
-        },
-        {
-            "value": {
-                "amount": 69.98,
-                "currency": "GBP"
+            "dimensions": {
+                "unit": "Cm",
+                "width": 15.0,
+                "height": 15.5,
+                "length": 20.0
             },
-            "description": "Package for necklace and bracelet",
-            "contents": [
+            "description": "Jeans",
+            "value": {
+                "amount": 8.99,
+                "currency": "GBP",
+                "discount": 0.0
+            },
+            "sku": "SKU09876",
+            "model": "MOD-009",
+            "country_of_origin": "PO",
+            "harmonisation_code": "09.02.10",
+            "quantity": 2,
+            "unit": "Box",
+            "dangerous_goods": {
+                "hazard_classes": [
+                    { "code": "2.1" }
+                ],
+                "packing_group": "iii",
+                "id_number": "UN2202",
+                "proper_shipping_name": "Hydrogen selenide, anhydrous",
+                "technical_name": null,
+                "physical_form": "gas",
+                "radioactivity": "surface_reading",
+                "accessibility": "accessible",
+                "custom_label_text": null
+            },
+            "metadata": [
                 {
-                    "value": {
-                        "amount": 39.99,
-                        "currency": "GBP"
-                    },
-                    "description": "Necklace"
-                },
-                {
-                    "value": {
-                        "amount": 29.99,
-                        "currency": "GBP"
-                    },
-                    "description": "Bracelet"
-                }    
-            ]
+                    "key": "Category",
+                    "value": "Menswear",
+                    "type": "string"
+                }
+            ],
+            "label_properties": null,
+            "Contents": null
         }
     ],
 ```
 ---
-
-<span class="highlight">NEED TO CHECK THE EXAMPLE ABOVE.</span> 
 
 ### Specifying Addresses
 
@@ -125,7 +142,7 @@ Adding optional properties when you create a shipment can help you to ensure tha
 >
 > If the dates you specify are too restrictive, there may not be any carrier services available to take the shipment, which would result in a failed allocation. As such, you should only specify shipping and delivery dates where it is necessary to do so.
 
-<span class="highlight">THE NOTE ABOVE IS REPURPOSED FROM THE CONSIGNMENTS HELP. IS IT STILL RELEVANT?</span>
+<span class="highlight">THE NOTE ABOVE IS REPURPOSED FROM THE CONSIGNMENTS HELP. IS IT STILL RELEVANT? NEED TO TEST IN POSTMAN</span>
 
 ### Example Create Shipment Request
 
@@ -255,8 +272,6 @@ In the example below, PRO has returned a shipment `{reference}` of _sp_005954527
 ---
 
 All PRO shipments have a `{state}`, indicating the point in the delivery process that that particular shipment is at. Newly-created shipments have an initial state of `Unallocated`. For more information on PRO shipment states, see [LINK HERE].
-
-<span class="highlight">SHOULD PROBABLY PUT A NOTE IN HERE ABOUT CREATING SHIPMENTS IN THE UI ONCE WE KNOW WHAT THE NEW UI IS GOING TO LOOK LIKE</span>
 
 > [!NOTE]
 >
