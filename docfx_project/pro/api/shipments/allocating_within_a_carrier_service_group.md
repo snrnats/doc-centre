@@ -20,9 +20,9 @@ For example, you might set up a group containing all services that will ship dan
 
 You can use any combination of carrier services in a carrier service group.
 
-## Configuring Carrier Service Groups
+<!-- ## Configuring Carrier Service Groups
 
-<span class="highlight">INSTRUCTIONS FOR SETTING UP CSGS IN THE NEW UI IN HERE</span>
+<span class="commented-out">INSTRUCTIONS FOR SETTING UP CSGS IN THE NEW UI IN HERE</span>-->
 
 ## Allocating a Single Shipment with a Carrier Service Group
 
@@ -30,7 +30,7 @@ The **Allocate Shipment with Service Group** endpoint allocates a shipment with 
 
 To call **Allocate Shipment With Service Group**, send a `PUT` request to `https://api.sorted.com/pro/shipments/{reference}/allocate/service_group/{group_ref}`, where `{reference}` is the unique reference for the shipment you want to allocate and `{group_ref}` is the **Service Group Code**  of the group you want to allocate within.
 
-<span class="highlight">INSTRUCTIONS ON FINDING SERVICE GROUP CODES OR SHIPMENTS EQUIVALENT IN HERE</span>
+<!--<span class="commented-out">INSTRUCTIONS ON FINDING SERVICE GROUP CODES OR SHIPMENTS EQUIVALENT IN HERE</span>-->
 
 Once the request is received, PRO uses allocation rules to eliminate any carrier services in the group that would not be suitable to take the shipment, allocates the shipment to the cheapest remaining service, and returns an Allocate Result.
 
@@ -127,11 +127,16 @@ PUT https://api.sorted.com/pro/shipments/sp_10014418679662051328777876543332/all
 
 The **Allocate with Service Group** endpoint queues one or more shipments for allocation to a carrier service that is a member of a specific carrier service group. 
 
-To call **Allocate with Service Group**, send a `PUT` request to `https://api.sorted.com/pro/shipments/allocate/service_group`. The body of the request should contain a list of the `{shipments}` that you want to allocate and the `{service_group}` reference of the carrier service you want to allocate to. <span class="highlight">YOU CAN ALSO SEND SERVICE CAPABILITIES - NEED TO DOUBLE CHECK HOW THAT WORKS</span>
+To call **Allocate with Service Group**, send a `PUT` request to `https://api.sorted.com/pro/shipments/allocate/service_group`. The body of the request should contain a list of the `{shipments}` that you want to allocate and the `{service_group}` reference of the carrier service you want to allocate to.
+
+Optionally, you can also include a list of service `capabilities`. Where capabilities are provided, then PRO only allocated the shipment to a carrier service that meets those capabilities. Each capability should list the `type` of service capability specified and the `value` that that capability should have.
+
+> [!NOTE]
+> For information on available service capabilities and values, see LINK HERE
 
 PRO takes each shipment in turn, uses allocation rules to eliminate any carrier services in the group that would not be suitable to take the shipment, and the queues the shipment for allocation to the cheapest remaining service. It then returns an Allocate Shipments result detailing the results of the request.
 
-<span class="highlight">IS THE ABOVE ACCURATE? DOES IT DO THAT PROCESSING FIRST OR AT THE TIME IT ACTUALLY COMES TO ALLOCATE?</span>
+<span class="highlight">Is the above accurate?</span>
 
 [!include[_shipments_allocate_shipments_result](../includes/_shipments_allocate_shipments_result.md)]
 

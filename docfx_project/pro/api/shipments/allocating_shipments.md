@@ -19,8 +19,6 @@ In the context of SortedPRO, **allocation** is the process of selecting the carr
 >
 > You can only allocate shipments that are in a `{state}` of either _unallocated_ or _allocation_failed_. If you attempt to allocate a shipment that is not in one of those states, PRO returns an error.
 
-<span class="highlight">THE ABOVE IS A CONSIGNMENTS RULE BUT I'M GUESSING THAT THIS IS STILL THE CASE. CAN'T SEE ANY OTHER STATES ON THE LIST THAT YOU WOULD BE ABLE TO ALLOCATE FROM</span>
-
 To allocate shipments in PRO, you'll need to call one of PRO's allocation endpoints. You can specify a carrier service or service group to allocate to, allocate based on a quote you received, or have PRO select the cheapest eligible carrier service for you. You can also use custom filters to narrow down the pool of available services on a per-shipment basis. Whichever endpoint you use, PRO uses pre-defined allocation rules to ensure that your shipment is allocated to a suitable carrier service.
 
 PRO offers the following allocation endpoints:
@@ -45,7 +43,8 @@ PRO offers the following allocation endpoints:
     `https://api.sorted.com/pro/shipments/allocation/service_group` - Allocates multiple shipments with a carrier service from a specific carrier service group.
 * **Allocate with Virtual Service**
 
-    `https://api.sorted.com/pro/shipments/{reference}/allocate/virtual_service/{virtual_service_reference}` - Allocates a single shipment with a virtual service. <span class="highlight">NEED A PROPER DEFINITION OF VIRTUAL SERVCIE IN HERE</span>   
+    `https://api.sorted.com/pro/shipments/{reference}/allocate/virtual_service/{virtual_service_reference}` - Allocates a single shipment with either a specific carrier service or a carrier service group, depending on the type or reference you provide.  
+
 * **Allocate with Filters**
     
     `https://api.sorted.com/pro/shipments/allocation/filters` - Allocates one or more shipments with a carrier service that matches the specified filters. 
@@ -63,10 +62,10 @@ Most allocation endpoints require PRO to select a carrier service from a range o
 
 1. **What was requested?** - First, PRO determines which carrier services meet the terms of the allocation request. The results returned by this step depend heavily on the allocation endpoint used. For example, an **Allocate with Service Group** request limits PRO to only those shipments in a particular service group, whereas an **Allocate Shipments** request does not limit the pool of available services in itself and could potentially include any carrier service. 
 2. **Who can deliver?** - Next, PRO eliminates any carrier services that could not take the shipment (for example, because they have not been configured and enabled, they do not ship to the delivery address, or they could meet any specified shipping and delivery dates).
-3. **Who meets the allocation rules?** - Next, PRO creates a final shortlist of carrier services by eliminating any services that do not meet your organisation's allocation rules. For information on using allocation rules, see <span class="highlight">LINK HERE</span>.
+3. **Who meets the allocation rules?** - Next, PRO creates a final shortlist of carrier services by eliminating any services that do not meet your organisation's allocation rules. 
 4. **Who is cheapest?** - Finally, PRO allocates the shipment to the cheapest service on the shortlist.
 
-## What Is an Allocation Rule?
+<!-- ## What Is an Allocation Rule?
 
 When you make an allocation request for a shipment, PRO uses its allocation rules to ascertain which carrier services are eligible to take that shipment and which are not. Allocation rules are optional criteria that define the shipments that a particular carrier service is eligible to take. You can specify the following:
 
@@ -76,13 +75,13 @@ When you make an allocation request for a shipment, PRO uses its allocation rule
 * Excluded countries
 * Allocation tags.
 
-<span class="highlight">LIST TAKEN FROM CONSIGNMENTS HELP. NEEDS CHECKING IN NEW UI</span>
+<span class="commented-out">LIST TAKEN FROM CONSIGNMENTS HELP. NEEDS CHECKING IN NEW UI</span>
 
 For example, you could specify that a particular carrier service should only be allocated shipments that weigh between 1-25 Kg. Subsequently, PRO would not consider this service when allocating a shipment with a weight of 30Kg.
 
 ### Configuring Allocation Rules
 
-<span class="highlight">INSTRUCTIONS ON CONFIGURING RULES IN NEW UI IN HERE</span>
+<span class="commented-out">INSTRUCTIONS ON CONFIGURING RULES IN NEW UI IN HERE</span> -->
 
 ### Configuring Dangerous Goods Rules
 
@@ -92,7 +91,7 @@ When setting up dangerous goods rules, you configure a ruleset independently of 
 
 When allocating shipments, PRO takes your dangerous goods rulesets into account as part of its allocation rule checks. Any service that does not meet the rules is excluded.
 
-<span class="highlight">INSTRUCTIONS FOR SETTING UP RULESETS IN HERE (WHEN IT'S IN THE UI)</span>
+<!--<span class="commented-out">INSTRUCTIONS FOR SETTING UP RULESETS IN HERE (WHEN IT'S IN THE UI)</span>-->
 
 > [!TIP]
 >

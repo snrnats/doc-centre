@@ -16,7 +16,7 @@ Want to specify the carrier service that should take your shipment? This page ex
 
 In order to allocate a shipment to a specific carrier service, you'll need to know that service's `{carrier_service_reference}`. The `{carrier_service_reference}` is a unique identifier for each service available in PRO.
 
-<span class="highlight">NEED A NOTE ON HOW TO GET THE SERVICE REFERENCE IN THE NEW UI (ASSUMING THAT THAT'S POSSIBLE?). CAN THEY STILL CALL THE OLD GET SERVICE DETAILS ENDPOINT?</span>
+<span class="highlight">Where can the customer go to get this information? The Consignments UI had a menu - is there something similar for shipments?</span>
 
 ## Allocating A Single Shipment with a Specific Carrier Service
 
@@ -113,7 +113,12 @@ The example shows a successful request to allocate shipment _sp_1001441867966205
 
 ## Allocating Multiple Shipments with a Specific Carrier Service
 
-The **Allocate With Carrier Service** endpoint enables you to queue one or more shipments for allocation to a specific carrier service. To call **Allocate With Carrier Service**, send a `PUT` request to `https://api.sorted.com/pro/shipments/allocate/service`. The body of the request should contain a list of the `{shipments}` that you want to allocate and the `{carrier_service_reference}` of the carrier service you want to allocate to. <span class="highlight">YOU CAN ALSO SEND SERVICE CAPABILITIES - NEED TO DOUBLE CHECK HOW THAT WORKS</span>
+The **Allocate With Carrier Service** endpoint enables you to queue one or more shipments for allocation to a specific carrier service. To call **Allocate With Carrier Service**, send a `PUT` request to `https://api.sorted.com/pro/shipments/allocate/service`. The body of the request should contain a list of the `{shipments}` that you want to allocate and the `{carrier_service_reference}` of the carrier service you want to allocate to. 
+
+Optionally, you can also include a list of service `capabilities`. Where capabilities are provided, then PRO only allocated the shipment to a carrier service that meets those capabilities. Each capability should list the `type` of service capability specified and the `value` that that capability should have.
+
+> [!NOTE]
+> For information on available service capabilities and values, see LINK HERE
 
 PRO takes each shipment in turn and checks whether the specified service is eligible to take that shipment. It then returns an Allocate Shipments result detailing the results of the request.
 

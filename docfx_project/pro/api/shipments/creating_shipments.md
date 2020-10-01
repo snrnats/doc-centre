@@ -142,8 +142,6 @@ Adding optional properties when you create a shipment can help you to ensure tha
 >
 > If the dates you specify are too restrictive, there may not be any carrier services available to take the shipment, which would result in a failed allocation. As such, you should only specify shipping and delivery dates where it is necessary to do so.
 
-<span class="highlight">THE NOTE ABOVE IS REPURPOSED FROM THE CONSIGNMENTS HELP. IS IT STILL RELEVANT? NEED TO TEST IN POSTMAN</span>
-
 ### Example Create Shipment Request
 
 The example below shows a simple **Create Shipment** request containing only a `shipment_type`, `contents`, and `addresses`. For an example of a full **Create Shipment** request, see [LINK HERE]
@@ -277,9 +275,9 @@ All PRO shipments have a `{state}`, indicating the point in the delivery process
 >
 > For full reference information on the **Create Shipments** endpoint, including the properties accepted and the structure required, see [LINK HERE]
 
-## Cloning Shipments
+<!--## Cloning Shipments
 
-<span class="highlight">CLONE SHIPMENTS IS IN DRAFT AT THE TIME OF WRITING - THIS ALL NEEDS FULLY REVIEWING BEFORE GO-LIVE</span>
+<span class="commented-out">CLONE SHIPMENTS IS IN DRAFT AT THE TIME OF WRITING - THIS ALL NEEDS FULLY REVIEWING BEFORE GO-LIVE</span>
 
 As well as creating entirely new shipments through the **Create Shipment** endpoint, you can also clone existing shipments via the **Clone Shipment** endpoint. **Clone Shipment** takes the basic properties of a given shipment, creates a new shipment with identical properties, and returns that new shipment's `{reference}`. 
 
@@ -291,11 +289,11 @@ To call **Clone Shipment**, send a `POST` request to `https://api.sorted.com/pro
 
 ### Clone Shipment Example 
 
-The example below shows a request to clone a shipment <span class="highlight">NEED TO PUT IN EXAMPLE ONCE THE ENDPOINT STUB IS UP AND RUNNING</span>
+The example below shows a request to clone a shipment <span class="commented-out">NEED TO PUT IN EXAMPLE ONCE THE ENDPOINT STUB IS UP AND RUNNING</span>
 
 > [!NOTE]
 >
-> For full reference information on the **Clone Shipment** endpoint, see [LINK HERE]
+> For full reference information on the **Clone Shipment** endpoint, see [LINK HERE] -->
 
 ## Updating Shipments
 
@@ -307,8 +305,6 @@ To call **Update Shipment**, send a `PUT` request to `https://api.sorted.com/pro
 > The **Update Shipment** endpoint cannot be used to edit a shipment's paperless documents. To edit paperless documents on an existing shipment, use the Paperless Documents endpoints. For more information on working with paperless documents in PRO, see the [Adding Paperless Documents](/pro/api/shipments/adding_paperless_documents.html) page.
 
 Other than the `reference` and `paperless_documents`, **Update Shipment** uses the same validation as **Create Shipment** (that is, `shipment_type`, `contents`, and `addresses` are required and all other valid properties are optional). 
-
-<span class="highlight">CAN YOU PASS MULTIPLE SHIPMENTS AT ONCE? THE STUB WON'T LET ME BUT I DON'T KNOW IF THAT'S CONCLUSIVE</span>
 
 You can only pass properties that would be accepted by a **Create Shipment**  request when using **Update Shipment**. For example, you can update a shipment's `contents` and `custom_reference`, but not its `allocation` details or `state`.
 

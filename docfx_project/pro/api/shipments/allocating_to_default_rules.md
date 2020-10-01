@@ -114,7 +114,10 @@ The **Allocate Shipments** endpoint enables you to queue multiple shipments for 
 
 To call **Allocate Shipments**, send a `PUT` request to `https://api.sorted.com/pro/shipments/allocate`. The request body should contain an array of one or more shipment `{reference}`s to be allocated. 
 
-<span class="highlight">YOU CAN ALSO SPECIFY SERVICE CAPABILITIES AT THIS POINT BUT I'M GOING TO LEAVE THEM FOR NOW AS MAY NEED MORE INFO AROUND HOW THEY WORK</span>
+Optionally, you can also include a list of service `capabilities`. Where capabilities are provided, then PRO only allocated the shipment to a carrier service that meets those capabilities. Each capability should list the `type` of service capability specified and the `value` that that capability should have.
+
+> [!NOTE]
+> For information on available service capabilities and values, see LINK HERE
 
 Once the request is received, PRO takes each shipment in turn and attempts to queue it for allocation to the cheapest eligible carrier, as per the process detailed in the [Overview](#overview). It then returns an Allocate Shipments result. 
 

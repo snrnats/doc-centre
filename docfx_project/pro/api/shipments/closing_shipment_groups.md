@@ -15,7 +15,7 @@ This page explains how to close shipment groups so that no further changes can b
 
 The **Close Shipment Group** endpoint permanently closes a specified shipment group. It is intended to be used when all shipments within a group have been either manifested or cancelled and the group is no longer required. 
 
-Closed groups cannot be edited. However, you can still retrieve details of the group. <span class="highlight">IS THERE A TIME LIMIT ON HOW LONG YOU CAN RETRIEVE CLOSED GROUP DETAILS FOR? THE TECH DOCS SORT OF IMPLY THAT BUT DON'T GIVE SPECIFICS</span>
+Closed groups cannot be edited.
 
 > [!CAUTION]
 > Once closed, shipment groups cannot be re-opened. If you want to prevent a shipment group from being edited but may still need to make changes to it later, use the **Lock Shipment Group** endpoint.

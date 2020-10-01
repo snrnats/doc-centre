@@ -52,8 +52,6 @@ Adding optional properties when you request quotes for a shipment can help you t
 >
 > If the dates you specify are too restrictive, there may not be any carrier services available to take the shipment, which would result in a failed allocation. As such, you should only specify shipping and delivery dates where it is necessary to do so.
 
-<span class="highlight">THE NOTE ABOVE IS REPURPOSED FROM THE CONSIGNMENTS HELP. IS IT STILL RELEVANT?</span>
-
 ## The Quote Result
 
 Once it has received the request, PRO returns a quote result. The quote result object includes a summary of the shipment details submitted, a list of `quote` objects, and a list of `excluded_services` (that is, eligible services for which it was not possible to obtain a delivery quote). 
@@ -69,7 +67,7 @@ Each `quote` object contains the following information:
 At this point, you would be able to display the relevant quote information to your customer service operative.
 
 > [!NOTE]
-> The quote `reference` begins with _qu_ and can be found in the `quotes.reference` property of the Quote Result. It is not to be confused with the Quote Result's own `reference`, which begins with _qr_ <span class="highlight">NEED TO CHECK THIS, SOME CALLS ARE COMING BACK WITH IT STARTING WITH QC</span> and is a unique reference for the entire quote response rather than a selectable quote.
+> The quote `reference` begins with _qu_ and can be found in the `quotes.reference` property of the Quote Result. It is not to be confused with the Quote Result's own `reference`, which begins with _qc_ and is a unique reference for the entire quote response rather than a selectable quote.
 
 ## Example Quotes
 

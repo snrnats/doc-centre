@@ -31,11 +31,11 @@ To call **Allocate with Filters**, send a `PUT` request to `https://api.sorted.c
 
 Once the request is received, PRO uses the filters provided to determine a list of available carrier services for the shipments to be allocated to. It then takes each shipment in the list and allocates it to a suitable service using the process defined in the [Selecting a Carrier Service](/pro/api/shipments/allocating_shipments.html#selecting-a-carrier-service) section of the [Allocating Shipments](/pro/api/shipments/allocating_shipments.html) page.
 
-Finally, PRO returns a  
+<!-- Finally, PRO returns a  
 
-<span class="highlight">SKIPPING THE REST OF THIS OF NOW AS THERE ARE SOME INCONSISTENCIES IN THE DATA CONTRACT - THE REQUEST FILTERS AVAILABLE CARRIER SERVICES BUT THE RESPONSE IMPLIES THAT IT'S THE SHIPMENTS FOR ALLOCATION BEING FILTERED</span>
+<span class="commented-out">SKIPPING THE REST OF THIS OF NOW AS THERE ARE SOME INCONSISTENCIES IN THE DATA CONTRACT - THE REQUEST FILTERS AVAILABLE CARRIER SERVICES BUT THE RESPONSE IMPLIES THAT IT'S THE SHIPMENTS FOR ALLOCATION BEING FILTERED</span>
 
-## Allocate with Filters Example
+## Allocate with Filters Example -->
 
 ## Next Steps
 

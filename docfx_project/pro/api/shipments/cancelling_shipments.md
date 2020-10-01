@@ -17,8 +17,6 @@ To cancel a shipment, use the **Cancel Shipment** endpoint. You can call **Cance
 
 You can only cancel a shipment prior to it being manifested. Once a shipment has been manifested it can no longer be cancelled.
 
-<span class="highlight">IS THE ABOVE CORRECT? THAT WAS THE CASE IN CONSIGNMENTS BUT I CAN'T TEST WITH THE STUBS</span>
-
 Once a shipment has been cancelled, then no further changes can be made to it other than deleting it. If you want to reinstate a cancelled shipment then you will need to create a new shipment with the same details.
 
 > [!NOTE]
