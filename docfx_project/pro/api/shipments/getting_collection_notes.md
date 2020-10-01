@@ -74,7 +74,7 @@ PRO returns a collection note listing the contents of all of the shipments that 
 ```
 ---
 
-<span class="highlight">NO EXAMPLE PROPERTIES IN THE DATA CONTRACT & ENDPOINT DOESN'T RETURN YET</span>
+<span class="highlight">Need to add example once endpoint is up and running</span>
 
 ### Getting Collection Notes by Manifest
 
@@ -95,7 +95,7 @@ PRO returns a collection note listing the contents of all of the shipments that 
 ```
 ---
 
-<span class="highlight">NO EXAMPLE PROPERTIES IN THE DATA CONTRACT & ENDPOINT DOESN'T RETURN YET</span>
+<span class="highlight">Need to add example once endpoint is up and running</span>
 
 ## The Collection Note Response
 
@@ -103,7 +103,7 @@ All Collection Notes endpoints return a collection note as a `document` object w
 
 [!include[_shipments_document_object](../includes/_shipments_document_object.md)]
 
-<span class="highlight">THE TECH DOCS HAVE AN EXAMPLE COLLECTION NOTE - SHOULD WE INCLUDE THAT IN HERE OR SHOULD IT BE FOR INTERNAL EYES ONLY?</span>
+<span class="highlight">Example collection note in here</span>
 
 # [Example Collection Note Response](#tab/example-collection-note-response)
 

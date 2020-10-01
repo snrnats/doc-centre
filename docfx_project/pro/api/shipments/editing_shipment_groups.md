@@ -19,8 +19,6 @@ The **Update Shipment Group** endpoint enables you to add and/or remove multiple
 * An `add_shipments` property listing the unique `references` of the shipments you want to add to the group. These shipments must not be a member of either the specified shipment group or any other open shipment group. 
 * A `remove_shipments` property listing the unique `references` of the shipments you want to remove from the group. These shipments must be a member of the specified shipment group. 
 
-<span class="highlight">THE EXAMPLE JSON IN THE TECH DOCS MAKES IT LOOK LIKE YOU CAN SPECIFY A NEW CUSTOM REFERENCE TOO BUT THAT'S NOT IN THE DATA CONTRACT. NEED TO CONFIRM WHETHER YOU CAN OR NOT. LEAVING FOR NOW.</span>
-
 Once it has received the request, PRO makes the requested additions and removals and returns a standard resource result object with links to the shipment group that was updated.
 
 > [!NOTE]
@@ -80,8 +78,6 @@ The **Add Shipment to Group** endpoints enable you to add individual shipments t
 
 In both cases, `{shipment_ref}` is the unique reference of the shipment you want to add to the group. This shipment must not be a member of either the specified shipment group or any other open shipment group. 
 
-<span class="highlight">THE BIT ABOVE ABOUT NOT BEING A MEMBER OF ANY OPEN SHIPMENT GROUP IS TECHNICALLY AN UPDATE GROUP RULE BUT I'M GUESSING IT'S STILL TRUE? NEED TO CONFIRM</span>
-
 Once it has received the request, PRO adds the specified shipment to the specified group and returns a standard resource result object with links to the shipment group that was updated.
 
 > [!NOTE]
@@ -115,8 +111,6 @@ PUT https://api.sorted.com/pro/shipment_groups/custom_reference/CarrierX-PM/1/sh
 }
 ```
 ---
-
-<span class="highlight">THIS ENDPOINT DOESN'T SEEM TO WORK IN THE VALIDATION STUBS - NEED TO TEST THE ABOVE EXAMPLE</span>
 
 ## Removing Individual Shipments from a Group
 
@@ -217,8 +211,6 @@ POST https://api.sorted.com/pro/shipment_groups/sg_00013464648946915264789208891
 }
 ```
 ---
-
-<span class="highlight">THE EXAMPLE ABOVE IS A MOCKUP, NEED TO TEST THIS WHEN POSSIBLE</span>
 
 ## Next Steps
 

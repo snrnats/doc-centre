@@ -30,7 +30,7 @@ Each `quote` object contains the following information:
 At this point, you would be able to display the relevant quote information to your customer service operative.
 
 > [!NOTE]
-> The quote `reference` begins with _qu_ and can be found in the `quotes.reference` property of the Quote Result. It is not to be confused with the Quote Result's own `reference`, which begins with _qr_ <span class="highlight">NEED TO CHECK THIS, SOME CALLS ARE COMING BACK WITH IT STARTING WITH QC</span> and is a unique reference for the entire quote response rather than a selectable quote.
+> The quote `reference` begins with _qu_ and can be found in the `quotes.reference` property of the Quote Result. It is not to be confused with the Quote Result's own `reference`, which begins with _qc_ and is a unique reference for the entire quote response rather than a selectable quote.
 
 ### Get Quote Example
 
