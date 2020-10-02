@@ -35,7 +35,7 @@ Once the request is received, PRO attempts to manifest any shipments that meet t
 
 > [!NOTE]
 >
->  For full reference information on the **Manifest Shipments by Query** endpoint, see LINK HERE
+>  For full reference information on the **Manifest Shipments by Query** endpoint, see the Shipments data contract.
 
 ## Manifest Shipments by Query Example
 

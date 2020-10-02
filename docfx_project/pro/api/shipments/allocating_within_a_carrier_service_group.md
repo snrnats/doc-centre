@@ -121,7 +121,7 @@ PUT https://api.sorted.com/pro/shipments/sp_10014418679662051328777876543332/all
 ---
 
 > [!NOTE]
-> For full reference information on the **Allocate Shipment with Service Group** endpoint, see LINK HERE. 
+> For full reference information on the **Allocate Shipment with Service Group** endpoint, see the Shipments data contract. 
 
 ## Allocating Multiple Shipments with a Carrier Service Group
 
@@ -132,7 +132,7 @@ To call **Allocate with Service Group**, send a `PUT` request to `https://api.so
 Optionally, you can also include a list of service `capabilities`. Where capabilities are provided, then PRO only allocated the shipment to a carrier service that meets those capabilities. Each capability should list the `type` of service capability specified and the `value` that that capability should have.
 
 > [!NOTE]
-> For information on available service capabilities and values, see LINK HERE
+> For information on available service capabilities and values, see the Shipments data contract
 
 PRO takes each shipment in turn, uses allocation rules to eliminate any carrier services in the group that would not be suitable to take the shipment, and the queues the shipment for allocation to the cheapest remaining service. It then returns an Allocate Shipments result detailing the results of the request.
 
@@ -190,7 +190,7 @@ The example shows a request to queue four shipments for allocation within carrie
 ---
 
 > [!NOTE]
-> For full reference information on the **Allocate with Service Group** endpoint, see LINK HERE. 
+> For full reference information on the **Allocate with Service Group** endpoint, see the Shipments data contract. 
 
 ## Next Steps
 

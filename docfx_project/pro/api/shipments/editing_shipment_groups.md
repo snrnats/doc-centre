@@ -22,7 +22,7 @@ The **Update Shipment Group** endpoint enables you to add and/or remove multiple
 Once it has received the request, PRO makes the requested additions and removals and returns a standard resource result object with links to the shipment group that was updated.
 
 > [!NOTE]
-> For full reference information on the **Update Shipment Group** endpoint, see LINK HERE
+> For full reference information on the **Update Shipment Group** endpoint, see the Shipments data contract.
 
 ### Update Shipment Group Example
 
@@ -81,7 +81,7 @@ In both cases, `{shipment_ref}` is the unique reference of the shipment you want
 Once it has received the request, PRO adds the specified shipment to the specified group and returns a standard resource result object with links to the shipment group that was updated.
 
 > [!NOTE]
-> For full reference information on the **Add Shipment to Group** endpoint, see LINK HERE
+> For full reference information on the **Add Shipment to Group** endpoint, see the Shipments data contract.
 
 ### Add Shipment to Group Examples
 
@@ -128,7 +128,7 @@ In both cases, `{shipment_ref}` is the unique reference of the shipment you want
 Once it has received the request, PRO removes the specified shipment from the specified group and returns a standard resource result object with links to the shipment group that was updated.
 
 > [!NOTE]
-> For full reference information on the **Remove Shipment from Group** endpoint, see LINK HERE
+> For full reference information on the **Remove Shipment from Group** endpoint, see the Shipments data contract.
 
 ### Remove Shipment from Group Examples
 
@@ -173,7 +173,7 @@ You can lock shipment groups using the **Lock Shipment Group** endpoint. To call
 PRO locks the group and returns a standard resource result object with links to the shipment group that was updated.
 
 > [!NOTE]
-> For full reference information on the **Lock Shipment Group** endpoint, see LINK HERE
+> For full reference information on the **Lock Shipment Group** endpoint, see the Shipments data contract.
 
 ### Unlocking Shipment Groups
 
@@ -182,7 +182,7 @@ You can unlock shipment groups using the **Unlock Shipment Group** endpoint. To 
 PRO unlocks the group and returns a standard resource result object with links to the shipment group that was updated.
 
 > [!NOTE]
-> For full reference information on the **Unlock Shipment Group** endpoint, see LINK HERE
+> For full reference information on the **Unlock Shipment Group** endpoint, see the Shipments data contract.
 
 ### Example
 

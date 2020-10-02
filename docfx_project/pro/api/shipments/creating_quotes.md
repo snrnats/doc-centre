@@ -37,12 +37,12 @@ However, there are lots of optional properties you can send when requesting quot
 * Your own custom reference for the shipment.
 * Required shipping and delivery dates.
 * The order date.
-* Customs documentation for international shipments. For more information on using customs documentation in PRO, see [LINK HERE].
+* Customs documentation for international shipments. For more information on using customs documentation in PRO, see the [Getting Shipment Documents](/pro/api/shipments/getting_shipment_documents.html) page.
 * Shipment direction.
 * Custom label properties.
 * Tenant and channel.
-* Metadata. PRO metadata enables you to use custom fields to record additional data about a shipment. For more information on using metadata in PRO, see [LINK HERE].
-* Tags. Allocation tags enable you to filter the list of carrier services that a particular shipment could be allocated to. For more information on allocation tags, see [LINK HERE].
+* Metadata. PRO metadata enables you to use custom fields to record additional data about a shipment. For more information on using metadata in PRO, see the [Using Shipment Metadata](/pro/api/shipments/using_shipment_metadata.html) page.
+* Tags. Allocation tags enable you to filter the list of carrier services that a particular shipment could be allocated to. For more information on allocation tags, see the [Using Shipment Tags](/pro/api/shipments/using_shipment_tags.html) page.
 
 Adding optional properties when you request quotes for a shipment can help you to filter the list of quotes you receive down to the most appropriate carrier services.
 
@@ -352,8 +352,7 @@ The example below shows a quote request for a shipment. Note that  PRO has retur
 
 > [!NOTE]
 >
-> * For full reference information on the **Create Quote** endpoint, see LINK HERE.
-> * For full reference information on the **Create Quote by Service Group** endpoint, see LINK HERE.
+> * For full reference information on the **Create Quote** and **Create Quote by Service Group** endpoints, see the Shipments data contract.
 
 ## Next Steps
 

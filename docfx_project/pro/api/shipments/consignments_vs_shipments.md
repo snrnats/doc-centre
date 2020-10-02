@@ -56,7 +56,7 @@ Like consignments, shipments are a collection of one or more packages that are s
 
 > [!NOTE]
 >
-> For full reference information on the new Shipments data contract, see [LINK HERE]
+> For full reference information on the new Shipments data contract, see the Shipments data contract.
 
 ## Next Steps
 

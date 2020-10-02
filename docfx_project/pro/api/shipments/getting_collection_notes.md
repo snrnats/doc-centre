@@ -36,7 +36,7 @@ PRO returns a collection note listing the contents of all of the shipments in th
 
 > [!NOTE]
 > * For an explanation of versioning in PRO shipment groups, see the [Versioning in Shipment Groups](/pro/api/shipments/getting_shipment_groups.html#versioning-in-shipment-groups) section of the [Getting Shipment Groups](/pro/api/shipments/getting_shipment_groups.html) page.
-> * For full reference information on the **Get Shipment Group Collection Note** endpoint, see LINK HERE.
+> * For full reference information on the **Get Shipment Group Collection Note** endpoint, see the Shipments data contract.
 
 # [Example Get Shipment Group Collection Note Request](#tab/get-shipment-group-collection-note-request)
 
@@ -63,7 +63,7 @@ In addition, the request can contain the following optional properties:
 PRO returns a collection note listing the contents of all of the shipments that meet all of the criteria you specified.
 
 > [!NOTE]
-> For full reference information on the **Get Collection Note by Query** endpoint, see LINK HERE.
+> For full reference information on the **Get Collection Note by Query** endpoint, see the Shipments data contract.
 
 # [Example Get Collection Note by Query Request](#tab/get-collection-note-by-query-request)
 
@@ -84,7 +84,7 @@ PRO returns a collection note listing the contents of all of the shipments that 
 
 > [!NOTE]
 > * For more information on manifesting in PRO, see the [Manifesting Shipments](/pro/api/shipments/manifesting_shipments.html) section.
-> * For full reference information on the **Get Collection Note by Manifests** endpoint, see LINK HERE.
+> * For full reference information on the **Get Collection Note by Manifests** endpoint, see the Shipments data contract.
 
 # [Example Get Collection Note by Manifests Request](#tab/get-collection-note-by-manifests-request)
 

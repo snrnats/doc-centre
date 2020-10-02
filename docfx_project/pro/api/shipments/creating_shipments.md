@@ -104,14 +104,14 @@ The example below shows how this shipment would be represented in JSON. This is 
 All shipments require both `origin` and `destination` addresses. In PRO, addresses are represented by `address` objects, which must be specified as a list inside the `shipments.addresses` property. As a minimum, each address must include the following:
 
 * `address_type` - As well as `origin` and `destination` address types, PRO enables you to specify `return`, `sender`, `recipient`, `importer`,	and `billing` addresses.
-* `shipping_location_reference` - Each shipping location that you run scheduled shipments from should have a unique shipping location reference. The `shipping_location_reference` property is optional for `on_demand` shipments but required for `scheduled` shipments. Where provided, the value must be a valid shipping location reference for your organisation. For information on how to obtain a list of your organisation's shipping locations, see [LINK HERE]
+* `shipping_location_reference` - Each shipping location that you run scheduled shipments from should have a unique shipping location reference. The `shipping_location_reference` property is optional for `on_demand` shipments but required for `scheduled` shipments. Where provided, the value must be a valid shipping location reference for your organisation.
 * `contact`- Details of the contact at the address (for example, the name of the recipient). This property is only required where a `shipping_location_reference` is not provided.
 * `address_line_1` - All addresses must have at least one line.
 * `region` - The state, county, or equivalent. This property is required for certain countries, such as the US, Australia, and Canada.
 * `postal_code` - Required for countries with official postcode systems, such as the UK.
 * `country_iso_code` - The ISO 3166 Alpha 2 code for the country.
 
-In addition, PRO supports several optional address properties, including custom references, company details, and latitude / longitude. See [LINK HERE] for details.
+In addition, PRO supports several optional address properties, including custom references, company details, and latitude / longitude. See the Shipments data contract for details.
 
 ### Optional Shipment Properties
 
@@ -120,19 +120,13 @@ There are lots of optional properties you can send when creating a shipment, inc
 * Your own custom reference for the shipment.
 * Required shipping and delivery dates.
 * The order date.
-* Customs documentation for international shipments. For more information on using customs documentation in PRO, see [LINK HERE].
+* Customs documentation for international shipments. For more information on using customs documentation in PRO, see the [Getting Shipment Documents](/pro/api/shipments/getting_shipment_documents.html) page.
 * Shipment direction.
 * Custom label properties.
 * Tenant and channel.
-* Metadata. PRO metadata enables you to use custom fields to record additional data about a shipment. 
-  > [!NOTE]
-  > For more information on using metadata in PRO, see [LINK HERE].
-* Tags. Allocation tags enable you to filter the list of carrier services that a particular shipment could be allocated to. 
-  > [!NOTE]
-  > For more information on allocation tags, see [LINK HERE].
-* Paperless documents. Paperless documents are customer-generated documents (such as packing lists or certificates of conformity) that are transmitted to carriers as part of a shipment's data rather than being generated separately by the carrier. 
-  > [!NOTE]
-  > For more information on working with paperless documents in PRO, see the [Adding Paperless Documents](/pro/api/shipments/adding_paperless_documents.html) page.
+* Metadata. PRO metadata enables you to use custom fields to record additional data about a shipment. For more information on using metadata in PRO, see the [Using Shipment Metadata](/pro/api/shipments/using_shipment_metadata.html) page.
+* Tags. Allocation tags enable you to filter the list of carrier services that a particular shipment could be allocated to. For more information on allocation tags, see the [Using Shipment Tags](/pro/api/shipments/using_shipment_tags.html) page.
+* Paperless documents. Paperless documents are customer-generated documents (such as packing lists or certificates of conformity) that are transmitted to carriers as part of a shipment's data rather than being generated separately by the carrier. For more information on working with paperless documents in PRO, see the [Adding Paperless Documents](/pro/api/shipments/adding_paperless_documents.html) page.
 
 Adding optional properties when you create a shipment can help you to ensure that your shipment is allocated to the most appropriate carrier service.
 
@@ -144,7 +138,7 @@ Adding optional properties when you create a shipment can help you to ensure tha
 
 ### Example Create Shipment Request
 
-The example below shows a simple **Create Shipment** request containing only a `shipment_type`, `contents`, and `addresses`. For an example of a full **Create Shipment** request, see [LINK HERE]
+The example below shows a simple **Create Shipment** request containing only a `shipment_type`, `contents`, and `addresses`. For an example of a full **Create Shipment** request, see the Shipments data contract.
 
 # [Create Shipment Request](#tab/create-shipment-request)
 
@@ -269,11 +263,11 @@ In the example below, PRO has returned a shipment `{reference}` of _sp_005954527
 ```
 ---
 
-All PRO shipments have a `{state}`, indicating the point in the delivery process that that particular shipment is at. Newly-created shipments have an initial state of `Unallocated`. For more information on PRO shipment states, see [LINK HERE].
+All PRO shipments have a `{state}`, indicating the point in the delivery process that that particular shipment is at. Newly-created shipments have an initial state of `Unallocated`. For more information on PRO shipment states, see the [Shipment States](/pro/api/shipments/shipment_states.html) page.
 
 > [!NOTE]
 >
-> For full reference information on the **Create Shipments** endpoint, including the properties accepted and the structure required, see [LINK HERE]
+> For full reference information on the **Create Shipments** endpoint, including the properties accepted and the structure required, see the Shipments data contract.
 
 <!--## Cloning Shipments
 
@@ -293,7 +287,7 @@ The example below shows a request to clone a shipment <span class="commented-out
 
 > [!NOTE]
 >
-> For full reference information on the **Clone Shipment** endpoint, see [LINK HERE] -->
+> For full reference information on the **Clone Shipment** endpoint, see the Shipments data contract -->
 
 ## Updating Shipments
 
@@ -315,10 +309,6 @@ When it has received the request, PRO replaces the _entire_ shipment object for 
 > If you do not pass a value for an optional property when making an **Update Shipment** request then PRO will not store any value for that property, even if that property had a value before you updated the shipment.
 
 You cannot update a shipment that has already been allocated, because PRO uses a shipment's current details to decide the carrier services that that shipment can be allocated to.
-
-> [!NOTE]
->
-> For more information on deallocating a shipment, see [LINK HERE]
 
 ### Update Shipment Example
 
@@ -376,7 +366,7 @@ The example shows a simple **Update Shipment** request for a shipment with a `{r
 
 > [!NOTE]
 >
-> For full reference information on the **Update Shipment** endpoint, see [LINK HERE]
+> For full reference information on the **Update Shipment** endpoint, see the Shipments data contract.
 
 ## Next Steps
 

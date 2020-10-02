@@ -25,7 +25,7 @@ Once PRO has received the request, it attempts to manifest the specified shipmen
 
 > [!NOTE]
 >
->  For full reference information on the **Manifest Shipment** endpoint, see LINK HERE. 
+>  For full reference information on the **Manifest Shipment** endpoint, see the Shipments data contract. 
 
 ### Manifest Shipment Example
 
@@ -78,7 +78,7 @@ Once PRO has received the request, it attempts to manifest the shipments listed 
 
 > [!NOTE]
 >
->  For full reference information on the **Manifest Shipments** endpoint, see LINK HERE. 
+>  For full reference information on the **Manifest Shipments** endpoint, see the Shipments data contract. 
 
 ### Manifest Shipments Example
 

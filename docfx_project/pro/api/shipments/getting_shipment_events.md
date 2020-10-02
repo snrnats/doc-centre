@@ -36,7 +36,7 @@ PRO returns a `tracking_response` object for the shipment. The `tracking_respons
 > [!NOTE]
 >
 > * For more information on the structure of PRO shipment tracking events, see the [What Is a Tracking Event?](/pro/api/shipments/tracking_pro_shipments.html#what-is-a-tracking-event) section of the [Tracking PRO Shipments](/pro/api/shipments/tracking_pro_shipments.html) page.
-> * For full reference information on the **Get Tracking Events** endpoint, see LINK HERE.
+> * For full reference information on the **Get Tracking Events** endpoint, see the Shipments data contract.
 
 ### Example Get Tracking Events Call
 
@@ -147,7 +147,7 @@ For example, suppose that you have 15 shipments with a `custom_reference` of _CR
 By default, `{take}` has a value of 10 and `{skip}` has a value of 0.
 
 > [!NOTE]
-> * For full reference information on the **Get Tracking Events by Custom Reference** endpoint, see LINK HERE.
+> * For full reference information on the **Get Tracking Events by Custom Reference** endpoint, see the Shipments data contract.
 
 ### Example Get Tracking Events by Custom Reference Call
 

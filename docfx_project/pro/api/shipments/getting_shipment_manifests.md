@@ -19,7 +19,7 @@ PRO returns the requested manifest file. The manifest lists the shipments that w
 
 > [!NOTE]
 >
-> * For full reference information on the **Get Manifest** endpoint, see LINK HERE
+> * For full reference information on the **Get Manifest** endpoint, see the Shipments data contract.
 
 ## Get Manifest Example
 

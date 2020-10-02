@@ -35,8 +35,8 @@ PRO's Shipments APIs enable you to:
 
 > [!NOTE]
 >
-> * For example API call flows, see LINK HERE.
-> * For API reference information, see LINK HERE.
+> * For example API call flows, see the Shipments data contract.
+> * For API reference information, see the Shipments data contract.
 
 ## Making an API Request in PRO
 

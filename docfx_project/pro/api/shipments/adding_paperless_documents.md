@@ -42,7 +42,7 @@ PRO supports the following paperless document types:
 Documents must be uploaded as an image in one of PRO's supported formats (PDF, PNG, JPG or GIF), and must be less than 5MB in size. For larger documents you may need to optimise your files (for example, removing fonts and embedded data from a PDF or reducing quality on a JPG) to bring your files under the size limit.
 
 > [!NOTE]
-> PRO's paperless document functionality should not be confused with PRO's customs documents functionality. Paperless documents are added to the shipment before allocation and transmitted as part of that shipment's data, while customs documents are generated post-allocation and are intended to be printed before dispatch. For more information on working with customs documents in PRO, see LINK HERE. 
+> PRO's paperless document functionality should not be confused with PRO's customs documents functionality. Paperless documents are added to the shipment before allocation and transmitted as part of that shipment's data, while customs documents are generated post-allocation and are intended to be printed before dispatch. For more information on working with customs documents in PRO, see the [Getting Shipment Documents](/pro/api/shipments/getting_shipment_documents.html) page. 
 
 <span class="highlight">NEED NOTE ABOUT HOW ALLOCATE RESULT CONFIRMS USAGE TYPE OF DOC</span>
 

@@ -109,7 +109,7 @@ The example shows a successful request to allocate shipment _sp_1001441867966205
 ---
 
 > [!NOTE]
->  For full reference information on the **Allocate Shipment with Carrier Service** endpoint, see LINK HERE
+>  For full reference information on the **Allocate Shipment with Carrier Service** endpoint, see the Shipments data contract
 
 ## Allocating Multiple Shipments with a Specific Carrier Service
 
@@ -118,7 +118,7 @@ The **Allocate With Carrier Service** endpoint enables you to queue one or more 
 Optionally, you can also include a list of service `capabilities`. Where capabilities are provided, then PRO only allocated the shipment to a carrier service that meets those capabilities. Each capability should list the `type` of service capability specified and the `value` that that capability should have.
 
 > [!NOTE]
-> For information on available service capabilities and values, see LINK HERE
+> For information on available service capabilities and values, see the Shipments data contract
 
 PRO takes each shipment in turn and checks whether the specified service is eligible to take that shipment. It then returns an Allocate Shipments result detailing the results of the request.
 
@@ -178,7 +178,7 @@ The example shows a request to queue four shipments for allocation to a carrier 
 ---
 
 > [!NOTE]
->  For full reference information on the **Allocate With Carrier Service** endpoint, see LINK HERE
+>  For full reference information on the **Allocate With Carrier Service** endpoint, see the Shipments data contract
 
 ## Next Steps
 

@@ -21,7 +21,7 @@ Once a shipment has been cancelled, then no further changes can be made to it ot
 
 > [!NOTE]
 >
-> For full reference information on the **Cancel Shipment** endpoint, see [LINK HERE]
+> For full reference information on the **Cancel Shipment** endpoint, see the Shipments data contract.
 
 ### Cancel Shipment Example
 
@@ -60,7 +60,7 @@ You can only delete shipments that are in a `state` of _cancelled_. If you attem
 
 > [!NOTE]
 >
-> For full reference information on the **Delete Shipment** endpoint, see [LINK HERE]
+> For full reference information on the **Delete Shipment** endpoint, see the Shipments data contract.
 
 ### Delete Shipment Example
 

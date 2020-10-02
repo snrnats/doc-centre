@@ -18,7 +18,7 @@ The **Get Shipment** endpoint takes the `{reference}` of the shipment you want t
 The information returned is structured in a broadly similar way to a **Create Shipment** request, but may also contain additional properties (that is, properties that are managed by PRO rather than explicitly stated by the customer when a shipment is created). These properties include:
 
 * `reference` - The shipment's unique reference.
-* `state` - The shipment's current `state`. For a full list of shipment states see [LINK HERE]
+* `state` - The shipment's current `state`. For a full list of shipment states, see the [Shipment States](/pro/api/shipments/shipment_states.html) page.
 * `created` - The date and time that the shipment was created.
 * `updated` - The date and time that the shipment was last updated, where applicable.
 * `shipping_date` - The assigned shipping date for the shipment based on the active allocation, where applicable.
@@ -31,7 +31,7 @@ The information returned is structured in a broadly similar way to a **Create Sh
 
 > [!NOTE]
 >
-> For full reference information on the **Get Shipment** endpoint, see [LINK HERE]
+> For full reference information on the **Get Shipment** endpoint, see the Shipments data contract.
 
 ### Example Get Shipment Call
 
@@ -248,7 +248,7 @@ The example shows a successful request to get all shipments that either have the
 -->
 
 > [!NOTE]
-> For full reference information on the **Get Shipments by Custom Reference** endpoint, see LINK HERE.
+> For full reference information on the **Get Shipments by Custom Reference** endpoint, see the Shipments data contract.
 
 ## Getting Shipments by Carrier Tracking Reference
 
@@ -280,7 +280,7 @@ The example shows a successful request to get all shipments that have the carrie
 -->
 
 > [!NOTE]
-> For full reference information on the **Get Shipments by Carrier Tracking Reference** endpoint, see LINK HERE.
+> For full reference information on the **Get Shipments by Carrier Tracking Reference** endpoint, see the Shipments data contract.
 
 ## Paging Results
 

@@ -41,7 +41,7 @@ Each `contents_tracking_event` represents a tracking response for an item of con
 > [!NOTE]
 >
 > * For more information on the structure of PRO tracking events, see the [What Is a Tracking Event?](/pro/api/shipments/tracking_pro_shipments.html#what-is-a-tracking-event) section of the [Tracking PRO Shipments](/pro/api/shipments/tracking_pro_shipments.html) page.
-> * For full reference information on the **Get Contents-Level Tracking Events** endpoint, see LINK HERE.
+> * For full reference information on the **Get Contents-Level Tracking Events** endpoint, see the Shipments data contract.
 
 ### Example Get Contents-Level Tracking Events Call
 
@@ -165,7 +165,7 @@ For example, suppose that you have 15 shipments with a `custom_reference` of _CR
 By default, `{take}` has a value of 10 and `{skip}` has a value of 0.
 
 > [!NOTE]
-> * For full reference information on the **Get Contents-Level Tracking Events by Custom Reference** endpoint, see LINK HERE.
+> * For full reference information on the **Get Contents-Level Tracking Events by Custom Reference** endpoint, see the Shipments data contract.
 
 <!-- commenting this section out as no example response available yet
 
