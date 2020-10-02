@@ -33,8 +33,6 @@ PRO's Shipments APIs enable you to:
 * **Get Collection Notes** - Retrieve collection notes (aka a driver's manifest) by search query, or by shipment group.
 * **Track Shipments** - Return tracking updates for a given shipment. 
 
-<span class="highlight">NEED SOME SORT OF NOTE ABOUT REACT TRACKING IN HERE</span>
-
 > [!NOTE]
 >
 > * For example API call flows, see LINK HERE.

@@ -231,6 +231,8 @@ The `custom_reference` property can be applied to both shipments and `shipment_c
 
 Once it has received the request, PRO returns a `shipment_list` object containing a list of shipments, the total number of results, the number of shipments requested and the number of shipments skipped.
 
+<!-- commenting out due to endpoint not currently running
+
 ### Example Get Shipments by Custom Reference Call
 
 The example shows a successful request to get all shipments that either have the `custom_reference` or contain contents with the `custom_reference` _CR1234_.
@@ -241,12 +243,12 @@ The example shows a successful request to get all shipments that either have the
 
 # [Get Shipments by Custom Reference Response](#tab/get-shipments-by-custom-reference-response)
 
-<span class="highlight">NO JSON EXAMPLES OR WORKING ENDPOINTS FOR THIS YET</span>
+<span class="commented-out">NO JSON EXAMPLES OR WORKING ENDPOINTS FOR THIS YET</span>
 
----
+-->
 
 > [!NOTE]
-> For full reference information on the **Get Shipments by Custom Reference** endpoint, see <span class="highlight">LINK HERE</span>.
+> For full reference information on the **Get Shipments by Custom Reference** endpoint, see LINK HERE.
 
 ## Getting Shipments by Carrier Tracking Reference
 
@@ -261,6 +263,8 @@ Once it has received the request, PRO returns a `shipment_list` object containin
 
 **Get Shipments by Carrier Tracking Reference** only works with those tracking references provided by carriers. It will not return shipments for internally-generated PRO or REACT references.
 
+<!-- commenting out due to endpoint not currently running
+
 ### Example Get Shipments by Carrier Tracking Reference Call
 
 The example shows a successful request to get all shipments that have the carrier `tracking_reference` _CTR1234_.
@@ -271,12 +275,12 @@ The example shows a successful request to get all shipments that have the carrie
 
 # [Get Shipments by Carrier Tracking Reference Response](#tab/get-shipments-by-carrier-tracking-reference-response)
 
-<span class="highlight">NO JSON EXAMPLES OR WORKING ENDPOINTS FOR THIS YET</span>
+<span class="commented-out">NO JSON EXAMPLES OR WORKING ENDPOINTS FOR THIS YET</span>
 
----
+-->
 
 > [!NOTE]
-> For full reference information on the **Get Shipments by Carrier Tracking Reference** endpoint, see <span class="highlight">LINK HERE</span>.
+> For full reference information on the **Get Shipments by Carrier Tracking Reference** endpoint, see LINK HERE.
 
 ## Paging Results
 

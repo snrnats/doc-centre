@@ -17,7 +17,7 @@ In the context of SortedPRO, the term "manifesting" refers to collating, formatt
 
 You can only manifest shipments that are in a state of `allocated`, `manifest_failed`, or `ready_to_ship`. If you attempt to manifest a shipment that is not in one of these states then PRO returns an error.
 
-<span class="highlight">THE ABOVE NOTE IS FROM THE CONSIGNMENTS HELP. I'M GUESSING THIS IS STILL THE CASE BUT NEED TO CONFIRM</span>
+<span class="highlight">The above note is from the consignments help. I'm guessing this is still the case but need to confirm</span>
 
 PRO has four endpoints that manifest shipments: 
 
@@ -30,15 +30,11 @@ PRO has four endpoints that manifest shipments:
 >
 > Every successful request to a manifest endpoint results in data being transmitted to the carrier. Therefore, Sorted strongly advise that you do not manifest shipments individually, and that shipment manifesting is aligned with the carrier collection times from the warehouse.
 
-Manifesting a shipment changes its state to `manifested`. At this point the carrier is aware of the shipment, and will collect it unless otherwise advised. In order to prevent the shipment being shipped, you would need to either cancel or deallocate it. 
+Manifesting a shipment changes its state to `manifested`. At this point the carrier is aware of the shipment, and will collect it unless otherwise advised. In order to prevent the shipment being shipped, you would need to cancel it. 
 
 > [!NOTE]
 >
 > For more information on cancelling shipments, see [Cancelling Shipments](/pro/api/shipments/cancelling_shipments.html)].
->
-> For more information on deallocating shipments, see LINK HERE.
-
-<span class="highlight">NEED TO CONFIRM WHAT THE DEAL IS WITH DEALLOCATING SHIPMENTS AS THERE AREN'T ANY ENDPOINTS IN THE NEW COLLECTION</span>
 
 Whenever you manifest one or more shipments, PRO creates a new manifest item. Each manifest item contains shipments for one carrier only. You can retrieve manifest items using the **Get Manifest** endpoint 
 

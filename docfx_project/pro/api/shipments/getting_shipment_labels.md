@@ -29,7 +29,7 @@ The **Get Labels** endpoint retrieves all labels for the specified shipment. To 
 
 **Get Labels** also has two optional queries:
 
-* `?dpi={resolution}` - Returns the label in the specified `resolution`. <span class="highlight">IS THERE A LIST OF ACCEPTABLE RESOLUTIONS? DOES THIS VARY WITH FILE TYPE?</span>
+* `?dpi={resolution}` - Returns the label in the specified `resolution`. <span class="highlight">Is there a list of acceptable resolutions? Does this vary with file type?</span>
 * `?include_extension=bool` - A boolean (true/false) values enabling you to specify whether you want the returned labels to include your custom label extensions. If you do not provide an `include_extension` query then PRO returns label extensions by default.
 
 To specify queries, add them to the end of the **Get Labels** URL. You can use multiple queries by separating them with an `&` operator. For example:
@@ -52,7 +52,7 @@ The **Get Contents Label** endpoint retrieves the label for a specific item of s
 
 **Get Contents Label** also has two optional queries:
 
-* `?dpi={resolution}` - Returns the label in the specified `resolution`. <span class="highlight">IS THERE A LIST OF ACCEPTABLE RESOLUTIONS? DOES THIS VARY WITH FILE TYPE?</span>
+* `?dpi={resolution}` - Returns the label in the specified `resolution`. <span class="highlight">Is there a list of acceptable resolutions? Does this vary with file type?</span>
 * `?include_extension=bool` - Enables you to specify whether you want the returned labels to include your custom label extensions. PRO excludes extensions when `include_extensions` is set to _false_. If you do not provide an `include_extension` query then PRO returns label extensions by default.
 
 To specify queries, add them to the end of the **Get Contents Label** URL. You can use multiple queries by separating them with an `&` operator. For example:

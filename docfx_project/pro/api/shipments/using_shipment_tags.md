@@ -7,15 +7,13 @@ created: 13/07/2020
 ---
 # Using Shipment Tags
 
-Allocation tags are a type of allocation rule that enables you to filter the list of available carrier services on a per-shipment basis, no matter which allocation endpoints you use in your integration. <span class="highlight">IS THIS STILL THE CASE OR DO THEY NOW ONLY WORK WITH THE ALLOCATION WITH FILTERS ENDPOINT?</span>They are generally used as a flexible means of excluding carrier services that would not be suitable for a particular shipment. 
+Allocation tags are a type of allocation rule that enables you to filter the list of available carrier services on a per-shipment basis, no matter which allocation endpoints you use in your integration. They are generally used as a flexible means of excluding carrier services that would not be suitable for a particular shipment. 
 
 Tagged shipments can only be allocated to those carrier services that have a matching tag. You can still allocate untagged shipments to a carrier service that has tags.
 
 For example, a retailer might use the UI to add a `Flammables` tag to all the carrier services that they wanted to use for flammable products. They would then add the `Flammables` tag to all shipments containing flammable products. PRO would only allocate those shipments tagged as `Flammables` to a shipment in the pre-approved `Flammables` list.
 
 ### Configuring Allocation Tags
-
-To associate tags with carrier services, <span class="highlight">INSTRUCTIONS FOR TAGGING CARRIER SERVICES IN THE NEW UI IN HERE</span>
 
 To tag a shipment, add the required tag into the shipment's `tags` property, either at creation or via the [Update Shipment](/pro/api/shipments/creating_shipments.html?tabs=contents-example%2Ccreate-shipment-request%2Ccreate-shipment-response%2Cexample-update-shipment-request#updating-shipments) endpoint. The `tags` property is a simple array listing all the tags that apply to the shipment.
 
@@ -50,5 +48,3 @@ This configuration would produce the following results:
 * **Shipment tagged with** `Flammables` - B and C are returned
 * **Shipment tagged with** `Alcohol` **and** `Flammables` - C is returned
 * **Shipment tagged with** `Alcohol`**,** `Flammables`**, and** `Oil` - No services are returned
-
-<span class="highlight">MIGHT NEED TO REWORD THE ABOVE A BIT IF IT DOES TRANSPIRE THAT TAGS ARE NOW ONLY USED IN CONJUNCTION WITH THE FILTERS ENDPOINT</span>

@@ -167,6 +167,8 @@ By default, `{take}` has a value of 10 and `{skip}` has a value of 0.
 > [!NOTE]
 > * For full reference information on the **Get Contents-Level Tracking Events by Custom Reference** endpoint, see LINK HERE.
 
+<!-- commenting this section out as no example response available yet
+
 ### Example Get Contents-Level Tracking Events by Custom Reference Call
 
 The example shows a **Get Contents-Level Tracking Events by Custom Reference** call for all shipments with the `{custom_reference}` _CR1234_, using default paging settings. PRO has returned tracking details for a single shipment.
@@ -184,7 +186,7 @@ GET https://api.sorted.com/pro/tracking/custom_reference/CR1234/shipment_content
 ```
 ---
 
-<span class="highlight">NO EXAMPLE OBJECT IN THE DATA CONTRACT AND API STUB ISNT RESPONDING SO WILL HAVE TO ADD EXAMPLE RESPONSE LATER</span>
+<span class="commented-out">NO EXAMPLE OBJECT IN THE DATA CONTRACT AND API STUB ISNT RESPONDING SO WILL HAVE TO ADD EXAMPLE RESPONSE LATER</span> -->
 
 ## Next Steps
 

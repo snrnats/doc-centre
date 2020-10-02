@@ -15,7 +15,7 @@ This page explains how to retrieve carrier tracking events for a shipment.
 
 In shipment-level tracking, PRO returns tracking events for the entire shipment, without making a distinction between individual items of contents within that shipment. 
 
-<span class="highlight">WHAT DOES IT DO WHEN THERE ARE MULTIPLE ITEMS OF CONTENTS SHIPPING INDEPENDENTLY? DOES IT JUST DISPLAY THE MOST RECENT? ALSO, DO WE HAVE USE CASES FOR THESE ENDPOINTS VS THE CONTENT-LEVEL ENDPOINTS (USE SHIPMENT-LEVEL IF YOU ONLY SHIP SINGLE PACKAGES, THAT SORT OF THING)</span>
+<span class="highlight">What does it do when there are multiple items of contents shipping independently? Does it just display the most recent? Also, do we have use cases for these endpoints vs the content-level endpoints (use shipment-level if you only ship single packages, that sort of thing) </span>
 
 PRO offers two endpoints that enable you to get shipment-level tracking events: 
 

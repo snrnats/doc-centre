@@ -314,7 +314,7 @@ When it has received the request, PRO replaces the _entire_ shipment object for 
 >
 > If you do not pass a value for an optional property when making an **Update Shipment** request then PRO will not store any value for that property, even if that property had a value before you updated the shipment.
 
-You cannot update a shipment that has already been allocated, because PRO uses a shipment's current details to decide the carrier services that that shipment can be allocated to. You would first need to deallocate an allocated shipment in order to update it.
+You cannot update a shipment that has already been allocated, because PRO uses a shipment's current details to decide the carrier services that that shipment can be allocated to.
 
 > [!NOTE]
 >

@@ -18,7 +18,7 @@ The **Manifest Shipment** endpoint enables you to manifest an individual shipmen
 Once PRO has received the request, it attempts to manifest the specified shipment and returns a `manifest_result` containing the following information:
 
 * A unique reference for the manifest item.
-* Details of the carrier and service that the shipment was manifested with. <span class="highlight">I'M GUESSING THIS WORKS IN THE SAME WAY AS THE ALLOCATION ENDPOINTS WHERE BULK ENDPOINTS QUEUE AND SINGLE ENDPOINTS MANIFEST IN-PROCESS? NEED TO CONFIRM THAT</span>
+* Details of the carrier and service that the shipment was manifested with.
 * A message providing details of the result.
 * The current state of the shipment as a result of the manifest operation. Ordinarily, this would be _manifesting_.
 * A link to the generated manifest.

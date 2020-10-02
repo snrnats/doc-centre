@@ -13,7 +13,7 @@ This page explains how to use the **Get Manifest** endpoint to retrieve existing
 
 ## The Get Manifest Endpoint
 
-To call **Get Manifest**, send a `GET` request to `https://api.sorted.com/pro/shipments/manifests/{reference}`, where `{reference}` is the unique reference of the manifest you want to retrieve. Manifest references begin with _ma_ and can be found in the `manifest_results.reference` property of the Manifest Response returned when the shipment was manifested. <span class="highlight">CAN YOU GET IT ANYWHERE ELSE?</span>
+To call **Get Manifest**, send a `GET` request to `https://api.sorted.com/pro/shipments/manifests/{reference}`, where `{reference}` is the unique reference of the manifest you want to retrieve. Manifest references begin with _ma_ and can be found in the `manifest_results.reference` property of the Manifest Response returned when the shipment was manifested.
 
 PRO returns the requested manifest file. The manifest lists the shipments that were manifested in that operation and the date that the file was created.
 

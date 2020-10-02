@@ -21,7 +21,7 @@ Once a shipment is allocated, PRO automatically determines what documentation is
 * `cn22` - Customs documentation. Only generated for applicable international shipments.
 * `cn23` - Customs documentation. Only generated for applicable international shipments.
 * `commercial_invoice` - Customs documentation. Only generated for applicable international shipments.
-* `hazard_label` - Generated for shipments containing dangerous goods <span class="highlight">I ASSUME THIS IS GOING TO RUN OFF THE NEW DANGEROUS GOODS UI FUNCTIONALITY. NEED FURTHER INFO AS TO WHAT CONDITIONS IT GENERATES A HAZARD LABEL UNDER. UNLESS IT ALWAYS GENERATES A HAZARD LABEL AND IT'S JUST NULL IF THERE AREN'T ANY HAZARDOUS GOODS?</span>
+* `hazard_label` - Generated for shipments containing dangerous goods <span class="highlight">At what point is the hazard label generated? Is it only generated for shipments that contain hazardous goods or is it always generated and just left blank if there's no hazardous goods info?</span>
 * `collection_note` - A driver's manifest for the shipment. Generated for all shipments.
 
 PRO offers two endpoints to retrieve documents once they have been generated:
@@ -119,7 +119,9 @@ GET https://api.sorted.com/pro/documents/sp_00670175533382557003917067812864
 ```
 ---
 
-<span class="highlight">HOW SHOULD WE HANDLE DECODING THE FILE HERE? DO WE LEAVE IT UP TO INDIVIDUAL CUSTOMERS OR ATTEMPT TO PUT </span>
+## Using the Label Data
+
+Once you have downloaded the file data, you will need to decode the file's Base64 in order to view the label itself. If you are unsure how to do so, see the **[MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding)** for more information.
 
 ## Next Steps
 
