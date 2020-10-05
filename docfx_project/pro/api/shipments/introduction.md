@@ -2,18 +2,18 @@
 uid: pro-api-help-shipments-introduction
 title: Introduction
 tags: shipments,pro,api,getting started
-contributors: andy.walton@sorted.com,michael.rose@sorted.com
-created: 02/07/2020
+contributors: andy.walton@sorted.com
+created: 05/10/2020
 ---
 # Getting Started with PRO's Shipments APIs
 
-Welcome to SortedPRO! Here you'll find a brief overview of PRO's Shipments APIs and how you can call them.
+Welcome to SortedPRO! Here you'll find a brief overview of PRO's Shipments APIs and how you can use them.
 
 ---
 
 ## Shipments API Collection Overview
 
-PRO's Shipments functionality was introduced as an extension to the previous Consignments suite of APIs. PRO's Shipments API collection offers unparalleled flexibility, with support for on-demand collections from multiple smaller locations (e.g. a ship-from-store model) as well the regular scheduled fulfilment centre collections supported by Consignments.
+PRO's Shipments functionality was introduced as an extension to the previous Consignments suite of APIs. PRO's Shipments API collection offers unparalleled flexibility, with support for on-demand collections from multiple locations (e.g. a ship-from-store model) as well the regular scheduled fulfilment centre collections supported by Consignments.
 
 Shipments also offers the ability to auto-manifest with carriers, the ability to group shipments together for ease of management, and improved dangerous goods and customs functionality, among many other features.
 
@@ -31,12 +31,11 @@ PRO's Shipments APIs enable you to:
 * **Manifest Shipments** - Manually manifest an individual shipment, all shipments that meet a particular query, or all shipments in a particular shipment group. 
 * **Manage Shipment Groups** - Group shipments together so they can be operated on as a single unit, and edit or delete shipment groups as required.
 * **Get Collection Notes** - Retrieve collection notes (aka a driver's manifest) by search query, or by shipment group.
-* **Track Shipments** - Return tracking updates for a given shipment. 
+<!--* **Track Shipments** - Return tracking updates for a given shipment.--> 
 
 > [!NOTE]
 >
-> * For example API call flows, see the Shipments data contract.
-> * For API reference information, see the Shipments data contract.
+> * For example API call flows and reference information, see the Shipments data contract.
 
 ## Making an API Request in PRO
 

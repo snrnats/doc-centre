@@ -7,7 +7,7 @@ created: 02/07/2020
 ---
 # Consignments vs Shipments
 
-PRO's new Shipments model represents a significant overhaul to PRO, with a new data contract and UI enabling the system to offer enhancements such as on-demand shipping, auto-manifesting, and bulk grouping of shipments. This page is intended for users who are familiar with the older Consignments model, explaining what has changed and how the new system works.
+PRO's Shipments model represents a significant overhaul to the Sorted service, with a new data contract and UI enabling the system to offer enhancements such as on-demand shipping, auto-manifesting, and bulk grouping of shipments. This page is intended for users who are familiar with the older Consignments model, explaining what has changed and how the new system works.
 
 ---
 
@@ -54,12 +54,12 @@ Like consignments, shipments are a collection of one or more packages that are s
 * `contents.label_property` - Provides additional properties to be placed on the shipment's label. SortedPRO supports custom label decorators, which utilise additional label space to add fields and text. 
 * `reservation` - The `reservation` object enables PRO to store the details of reservations, such as those for click and collect options.
 
-> [!NOTE]
+<!--> [!NOTE]
 >
-> For full reference information on the new Shipments data contract, see the Shipments data contract.
+> For full reference information on the new Shipments data contract, see the Shipments data contract. -->
 
 ## Next Steps
 
 * Learn how to create, update and delete shipments: [Managing Shipments](/pro/api/shipments/managing_shipments.html)
 * Learn how to allocate shipments to carrier services: [Allocating Shipments](/pro/api/shipments/allocating_shipments.html)
-* Learn how to create shipment groups: [Managing Shipment Groups](/pro/api/shipments/managing_shipment_groups.html)
+* Learn how to create shipment groups: [Managing Shipment Groups](/pro/api/shipments/managing_shipment_groups.html) 

@@ -2,18 +2,18 @@
 uid: pro-api-help-shipments-creating-shipments
 title: Creating Shipments
 tags: shipments,pro,api
-contributors: andy.walton@sorted.com,michael.rose@sorted.com
-created: 02/07/2020
+contributors: andy.walton@sorted.com
+created: 05/10/2020
 ---
 # Creating Shipments
 
-In order for SortedPRO to manage a shipment, you'll need to record the details of that shipment on the system. This page explains how to use the **Create Shipment** endpoint to create a new shipment record, how to clone existing shipments using the **Clone Shipment** endpoint, and how to update existing shipments using the **Update Shipment** endpoint.
+In order for SortedPRO to manage a shipment, you'll need to record the details of that shipment on the system. This page explains how to use the **Create Shipment** endpoint to create a new shipment record<!--, how to clone existing shipments using the **Clone Shipment** endpoint, and how to update existing shipments using the **Update Shipment** endpoint-->.
 
 ---
 
 ## Sending a Create Shipment Request
 
-The **Create Shipment** endpoint enables you to create new shipment records within PRO. When you send a valid **Create Shipment** request, PRO generates a new shipment record and returns a unique shipment `{reference}` for it. Many of PRO's endpoints take this shipment `{reference}` as a parameter.
+The **Create Shipment** endpoint enables you to create new shipment records within PRO. When you send a valid **Create Shipment** request, PRO generates a new shipment record and returns a unique `{reference}` for that shipment. Many of PRO's endpoints take this shipment `{reference}` as a parameter.
 
 To create a shipment, send a `POST` request to `https://api.sorted.com/pro/shipments`. The body of the request should contain the shipment details, structured as per the PRO data contract.
 
@@ -21,13 +21,13 @@ To create a shipment, send a `POST` request to `https://api.sorted.com/pro/shipm
 
 As a minimum, the **Create Shipments** endpoint requires you to send:
 
-* `shipment_type` - Specifies whether the shipment is `on_demand` (i.e. will require an ad-hoc carrier collection to be booked) or `scheduled` (i.e. will be picked up as part of a regularly scheduled carrier collection ).
+* `shipment_type` - Specifies whether the shipment is `on_demand` (i.e. will require an ad-hoc carrier collection to be booked) or `scheduled` (i.e. will be picked up as part of a regularly scheduled carrier collection).
 * `contents` - The contents of the shipment itself.
 * `addresses` - All shipments require both `origin` and `destination` addresses.
 
 > [!TIP]
 >
-> PRO handles collection booking for `on-demand` shipments as a background process when the shipment is allocated to a carrier service. You do not need to specify `on_demand` booking details manually.
+> PRO handles collection booking for `on_demand` shipments as a background process when the shipment is allocated to a carrier service. You do not need to specify `on_demand` booking details manually.
 
 ### Specifying Shipment Contents
 
@@ -45,57 +45,45 @@ The example below shows how this shipment would be represented in JSON. This is 
 # [Contents Example](#tab/contents-example)
 
 ```json
-    "contents": [
-        {
-            "reference": "sc_10014418860050677760000090908111",
-            "custom_reference": "b9fa91b0-0dd0-4dd5-986f-363fa8cb2386",
-            "package_size_reference": null,
-            "weight": {
-                "value": 2.40,
-                "unit": "Kg"
+"contents": [
+    {
+        "description": "Coat",
+        "value": {
+            "amount": 30,
+            "currency": "GBP"
+        },
+        "shipping_terms": "fca",
+        "contents": null
+    },
+    {
+        "description": "Package",
+        "value": {
+            "amount": 40,
+            "currency": "GBP"
+        },
+        "shipping_terms": "fca",            
+        "contents": [
+            {
+                "description": "Necklace",
+                "value": {
+                    "amount": 20,
+                    "currency": "GBP"
+                },
+                "shipping_terms": "fca",                    
+                "contents": null
             },
-            "dimensions": {
-                "unit": "Cm",
-                "width": 15.0,
-                "height": 15.5,
-                "length": 20.0
-            },
-            "description": "Jeans",
-            "value": {
-                "amount": 8.99,
-                "currency": "GBP",
-                "discount": 0.0
-            },
-            "sku": "SKU09876",
-            "model": "MOD-009",
-            "country_of_origin": "PO",
-            "harmonisation_code": "09.02.10",
-            "quantity": 2,
-            "unit": "Box",
-            "dangerous_goods": {
-                "hazard_classes": [
-                    { "code": "2.1" }
-                ],
-                "packing_group": "iii",
-                "id_number": "UN2202",
-                "proper_shipping_name": "Hydrogen selenide, anhydrous",
-                "technical_name": null,
-                "physical_form": "gas",
-                "radioactivity": "surface_reading",
-                "accessibility": "accessible",
-                "custom_label_text": null
-            },
-            "metadata": [
-                {
-                    "key": "Category",
-                    "value": "Menswear",
-                    "type": "string"
-                }
-            ],
-            "label_properties": null,
-            "Contents": null
-        }
-    ],
+            {
+                "description": "Bracelet",
+                "value": {
+                    "amount": 20,
+                    "currency": "GBP"
+                },
+                "shipping_terms": "fca",                        
+                "contents": null
+            }
+        ]    
+    }
+]
 ```
 ---
 
@@ -126,7 +114,6 @@ There are lots of optional properties you can send when creating a shipment, inc
 * Tenant and channel.
 * Metadata. PRO metadata enables you to use custom fields to record additional data about a shipment. For more information on using metadata in PRO, see the [Using Shipment Metadata](/pro/api/shipments/using_shipment_metadata.html) page.
 * Tags. Allocation tags enable you to filter the list of carrier services that a particular shipment could be allocated to. For more information on allocation tags, see the [Using Shipment Tags](/pro/api/shipments/using_shipment_tags.html) page.
-* Paperless documents. Paperless documents are customer-generated documents (such as packing lists or certificates of conformity) that are transmitted to carriers as part of a shipment's data rather than being generated separately by the carrier. For more information on working with paperless documents in PRO, see the [Adding Paperless Documents](/pro/api/shipments/adding_paperless_documents.html) page.
 
 Adding optional properties when you create a shipment can help you to ensure that your shipment is allocated to the most appropriate carrier service.
 
@@ -287,7 +274,7 @@ The example below shows a request to clone a shipment <span class="commented-out
 
 > [!NOTE]
 >
-> For full reference information on the **Clone Shipment** endpoint, see the Shipments data contract -->
+> For full reference information on the **Clone Shipment** endpoint, see the Shipments data contract 
 
 ## Updating Shipments
 
@@ -366,7 +353,7 @@ The example shows a simple **Update Shipment** request for a shipment with a `{r
 
 > [!NOTE]
 >
-> For full reference information on the **Update Shipment** endpoint, see the Shipments data contract.
+> For full reference information on the **Update Shipment** endpoint, see the Shipments data contract. -->
 
 ## Next Steps
 
