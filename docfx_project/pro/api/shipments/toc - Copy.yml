@@ -65,6 +65,13 @@
     href: closing_shipment_groups.md
 - name: Getting Collection Notes
   href: getting_collection_notes.md    
+- name: Tracking PRO Shipments
+  href: tracking_pro_shipments.md
+  items:
+  - name: Getting Shipment Events
+    href: getting_shipment_events.md
+  - name: Getting Content-Level Events
+    href: getting_content_level_events.md
 - name: Using Shipment Tags
   href: using_shipment_tags.md
 - name: Using Shipment Metadata
