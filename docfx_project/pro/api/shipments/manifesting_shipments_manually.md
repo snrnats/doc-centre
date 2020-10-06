@@ -88,12 +88,12 @@ The example below shows a request to queue four shipments for manifest. All four
 
 ```json
 {
-	"shipments": [
-		"sp_00673266917780280862348596215808",
-		"sp_00673541275546140590077375780489",
-		"sp_00673541275596146590077365780480",
-		"sp_00673267200365953327505217421312"
-		]
+  "shipments": [
+    "sp_00673266917780280862348596215808",
+    "sp_00673541275546140590077375780489",
+    "sp_00673541275596146590077365780480",
+    "sp_00673267200365953327505217421312"
+  ]
 }
 ```
 
@@ -131,4 +131,4 @@ The example below shows a request to queue four shipments for manifest. All four
 
 * Learn how to generate and select delivery quotes: [Managing Shipment Quotes](/pro/api/shipments/managing_shipment_quotes.html)
 * Learn how to configure shipment groups: [Managing Shipment Groups](/pro/api/shipments/managing_shipment_groups.html) 
-* Learn how to use PRO's tracking APIs: [Tracking PRO Shipments](/pro/api/shipments/tracking_pro_shipments.html)
+* Learn how to get collection notes: [Getting Collection Notes](/pro/api/shipments/getting_collection_notes.html)

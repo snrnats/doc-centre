@@ -15,7 +15,7 @@ For example, a retailer might use the UI to add a `Flammables` tag to all the ca
 
 ### Configuring Allocation Tags
 
-To tag a shipment, add the required tag into the shipment's `tags` property, either at creation or via the [Update Shipment](/pro/api/shipments/creating_shipments.html?tabs=contents-example%2Ccreate-shipment-request%2Ccreate-shipment-response%2Cexample-update-shipment-request#updating-shipments) endpoint. The `tags` property is a simple array listing all the tags that apply to the shipment.
+To tag a shipment, add the required tag into the shipment's `tags` property. The `tags` property is a simple array listing all the tags that apply to the shipment.
 
 The code sample below shows a `tags` property for a shipment that contains flammable materials, oil and alcohol.
 

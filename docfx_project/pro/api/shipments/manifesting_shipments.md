@@ -34,7 +34,7 @@ Manifesting a shipment changes its state to `manifested`. At this point the carr
 
 > [!NOTE]
 >
-> For more information on cancelling shipments, see [Cancelling Shipments](/pro/api/shipments/cancelling_shipments.html)].
+> For more information on cancelling shipments, see the [Cancelling Shipments](/pro/api/shipments/cancelling_shipments.html) page.
 
 Whenever you manifest one or more shipments, PRO creates a new manifest item. Each manifest item contains shipments for one carrier only. You can retrieve manifest items using the **Get Manifest** endpoint 
 

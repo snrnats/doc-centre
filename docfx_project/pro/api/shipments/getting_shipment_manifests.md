@@ -55,4 +55,4 @@ GET https://api.sorted.com/pro/shipments/manifests/ma_00674859184207899628998023
 
 * Learn how to generate and select delivery quotes: [Managing Shipment Quotes](/pro/api/shipments/managing_shipment_quotes.html)
 * Learn how to configure shipment groups: [Managing Shipment Groups](/pro/api/shipments/managing_shipment_groups.html) 
-* Learn how to use PRO's tracking APIs: [Tracking PRO Shipments](/pro/api/shipments/tracking_pro_shipments.html)
+* Learn how to get collection notes: [Getting Collection Notes](/pro/api/shipments/getting_collection_notes.html)

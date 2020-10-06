@@ -216,4 +216,4 @@ POST https://api.sorted.com/pro/shipment_groups/sg_00013464648946915264789208891
 
 * Learn how to retrieve existing shipment groups: [Getting Shipment Groups](/pro/api/shipments/getting_shipment_groups.html)
 * Learn how to retrieve collection notes: [Getting Collection Notes](/pro/api/shipments/getting_collection_notes.html)
-* Learn how to track shipments: [Tracking PRO Shipments](/pro/api/shipments/tracking_pro_shipments.html)
+* Learn how to close shipment groups: [Closing Shipment Groups](/pro/api/shipments/closing_shipment_groups.html)

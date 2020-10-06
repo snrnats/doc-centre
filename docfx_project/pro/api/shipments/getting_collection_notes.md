@@ -119,6 +119,5 @@ All Collection Notes endpoints return a collection note as a `document` object w
 
 ## Next Steps
 
-* Learn how to tracking shipments using PRO's Tracking API: [Tracking PRO Shipments](/pro/api/shipments/tracking_pro_shipments.html)
 * See a Glossary of PRO terms: [Glossary](/pro/api/shipments/shipments_glossary.html)
 * Learn how to use REACT, Sorted's advanced shipment tracking product: [REACT Docs](/react/index.html?v2)
