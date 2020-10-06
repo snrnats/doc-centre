@@ -65,7 +65,7 @@ Most allocation endpoints require PRO to select a carrier service from a range o
 3. **Who meets the allocation rules?** - Next, PRO creates a final shortlist of carrier services by eliminating any services that do not meet your organisation's allocation rules. 
 4. **Who is cheapest?** - Finally, PRO allocates the shipment to the cheapest service on the shortlist.
 
-<!-- ## What Is an Allocation Rule?
+## What Is an Allocation Rule?
 
 When you make an allocation request for a shipment, PRO uses its allocation rules to ascertain which carrier services are eligible to take that shipment and which are not. Allocation rules are optional criteria that define the shipments that a particular carrier service is eligible to take. You can specify the following:
 
@@ -75,11 +75,9 @@ When you make an allocation request for a shipment, PRO uses its allocation rule
 * Excluded countries
 * Allocation tags.
 
-<span class="commented-out">LIST TAKEN FROM CONSIGNMENTS HELP. NEEDS CHECKING IN NEW UI</span>
-
 For example, you could specify that a particular carrier service should only be allocated shipments that weigh between 1-25 Kg. Subsequently, PRO would not consider this service when allocating a shipment with a weight of 30Kg.
 
-### Configuring Allocation Rules
+<!-- ### Configuring Allocation Rules
 
 <span class="commented-out">INSTRUCTIONS ON CONFIGURING RULES IN NEW UI IN HERE</span> -->
 

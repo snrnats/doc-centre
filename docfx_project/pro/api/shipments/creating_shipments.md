@@ -161,20 +161,6 @@ The example below shows a simple **Create Shipment** request containing only a `
             "shipping_terms": "fca",
             "quantity": 2,
             "unit": "Box",
-            "dangerous_goods": {
-                "class_division": "2",
-                "class_sub_divisions": [
-                    "1"
-                ],
-                "packing_group": "iii",
-                "id_number": "UN2202",
-                "proper_shipping_name": "Hydrogen selenide, anhydrous",
-                "technical_name": null,
-                "physical_form": "gas",
-                "radioactivity": "surface_reading",
-                "accessibility": "accessible",
-                "custom_label_text": null
-            },
             "metadata": [
                 {
                     "key": "Category",
@@ -204,7 +190,7 @@ The example below shows a simple **Create Shipment** request containing only a `
                 "contact_details": {
                     "landline": null,
                     "mobile": "+447495747987",
-                    "email": "steve@kingston.com"
+                    "email": "gminshew@test.com"
                 }
             },
             "property_number": "8",
