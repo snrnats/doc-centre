@@ -24,7 +24,7 @@ Shipments also offers the ability to auto-manifest with carriers, the ability to
 PRO's Shipments APIs enable you to:
 
 * **Manage Shipments** - Create, update, clone, cancel and delete shipment records, and manually modify their shipment states where required.
-* **Allocate Shipments** - Allocate shipments to the most appropriate carrier service, allocate within a service group, manually filter services to allocate to, or allocate based on a previous delivery quote.
+* **Allocate Shipments** - Allocate shipments to the most appropriate carrier service<!--, allocate within a service group, manually filter services to allocate to, or allocate based on a previous delivery quote -->.
 * **Manage Quotes** - Create and receive delivery quotes for shipments.
 * **Get Customs Docs** - Get customs documents for allocated international shipments. 
 * **Get Labels** - Get delivery labels for an allocated shipment in either ZPL or PDF format.

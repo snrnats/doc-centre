@@ -73,7 +73,24 @@ POST https://api.sorted.com/pro/documents/paperless/sp_0059545277918047284766607
 # [Example Add Paperless Document Response](#tab/example-add-paperless-document-response)
 
 ```json
-
+{
+    "reference": "pd_00792856810708422497331007062016",
+    "message": "Paperless Document pd_00792856810708422497331007062016 added successfully",
+    "_links": [
+        {
+            "href": "https://api-int.sorted.com/pro/documents/paperless/pd_00792856810708422497331007062016",
+            "rel": "self",
+            "reference": "pd_00792856810708422497331007062016",
+            "type": "paperless_document"
+        },
+        {
+            "href": "https://api-int.sorted.com/pro/shipments/sp_00792855770810119001626267746304",
+            "rel": "shipment",
+            "reference": "sp_00792855770810119001626267746304",
+            "type": "shipment"
+        }
+    ]
+}
 ```
 ---
 
@@ -102,13 +119,19 @@ The example shows
 # [Example Get Paperless Document Response](#tab/example-get-paperless-document-response)
 
 ```json
-
+{
+    "file_content": "XlhBCgpeRlggRGlzcGxheXMgY29ycmVjdGx5IGFzIDZ4NCBhdCAzMDBkcGkKXkNGMCw2MApeRk81MCw1MF5HQjEwMCwxMDAsMTAwXkZTCl5GTzc1LDc1XkZSXkdCMTAwLDEwMCwxMDBeRlMKXkZPODgsODheR0I1MCw1MCw1MF5GUwpeRk8yMjAsNTBeRkRFYXN0ZXIgU2hpcHBpbmcgQ28uXkZTCl5DRjAsNDAKXkZPMjIwLDEwMF5GRDEyMyBSYWJiaXQgTGFuZV5GUwpeRk8yMjAsMTM1XkZEU2hlbGJ5dmlsbGUgVE4gMzgxMDJeRlMKXkZPMjIwLDE3MF5GRFVuaXRlZCBTdGF0ZXMgKFVTQSleRlMKXkZPNTAsMjUwXkdCNzAwLDEsM15GUwoKXkNGQSwzMApeRk81MCwzMDBeRkRNYXJ5IE1hcnleRlMKXkZPNTAsMzQwXkZEMTAwIExpdHRsZSBMYW1iIFN0cmVldF5GUwpeRk81MCwzODBeRkRTcHJpbmdmaWVsZCBUTiAzOTAyMV5GUwpeRk81MCw0MjBeRkRVbml0ZWQgU3RhdGVzIChVU0EpXkZTCl5DRkEsMTUKXkZPNjAwLDMwMF5HQjE1MCwxNTAsM15GUwpeRk82MzgsMzQwXkZEUGVybWl0XkZTCl5GTzYzOCwzOTBeRkQ4ODg0NzReRlMKXkZPNTAsNTAwXkdCNzAwLDEsM15GUwoKXkJZNSwyLDI3MApeRk8xMDAsNTUwXkJDXkZEc3BfMTAwMTQ0MTg2OTI1NDY5NTMyMTZeRlMKCl5GTzUwLDkwMF5HQjgwMCwyNTAsM15GUwpeRk81MDAsOTAwXkdCMSwyNTAsM15GUwpeQ0YwLDQwCl5GTzEwMCw5NjBeRkRTaGlwcGluZyBDdHIuIFgzNEItMV5GUwpeRk8xMDAsMTAxMF5GRFJFRjEgRjAwQjQ3XkZTCl5GTzEwMCwxMDYwXkZEUkVGMiBCTDRIOF5GUwpeQ0YwLDE5MApeRk81NjAsOTY1XkZERkZeRlMKCl5YWg==",
+    "expiration": "2021-09-01T06:00:00+00:00",
+    "file_format": "pdf",
+    "document_type": "commercial_invoice",
+    "usage": "electronic_trade"
+}
 ```
 ---
 
 
 
-## Removing Paperless Documents from Shipments
+<!-- ## Removing Paperless Documents from Shipments
 
 <span class="highlight">THIS CURRENTLY RUNS OFF A DOCUMENT REFERENCE PROPERTY THAT ISN'T MENTIONED IN THE DATA CONTRACT. LEAVING THIS FOR NOW</span>
 
@@ -117,7 +140,7 @@ This endpoint is used to remove an existing paperless_document from a shipment.
 WARNING
 It is only possible to remove a paperless_document to a shipment prior to allocation, i.e. when the shipment is in a state of unallocated or allocation_failed.
 
-`GET https://api.sorted.com/pro/documents/paperless/{document_reference}`
+`DELETE https://api.sorted.com/pro/documents/paperless/{document_reference}`
 
 ### Example Remove Paperless Document Call
 
@@ -126,7 +149,7 @@ The example shows
 # [Example Remove Paperless Document Request](#tab/example-remove-paperless-document-request)
 
 ```json
-`GET https://api.sorted.com/pro/documents/paperless/{document_reference}`
+DELETE https://api.sorted.com/pro/documents/paperless/{document_reference}
 ```
 
 
@@ -137,7 +160,7 @@ The example shows
 ```
 ---
 
-
+-->
 
 ## Next Steps
 

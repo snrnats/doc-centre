@@ -42,7 +42,7 @@ All PRO shipments have a `{state}`, indicating the point in the delivery process
 | `lost` | The shipment is lost. |
 | `damaged` | The shipment has been damaged. |
 | `destroyed` | The shipment has been destroyed by the carrier (either because it was dangerous, or it was severely damaged). |
-| `cancelling` | The shipment is in the process of being cancelled. It cannot change statue until the cancellation either succeeds or fails. |
+| `cancelling` | The shipment is in the process of being cancelled. It cannot change state until the cancellation either succeeds or fails. |
 | `cancelled` | The shipment has been cancelled. No further changes may be made to the shipment. |
 | `in_transit_waiting` | The shipment is in transit and is waiting for further action from the carrier. |
 | `held_by_carrier` | The shipment is currently being held by the carrier. |

@@ -19,16 +19,16 @@ In the context of SortedPRO, **allocation** is the process of selecting the carr
 >
 > You can only allocate shipments that are in a `{state}` of either _unallocated_ or _allocation_failed_. If you attempt to allocate a shipment that is not in one of those states, PRO returns an error.
 
-To allocate shipments in PRO, you'll need to call one of PRO's allocation endpoints. You can specify a carrier service or service group to allocate to, allocate based on a quote you received, or have PRO select the cheapest eligible carrier service for you. You can also use custom filters to narrow down the pool of available services on a per-shipment basis. Whichever endpoint you use, PRO uses pre-defined allocation rules to ensure that your shipment is allocated to a suitable carrier service.
+To allocate shipments in PRO, you'll need to call one of PRO's allocation endpoints. <!-- can specify a carrier service or service group to allocate to, allocate based on a quote you received, or have PRO select the cheapest eligible carrier service for you. You can also use custom filters to narrow down the pool of available services on a per-shipment basis.--> PRO uses pre-defined allocation rules to ensure that your shipment is allocated to a suitable carrier service.
 
 PRO offers the following allocation endpoints:
 
-* **Allocate Shipment**
+<!--* **Allocate Shipment**
 
     `https://api.sorted.com/pro/shipments/{reference}/allocate` - Allocates a single shipment using your default allocation rules.
 * **Allocate Shipments**
 
-    `https://api.sorted.com/pro/shipments/allocation` - Allocates multiple shipments using your default allocation rules. 
+    `https://api.sorted.com/pro/shipments/allocation` - Allocates multiple shipments using your default allocation rules. -->
 * **Allocate Shipment with Carrier Service**
 
     `https://api.sorted.com/pro/shipments/{reference}/allocate/service/{service_ref}` - Allocates a single shipment with a specific carrier service.
@@ -45,12 +45,12 @@ PRO offers the following allocation endpoints:
 
     `https://api.sorted.com/pro/shipments/{reference}/allocate/virtual_service/{virtual_service_reference}` - Allocates a single shipment with either a specific carrier service or a carrier service group, depending on the type or reference you provide.  
 
-* **Allocate with Filters**
+<!-- * **Allocate with Filters**
     
     `https://api.sorted.com/pro/shipments/allocation/filters` - Allocates one or more shipments with a carrier service that matches the specified filters. 
 * **Allocate Shipment with Quote**
 
-    `https://api.sorted.com/pro/shipments/allocate/{reference}/quote/{quote_reference}` - Allocates a single shipment with the carrier service referenced in a specific pre-existing quote.
+    `https://api.sorted.com/pro/shipments/allocate/{reference}/quote/{quote_reference}` - Allocates a single shipment with the carrier service referenced in a specific pre-existing quote. -->
 
 The action PRO takes once the allocation request is received depends on the type of endpoint you used. If you used an endpoint that allocated individual shipments, then PRO allocates the shipment immediately and returns an Allocation Summary listing details of the allocation, such as prices, dates and tracking information. However, if you used an endpoint that can allocate multiple shipments at once, then PRO queues the shipments for allocation at a later time in order to maintain performance. When PRO queues shipments, it returns an Allocate Shipments Result confirming the shipments that were queued.
 
@@ -60,7 +60,7 @@ When a shipment is allocated to a carrier service, its status changes to _alloca
 
 Most allocation endpoints require PRO to select a carrier service from a range of potential options. PRO uses the following process to select carrier services:
 
-1. **What was requested?** - First, PRO determines which carrier services meet the terms of the allocation request. The results returned by this step depend heavily on the allocation endpoint used. For example, an **Allocate with Service Group** request limits PRO to only those shipments in a particular service group, whereas an **Allocate Shipments** request does not limit the pool of available services in itself and could potentially include any carrier service. 
+1. **What was requested?** - First, PRO determines which carrier services meet the terms of the allocation request. <!-- The results returned by this step depend heavily on the allocation endpoint used. For example, an **Allocate with Service Group** request limits PRO to only those shipments in a particular service group, whereas an **Allocate Shipments** request does not limit the pool of available services in itself and could potentially include any carrier service. --> 
 2. **Who can deliver?** - Next, PRO eliminates any carrier services that could not take the shipment (for example, because they have not been configured and enabled, they do not ship to the delivery address, or they could meet any specified shipping and delivery dates).
 3. **Who meets the allocation rules?** - Next, PRO creates a final shortlist of carrier services by eliminating any services that do not meet your organisation's allocation rules. 
 4. **Who is cheapest?** - Finally, PRO allocates the shipment to the cheapest service on the shortlist.
@@ -97,9 +97,6 @@ When allocating shipments, PRO takes your dangerous goods rulesets into account 
 
 ## Allocation Section Contents
 
-* [Allocating to Default Rules](/pro/api/shipments/allocating_to_default_rules.html) - Explains how to allocate shipments based on custom business rules.
 * [Allocating with a Specific Carrier Service](/pro/api/shipments/allocating_with_a_specific_carrier_service.html) - Explains how to allocate shipments with a specific carrier service.
 * [Allocating Within a Carrier Service Group](/pro/api/shipments/allocating_within_a_carrier_service_group.html) - Explains how to allocate shipments with a carrier service from a specific carrier service group.
 * [Allocating with a Virtual Service](/pro/api/shipments/allocating_with_a_virtual_service.html) - Explains how to allocate a shipment with a virtual service.
-* [Allocating Using Filters](/pro/api/shipments/allocating_using_filters.html) - Explains how to use filters to specify allocation rules on a per-shipment basis. 
-* [Allocating via a Quote](/pro/api/shipments/allocating_via_a_quote.html) - Explains how to allocate a shipment with the carrier service referenced in a specific pre-existing quote.
