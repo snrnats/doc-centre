@@ -64,4 +64,9 @@
 - name: Using Shipment Metadata
   href: using_shipment_metadata.md        
 - name: Glossary
-  href: shipments_glossary.md    
+  href: shipments_glossary.md
+- name: Error Codes
+  href: shipment_errors.md
+  items:  
+  - name: Error 521
+    href: error_521.md    
