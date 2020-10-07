@@ -2,8 +2,8 @@
 uid: pro-api-help-shipments-allocating-shipments
 title: Allocating Shipments
 tags: shipments,pro,api,allocation
-contributors: andy.walton@sorted.com,michael.rose@sorted.com
-created: 02/07/2020
+contributors: andy.walton@sorted.com
+created: 07/10/2020
 ---
 # Allocating Shipments
 
@@ -81,7 +81,7 @@ For example, you could specify that a particular carrier service should only be 
 
 <span class="commented-out">INSTRUCTIONS ON CONFIGURING RULES IN NEW UI IN HERE</span> -->
 
-### Configuring Dangerous Goods Rules
+### Using Dangerous Goods Rules
 
 PRO enables you to manage which carrier services can carry which types of dangerous goods by setting up "dangerous goods rulesets" in the UI. This is a change from the original PRO's consignments-based implementation, in which dangerous goods specifications were directly tied in to each carrier service.
 

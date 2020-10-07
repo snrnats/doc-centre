@@ -2,13 +2,13 @@
 uid: pro-api-help-shipments-allocating-within-a-carrier-service-group
 title: Allocating Within A Carrier Service Group
 tags: shipments,pro,api,allocation,service group
-contributors: andy.walton@sorted.com,michael.rose@sorted.com
-created: 02/07/2020
+contributors: andy.walton@sorted.com
+created: 07/10/2020
 ---
 
 # Allocating Within A Carrier Service Group
 
-Service groups enable you to specify a custom pool of carrier services to allocate a shipment from. This page explains how to configure service groups, and how to use the **Allocate Shipment with Service Group** and **Allocate with Service Group** endpoints to allocate from within those groups.
+Service groups enable you to specify a custom pool of carrier services to allocate a shipment from. This page explains how to <!--configure service groups, and how to-->use the **Allocate Shipment with Service Group** and **Allocate with Service Group** endpoints to allocate from within a specified shipping group.
 
 ---
 
@@ -41,79 +41,122 @@ Once the request is received, PRO uses allocation rules to eliminate any carrier
 
 ### Allocate Shipment with Service Group Example
 
-The example shows a successful request to allocate a shipment with a `{reference}` of _sp_10014418679662051328777876543332_ within a group that has a `{group_ref}` of _valuableGoods_.
+The example shows a successful request to allocate a shipment with a `{reference}` of _sp_00794403010635468411384028069888_ within a group that has a `{group_ref}` of _valuableGoods_.
 
 # [Allocate Shipment With Service Group Request](#tab/allocate-shipment-with-service-group-request)
 
 ```json
-PUT https://api.sorted.com/pro/shipments/sp_10014418679662051328777876543332/allocate/service_group/valuableGoods
+PUT https://api.sorted.com/pro/shipments/sp_00794403010635468411384028069888/allocate/service_group/valuableGoods
 ```
 
 # [Allocate Shipment With Service Group Response](#tab/allocate-shipment-with-service-group-response)
 
 ```json
 {
-    "state": "Allocated",
+    "shipment_reference": "sp_00794403010635468411384028069888",
+    "state": "allocated",
     "price": {
-        "net": 10.0,
-        "gross": 12.0,
+        "net": 2.00,
+        "gross": 2.00,
         "taxes": [
             {
                 "rate": {
-                    "reference": "gb_standard",
+                    "reference": "FF_LINET-00001",
                     "country_iso_code": "GB",
-                    "type": "standard",
-                    "value": 0.2
+                    "type": "Zero",
+                    "value": 0.0000
                 },
-                "amount": 2.0
+                "amount": 0.000000
             }
         ],
         "currency": "GBP"
     },
-    "message": "Shipment allocated successfully",
+    "message": "Shipment sp_00794403010635468411384028069888 has been allocated successfully",
     "carrier": {
-        "reference": "DNQ",
-        "name": "DNQ Worldwide",
-        "service_reference": "DNQWW72",
-        "service_name": "DNQ Worldwide 72-Hour Express"
+        "reference": "FF_LINET",
+        "name": "Lineten",
+        "service_reference": "FF_LINET-00001",
+        "service_name": "Lineten - Standard On Demand"
     },
-    "shipment_reference": "sp_10014418679662051328777876543332",
     "tracking_details": {
         "shipment": {
-            "reference": "sp_10014418679662051328777876543332",
+            "reference": "sp_00794403010635468411384028069888",
             "tracking_references": [
-                "DNK23098098"
-            ],
-            "_links": []
+                "43765709"
+            ]
         },
-        "contents": [
-            {
-                "reference": "sc_9233500258180006765777878909811",
-                "tracking_references": [
-                    "DNK23098099"
-                ],
-                "_links": []
-            }
-        ]
+        "contents": []
     },
     "_links": [
         {
-            "href": "https://api.sorted.com/pro/labels/sp_10014418679662051328777876543332/pdf",
-            "rel": "PDF",
-            "reference": null,
-            "type": "Label"
+            "href": "https://api-int.sorted.com/pro/shipments/sp_00794403010635468411384028069888",
+            "rel": "shipment",
+            "reference": "sp_00794403010635468411384028069888",
+            "type": "shipment"
         },
         {
-            "href": "https://api.sorted.com/pro/labels/sp_10014418679662051328777876543332/zpl",
-            "rel": "ZPL",
-            "reference": null,
-            "type": "Label"
+            "href": "https://api-int.sorted.com/pro/labels/sp_00794403010635468411384028069888/pdf",
+            "rel": "label",
+            "reference": "sp_00794403010635468411384028069888",
+            "type": "label"
         },
         {
-            "href": "https://api.sorted.com/pro/shipments/sp_10014418679662051328777876543332",
-            "rel": "Shipment",
-            "reference": "sp_10014418679662051328777876543332",
-            "type": "Shipment"
+            "href": "https://api-int.sorted.com/pro/labels/sp_00794403010635468411384028069888/zpl",
+            "rel": "label",
+            "reference": "sp_00794403010635468411384028069888",
+            "type": "label"
+        }
+    ],
+    "correlation_id": "7a53f7c4-836f-4a46-9d67-be1cadaaf7c2.SAPI_51eda51d-3efc-4afa-a8b4-47fc826420cf",
+    "details": [],
+    "excluded_services": [
+        {
+            "carrier": {
+                "reference": "FF_DPD_1200_103384",
+                "name": "DPD 12:00 (Parcel)",
+                "service_reference": "FF_103384_DPD",
+                "service_name": "DPD"
+            },
+            "exclusion": {
+                "reason": "Service delivery is later than selected service",
+                "code": "ex_rates"
+            }
+        },
+        {
+            "carrier": {
+                "reference": "FF_DPD_Next_Day_103386",
+                "name": "DPD Next Day (Parcel)",
+                "service_reference": "FF_103386_DPD",
+                "service_name": "DPD"
+            },
+            "exclusion": {
+                "reason": "Service delivery is later than selected service",
+                "code": "ex_rates"
+            }
+        },
+        {
+            "carrier": {
+                "reference": "FF_DPD_Sunday_103386",
+                "name": "DPD Sunday (Parcel)",
+                "service_reference": "FF_103386_DPD",
+                "service_name": "DPD"
+            },
+            "exclusion": {
+                "reason": "Service delivery is later than selected service",
+                "code": "ex_rates"
+            }
+        },
+        {
+            "carrier": {
+                "reference": "FF_DPD_Two_Day_103386",
+                "name": "DPD Two Day (Parcel)",
+                "service_reference": "FF_103386_DPD",
+                "service_name": "DPD"
+            },
+            "exclusion": {
+                "reason": "Service delivery is later than selected service",
+                "code": "ex_rates"
+            }
         }
     ]
 }
@@ -149,10 +192,10 @@ The example shows a request to queue four shipments for allocation within carrie
 ```json
 {
     "shipments": [
-        "sp_10014418679662051328777876543332",
-        "sp_10014418692546953216762537656534",
-        "sp_10014418701136887808123998889990",
-        "sp_10014418709726822400876827639994"
+        "sp_00794407328944469090495223169024",
+        "sp_00794407551522883083874672967680",
+        "sp_00794407763918694348566450274304",
+        "sp_00794407763918694348566459974304"
     ],
     "service_group ": "exampleSG123"
 }
@@ -162,29 +205,22 @@ The example shows a request to queue four shipments for allocation within carrie
 
 ```json
 {
-  "message": "3 shipment(s) queued for allocation successfully. 1 shipment(s) rejected for allocation.",
-  "queued": [
-    "sp_10014418679662051328777876543332",
-    "sp_10014418692546953216762537656534",
-    "sp_10014418701136887808123998889990"
-  ],
-  "rejected": [
-    {
-      "code": "shipment_not_found",
-      "message": "The shipment cannot be found",
-      "references": [
-        "sp_10014418709726822400876827639994"
-      ]
-    }
-  ],
-  "_links": [
-    {
-      "href": "https://beta.sorted.com/pro/shipments/sp_10014418709726822400876827639994",
-      "rel": "shipment",
-      "reference": "sp_10014418709726822400876827639994",
-      "type": "rejected"
-    }
-  ]
+    "message": "3 shipments queued for allocation successfully. 1 shipment rejected for allocation.",
+    "queued": [
+        "sp_00794407328944469090495223169024",
+        "sp_00794407551522883083874672967680",
+        "sp_00794407763918694348566450274304"
+    ],
+    "rejected": [
+        {
+            "code": "shipment_not_found",
+            "message": "The shipment cannot be found.",
+            "references": [
+                "sp_00794407763918694348566459974304"
+            ]
+        }
+    ],
+    "_links": []
 }
 ```
 ---
