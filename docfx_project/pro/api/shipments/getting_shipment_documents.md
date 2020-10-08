@@ -2,8 +2,8 @@
 uid: pro-api-help-shipments-getting-shipment-documents
 title: Getting Shipment Documents
 tags: shipments,pro,api,customs,documents,dangerous,hazardous,collection note
-contributors: andy.walton@sorted.com,michael.rose@sorted.com
-created: 02/07/2020
+contributors: andy.walton@sorted.com
+created: 08/10/2020
 ---
 # Getting Shipment Documents
 
@@ -42,12 +42,12 @@ If the specified shipment has a document of the specified type, then PRO returns
 
 > [!NOTE]
 >
-> If you use the **Get Document** endpoint to get a *collection_note* for a shipment, then PRO generates and returns a collection note for the contents of that shipment only. Where you have multiple shipments being picked up by the same carrier (as part of a scheduled collection, for example), you should use one of PRO's dedicated Collection Notes endpoints instead.
+> If you use the **Get Document** endpoint to get a *collection_note* for a shipment, then PRO generates and returns a collection note for the contents of that shipment only. Where you need collection notes for multiple shipments being picked up by the same carrier (as part of a scheduled collection, for example), you should use one of PRO's dedicated Collection Notes endpoints instead.
 > 
 > * For more information on using collection notes in PRO, see the [Getting Collection Notes](/pro/api/shipments/getting_collection_notes.html) page.
 > * For full reference information on the **Get Document** endpoint, see the Shipments data contract.
 
-## Getting a Shipment's Customs Documents
+## Getting All of a Shipment's Customs Documents
 
 To call **Get Customs Documents**, send a `GET` request to `https://api.sorted.com/pro/documents/{shipment_reference}`, where `{shipment_reference}` is the unique reference of the shipment that you want to get customs documents for.
 

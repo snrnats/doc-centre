@@ -2,8 +2,8 @@
 uid: pro-api-help-shipments-creating-shipment-groups
 title: Creating Shipment Groups
 tags: shipments,pro,api,shipment groups
-contributors: andy.walton@sorted.com,michael.rose@sorted.com
-created: 02/07/2020
+contributors: andy.walton@sorted.com
+created: 08/10/2020
 ---
 # Creating Shipment Groups
 
@@ -17,7 +17,7 @@ To call **Create Shipment Group**, send a `POST` request to `https://api.sorted.
 
 ### Shipment Group Validation
 
- All `shipments` listed in a **Create Shipment Group** request must conform to the following validation rules: 
+ All **Create Shipment Group** requests must conform to the following validation rules: 
 
 * You must provide between 1 and 10,000 references in the `shipments` list.
 * All references must be for existing `shipments` that you have access to. 
@@ -41,7 +41,7 @@ Once it has received and validated the request, PRO creates the shipment group a
 
 ### Versioning
 
-Versioning exists as a means to identify any shipment group by `custom_reference`, even though `custom_references` can be re-used as long as they are not shared with any open groups.
+Versioning enables you to identify any shipment group by `custom_reference`, even though `custom_references` can be re-used as long as they are not shared with any open groups.
 
 [!include[_shipments_group_versioning](../includes/_shipments_group_versioning.md)]
 
@@ -104,11 +104,7 @@ Like the first example, this example response shows the successful creation of a
 
 ```json
 {
-    "reference": "sg_00679577652026749527919113797632",
-    "custom_reference": "Example456",
-    "version": 59,
-    "message": "Shipment group sg_00679577652026749527919113797632 created successfully",
-    "errors": [
+        "errors": [
         {
             "property": "shipments",
             "code": "invalid_reference_format",
@@ -120,6 +116,10 @@ Like the first example, this example response shows the successful creation of a
             "message": "sp_00013464648910021776641789790773 could not be found"
         }
     ],
+    "reference": "sg_00679577652026749527919113797632",
+    "custom_reference": "Example456",
+    "version": 59,
+    "message": "Shipment group sg_00679577652026749527919113797632 created successfully",
     "_links": //omitted for brevity
 }
 ```

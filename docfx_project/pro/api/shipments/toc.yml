@@ -29,23 +29,7 @@
 - name: Getting Shipment Docs
   href: getting_shipment_documents.md 
 - name: Manifesting Shipments
-  href: manifesting_shipments.md
-  items:
-  - name: Manifesting Shipments Manually
-    href: manifesting_shipments_manually.md
-  - name: Manifesting Shipments by Query
-    href: manifesting_shipments_by_query.md
-  - name: Manifesting Shipments by Shipment Group
-    href: manifesting_shipments_by_shipment_group.md
-  - name: Getting Shipment Manifests
-    href: getting_shipment_manifests.md      
-- name: Managing Quotes
-  href: managing_shipment_quotes.md
-  items:
-  - name: Creating Quotes
-    href: creating_quotes.md
-  - name: Getting Shipment Quotes
-    href: getting_shipment_quotes.md 
+  href: manifesting_shipments.md   
 - name: Managing Shipment Groups
   href: managing_shipment_groups.md
   items: 
@@ -57,8 +41,6 @@
     href: editing_shipment_groups.md
   - name: Closing Shipment Groups
     href: closing_shipment_groups.md
-- name: Getting Collection Notes
-  href: getting_collection_notes.md    
 - name: Using Shipment Tags
   href: using_shipment_tags.md
 - name: Using Shipment Metadata
