@@ -38,7 +38,6 @@ There are lots of optional properties you can send when creating a consignment, 
 * Details of the specific items inside the consignment's packages.
 * The consignment's source.
 * Shipping and delivery dates.
-* Customs documentation.
 * The consignment's direction of travel.
 * Metadata. PRO metadata enables you to use custom fields to record additional data about a consignment. For more information on using metadata in PRO, see the [Metadata](/pro/api/help/metadata.html) page.
 * Tags. Allocation tags enable you to filter the list of carrier services that a particular consignment could be allocated to. For more information on allocation tags, see the [Tags](/pro/api/help/tags.html) page.
@@ -51,37 +50,13 @@ Adding optional properties when you create a consignment can help you to get mor
 >
 > If the dates you specify are too restrictive, there may not be any carrier services available to take the consignment, which would result in a failed allocation. As such, you should only specify shipping and delivery dates where it is necessary to do so.
 
-### Adding an EORI Number
+### International Shipments
 
-If required, you can record a consignment's EORI number using the `Metadata` property. To do so, add a property with a `KeyValue` of _ShippersEORI_ and a `StringValue` representing the number itself.
+Following the UK's departure from the EU, certain additional consignment properties must be passed in order for PRO to generate customs documentation for UK-originating international consignments. In addition, certain carriers have their own data requirements that UK-originating international consignments must meet in order to be considered for allocation to that carrier.
 
-# [EORI Number Example](#tab/eori-number-example)
+For an explanation of Brexit-related data requirements, see the [Brexit Data Guide](/pro/how-to/brexit-guide.html) page.
 
-```json
-{
-    "ConsignmentReferenceProvidedByCustomer": "YOUR-REF",
-    "Addresses": [
-        // addresses
-    ],
-    "Packages": [
-        // package properties
-    ],
-    "Metadata": [
-        {
-            "KeyValue": "ShippersEORI",
-            "StringValue": "GB987654312000"
-        }
-    ]
-    // other consignment properties
-}
-
-```
----
-
-If you add a `ShippersEORI` metadata property to an international consignment, then PRO automatically adds an **EORI Number** field to the commercial invoice that is automatically generated when the consignment is allocated.
-
-> [!NOTE]
-> For more information on commercial invoices and other customs documents in PRO, see the [Getting Customs Docs and Invoices](/pro/api/help/getting_customs_docs_and_invoices.html) page. 
+For more information on commercial invoices and other customs documents in PRO, see the [Getting Customs Docs and Invoices](/pro/api/help/getting_customs_docs_and_invoices.html) page. 
 
 ### Example Create Consignments Request
 
