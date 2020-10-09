@@ -41,6 +41,8 @@
     href: editing_shipment_groups.md
   - name: Closing Shipment Groups
     href: closing_shipment_groups.md
+- name: Getting Collection Notes
+  href: getting_collection_notes.md    
 - name: Using Shipment Tags
   href: using_shipment_tags.md
 - name: Using Shipment Metadata
