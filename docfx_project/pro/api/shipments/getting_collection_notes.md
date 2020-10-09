@@ -15,11 +15,13 @@ PRO's Collection Note functionality enables you to generate driver's manifest do
 
 In PRO, a collection note (sometimes referred to as a driver's manifest) is a document listing items that are to be collected by a driver. It is intended to be printed and given to the driver at the point of collection.
 
-In order to generate a note for a specific collection, you will need to tell PRO which shipments are to be picked up as part of that collection. PRO has three endpoints that enable you to do so:
+In order to generate a note for a specific collection, you will need to tell PRO which shipments are to be picked up as part of that collection. You can so so using the **Get Shipment Group Collection Note** endpoint.
+
+<!-- PRO has three endpoints that enable you to do so:
 
 * **Get Shipment Group Collection Note** - Retrieves a collection note for all of the shipments in the specified shipment group.
 * **Get Collection Note by Query** - Retrieves a collection note for all of the shipments that meet the specified criteria. 
-* **Get Collection Note by Manifests** - Retrieves a collection note for all of the shipments listed on the specified manifest files.
+* **Get Collection Note by Manifests** - Retrieves a collection note for all of the shipments listed on the specified manifest files. -->
 
 > [!NOTE]
 > This page explains how to generate a single collection note for a number of shipments that are being picked up together, for example as part of a scheduled collection. 
@@ -32,22 +34,36 @@ To call **Get Shipment Group Collection Note**, send a `GET` request to `https:/
 
 Alternatively, you can call **Get Shipment Group Collection Note** using a shipment's `{custom_reference}` and `{version}` by sending a `GET` request to `https://api.sorted.com/pro/collection_notes/shipment_group/custom_reference/{custom_reference}/{version}`. `{version}` must be either an integer or the value _latest_.
 
-PRO returns a collection note listing the contents of all of the shipments in the specified group.
+PRO returns a collection note listing the contents of all of the shipments in the specified group. 
 
 > [!NOTE]
 > * For an explanation of versioning in PRO shipment groups, see the [Versioning in Shipment Groups](/pro/api/shipments/getting_shipment_groups.html#versioning-in-shipment-groups) section of the [Getting Shipment Groups](/pro/api/shipments/getting_shipment_groups.html) page.
 > * For full reference information on the **Get Shipment Group Collection Note** endpoint, see the Shipments data contract.
 
-# [Example Get Shipment Group Collection Note Request](#tab/get-shipment-group-collection-note-request)
+All Collection Notes endpoints return a collection note as a `document` object with a `document_type` of *collection_note*.
+
+[!include[_shipments_document_object](../includes/_shipments_document_object.md)]
 
 The example shows a collection note request for shipment group *sg_00693870520933731157514090446848*.
+
+# [Example Get Shipment Group Collection Note Request](#tab/get-shipment-group-collection-note-request)
 
 ```json
 GET https://api.sorted.com/pro/collection_notes/shipment_group/sg_00693870520933731157514090446848
 ```
+# [Example Collection Note Response](#tab/example-collection-note-response)
+
+```json
+  {
+    "file": {Base64 file contents},
+    "content_type": "application/pdf",
+    "document_type": "collection_note",
+    "dpi": 203
+  }
+```
 ---
 
-### Getting Collection Notes by Query
+<!-- ### Getting Collection Notes by Query
 
 To call **Get Collection Note by Query**, send a `POST` request to `https://api.sorted.com/pro/collection_notes/query`. The body of the request should contain a Collection Note Query object. The Collection Note Query must contain the following properties:
 
@@ -97,25 +113,7 @@ PRO returns a collection note listing the contents of all of the shipments that 
 
 <span class="highlight">Need to add example once endpoint is up and running</span>
 
-## The Collection Note Response
-
-All Collection Notes endpoints return a collection note as a `document` object with a `document_type` of *collection_note*.
-
-[!include[_shipments_document_object](../includes/_shipments_document_object.md)]
-
-<span class="highlight">Example collection note in here</span>
-
-# [Example Collection Note Response](#tab/example-collection-note-response)
-
-```json
-  {
-    "file": {Base64 file contents},
-    "content_type": "application/pdf",
-    "document_type": "collection_note",
-    "dpi": 203
-  }
-```
----
+-->
 
 ## Next Steps
 
