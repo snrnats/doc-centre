@@ -19,9 +19,9 @@ The following consignment properties are required in order for PRO to generate C
 >
 > PRO enables you to create consignments either by making a **Create Consignment** API request, or by using the manual consignment creation page in the UI. Note that validation requirements are slightly different for these two methods.
 
-| Description | PRO Data   Element | PRO APIs:   Required for CN22, CN23 & Commercial Invoice | PRO User   Interface: Required for CN22, CN23 & Commercial Invoice |
+| Description | PRO Data   Element | PRO APIs | PRO User   Interface |
 |:-:|:-:|:-:|:-:|
-| Delivery   Town  | Addresses>   Destination<br>     Address>Town |   | n/a |
+| Delivery   Town  | Addresses>   Destination<br/>     Address>Town |   | n/a |
 | Exporter Address | Addresses   >Exporter |   | n/a |
 | Category Type | CustomsDocumentation   > CategoryType > | Yes | Yes |
 | Declaration Date | CustomsDocumentation   > DeclarationDate | Yes | Mandatory |
@@ -30,62 +30,62 @@ The following consignment properties are required in order for PRO to generate C
 | Consignment Carriage Value | CustomsDocumentation   > ReceiversShippingCost | No | n/a |
 | Shipper's VAT Number | CustomsDocumentation   > ShippersVatNumber | Yes | Optional |
 | Shipping Terms | CustomsDocumentation   > ShippingTerms > | Yes | Mandatory |
-| Receiver's EORI | Order   > Metadata<br>     Consignment > Metadata <br>     Key Value: ReceiversEORI | No | n/a |
-| Shipper's EORI | Order   > Metadata<br>     Consignment > Metadata <br>     Key Value: ShippersEORI | Yes | n/a |
-| Carriage Value Currency | Order   > Metadata<br>     Consignment > Metadata<br>     Key Value: CarriageCurrency | No | n/a |
-| Package Description | Package >   Description | Yes | Mandatory |
-| Height | Package >   Dimensions > Height |   | Mandatory |
-| Length | Package >   Dimensions > Length |   | Mandatory |
-| Package Unit of Dimension | Package >   Dimensions > Unit |   | Mandatory |
-| Package Width | Package >   Dimensions > Width |   | Mandatory |
-| Maximum number of items | Package > Item   > | Unbounded | Unbounded |
-| Minimum number of items | Package > Item   > | 1 | 0 |
-| Country of Origin | Package > Item   > CountryOfOrigin | Yes |   |
-| Item Description | Package > Item   > Description | Yes |   |
-| Harmonisation Code | Package > Item   > HarmonisationCode | Yes |   |
-| Quantity | Package > Item   > Quantity |   |   |
+| Receiver's EORI | Order   > Metadata<br/>     Consignment > Metadata <br/>     Key Value: ReceiversEORI | No | n/a |
+| Shipper's EORI | Order   > Metadata<br/>     Consignment > Metadata <br/>     Key Value: ShippersEORI | Yes | n/a |
+| Carriage Value Currency | Order   > Metadata<br/>     Consignment > Metadata<br/>     Key Value: CarriageCurrency | No | n/a |
+| Package Description | `Package` >   Description | Yes | Mandatory |
+| Height | `Package` >   Dimensions > Height |   | Mandatory |
+| Length | `Package` >   Dimensions > Length |   | Mandatory |
+| Package Unit of Dimension | `Package` >   Dimensions > Unit |   | Mandatory |
+| Package Width | `Package` >   Dimensions > Width |   | Mandatory |
+| Maximum number of items | `Package` > Item   > | Unbounded | Unbounded |
+| Minimum number of items | `Package` > Item   > | 1 | 0 |
+| Country of Origin | `Package` > Item   > CountryOfOrigin | Yes |   |
+| Item Description | `Package` > Item   > Description | Yes |   |
+| Harmonisation Code | `Package` > Item   > HarmonisationCode | Yes |   |
+| Quantity | `Package` > Item   > Quantity |   |   |
 | Item Value | Package   > Item > Value > Money > Amount | Yes | Conditional:  Required if an item is provided |
 | Currency | Package   > Item > Value > Money > Currency > IsoCode | Yes | Conditional:  Required if an item is provided |
-| Item Weight | Package > Item   > Weight > Value |   | Conditional:  Required if an item is provided |
-| Item unit of Weight | Package > Item   > Weight > Weight Unit |   | Conditional:  Required if an item is provided |
-| Duty Paid Value | Package   > Metadata <br>     Key Value: DutyPaidValue |   | n/a |
-| Package VAT Value | Package   > Metadata <br>     Key Value: VatValue |   | Not Available |
-| Package Value | Package > Value   > Money > Amount | Yes | Mandatory |
-| Package Currency | Package > Value   > Money > Currency > IsoCode | Yes | Mandatory |
-| Package Unit of Weight | Package > Weight   > Unit |   | Mandatory |
-| Package Weight | Package > Weight   > Value |   | Mandatory |
+| Item Weight | `Package` > Item   > Weight > Value |   | Conditional:  Required if an item is provided |
+| Item unit of Weight | `Package` > Item   > Weight > Weight Unit |   | Conditional:  Required if an item is provided |
+| Duty Paid Value | Package   > Metadata <br/>     Key Value: DutyPaidValue |   | n/a |
+| Package VAT Value | Package   > Metadata <br/>     Key Value: VatValue |   | Not Available |
+| Package Value | `Package` > Value   > Money > Amount | Yes | Mandatory |
+| Package Currency | `Package` > Value   > Money > Currency > IsoCode | Yes | Mandatory |
+| Package Unit of Weight | `Package` > Weight   > Unit |   | Mandatory |
+| Package Weight | `Package` > Weight   > Value |   | Mandatory |
 
 ## Carrier Data Requirements
 
 The table below shows the consignment data required to ship internationally with specific carriers. PRO only considers a consignment for allocation to a particular carrier if the consignment meets that carrier's data requirements for international shipping.
 
-| Description | PRO Data   Element | DPD  | HERMES ROTW | PARCELFORCE INTL | YODEL | ROYAL MAIL |
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| Delivery   Town  | Addresses>   Destination<br>     Address>Town |   |   |   |   | Mandatory |
-| Exporter Address | Addresses   >Exporter |      Conditional:<br>     <br>     Must be provided if different from the Origin Address<br>     <br>     If required please provide either:<br>     <br>     ShippingLocationReference<br>     <br>     or<br>     <br>     A minmum of AddressLine1, Region, Postcde, Country, Email <br>     <br>     and <br>     <br>     One or more of Telephone, Mobile and Landline<br>     <br>     Sorted will default to Origin Address if an Exporter Address has not been   provided. |   |   |   |   |
-| Category Type | CustomsDocumentation   > CategoryType > | Mandatory<br>     <br>     Permitted values:<br>     <br>     Gift<br>     ReturnedGoods<br>     SaleOfGoods:  To be made available in   Q1, 2020<br>     Documents<br>     Other<br>     None<br>     <br>     Note: Any other value will fail to return DPD services in any Quote,   Allocation or Delivery Option result.<br>      |   | Mandatory<br>     <br>     Permitted Types:<br>     <br>     Documents<br>     <br>     Outstanding Query with ParcelForce to confirm permitted   types. | Mandatory<br>     <br>     Permitted values:<br>     <br>     Gift<br>     SaleOfGoods:  To   be made available in Q1, 2020     Sample<br>     Personal<br>     <br>     Note: Any other provided value will fail to return DPD services in any   Quote, Allocation or Delivery Option result. | Mandatory<br>     <br>     Permitted values:<br>     <br>     Gift<br>     Documents<br>     Other<br>     <br>     Full list of values?      |
-| Declaration Name | CustomsDocumentation   > Designated PersonResponsible |   |   |   |   | Mandatory |
-| Consignment Carriage Value | CustomsDocumentation   > ReceiversShippingCost |   |   |   | Mandatory - total   consignment carriage value |   |
-| Shipper's VAT Number | CustomsDocumentation   > ShippersVatNumber | Mandatory: EU   and Rest of World<br>     Pass "GBUNREG" if not VAT registered | Mandatory:   EU and Rest of World | Mandatory for EU and   ROW | Conditional:  Mandatory if DDP Shipping Term is selected |   |
-| Shipping Terms | CustomsDocumentation   > ShippingTerms > | Mandatory: Only   DAP or DDP Accepted<br>     <br>     DDU will be translated to DAP when manifesting to DPD.<br>     <br>     Any other provided value will fail to return DPD services in any Quote,   Allocation or Delivery Option result. | Mandatory:   <br>     <br>     Home Delivery: DDU or DDP or DAP<br>     <br>     DAP will be mapped as DDU when manifested to Hermes<br>     <br>     Parcelshop: DDP ONLY<br>     <br>     Any other provided value will fail to return DPD services in any Quote,   Allocation or Delivery Option result. | Mandatory:   DDU or DDP<br>     <br>      | Mandatory:   DDU ONLY |   |
-| Receiver's EORI | Order   > Metadata<br>     Consignment > Metadata <br>     Key Value: ReceiversEORI | Conditional:  Mandatory if the destination address is a   business. |   | Optional:  Required if the receiver is a business |   |   |
-| Shipper's EORI | Order   > Metadata<br>     Consignment > Metadata <br>     Key Value: ShippersEORI | Mandatory: EU   and Rest of World<br>     <br>     Pass "GBUNREG" if not VAT registered<br>     <br>      | Mandatory:   for Commercial Invoice | Mandatory:   for EU and Rest of World | Mandatory | Mandatory |
-| Carriage Value Currency | Order   > Metadata<br>     Consignment > Metadata<br>     Key Value: CarriageCurrency |   |   |   | The currency of the   Carriage Value provided | The currency of the Carriage Value   provided |
-| Package Description | Package >   Description | Mandatory  |   | Mandatory |   |   |
-| Maximum number of items | Package > Item   > | Unbounded | Unbounded | Unbounded | 10 |   |
-| Minimum number of items | Package > Item   > | 1 | 1 | 1 | 1 |   |
-| Country of Origin | Package > Item   > CountryOfOrigin | Mandatory | Mandatory | Mandatory | Mandatory | Mandatory |
-| Item Description | Package > Item   > Description | Mandatory | Mandatory | Mandatory | Mandatory | Mandatory |
-| Harmonisation Code | Package > Item   > HarmonisationCode | Mandatory | Mandatory | Mandatory | Manadatory | Mandatory |
-| Quantity | Package > Item   > Quantity | Mandatory | Mandatory | Mandatory | Mandatory | Mandatory |
-| Item Value | Package   > Item > Value > Money > Amount | Mandatory |   | Mandatory | Mandatory | Mandatory |
-| Currency | Package   > Item > Value > Money > Currency > IsoCode | Mandatory | ?? | Mandatory | Mandatory | Mandatory |
-| Item Weight | Package > Item   > Weight > Value | Mandatory | Mandatory | Mandatory |   | Mandatory |
-| Item unit of Weight | Package > Item   > Weight > Weight Unit | Mandatory  |   | Mandatory |   |   |
-| Duty Paid Value | Package   > Metadata <br>     Key Value: DutyPaidValue |   | Conditional:  <br>     Must be provided if the ShippingTerms = "DDP" |   |   |   |
-| Package VAT Value | Package   > Metadata <br>     Key Value: VatValue |   | Conditional:  <br>     Must be provided if the ShippingTerms = "DDP" |   |   |   |
-| Package Value | Package > Value   > Money > Amount | Mandatory |   | Mandatory |   |   |
-| Package Currency | Package > Value   > Money > Currency > IsoCode | Mandatory |   | Mandatory |   |   |
+| PRO Data   Element | DPD  | HERMES ROTW | PARCELFORCE INTL | YODEL | ROYAL MAIL |
+|:-:|:-:|:-:|:-:|:-:|:-:|
+| `Addresses` ><br/> `Destination Address` > `Town` |   |   |   |   | Mandatory |
+| `Addresses` > `Exporter` |      Must be provided if different from the Origin Address. If required please   provide either Shipping Location Reference or all of AddressLine1, Region,   Postcode, Country, Email  and one or   more of Telephone, Mobile and Landline<br/><br/> If an Exporter Address has not been provided then PRO uses the Origin Address. |   |   |   |   |
+| `CustomsDocumentation` ><br/> `CategoryType` | Mandatory.   Permitted values:<br/>     <br/>     - Gift<br/>     - ReturnedGoods<br/>     - SaleOfGoods:  To be made available   in Q1, 2020<br/>     - Documents<br/>     - Other<br/>     - None |   | Mandatory.   Permitted values:<br/>     <br/>     - Gift<br/>     - Commercial Sample<br/>     - Documents<br/>     - Other | Mandatory.   Permitted values:<br/>     <br/>     - Gift<br/>     - Sales<br/>     - Sample<br/>     - Personal | Mandatory.   Permitted values:<br/>     <br/>     - Gift<br/>     - Commercial Sample<br/>     - Documents<br/>     - Other |
+| `CustomsDocumentation` ><br/> `DesignatedPersonResponsible` |   |   |   |   | Mandatory |
+| `CustomsDocumentation` ><br/> `ReceiversShippingCost` |   |   |   | Mandatory - total   consignment carriage value |   |
+| `CustomsDocumentation` ><br/> `ShippersVatNumber` | Mandatory for EU   and Rest of World<br/>     Pass "GBUNREG" if not VAT registered | Mandatory   for EU and Rest of World | Mandatory for EU and   ROW | Mandatory   if DDP Shipping Term is selected, otherwise conditional |   |
+| `CustomsDocumentation` ><br/> `ShippingTerms` | Mandatory. Only values of DAP or DDP are accepted. DDU is translated to DAP when manifesting   to DPD. | Mandatory.   For Home Delivery must use values of DDU or DDP or DAP. DAP is mapped as DDU   when manifested to Hermes. Parcelshop services should use DDP only | Mandatory.   Must use values of DDU or DDP<br/>     <br/>      | Mandatory.   Must use a value of DDU only |   |
+| `Order` ><br/> `Metadata`<br/><br/> `Consignment` ><br/> `Metadata` <br/><br/>  Key Value: `ReceiversEORI`<br/><br/> See [Adding Metadata Properties](#adding-metadata-properties)<br/> for info on using<br/> `Metadata` to record properties | Mandatory if the destination address is a business, otherwise conditional |   | Required if the   receiver is a business, otherwise optional |   |   |
+| `Order` ><br/> `Metadata`<br/><br/> `Consignment` ><br/> `Metadata` <br/><br/>  Key Value: `ShippersEORI`<br/><br/> See [Adding Metadata Properties](#adding-metadata-properties)<br/> for info on using<br/> `Metadata` to record properties | Mandatory for EU   and Rest of World<br/>     Pass "GBUNREG" if not VAT registered<br/>     <br/>      | Mandatory   for Commercial Invoice | Mandatory   for EU and Rest of World | Mandatory | Mandatory |
+| `Order` ><br/> `Metadata`<br/><br/> `Consignment` ><br/> `Metadata` <br/><br/>  Key Value: `CarriageCurrency`<br/><br/> See [Adding Metadata Properties](#adding-metadata-properties)<br/> for info on using<br/> `Metadata` to record properties |   |   |   | The currency of the   Carriage Value provided | The currency of the Carriage Value   provided |
+| `Package` > `Description` | Mandatory  |   | Mandatory |   |   |
+| `Package` > `Item` | Unbounded | Unbounded | Unbounded | 10 |   |
+| `Package` > `Item` | 1 | 1 | 1 | 1 |   |
+| `Package` > `Item` ><br/> `CountryOfOrigin` | Mandatory | Mandatory | Mandatory | Mandatory | Mandatory |
+| `Package` > `Item` ><br/> `Description` | Mandatory | Mandatory | Mandatory | Mandatory | Mandatory |
+| `Package` > `Item` ><br/> `HarmonisationCode` | Mandatory | Mandatory | Mandatory | Manadatory | Mandatory |
+| `Package` > `Item` ><br/> `Quantity` | Mandatory | Mandatory | Mandatory | Mandatory | Mandatory |
+| `Package` > `Item` ><br/> `Value` > `Money` ><br/> `Amount` | Mandatory |   | Mandatory | Mandatory | Mandatory |
+| `Package` > `Item` ><br/> `Value` > `Money` ><br/> `Currency` > `IsoCode` | Mandatory |   | Mandatory | Mandatory | Mandatory |
+| `Package` > `Item` ><br/> `Weight` > `Value` | Mandatory | Mandatory | Mandatory |   | Mandatory |
+| `Package` > `Item` ><br/> `Weight` > `Weight Unit` | Mandatory  |   | Mandatory |   |   |
+| `Package` > `Metadata` <br/> Key Value: `DutyPaidValue`<br/><br/> See [Adding Metadata Properties](#adding-metadata-properties)<br/> for info on using<br/> `Metadata` to record properties |   | Conditional.   Must be provided if the ShippingTerms = "DDP" |   |   |   |
+| `Package` > `Metadata` <br/> Key Value: `VatValue`<br/><br/> See [Adding Metadata Properties](#adding-metadata-properties)<br/> for info on using<br/> `Metadata` to record properties |   | Conditional.   Must be provided if the ShippingTerms = "DDP" |   |   |   |
+| `Package` > `Value` > `Money` ><br/> `Amount` | Mandatory |   | Mandatory |   |   |
+| `Package` > `Value` > `Money` ><br/> `Currency` > `IsoCode` | Mandatory |   | Mandatory |   |   |
 
 ## Adding Metadata Properties 
 
