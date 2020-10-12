@@ -108,31 +108,24 @@ The example shows a successful request to add a `commercial_invoice` paperless d
 
 ## Getting Paperless Documents
 
-<span class="highlight">THIS CURRENTLY RUNS OFF A DOCUMENT REFERENCE PROPERTY THAT ISN'T MENTIONED IN THE DATA CONTRACT. LEAVING THIS FOR NOW</span>
+The **Get Paperless Document** endpoint takes a paperless document `reference` and returns details of the relevant paperless document. To call **Get Paperless Document**, send a `GET` request to `https://api.sorted.com/pro/documents/paperless/{document_reference}`
 
-This endpoint is used to retrieve paperless documents.
-
-NOTE
-"Paperless" documents are provided by customers when creating shipments and enable the transmission of customer-generated documents to carriers.
-
-`GET https://api.sorted.com/pro/documents/paperless/{document_reference}`
+Once it has received the request, PRO returns a `paperless_document` object. This object details all of the information supplied when the paperless document was added to the shipment.
 
 ### Example Get Paperless Document Call
 
-The example shows
+The example shows a successful  **Get Paperless Document** request for the paperless document added in the previous example, _pd_00797582543150236528252876881920_.
 
 # [Example Get Paperless Document Request](#tab/example-get-paperless-document-request)
 
-```json
-`GET https://api.sorted.com/pro/documents/paperless/{document_reference}`
-```
-
+`GET https://api.sorted.com/pro/documents/paperless/pd_00797582543150236528252876881920`
 
 # [Example Get Paperless Document Response](#tab/example-get-paperless-document-response)
 
 ```json
+
 {
-    "file_content": "XlhBCgpeRlggRGlzcGxheXMgY29ycmVjdGx5IGFzIDZ4NCBhdCAzMDBkcGkKXkNGMCw2MApeRk81MCw1MF5HQjEwMCwxMDAsMTAwXkZTCl5GTzc1LDc1XkZSXkdCMTAwLDEwMCwxMDBeRlMKXkZPODgsODheR0I1MCw1MCw1MF5GUwpeRk8yMjAsNTBeRkRFYXN0ZXIgU2hpcHBpbmcgQ28uXkZTCl5DRjAsNDAKXkZPMjIwLDEwMF5GRDEyMyBSYWJiaXQgTGFuZV5GUwpeRk8yMjAsMTM1XkZEU2hlbGJ5dmlsbGUgVE4gMzgxMDJeRlMKXkZPMjIwLDE3MF5GRFVuaXRlZCBTdGF0ZXMgKFVTQSleRlMKXkZPNTAsMjUwXkdCNzAwLDEsM15GUwoKXkNGQSwzMApeRk81MCwzMDBeRkRNYXJ5IE1hcnleRlMKXkZPNTAsMzQwXkZEMTAwIExpdHRsZSBMYW1iIFN0cmVldF5GUwpeRk81MCwzODBeRkRTcHJpbmdmaWVsZCBUTiAzOTAyMV5GUwpeRk81MCw0MjBeRkRVbml0ZWQgU3RhdGVzIChVU0EpXkZTCl5DRkEsMTUKXkZPNjAwLDMwMF5HQjE1MCwxNTAsM15GUwpeRk82MzgsMzQwXkZEUGVybWl0XkZTCl5GTzYzOCwzOTBeRkQ4ODg0NzReRlMKXkZPNTAsNTAwXkdCNzAwLDEsM15GUwoKXkJZNSwyLDI3MApeRk8xMDAsNTUwXkJDXkZEc3BfMTAwMTQ0MTg2OTI1NDY5NTMyMTZeRlMKCl5GTzUwLDkwMF5HQjgwMCwyNTAsM15GUwpeRk81MDAsOTAwXkdCMSwyNTAsM15GUwpeQ0YwLDQwCl5GTzEwMCw5NjBeRkRTaGlwcGluZyBDdHIuIFgzNEItMV5GUwpeRk8xMDAsMTAxMF5GRFJFRjEgRjAwQjQ3XkZTCl5GTzEwMCwxMDYwXkZEUkVGMiBCTDRIOF5GUwpeQ0YwLDE5MApeRk81NjAsOTY1XkZERkZeRlMKCl5YWg==",
+    "file_content": (Base64 document data),
     "expiration": "2021-09-01T06:00:00+00:00",
     "file_format": "pdf",
     "document_type": "commercial_invoice",
