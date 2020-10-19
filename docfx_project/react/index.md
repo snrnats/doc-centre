@@ -13,7 +13,7 @@
 </style>
 
 <div class="header-container">
-    <h1 id="big-header" class="text--underlined text--header"><span>SortedREACT </span><span>Docs</span></h1>
+    <h1 id="big-header" class="text--header">SortedREACT Docs</h1>
     <p class="text--center">
         Technical documents, help and support for SortedREACT
     </p>

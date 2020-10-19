@@ -21,7 +21,7 @@
 </style>
 
 <div class="header-container">
-    <h1 id="big-header" class="text--underlined text--header"><span>SortedPRO </span><span>Docs</span></h1>
+    <h1 id="big-header" class="text--header">SortedPRO Docs</h1>
     <p class="header-info">
         PRO is Sorted's carrier and delivery management platform. Featuring both a DIY API toolkit and a lightweight UI, PRO helps you manage your shipping from checkout to the customer's doorstep. 
     </p>

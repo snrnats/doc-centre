@@ -1023,8 +1023,15 @@ h1#big-header {
 
 @media all and (max-width: 768px) {
     h1#big-header {
+        font-size: 4em;
         margin-top: 5px;
         margin-bottom: 5px;
+    }
+}
+
+@media all and (max-width: 400px) {
+    h1#big-header {
+        font-size: 3em;
     }
 }
 
