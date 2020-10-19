@@ -1,45 +1,21 @@
 steps:
-# Linux add support for git version
-  - bash: |
-      shopt -s nullglob
-      function join_by { local IFS="$1"; shift; echo "$*"; }
-      lib_path=$(join_by ';' $(Agent.WorkFolder)/_tasks/GitVersion*/4.0.*/lib/linux/x86_64)
-      echo LD_LIBRARY_PATH: $lib_path
-      echo "##vso[task.setvariable variable=LD_LIBRARY_PATH]$lib_path"
-    condition: eq( variables['Agent.OS'], 'Linux' )
-    displayName: Update LD_LIBRARY_PATH for GitVersion (Linux)
-  # macOS add support for git version
-  - bash: |
-      shopt -s nullglob
-      function join_by { local IFS="$1"; shift; echo "$*"; }
-      lib_path=$(join_by ';' $(Agent.WorkFolder)/_tasks/GitVersion*/4.0.*/lib/osx)
-      echo LD_LIBRARY_PATH: $lib_path
-      echo "##vso[task.setvariable variable=LD_LIBRARY_PATH]$lib_path"
-    condition: eq( variables['Agent.OS'], 'Darwin' )
-    displayName: Update LD_LIBRARY_PATH for GitVersion (macOS)
-  - task: GitVersion@4
+  - task: GitVersion@5
     inputs:
       updateAssemblyInfo: true
       preferBundledVersion: true
     name: Docs
-    displayName: Git Version  
+    displayName: Git Version
   - powershell: |
-      $fullBranchName = "patch-1";
+      $fullBranchName = $env:BUILD_SOURCEBRANCH;
       if ($env:BUILD_REASON -eq "PullRequest") {
         $fullBranchName = $env:SYSTEM_PULLREQUEST_SOURCEBRANCH;
       }
-      $index = $fullBranchName.lastIndexOf('/');
-      $branch = '';
-      if ($index -lt 0) {
-          $branch = $fullBranchName;
-      } else {
-          $branch = $fullBranchName.substring($index).Trim('/');
-      }
+      $branch = $fullBranchName.substring($fullBranchName.lastIndexOf('/')).Trim('/');
       $buildVersion = '';
       if ($branch -eq "master") {
-          $buildVersion = $env:GITVERSION_MAJORMINORPATCH;
+        $buildVersion = $env:GITVERSION_MAJORMINORPATCH;
       } else {
-          $buildVersion = "$env:GITVERSION_MAJORMINORPATCH-$branch.$env:BUILD_BUILDID";
+        $buildVersion = "$env:GITVERSION_MAJORMINORPATCH-$branch.$env:BUILD_BUILDID";
       }
       Write-Host "##vso[task.setvariable variable=Branch;]$branch";
       Write-Host "##vso[task.setvariable variable=buildVersion;]$buildVersion";
