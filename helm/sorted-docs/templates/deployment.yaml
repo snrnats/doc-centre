@@ -6,7 +6,12 @@ metadata:
   labels:
 {{ include "sorted-docs.labels" . | indent 4 }}
 spec:
-  replicas: {{ .Values.replicaCount }}
+  replicas: {{ .Values.deployment.replicaCount }}
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: {{ .Values.deployment.maxSurge }}
+      maxUnavailable: {{ .Values.deployment.maxUnavailable }}
   selector:
     matchLabels:
       app.kubernetes.io/name: {{ .Values.serviceName }}
@@ -17,6 +22,10 @@ spec:
         app.kubernetes.io/name: {{ .Values.serviceName }}
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
+      securityContext:
+        runAsUser: 1001
+        fsGroup: 2000
+      serviceAccountName: {{ .Values.serviceName }}
       imagePullSecrets:
         - name: {{ .Values.image.pullSecret }}
       containers:
@@ -30,13 +39,13 @@ spec:
         livenessProbe:
           httpGet:
             path: /
-            port: 80
+            port: {{ .Values.container.port }}
           initialDelaySeconds: 10
-          periodSeconds: 10
+          periodSeconds: 30
         readinessProbe:
           httpGet:
             path: /
-            port: 80
+            port: {{ .Values.container.port }}
             scheme: HTTP
           initialDelaySeconds: 20
           periodSeconds: 5
@@ -50,3 +59,25 @@ spec:
           limits:
             memory: {{ .Values.resources.limits.memory }}
             cpu: {{ .Values.resources.limits.cpu }}
+        securityContext:
+          runAsNonRoot: true
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: true
+          capabilities:
+            drop:
+            - KILL
+            - NET_RAW
+        volumeMounts:
+          - mountPath: /tmp
+            name: tmp
+          - mountPath: /var/cache/nginx
+            name: cache
+          - mountPath: /var/run
+            name: run
+      volumes:
+      - emptyDir: {}
+        name: tmp
+      - emptyDir: {}
+        name: cache
+      - emptyDir: {}
+        name: run

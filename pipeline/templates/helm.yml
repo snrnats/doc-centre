@@ -1,25 +1,8 @@
 steps:
-  - task: KubectlInstaller@0
-    displayName: "Install Kubectl"
-    inputs:
-      kubectlVersion: 'latest'
-  - task: HelmInstaller@1
-    displayName: "Install Helm"
-    inputs:
-      helmVersionToInstall: "2.14.1"
-  - task: HelmDeploy@0
-    displayName: "Helm Init (Client)"
-    inputs:
-      connectionType: "Kubernetes Service Connection"
-      kubernetesServiceConnection: $(kubernetesClusterConnection)
-      namespace: "feature"
-      command: "init"
-      arguments: "--client-only"
-      upgradeTiller: false
-      waitForExecution: false
   - task: HelmDeploy@0
     displayName: "Helm Package"
     inputs:
       command: "package"
       chartPath: $(chartPath)
       chartVersion: $(buildVersion)
+      arguments: "--app-version $(buildVersion)"
