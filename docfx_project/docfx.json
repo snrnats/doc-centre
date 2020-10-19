@@ -1,11 +1,12 @@
 {
   "build": {
-    "content": [{
+    "content": [
+      {
         "files": [
           "pro/api/help/**.yml",
           "pro/api/help/**.md",
           "pro/api/shipments/**.yml",
-          "pro/api/shipments/**.md",          
+          "pro/api/shipments/**.md",
           "pro/toc.yml",
           "pro/index.md"
         ]
@@ -15,15 +16,15 @@
           "react/**.md",
           "react/**.yml",
           "react/help/**.md",
-          "react/help/**.yml"          
+          "react/help/**.yml"
         ]
-      },      
+      },
       {
         "files": [
           "pro/reports/**.md",
           "pro/reports/toc.yml",
           "pro/release-notes/**.md",
-          "pro/release-notes/toc.yml",          
+          "pro/release-notes/toc.yml",
           "toc.yml",
           "*.md"
         ]
@@ -33,13 +34,14 @@
           "pro/reports/**.md",
           "pro/reports/toc.yml",
           "pro/overview/**.md",
-          "pro/overview/toc.yml",          
+          "pro/overview/toc.yml",
           "toc.yml",
           "*.md"
         ]
       }
     ],
-    "resource": [{
+    "resource": [
+      {
         "files": [
           "pro/images/**",
           "react/help/images/**",
@@ -57,15 +59,17 @@
         ]
       }
     ],
-    "overwrite": [{
-      "files": [
-        "pro/apidoc/**.md"
-      ],
-      "exclude": [
-        "obj/**",
-        "_site/**"
-      ]
-    }],
+    "overwrite": [
+      {
+        "files": [
+          "pro/apidoc/**.md"
+        ],
+        "exclude": [
+          "obj/**",
+          "_site/**"
+        ]
+      }
+    ],
     "dest": "_site",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
@@ -73,7 +77,9 @@
       "default",
       "templates/sorted"
     ],
-    "postProcessors": [ "ExtractSearchIndex" ],
+    "postProcessors": [
+      "ExtractSearchIndex"
+    ],
     "markdownEngineName": "markdig",
     "noLangKeyword": false,
     "keepFileLink": false,
@@ -84,7 +90,7 @@
       "_appTitle": "Sorted Docs",
       "_enableSearch": true,
       "_gitContribute": {
-        "branch": "master"
+        "branch": "content/shipments"
       }
     }
   }
