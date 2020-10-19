@@ -1,13 +1,13 @@
 - name: PRO  
   homepage: /pro/
   items:
-  - name: API User Guide
+  - name: Consignments API User Guide
     href: /pro/api/help/introduction.html
-  - name: API Reference
+  - name: Consignments API Reference
     href: https://docs.electioapp.com/#/api
   - name: Example Call Flows
     href: /pro/api/help/flows.html 
-  - name: Shipments (Temporary link)
+  - name: Shipments API User Guide
     href: /pro/api/shipments/introduction.html       
   - name: Reports
     href: pro/reports/
