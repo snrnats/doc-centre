@@ -555,6 +555,27 @@ ul.level1 {
     margin-bottom: 0.2em;
 }
 
+.toc .level1{
+    text-align: left;
+}
+
+@media all and (max-width: 768px) {
+    .toc .level1{
+        margin-left: 20px;
+    }
+
+    .toc .nav>li.active>a  {
+        padding-top: 0;
+        margin-top: 0;
+        color: var(--colour-main);
+    }
+
+    .toc .level1 span.expand-stub + a:first-of-type, .toc .level1 > li a {
+        padding-top: 0;
+        margin-top: 0;   
+    }
+}
+
 .toc .level2>li>a:hover {
     text-decoration: underline;
 }
@@ -1027,6 +1048,7 @@ h1#big-header {
         margin-top: 5px;
         margin-bottom: 5px;
     }
+    
 }
 
 @media all and (max-width: 400px) {
