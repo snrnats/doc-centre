@@ -1,4 +1,6 @@
 - name: Release Notes Home
   href: index.md
 - name: Reports Release Note - May 2020
-  href: 260520.md    
+  href: 260520.md 
+- name: US Regional Restrictions Release Note - November 2020
+  href: 021120.md         
