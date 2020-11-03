@@ -95,8 +95,8 @@ The table below lists the fields that should be recorded as metadata, and their 
 
 | Property | KeyValue |
 |-|-|
-| Shipper's EORI| `ReceiversEORI` |
-| Receiver's EORI| `ShippersEORI` |
+| Shipper's EORI| `ShippersEORI` |
+| Receiver's EORI| `ReceiversEORI` |
 | Carriage Value Currency| `CarriageCurrency` |
 | Duty Paid Value| `DutyPaidValue` |
 | Package VAT Value| `VatValue` |
