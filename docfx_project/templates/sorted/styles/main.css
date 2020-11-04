@@ -717,7 +717,7 @@ button.staticTabButton {
     border: 0 none;
 }
 
-/* Collapse styles*/
+/* Collapse styles
 button.collapsible {
     background-color: var(--colour-light-grey-4);
     color: var(--colour-dark);
@@ -746,12 +746,12 @@ button.activate,
 
 .collapsible:after {
     content: '\02795';
-    /* Unicode character for "plus" sign (+) */
+    /* Unicode character for "plus" sign (+) 
     font-size: 13px;
     color: var(--colour-light-1);
     float: right;
     margin-left: 5px;
-}
+} */
 
 .activate:after {
     content: "\2796";
@@ -1891,6 +1891,42 @@ span.fa-li .fa, span.fa-li .fas, span.fa-li .far {
     font-size: 16px;
 }
 
+h1#redoc {
+    width: calc(100vw - 108px);
+}
+
 h1#redoc h1 {
-    color: blue;
+    font-size: 2.5em;
+    margin-bottom: 0;
+    text-decoration: underline;
+    text-decoration-color: var(--colour-main);
+}
+
+h1#redoc h2 {
+    font-size: 1.75em;
+    margin-top: 0;
+}
+
+h1#redoc h3 {
+    margin-top: 25px;
+}
+
+h1#redoc div.sc-AxhCb {
+    padding: 0 20px 0 10px;
+}
+
+h1#redoc div.sc-AxhUy {
+    padding-bottom: 0;
+}
+
+h1#redoc div.redoc-json code {
+    font-size: 12px;
+}
+
+h1#redoc div.redoc-json ol li {
+    margin-bottom: 0;
+}
+
+h1#redoc code {
+    background-color: inherit;
 }
