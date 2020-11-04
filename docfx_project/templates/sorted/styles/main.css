@@ -1890,3 +1890,7 @@ ul.tags > li:hover {
 span.fa-li .fa, span.fa-li .fas, span.fa-li .far {
     font-size: 16px;
 }
+
+h1#redoc h1 {
+    color: blue;
+}
