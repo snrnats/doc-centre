@@ -1892,7 +1892,25 @@ span.fa-li .fa, span.fa-li .fas, span.fa-li .far {
 }
 
 h1#redoc {
-    width: calc(100vw - 108px);
+    width: 1470px;
+}
+
+@media (max-width:1200px) {
+    h1#redoc {
+        width: 1170px
+    }
+}
+
+@media (max-width:1000px) {
+    h1#redoc {
+        width: 970px
+    }
+}
+
+@media (max-width:800px) {
+    h1#redoc {
+        width: 100%;
+    }
 }
 
 h1#redoc h1 {
@@ -1928,5 +1946,6 @@ h1#redoc div.redoc-json ol li {
 }
 
 h1#redoc code {
-    background-color: inherit;
+    color: var(--colour-background);
+    background-color: transparent;
 }
