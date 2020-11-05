@@ -1949,3 +1949,7 @@ h1#redoc code {
     color: var(--colour-background);
     background-color: transparent;
 }
+
+/* h1#redoc h5.sc-fzplWN {
+    display:none;
+}*/

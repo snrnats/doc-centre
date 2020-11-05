@@ -1,16 +1,9 @@
----
-uid: pro-api-help-redoc
-title: Redoc
-tags: pro,api,consignments
-contributors: andy.walton@sorted.com,michael.rose@sorted.com
-created: 29/05/2020
----
 # Redoc
 
 <div id="redoc"></div>
 <script src="https://cdn.jsdelivr.net/npm/redoc/bundles/redoc.standalone.js"> </script> 
 <script>
-    Redoc.init('https://raw.githubusercontent.com/andywalton7/ReDocTest/master/shipments-swagger.json', {
+    Redoc.init('https://raw.githubusercontent.com/andywalton7/ReDocTest/master/swagger.json', {
         hideDownloadButton: true,
         requiredPropsFirst: 1,
         expandResponses: "200",
