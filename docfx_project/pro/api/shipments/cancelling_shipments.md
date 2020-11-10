@@ -13,11 +13,11 @@ This page explains how to cancel shipments in PRO.
 
 ## Cancelling Shipments
 
-To cancel a shipment, use the **Cancel Shipment** endpoint. You can call **Cancel Shipment** by sending a `PUT` request to `https://api.sorted.com/pro/shipments/{reference}/cancel`, where `{reference}` denotes the shipment you want to cancel. Once the request has been received, PRO changes the shipment's `{state}` to _cancelled_ and returns a confirmation message.
+To cancel a shipment, use the **Cancel Shipment** endpoint. To call **Cancel Shipment**, send a `PUT` request to `https://api.sorted.com/pro/shipments/{reference}/cancel`, where `{reference}` denotes the shipment you want to cancel. Once the request has been received, PRO changes the shipment's `{state}` to _cancelled_ and returns a confirmation message.
 
-You can only cancel a shipment prior to it being manifested. Once a shipment has been manifested it can no longer be cancelled.
+You can only cancel a shipment prior to that shipment being manifested. Once a shipment has been manifested it can no longer be cancelled.
 
-Once a shipment has been cancelled, then no further changes can be made to it. If you want to reinstate a cancelled shipment then you will need to create a new shipment with the same details.
+Once a shipment has been cancelled, then no further changes can be made to it. In order to reinstate a cancelled shipment you would need to create a new shipment with the same details.
 
 > [!NOTE]
 >

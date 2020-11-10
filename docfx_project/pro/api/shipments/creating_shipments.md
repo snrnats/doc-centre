@@ -31,7 +31,7 @@ As a minimum, the **Create Shipments** endpoint requires you to send:
 
 ### Specifying Shipment Contents
 
-The `contents` object replaces the older `package` and `item` objects used in PRO's original Consignments-based implementation. `Contents` objects are designed to nest within each other, and can be used at both package and item level.
+The `contents` object replaces the older `package` and `item` objects used in PRO's original consignments-based implementation. `Contents` objects are designed to nest within each other, and can be used at both package and item level.
 
 As an example, suppose that a clothing retailer has received a customer order for a necklace, a bracelet, and a coat. As the necklace and bracelet are both physically small, the retailer elects to ship them in the same package. The resulting shipment would contain:
 
@@ -40,7 +40,7 @@ As an example, suppose that a clothing retailer has received a customer order fo
 * One `contents` object containing details of the necklace, nested inside the object representing its package.
 * One `contents` object containing details of the bracelet, nested inside the object representing its package.
 
-The example below shows how this shipment would be represented in JSON. This is a highly simplified example, with only the minimum properties (`value` and `description`) given for each `contents` object. In practice, you would probably look to provide additional detail on the shipment contents by specifying optional properties. 
+The example below shows how this shipment would be represented in JSON. This is a highly simplified example, with only the minimum properties given for each `contents` object. In practice, you would probably look to provide additional detail on the shipment contents by specifying optional properties. 
 
 # [Contents Example](#tab/contents-example)
 
@@ -119,7 +119,7 @@ Adding optional properties when you create a shipment can help you to ensure tha
 
 > [!CAUTION]
 >
-> You should exercise caution when using the `required_delivery_date` and `required_shipping_date` parameters to specify dates for your shipment. These parameters limit delivery options for the shipment, meaning that it can only be allocated to carrier services that would be able to ship it within the specified `required_shipping_date` range and / or deliver it by the specified `required_delivery_date` range. 
+> You should exercise caution when using the `required_delivery_date` and `required_shipping_date` parameters to specify dates for your shipment. These parameters limit delivery options for the shipment, meaning that it can only be allocated to those carrier services that would be able to ship it within the specified `required_shipping_date` range and / or deliver it by the specified `required_delivery_date` range. 
 >
 > If the dates you specify are too restrictive, there may not be any carrier services available to take the shipment, which would result in a failed allocation. As such, you should only specify shipping and delivery dates where it is necessary to do so.
 

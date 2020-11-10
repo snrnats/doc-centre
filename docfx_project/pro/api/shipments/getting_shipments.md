@@ -7,15 +7,15 @@ created: 06/10/2020
 ---
 # Getting Shipments
 
-PRO offers several endpoints that return consignment data. This page explains how to retrieve consignment data by shipment reference<!--, custom reference, and carrier tracking reference-->.
+This page explains how to retrieve consignment data by shipment reference<!--, custom reference, and carrier tracking reference-->.
 
 ---
 
 ## Getting Shipments by Shipment Reference
 
-The **Get Shipment** endpoint takes the `{reference}` of the shipment you want to view and returns full details of that shipment. To call **Get Shipment**, send a `GET` request to `https://api.sorted.com/pro/shipments/{reference}`, where `{reference}` is the unique reference of the shipment you want to retrieve.
+The **Get Shipment** endpoint takes the `{reference}` of the shipment you want to view and returns details of that shipment. To call **Get Shipment**, send a `GET` request to `https://api.sorted.com/pro/shipments/{reference}`, where `{reference}` is the unique reference of the shipment you want to retrieve.
 
-The information returned is structured in a broadly similar way to a **Create Shipment** request, but may also contain additional properties (that is, properties that are managed by PRO rather than explicitly stated by the customer when a shipment is created). These properties include:
+The information returned is structured in a broadly similar way to a **Create Shipment** request, but also contains additional properties (that is, properties that are managed by PRO rather than explicitly stated by the customer when a shipment is created). These properties include:
 
 * `reference` - The shipment's unique reference.
 * `state` - The shipment's current `state`. For a full list of shipment states, see the [Shipment States](/pro/api/shipments/shipment_states.html) page.
