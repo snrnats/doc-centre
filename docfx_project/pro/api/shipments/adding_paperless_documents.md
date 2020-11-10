@@ -8,13 +8,13 @@ created: 08/07/2020
 
 # Adding Paperless Documents
 
-Paperless documents are customer-generated documents that are transmitted to carriers as part of a shipment's data rather than being generated separately by the carrier. This page explains how to add paperless documents to a shipment, retrieve a shipment's paperless documents, and remove a paperless document from a shipment.
+Paperless documents are customer-generated documents that are transmitted to carriers as part of a shipment's data, as opposed to being generated separately by the carrier. This page explains how to add paperless documents to a shipment, retrieve a shipment's paperless documents, and remove a paperless document from a shipment.
 
 ---
 
 ## What are Paperless Documents?
 
-Paperless documents are intended to make your workflows more efficient, enabling you to send documentation directly to the carrier as part of a shipment's data rather than having it produced as a separate operation. You can upload paperless documents as part of a **Create Shipment** request, or add them to an existing shipment using the **Add Paperless Documents** endpoint. 
+Paperless documents are intended to make your workflows more efficient. You can upload paperless documents as part of a **Create Shipment** request, or add them to an existing shipment using the **Add Paperless Documents** endpoint. 
 
 You can only add paperless documents to an unallocated shipment. 
 
@@ -23,21 +23,21 @@ You can only add paperless documents to an unallocated shipment.
 
 PRO supports the following paperless document types:
 
-* Commercial invoice documents
-* Certificates of origin
-* NAFTA certificates of origin
-* Pro-forma invoices
-* Authorisation forms
-* Export documents
-* Export licences
-* Import permits
-* Power of attorney documents
-* Packing lists
-* Shipper's export (SED) documents
-* Letters of instruction
-* Customs declarations
-* Air waybills
-* Invoices
+* Commercial invoice documents.
+* Certificates of origin.
+* NAFTA certificates of origin.
+* Pro-forma invoices.
+* Authorisation forms.
+* Export documents.
+* Export licences.
+* Import permits.
+* Power of attorney documents.
+* Packing lists.
+* Shipper's export (SED) documents.
+* Letters of instruction.
+* Customs declarations.
+* Air waybills.
+* Invoices.
 
 Documents must be uploaded as an image in one of PRO's supported formats (PDF, PNG, JPG or GIF), and must be less than 5MB in size. For larger documents you may need to optimise your files (for example, removing fonts and embedded data from a PDF or reducing quality on a JPG) to bring your files under the size limit.
 
@@ -46,7 +46,10 @@ Documents must be uploaded as an image in one of PRO's supported formats (PDF, P
 
 ## Adding Paperless Documents to Shipments
 
-The **Add Paperless Document** endpoint enables you to add paperless documents to an existing unallocated shipment. To call **Add Paperless Document**, send a `POST`request to `https://api.sorted.com/pro/documents/paperless/{reference}`, where `{reference}` is the unique reference of the shipment you want to add the document to.
+The **Add Paperless Document** endpoint enables you to add paperless documents to an existing unallocated shipment. To call **Add Paperless Document**, send a `POST` request to `https://api.sorted.com/pro/documents/paperless/{reference}`, where `{reference}` is the unique reference of the shipment you want to add the document to.
+
+> [!NOTE]
+> It is only possible to add a paperless document to a shipment prior to allocation (i.e. when the shipment is in a state of either `unallocated` or `allocation_failed`). If you attempt to add a paperless document to an allocated shipment then PRO returns an error.
 
 The body of the request should contain the following information:
 
@@ -57,12 +60,9 @@ The body of the request should contain the following information:
 Optionally, the request body can also include:
 
 * An `expiration` property indicating the date and time that the document expires.
-* A `usage` property indicating the document's intended usage. If provided, this property must contain a valid PRO `paperless_document_usage` value. See the Shipments data contract for a list of valid document usages. If this property is not provided the PRO defaults to a usage of `electronic_trade` for the document.
+* A `usage` property indicating the document's intended usage. If provided, this property must contain a valid PRO `paperless_document_usage` value. See the Shipments data contract for a list of valid document usages. If this property is not provided then PRO defaults to a usage of `electronic_trade` for the document.
 
-> [!NOTE]
-> It is only possible to add a paperless document to a shipment prior to allocation (i.e. when the shipment is in a state of either `unallocated` or `allocation_failed`). If you attempt to add a paperless document to an allocated shipment then PRO returns an error.
-
-Once it has received the request, PRO attached the document to the specified shipment and returns a unique `reference` for the paperless document.
+Once it has received the request, PRO attaches the document to the specified shipment and returns a unique `reference` for the paperless document.
 
 ### Example Add Paperless Document Call
 
@@ -108,9 +108,9 @@ The example shows a successful request to add a `commercial_invoice` paperless d
 
 ## Getting Paperless Documents
 
-The **Get Paperless Document** endpoint takes a paperless document `reference` and returns details of the relevant paperless document. To call **Get Paperless Document**, send a `GET` request to `https://api.sorted.com/pro/documents/paperless/{document_reference}`
+The **Get Paperless Document** endpoint takes a paperless document `reference` and returns details of the relevant paperless document. To call **Get Paperless Document**, send a `GET` request to `https://api.sorted.com/pro/documents/paperless/{document_reference}`.
 
-Once it has received the request, PRO returns a `paperless_document` object. This object details all of the information supplied when the paperless document was added to the shipment.
+Once it has received the request, PRO returns a `paperless_document` object. This object details all of the information that was supplied when the paperless document was added to the shipment.
 
 ### Example Get Paperless Document Call
 

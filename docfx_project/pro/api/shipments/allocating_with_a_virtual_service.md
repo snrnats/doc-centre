@@ -15,7 +15,7 @@ Virtual services offer flexible shipment allocation, enabling you to automatical
 
 The **Allocate Shipment with Virtual Service** endpoint takes a unique shipment `reference` and either a service group `reference` or a carrier service `reference`, and attempts to allocate the specified shipment to either the specified carrier service or a service within the specified service group, as applicable.
 
-To call **Allocate Shipment with Virtual Service**, send a `PUT` request to `https://api.sorted.com/pro/shipments/{reference}/allocate/virtual_service/{virtual_service_reference}`, where `{reference}` is the unique reference of the shipment you want to allocate and `{virtual_service_reference}` is the reference of the  carrier service or service group you want to allocate to.
+To call **Allocate Shipment with Virtual Service**, send a `PUT` request to `https://api.sorted.com/pro/shipments/{reference}/allocate/virtual_service/{virtual_service_reference}`, where `{reference}` is the unique reference of the shipment you want to allocate and `{virtual_service_reference}` is the reference of the carrier service or service group you want to allocate to.
 
 Once it has received the request, PRO takes the following action:
 
