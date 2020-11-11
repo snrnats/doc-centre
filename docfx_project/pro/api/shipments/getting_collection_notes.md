@@ -7,7 +7,7 @@ created: 02/07/2020
 ---
 # Getting Collection Notes
 
-PRO's Collection Note functionality enables you to generate driver's manifest documents for your shipments. This page explains how to retrieve collection notes.
+PRO's Collection Notes functionality enables you to generate driver's manifest documents for your shipments. This page explains how to retrieve collection notes.
 
 ---
 
@@ -15,7 +15,7 @@ PRO's Collection Note functionality enables you to generate driver's manifest do
 
 In PRO, a collection note (sometimes referred to as a driver's manifest) is a document listing items that are to be collected by a driver. It is intended to be printed and given to the driver at the point of collection.
 
-In order to generate a note for a specific collection, you will need to tell PRO which shipments are to be picked up as part of that collection. You can so so using the **Get Shipment Group Collection Note** endpoint.
+In order to generate a note for a specific collection, you will need to tell PRO which shipments are to be picked up as part of that collection. You can do so using the **Get Shipment Group Collection Note** endpoint.
 
 <!-- PRO has three endpoints that enable you to do so:
 

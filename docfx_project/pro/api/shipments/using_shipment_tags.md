@@ -7,7 +7,7 @@ created: 13/07/2020
 ---
 # Using Shipment Tags
 
-Allocation tags are a type of allocation rule that enables you to filter the list of available carrier services on a per-shipment basis, no matter which allocation endpoints you use in your integration. They are generally used as a flexible means of excluding carrier services that would not be suitable for a particular shipment. 
+Tags are a type of allocation rule that enables you to filter the list of available carrier services on a per-shipment basis, no matter which allocation endpoints you use in your integration. They are generally used as a flexible means of excluding carrier services that would not be suitable for a particular shipment. 
 
 Tagged shipments can only be allocated to those carrier services that have a matching tag. You can still allocate untagged shipments to a carrier service that has tags.
 

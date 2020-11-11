@@ -24,7 +24,7 @@ Closed groups cannot be edited.
 
 ## Making a Close Shipment Group Request
 
-To call **Close Shipment Group**, send a `POST` request to `https://api.sorted.com/pro/shipment_groups/{reference}/close`, where `{reference}` is the unique reference of the shipment group you want to close. PRO closes the group and returns a confirmation message and a link to the closed group.
+To call **Close Shipment Group**, send a `POST` request to `https://api.sorted.com/pro/shipment_groups/{reference}/close`, where `{reference}` is the unique reference of the shipment group you want to close. PRO closes the group, and returns a confirmation message and a link to the closed group.
 
 ### Close Shipment Group Example
 
