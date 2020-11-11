@@ -41,7 +41,7 @@ However, there are lots of optional properties you can send when requesting quot
 * Shipment direction.
 * Custom label properties.
 * Tenant and channel.
-* Metadata. PRO metadata enables you to use custom fields to record additional data about a shipment. For more information on using metadata in PRO, see the [Using Shipment Metadata](/pro/api/shipments/using_shipment_metadata.html) page.
+* Metadata. PRO metadata enables you to use custom fields to record additional data about a shipment.
 * Tags. Allocation tags enable you to filter the list of carrier services that a particular shipment could be allocated to. For more information on allocation tags, see the [Using Shipment Tags](/pro/api/shipments/using_shipment_tags.html) page.
 
 Adding optional properties when you request quotes for a shipment can help you to filter the list of quotes you receive down to the most appropriate carrier services.

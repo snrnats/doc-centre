@@ -44,9 +44,7 @@
 - name: Getting Collection Notes
   href: getting_collection_notes.md    
 - name: Using Shipment Tags
-  href: using_shipment_tags.md
-- name: Using Shipment Metadata
-  href: using_shipment_metadata.md        
+  href: using_shipment_tags.md      
 - name: Glossary
   href: shipments_glossary.md
 - name: Error Codes
