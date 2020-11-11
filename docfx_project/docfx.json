@@ -7,6 +7,8 @@
           "pro/api/help/**.md",
           "pro/api/shipments/**.yml",
           "pro/api/shipments/**.md",
+          "pro/how-to/**.md",
+          "pro/how-to/**.yml",
           "pro/toc.yml",
           "pro/index.md"
         ]
@@ -44,6 +46,7 @@
       {
         "files": [
           "pro/images/**",
+          "pro/how-to/images/**",
           "react/help/images/**",
           "images/**"
         ]

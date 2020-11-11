@@ -15,6 +15,11 @@ This page explains the various way in which SortedPRO can return return customs 
 
 When shipping internationally, SortedPRO will automatically determine if customs documentation is required for a consignment. SortedPRO can automatically generate CN22, CN23, or Commercial Invoice documents in PDF format and will determine which document is appropriate for any allocated consignment. The Customs Docs APIs enable you to retrieve the pre-generated documents.
 
+> [!NOTE]
+> Following the UK's departure from the EU, certain additional consignment properties must be passed in order for PRO to generate customs documentation for UK-originating international consignments. In addition, certain carriers have their own data requirements that UK-originating international consignments must meet in order to be considered for allocation to that carrier.
+> 
+> For an explanation of Brexit-related data requirements, see the [Brexit Data Guide](/pro/how-to/brexit-guide.html) page.
+
 The Customs Docs API has three endpoints:
 
 * **Get Commercial Invoice** - returns a consignment's commercial invoice.

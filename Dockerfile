@@ -15,9 +15,23 @@ COPY . ./source
 
 RUN mono ./docfx/docfx.exe ./source/docfx_project/docfx.json
 
-FROM nginx:1.17.8-alpine as host
+FROM nginx:1.18-alpine as host
+
+EXPOSE 8080
 
 WORKDIR /site
 
-COPY default.conf /etc/nginx/conf.d/default.conf
+COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
+COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
+
 COPY --from=build /build/source/docfx_project/_site /usr/share/nginx/html
+
+RUN chown -R nginx:nginx /site && chmod -R 755 /site && \
+  chown -R nginx:nginx /var/cache/nginx && \
+  chown -R nginx:nginx /etc/nginx/conf.d
+
+RUN touch /var/run/nginx.pid && chown -R nginx:nginx /var/run/nginx.pid
+
+STOPSIGNAL SIGTERM
+USER nginx
+CMD ["nginx", "-g", "daemon off;"]

@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-creating-new-consignments
 title: Creating New Consignments
-tags: consignments,pro,api
+tags: consignments,pro,api,EORI number
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 04/06/2020
 ---
@@ -38,7 +38,6 @@ There are lots of optional properties you can send when creating a consignment, 
 * Details of the specific items inside the consignment's packages.
 * The consignment's source.
 * Shipping and delivery dates.
-* Customs documentation.
 * The consignment's direction of travel.
 * Metadata. PRO metadata enables you to use custom fields to record additional data about a consignment. For more information on using metadata in PRO, see the [Metadata](/pro/api/help/metadata.html) page.
 * Tags. Allocation tags enable you to filter the list of carrier services that a particular consignment could be allocated to. For more information on allocation tags, see the [Tags](/pro/api/help/tags.html) page.
@@ -50,6 +49,14 @@ Adding optional properties when you create a consignment can help you to get mor
 > You should exercise caution when using the `ShippingDate` and `RequiredDeliveryDate` parameters to specify dates for your consignment. These parameters limit delivery options for the consignment, meaning that the consignment can only be allocated to carrier services that would be able to ship it on the specified `ShippingDate` and / or deliver it by the `RequiredDeliveryDate`. If the `IsToBeExactlyOnTheDateSpecified` flag of the `RequiredDeliveryDate` is set, then the consignment is further limited, as it can only be allocated to a service that would deliver it on the exact date specified.
 >
 > If the dates you specify are too restrictive, there may not be any carrier services available to take the consignment, which would result in a failed allocation. As such, you should only specify shipping and delivery dates where it is necessary to do so.
+
+### International Shipments
+
+Following the UK's departure from the EU, certain additional consignment properties must be passed in order for PRO to generate customs documentation for UK-originating international consignments. In addition, certain carriers have their own data requirements that UK-originating international consignments must meet in order to be considered for allocation to that carrier.
+
+For an explanation of Brexit-related data requirements, see the [Brexit Data Guide](/pro/how-to/brexit-guide.html) page.
+
+For more information on commercial invoices and other customs documents in PRO, see the [Getting Customs Docs and Invoices](/pro/api/help/getting_customs_docs_and_invoices.html) page. 
 
 ### Example Create Consignments Request
 

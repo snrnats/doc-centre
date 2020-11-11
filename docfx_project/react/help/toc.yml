@@ -17,6 +17,8 @@
     href: tracking-pages.md        
   - name: Configuring Notifications
     href: notifications.md
+  - name: Grouping Shipments
+    href: grouping-shipments.md  
 - name: API User Guide
   href: integration-guide.md
   items:

@@ -1,7 +1,18 @@
-
 serviceName: sorted-docs
-replicaCount: 1
 namespace: docs
+
+deployment:
+  replicaCount: 2
+  maxSurge: 1
+  maxUnavailable: 0
+
+resources:
+  requests:
+    memory: "64Mi"
+    cpu: 50m
+  limits:
+    memory: "128Mi"
+    cpu: 150m
 
 ingress:
   enabled: true
@@ -16,9 +27,9 @@ ingress:
       paths:
         - /
   tls:
-  - secretName: docs-sorted-com-cert
-    hosts:
-      - docs.sorted.com
-  - secretName: docs-live-sorted-com-cert
-    hosts:
-      - docs-live.sorted.com
+    - secretName: docs-sorted-com-cert
+      hosts:
+        - docs.sorted.com
+    - secretName: docs-live-sorted-com-cert
+      hosts:
+        - docs-live.sorted.com
