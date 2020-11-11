@@ -10,7 +10,7 @@ created: 08/10/2020
 SortedPRO can automatically generate customs documentation, collection notes, and hazard labels for shipments. This page explains the various way in which SortedPRO can return this documentation.
 
 > [!NOTE]
-> PRO also generates delivery labels, which have the same data structure as shipment documents and are also generated after allocation. However, labels are managed through their own dedicated endpoints, and cannot be returned through PRO's Documents endpoints. For information on using delivery labels in PRO, see the [Getting Shipment Labels](/pro/api/shipments/getting_shipment_labels.html) page. 
+> PRO also generates delivery labels, which have the same data structure as shipment documents and are also created after allocation. However, labels are managed through their own dedicated endpoints, and cannot be returned through PRO's Documents endpoints. For information on using delivery labels in PRO, see the [Getting Shipment Labels](/pro/api/shipments/getting_shipment_labels.html) page. 
 
 ---
 
@@ -38,11 +38,11 @@ PRO offers two endpoints to retrieve documents once they have been generated:
 
 To call **Get Document**, send a `GET` request to `https://api.sorted.com/pro/documents/{shipment_reference}/{document_type}`, where `{shipment_reference}` is the unique reference of the shipment that the document belongs to and `{document_type}` is the type of document you want to return for that shipment.
 
-If the specified shipment has a document of the specified type, then PRO returns a `document` object representing that document. Otherwise, the system returns an error.
+If the specified shipment has a document of the specified type, then PRO returns a `document` object representing that document. Otherwise, PRO returns an error.
 
 > [!NOTE]
 >
-> If you use the **Get Document** endpoint to get a *collection_note* for a shipment, then PRO generates and returns a collection note for the contents of that shipment only. Where you need collection notes for multiple shipments being picked up by the same carrier (as part of a scheduled collection, for example), you should use one of PRO's dedicated Collection Notes endpoints instead.
+> If you use the **Get Document** endpoint to get a *collection_note* for a shipment, then PRO returns a collection note for the contents of that shipment only. If you need collection notes for multiple shipments being picked up by the same carrier (as part of a scheduled collection, for example), you should use one of PRO's dedicated Collection Notes endpoints instead.
 > 
 > * For more information on using collection notes in PRO, see the [Getting Collection Notes](/pro/api/shipments/getting_collection_notes.html) page.
 > * For full reference information on the **Get Document** endpoint, see the Shipments data contract.
@@ -51,7 +51,7 @@ If the specified shipment has a document of the specified type, then PRO returns
 
 To call **Get Customs Documents**, send a `GET` request to `https://api.sorted.com/pro/documents/{shipment_reference}`, where `{shipment_reference}` is the unique reference of the shipment that you want to get customs documents for.
 
-If the specified shipment has customs documents (that is, it is an international shipment), then PRO returns a list of `document` objects representing those documents. Otherwise, the system returns an error.
+If the specified shipment has customs documents (that is, it is an international shipment), then PRO returns a list of `document` objects representing those documents. Otherwise, PRO returns an error.
 
 > [!NOTE]
 >

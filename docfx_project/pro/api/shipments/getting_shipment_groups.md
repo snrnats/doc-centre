@@ -83,7 +83,7 @@ Each `shipment_group_summary` is a simplified version of the full `shipment_grou
 
 * The group's unique `reference`.
 * The group's `custom_reference` and `version` (if applicable).
-* Links to the full version of the shipment.
+* Links to the full version of the group.
 
 ### Example Get Shipment Groups by Custom Reference Call
 
@@ -194,6 +194,6 @@ GET https://api.sorted.com/pro/shipment_groups/custom_reference/CarrierX-PM/late
 
 ## Next Steps
 
-* Learn how to retrieve existing shipment groups: [Getting Shipment Groups](/pro/api/shipments/getting_shipment_groups.html)
+* Learn how to create new shipment groups: [Creating Shipment Groups](/pro/api/shipments/creating_shipment_groups.html)
 * Learn how to add and remove shipments from groups: [Editing Shipment Groups](/pro/api/shipments/editing_shipment_groups.html)
 * Learn how to retrieve collection notes: [Getting Collection Notes](/pro/api/shipments/getting_collection_notes.html)

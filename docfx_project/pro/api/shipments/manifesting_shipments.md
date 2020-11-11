@@ -7,13 +7,13 @@ created: 02/07/2020
 ---
 # Manifesting Shipments
 
-Once you've created a shipment and allocated it to a carrier service, you're ready to manifest it. This section explains how to <!--manifest shipments and how to view existing customer manifests --> do so.
+Once you've created a shipment and allocated it to a carrier service, you're ready to manifest it. This section explains how to <!--manifest shipments and how to view existing customer manifests --> use the **Manifest Shipment** endpoint.
 
 ---
 
 ## Manifesting Overview
 
-In the context of SortedPRO, the term "manifesting" refers to collating, formatting and transmitting shipment data to carriers. It is the final step of most PRO workflows.
+In the context of SortedPRO, the term "manifesting" refers to collating, formatting and transmitting shipment data to carriers. It is the final step of many PRO workflows.
 
 You can only manifest shipments that are in a state of `allocated`, `manifest_failed`, or `ready_to_ship`. If you attempt to manifest a shipment that is not in one of these states then PRO returns an error.
 
@@ -28,7 +28,7 @@ You can only manifest shipments that are in a state of `allocated`, `manifest_fa
 
 > [!CAUTION]
 >
-> Every successful request to a manifest endpoint results in data being transmitted to the carrier. Therefore, Sorted strongly advise that <!-- you do not manifest shipments individually, and that -->shipment manifesting is aligned with the carrier collection times from the warehouse.
+> Every successful request to a manifest endpoint transmits data to a carrier. Therefore, Sorted strongly advise that <!-- you do not manifest shipments individually, and that -->you time your manifest requests to align with carrier collection times.
 
 Manifesting a shipment changes its state to `manifested`. At this point the carrier is aware of the shipment, and will collect it unless otherwise advised. <!-- In order to prevent the shipment being shipped, you would need to cancel it. -->
 

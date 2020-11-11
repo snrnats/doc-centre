@@ -13,13 +13,13 @@ This page explains how to add shipments to and remove them from a shipment group
 
 ## Adding and Removing Shipments in Bulk
 
-The **Update Shipment Group** endpoint enables you to add and/or remove multiple shipments from a shipment group in a single call. To call **Update Shipment Group**, send a `PUT` request to `https://api.sorted.com/pro/shipment_groups/`. The body of the request should contain:
+The **Update Shipment Group** endpoint enables you to add and/or remove multiple shipments from a shipment group in a single API call. To call **Update Shipment Group**, send a `PUT` request to `https://api.sorted.com/pro/shipment_groups/`. The body of the request should contain:
 
 * The unique `reference` of the shipment group you want to update (_not_ the user-defined `custom_reference`). This must be an open and unlocked shipment group.
 * An `add_shipments` property listing the unique `references` of the shipments you want to add to the group. These shipments must not be a member of either the specified shipment group or any other open shipment group. 
 * A `remove_shipments` property listing the unique `references` of the shipments you want to remove from the group. These shipments must be a member of the specified shipment group. 
 
-Once it has received the request, PRO makes the requested additions and removals and returns a standard resource result object with links to the shipment group that was updated.
+Once it has received the request, PRO makes the requested additions and removals and returns a standard resource result object with links to the updated shipment group.
 
 > [!NOTE]
 > For full reference information on the **Update Shipment Group** endpoint, see the Shipments data contract.
@@ -85,7 +85,7 @@ Once it has received the request, PRO adds the specified shipment to the specifi
 
 ### Add Shipment to Group Examples
 
-The examples show two requests to add shipment _sp_00013473827456470532303387361290_ to group _sg_00013464648946915264789208891778_. In the first call, the group is identified by its unique `{reference}`, and in the second it is identified by its `{custom_ref}` and `{version}`. The response for both calls would be the same.
+The examples show two requests to add shipment _sp_00013473827456470532303387361290_ to group _sg_00013464648946915264789208891778_. In the first call, the group is identified by its unique `{reference}`, and in the second it is identified by its `{custom_ref}` and `{version}`. The response for both calls is the same.
 
 # [Add Shipment to Group Request](#tab/add-shipment-to-group-request)
 
@@ -116,7 +116,7 @@ PUT https://api.sorted.com/pro/shipment_groups/custom_reference/CarrierX-PM/1/sh
 
 The **Remove Shipment from Group** endpoints enable you to remove individual shipments from an open and unlocked shipment group. You can specify the group that the shipment is to be removed from in two ways: 
 
-* Using the group's unique `{reference}` - send a `DELETE` request to `https://api.sorted.com/pro/shipment_groups/{reference}/shipments/{shipment_ref}`. This must be an open, unlocked shipment group.
+* Using the group's unique `{reference}` - send a `DELETE` request to `https://api.sorted.com/pro/shipment_groups/{reference}/shipments/{shipment_ref}`. This must be an open and unlocked shipment group.
 * Using a combination of the group's `{custom_ref}` and `{version}`- send a `DELETE` request to `https://api.sorted.com/pro/shipment_groups/custom_reference/{custom_ref}/{version}/shipments/{shipment_ref}`. The `{version}` parameter can be either an integer or the value _latest_.
 
 > [!NOTE]
@@ -125,14 +125,14 @@ The **Remove Shipment from Group** endpoints enable you to remove individual shi
 
 In both cases, `{shipment_ref}` is the unique reference of the shipment you want to remove from the group. This shipment must be a member of the specified shipment group. 
 
-Once it has received the request, PRO removes the specified shipment from the specified group and returns a standard resource result object with links to the shipment group that was updated.
+Once it has received the request, PRO removes the specified shipment from the specified group and returns a standard resource result object with links to the updated shipment group.
 
 > [!NOTE]
 > For full reference information on the **Remove Shipment from Group** endpoint, see the Shipments data contract.
 
 ### Remove Shipment from Group Examples
 
-The examples show two requests to remove shipment _sp_00013473827456470532303387361290_ from group _sg_00013464648946915264789208891778_. In the first call, the group is identified by its unique `{reference}`, and in the second it is identified by its `{custom_ref}` and `{version}`. The response for both calls would be the same.
+The examples show two requests to remove shipment _sp_00013473827456470532303387361290_ from group _sg_00013464648946915264789208891778_. In the first call, the group is identified by its unique `{reference}`, and in the second it is identified by its `{custom_ref}` and `{version}`. The response for both calls is the same.
 
 # [Remove Shipment from Group Request](#tab/remove-shipment-from-group-request)
 
@@ -161,14 +161,14 @@ DELETE https://api.sorted.com/pro/shipment_groups/custom_reference/CarrierX-PM/1
 
 ## Locking and Unlocking Shipment Groups
 
-Locking a shipment group means that you can no longer make changes to it. This ensures that no-one can make changes to the group inadvertently. In addition, you can only get collection notes for locked shipment groups.
+Locking a shipment group means that it can no longer be edited. You can only get collection notes for locked shipment groups.
 
 > [!NOTE]
 > For more information on getting collection notes, see the [Getting Collection Notes](/pro/api/shipments/getting_collection_notes.html) page.
 
 ### Locking Shipment Groups
 
-You can lock shipment groups using the **Lock Shipment Group** endpoint. To call the **Lock Shipment Group** endpoint, send a `POST` request to `https://api.sorted.com/pro/shipment_groups/{reference}/lock`, where `{reference}` is the unique reference of the group you want to lock.
+You can lock shipment groups using the **Lock Shipment Group** endpoint. To call **Lock Shipment Group**, send a `POST` request to `https://api.sorted.com/pro/shipment_groups/{reference}/lock`, where `{reference}` is the unique reference of the group you want to lock.
 
 PRO locks the group and returns a standard resource result object with links to the shipment group that was updated.
 
@@ -177,7 +177,7 @@ PRO locks the group and returns a standard resource result object with links to 
 
 ### Unlocking Shipment Groups
 
-You can unlock shipment groups using the **Unlock Shipment Group** endpoint. To call the **Unlock Shipment Group** endpoint, send a `POST` request to `https://api.sorted.com/pro/shipment_groups/{reference}/unlock`, where `{reference}` is the unique reference of the group you want to unlock.
+You can unlock shipment groups using the **Unlock Shipment Group** endpoint. To call **Unlock Shipment Group**, send a `POST` request to `https://api.sorted.com/pro/shipment_groups/{reference}/unlock`, where `{reference}` is the unique reference of the group you want to unlock.
 
 PRO unlocks the group and returns a standard resource result object with links to the shipment group that was updated.
 

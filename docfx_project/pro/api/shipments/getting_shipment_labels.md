@@ -7,13 +7,13 @@ created: 08/10/2020
 ---
 # Getting Shipment Labels
 
-SortedPRO can generate despatch labels for all of its carriers, enabling PRO customers to download labels without having to request them directly from the carrier. This page explains how to get labels for a specific shipment or an individual package within a shipment.
+SortedPRO can generate its own despatch labels, enabling PRO customers to download labels without having to request them directly from the carrier. This page explains how to get labels for a specific shipment or an individual package within a shipment.
 
 ---
 
 ## The Labels Request
 
-Getting labels is a key part of all PRO workflows, as an unlabelled shipment cannot be dispatched. When a shipment is allocated, PRO generates delivery labels for all of its `contents` properties.
+Getting labels is a key part of all PRO workflows, as an unlabelled shipment cannot be despatched. When a shipment is allocated, PRO generates delivery labels for all of that shipment's `contents` properties.
 
 Labels are usually retrieved before a shipment has been manifested.
 
@@ -71,9 +71,7 @@ The example shows a sample label response in ZPL format.
 
 ```json
 {
-  "file": "XlhBDQogICAgICAgICAgICAgICAgXkNGMCw2MA0KICAgICAgICAgICAgICAgIF5GTzUwLDUwXkdCMTAwLDEwMCwxMDBeRlMNCiAgICAgICAgICAgICAgICBeRk83NSw3NV5GUl5HQjEwMCwxMDAsMTAwXkZTDQogICAgICAgICAgICAgICAgXkZPODgsODheR0I1MCw1MCw1MF5GUw0KICAgICAgICAgICAgICAgIF5GTzIyMCw1MF5GRFhEUCBJbnRlcm5hdGlvbmFsXkZTDQogICAgICAgICAgICAgICAgXkNGMCw0MA0KICAgICAgICAgICAgICAgIF5GTzIyMCwxMDBeRkQxYSBUaGUgSGlnaCBTdHJlZXReRlMNCiAgICAgICAgICAgICAgICBeRk8yMjAsMTM1XkZETWFuY2hlc3RlciwgTTEgNVdBXkZTDQogICAgICAgICAgICAgICAgXkZPMjIwLDE3MF5GREdyZWF0IEJyaXRhaW4gKEdCKV5GUw0KICAgICAgICAgICAgICAgIF5GTzUwLDI1MF5HQjcwMCwxLDNeRlMNCg0KICAgICAgICAgICAgICAgIF5DRkEsMzANCiAgICAgICAgICAgICAgICBeRk81MCwzMDBeRkRBbmRyZXcgTG9ja15GUw0KICAgICAgICAgICAgICAgIF5GTzUwLDM0MF5GREVkd2FyZCBILiBMZXZpIEhhbGxeRlMNCiAgICAgICAgICAgICAgICBeRk81MCwzODBeRkQ1ODAxIFNvdXRoIEVsbGlzIEF2ZW51ZV5GUw0KICAgICAgICAgICAgICAgIF5GTzUwLDQyMF5GRENoaWNhZ28sIElMXkZTDQogICAgICAgICAgICAgICAgXkZPNTAsNDYwXkZEVW5pdGVkIFN0YXRlcyAoVVMpXkZTDQoNCiAgICAgICAgICAgICAgICBeQ0ZBLDE1DQogICAgICAgICAgICAgICAgXkZPNjAwLDMwMF5HQjE1MCwxNTAsM15GUw0KICAgICAgICAgICAgICAgIF5GTzYzOCwzNDBeRkRQZX
-  AgICAgICBeQ0ZBLDE1DQogICAgICAgICAgICAgICAgXkZPNjAwLDMwMF5HQjE1MCwxNTAsM15GUw0KICAgICAgICAgICAgICAgIF5GTzYzOCwzNDBeRkRQZXAgICAgICBeQ0ZBLDE1DQogICAgICAgICAgICAgICAgXkZPNjAwLDMwMF5HQjE1MCwxNTAsM15GUw0KICAgICAgICAgICAgI
-  JtaXReRlMNCiAgICAgICAgICAgICAgICBeRk82MzgsMzkwXkZEMTIzNDU2XkZTDQogICAgICAgICAgICAgICAgXkZPNTAsNTAwXkdCNzAwLDEsM15GUw0KDQogICAgICAgICAgICAgICAgXkJZNSwyLDI3MA0KICAgICAgICAgICAgICAgIF5GTzEwMCw1NTBeQkNeRkRzcF8wMDY2ODQwMDEyNDg1NzQyMjYwNTU2MTYzNTc5OTA0MF5GUw0KDQogICAgICAgICAgICAgICAgXkZPNTAsOTAwXkdCNzAwLDI1MCwzXkZTDQogICAgICAgICAgICAgICAgXkZPNDAwLDkwMF5HQjEsMjUwLDNeRlMNCiAgICAgICAgICAgICAgICBeQ0YwLDQwDQogICAgICAgICAgICAgICAgXkZPMTAwLDk2MF5GRFJlZHdpbmcgTG9uZG9uXkZTDQogICAgICAgICAgICAgICAgXkZPMTAwLDEwMTBeRkRGMDBCNDdeRlMNCiAgICAgICAgICAgICAgICBeRk8xMDAsMTA2MF5GREJMNEg4XkZTDQogICAgICAgICAgICAgICAgXkNGMCwxOTANCiAgICAgICAgICAgICAgICBeRk80ODUsOTY1XkZEQ0FeRlMNCg0KICAgICAgICAgICAgICAgIF5YWg==",
+  "file": (Base64 file data),
   "content_type": "text/plain",
   "document_type": "label",
   "dpi": 203

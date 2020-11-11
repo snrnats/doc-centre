@@ -26,7 +26,7 @@ To call **Create Shipment Group**, send a `POST` request to `https://api.sorted.
 * A `shipment` may only be a member of one **open** `shipment_group` at any one time.
 * All `shipments` must be allocated to the same carrier service.
 
-However, PRO will still create the group if you provide a reference for an invalid shipment, as long as there is at least once valid reference in the request.
+However, PRO still creates the group if you provide a reference for an invalid shipment, as long as there is at least once valid reference in the request.
 
 Shipment groups cannot share a `custom_reference` with another open shipment group. However, you can re-use previous `custom_references` as long as all previous groups that have used that reference are closed. `custom_reference` values must be URL-safe (that is, they cannot contain characters such as `/`, `\`, `?`, `@` unless encoded).
 
@@ -98,7 +98,7 @@ Note the `version` number of _79_ in the response, indicating that the user has 
 Like the first example, this example response shows the successful creation of a shipment group. However, in this case not all of the shipments provided are valid, with one of the provided `references` in an invalid formant and another corresponding to a non-existent shipment. PRO has indicated the shipments that could not be added to the group in its response.
 
 > [!NOTE]
-> In this case, the HTTP status code of the response would be `207 (Multi-status)`. This enables you to to differentiate between completely successful and partially successful group creation requests.
+> In this case, the HTTP status code of the response would be `207 (Multi-status)`. This code enables you to to differentiate between completely successful and partially successful group creation requests.
 
 # [Invalid Shipment Reference Response](#tab/invalid-shipment-reference-response)
 
