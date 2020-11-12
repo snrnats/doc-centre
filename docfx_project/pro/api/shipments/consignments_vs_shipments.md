@@ -54,9 +54,13 @@ Like consignments, shipments are a collection of one or more packages that are s
 * `contents.label_property` - Provides additional properties to be placed on the shipment's label. SortedPRO supports custom label decorators, which utilise additional label space to add fields and text. 
 * `reservation` - The `reservation` object enables PRO to store the details of reservations, such as booking details for click and collect options.
 
-<!--> [!NOTE]
+<!--
+
+> [!NOTE]
 >
-> For full reference information on the new Shipments data contract, see the Shipments data contract. -->
+> For full reference information on the new Shipments data contract, see the Shipments data contract. 
+
+-->
 
 ## Next Steps
 

@@ -20,7 +20,7 @@ PRO's Tracking API is intended to drive simple web-based tracking pages. When th
 
 PRO enables you to get tracking events at either shipment or (where supported by the carrier) contents level: 
 
-* In shipment-level tracking, PRO returns tracking events for the entire shipment, without making a distinction between individual items of contents within that shipment. <span class="highlight">What does it do when there are multiple items of contents shipping independently? Does it just display the most recent?</span>
+* In shipment-level tracking, PRO returns tracking events for the entire shipment, without making a distinction between individual items of contents within that shipment.
 * In contents-level tracking, PRO returns separate tracking events for every item of contents within the specified shipment.
 
 In addition, PRO enables you to get tracking events by both a shipment's PRO-generated unique `{reference}` or its user-defined `{custom_reference}`. Getting tracking information by `{custom_reference}` means that you can track shipments using your own internal references (assuming that you have added those references to your shipments as `custom_references`). 

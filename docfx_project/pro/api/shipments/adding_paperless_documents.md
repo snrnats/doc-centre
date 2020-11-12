@@ -19,7 +19,7 @@ Paperless documents are intended to make your workflows more efficient. You can 
 You can only add paperless documents to an unallocated shipment. 
 
 > [!CAUTION]
-> Not all carriers support paperless trade. <span class="highlight">What's the best way for customers to ascertain whether a particular service supports paperless trade?</span>
+> Not all carriers support paperless trade. 
 
 PRO supports the following paperless document types:
 

@@ -21,7 +21,7 @@ Once a shipment is allocated, PRO automatically determines what documentation is
 * `cn22` - Customs documentation. Only generated for applicable international shipments.
 * `cn23` - Customs documentation. Only generated for applicable international shipments.
 * `commercial_invoice` - Customs documentation. Only generated for applicable international shipments.
-* `hazard_label` - Generated for shipments containing dangerous goods <span class="highlight">At what point is the hazard label generated? Is it only generated for shipments that contain hazardous goods or is it always generated and just left blank if there's no hazardous goods info?</span>
+* `hazard_label` - Generated for shipments containing dangerous goods. 
 * `collection_note` - A driver's manifest for the shipment. Generated for all shipments.
 
 PRO offers two endpoints to retrieve documents once they have been generated:

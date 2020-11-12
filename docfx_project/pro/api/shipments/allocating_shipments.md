@@ -60,10 +60,14 @@ When a shipment is allocated to a carrier service, its status changes to _alloca
 
 Most allocation endpoints require PRO to select a carrier service from a range of potential options. PRO uses the following process to select carrier services:
 
-1. **What was requested?** - First, PRO determines which carrier services could potentially meet the terms of the allocation request. <!-- The results returned by this step depend heavily on the allocation endpoint used. For example, an **Allocate with Service Group** request limits PRO to only those shipments in a particular service group, whereas an **Allocate Shipments** request does not limit the pool of available services in itself and could potentially include any carrier service. --> 
+1. **What was requested?** - First, PRO determines which carrier services could potentially meet the terms of the allocation request.  <!-- The results returned by this step depend heavily on the allocation endpoint used. For example, an **Allocate with Service Group** request limits PRO to only those shipments in a particular service group, whereas an **Allocate Shipments** request does not limit the pool of available services in itself and could potentially include any carrier service. --> 
 2. **Who can deliver?** - Next, PRO eliminates any carrier services that could not take the shipment (for example, because they have not been configured and enabled, they do not ship to the delivery address, or they could meet any specified shipping and delivery dates).
 3. **Who meets the allocation rules?** - Next, PRO creates a final shortlist of carrier services by eliminating any services that do not meet your organisation's allocation rules. 
 4. **Who is cheapest?** - Finally, PRO allocates the shipment to the cheapest service on the shortlist.
+
+> [!NOTE]
+>
+> Certain carriers may specify their own rules in order to filter out which shipments can be allocated to a particular service. For example, some carriers require a package description when shipping internationally, and will not allow their services to be allocated to a international shipment that does not have the correct description. PRO automatically takes these rules into account when allocating shipments.
 
 ## What Is an Allocation Rule?
 

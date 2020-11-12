@@ -16,8 +16,6 @@ Want to specify the carrier service that should take your shipment? This page ex
 
 In order to allocate a shipment to a specific carrier service, you'll need to know that service's `{carrier_service_reference}`. The `{carrier_service_reference}` is a unique identifier for each service available in PRO.
 
-<span class="highlight">Where can the customer go to get this information? The Consignments UI had a menu - is there something similar for shipments?</span>
-
 ## Allocating A Single Shipment with a Specific Carrier Service
 
 The **Allocate Shipment with Carrier Service** endpoint enables you to allocate a shipment to a specific carrier service. To call **Allocate Shipment with Carrier Service**, send a `PUT` request to `https://api.sorted.com/pro/shipments/{reference}/allocate/service/{service_ref}`, where `{reference}`refers to the shipment you want to allocate and `{service_ref}` is the reference of the carrier service that you want to allocate to.

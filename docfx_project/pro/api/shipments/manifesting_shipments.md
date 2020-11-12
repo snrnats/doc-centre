@@ -17,8 +17,6 @@ In the context of SortedPRO, the term "manifesting" refers to collating, formatt
 
 You can only manifest shipments that are in a state of `allocated`, `manifest_failed`, or `ready_to_ship`. If you attempt to manifest a shipment that is not in one of these states then PRO returns an error.
 
-<span class="highlight">The above note is from the consignments help. I'm guessing this is still the case but need to confirm</span>
-
 <!-- PRO has four endpoints that manifest shipments: 
 
 * **Manifest Shipment** - Manifests the specified shipment.
@@ -30,7 +28,7 @@ You can only manifest shipments that are in a state of `allocated`, `manifest_fa
 >
 > Every successful request to a manifest endpoint transmits data to a carrier. Therefore, Sorted strongly advise that <!-- you do not manifest shipments individually, and that -->you time your manifest requests to align with carrier collection times.
 
-Manifesting a shipment changes its state to `manifested`. At this point the carrier is aware of the shipment, and will collect it unless otherwise advised. <!-- In order to prevent the shipment being shipped, you would need to cancel it. -->
+Manifesting a shipment changes its state to _manifested_. At this point the carrier is aware of the shipment, and will collect it unless otherwise advised. <!-- In order to prevent the shipment being shipped, you would need to cancel it. -->
 
 <!-- >> [!NOTE]
 >
@@ -39,6 +37,12 @@ Manifesting a shipment changes its state to `manifested`. At this point the carr
 Whenever you manifest one or more shipments, PRO creates a new manifest item. Each manifest item contains shipments for one carrier only. <!-- You can retrieve manifest items using the **Get Manifest** endpoint -->
 
 Once a shipment is manifested you should also look to print labels for the shipment, if you have not already done so. See [Getting Labels](/pro/api/shipments/getting_shipment_labels.html) for an explanation of how to retrieve package labels.
+
+> [!NOTE]
+>
+> Manifesting shipments is an asynchronous process. When you make a **Manifest Shipments** request, PRO adds the shipment(s) to a manifest queue before performing the manifest operation as a bulk job a few minutes later. 
+>
+> To check a particular shipment's manifest status, make a **Get Shipment** call. The shipment's `state` field indicates whether the shipment is _manifesting_ or _manifested_. 
 
 <!-- ## Section Contents
 

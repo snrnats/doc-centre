@@ -25,7 +25,7 @@ PRO offers label extensions, which enable customers to specify custom text, imag
 
 ### Getting All Labels for a Shipment
 
-The **Get Labels** endpoint retrieves all labels for the specified shipment. To call **Get Labels**, send a `GET` request to `https://api.sorted.com/pro/labels/{shipment_reference}/{format}(/dpi)`, where `{shipment_reference}` is the unique reference of the shipment you want to get labels for, `{format}` is the file format required (either PDF or ZPL), and `{dpi}` is an optional parameter indicating the resolution required. <span class="highlight">Is there a list of acceptable resolutions? Does this vary with file type?</span>
+The **Get Labels** endpoint retrieves all labels for the specified shipment. To call **Get Labels**, send a `GET` request to `https://api.sorted.com/pro/labels/{shipment_reference}/{format}(/dpi)`, where `{shipment_reference}` is the unique reference of the shipment you want to get labels for, `{format}` is the file format required (either PDF or ZPL), and `{dpi}` is an optional parameter indicating the resolution required. If no `{dpi}` parameter is provided then PRO returns a label at 203 DPI.
 
 **Get Labels** also has an optional `?include_extension=bool` boolean (true/false) query enabling you to specify whether you want the returned labels to include your custom label extensions. If you do not provide an `include_extension` query then PRO returns label extensions by default.
 
@@ -38,7 +38,7 @@ The **Get Labels** endpoint retrieves all labels for the specified shipment. To 
 
 ### Getting a Label for a Specific Item of Contents
 
-The **Get Contents Label** endpoint retrieves the label for a specific item of shipment contents. To call **Get Contents Label**, send a `GET` request to `https://api.sorted.com/pro/labels/{shipment_reference}/{contents_reference}/{format}`, where `{shipment_reference}` is the unique reference of the shipment that the contents belong to, `{contents_reference}` is the unique reference of the contents object you want to get the label for, `{format}` is the file format required (either PDF or ZPL), and `{dpi}` is an optional parameter indicating the resolution required.
+The **Get Contents Label** endpoint retrieves the label for a specific item of shipment contents. To call **Get Contents Label**, send a `GET` request to `https://api.sorted.com/pro/labels/{shipment_reference}/{contents_reference}/{format}`, where `{shipment_reference}` is the unique reference of the shipment that the contents belong to, `{contents_reference}` is the unique reference of the contents object you want to get the label for, `{format}` is the file format required (either PDF or ZPL), and `{dpi}` is an optional parameter indicating the resolution required. If no `{dpi}` parameter is provided then PRO returns a label at 203 DPI.
 
 > [!NOTE]
 > The contents object's unique reference begins with _sc_ and is located in the shipment's `contents.reference` property. It is not to be confused with the shipment's own `reference`, which begins with _sp_ and is a unique identifier for the entire shipment.

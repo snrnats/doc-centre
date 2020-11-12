@@ -179,8 +179,6 @@ Optionally, you can also include a list of service `capabilities`. Where capabil
 
 PRO takes each shipment in turn, uses allocation rules to eliminate any carrier services in the group that would not be suitable to take the shipment, and the queues the shipment for allocation to the cheapest remaining service. It then returns an Allocate Shipments result detailing the results of the request.
 
-<span class="highlight">Is the above accurate?</span>
-
 [!include[_shipments_allocate_shipments_result](../includes/_shipments_allocate_shipments_result.md)]
 
 ### Allocate with Service Group Example
