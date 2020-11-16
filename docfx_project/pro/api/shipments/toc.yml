@@ -49,7 +49,9 @@
   href: shipments_glossary.md
 - name: Error Codes
   href: shipment_errors.md
-  items:  
+  items:
+  - name: 531 - No Quotes Available
+    href: errors/531_no_quotes_available.md      
   - name: 521 - Allocation Failed
     href: errors/521_allocation_failed.md
   - name: 521 - Carrier Service Not Found    
@@ -60,26 +62,22 @@
     href: errors/521_shipment_invalid_state.md
   - name: 521 - Shipment Not Found
     href: errors/521_shipment_not_found.md
+  - name: 500 - Internal Server Error
+    href: errors/500_internal_server_error.md    
   - name: 429 - Rule Conflict
     href: errors/429_rule_conflict.md
   - name: 410 - Resource Quarantined
     href: errors/410_resource_quarantined.md
   - name: 410 - Resource Removed
     href: errors/410_resource_removed.md
-  - name: 500 - Internal Server Error
-    href: errors/500_internal_server_error.md
   - name: 405 - Method Not Supported
     href: errors/405_method_not_supported.md
-  - name: 531 - No Quotes Available
-    href: errors/531_no_quotes_available.md
   - name: 404 - Not Found
     href: errors/404_not_found.md
   - name: 404 - Shipment No Found
     href: errors/404_shipment_not_found.md
   - name: 404 - Processing
     href: errors/404_processing.md
-  - name: Status Code Error
-    href: errors/status_code_error.md
   - name: 401 - Invalid API Key
     href: errors/401_invalid_api_key.md
   - name: 401 - Missing API Key Header
@@ -154,7 +152,7 @@
     href: errors/400_invalid_shipment_state.md
   - name: 400 - Invalid Shipment Type
     href: errors/400_invalid_shipment_type.md
-  - name: 400 - Invalid Shippign Terms
+  - name: 400 - Invalid Shipping Terms
     href: errors/400_invalid_shipping_terms.md
   - name: 400 - Invalid State For Operation
     href: errors/400_invalid_state_for_operation.md
@@ -194,3 +192,5 @@
     href: errors/400_non_unique_reference.md
   - name: 400 - Virtual Service Not Found
     href: errors/400_virtual_service_not_found.md
+  - name: Status Code Error
+    href: errors/status_code_error.md
