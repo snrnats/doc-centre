@@ -3,10 +3,11 @@
   items:
   - name: Consignments API User Guide
     href: /pro/api/help/introduction.html
-  - name: Consignments API Reference
-    href: https://docs.electioapp.com/#/api
-  - name: Example Call Flows
-    href: /pro/api/help/flows.html 
+    items: 
+    - name: Consignments API Reference
+      href: https://docs.electioapp.com/#/api
+    - name: Example Call Flows
+      href: /pro/api/help/flows.html 
   - name: Shipments API User Guide
     href: /pro/api/shipments/introduction.html       
   - name: Reports
