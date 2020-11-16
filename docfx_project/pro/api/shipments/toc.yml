@@ -50,5 +50,147 @@
 - name: Error Codes
   href: shipment_errors.md
   items:  
-  - name: Error 521
-    href: error_521.md    
+  - name: 521 - Allocation Failed
+    href: errors/521_allocation_failed.md
+  - name: 521 - Carrier Service Not Found    
+    href: errors/521_carrier_service_not_found.md
+  - name: 521 - Carrier Service Shipment Mismatch
+    href: errors/521_carrier_service_shipment_mismatch.md
+  - name: 521 - Shipment Invalid State
+    href: errors/521_shipment_invalid_state.md
+  - name: 521 - Shipment Not Found
+    href: errors/521_shipment_not_found.md
+  - name: 429 - Rule Conflict
+    href: errors/429_rule_conflict.md
+  - name: 410 - Resource Quarantined
+    href: errors/410_resource_quarantined.md
+  - name: 410 - Resource Removed
+    href: errors/410_resource_removed.md
+  - name: 500 - Internal Server Error
+    href: errors/500_internal_server_error.md
+  - name: 405 - Method Not Supported
+    href: errors/405_method_not_supported.md
+  - name: 531 - No Quotes Available
+    href: errors/531_no_quotes_available.md
+  - name: 404 - Not Found
+    href: errors/404_not_found.md
+  - name: 404 - Shipment No Found
+    href: errors/404_shipment_not_found.md
+  - name: 404 - Processing
+    href: errors/404_processing.md
+  - name: Status Code Error
+    href: errors/status_code_error.md
+  - name: 401 - Invalid API Key
+    href: errors/401_invalid_api_key.md
+  - name: 401 - Missing API Key Header
+    href: errors/401_missing_api_key_header.md
+  - name: 401 - Unauthorised
+    href: errors/401_unauthorised.md
+  - name: 400 - Validation Error
+    href: errors/400_validation_error.md
+  - name: 400 - Address Type Required
+    href: errors/400_address_type_required.md
+  - name: 400 - Conflicting Properties
+    href: errors/400_conflicting_properties.md
+  - name: 400 - Date In Past
+    href: errors/400_date_in_past.md
+  - name: 400 - Duplicate Address Type
+    href: errors/400_duplicate_address_type.md
+  - name: 400 - Duplicate Metadata Key
+    href: errors/400_duplicate_metadata_key.md
+  - name: 400 - Duplicate References
+    href: errors/400_duplicate_references.md
+  - name: 400 - Duplicate Tags
+    href: errors/400_duplicate_tags.md
+  - name: 400 - Duplicate Values
+    href: errors/400_duplicate_values.md
+  - name: 400 - Invalid Accessibility
+    href: errors/400_invalid_accessibility.md
+  - name: 400 - Invalid Address Type
+    href: errors/400_invalid_address_type.md
+  - name: 400 - Invalid Carrier Service
+    href: errors/400_invalid_carrier_service.md
+  - name: 400 - Invalid Category Type
+    href: errors/400_invalid_category_type.md
+  - name: 400 - Invalid Hazard Class
+    href: errors/400_invalid_hazard_class.md
+  - name: 400 - Invalid Contents Reference
+    href: errors/400_invalid_contents_reference.md
+  - name: 400 - Invalid Country Code
+    href: errors/400_invalid_country_code.md
+  - name: 400 - Invalid Cron Expression
+    href: errors/400_invalid_cron_expression.md
+  - name: 400 - Invalid Currency
+    href: errors/400_invalid_currency.md
+  - name: 400 - Invalid Date Range
+    href: errors/400_invalid_date_range.md
+  - name: 400 - Invalid Dimension Unit
+    href: errors/400_invalid_dimension_unit.md
+  - name: 400 - Invalid Direction
+    href: errors/400_invalid_direction.md
+  - name: 400 - Invalid Email
+    href: errors/400_invalid_email.md
+  - name: 400 - Invalid Format
+    href: errors/400_invalid_format.md
+  - name: 400 - Invalid Metadata Type
+    href: errors/400_invalid_metadata_type.md
+  - name: 400 - Invalid Package Size Reference
+    href: errors/400_invalid_package_size_reference.md
+  - name: 400 - Invalid Packing Group
+    href: errors/400_invalid_packing_group.md
+  - name: 400 - Invalid Physical Form
+    href: errors/400_invalid_physical_form.md
+  - name: 400 - Invalid Postal Code
+    href: errors/400_invalid_postal_code.md
+  - name: 400 - Invalid Radioactivity
+    href: errors/400_invalid_radioactivity.md
+  - name: 400 - Invalid Reference Format
+    href: errors/400_invalid_reference_format.md
+  - name: 400 - Invalid Region
+    href: errors/400_invalid_region.md
+  - name: 400 - Invalid Request
+    href: errors/400_invalid_request.md
+  - name: 400 - Invalid Shipment State
+    href: errors/400_invalid_shipment_state.md
+  - name: 400 - Invalid Shipment Type
+    href: errors/400_invalid_shipment_type.md
+  - name: 400 - Invalid Shippign Terms
+    href: errors/400_invalid_shipping_terms.md
+  - name: 400 - Invalid State For Operation
+    href: errors/400_invalid_state_for_operation.md
+  - name: 400 - Invalid Sub Division
+    href: errors/400_invalid_sub_division.md
+  - name: 400 - Invalid Value
+    href: errors/400_invalid_value.md
+  - name: 400 - Invalid Weight Unit
+    href: errors/400_invalid_weight_unit.md
+  - name: 400 - Required Property Missing
+    href: errors/400_required_property_missing.md
+  - name: 400 - System Shipment State
+    href: errors/400_system_shipment_state.md
+  - name: 400 - System Use Only
+    href: errors/400_system_use_only.md
+  - name: 400 - Too Few Elements
+    href: errors/400_too_few_elements.md
+  - name: 400 - Too Many Elements
+    href: errors/400_too_many_elements.md
+  - name: 400 - Unit Mismatch
+    href: errors/400_unit_mismatch.md
+  - name: 400 - Value Too Large
+    href: errors/400_value_too_large.md
+  - name: 400 - Value Too Long
+    href: errors/400_value_too_long.md
+  - name: 400 - Value Too Short
+    href: errors/400_value_too_short.md
+  - name: 400 - Value Too Small
+    href: errors/400_value_too_small.md
+  - name: 400 - Version Header Error
+    href: errors/400_version_header_error.md
+  - name: 400 - Version Header Missing
+    href: errors/400_version_header_missing.md
+  - name: 400 - File Too Large
+    href: errors/400_file_too_large.md
+  - name: 400 - Non-Unique Reference
+    href: errors/400_non_unique_reference.md
+  - name: 400 - Virtual Service Not Found
+    href: errors/400_virtual_service_not_found.md
