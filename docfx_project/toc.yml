@@ -2,7 +2,9 @@
   homepage: /pro/
   items:
   - name: API User Guide
-    href: /pro/api/shipments/introduction.html         
+    href: /pro/api/shipments/introduction.html
+  - name: API Reference
+    href: https://aks-prod.sorted.com/shipments_index/index.html           
   - name: Reports User Guide
     href: pro/reports/
     homepage: pro/reports/index.md
