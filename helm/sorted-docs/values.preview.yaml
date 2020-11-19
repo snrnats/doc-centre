@@ -1,0 +1,33 @@
+serviceName: sorted-docs-preview
+replicaCount: 1
+namespace: feature
+nameOverride: sorted-docs-preview
+fullnameOverride: sorted-docs-preview
+
+image:
+  repository: repo
+  tag: latest # overridden on deployment
+  pullPolicy: IfNotPresent
+  pullSecret: pullSecret
+
+service:
+  name: sorted-docs-preview
+  type: ClusterIP
+  port: 80
+
+container:
+  port: 80
+
+ingress:
+  enabled: true
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/issuer: "letsencrypt"
+  hosts:
+    - host: docs-preview.sortedgroup.dev
+      paths:
+        - /
+  tls:
+    - secretName: docs-preview-sortedgroup-dev-cert
+      hosts:
+        - docs-preview.sortedgroup.dev

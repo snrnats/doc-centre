@@ -1,4 +1,4 @@
-# PRO Report Docs.
+# PRO Report Docs
 Welcome to the docs for SortedPRO's Power BI reporting app. This site explains the reports available for PRO, and how to use them.
 
 ## Getting Started
