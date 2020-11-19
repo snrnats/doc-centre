@@ -7,6 +7,8 @@
           "pro/api/help/**.md",
           "pro/api/shipments/**.yml",
           "pro/api/shipments/**.md",
+          "pro/api/reference/**.yml",
+          "pro/api/reference/**.md",
           "pro/how-to/**.md",
           "pro/how-to/**.yml",
           "pro/toc.yml",

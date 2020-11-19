@@ -4,7 +4,7 @@
   - name: API User Guide
     href: /pro/api/shipments/introduction.html
   - name: API Reference
-    href: https://aks-prod.sorted.com/shipments_index/index.html
+    href: /pro/api/reference/shipments_api_ref.html
   - name: Release Notes
     href: pro/release-notes/
     homepage: pro/release-notes/index.md               
