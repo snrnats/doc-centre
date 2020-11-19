@@ -47,7 +47,7 @@
                 </a>
                 <a href="/pro/reports/index.html" class="message-block">
                     <i class="fas fa-chart-bar"></i>
-                    <h4>Reports Docs</h4>
+                    <h4>Reports User Guide</h4>
                     <p class="link-pink" href="/pro/reports/index.html">Support for PRO's PowerBI reporting app</p>
                 </a>
                 <a href="/pro/how-to/articles.html" class="message-block">
