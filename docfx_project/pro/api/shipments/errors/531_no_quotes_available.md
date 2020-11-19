@@ -7,5 +7,5 @@ created: 13/11/2020
 ---
 # 531 - No Quotes Available
 
-* **Parent Error Code** - `521 allocation_failed`
+* **Parent Error Code** - `521 no_quotes_available`
 * **Description** - No quotes could be generated for the `shipment`. The response will include details of the exclusion reason for each carrier/carrier service.

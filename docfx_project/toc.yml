@@ -1,25 +1,30 @@
 - name: PRO  
   homepage: /pro/
   items:
-  - name: Consignments API User Guide
-    href: /pro/api/help/introduction.html
-    items: 
-    - name: Consignments API Reference
-      href: https://docs.electioapp.com/#/api
-    - name: Example Call Flows
-      href: /pro/api/help/flows.html 
-  - name: Shipments API User Guide
-    href: /pro/api/shipments/introduction.html       
-  - name: Reports
+  - name: API User Guide
+    href: /pro/api/shipments/introduction.html         
+  - name: Reports User Guide
     href: pro/reports/
     homepage: pro/reports/index.md
-  - name: Brexit Guide
-    href: /pro/how-to/brexit-guide.html
-  - name: UPS Onboarding Guide
-    href: /pro/how-to/ups-guide.html
+  - name: Articles
+    href: /pro/how-to/articles.html
+    items:
+    - name: UPS Onboarding Guide
+      href: /pro/how-to/ups-guide.html
+    - name: Brexit Shipping Data Guide
+      href: /pro/how-to/brexit-guide.html   
   - name: Release Notes
     href: pro/release-notes/
-    homepage: pro/release-notes/index.md  
+    homepage: pro/release-notes/index.md
+  - name: Consignments Help
+    href: /pro/api/help/introduction.html
+    items: 
+    - name: Consignments API User Guide
+      href: /pro/api/help/introduction.html      
+    - name: Consignments API Reference
+      href: https://docs.electioapp.com/#/api
+    - name: Example Consignments Call Flows
+      href: /pro/api/help/flows.html        
 - name: REACT 
   href: /react/index.html?v2
   items:

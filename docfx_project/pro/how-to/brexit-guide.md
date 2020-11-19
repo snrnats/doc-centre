@@ -1,11 +1,11 @@
 ---
 uid: pro-api-help-brexit-guide
-title: Brexit Data Guide
+title: Brexit Shipping Data Guide
 tags: allocation,pro,api,consignments,brexit
 contributors: andy.walton@sorted.com
 created: 24/09/2020
 ---
-# Brexit Data Guide
+# Brexit Shipping Data Guide
 
 The UK's departure from the EU has resulted in some changes to the data required for international shipments in PRO. This page details the consignment data needed to generate customs documentation in PRO and allocate international shipments to DPD, Hermes, Parcelforce, Yodel, or Royal Mail.
 

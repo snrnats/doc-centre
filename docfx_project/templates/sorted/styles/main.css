@@ -578,7 +578,7 @@ ul.level1 {
     border-left: 1px solid var(--colour-tab-active);
 }
 
-.navbar-nav .level2:hover .level3 {
+.navbar-nav .level2 li:hover .level3 {
     display: block;
 }
 
@@ -1734,7 +1734,7 @@ ul.tags > li:hover {
 
 @media (min-width: 998px){
   .dual-quad {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .right-column {
@@ -1751,6 +1751,10 @@ ul.tags > li:hover {
   
   .header-info {
     padding: 0px 135px;
+    text-align: left;
+    margin: auto;
+    max-width: 998px;
+    margin-bottom: 30px;
   }
 }
 

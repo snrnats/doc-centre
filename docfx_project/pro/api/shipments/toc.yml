@@ -116,7 +116,7 @@
     href: errors/400_invalid_contents_reference.md
   - name: 400 - Invalid Country Code
     href: errors/400_invalid_country_code.md
-  - name: 400 - Invalid Cron Expression
+  - name: 400 - Invalid CRON Expression
     href: errors/400_invalid_cron_expression.md
   - name: 400 - Invalid Currency
     href: errors/400_invalid_currency.md
