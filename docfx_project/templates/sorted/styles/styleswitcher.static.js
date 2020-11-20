@@ -13,7 +13,7 @@ function switchTheme(e) {
 }
 
 function getUrl(slug) {
-  return baseUrl + "styles/" + slug + ".css";
+  return baseUrl + "/styles/" + slug + ".css";
 }
 
 function setInitialTheme(theme) {
