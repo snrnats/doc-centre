@@ -1,11 +1,11 @@
 ---
 uid: pro-api-help-brexit-guide
-title: Brexit Data Guide
+title: Brexit Shipping Data Guide
 tags: allocation,pro,api,consignments,brexit
 contributors: andy.walton@sorted.com
 created: 24/09/2020
 ---
-# Brexit Data Guide
+# Brexit Shipping Data Guide
 
 The UK's departure from the EU has resulted in some changes to the data required for international shipments in PRO. This page details the consignment data needed to generate customs documentation in PRO and allocate international shipments to DPD, Hermes, Parcelforce, Yodel, or Royal Mail.
 
@@ -57,9 +57,24 @@ The following consignment properties are required in order for PRO to generate C
 
 ## Carrier Data Requirements
 
-The table below shows the consignment data required to ship internationally with specific carriers. PRO only considers a consignment for allocation to a particular carrier if the consignment meets that carrier's data requirements for international shipping.
+This section shows the consignment data required to ship internationally with specific carriers, and the shipping routes that these restrictions apply to for each carrier. When allocating a consignment that will use one of these routes, PRO only considers that consignment for allocation to a particular carrier if the consignment meets the carrier's data requirements.
 
-| PRO Data   Element | DPD  | HERMES ROTW | PARCELFORCE INTL | YODEL | ROYAL MAIL |
+### Affected Routes
+
+* **DPD** - Customs document not required. Non-GB Destinations for the following routes:
+     * DPD INTERNATIONAL: GB to EU & Non-EU
+     * DPD UK DOMESTIC: GB to IE, JE & GG
+     * DPD LOCAL: GB to IE, JE & GG
+* **HERMES INTL** - Commercial Invoice document required. HERMES rest of the world routes:
+     * GB to Non-GB Destinations
+     * Non-GB Origin to GB
+* **PARCELFORCE INTL** - Customs document required. 
+* **YODEL** - Customs document not required.  GB to Northern Ireland & Channel Islands. Northern Ireland Addresses will have a Country of GB & the postcode prefix (Postcode Area) will always be "BT".
+* **ROYAL MAIL INTL** - CN22 and CN23 customs documents required. GB to all non-GB destinations.
+
+### Data Required
+
+| PRO Data Element | DPD INTL | HERMES INTL | PARCELFORCE INTL | YODEL | ROYAL MAIL INTL |
 |:-:|:-:|:-:|:-:|:-:|:-:|
 | `Addresses` ><br/> `Destination Address` > `Town` |   |   |   |   | Mandatory |
 | `Addresses` > `Exporter` |      Must be provided if different from the Origin Address. If required please   provide either Shipping Location Reference or all of AddressLine1, Region,   Postcode, Country, Email  and one or   more of Telephone, Mobile and Landline<br/><br/> If an Exporter Address has not been provided then PRO uses the Origin Address. |   |   |   |   |
