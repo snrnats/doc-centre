@@ -3,6 +3,7 @@
 docfx.zip
 .DS_Store
 .idea/
+.ionide/
 bin/
 obj/
 *.pdb

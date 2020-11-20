@@ -24,7 +24,8 @@ WORKDIR /site
 COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 
-COPY --from=build /build/source/docfx_project/_site /usr/share/nginx/html
+COPY --from=build /build/source/docfx_project/404.html /site
+COPY --from=build /build/source/docfx_project/_site /site
 
 RUN chown -R nginx:nginx /site && chmod -R 755 /site && \
   chown -R nginx:nginx /var/cache/nginx && \
