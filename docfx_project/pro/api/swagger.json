@@ -1,0 +1,4801 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Sorted Shipments API",
+    "description": "Build: 1.0.160",
+    "version": "1.1"
+  },
+  "paths": {
+    "/shipment_groups/custom_reference/{customReference}/latest/shipments/{shipmentReference}": {
+      "put": {
+        "tags": [
+          "Shipment Groups"
+        ],
+        "summary": "Add Shipment to Group",
+        "description": "This endpoint provides the simplest possible method of adding a single shipment to an existing shipment_group.",
+        "parameters": [
+          {
+            "name": "customReference",
+            "in": "path",
+            "description": "The custom reference of the shipment_group to add the shipment to",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The custom reference of the shipment_group to add the shipment to",
+              "nullable": true
+            }
+          },
+          {
+            "name": "shipmentReference",
+            "in": "path",
+            "description": "The reference of the shipment to add to the shipment_group",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The reference of the shipment to add to the shipment_group",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "response description",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ShipmentGroupResponse"
+                }
+              }
+            }
+          },
+          "304": {
+            "description": "response description"
+          },
+          "400": {
+            "description": "response description"
+          },
+          "403": {
+            "description": "response description"
+          },
+          "404": {
+            "description": "response description"
+          },
+          "409": {
+            "description": "response description"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Shipment Groups"
+        ],
+        "summary": "Removes a shipment from the shipment_group",
+        "description": "This endpoint allows you to remove a shipment from the shipment_group.",
+        "parameters": [
+          {
+            "name": "customReference",
+            "in": "path",
+            "description": "The custom reference of shipment_group",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The custom reference of shipment_group",
+              "nullable": true
+            }
+          },
+          {
+            "name": "shipmentReference",
+            "in": "path",
+            "description": "The reference of the shipment to remove from the shipment_group",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The reference of the shipment to remove from the shipment_group",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The shipment_group has been updated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ShipmentGroupResponse"
+                }
+              }
+            }
+          },
+          "304": {
+            "description": "The shipment is not a member of the shipment_group"
+          },
+          "400": {
+            "description": "There is a validation error in your request"
+          },
+          "403": {
+            "description": "You do not have permission to update a shipment_group"
+          },
+          "404": {
+            "description": "The shipment_group could not be found"
+          },
+          "409": {
+            "description": "The shipment_group is locked or is closed and cannot be updated"
+          }
+        }
+      }
+    },
+    "/shipment_groups/custom_reference/{customReference}/{version}/shipments/{shipmentReference}": {
+      "put": {
+        "tags": [
+          "Shipment Groups"
+        ],
+        "summary": "Adds a shipment to the shipment group",
+        "description": "This endpoint allows you to add a shipment to a shipment_group.",
+        "parameters": [
+          {
+            "name": "customReference",
+            "in": "path",
+            "description": "The custom reference of the shipment_group to add the shipment to",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The custom reference of the shipment_group to add the shipment to",
+              "nullable": true
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "The version of the shipment_group to add the shipment to",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "description": "The version of the shipment_group to add the shipment to",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "shipmentReference",
+            "in": "path",
+            "description": "The reference of the shipment to add to the shipment_group",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The reference of the shipment to add to the shipment_group",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The shipment_group has been updated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ShipmentGroupResponse"
+                }
+              }
+            }
+          },
+          "304": {
+            "description": "The shipment already exists in the shipment_group"
+          },
+          "400": {
+            "description": "There is a validation error in your request"
+          },
+          "403": {
+            "description": "You do not have permission to update a shipment_group"
+          },
+          "404": {
+            "description": "The shipment_group could not be found"
+          },
+          "409": {
+            "description": "The shipment_group is locked or is closed and cannot be updated"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Shipment Groups"
+        ],
+        "summary": "Removes a shipment from the shipment_group",
+        "description": "This endpoint allows you to remove a shipment from the shipment_group.",
+        "parameters": [
+          {
+            "name": "customReference",
+            "in": "path",
+            "description": "The custom reference of shipment_group",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The custom reference of shipment_group",
+              "nullable": true
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "The version of shipment_group",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "description": "The version of shipment_group",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "shipmentReference",
+            "in": "path",
+            "description": "The reference of the shipment to remove from the shipment_group",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The reference of the shipment to remove from the shipment_group",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The shipment_group has been updated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ShipmentGroupResponse"
+                }
+              }
+            }
+          },
+          "304": {
+            "description": "The shipment is not a member of the shipment_group"
+          },
+          "400": {
+            "description": "There is a validation error in your request"
+          },
+          "403": {
+            "description": "You do not have permission to update a shipment_group"
+          },
+          "404": {
+            "description": "The shipment_group could not be found"
+          },
+          "409": {
+            "description": "The shipment_group is locked or is closed and cannot be updated"
+          }
+        }
+      }
+    },
+    "/shipment_groups/{shipmentGroupReference}/shipments/{shipmentReference}": {
+      "put": {
+        "tags": [
+          "Shipment Groups"
+        ],
+        "summary": "Adds a shipment to the shipment group",
+        "description": "This endpoint allows you to add a shipment to a shipment_group.",
+        "parameters": [
+          {
+            "name": "shipmentGroupReference",
+            "in": "path",
+            "description": "The reference of the shipment_group to add the shipment to",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The reference of the shipment_group to add the shipment to",
+              "nullable": true
+            }
+          },
+          {
+            "name": "shipmentReference",
+            "in": "path",
+            "description": "The reference of the shipment to add to the shipment_group",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The reference of the shipment to add to the shipment_group",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The shipment_group has been updated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ShipmentGroupResponse"
+                }
+              }
+            }
+          },
+          "304": {
+            "description": "The shipment already exists in the shipment_group"
+          },
+          "400": {
+            "description": "There is a validation error in your request"
+          },
+          "403": {
+            "description": "You do not have permission to update a shipment_group"
+          },
+          "404": {
+            "description": "The shipment_group could not be found"
+          },
+          "409": {
+            "description": "The shipment_group is locked or is closed and cannot be updated"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Shipment Groups"
+        ],
+        "summary": "Removes a shipment from the shipment_group",
+        "description": "This endpoint allows you to remove a shipment from the shipment_group.",
+        "parameters": [
+          {
+            "name": "shipmentGroupReference",
+            "in": "path",
+            "description": "The reference of the shipment_group",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The reference of the shipment_group",
+              "nullable": true
+            }
+          },
+          {
+            "name": "shipmentReference",
+            "in": "path",
+            "description": "The reference of the shipment to remove from the shipment_group",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The reference of the shipment to remove from the shipment_group",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The shipment_group has been updated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ShipmentGroupResponse"
+                }
+              }
+            }
+          },
+          "304": {
+            "description": "The shipment is not a member of the shipment_group"
+          },
+          "400": {
+            "description": "There is a validation error in your request"
+          },
+          "403": {
+            "description": "You do not have permission to update a shipment_group"
+          },
+          "404": {
+            "description": "The shipment_group could not be found"
+          },
+          "409": {
+            "description": "The shipment_group is locked or is closed and cannot be updated"
+          }
+        }
+      }
+    },
+    "/shipments/{shipmentReference}/allocate": {
+      "put": {
+        "tags": [
+          "Allocation"
+        ],
+        "summary": "Allocate a shipment using default rules",
+        "description": "Allocate with default rules means that Sorted will determine which of your configured services are able to carry the shipment. Of all services that provide a valid quote, Sorted will automatically allocate with the cheapest service that meets the shipment's requirements.",
+        "parameters": [
+          {
+            "name": "shipmentReference",
+            "in": "path",
+            "description": "The reference of the shipment to allocate",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The reference of the shipment to allocate",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The shipment has been allocated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult"
+                },
+                "example": {
+                  "shipment_reference": "sp_00840703279232902004319372050432",
+                  "state": "allocated",
+                  "price": {
+                    "net": 10.0,
+                    "gross": 12.0,
+                    "taxes": [
+                      {
+                        "rate": {
+                          "reference": "gb_standard",
+                          "country_iso_code": "GB",
+                          "type": "standard",
+                          "value": 0.2
+                        },
+                        "amount": 0.0
+                      }
+                    ],
+                    "currency": "GBP"
+                  },
+                  "message": "Shipment sp_00840703279232902004319372050432 has been allocated successfully",
+                  "carrier": {
+                    "reference": "DNQ",
+                    "name": "DNQ Worldwide",
+                    "service_reference": "DNQ72",
+                    "service_name": "DNQ 72-Hour Express"
+                  },
+                  "tracking_details": {
+                    "shipment": {
+                      "reference": "sp_00840703279232902004319372050432",
+                      "tracking_references": [
+                        "te_00840703279232902004319372050433"
+                      ]
+                    },
+                    "contents": [
+                      {
+                        "reference": "sc_00840703279232902004319372050434",
+                        "tracking_references": [
+                          "te_00840703279232902004319372050435"
+                        ]
+                      }
+                    ]
+                  },
+                  "_links": [
+                    {
+                      "href": "https://api.sorted.com/pro/labels/sp_00840703279232902004319372050432/pdf",
+                      "rel": "label",
+                      "reference": "sp_00840703279232902004319372050432",
+                      "type": "label"
+                    },
+                    {
+                      "href": "https://api.sorted.com/pro/labels/sp_00840703279232902004319372050432/zpl",
+                      "rel": "label",
+                      "reference": "sp_00840703279232902004319372050432",
+                      "type": "label"
+                    },
+                    {
+                      "href": "https://api.sorted.com/pro/shipments/sp_00840703279232902004319372050432",
+                      "rel": "shipment",
+                      "reference": "sp_00840703279232902004319372050432",
+                      "type": "shipment"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "202": {
+            "description": "The shipment has been queued for allocation"
+          },
+          "400": {
+            "description": "There is a validation error in your request"
+          },
+          "404": {
+            "description": "No shipment could be found with the provided reference"
+          },
+          "521": {
+            "description": "Allocation has failed - the shipment could not be allocated"
+          }
+        }
+      }
+    },
+    "/shipments/allocate/{shipmentReference}/quote/{quoteReference}": {
+      "put": {
+        "tags": [
+          "Allocation"
+        ],
+        "summary": "Allocate a shipment with a previously-generated quote for the shipment",
+        "description": "Allocate a shipment with a previously-generated quote",
+        "parameters": [
+          {
+            "name": "shipmentReference",
+            "in": "path",
+            "description": "The reference of the shipment to be allocated",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The reference of the shipment to be allocated",
+              "nullable": true
+            }
+          },
+          {
+            "name": "quoteReference",
+            "in": "path",
+            "description": "The reference of the previously-generated quote",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The reference of the previously-generated quote",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The shipment has been allocated with the quote successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult"
+                },
+                "example": {
+                  "shipment_reference": "sp_00840703279269795492466791153664",
+                  "state": "allocated",
+                  "price": {
+                    "net": 10.0,
+                    "gross": 12.0,
+                    "taxes": [
+                      {
+                        "rate": {
+                          "reference": "gb_standard",
+                          "country_iso_code": "GB",
+                          "type": "standard",
+                          "value": 0.2
+                        },
+                        "amount": 0.0
+                      }
+                    ],
+                    "currency": "GBP"
+                  },
+                  "message": "Shipment sp_00840703279269795492466791153664 has been allocated successfully",
+                  "carrier": {
+                    "reference": "DNQ",
+                    "name": "DNQ Worldwide",
+                    "service_reference": "DNQ72",
+                    "service_name": "DNQ 72-Hour Express"
+                  },
+                  "tracking_details": {
+                    "shipment": {
+                      "reference": "sp_00840703279269795492466791153664",
+                      "tracking_references": [
+                        "te_00840703279269795492466791153665"
+                      ]
+                    },
+                    "contents": [
+                      {
+                        "reference": "sc_00840703279269795492466791153666",
+                        "tracking_references": [
+                          "te_00840703279269795492466791153667"
+                        ]
+                      }
+                    ]
+                  },
+                  "_links": [
+                    {
+                      "href": "https://api.sorted.com/pro/labels/sp_00840703279269795492466791153664/pdf",
+                      "rel": "label",
+                      "reference": "sp_00840703279269795492466791153664",
+                      "type": "label"
+                    },
+                    {
+                      "href": "https://api.sorted.com/pro/labels/sp_00840703279269795492466791153664/zpl",
+                      "rel": "label",
+                      "reference": "sp_00840703279269795492466791153664",
+                      "type": "label"
+                    },
+                    {
+                      "href": "https://api.sorted.com/pro/shipments/sp_00840703279269795492466791153664",
+                      "rel": "shipment",
+                      "reference": "sp_00840703279269795492466791153664",
+                      "type": "shipment"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "202": {
+            "description": "The shipment has been queued for allocation with the quote"
+          },
+          "400": {
+            "description": "There is a validation error in your request"
+          },
+          "404": {
+            "description": "The shipment could not be found or the quote reference could not be found"
+          },
+          "521": {
+            "description": "Allocation has failed - the shipment could not be allocated"
+          }
+        }
+      }
+    },
+    "/shipments/{shipmentReference}/allocate/service/{serviceReference}": {
+      "put": {
+        "tags": [
+          "Allocation"
+        ],
+        "summary": "Allocate a single shipment with a specific carrier service",
+        "description": "Allocate a single shipment with a specific carrier service",
+        "parameters": [
+          {
+            "name": "shipmentReference",
+            "in": "path",
+            "description": "The reference of the shipment to allocate",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The reference of the shipment to allocate",
+              "nullable": true
+            }
+          },
+          {
+            "name": "serviceReference",
+            "in": "path",
+            "description": "The reference of the carrier service to allocate with",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The reference of the carrier service to allocate with",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The shipment has been allocated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult"
+                },
+                "example": {
+                  "shipment_reference": "sp_00840703279288242236540500705284",
+                  "state": "allocated",
+                  "price": {
+                    "net": 10.0,
+                    "gross": 12.0,
+                    "taxes": [
+                      {
+                        "rate": {
+                          "reference": "gb_standard",
+                          "country_iso_code": "GB",
+                          "type": "standard",
+                          "value": 0.2
+                        },
+                        "amount": 0.0
+                      }
+                    ],
+                    "currency": "GBP"
+                  },
+                  "message": "Shipment sp_00840703279288242236540500705284 has been allocated successfully",
+                  "carrier": {
+                    "reference": "DNQ",
+                    "name": "DNQ Worldwide",
+                    "service_reference": "DNQ72",
+                    "service_name": "DNQ 72-Hour Express"
+                  },
+                  "tracking_details": {
+                    "shipment": {
+                      "reference": "sp_00840703279288242236540500705284",
+                      "tracking_references": [
+                        "te_00840703279288242236540500705285"
+                      ]
+                    },
+                    "contents": [
+                      {
+                        "reference": "sc_00840703279288242236540500705286",
+                        "tracking_references": [
+                          "te_00840703279288242236540500705287"
+                        ]
+                      }
+                    ]
+                  },
+                  "_links": [
+                    {
+                      "href": "https://api.sorted.com/pro/labels/sp_00840703279288242236540500705284/pdf",
+                      "rel": "label",
+                      "reference": "sp_00840703279288242236540500705284",
+                      "type": "label"
+                    },
+                    {
+                      "href": "https://api.sorted.com/pro/labels/sp_00840703279288242236540500705284/zpl",
+                      "rel": "label",
+                      "reference": "sp_00840703279288242236540500705284",
+                      "type": "label"
+                    },
+                    {
+                      "href": "https://api.sorted.com/pro/shipments/sp_00840703279288242236540500705284",
+                      "rel": "shipment",
+                      "reference": "sp_00840703279288242236540500705284",
+                      "type": "shipment"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "202": {
+            "description": "The shipment has been queued for allocation"
+          },
+          "400": {
+            "description": "There is a validation error in your request"
+          },
+          "404": {
+            "description": "No shipment could be found with the provided reference or the carrier service reference provided does not exist"
+          },
+          "521": {
+            "description": "Allocation has failed - the shipment could not be allocated"
+          }
+        }
+      }
+    },
+    "/shipments/{shipmentReference}/allocate/service_group/{groupReference}": {
+      "put": {
+        "tags": [
+          "Allocation"
+        ],
+        "summary": "Allocate a single shipment with a carrier service from a carrier service group",
+        "description": "Sorted will retrieve quotes from all carrier services in the service group and will automatically allocate the shipment with the service that provides the cheapest quote that meets all the requirements of the shipment.",
+        "parameters": [
+          {
+            "name": "shipmentReference",
+            "in": "path",
+            "description": "The reference of the shipment to allocate",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The reference of the shipment to allocate",
+              "nullable": true
+            }
+          },
+          {
+            "name": "groupReference",
+            "in": "path",
+            "description": "The reference of the carrier service group to allocate with",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The reference of the carrier service group to allocate with",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The shipment has been allocated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult"
+                },
+                "example": {
+                  "shipment_reference": "sp_00840703279306688980614210256900",
+                  "state": "allocated",
+                  "price": {
+                    "net": 10.0,
+                    "gross": 12.0,
+                    "taxes": [
+                      {
+                        "rate": {
+                          "reference": "gb_standard",
+                          "country_iso_code": "GB",
+                          "type": "standard",
+                          "value": 0.2
+                        },
+                        "amount": 0.0
+                      }
+                    ],
+                    "currency": "GBP"
+                  },
+                  "message": "Shipment sp_00840703279306688980614210256900 has been allocated successfully",
+                  "carrier": {
+                    "reference": "DNQ",
+                    "name": "DNQ Worldwide",
+                    "service_reference": "DNQ72",
+                    "service_name": "DNQ 72-Hour Express"
+                  },
+                  "tracking_details": {
+                    "shipment": {
+                      "reference": "sp_00840703279306688980614210256900",
+                      "tracking_references": [
+                        "te_00840703279306688980614210256901"
+                      ]
+                    },
+                    "contents": [
+                      {
+                        "reference": "sc_00840703279306688980614210256902",
+                        "tracking_references": [
+                          "te_00840703279325135724687919808512"
+                        ]
+                      }
+                    ]
+                  },
+                  "_links": [
+                    {
+                      "href": "https://api.sorted.com/pro/labels/sp_00840703279306688980614210256900/pdf",
+                      "rel": "label",
+                      "reference": "sp_00840703279306688980614210256900",
+                      "type": "label"
+                    },
+                    {
+                      "href": "https://api.sorted.com/pro/labels/sp_00840703279306688980614210256900/zpl",
+                      "rel": "label",
+                      "reference": "sp_00840703279306688980614210256900",
+                      "type": "label"
+                    },
+                    {
+                      "href": "https://api.sorted.com/pro/shipments/sp_00840703279306688980614210256900",
+                      "rel": "shipment",
+                      "reference": "sp_00840703279306688980614210256900",
+                      "type": "shipment"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "202": {
+            "description": "The shipment has been queued for allocation"
+          },
+          "400": {
+            "description": "There is a validation error in your request"
+          },
+          "404": {
+            "description": "No shipment could be found with the provided reference or the service group reference provided does not exist"
+          },
+          "521": {
+            "description": "Allocation has failed - the shipment could not be allocated"
+          }
+        }
+      }
+    },
+    "/shipments/{shipmentReference}/allocate/virtual_service/{virtualService}": {
+      "put": {
+        "tags": [
+          "Allocation"
+        ],
+        "summary": "Allocate a single shipment with a virtual service",
+        "description": "Allocate a single shipment with a virtual service",
+        "parameters": [
+          {
+            "name": "shipmentReference",
+            "in": "path",
+            "description": "The reference of the shipment to allocate",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The reference of the shipment to allocate",
+              "nullable": true
+            }
+          },
+          {
+            "name": "virtualService",
+            "in": "path",
+            "description": "The reference of the carrier service or carrier service group to allocate with",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The reference of the carrier service or carrier service group to allocate with",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The shipment has been allocated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult"
+                },
+                "example": {
+                  "shipment_reference": "sp_00840703279343582468761629360132",
+                  "state": "allocated",
+                  "price": {
+                    "net": 10.0,
+                    "gross": 12.0,
+                    "taxes": [
+                      {
+                        "rate": {
+                          "reference": "gb_standard",
+                          "country_iso_code": "GB",
+                          "type": "standard",
+                          "value": 0.2
+                        },
+                        "amount": 0.0
+                      }
+                    ],
+                    "currency": "GBP"
+                  },
+                  "message": "Shipment sp_00840703279343582468761629360132 has been allocated successfully",
+                  "carrier": {
+                    "reference": "DNQ",
+                    "name": "DNQ Worldwide",
+                    "service_reference": "DNQ72",
+                    "service_name": "DNQ 72-Hour Express"
+                  },
+                  "tracking_details": {
+                    "shipment": {
+                      "reference": "sp_00840703279343582468761629360132",
+                      "tracking_references": [
+                        "te_00840703279343582468761629360133"
+                      ]
+                    },
+                    "contents": [
+                      {
+                        "reference": "sc_00840703279343582468761629360134",
+                        "tracking_references": [
+                          "te_00840703279343582468761629360135"
+                        ]
+                      }
+                    ]
+                  },
+                  "_links": [
+                    {
+                      "href": "https://api.sorted.com/pro/labels/sp_00840703279343582468761629360132/pdf",
+                      "rel": "label",
+                      "reference": "sp_00840703279343582468761629360132",
+                      "type": "label"
+                    },
+                    {
+                      "href": "https://api.sorted.com/pro/labels/sp_00840703279343582468761629360132/zpl",
+                      "rel": "label",
+                      "reference": "sp_00840703279343582468761629360132",
+                      "type": "label"
+                    },
+                    {
+                      "href": "https://api.sorted.com/pro/shipments/sp_00840703279343582468761629360132",
+                      "rel": "shipment",
+                      "reference": "sp_00840703279343582468761629360132",
+                      "type": "shipment"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "There is a validation error in your request"
+          },
+          "403": {
+            "description": "You do not have permission to allocate a shipment"
+          },
+          "404": {
+            "description": "No shipments could be found with the provided reference or a service group or service could not be found\r\nwith the provided reference"
+          },
+          "521": {
+            "description": "Allocation has failed - the shipment could not be allocated"
+          }
+        }
+      }
+    },
+    "/shipments/allocation": {
+      "put": {
+        "tags": [
+          "Allocation"
+        ],
+        "summary": "Allocate one or more shipments using default rules",
+        "description": "Allocate with default rules means that Sorted will determine which of your configured\r\nservices are able to carry the shipment. Of all services that provide a valid quote,\r\nSorted will automatically allocate with the cheapest service that meets the shipment's\r\nrequirements.",
+        "parameters": [
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "A Sorted.Shipments.DataContracts.AllocateRequest which identifies which shipments should be allocated",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.AllocateRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.AllocateRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.AllocateRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.AllocateRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "The shipments have been queued for allocation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult"
+                  }
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "The shipments have been allocated successfully"
+          },
+          "400": {
+            "description": "There is a validation error in your request"
+          },
+          "404": {
+            "description": "No shipment(s) could be found with the provided reference(s)"
+          },
+          "407": {
+            "description": "One or more shipments have been allocated successfully, but one or more shipments could not be\r\nallocated. The response will include details of the status for relevant shipments."
+          },
+          "521": {
+            "description": "Allocation has failed - the shipment(s) could not be allocated"
+          }
+        }
+      }
+    },
+    "/shipments/allocation/filters": {
+      "put": {
+        "tags": [
+          "Allocation"
+        ],
+        "summary": "Identify shipments to be allocated using a combination of filters",
+        "description": "Identify shipments to be allocated using a combination of filters",
+        "parameters": [
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "An Sorted.Shipments.DataContracts.AllocateWithFiltersRequest which allows you to specify filters to identify shipments to automatically allocate",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.AllocateWithFiltersRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.AllocateWithFiltersRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.AllocateWithFiltersRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.AllocateWithFiltersRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Shipments have been identified and queued for allocation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.AllocateWithFiltersResult"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Shipments have been identified and allocated successfully"
+          },
+          "400": {
+            "description": "There is a validation error in your request"
+          },
+          "521": {
+            "description": "Allocation has failed - the shipment could not be allocated"
+          }
+        }
+      }
+    },
+    "/shipments/allocation/service": {
+      "put": {
+        "tags": [
+          "Allocation"
+        ],
+        "summary": "Allocate one or more shipments using a specific carrier service",
+        "description": "This method of allocation allows you to have complete control over the selection\r\nof the carrier service. As long as the carrier has availability to carry the shipment,\r\nSorted will find the cheapest option for that carrier service.",
+        "parameters": [
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "A Sorted.Shipments.DataContracts.AllocateWithCarrierServiceRequest which identifies which shipments should be allocated\r\nand the reference of the carrier service to be used",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.AllocateWithCarrierServiceRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.AllocateWithCarrierServiceRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.AllocateWithCarrierServiceRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.AllocateWithCarrierServiceRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "The shipments have been queued for allocation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult"
+                  }
+                }
+              }
+            }
+          },
+          "207": {
+            "description": "One or more shipments have been allocated successfully, but one or more shipments could not be\r\nallocated. The response will include details of the status for relevant shipments."
+          },
+          "400": {
+            "description": "There is a validation error in your request"
+          },
+          "404": {
+            "description": "Either no shipment(s) could be found with the provided reference(s) or there is no carrier service\r\nwith the provided reference."
+          },
+          "521": {
+            "description": "Allocation has failed - the shipment(s) could not be allocated"
+          }
+        }
+      }
+    },
+    "/shipments/allocate/service_group": {
+      "put": {
+        "tags": [
+          "Allocation"
+        ],
+        "summary": "Allocate shipments with a carrier service from a service group",
+        "description": "Sorted will retrieve quotes from all carrier services in the service group and will automatically allocate shipments with the service(s) that provide the cheapest quote that meets all the requirements of the shipment(s).",
+        "parameters": [
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "An Sorted.Shipments.DataContracts.AllocateWithServiceGroupRequest which identifies\r\nthe shipments to allocate and the service group to allocate with.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.AllocateWithServiceGroupRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.AllocateWithServiceGroupRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.AllocateWithServiceGroupRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.AllocateWithServiceGroupRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "The shipments have been queued for allocation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult"
+                  }
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "The shipments have been allocated successfully"
+          },
+          "400": {
+            "description": "There is a validation error in your request"
+          },
+          "404": {
+            "description": "No shipments could be found with the provided reference or a service group could not be found\r\nwith the provided reference"
+          },
+          "407": {
+            "description": "One or more shipments have been allocated successfully, but one or more shipments could not be\r\nallocated. The response will include details of the status for relevant shipments."
+          },
+          "521": {
+            "description": "Allocation has failed - the shipments could not be allocated"
+          }
+        }
+      }
+    },
+    "/shipments/{shipmentReference}/cancel": {
+      "put": {
+        "tags": [
+          "Shipments"
+        ],
+        "summary": "Cancel a shipment",
+        "description": "This operation prevents any further interaction with the shipment and cannot be reversed.",
+        "parameters": [
+          {
+            "name": "shipmentReference",
+            "in": "path",
+            "description": "The reference of the shipment to cancel",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The reference of the shipment to cancel",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The shipment has been cancelled successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ResourceResult"
+                }
+              }
+            }
+          },
+          "202": {
+            "description": "The request to cancel the shipment has been received successfully"
+          },
+          "400": {
+            "description": "There is a validation error in your request"
+          },
+          "403": {
+            "description": "You do not have permission to cancel a shipment"
+          },
+          "404": {
+            "description": "The shipment could not be found"
+          },
+          "409": {
+            "description": "The shipment is not in a valid state to be cancelled"
+          }
+        }
+      }
+    },
+    "/shipment_groups/{shipmentGroupReference}/close": {
+      "post": {
+        "tags": [
+          "Shipment Groups"
+        ],
+        "summary": "Close a shipment_group",
+        "description": "Closing a shipment_group prevents any further changes or operations to the shipment_group, other than retrieving its details\r\n            \r\nNote: A shipment_group must be locked before it can be closed.\r\n            \r\nThe close operation is not reversible.",
+        "parameters": [
+          {
+            "name": "shipmentGroupReference",
+            "in": "path",
+            "description": "The reference of the shipment_group to close",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The reference of the shipment_group to close",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The shipment_group has been closed successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ResourceResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "There is a validation error in your request"
+          },
+          "403": {
+            "description": "You do not have permission to close the shipment_group"
+          },
+          "404": {
+            "description": "The shipment_group could not be found"
+          }
+        }
+      }
+    },
+    "/shipments/quote": {
+      "post": {
+        "tags": [
+          "Quotes"
+        ],
+        "summary": "Retrieve a list of carrier services that are capable of carrying a shipment",
+        "description": "Retrieve a list of allocation options for a shipment",
+        "parameters": [
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "This endpoint uses the same request type as create shipment to allow re-use of the same object\r\n            in the flow:create quote, identify suitable quote, create shipment",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.CreateShipmentRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.CreateShipmentRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.CreateShipmentRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.CreateShipmentRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "The request was successful. The response will include the quote details",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.QuoteResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "There is a validation error in your request"
+          },
+          "403": {
+            "description": "You do not have permission to create quotes"
+          },
+          "531": {
+            "description": "The request was valid but could not be fulfilled"
+          }
+        }
+      }
+    },
+    "/shipments": {
+      "post": {
+        "tags": [
+          "Shipments"
+        ],
+        "summary": "Create a new shipment record",
+        "description": "Create a new shipment record",
+        "parameters": [
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "A Sorted.Shipments.DataContracts.CreateShipmentRequest",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.CreateShipmentRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.CreateShipmentRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.CreateShipmentRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.CreateShipmentRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "The shipment has been created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ResourceResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "There is a validation error in your request"
+          },
+          "403": {
+            "description": "You do not have permission to create a shipment"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Shipments"
+        ],
+        "summary": "Update the properties of a shipment",
+        "description": "Update the properties of a shipment",
+        "parameters": [
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "An Sorted.Shipments.DataContracts.UpdateShipmentRequest",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.UpdateShipmentRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.UpdateShipmentRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.UpdateShipmentRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.UpdateShipmentRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The shipment has been updated successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ResourceResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "There is a validation error in your request"
+          },
+          "403": {
+            "description": "You do not have permission to update the shipment"
+          },
+          "404": {
+            "description": "The shipment could not be found"
+          }
+        }
+      }
+    },
+    "/shipment_groups": {
+      "post": {
+        "tags": [
+          "Shipment Groups"
+        ],
+        "summary": "Create a new shipment_group",
+        "description": "Create a new shipment_group",
+        "parameters": [
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "A Sorted.Shipments.DataContracts.CreateShipmentRequest containing details of shipments to add to the group",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.CreateShipmentGroupRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.CreateShipmentGroupRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.CreateShipmentGroupRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.CreateShipmentGroupRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "The shipment_group has been created successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ShipmentGroupResponse"
+                }
+              }
+            }
+          },
+          "207": {
+            "description": "The shipment_group has been created successfully but one or more shipments could not be added to the group."
+          },
+          "400": {
+            "description": "There is a validation error in your request"
+          },
+          "403": {
+            "description": "You do not have permission to create a shipment_group"
+          },
+          "404": {
+            "description": "One or more shipments could not be found"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Shipment Groups"
+        ],
+        "summary": "Update a shipment_group",
+        "description": "This endpoint allows you to add or remove shipments from a shipment_group. You may also update or remove the custom_reference applied to the shipment_group.",
+        "parameters": [
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "An Sorted.Shipments.DataContracts.UpdateShipmentGroupRequest",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.UpdateShipmentGroupRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.UpdateShipmentGroupRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.UpdateShipmentGroupRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.UpdateShipmentGroupRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The shipment_group has been updated successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ShipmentGroupResponse"
+                }
+              }
+            }
+          },
+          "207": {
+            "description": "The shipment_group has been updated successfully but one or more shipments could not be added to the group."
+          },
+          "400": {
+            "description": "There is a validation error in your request"
+          },
+          "403": {
+            "description": "You do not have permission to update a shipment_group"
+          },
+          "404": {
+            "description": "The shipment_group could not be found"
+          },
+          "409": {
+            "description": "The shipment_group is locked or is closed and cannot be updated"
+          }
+        }
+      }
+    },
+    "/shipments/{shipmentReference}/allocation": {
+      "delete": {
+        "tags": [
+          "Shipments"
+        ],
+        "summary": "De-allocate a shipment",
+        "description": "It is only possible to de-allocate a shipment that has been allocated. Once a shipment is in transit, it is generally no longer possible to de-allocate it.",
+        "parameters": [
+          {
+            "name": "shipmentReference",
+            "in": "path",
+            "description": "The reference of the shipment to de-allocate",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The reference of the shipment to de-allocate",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The shipment has been de-allocated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ResourceResult"
+                }
+              }
+            }
+          },
+          "202": {
+            "description": "The request to de-allocate the shipment has been received and will be processed"
+          },
+          "400": {
+            "description": "There is a validation error in your request"
+          },
+          "403": {
+            "description": "You do not have permission to de-allocate a shipment"
+          },
+          "404": {
+            "description": "The shipment could not be found"
+          }
+        }
+      }
+    },
+    "/shipments/{shipmentReference}": {
+      "delete": {
+        "tags": [
+          "Shipments"
+        ],
+        "summary": "Delete a shipment",
+        "description": "This is a destructive, irreversible operation.",
+        "parameters": [
+          {
+            "name": "shipmentReference",
+            "in": "path",
+            "description": "The reference of the shipment to delete",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The reference of the shipment to delete",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The shipment has been deleted successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ResourceResult"
+                }
+              }
+            }
+          },
+          "202": {
+            "description": "The request to delete the shipment has been received and will be processed"
+          },
+          "400": {
+            "description": "There is a validation error in your request"
+          },
+          "403": {
+            "description": "You do not have permission to delete a shipment"
+          },
+          "404": {
+            "description": "The shipment could not be found"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Shipments"
+        ],
+        "summary": "Retrieve a shipment",
+        "description": "Retrieve a shipment",
+        "parameters": [
+          {
+            "name": "shipmentReference",
+            "in": "path",
+            "description": "The reference of the shipment to retrieve",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The reference of the shipment to retrieve",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request was successful. The response will include the label",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Shipment"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "There is a validation error in your request"
+          },
+          "403": {
+            "description": "You do not have permission to retrieve the shipment"
+          },
+          "404": {
+            "description": "The shipment could not be found"
+          }
+        }
+      }
+    },
+    "/labels/{shipmentReference}/{contentType}/{dpi}": {
+      "get": {
+        "tags": [
+          "Labels"
+        ],
+        "summary": "Retrieve labels in a specific format and resolution",
+        "parameters": [
+          {
+            "name": "shipmentReference",
+            "in": "path",
+            "description": "The reference of the shipment to retrieve the label for",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The reference of the shipment to retrieve the label for",
+              "nullable": true
+            }
+          },
+          {
+            "name": "contentType",
+            "in": "path",
+            "description": "The format of document to return (Sorted.Shipments.DataContracts.Enums.ContentType",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Enums.ContentType"
+            }
+          },
+          {
+            "name": "dpi",
+            "in": "path",
+            "description": "The dpi of the document to return. Has a default value of 203",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "description": "The dpi of the document to return. Has a default value of 203",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request was successful. The response will include the label",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Document"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "There is a validation error in your request"
+          },
+          "403": {
+            "description": "You do not have permission to retrieve labels for a shipment"
+          },
+          "404": {
+            "description": "The shipment could not be found"
+          }
+        }
+      }
+    },
+    "/labels/{shipmentReference}/contents/{contentsReference}/{contentType}/{dpi}": {
+      "get": {
+        "tags": [
+          "Labels"
+        ],
+        "summary": "Retrieve contents label in a specific format and resolution",
+        "parameters": [
+          {
+            "name": "shipmentReference",
+            "in": "path",
+            "description": "The reference of the shipment to retrieve the label for",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The reference of the shipment to retrieve the label for",
+              "nullable": true
+            }
+          },
+          {
+            "name": "contentsReference",
+            "in": "path",
+            "description": "The reference of the shipment contents to retrieve the label for",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The reference of the shipment contents to retrieve the label for",
+              "nullable": true
+            }
+          },
+          {
+            "name": "contentType",
+            "in": "path",
+            "description": "The format of document to return (Sorted.Shipments.DataContracts.Enums.ContentType",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Enums.ContentType"
+            }
+          },
+          {
+            "name": "dpi",
+            "in": "path",
+            "description": "The dpi of the document to return",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "description": "The dpi of the document to return",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request was successful. The response will include the label",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Document"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "There is a validation error in your request"
+          },
+          "403": {
+            "description": "You do not have permission to retrieve labels for a shipment"
+          },
+          "404": {
+            "description": "The shipment could not be found"
+          }
+        }
+      }
+    },
+    "/shipments/manifests/{manifestReference}": {
+      "get": {
+        "tags": [
+          "Manifest"
+        ],
+        "summary": "Retrieve the details of an existing manifest",
+        "parameters": [
+          {
+            "name": "manifestReference",
+            "in": "path",
+            "description": "The reference of the manifest to retrieve",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The reference of the manifest to retrieve",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The manifest has been found. The response contains the details of the manifest",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Manifest"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have permission to access the manifest"
+          },
+          "404": {
+            "description": "The manifest could not be found"
+          }
+        }
+      }
+    },
+    "/shipments/{shipmentReference}/quote": {
+      "post": {
+        "tags": [
+          "Quotes"
+        ],
+        "summary": "Retrieve a list of allocation options for a shipment",
+        "description": "Retrieve a list of allocation options for a shipment",
+        "parameters": [
+          {
+            "name": "shipmentReference",
+            "in": "path",
+            "description": "The reference of the shipment to retrieve quotes for",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The reference of the shipment to retrieve quotes for",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "The request was successful. The response will include the available quotes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.QuoteResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "There is a validation error in your request"
+          },
+          "403": {
+            "description": "You do not have permission to retrieve the shipment"
+          },
+          "404": {
+            "description": "The shipment could not be found"
+          },
+          "531": {
+            "description": "The request was valid but no quotes could be found for the shipment"
+          }
+        }
+      }
+    },
+    "/shipments/state_counts": {
+      "get": {
+        "tags": [
+          "Shipments"
+        ],
+        "summary": "Retrieve a count of shipments broken down by shipment state",
+        "description": "Retrieve a count of shipments broken down by shipment state",
+        "parameters": [
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Count of shipments broken down by shipment state",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ShipmentCountByStateResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have permission to retrieve a count of shipments by state"
+          }
+        }
+      }
+    },
+    "/shipment_groups/{shipmentGroupReference}": {
+      "get": {
+        "tags": [
+          "Shipment Groups"
+        ],
+        "summary": "Retrieve the details of an existing shipment_group",
+        "description": "Retrieve the details of an existing shipment_group",
+        "parameters": [
+          {
+            "name": "shipmentGroupReference",
+            "in": "path",
+            "description": "The reference of the shipment_group to retrieve",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The reference of the shipment_group to retrieve",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The shipment_group has been located successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ShipmentGroup"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The user is not authorized"
+          },
+          "403": {
+            "description": "You do not have permission to retrieve a shipment_group"
+          },
+          "404": {
+            "description": "The shipment_group could not be found"
+          }
+        }
+      }
+    },
+    "/shipment_groups/{shipmentGroupReference}/lock": {
+      "post": {
+        "tags": [
+          "Shipment Groups"
+        ],
+        "summary": "Lock a shipment_group",
+        "description": "This operation places a virtual \"lock\" on a shipment_group which prevents any further changes to the group until the group is \"unlocked\".\r\n            \r\nIt is still possible to retrieve a collection_note for the group, but shipments cannot be added or removed from the group.",
+        "parameters": [
+          {
+            "name": "shipmentGroupReference",
+            "in": "path",
+            "description": "The reference of the shipment_group to lock",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The reference of the shipment_group to lock",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The shipment_group has been locked successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ResourceResult"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have permission to lock a shipment_group"
+          },
+          "404": {
+            "description": "The shipment_group could not be found"
+          },
+          "409": {
+            "description": "The shipment_group is already locked or is closed and cannot be locked"
+          }
+        }
+      }
+    },
+    "/shipment_groups/{shipmentGroupReference}/unlock": {
+      "post": {
+        "tags": [
+          "Shipment Groups"
+        ],
+        "summary": "Unlock a shipment_group",
+        "description": "This operation removes a virtual \"lock\" from a shipment_group which prevents any further changes to the group until the group is \"unlocked\".\r\n            \r\nUnlocking makes it possible to add or remove shipments from the group.",
+        "parameters": [
+          {
+            "name": "shipmentGroupReference",
+            "in": "path",
+            "description": "The reference of the shipment_group to unlock",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The reference of the shipment_group to unlock",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The shipment_group has been unlocked successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ResourceResult"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have permission to unlock a shipment_group"
+          },
+          "404": {
+            "description": "The shipment_group could not be found"
+          },
+          "409": {
+            "description": "The shipment_group is already unlocked or is closed and cannot be locked"
+          }
+        }
+      }
+    },
+    "/shipment_groups/{shipmentGroupReference}/manifest": {
+      "put": {
+        "tags": [
+          "Manifest"
+        ],
+        "summary": "Manifest all shipments currently in the specified shipment_group",
+        "description": "Manifest all shipments currently in the specified shipment_group",
+        "parameters": [
+          {
+            "name": "shipmentGroupReference",
+            "in": "path",
+            "description": "The reference of the shipment_group",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The reference of the shipment_group",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "The shipments have been queued for manifest successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ManifestResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "The shipments have been manifest successfully."
+          },
+          "400": {
+            "description": "There is a validation error in your request"
+          },
+          "403": {
+            "description": "You do not have permission to access the shipment_group or to manifest shipments"
+          },
+          "404": {
+            "description": "The shipment_group could not be found"
+          }
+        }
+      }
+    },
+    "/shipments/{shipmentReference}/manifest": {
+      "put": {
+        "tags": [
+          "Manifest"
+        ],
+        "summary": "Manifest a single shipment",
+        "description": "Manifest a single shipment",
+        "parameters": [
+          {
+            "name": "shipmentReference",
+            "in": "path",
+            "description": "The reference of the shipment to manifest",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The reference of the shipment to manifest",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "The shipment has been queued for manifest successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ManifestResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "There is a validation error in your request"
+          },
+          "403": {
+            "description": "You do not have permission to access the shipment or to manifest shipments"
+          },
+          "404": {
+            "description": "The shipment could not be found"
+          }
+        }
+      }
+    },
+    "/shipments/manifest": {
+      "put": {
+        "tags": [
+          "Manifest"
+        ],
+        "summary": "Manifest multiple shipments",
+        "description": "Manifest multiple shipments",
+        "parameters": [
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "A Sorted.Shipments.DataContracts.ManifestRequest which identifies the shipments to be manifested",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ManifestRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ManifestRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ManifestRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ManifestRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "The shipments have been queued for manifest successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ManifestResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "The shipments have been manifest successfully."
+          },
+          "400": {
+            "description": "There is a validation error in your request"
+          },
+          "403": {
+            "description": "You do not have permission to access or manifest shipments"
+          },
+          "404": {
+            "description": "One or more shipments could not be found"
+          }
+        }
+      }
+    },
+    "/shipments/state": {
+      "put": {
+        "tags": [
+          "Shipments"
+        ],
+        "summary": "Change the state of a shipment",
+        "description": "Change the state of a shipment",
+        "parameters": [
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "A Sorted.Shipments.DataContracts.ShipmentStateChangeRequest",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ShipmentStateChangeRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ShipmentStateChangeRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ShipmentStateChangeRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ShipmentStateChangeRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The state has been updated successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.QuoteResult"
+                }
+              }
+            }
+          },
+          "202": {
+            "description": "The request to update the state has been received successfully and will be processed"
+          },
+          "304": {
+            "description": "The state of the shipment has not been modified - the current state matches the desired state already"
+          },
+          "400": {
+            "description": "There is a validation error in your request"
+          },
+          "403": {
+            "description": "You do not have permission to change the state of the shipment"
+          },
+          "404": {
+            "description": "The shipment could not be found"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Sorted.Shipments.DataContracts.ApiErrorMessage": {
+        "type": "object",
+        "properties": {
+          "property": {
+            "type": "string",
+            "description": "property description",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "description": "message description",
+            "nullable": true
+          },
+          "code": {
+            "type": "string",
+            "description": "code description",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.Link": {
+        "type": "object",
+        "properties": {
+          "href": {
+            "type": "string",
+            "nullable": true
+          },
+          "rel": {
+            "type": "string",
+            "nullable": true
+          },
+          "reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.ShipmentGroupResponse": {
+        "type": "object",
+        "properties": {
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ApiErrorMessage"
+            },
+            "description": "Any error(s) relating to the operation",
+            "maxItems": "n",
+            "minItems": 0,
+            "nullable": true
+          },
+          "reference": {
+            "type": "string",
+            "description": "The unique reference for this resource generated by Sorted at the point of creation.",
+            "maxItems": 1,
+            "minItems": 1
+          },
+          "custom_reference": {
+            "type": "string",
+            "description": "Your own custom reference for this object, if applicable.",
+            "maxItems": 1,
+            "minItems": 0,
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "description": "An optional message relating to the result of the operation.",
+            "maxItems": 1,
+            "minItems": 0,
+            "nullable": true
+          },
+          "version": {
+            "type": "integer",
+            "format": "int32",
+            "description": "An optional version for this resource",
+            "maxItems": 1,
+            "minItems": 0,
+            "nullable": true
+          },
+          "_links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Link"
+            },
+            "description": "Links to the current resource and any related resources, if applicable.",
+            "maxItems": "n",
+            "minItems": 1,
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.Enums.ShipmentState": {
+        "enum": [
+          "unallocated",
+          "allocating",
+          "allocation_failed",
+          "allocated",
+          "manifesting",
+          "manifest_failed",
+          "manifested",
+          "booking",
+          "booking_failed",
+          "booked",
+          "dispatched",
+          "at_drop_off_point",
+          "in_transit",
+          "delayed",
+          "out_for_delivery",
+          "delivery_failed",
+          "delivery_failed_card_left",
+          "delivered",
+          "partially_delivered",
+          "at_collection_point",
+          "returned_to_sender",
+          "action_required",
+          "missing",
+          "lost",
+          "damaged",
+          "cancelling",
+          "cancelled",
+          "in_transit_waiting",
+          "held_by_carrier",
+          "exchange_failed",
+          "at_customs",
+          "delivered_damaged",
+          "carrier_collected",
+          "customer_collected",
+          "carrier_collection_failed",
+          "customer_collection_failed",
+          "at_customer_collection_point",
+          "ready_to_ship",
+          "exchange_succeeded",
+          "awaiting_drop_off",
+          "carrier_changed",
+          "cleared_customs",
+          "destroyed"
+        ],
+        "type": "string"
+      },
+      "Sorted.Shipments.DataContracts.TaxRate": {
+        "type": "object",
+        "properties": {
+          "reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "country_iso_code": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.Tax": {
+        "type": "object",
+        "properties": {
+          "rate": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.TaxRate"
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.Price": {
+        "type": "object",
+        "properties": {
+          "net": {
+            "type": "number",
+            "format": "double"
+          },
+          "gross": {
+            "type": "number",
+            "format": "double"
+          },
+          "taxes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Tax"
+            },
+            "nullable": true
+          },
+          "currency": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.CarrierDetails": {
+        "type": "object",
+        "properties": {
+          "reference": {
+            "maxLength": 50,
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "service_reference": {
+            "maxLength": 50,
+            "type": "string",
+            "nullable": true
+          },
+          "service_name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.TrackingReference": {
+        "type": "object",
+        "properties": {
+          "reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "tracking_references": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "_links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.TrackingDetails": {
+        "type": "object",
+        "properties": {
+          "shipment": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.TrackingReference"
+          },
+          "contents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.TrackingReference"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.ApiError": {
+        "type": "object",
+        "properties": {
+          "reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "correlation_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ApiErrorMessage"
+            },
+            "nullable": true
+          },
+          "_links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.Enums.ExclusionCode": {
+        "enum": [
+          "ex_other",
+          "ex_availability",
+          "ex_rates",
+          "ex_contents",
+          "ex_weight",
+          "ex_dims",
+          "ex_rules",
+          "ex_timeout",
+          "ex_circuit_open",
+          "ex_error",
+          "ex_sys_disabled"
+        ],
+        "type": "string"
+      },
+      "Sorted.Shipments.DataContracts.Exclusion": {
+        "type": "object",
+        "properties": {
+          "reason": {
+            "type": "string",
+            "nullable": true
+          },
+          "code": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Enums.ExclusionCode"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.ExcludedService": {
+        "type": "object",
+        "properties": {
+          "carrier": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.CarrierDetails"
+          },
+          "exclusion": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Exclusion"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.AllocateResult": {
+        "type": "object",
+        "properties": {
+          "shipment_reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "state": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Enums.ShipmentState"
+          },
+          "price": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Price"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "carrier": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.CarrierDetails"
+          },
+          "tracking_details": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.TrackingDetails"
+          },
+          "_links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Link"
+            },
+            "nullable": true
+          },
+          "correlation_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ApiError"
+            },
+            "nullable": true
+          },
+          "excluded_services": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ExcludedService"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.AllocateRequest": {
+        "required": [
+          "shipments"
+        ],
+        "type": "object",
+        "properties": {
+          "shipments": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.AllocationFilters": {
+        "type": "object",
+        "properties": {
+          "direction": {
+            "type": "string",
+            "nullable": true
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "pickup": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "drop_off": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.AllocateWithFiltersRequest": {
+        "required": [
+          "filters",
+          "shipments"
+        ],
+        "type": "object",
+        "properties": {
+          "shipments": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "filters": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.AllocationFilters"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.AllocateWithFiltersResult": {
+        "type": "object",
+        "properties": {
+          "reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "shipments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Link"
+            },
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.AllocateWithCarrierServiceRequest": {
+        "required": [
+          "carrier_service_reference",
+          "shipments"
+        ],
+        "type": "object",
+        "properties": {
+          "shipments": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "carrier_service_reference": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.AllocateWithServiceGroupRequest": {
+        "required": [
+          "service_group",
+          "shipments"
+        ],
+        "type": "object",
+        "properties": {
+          "shipments": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "service_group": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.ResourceResult": {
+        "type": "object",
+        "properties": {
+          "reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "custom_reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "version": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "_links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.DateRange": {
+        "type": "object",
+        "properties": {
+          "start": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "end": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "has_value": {
+            "type": "boolean",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.Enums.MetadataType": {
+        "enum": [
+          "null",
+          "string",
+          "bool",
+          "date_time_offset",
+          "integer",
+          "decimal",
+          "url"
+        ],
+        "type": "string"
+      },
+      "Sorted.Shipments.DataContracts.Metadata": {
+        "required": [
+          "key",
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "key": {
+            "maxLength": 50,
+            "minLength": 1,
+            "type": "string"
+          },
+          "value": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "metadata_type": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Enums.MetadataType"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.TotalCustomsValue": {
+        "required": [
+          "currency"
+        ],
+        "type": "object",
+        "properties": {
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "currency": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.CustomsDocumentation": {
+        "required": [
+          "category_type"
+        ],
+        "type": "object",
+        "properties": {
+          "designated_person_responsible": {
+            "type": "string",
+            "nullable": true
+          },
+          "importers_vat_number": {
+            "maxLength": 50,
+            "type": "string",
+            "nullable": true
+          },
+          "category_type": {
+            "type": "string"
+          },
+          "category_type_explanation": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
+          "shippers_customs_reference": {
+            "maxLength": 50,
+            "type": "string",
+            "nullable": true
+          },
+          "importers_tax_code": {
+            "maxLength": 25,
+            "type": "string",
+            "nullable": true
+          },
+          "importers_telephone": {
+            "maxLength": 25,
+            "type": "string",
+            "nullable": true
+          },
+          "importers_fax": {
+            "maxLength": 25,
+            "type": "string",
+            "nullable": true
+          },
+          "importers_email": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
+          "cn23_comments": {
+            "maxLength": 500,
+            "type": "string",
+            "nullable": true
+          },
+          "attached_invoice_references": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "attached_certificate_references": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "attached_licence_references": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "declaration_date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "reason_for_export": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
+          "shippers_vat_number": {
+            "maxLength": 50,
+            "type": "string",
+            "nullable": true
+          },
+          "receivers_tax_code": {
+            "maxLength": 25,
+            "type": "string",
+            "nullable": true
+          },
+          "receivers_vat_number": {
+            "maxLength": 50,
+            "type": "string",
+            "nullable": true
+          },
+          "invoice_date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "eori_number": {
+            "maxLength": 15,
+            "type": "string",
+            "nullable": true
+          },
+          "invoice_number": {
+            "maxLength": 50,
+            "type": "string",
+            "nullable": true
+          },
+          "office_of_origin": {
+            "maxLength": 50,
+            "type": "string",
+            "nullable": true
+          },
+          "total_customs_value": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.TotalCustomsValue"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.Weight": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "number",
+            "format": "double"
+          },
+          "unit": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.Dimensions": {
+        "required": [
+          "unit"
+        ],
+        "type": "object",
+        "properties": {
+          "length": {
+            "type": "number",
+            "format": "double"
+          },
+          "height": {
+            "type": "number",
+            "format": "double"
+          },
+          "width": {
+            "type": "number",
+            "format": "double"
+          },
+          "unit": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.Value": {
+        "required": [
+          "currency"
+        ],
+        "type": "object",
+        "properties": {
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "currency": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "discount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.HazardClass": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.DangerousGoods": {
+        "type": "object",
+        "properties": {
+          "id_number": {
+            "type": "string",
+            "nullable": true
+          },
+          "proper_shipping_name": {
+            "type": "string",
+            "nullable": true
+          },
+          "technical_name": {
+            "type": "string",
+            "nullable": true
+          },
+          "custom_label_text": {
+            "maxLength": 255,
+            "type": "string",
+            "nullable": true
+          },
+          "hazard_classes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.HazardClass"
+            },
+            "nullable": true
+          },
+          "packing_group": {
+            "type": "string",
+            "nullable": true
+          },
+          "physical_form": {
+            "type": "string",
+            "nullable": true
+          },
+          "radioactivity": {
+            "type": "string",
+            "nullable": true
+          },
+          "accessibility": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.LabelProperty": {
+        "required": [
+          "key",
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "key": {
+            "maxLength": 50,
+            "minLength": 1,
+            "type": "string"
+          },
+          "value": {
+            "maxLength": 500,
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.ShipmentContents": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "custom_reference": {
+            "maxLength": 50,
+            "type": "string",
+            "nullable": true
+          },
+          "package_size_reference": {
+            "maxLength": 50,
+            "type": "string",
+            "nullable": true
+          },
+          "weight": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Weight"
+          },
+          "dimensions": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Dimensions"
+          },
+          "value": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Value"
+          },
+          "sku": {
+            "maxLength": 50,
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
+          "model": {
+            "maxLength": 50,
+            "type": "string",
+            "nullable": true
+          },
+          "country_of_origin": {
+            "type": "string",
+            "nullable": true
+          },
+          "harmonisation_code": {
+            "maxLength": 25,
+            "type": "string",
+            "nullable": true
+          },
+          "shipping_terms": {
+            "type": "string",
+            "nullable": true
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "unit": {
+            "maxLength": 50,
+            "type": "string",
+            "nullable": true
+          },
+          "dangerous_goods": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.DangerousGoods"
+          },
+          "metadata": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Metadata"
+            },
+            "nullable": true
+          },
+          "label_properties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.LabelProperty"
+            },
+            "nullable": true
+          },
+          "contents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ShipmentContents"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.ContactDetails": {
+        "required": [
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "landline": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
+          "mobile": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "maxLength": 255,
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.Contact": {
+        "required": [
+          "contact_details",
+          "first_name",
+          "last_name"
+        ],
+        "type": "object",
+        "properties": {
+          "reference": {
+            "maxLength": 50,
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "maxLength": 50,
+            "type": "string",
+            "nullable": true
+          },
+          "first_name": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "last_name": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "middle_name": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
+          "position": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
+          "contact_details": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ContactDetails"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.LatLong": {
+        "type": "object",
+        "properties": {
+          "latitude": {
+            "maximum": 180,
+            "minimum": -180,
+            "type": "number",
+            "format": "double"
+          },
+          "longitude": {
+            "maximum": 90,
+            "minimum": -90,
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.Reservation": {
+        "type": "object",
+        "properties": {
+          "reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "location_reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "external_reference": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.Address": {
+        "required": [
+          "address_type"
+        ],
+        "type": "object",
+        "properties": {
+          "address_type": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "shipping_location_reference": {
+            "maxLength": 50,
+            "type": "string",
+            "nullable": true
+          },
+          "custom_reference": {
+            "maxLength": 50,
+            "type": "string",
+            "nullable": true
+          },
+          "contact": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Contact"
+          },
+          "company_name": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
+          "property_number": {
+            "maxLength": 50,
+            "type": "string",
+            "nullable": true
+          },
+          "property_name": {
+            "maxLength": 50,
+            "type": "string",
+            "nullable": true
+          },
+          "address_line1": {
+            "maxLength": 255,
+            "type": "string",
+            "nullable": true
+          },
+          "address_line2": {
+            "maxLength": 255,
+            "type": "string",
+            "nullable": true
+          },
+          "address_line3": {
+            "maxLength": 255,
+            "type": "string",
+            "nullable": true
+          },
+          "locality": {
+            "maxLength": 255,
+            "type": "string",
+            "nullable": true
+          },
+          "region": {
+            "type": "string",
+            "nullable": true
+          },
+          "postal_code": {
+            "type": "string",
+            "nullable": true
+          },
+          "country_iso_code": {
+            "type": "string",
+            "nullable": true
+          },
+          "lat_long": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.LatLong"
+          },
+          "reservation": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Reservation"
+          },
+          "special_instructions": {
+            "maxLength": 150,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.CreateShipmentRequest": {
+        "required": [
+          "shipment_type"
+        ],
+        "type": "object",
+        "properties": {
+          "custom_reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "required_delivery_date": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.DateRange"
+          },
+          "required_shipping_date": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.DateRange"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "order_date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "metadata": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Metadata"
+            },
+            "nullable": true
+          },
+          "customs_documentation": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.CustomsDocumentation"
+          },
+          "direction": {
+            "type": "string",
+            "nullable": true
+          },
+          "shipment_type": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "contents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ShipmentContents"
+            },
+            "nullable": true
+          },
+          "addresses": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Address"
+            },
+            "nullable": true
+          },
+          "label_properties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.LabelProperty"
+            },
+            "nullable": true
+          },
+          "source": {
+            "maxLength": 50,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.ShipmentSummary": {
+        "type": "object",
+        "properties": {
+          "reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "addresses": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Address"
+            },
+            "nullable": true
+          },
+          "custom_reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "_links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.Enums.ApplicationType": {
+        "enum": [
+          "none",
+          "standard",
+          "retrospective"
+        ],
+        "type": "string"
+      },
+      "Sorted.Shipments.DataContracts.Enums.SurchargeType": {
+        "enum": [
+          "additive",
+          "variable"
+        ],
+        "type": "string"
+      },
+      "Sorted.Shipments.DataContracts.BaseApplication": {
+        "type": "object",
+        "properties": {
+          "base": {
+            "type": "boolean"
+          },
+          "base_only": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.Enums.CalculationModel": {
+        "enum": [
+          "fixed",
+          "calculated"
+        ],
+        "type": "string"
+      },
+      "Sorted.Shipments.DataContracts.Surcharge": {
+        "type": "object",
+        "properties": {
+          "reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "type": "number",
+            "format": "double"
+          },
+          "application_type": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Enums.ApplicationType"
+          },
+          "type": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Enums.SurchargeType"
+          },
+          "base_application": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.BaseApplication"
+          },
+          "calculation_model": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Enums.CalculationModel"
+          },
+          "incremental_unit_factor": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "incremental_unit_price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "minimum_value": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "maximum_value": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "label": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.Quote": {
+        "type": "object",
+        "properties": {
+          "reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "shipment_reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "carrier": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.CarrierDetails"
+          },
+          "collection_date": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.DateRange"
+          },
+          "delivery_date": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.DateRange"
+          },
+          "price": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Price"
+          },
+          "surcharges": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Surcharge"
+            },
+            "nullable": true
+          },
+          "created": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "expires": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "_links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.QuoteResult": {
+        "type": "object",
+        "properties": {
+          "reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "shipment": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ShipmentSummary"
+          },
+          "quotes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Quote"
+            },
+            "nullable": true
+          },
+          "excluded_services": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ExcludedService"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.UpdateShipmentRequest": {
+        "required": [
+          "reference",
+          "shipment_type"
+        ],
+        "type": "object",
+        "properties": {
+          "reference": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "custom_reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "required_delivery_date": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.DateRange"
+          },
+          "required_shipping_date": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.DateRange"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "order_date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "metadata": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Metadata"
+            },
+            "nullable": true
+          },
+          "customs_documentation": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.CustomsDocumentation"
+          },
+          "direction": {
+            "type": "string",
+            "nullable": true
+          },
+          "shipment_type": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "contents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ShipmentContents"
+            },
+            "nullable": true
+          },
+          "addresses": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Address"
+            },
+            "nullable": true
+          },
+          "label_properties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.LabelProperty"
+            },
+            "nullable": true
+          },
+          "source": {
+            "maxLength": 50,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.CreateShipmentGroupRequest": {
+        "type": "object",
+        "properties": {
+          "shipments": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "custom_reference": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.UpdateShipmentGroupRequest": {
+        "required": [
+          "reference"
+        ],
+        "type": "object",
+        "properties": {
+          "reference": {
+            "type": "string"
+          },
+          "add_shipments": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "remove_shipments": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.Allocation": {
+        "type": "object",
+        "properties": {
+          "carrier": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.CarrierDetails"
+          },
+          "allocation_date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "price": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Price"
+          },
+          "tracking_details": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.TrackingDetails"
+          },
+          "_links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.LabelDetails": {
+        "type": "object",
+        "properties": {
+          "date_first_retrieved": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "retrieval_count": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "_links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.Enums.Direction": {
+        "enum": [
+          "outbound",
+          "inbound"
+        ],
+        "type": "string"
+      },
+      "Sorted.Shipments.DataContracts.Enums.ShipmentType": {
+        "enum": [
+          "scheduled",
+          "on_demand"
+        ],
+        "type": "string"
+      },
+      "Sorted.Shipments.DataContracts.Enums.PaperlessDocumentState": {
+        "enum": [
+          "document_created",
+          "pending",
+          "processing",
+          "ready",
+          "virus_found",
+          "quarantined",
+          "removed"
+        ],
+        "type": "string"
+      },
+      "Sorted.Shipments.DataContracts.Enums.PaperlessDocumentType": {
+        "enum": [
+          "commercial_invoice",
+          "certificate_of_origin",
+          "nafta_certificate_of_origin",
+          "pro_forma_invoice",
+          "authorisation_form",
+          "export_document",
+          "export_licence",
+          "import_permit",
+          "power_of_attorney",
+          "packing_list",
+          "sed_document",
+          "letter_of_instruction",
+          "customs_declaration",
+          "air_waybill",
+          "invoice",
+          "other"
+        ],
+        "type": "string"
+      },
+      "Sorted.Shipments.DataContracts.Enums.PaperlessFileFormat": {
+        "enum": [
+          "pdf",
+          "png",
+          "jpg",
+          "gif"
+        ],
+        "type": "string"
+      },
+      "Sorted.Shipments.DataContracts.Enums.PaperlessUsage": {
+        "enum": [
+          "electronic_trade",
+          "customer_information",
+          "pricing"
+        ],
+        "type": "string"
+      },
+      "Sorted.Shipments.DataContracts.PaperlessDocument": {
+        "type": "object",
+        "properties": {
+          "document_reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "document_state": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Enums.PaperlessDocumentState"
+          },
+          "document_type": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Enums.PaperlessDocumentType"
+          },
+          "file_format": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Enums.PaperlessFileFormat"
+          },
+          "usage": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Enums.PaperlessUsage"
+          },
+          "expiration": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.Shipment": {
+        "type": "object",
+        "properties": {
+          "reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "state": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Enums.ShipmentState"
+          },
+          "created": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updated": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "shipping_date": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.DateRange"
+          },
+          "required_shipping_date": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.DateRange"
+          },
+          "expected_delivery_date": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.DateRange"
+          },
+          "required_delivery_date": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.DateRange"
+          },
+          "actual_delivery_date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "allocation": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Allocation"
+          },
+          "label_details": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.LabelDetails"
+          },
+          "custom_reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "order_date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "metadata": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Metadata"
+            },
+            "nullable": true
+          },
+          "customs_documentation": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.CustomsDocumentation"
+          },
+          "direction": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Enums.Direction"
+          },
+          "shipment_type": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Enums.ShipmentType"
+          },
+          "contents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ShipmentContents"
+            },
+            "nullable": true
+          },
+          "addresses": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Address"
+            },
+            "nullable": true
+          },
+          "label_properties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.LabelProperty"
+            },
+            "nullable": true
+          },
+          "source": {
+            "type": "string",
+            "nullable": true
+          },
+          "reservation": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Reservation"
+          },
+          "paperless_documents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.PaperlessDocument"
+            },
+            "nullable": true
+          },
+          "_links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.Enums.ContentType": {
+        "enum": [
+          "pdf",
+          "zpl"
+        ],
+        "type": "string"
+      },
+      "Sorted.Shipments.DataContracts.Enums.DocumentType": {
+        "enum": [
+          "other",
+          "label",
+          "cn22",
+          "cn23",
+          "commercial_invoice",
+          "collection_note",
+          "hazard_label"
+        ],
+        "type": "string"
+      },
+      "Sorted.Shipments.DataContracts.Document": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "string",
+            "nullable": true
+          },
+          "content_type": {
+            "type": "string",
+            "nullable": true
+          },
+          "document_type": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Enums.DocumentType"
+          },
+          "dpi": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.Manifest": {
+        "type": "object",
+        "properties": {
+          "reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "shipments": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "created": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.ShipmentStateCount": {
+        "type": "object",
+        "properties": {
+          "state": {
+            "type": "string",
+            "nullable": true
+          },
+          "category": {
+            "type": "string",
+            "nullable": true
+          },
+          "exception": {
+            "type": "boolean"
+          },
+          "critical": {
+            "type": "boolean"
+          },
+          "count": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.ShipmentCountByStateResponse": {
+        "type": "object",
+        "properties": {
+          "shipment_states": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ShipmentStateCount"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.Enums.ShipmentGroupState": {
+        "enum": [
+          "open",
+          "locked",
+          "closed"
+        ],
+        "type": "string"
+      },
+      "Sorted.Shipments.DataContracts.ShipmentGroup": {
+        "type": "object",
+        "properties": {
+          "reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "shipments": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "custom_reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "version": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "state": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Enums.ShipmentGroupState"
+          },
+          "created": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "locked": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "closed": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.ManifestResult": {
+        "type": "object",
+        "properties": {
+          "reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "carrier": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.CarrierDetails"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "state": {
+            "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Enums.ShipmentState"
+          },
+          "shipment_count": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "_links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.ManifestResponse": {
+        "type": "object",
+        "properties": {
+          "manifest_results": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ManifestResult"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.ManifestRequest": {
+        "required": [
+          "shipments"
+        ],
+        "type": "object",
+        "properties": {
+          "shipments": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorted.Shipments.DataContracts.ShipmentStateChangeRequest": {
+        "required": [
+          "reason",
+          "reference"
+        ],
+        "type": "object",
+        "properties": {
+          "reference": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string",
+            "nullable": true
+          },
+          "reason": {
+            "maxLength": 100,
+            "minLength": 5,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "jwt": {
+        "type": "apiKey",
+        "name": "x-api-key",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "jwt": []
+    }
+  ]
+}
