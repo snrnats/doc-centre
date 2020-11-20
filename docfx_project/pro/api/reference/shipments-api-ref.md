@@ -42,7 +42,7 @@
 <div id="redoc"></div>
 <script src="https://cdn.jsdelivr.net/npm/redoc/bundles/redoc.standalone.js"></script>
 <script>
-    Redoc.init('/pro/api/swagger.json', {
+    Redoc.init('/pro/api/swagger.yaml', {
         hideHostname: true,
         hideDownloadButton: true,
         requiredPropsFirst: 1,

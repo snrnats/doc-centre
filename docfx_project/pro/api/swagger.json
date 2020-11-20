@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "Sorted Shipments API",
-    "description": "Build: 1.0.160",
+    "description": "Build: 1.0.169",
     "version": "1.1"
   },
   "paths": {
@@ -11,8 +11,8 @@
         "tags": [
           "Shipment Groups"
         ],
-        "summary": "Add Shipment to Group",
-        "description": "This endpoint provides the simplest possible method of adding a single shipment to an existing shipment_group.",
+        "summary": "Adds a shipment to the shipment group",
+        "description": "This endpoint allows you to add a shipment to a shipment_group.",
         "parameters": [
           {
             "name": "customReference",
@@ -50,7 +50,7 @@
         ],
         "responses": {
           "200": {
-            "description": "response description",
+            "description": "The shipment_group has been updated successfully",
             "content": {
               "application/json": {
                 "schema": {
@@ -60,19 +60,19 @@
             }
           },
           "304": {
-            "description": "response description"
+            "description": "The shipment already exists in the shipment_group"
           },
           "400": {
-            "description": "response description"
+            "description": "There is a validation error in your request"
           },
           "403": {
-            "description": "response description"
+            "description": "You do not have permission to update a shipment_group"
           },
           "404": {
-            "description": "response description"
+            "description": "The shipment_group could not be found"
           },
           "409": {
-            "description": "response description"
+            "description": "The shipment_group is locked or is closed and cannot be updated"
           }
         }
       },
@@ -488,7 +488,7 @@
                   "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult"
                 },
                 "example": {
-                  "shipment_reference": "sp_00840703279232902004319372050432",
+                  "shipment_reference": "sp_00864860254458249357613863665668",
                   "state": "allocated",
                   "price": {
                     "net": 10.0,
@@ -506,7 +506,7 @@
                     ],
                     "currency": "GBP"
                   },
-                  "message": "Shipment sp_00840703279232902004319372050432 has been allocated successfully",
+                  "message": "Shipment sp_00864860254458249357613863665668 has been allocated successfully",
                   "carrier": {
                     "reference": "DNQ",
                     "name": "DNQ Worldwide",
@@ -515,37 +515,37 @@
                   },
                   "tracking_details": {
                     "shipment": {
-                      "reference": "sp_00840703279232902004319372050432",
+                      "reference": "sp_00864860254458249357613863665668",
                       "tracking_references": [
-                        "te_00840703279232902004319372050433"
+                        "te_00864860254458249357613863665669"
                       ]
                     },
                     "contents": [
                       {
-                        "reference": "sc_00840703279232902004319372050434",
+                        "reference": "sc_00864860254458249357613863665670",
                         "tracking_references": [
-                          "te_00840703279232902004319372050435"
+                          "te_00864860254458249357613863665671"
                         ]
                       }
                     ]
                   },
                   "_links": [
                     {
-                      "href": "https://api.sorted.com/pro/labels/sp_00840703279232902004319372050432/pdf",
+                      "href": "https://api.sorted.com/pro/labels/sp_00864860254458249357613863665668/pdf",
                       "rel": "label",
-                      "reference": "sp_00840703279232902004319372050432",
+                      "reference": "sp_00864860254458249357613863665668",
                       "type": "label"
                     },
                     {
-                      "href": "https://api.sorted.com/pro/labels/sp_00840703279232902004319372050432/zpl",
+                      "href": "https://api.sorted.com/pro/labels/sp_00864860254458249357613863665668/zpl",
                       "rel": "label",
-                      "reference": "sp_00840703279232902004319372050432",
+                      "reference": "sp_00864860254458249357613863665668",
                       "type": "label"
                     },
                     {
-                      "href": "https://api.sorted.com/pro/shipments/sp_00840703279232902004319372050432",
+                      "href": "https://api.sorted.com/pro/shipments/sp_00864860254458249357613863665668",
                       "rel": "shipment",
-                      "reference": "sp_00840703279232902004319372050432",
+                      "reference": "sp_00864860254458249357613863665668",
                       "type": "shipment"
                     }
                   ]
@@ -619,7 +619,7 @@
                   "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult"
                 },
                 "example": {
-                  "shipment_reference": "sp_00840703279269795492466791153664",
+                  "shipment_reference": "sp_00864860254495142845761282768900",
                   "state": "allocated",
                   "price": {
                     "net": 10.0,
@@ -637,7 +637,7 @@
                     ],
                     "currency": "GBP"
                   },
-                  "message": "Shipment sp_00840703279269795492466791153664 has been allocated successfully",
+                  "message": "Shipment sp_00864860254495142845761282768900 has been allocated successfully",
                   "carrier": {
                     "reference": "DNQ",
                     "name": "DNQ Worldwide",
@@ -646,37 +646,37 @@
                   },
                   "tracking_details": {
                     "shipment": {
-                      "reference": "sp_00840703279269795492466791153664",
+                      "reference": "sp_00864860254495142845761282768900",
                       "tracking_references": [
-                        "te_00840703279269795492466791153665"
+                        "te_00864860254495142845761282768901"
                       ]
                     },
                     "contents": [
                       {
-                        "reference": "sc_00840703279269795492466791153666",
+                        "reference": "sc_00864860254495142845761282768902",
                         "tracking_references": [
-                          "te_00840703279269795492466791153667"
+                          "te_00864860254495142845761282768903"
                         ]
                       }
                     ]
                   },
                   "_links": [
                     {
-                      "href": "https://api.sorted.com/pro/labels/sp_00840703279269795492466791153664/pdf",
+                      "href": "https://api.sorted.com/pro/labels/sp_00864860254495142845761282768900/pdf",
                       "rel": "label",
-                      "reference": "sp_00840703279269795492466791153664",
+                      "reference": "sp_00864860254495142845761282768900",
                       "type": "label"
                     },
                     {
-                      "href": "https://api.sorted.com/pro/labels/sp_00840703279269795492466791153664/zpl",
+                      "href": "https://api.sorted.com/pro/labels/sp_00864860254495142845761282768900/zpl",
                       "rel": "label",
-                      "reference": "sp_00840703279269795492466791153664",
+                      "reference": "sp_00864860254495142845761282768900",
                       "type": "label"
                     },
                     {
-                      "href": "https://api.sorted.com/pro/shipments/sp_00840703279269795492466791153664",
+                      "href": "https://api.sorted.com/pro/shipments/sp_00864860254495142845761282768900",
                       "rel": "shipment",
-                      "reference": "sp_00840703279269795492466791153664",
+                      "reference": "sp_00864860254495142845761282768900",
                       "type": "shipment"
                     }
                   ]
@@ -750,7 +750,7 @@
                   "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult"
                 },
                 "example": {
-                  "shipment_reference": "sp_00840703279288242236540500705284",
+                  "shipment_reference": "sp_00864860254513589589834992320516",
                   "state": "allocated",
                   "price": {
                     "net": 10.0,
@@ -768,7 +768,7 @@
                     ],
                     "currency": "GBP"
                   },
-                  "message": "Shipment sp_00840703279288242236540500705284 has been allocated successfully",
+                  "message": "Shipment sp_00864860254513589589834992320516 has been allocated successfully",
                   "carrier": {
                     "reference": "DNQ",
                     "name": "DNQ Worldwide",
@@ -777,37 +777,37 @@
                   },
                   "tracking_details": {
                     "shipment": {
-                      "reference": "sp_00840703279288242236540500705284",
+                      "reference": "sp_00864860254513589589834992320516",
                       "tracking_references": [
-                        "te_00840703279288242236540500705285"
+                        "te_00864860254513589589834992320517"
                       ]
                     },
                     "contents": [
                       {
-                        "reference": "sc_00840703279288242236540500705286",
+                        "reference": "sc_00864860254513589589834992320518",
                         "tracking_references": [
-                          "te_00840703279288242236540500705287"
+                          "te_00864860254513589589834992320519"
                         ]
                       }
                     ]
                   },
                   "_links": [
                     {
-                      "href": "https://api.sorted.com/pro/labels/sp_00840703279288242236540500705284/pdf",
+                      "href": "https://api.sorted.com/pro/labels/sp_00864860254513589589834992320516/pdf",
                       "rel": "label",
-                      "reference": "sp_00840703279288242236540500705284",
+                      "reference": "sp_00864860254513589589834992320516",
                       "type": "label"
                     },
                     {
-                      "href": "https://api.sorted.com/pro/labels/sp_00840703279288242236540500705284/zpl",
+                      "href": "https://api.sorted.com/pro/labels/sp_00864860254513589589834992320516/zpl",
                       "rel": "label",
-                      "reference": "sp_00840703279288242236540500705284",
+                      "reference": "sp_00864860254513589589834992320516",
                       "type": "label"
                     },
                     {
-                      "href": "https://api.sorted.com/pro/shipments/sp_00840703279288242236540500705284",
+                      "href": "https://api.sorted.com/pro/shipments/sp_00864860254513589589834992320516",
                       "rel": "shipment",
-                      "reference": "sp_00840703279288242236540500705284",
+                      "reference": "sp_00864860254513589589834992320516",
                       "type": "shipment"
                     }
                   ]
@@ -881,7 +881,7 @@
                   "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult"
                 },
                 "example": {
-                  "shipment_reference": "sp_00840703279306688980614210256900",
+                  "shipment_reference": "sp_00864860254550483077982411423748",
                   "state": "allocated",
                   "price": {
                     "net": 10.0,
@@ -899,7 +899,7 @@
                     ],
                     "currency": "GBP"
                   },
-                  "message": "Shipment sp_00840703279306688980614210256900 has been allocated successfully",
+                  "message": "Shipment sp_00864860254550483077982411423748 has been allocated successfully",
                   "carrier": {
                     "reference": "DNQ",
                     "name": "DNQ Worldwide",
@@ -908,37 +908,37 @@
                   },
                   "tracking_details": {
                     "shipment": {
-                      "reference": "sp_00840703279306688980614210256900",
+                      "reference": "sp_00864860254550483077982411423748",
                       "tracking_references": [
-                        "te_00840703279306688980614210256901"
+                        "te_00864860254550483077982411423749"
                       ]
                     },
                     "contents": [
                       {
-                        "reference": "sc_00840703279306688980614210256902",
+                        "reference": "sc_00864860254550483077982411423750",
                         "tracking_references": [
-                          "te_00840703279325135724687919808512"
+                          "te_00864860254550483077982411423751"
                         ]
                       }
                     ]
                   },
                   "_links": [
                     {
-                      "href": "https://api.sorted.com/pro/labels/sp_00840703279306688980614210256900/pdf",
+                      "href": "https://api.sorted.com/pro/labels/sp_00864860254550483077982411423748/pdf",
                       "rel": "label",
-                      "reference": "sp_00840703279306688980614210256900",
+                      "reference": "sp_00864860254550483077982411423748",
                       "type": "label"
                     },
                     {
-                      "href": "https://api.sorted.com/pro/labels/sp_00840703279306688980614210256900/zpl",
+                      "href": "https://api.sorted.com/pro/labels/sp_00864860254550483077982411423748/zpl",
                       "rel": "label",
-                      "reference": "sp_00840703279306688980614210256900",
+                      "reference": "sp_00864860254550483077982411423748",
                       "type": "label"
                     },
                     {
-                      "href": "https://api.sorted.com/pro/shipments/sp_00840703279306688980614210256900",
+                      "href": "https://api.sorted.com/pro/shipments/sp_00864860254550483077982411423748",
                       "rel": "shipment",
-                      "reference": "sp_00840703279306688980614210256900",
+                      "reference": "sp_00864860254550483077982411423748",
                       "type": "shipment"
                     }
                   ]
@@ -1012,7 +1012,7 @@
                   "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult"
                 },
                 "example": {
-                  "shipment_reference": "sp_00840703279343582468761629360132",
+                  "shipment_reference": "sp_00864860254587376566129830526980",
                   "state": "allocated",
                   "price": {
                     "net": 10.0,
@@ -1030,7 +1030,7 @@
                     ],
                     "currency": "GBP"
                   },
-                  "message": "Shipment sp_00840703279343582468761629360132 has been allocated successfully",
+                  "message": "Shipment sp_00864860254587376566129830526980 has been allocated successfully",
                   "carrier": {
                     "reference": "DNQ",
                     "name": "DNQ Worldwide",
@@ -1039,37 +1039,37 @@
                   },
                   "tracking_details": {
                     "shipment": {
-                      "reference": "sp_00840703279343582468761629360132",
+                      "reference": "sp_00864860254587376566129830526980",
                       "tracking_references": [
-                        "te_00840703279343582468761629360133"
+                        "te_00864860254587376566129830526981"
                       ]
                     },
                     "contents": [
                       {
-                        "reference": "sc_00840703279343582468761629360134",
+                        "reference": "sc_00864860254587376566129830526982",
                         "tracking_references": [
-                          "te_00840703279343582468761629360135"
+                          "te_00864860254587376566129830526983"
                         ]
                       }
                     ]
                   },
                   "_links": [
                     {
-                      "href": "https://api.sorted.com/pro/labels/sp_00840703279343582468761629360132/pdf",
+                      "href": "https://api.sorted.com/pro/labels/sp_00864860254587376566129830526980/pdf",
                       "rel": "label",
-                      "reference": "sp_00840703279343582468761629360132",
+                      "reference": "sp_00864860254587376566129830526980",
                       "type": "label"
                     },
                     {
-                      "href": "https://api.sorted.com/pro/labels/sp_00840703279343582468761629360132/zpl",
+                      "href": "https://api.sorted.com/pro/labels/sp_00864860254587376566129830526980/zpl",
                       "rel": "label",
-                      "reference": "sp_00840703279343582468761629360132",
+                      "reference": "sp_00864860254587376566129830526980",
                       "type": "label"
                     },
                     {
-                      "href": "https://api.sorted.com/pro/shipments/sp_00840703279343582468761629360132",
+                      "href": "https://api.sorted.com/pro/shipments/sp_00864860254587376566129830526980",
                       "rel": "shipment",
-                      "reference": "sp_00840703279343582468761629360132",
+                      "reference": "sp_00864860254587376566129830526980",
                       "type": "shipment"
                     }
                   ]
@@ -1510,6 +1510,85 @@
         "summary": "Retrieve a list of carrier services that are capable of carrying a shipment",
         "description": "Retrieve a list of allocation options for a shipment",
         "parameters": [
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "description": "The version of the API to use",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "description": "The version of the API to use"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "This endpoint uses the same request type as create shipment to allow re-use of the same object\r\n            in the flow:create quote, identify suitable quote, create shipment",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.CreateShipmentRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.CreateShipmentRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.CreateShipmentRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.CreateShipmentRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "The request was successful. The response will include the quote details",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.QuoteResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "There is a validation error in your request"
+          },
+          "403": {
+            "description": "You do not have permission to create quotes"
+          },
+          "531": {
+            "description": "The request was valid but could not be fulfilled"
+          }
+        }
+      }
+    },
+    "/shipments/quote/service_group/{group_ref}": {
+      "post": {
+        "tags": [
+          "Quotes"
+        ],
+        "summary": "Retrieve a list of carrier services that are capable of carrying a shipment given a service group reference",
+        "description": "Retrieve a list of allocation options for a shipment given a service group reference",
+        "parameters": [
+          {
+            "name": "group_ref",
+            "in": "path",
+            "description": "The reference of the carrier service group to quote with",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The reference of the carrier service group to quote with",
+              "nullable": true
+            }
+          },
           {
             "name": "x-api-version",
             "in": "header",
@@ -2477,7 +2556,7 @@
       }
     },
     "/shipment_groups/{shipmentGroupReference}/manifest": {
-      "put": {
+      "post": {
         "tags": [
           "Manifest"
         ],
@@ -2740,17 +2819,14 @@
         "properties": {
           "property": {
             "type": "string",
-            "description": "property description",
             "nullable": true
           },
           "message": {
             "type": "string",
-            "description": "message description",
             "nullable": true
           },
           "code": {
             "type": "string",
-            "description": "code description",
             "nullable": true
           }
         },
@@ -2786,37 +2862,23 @@
             "items": {
               "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.ApiErrorMessage"
             },
-            "description": "Any error(s) relating to the operation",
-            "maxItems": "n",
-            "minItems": 0,
             "nullable": true
           },
           "reference": {
             "type": "string",
-            "description": "The unique reference for this resource generated by Sorted at the point of creation.",
-            "maxItems": 1,
-            "minItems": 1
+            "nullable": true
           },
           "custom_reference": {
             "type": "string",
-            "description": "Your own custom reference for this object, if applicable.",
-            "maxItems": 1,
-            "minItems": 0,
             "nullable": true
           },
           "message": {
             "type": "string",
-            "description": "An optional message relating to the result of the operation.",
-            "maxItems": 1,
-            "minItems": 0,
             "nullable": true
           },
           "version": {
             "type": "integer",
             "format": "int32",
-            "description": "An optional version for this resource",
-            "maxItems": 1,
-            "minItems": 0,
             "nullable": true
           },
           "_links": {
@@ -2824,9 +2886,6 @@
             "items": {
               "$ref": "#/components/schemas/Sorted.Shipments.DataContracts.Link"
             },
-            "description": "Links to the current resource and any related resources, if applicable.",
-            "maxItems": "n",
-            "minItems": 1,
             "nullable": true
           }
         },
