@@ -1113,6 +1113,10 @@ div.landing-button:hover{
   letter-spacing: -0.35625rem;
 }
 
+.text--bold {
+    font-weight: 700;
+}
+
 .text--underlined span {
   position: relative;
 }
