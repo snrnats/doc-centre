@@ -1,3 +1,7 @@
+---
+uid: shipments-api-reference
+title: Shipments API Reference
+---
 <style type="text/css">
     .sideaffix {
         display: none;
@@ -38,10 +42,22 @@
       background-color: #ffffff;
     }
 
+    pre {
+      margin: 0;
+    }
+
+    article h1 {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
 </style>
 <div id="redoc"></div>
-<script src="https://cdn.jsdelivr.net/npm/redoc/bundles/redoc.standalone.js"></script>
-<script>
+<script src="/styles/redoc.standalone.js"></script>
+<script type="text/javascript" defer>
     Redoc.init('/pro/api/swagger.yaml', {
         hideHostname: true,
         hideDownloadButton: true,
@@ -50,6 +66,7 @@
         expandSingleSchemaField: true,
         menuToggle: true,
         scrollYOffset: 25,
+        sortPropsAlphabetically: true,
         theme: {
           colors: {
             tonalOffset: '0',
@@ -60,12 +77,12 @@
               main: '#54b92b'
             },
             http: {
-              get: '#FF055E',
-              post: '#FF055E',
-              put: '#FF055E',
+              get: '#1c880b',
+              post: '#f88f00',
+              put: '#2196f3',
               options: '#d3ca12',
               patch: '#e09d43',
-              delete: '#FF055E',
+              delete: '#ce283c',
               basic: '#999',
               link: '##FF055E',
               head: '##FF055E',
@@ -95,3 +112,4 @@
       }
     }, document.getElementById('redoc'))
 </script>
+
