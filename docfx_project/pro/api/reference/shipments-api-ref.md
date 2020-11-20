@@ -5,7 +5,7 @@
 <div id="redoc"></div>
 <script src="https://cdn.jsdelivr.net/npm/redoc/bundles/redoc.standalone.js"> </script> 
 <script>
-    Redoc.init('https://raw.githubusercontent.com/andywalton7/ReDocTest/master/swagger.json', {
+    Redoc.init('https://raw.githubusercontent.com/andywalton7/ReDocTest/master/shipments-api-file.json', {
         hideDownloadButton: true,
         requiredPropsFirst: 1,
         expandResponses: "200",
