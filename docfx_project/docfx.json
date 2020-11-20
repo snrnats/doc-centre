@@ -12,7 +12,8 @@
           "pro/how-to/**.md",
           "pro/how-to/**.yml",
           "pro/toc.yml",
-          "pro/index.md"
+          "pro/index.md",
+          "pro/api/redoc/**.md"
         ]
       },
       {
