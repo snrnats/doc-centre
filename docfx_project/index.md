@@ -1,3 +1,7 @@
+<head>
+    <script src="https://kit.fontawesome.com/ae1b65f155.js" crossorigin="anonymous"></script>
+</head>
+
 <style type="text/css">
     .col-md-10 {
         width: 100%;
@@ -18,25 +22,25 @@
 
 <div class="header-container">
     <h1 id="big-header" class="text--underlined text--header"><span>Sorted </span><span>Docs</span></h1>
-    <p class="text--center">
+    <p class="header-info">
         Help and support for SortedPRO and SortedREACT.
     </p>
 </div>
-<div class="button-container">
-    <a href="/pro/">
-        <div class="homepage-container">
-            <h2><span>Sorted</span><span>PRO</span></h2>
-            <p>
-                Documentation and user guides for SortedPRO
-            </p>
+<div class="landing-container">
+    <div class="global-spacer">
+        <div class="landing-button-container">
+            <div class="two-columns">
+                <a href="/pro/" class="message-block">
+                    <i class="fas fa-truck-moving"></i>
+                    <h4>SortedPRO Docs</h4>
+                    <p class="link-pink" href="/pro/">Delivery management</p>
+                </a>
+                <a href="/react/index.html?v2" class="message-block">
+                    <i class="fas fa-truck-loading"></i>
+                    <h4>SortedREACT Docs</h4>
+                    <p class="link-pink" href="/react/index.html?v2">Delivery tracking</p>
+                </a>
+            </div>
         </div>
-    </a>
-    <a href="/react/index.html?v2">
-        <div class="homepage-container">
-            <h2><span>Sorted</span><span>REACT<span></h2>
-            <p>
-                Documentation and user guides for SortedREACT
-            </p>
-        </div>
-    </a>
+    </div>
 </div>
