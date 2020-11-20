@@ -1,5 +1,7 @@
 # Redoc
 
+<p class="redoc-note">This is a draft API reference page showing the current live implementation of the PRO Shipments API surface. It does not represent the finished data contract. </p>
+
 <div id="redoc"></div>
 <script src="https://cdn.jsdelivr.net/npm/redoc/bundles/redoc.standalone.js"> </script> 
 <script>

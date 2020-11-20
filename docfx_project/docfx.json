@@ -7,13 +7,11 @@
           "pro/api/help/**.md",
           "pro/api/shipments/**.yml",
           "pro/api/shipments/**.md",
-          "pro/api/reference/**.yml",
-          "pro/api/reference/**.md",
           "pro/how-to/**.md",
           "pro/how-to/**.yml",
           "pro/toc.yml",
           "pro/index.md",
-          "pro/api/redoc/**.md"
+          "pro/api/reference/**.md"
         ]
       },
       {
@@ -30,14 +28,6 @@
           "pro/reports/toc.yml",
           "pro/release-notes/**.md",
           "pro/release-notes/toc.yml",
-          "toc.yml",
-          "*.md"
-        ]
-      },
-      {
-        "files": [
-          "pro/reports/**.md",
-          "pro/reports/toc.yml",
           "pro/overview/**.md",
           "pro/overview/toc.yml",
           "toc.yml",
