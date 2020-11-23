@@ -31,7 +31,7 @@ The information returned is structured in a broadly similar way to a **Create Sh
 
 > [!NOTE]
 >
-> For full reference information on the **Get Shipment** endpoint, see the Shipments data contract.
+> For full reference information on the **Get Shipment** endpoint, see the [Shipments data contract](/pro/api/reference/shipments-api-ref.html#tag/Shipments/paths/~1shipments~1{shipmentReference}/get).
 
 ### Example Get Shipment Call
 

@@ -21,7 +21,7 @@ Once a shipment has been cancelled, then no further changes can be made to it. I
 
 > [!NOTE]
 >
-> For full reference information on the **Cancel Shipment** endpoint, see the Shipments data contract.
+> For full reference information on the **Cancel Shipment** endpoint, see the [Shipments data contract](/pro/api/reference/shipments-api-ref.html#tag/Shipments/paths/~1shipments~1{shipmentReference}~1cancel/put).
 
 ### Cancel Shipment Example
 
