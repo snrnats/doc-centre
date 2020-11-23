@@ -58,7 +58,7 @@ title: Shipments API Reference
 <div id="redoc"></div>
 <script src="/styles/redoc.standalone.js"></script>
 <script type="text/javascript" defer>
-    Redoc.init('/pro/api/swagger.yaml', {
+    Redoc.init('/pro/api/swagger-temp.yaml', {
         hideHostname: true,
         hideDownloadButton: true,
         requiredPropsFirst: 1,
