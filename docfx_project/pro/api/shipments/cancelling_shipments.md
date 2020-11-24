@@ -60,7 +60,7 @@ You can only delete shipments that are in a `state` of _cancelled_. If you attem
 
 > [!NOTE]
 >
-> For full reference information on the **Delete Shipment** endpoint, see the Shipments data contract.
+> For full reference information on the **Delete Shipment** endpoint, see the [Shipments API reference](/pro/api/reference/shipments-api-ref.html#tag/Shipments/paths/~1shipments~1{shipmentReference}/delete).
 
 ### Delete Shipment Example
 

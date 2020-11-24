@@ -339,7 +339,7 @@ The example shows a simple **Update Shipment** request for a shipment with a `{r
 
 > [!NOTE]
 >
-> For full reference information on the **Update Shipment** endpoint, see the Shipments data contract. -->
+> For full reference information on the **Update Shipment** endpoint, see the [Shipments API reference](/pro/api/reference/shipments-api-ref.html#tag/Shipments/paths/~1shipments/put). -->
 
 ## Next Steps
 
