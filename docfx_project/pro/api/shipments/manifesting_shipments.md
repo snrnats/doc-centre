@@ -65,7 +65,7 @@ Once PRO has received the request, it attempts to manifest the specified shipmen
 
 > [!NOTE]
 >
->  For full reference information on the **Manifest Shipment** endpoint, see the Shipments data contract. 
+>  For full reference information on the **Manifest Shipment** endpoint, see the [Shipments data contract](/pro/api/reference/shipments-api-ref.html#tag/Manifest/paths/~1shipments~1{shipmentReference}~1manifest/put). 
 
 ### Manifest Shipment Example
 
