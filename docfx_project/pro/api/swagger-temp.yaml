@@ -331,7 +331,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult'
               example: {
-  "shipment_reference": "sp_00872740818763348330715780481024",
+  "shipment_reference": "sp_00872754269501937581214694113280",
   "state": "allocated",
   "price": {
     "net": 10.0,
@@ -349,7 +349,7 @@ paths:
     ],
     "currency": "GBP"
   },
-  "message": "Shipment sp_00872740818763348330715780481024 has been allocated successfully",
+  "message": "Shipment sp_00872754269501937581214694113280 has been allocated successfully",
   "carrier": {
     "reference": "DNQ",
     "name": "DNQ Worldwide",
@@ -358,17 +358,17 @@ paths:
   },
   "tracking_details": {
     "shipment": {
-      "reference": "sp_00872740818763348330715780481024",
+      "reference": "sp_00872754269501937581214694113280",
       "tracking_references": [
-        "te_00872740818763348330715780481025"
+        "te_00872754269501937581214694113281"
       ],
       "_links": []
     },
     "contents": [
       {
-        "reference": "sc_00872740818763348330715780481026",
+        "reference": "sc_00872754269501937581214694113282",
         "tracking_references": [
-          "te_00872740818763348330715780481027"
+          "te_00872754269501937581214694113283"
         ],
         "_links": []
       }
@@ -376,21 +376,21 @@ paths:
   },
   "_links": [
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00872740818763348330715780481024/pdf",
+      "href": "https://api.sorted.com/pro/labels/sp_00872754269501937581214694113280/pdf",
       "rel": "label",
-      "reference": "sp_00872740818763348330715780481024",
+      "reference": "sp_00872754269501937581214694113280",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00872740818763348330715780481024/zpl",
+      "href": "https://api.sorted.com/pro/labels/sp_00872754269501937581214694113280/zpl",
       "rel": "label",
-      "reference": "sp_00872740818763348330715780481024",
+      "reference": "sp_00872754269501937581214694113280",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/shipments/sp_00872740818763348330715780481024",
+      "href": "https://api.sorted.com/pro/shipments/sp_00872754269501937581214694113280",
       "rel": "shipment",
-      "reference": "sp_00872740818763348330715780481024",
+      "reference": "sp_00872754269501937581214694113280",
       "type": "shipment"
     }
   ]
@@ -592,7 +592,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult'
               example: {
-  "shipment_reference": "sp_00872740819814812742917224923140",
+  "shipment_reference": "sp_00872754271014570595258877345796",
   "state": "allocated",
   "price": {
     "net": 10.0,
@@ -610,7 +610,7 @@ paths:
     ],
     "currency": "GBP"
   },
-  "message": "Shipment sp_00872740819814812742917224923140 has been allocated successfully",
+  "message": "Shipment sp_00872754271014570595258877345796 has been allocated successfully",
   "carrier": {
     "reference": "DNQ",
     "name": "DNQ Worldwide",
@@ -619,17 +619,17 @@ paths:
   },
   "tracking_details": {
     "shipment": {
-      "reference": "sp_00872740819814812742917224923140",
+      "reference": "sp_00872754271014570595258877345796",
       "tracking_references": [
-        "te_00872740819814812742917224923141"
+        "te_00872754271014570595258877345797"
       ],
       "_links": []
     },
     "contents": [
       {
-        "reference": "sc_00872740819814812742917224923142",
+        "reference": "sc_00872754271014570595258877345798",
         "tracking_references": [
-          "te_00872740819814812742917224923143"
+          "te_00872754271014570595258877345799"
         ],
         "_links": []
       }
@@ -637,21 +637,21 @@ paths:
   },
   "_links": [
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00872740819814812742917224923140/pdf",
+      "href": "https://api.sorted.com/pro/labels/sp_00872754271014570595258877345796/pdf",
       "rel": "label",
-      "reference": "sp_00872740819814812742917224923140",
+      "reference": "sp_00872754271014570595258877345796",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00872740819814812742917224923140/zpl",
+      "href": "https://api.sorted.com/pro/labels/sp_00872754271014570595258877345796/zpl",
       "rel": "label",
-      "reference": "sp_00872740819814812742917224923140",
+      "reference": "sp_00872754271014570595258877345796",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/shipments/sp_00872740819814812742917224923140",
+      "href": "https://api.sorted.com/pro/shipments/sp_00872754271014570595258877345796",
       "rel": "shipment",
-      "reference": "sp_00872740819814812742917224923140",
+      "reference": "sp_00872754271014570595258877345796",
       "type": "shipment"
     }
   ]
@@ -701,7 +701,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult'
               example: {
-  "shipment_reference": "sp_00872740819870152975138353577988",
+  "shipment_reference": "sp_00872754271162144547848553758724",
   "state": "allocated",
   "price": {
     "net": 10.0,
@@ -719,7 +719,7 @@ paths:
     ],
     "currency": "GBP"
   },
-  "message": "Shipment sp_00872740819870152975138353577988 has been allocated successfully",
+  "message": "Shipment sp_00872754271162144547848553758724 has been allocated successfully",
   "carrier": {
     "reference": "DNQ",
     "name": "DNQ Worldwide",
@@ -728,17 +728,17 @@ paths:
   },
   "tracking_details": {
     "shipment": {
-      "reference": "sp_00872740819870152975138353577988",
+      "reference": "sp_00872754271162144547848553758724",
       "tracking_references": [
-        "te_00872740819870152975138353577989"
+        "te_00872754271162144547848553758725"
       ],
       "_links": []
     },
     "contents": [
       {
-        "reference": "sc_00872740819870152975138353577990",
+        "reference": "sc_00872754271162144547848553758726",
         "tracking_references": [
-          "te_00872740819870152975138353577991"
+          "te_00872754271162144547848553758727"
         ],
         "_links": []
       }
@@ -746,21 +746,21 @@ paths:
   },
   "_links": [
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00872740819870152975138353577988/pdf",
+      "href": "https://api.sorted.com/pro/labels/sp_00872754271162144547848553758724/pdf",
       "rel": "label",
-      "reference": "sp_00872740819870152975138353577988",
+      "reference": "sp_00872754271162144547848553758724",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00872740819870152975138353577988/zpl",
+      "href": "https://api.sorted.com/pro/labels/sp_00872754271162144547848553758724/zpl",
       "rel": "label",
-      "reference": "sp_00872740819870152975138353577988",
+      "reference": "sp_00872754271162144547848553758724",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/shipments/sp_00872740819870152975138353577988",
+      "href": "https://api.sorted.com/pro/shipments/sp_00872754271162144547848553758724",
       "rel": "shipment",
-      "reference": "sp_00872740819870152975138353577988",
+      "reference": "sp_00872754271162144547848553758724",
       "type": "shipment"
     }
   ]
@@ -810,7 +810,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult'
               example: {
-  "shipment_reference": "sp_00872740819925493207359482232836",
+  "shipment_reference": "sp_00872754271309718500438230171652",
   "state": "allocated",
   "price": {
     "net": 10.0,
@@ -828,7 +828,7 @@ paths:
     ],
     "currency": "GBP"
   },
-  "message": "Shipment sp_00872740819925493207359482232836 has been allocated successfully",
+  "message": "Shipment sp_00872754271309718500438230171652 has been allocated successfully",
   "carrier": {
     "reference": "DNQ",
     "name": "DNQ Worldwide",
@@ -837,17 +837,17 @@ paths:
   },
   "tracking_details": {
     "shipment": {
-      "reference": "sp_00872740819925493207359482232836",
+      "reference": "sp_00872754271309718500438230171652",
       "tracking_references": [
-        "te_00872740819925493207359482232837"
+        "te_00872754271309718500438230171653"
       ],
       "_links": []
     },
     "contents": [
       {
-        "reference": "sc_00872740819925493207359482232838",
+        "reference": "sc_00872754271309718500438230171654",
         "tracking_references": [
-          "te_00872740819925493207359482232839"
+          "te_00872754271309718500438230171655"
         ],
         "_links": []
       }
@@ -855,21 +855,21 @@ paths:
   },
   "_links": [
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00872740819925493207359482232836/pdf",
+      "href": "https://api.sorted.com/pro/labels/sp_00872754271309718500438230171652/pdf",
       "rel": "label",
-      "reference": "sp_00872740819925493207359482232836",
+      "reference": "sp_00872754271309718500438230171652",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00872740819925493207359482232836/zpl",
+      "href": "https://api.sorted.com/pro/labels/sp_00872754271309718500438230171652/zpl",
       "rel": "label",
-      "reference": "sp_00872740819925493207359482232836",
+      "reference": "sp_00872754271309718500438230171652",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/shipments/sp_00872740819925493207359482232836",
+      "href": "https://api.sorted.com/pro/shipments/sp_00872754271309718500438230171652",
       "rel": "shipment",
-      "reference": "sp_00872740819925493207359482232836",
+      "reference": "sp_00872754271309718500438230171652",
       "type": "shipment"
     }
   ]
@@ -919,7 +919,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult'
               example: {
-  "shipment_reference": "sp_00872740819980833439580610887684",
+  "shipment_reference": "sp_00872754271438845708954197032964",
   "state": "allocated",
   "price": {
     "net": 10.0,
@@ -937,7 +937,7 @@ paths:
     ],
     "currency": "GBP"
   },
-  "message": "Shipment sp_00872740819980833439580610887684 has been allocated successfully",
+  "message": "Shipment sp_00872754271438845708954197032964 has been allocated successfully",
   "carrier": {
     "reference": "DNQ",
     "name": "DNQ Worldwide",
@@ -946,17 +946,17 @@ paths:
   },
   "tracking_details": {
     "shipment": {
-      "reference": "sp_00872740819980833439580610887684",
+      "reference": "sp_00872754271438845708954197032964",
       "tracking_references": [
-        "te_00872740819980833439580610887685"
+        "te_00872754271438845708954197032965"
       ],
       "_links": []
     },
     "contents": [
       {
-        "reference": "sc_00872740819980833439580610887686",
+        "reference": "sc_00872754271438845708954197032966",
         "tracking_references": [
-          "te_00872740819980833439580610887687"
+          "te_00872754271438845708954197032967"
         ],
         "_links": []
       }
@@ -964,21 +964,21 @@ paths:
   },
   "_links": [
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00872740819980833439580610887684/pdf",
+      "href": "https://api.sorted.com/pro/labels/sp_00872754271438845708954197032964/pdf",
       "rel": "label",
-      "reference": "sp_00872740819980833439580610887684",
+      "reference": "sp_00872754271438845708954197032964",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00872740819980833439580610887684/zpl",
+      "href": "https://api.sorted.com/pro/labels/sp_00872754271438845708954197032964/zpl",
       "rel": "label",
-      "reference": "sp_00872740819980833439580610887684",
+      "reference": "sp_00872754271438845708954197032964",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/shipments/sp_00872740819980833439580610887684",
+      "href": "https://api.sorted.com/pro/shipments/sp_00872754271438845708954197032964",
       "rel": "shipment",
-      "reference": "sp_00872740819980833439580610887684",
+      "reference": "sp_00872754271438845708954197032964",
       "type": "shipment"
     }
   ]
@@ -2117,6 +2117,24 @@ components:
           $ref: '#/components/schemas/Sorted.Shipments.DataContracts.Exclusion'
       additionalProperties: false
       description: "The `excluded_service` object provides details of carrier services that were unable to provide quotes. There\r\nare many reasons why a carrier service may not be able to provide a quote for any given shipment, and this\r\nobject provides high-level details."
+    Sorted.Shipments.DataContracts.Enums.PaperlessUsage:
+      enum:
+        - not_supported
+        - electronic_only
+        - electronic_and_physical
+        - not_applicable
+      type: string
+      description: Specifies how paperless file uploads should be handled following a successful allocation.
+    Sorted.Shipments.DataContracts.PaperlessDocuments:
+      type: object
+      properties:
+        sent_to_carrier:
+          type: boolean
+          description: Specifies whether or not the paperless documents were transmitted to the carrier
+        usage_type:
+          $ref: '#/components/schemas/Sorted.Shipments.DataContracts.Enums.PaperlessUsage'
+      additionalProperties: false
+      description: "This object is returned as part of an `allocate_result` and indicates how Sorted have used any applicable\r\npaperless documents when allocating a `shipment` with a carrier"
     Sorted.Shipments.DataContracts.AllocateResult:
       required:
         - correlation_id
@@ -2163,6 +2181,8 @@ components:
             $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ExcludedService'
           description: "Details of excluded services, i.e. carrier services that are active in your account but who have not\r\nbeen able to provide a quote for this `shipment`."
           nullable: true
+        paperless_documents:
+          $ref: '#/components/schemas/Sorted.Shipments.DataContracts.PaperlessDocuments'
       additionalProperties: false
       description: "An `allocate_result` is returned for all requests to allocate a `shipment`. The object contains details of the operation\r\nresult, as well as the details of the allocation or, in the case of a failed allocation, details of the allocation failure."
     Sorted.Shipments.DataContracts.AllocateRequest:
@@ -3442,13 +3462,13 @@ components:
         - gif
       type: string
       description: Represents the format of a `paperless_document`
-    Sorted.Shipments.DataContracts.Enums.PaperlessUsage:
+    Sorted.Shipments.DataContracts.Enums.PaperlessDocumentUsage:
       enum:
         - electronic_trade
         - customer_information
         - pricing
       type: string
-      description: Specifies how paperless file uploads should be handled following a successful allocation.
+      description: Describes how paperless documents will be used
     Sorted.Shipments.DataContracts.PaperlessDocument:
       required:
         - document_state
@@ -3467,7 +3487,7 @@ components:
         file_format:
           $ref: '#/components/schemas/Sorted.Shipments.DataContracts.Enums.PaperlessFileFormat'
         usage:
-          $ref: '#/components/schemas/Sorted.Shipments.DataContracts.Enums.PaperlessUsage'
+          $ref: '#/components/schemas/Sorted.Shipments.DataContracts.Enums.PaperlessDocumentUsage'
         expiration:
           type: string
           description: 'The date and time that the document expires, if applicable.'
