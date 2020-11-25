@@ -1,5 +1,5 @@
 <head>
-    <script src="https://kit.fontawesome.com/ae1b65f155.js" crossorigin="anonymous"></script>
+    <link href="../fonts/css/all.css" rel="stylesheet"> 
 </head>
 
 <style type="text/css">
