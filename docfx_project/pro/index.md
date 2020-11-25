@@ -1,5 +1,5 @@
 <head>
-    <script src="https://kit.fontawesome.com/ae1b65f155.js" crossorigin="anonymous"></script>
+    <link href="../fonts/css/all.css" rel="stylesheet"> 
 </head>
 
 <style type="text/css">
@@ -27,40 +27,52 @@
     </p>
 </div>
 <div class="landing-container">
+    <h2>Get Started</h2>
     <div class="global-spacer">
         <div class="landing-button-container">
             <div class="dual-quad">
-                <a href="/pro/api/shipments/introduction.html" class="message-block">
-                    <i class="fas fa-book"></i>
-                    <h4>API User Guide</h4>
-                    <p class="link-pink" href="/pro/api/shipments/introduction.html">PRO's APIs, explained</p>
+                <a href="/pro/api/help/flows/classic_flow.html" class="message-block">
+                    <i class="fas fa-shopping-basket"></i>
+                    <h4>Build a simple checkout flow</h4>
+                    <p class="link-pink" href="/pro/api/help/flows/classic_flow.html">Learn more</p>
                 </a>
-                <a href="/pro/api/reference/shipments-api-ref.html" class="message-block">
-                    <i class="fas fa-code"></i>
-                    <h4>API Reference</h4>
-                    <p class="link-pink" href="/pro/api/reference/shipments-api-ref.html">PRO's API reference</p>
+                <a href="/pro/api/help/flows/consumer_options_flow.html" class="message-block">
+                    <i class="fas fa-truck"></i>
+                    <h4>Offer delivery slot options</h4>
+                    <p class="link-pink" href="/pro/api/help/flows/consumer_options_flow.html">Learn more</p>
                 </a>
-                <a href="/pro/release-notes/index.html" class="message-block">
-                    <i class="fas fa-exclamation-circle"></i>
-                    <h4>Release Notes</h4>
-                    <p class="link-pink" href="/pro/release-notes/index.html">Info on new features and changes</p>
+                <a href="/pro/api/help/flows/order_flex_flow.html" class="message-block">
+                    <i class="fas fa-boxes"></i>
+                    <h4>Ship from multiple fulfilment centres</h4>
+                    <p class="link-pink" href="/pro/api/help/flows/order_flex_flow.html">Learn more</p>
                 </a>
-                <a href="/pro/reports/index.html" class="message-block">
-                    <i class="fas fa-chart-bar"></i>
-                    <h4>Reports User Guide</h4>
-                    <p class="link-pink" href="/pro/reports/index.html">Support for PRO's PowerBI reporting app</p>
-                </a>
-                <a href="/pro/how-to/articles.html" class="message-block">
-                    <i class="fas fa-info-circle"></i>
-                    <h4>Articles</h4>
-                    <p class="link-pink" href="/pro/how-to/articles.html">Explainers and deep-dives</p>
-                </a>                
-                <a href="/pro/api/help/introduction.html" class="message-block">
-                    <i class="fas fa-truck-loading"></i>
-                    <h4>Consignments Help</h4>
-                    <p class="link-pink" href="/pro/api/help/introduction.html">Help for PRO's legacy Consignments APIs</p>
+                <a href="/pro/api/help/flows/quotes_flow.html" class="message-block">
+                    <i class="fas fa-credit-card"></i>
+                    <h4>Get and use carrier delivery quotes</h4>
+                    <p class="link-pink" href="/pro/api/help/flows/quotes_flow.html">Learn more</p>
                 </a>
             </div>
         </div>
     </div>
+</div>
+<div class="landing-container">
+    <h2>Consignments</h2>
+    <div class="two-columns">
+        <div class="left-column">
+            <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fas fa-check-square"></i></span><a href="/pro/api/help/introduction.html">Overview</a><p class="button-text">An introduction to Consignments in PRO</p></li>
+                <li><span class="fa-li"><i class="fas fa-check-square"></i></span><a href="/pro/api/help/flows.html">Call Flows</a><p class="button-text">Suggested Consignments API call flows to help you achieve common tasks in PRO</p></li>
+                <li><span class="fa-li"><i class="fas fa-check-square"></i></span><a href="https://docs.electioapp.com/#/api">API Ref</a><p class="button-text">Reference information for all of PRO's Consignments APIs</p></li>
+                <li><span class="fa-li"><i class="fas fa-check-square"></i></span><a href="/pro/api/help/managing_consignments.html">API User Guide</a><p class="button-text">PRO's Consignments APIs, explained</p></li>          
+            </ul>
+        </div>
+        <div class="right-column">
+            <p>PRO's Consignments API collection is designed to work with regular scheduled carrier collections. If carriers pick goods up from your fulfilment centres on a regular basis, then Consignments is for you. </p>
+        </div>
+    </div>    
+</div>
+<div class="landing-container">
+    <h2>Reports</h2>
+    <p>PRO includes its own reporting app, running in Microsoft Power BI. You can use these reports to view traffic profiles, a breakdown of shipping volumes, and more. </p>
+    <a href="/pro/reports/index.html"><div class="landing-button">View report docs</div></a>    
 </div>
