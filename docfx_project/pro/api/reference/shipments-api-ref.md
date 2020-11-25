@@ -60,13 +60,14 @@ title: Shipments API Reference
 <script type="text/javascript" defer>
     Redoc.init('/pro/api/swagger-temp.yaml', {
         hideHostname: true,
-        hideDownloadButton: true,
+        hideDownloadButton: false,
         requiredPropsFirst: 1,
-        expandResponses: "200",
+        expandResponses: "200,201",
         expandSingleSchemaField: true,
         menuToggle: true,
         scrollYOffset: 25,
         sortPropsAlphabetically: true,
+        pathInMiddlePanel: true,
         theme: {
           colors: {
             tonalOffset: '0',

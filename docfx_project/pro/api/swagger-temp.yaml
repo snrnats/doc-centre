@@ -16,7 +16,7 @@ paths:
     put:
       tags:
         - Shipment Groups
-      summary: Add Shipment to Group
+      summary: Add Shipment to Shipment Group by Custom Reference
       description: This endpoint provides the simplest possible method of adding a single `shipment` to an existing `shipment_group`.
       parameters:
         - name: customReference
@@ -61,7 +61,7 @@ paths:
     delete:
       tags:
         - Shipment Groups
-      summary: Remove a Shipment from a Shipment Group
+      summary: Remove Shipment from Shipment Group by Custom Reference
       description: This endpoint allows you to remove a `shipment` from a `shipment_group` using your own `custom_reference` for the group.
       parameters:
         - name: customReference
@@ -107,7 +107,7 @@ paths:
     put:
       tags:
         - Shipment Groups
-      summary: Add Shipment to Group
+      summary: Add Shipment to Shipment Group by Custom Reference and Version
       description: This endpoint allows you to add a `shipment` to a `shipment_group` using your own custom reference for the group.
       parameters:
         - name: customReference
@@ -160,7 +160,7 @@ paths:
     delete:
       tags:
         - Shipment Groups
-      summary: Remove a Shipment from a Shipment Group
+      summary: Remove Shipment from Shipment Group by Custom Reference
       description: This endpoint allows you to remove a `shipment` from a `shipment_group` using your own `custom_reference` for the group.
       parameters:
         - name: customReference
@@ -214,7 +214,7 @@ paths:
     put:
       tags:
         - Shipment Groups
-      summary: Add a Shipment to a Shipment Group
+      summary: Add Shipment to Shipment Group
       description: This endpoint allows you to add a `shipment` to an exist `shipment_group`.
       parameters:
         - name: shipmentGroupReference
@@ -259,7 +259,7 @@ paths:
     delete:
       tags:
         - Shipment Groups
-      summary: Remove a Shipment from a Shipment Group
+      summary: Remove Shipment from Shipment Group
       description: This endpoint allows you to remove a `shipment` from a `shipment_group`.
       parameters:
         - name: shipmentGroupReference
@@ -331,7 +331,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult'
               example: {
-  "shipment_reference": "sp_00870883104518612366935529095172",
+  "shipment_reference": "sp_00872740818763348330715780481024",
   "state": "allocated",
   "price": {
     "net": 10.0,
@@ -349,7 +349,7 @@ paths:
     ],
     "currency": "GBP"
   },
-  "message": "Shipment sp_00870883104518612366935529095172 has been allocated successfully",
+  "message": "Shipment sp_00872740818763348330715780481024 has been allocated successfully",
   "carrier": {
     "reference": "DNQ",
     "name": "DNQ Worldwide",
@@ -358,17 +358,17 @@ paths:
   },
   "tracking_details": {
     "shipment": {
-      "reference": "sp_00870883104518612366935529095172",
+      "reference": "sp_00872740818763348330715780481024",
       "tracking_references": [
-        "te_00870883104518612366935529095173"
+        "te_00872740818763348330715780481025"
       ],
       "_links": []
     },
     "contents": [
       {
-        "reference": "sc_00870883104518612366935529095174",
+        "reference": "sc_00872740818763348330715780481026",
         "tracking_references": [
-          "te_00870883104518612366935529095175"
+          "te_00872740818763348330715780481027"
         ],
         "_links": []
       }
@@ -376,21 +376,21 @@ paths:
   },
   "_links": [
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00870883104518612366935529095172/pdf",
+      "href": "https://api.sorted.com/pro/labels/sp_00872740818763348330715780481024/pdf",
       "rel": "label",
-      "reference": "sp_00870883104518612366935529095172",
+      "reference": "sp_00872740818763348330715780481024",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00870883104518612366935529095172/zpl",
+      "href": "https://api.sorted.com/pro/labels/sp_00872740818763348330715780481024/zpl",
       "rel": "label",
-      "reference": "sp_00870883104518612366935529095172",
+      "reference": "sp_00872740818763348330715780481024",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/shipments/sp_00870883104518612366935529095172",
+      "href": "https://api.sorted.com/pro/shipments/sp_00872740818763348330715780481024",
       "rel": "shipment",
-      "reference": "sp_00870883104518612366935529095172",
+      "reference": "sp_00872740818763348330715780481024",
       "type": "shipment"
     }
   ]
@@ -592,7 +592,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult'
               example: {
-  "shipment_reference": "sp_00870883105182695153589072953348",
+  "shipment_reference": "sp_00872740819814812742917224923140",
   "state": "allocated",
   "price": {
     "net": 10.0,
@@ -610,7 +610,7 @@ paths:
     ],
     "currency": "GBP"
   },
-  "message": "Shipment sp_00870883105182695153589072953348 has been allocated successfully",
+  "message": "Shipment sp_00872740819814812742917224923140 has been allocated successfully",
   "carrier": {
     "reference": "DNQ",
     "name": "DNQ Worldwide",
@@ -619,17 +619,17 @@ paths:
   },
   "tracking_details": {
     "shipment": {
-      "reference": "sp_00870883105182695153589072953348",
+      "reference": "sp_00872740819814812742917224923140",
       "tracking_references": [
-        "te_00870883105182695153589072953349"
+        "te_00872740819814812742917224923141"
       ],
       "_links": []
     },
     "contents": [
       {
-        "reference": "sc_00870883105182695153589072953350",
+        "reference": "sc_00872740819814812742917224923142",
         "tracking_references": [
-          "te_00870883105182695153589072953351"
+          "te_00872740819814812742917224923143"
         ],
         "_links": []
       }
@@ -637,21 +637,21 @@ paths:
   },
   "_links": [
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00870883105182695153589072953348/pdf",
+      "href": "https://api.sorted.com/pro/labels/sp_00872740819814812742917224923140/pdf",
       "rel": "label",
-      "reference": "sp_00870883105182695153589072953348",
+      "reference": "sp_00872740819814812742917224923140",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00870883105182695153589072953348/zpl",
+      "href": "https://api.sorted.com/pro/labels/sp_00872740819814812742917224923140/zpl",
       "rel": "label",
-      "reference": "sp_00870883105182695153589072953348",
+      "reference": "sp_00872740819814812742917224923140",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/shipments/sp_00870883105182695153589072953348",
+      "href": "https://api.sorted.com/pro/shipments/sp_00872740819814812742917224923140",
       "rel": "shipment",
-      "reference": "sp_00870883105182695153589072953348",
+      "reference": "sp_00872740819814812742917224923140",
       "type": "shipment"
     }
   ]
@@ -701,7 +701,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult'
               example: {
-  "shipment_reference": "sp_00870883105274928873957620711428",
+  "shipment_reference": "sp_00872740819870152975138353577988",
   "state": "allocated",
   "price": {
     "net": 10.0,
@@ -719,7 +719,7 @@ paths:
     ],
     "currency": "GBP"
   },
-  "message": "Shipment sp_00870883105274928873957620711428 has been allocated successfully",
+  "message": "Shipment sp_00872740819870152975138353577988 has been allocated successfully",
   "carrier": {
     "reference": "DNQ",
     "name": "DNQ Worldwide",
@@ -728,17 +728,17 @@ paths:
   },
   "tracking_details": {
     "shipment": {
-      "reference": "sp_00870883105274928873957620711428",
+      "reference": "sp_00872740819870152975138353577988",
       "tracking_references": [
-        "te_00870883105274928873957620711429"
+        "te_00872740819870152975138353577989"
       ],
       "_links": []
     },
     "contents": [
       {
-        "reference": "sc_00870883105274928873957620711430",
+        "reference": "sc_00872740819870152975138353577990",
         "tracking_references": [
-          "te_00870883105274928873957620711431"
+          "te_00872740819870152975138353577991"
         ],
         "_links": []
       }
@@ -746,21 +746,21 @@ paths:
   },
   "_links": [
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00870883105274928873957620711428/pdf",
+      "href": "https://api.sorted.com/pro/labels/sp_00872740819870152975138353577988/pdf",
       "rel": "label",
-      "reference": "sp_00870883105274928873957620711428",
+      "reference": "sp_00872740819870152975138353577988",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00870883105274928873957620711428/zpl",
+      "href": "https://api.sorted.com/pro/labels/sp_00872740819870152975138353577988/zpl",
       "rel": "label",
-      "reference": "sp_00870883105274928873957620711428",
+      "reference": "sp_00872740819870152975138353577988",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/shipments/sp_00870883105274928873957620711428",
+      "href": "https://api.sorted.com/pro/shipments/sp_00872740819870152975138353577988",
       "rel": "shipment",
-      "reference": "sp_00870883105274928873957620711428",
+      "reference": "sp_00872740819870152975138353577988",
       "type": "shipment"
     }
   ]
@@ -810,7 +810,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult'
               example: {
-  "shipment_reference": "sp_00870883105367162594326168469504",
+  "shipment_reference": "sp_00872740819925493207359482232836",
   "state": "allocated",
   "price": {
     "net": 10.0,
@@ -828,7 +828,7 @@ paths:
     ],
     "currency": "GBP"
   },
-  "message": "Shipment sp_00870883105367162594326168469504 has been allocated successfully",
+  "message": "Shipment sp_00872740819925493207359482232836 has been allocated successfully",
   "carrier": {
     "reference": "DNQ",
     "name": "DNQ Worldwide",
@@ -837,17 +837,17 @@ paths:
   },
   "tracking_details": {
     "shipment": {
-      "reference": "sp_00870883105367162594326168469504",
+      "reference": "sp_00872740819925493207359482232836",
       "tracking_references": [
-        "te_00870883105367162594326168469505"
+        "te_00872740819925493207359482232837"
       ],
       "_links": []
     },
     "contents": [
       {
-        "reference": "sc_00870883105367162594326168469506",
+        "reference": "sc_00872740819925493207359482232838",
         "tracking_references": [
-          "te_00870883105367162594326168469507"
+          "te_00872740819925493207359482232839"
         ],
         "_links": []
       }
@@ -855,21 +855,21 @@ paths:
   },
   "_links": [
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00870883105367162594326168469504/pdf",
+      "href": "https://api.sorted.com/pro/labels/sp_00872740819925493207359482232836/pdf",
       "rel": "label",
-      "reference": "sp_00870883105367162594326168469504",
+      "reference": "sp_00872740819925493207359482232836",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00870883105367162594326168469504/zpl",
+      "href": "https://api.sorted.com/pro/labels/sp_00872740819925493207359482232836/zpl",
       "rel": "label",
-      "reference": "sp_00870883105367162594326168469504",
+      "reference": "sp_00872740819925493207359482232836",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/shipments/sp_00870883105367162594326168469504",
+      "href": "https://api.sorted.com/pro/shipments/sp_00872740819925493207359482232836",
       "rel": "shipment",
-      "reference": "sp_00870883105367162594326168469504",
+      "reference": "sp_00872740819925493207359482232836",
       "type": "shipment"
     }
   ]
@@ -919,7 +919,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult'
               example: {
-  "shipment_reference": "sp_00870883105459396314694716227587",
+  "shipment_reference": "sp_00872740819980833439580610887684",
   "state": "allocated",
   "price": {
     "net": 10.0,
@@ -937,7 +937,7 @@ paths:
     ],
     "currency": "GBP"
   },
-  "message": "Shipment sp_00870883105459396314694716227587 has been allocated successfully",
+  "message": "Shipment sp_00872740819980833439580610887684 has been allocated successfully",
   "carrier": {
     "reference": "DNQ",
     "name": "DNQ Worldwide",
@@ -946,17 +946,17 @@ paths:
   },
   "tracking_details": {
     "shipment": {
-      "reference": "sp_00870883105459396314694716227587",
+      "reference": "sp_00872740819980833439580610887684",
       "tracking_references": [
-        "te_00870883105459396314694716227588"
+        "te_00872740819980833439580610887685"
       ],
       "_links": []
     },
     "contents": [
       {
-        "reference": "sc_00870883105459396314694716227589",
+        "reference": "sc_00872740819980833439580610887686",
         "tracking_references": [
-          "te_00870883105459396314694716227590"
+          "te_00872740819980833439580610887687"
         ],
         "_links": []
       }
@@ -964,21 +964,21 @@ paths:
   },
   "_links": [
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00870883105459396314694716227587/pdf",
+      "href": "https://api.sorted.com/pro/labels/sp_00872740819980833439580610887684/pdf",
       "rel": "label",
-      "reference": "sp_00870883105459396314694716227587",
+      "reference": "sp_00872740819980833439580610887684",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00870883105459396314694716227587/zpl",
+      "href": "https://api.sorted.com/pro/labels/sp_00872740819980833439580610887684/zpl",
       "rel": "label",
-      "reference": "sp_00870883105459396314694716227587",
+      "reference": "sp_00872740819980833439580610887684",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/shipments/sp_00870883105459396314694716227587",
+      "href": "https://api.sorted.com/pro/shipments/sp_00872740819980833439580610887684",
       "rel": "shipment",
-      "reference": "sp_00870883105459396314694716227587",
+      "reference": "sp_00872740819980833439580610887684",
       "type": "shipment"
     }
   ]
@@ -1034,7 +1034,7 @@ paths:
     post:
       tags:
         - Shipment Groups
-      summary: Close a Shipment Group
+      summary: Close Shipment Group
       description: "Closing a `shipment_group` prevents any further changes or operations to the `shipment_group`, other than retrieving its details.\r\n            \r\n> Note: A `shipment_group` must be `locked` before it can be `closed`.\r\n>\r\n> The close operation is not reversible."
       parameters:
         - name: shipmentGroupReference
@@ -1214,7 +1214,7 @@ paths:
     post:
       tags:
         - Shipment Groups
-      summary: Create a new Shipment Group
+      summary: Create Shipment Group
       description: "A `shipment_group` is a group of one or more `shipments` that can be operated on together. For example, if a driver is due to\r\ncome and collect a group of `shipments` together, you can create a `shipment_group` for the `shipments` and then produce a\r\n`collection_note` and manage the `state` of all the `shipments` within the group together."
       parameters:
         - name: x-api-version
@@ -1249,7 +1249,7 @@ paths:
     put:
       tags:
         - Shipment Groups
-      summary: Update a Shipment Group
+      summary: Update Shipment Group
       description: This endpoint allows you to add or remove `shipments` from a `shipment_group`. You may also update or remove the `custom_reference` applied to the `shipment_group`.
       parameters:
         - name: x-api-version
@@ -1533,7 +1533,7 @@ paths:
     get:
       tags:
         - Shipment Groups
-      summary: Retrieve the Details of an Existing Shipment Group
+      summary: Get Shipment Group
       description: Retrieve the details of an existing shipment_group
       parameters:
         - name: shipmentGroupReference
@@ -1568,7 +1568,7 @@ paths:
     post:
       tags:
         - Shipment Groups
-      summary: Lock a Shipment Group
+      summary: Lock Shipment Group
       description: "This operation places a virtual \"lock\" on a `shipment_group` which prevents any further changes to the group until the group is \"unlocked\".\r\n            \r\nIt is still possible to retrieve a `collection_note` for the group, but `shipments` cannot be added or removed from the group."
       parameters:
         - name: shipmentGroupReference
@@ -1783,18 +1783,23 @@ paths:
 components:
   schemas:
     Sorted.Shipments.DataContracts.ApiErrorMessage:
+      required:
+        - code
+        - message
       type: object
       properties:
         property:
           type: string
+          description: "The path to the affected property, if applicable.\r\n            \r\n> Note: this will be expressed in JSON Path format e.g. `$.addresses[0].address_type` indicates an issue\r\nwith the property `address_type` for the first provided address."
           nullable: true
         message:
           type: string
-          nullable: true
+          description: A plain-text summary of the error.
         code:
           type: string
-          nullable: true
+          description: A pre-defined code for this error.
       additionalProperties: false
+      description: The `api_error_message` object provides further information relating to errors.
     Sorted.Shipments.DataContracts.Link:
       required:
         - href
@@ -1904,30 +1909,44 @@ components:
       type: string
       description: "Every `shipment` in Sorted has a `state` associated with it. Sorted manages `shipment` `states` by virtue of\r\na set of rules that determine transition rules between `states`."
     Sorted.Shipments.DataContracts.TaxRate:
+      required:
+        - country_iso_code
+        - reference
+        - type
+        - value
       type: object
       properties:
         reference:
           type: string
-          nullable: true
+          description: Sorted's unique reference for this `tax_rate`
         country_iso_code:
+          maxLength: 2
+          minLength: 2
           type: string
-          nullable: true
+          description: The 2-character ISO code for the country to which this rate applies.
         type:
           type: string
-          nullable: true
+          description: 'The type of rate, e.g. `standard`, `reduced`, `zero`'
         value:
           type: number
+          description: 'The value element of the `tax_rate`. This is expressed as a proportion of 1, e.g. `0.175 == 17.5%`'
           format: double
       additionalProperties: false
+      description: This object provides details of the `tax_rate` applied to `tax`
     Sorted.Shipments.DataContracts.Tax:
+      required:
+        - amount
+        - rate
       type: object
       properties:
         rate:
           $ref: '#/components/schemas/Sorted.Shipments.DataContracts.TaxRate'
         amount:
           type: number
+          description: The amount of `tax`
           format: double
       additionalProperties: false
+      description: 'The `tax` object provides details of any applicable taxes, including the type and amount of `tax`.'
     Sorted.Shipments.DataContracts.Price:
       required:
         - currency
@@ -1951,6 +1970,8 @@ components:
           description: The applicable tax for this `price`
           nullable: true
         currency:
+          maxLength: 3
+          minLength: 3
           type: string
           description: The 3-character ISO code of the currency
       additionalProperties: false
@@ -2019,31 +2040,43 @@ components:
       additionalProperties: false
       description: "This object provides details of tracking provided by the carrier at the point of allocation. Depending on\r\nthe carrier, tracking references may be provided for the whole `shipment`, or for the whole `shipment` and/or\r\nfor individual `shipment_contents`."
     Sorted.Shipments.DataContracts.ApiError:
+      required:
+        - code
+        - correlation_id
+        - message
+        - reference
       type: object
       properties:
         reference:
+          maxLength: 35
+          minLength: 35
           type: string
-          nullable: true
+          description: A unique reference for this error
         correlation_id:
           type: string
-          nullable: true
+          description: "The correlation id for this error. Customers can use this property when reporting issues to Sorted and this\r\nwill aid with problem discovery and resolution."
         code:
           type: string
-          nullable: true
+          description: A pre-defined `code` for this error.
         message:
           type: string
-          nullable: true
+          description: A plain-text summary of the error.
         details:
+          minItems: 0
           type: array
           items:
             $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiErrorMessage'
+          description: 'A collection of `api_error_messages` which provide further details of the error(s), if applicable.'
           nullable: true
         _links:
+          minItems: 0
           type: array
           items:
             $ref: '#/components/schemas/Sorted.Shipments.DataContracts.Link'
+          description: Provides links to further relevant information such as links to documentation.
           nullable: true
       additionalProperties: false
+      description: "This object is returned by Sorted whenever an error occurs during a request. Errors can have many causes, such\r\nas badly-formed requests, incorrect permissions, or unforeseen issues during request processing."
     Sorted.Shipments.DataContracts.Enums.ExclusionCode:
       enum:
         - ex_other
@@ -2138,10 +2171,14 @@ components:
       type: object
       properties:
         shipments:
+          maxItems: 100
+          minItems: 1
           type: array
           items:
             type: string
+          description: "The reference(s) of the `shipment(s)` to be allocated.\r\n            \r\nAt least one valid reference must be provided. A maximum of 100 `shipments` can be allocated at once using\r\nthis method. This is to ensure the continued optimal performance of the Sorted platform."
       additionalProperties: false
+      description: "An `allocate_request` is used to request allocation of one or more `shipments` with a carrier. This object is\r\nintended for use when allowing Sorted's allocation engine to determine the most appropriate carrier based on:\r\n            \r\n- Configured allocation/shipping rules\r\n- Configured shipping modes\r\n- Carrier availability for required shipping and/or delivery dates\r\n- The price of each carrier service"
     Sorted.Shipments.DataContracts.AllocationFilters:
       required:
         - direction
@@ -2305,6 +2342,7 @@ components:
         - decimal
         - url
       type: string
+      description: "This property is used to indicate the type of value provided within a particular `metadata` item. This may be\r\nused by future Sorted features to enable logic-based operations on provided `metadata`.  If not provided, the\r\nvalue of `metadata_type` will default to `string`"
     Sorted.Shipments.DataContracts.Metadata:
       required:
         - key
@@ -2530,12 +2568,15 @@ components:
       additionalProperties: false
       description: "This object represents the `value` of `contents` within a `shipment`. The value property includes both the\r\namount of the currency of the value."
     Sorted.Shipments.DataContracts.HazardClass:
+      required:
+        - code
       type: object
       properties:
         code:
           type: string
-          nullable: true
+          description: "A composite code identifying an IATA hazard class, e.g. `2.3` (a toxic gas). Codes can also be partial, e.g.\r\n`3` (a flammable liquid).\r\n            \r\nMust be a recognised IATA hazard class code."
       additionalProperties: false
+      description: 'The `hazard_class` object represents an IATA hazard class, for use in categorising dangerous goods.'
     Sorted.Shipments.DataContracts.DangerousGoods:
       type: object
       properties:
@@ -2752,19 +2793,25 @@ components:
       additionalProperties: false
       description: "An `address` must always include a `contact`, except when the `address` utilises a pre-defined shipping\r\nlocation (which already has a `contact` defined). When providing a `shipping_location_reference` you may\r\nexclude the `contact` property, in which case the `address` will inherit the `contact` from the shipping\r\nlocation. However, you may also provide a `shipping_location_reference` _and_ a `contact`, in which case the\r\nprovided `contact` will supersede the `contact` from the shipping location, for the specific `shipment` only."
     Sorted.Shipments.DataContracts.LatLong:
+      required:
+        - latitude
+        - longitude
       type: object
       properties:
         latitude:
           maximum: 180
           minimum: -180
           type: number
+          description: "The latitude value, e.g. `51.5014`.\r\n            \r\nMust be a valid latitude value (`-90` to `+90`)"
           format: double
         longitude:
           maximum: 90
           minimum: -90
           type: number
+          description: "The longitude value, e.g. `0.1246`/\r\n            \r\nMust be a valid longitude value (`-180` to `+180`)"
           format: double
       additionalProperties: false
+      description: "The `lat_long` property is used to capture the latitude and longitude of an `address`, if applicable. Although\r\nindividual properties can be set to zero, `0,0` is **not** a valid value for the object."
     Sorted.Shipments.DataContracts.Reservation:
       type: object
       properties:
@@ -2945,7 +2992,7 @@ components:
         channel:
           maxLength: 50
           type: string
-          description: 'The `channel` that the `shipment` is linked to, if applicable.'
+          description: "The `channel` that the `shipment` is linked to, if applicable.\r\n            \r\n> Note: Must only be provided when `tenant` is also provided and contains a valid `tenant` identifier."
           nullable: true
       additionalProperties: false
       description: "A `shipment` is a collection of one or more packages sent together from a single `origin` address to a single\r\n`destination` address. A `create_shipment_request` is used to create a new `shipment` or to create `quotes`\r\nfor a `shipment` that does not yet exist within SortedPRO."
@@ -2986,35 +3033,57 @@ components:
         - standard
         - retrospective
       type: string
+      description: "The `application_type` identifies how a surcharge value is applied when calculating the price of the\r\nservice for a `shipment`."
     Sorted.Shipments.DataContracts.Enums.SurchargeType:
       enum:
         - additive
         - variable
       type: string
+      description: Represents the type of `surcharge` which determines how a final surcharge value is determined.
     Sorted.Shipments.DataContracts.BaseApplication:
+      required:
+        - base
+        - base_only
       type: object
       properties:
         base:
           type: boolean
+          description: Indicates whether this surcharge applies to the `base` cost.
         base_only:
           type: boolean
+          description: "Indicates whether this surcharge applies to the `base` cost _only_. This should never be `true` if `base`\r\nis `false`."
       additionalProperties: false
+      description: "The `base_application` object provides details of whether the value of a `surcharge` applies to the base price\r\nand, if so, whether it applies to the base price _only_ or to the base price _and_ the combined value of other\r\napplicable surcharges."
     Sorted.Shipments.DataContracts.Enums.CalculationModel:
       enum:
         - fixed
         - calculated
       type: string
+      description: The `calculation_model` determines the model for how the value of a `surcharge` is calculated.
     Sorted.Shipments.DataContracts.Surcharge:
+      required:
+        - application_type
+        - base_application
+        - calculation_model
+        - currency
+        - description
+        - label
+        - reference
+        - type
+        - value
       type: object
       properties:
         reference:
           type: string
-          nullable: true
+          description: The unique reference for this surcharge.
         currency:
+          maxLength: 3
+          minLength: 3
           type: string
-          nullable: true
+          description: The 3-character ISO code for the currency of this `surcharge`
         value:
           type: number
+          description: The value of this `surcharge` in the applied `currency`.
           format: double
         application_type:
           $ref: '#/components/schemas/Sorted.Shipments.DataContracts.Enums.ApplicationType'
@@ -3026,36 +3095,54 @@ components:
           $ref: '#/components/schemas/Sorted.Shipments.DataContracts.Enums.CalculationModel'
         incremental_unit_factor:
           type: number
+          description: 'The incremental unit factor applied when calculating the `surcharge`, if applicable.'
           format: double
           nullable: true
         incremental_unit_price:
           type: number
+          description: 'The incremental unit price applied when calculating the `surcharge`, if applicable.'
           format: double
           nullable: true
         minimum_value:
           type: number
+          description: 'The minimum value of this `surcharge`, if applicable'
           format: double
           nullable: true
         maximum_value:
           type: number
+          description: 'The maximum value of this `surcharge`, if applicable'
           format: double
           nullable: true
         label:
           type: string
-          nullable: true
+          description: A plain-text label for this `surcharge`
         description:
           type: string
-          nullable: true
+          description: A plain-text description for this `surcharge`
       additionalProperties: false
+      description: "A `surcharge` can be applied when generating a `quote` for a carrier service. There are many types of\r\n`surcharge` applied by carriers and this object provides details of any applicable `surcharges` applied when\r\ncalculating to total `price` for a specific carrier service."
     Sorted.Shipments.DataContracts.Quote:
+      required:
+        - carrier
+        - collection_date
+        - created
+        - delivery_date
+        - expires
+        - price
+        - reference
+        - shipment_reference
       type: object
       properties:
         reference:
+          maxLength: 35
+          minLength: 35
           type: string
-          nullable: true
+          description: A unique reference for this `quote`. This is used when allocating with a `quote`.
         shipment_reference:
+          maxLength: 35
+          minLength: 35
           type: string
-          nullable: true
+          description: "The reference of the `shipment` that this `quote` relates to. It is not possible to allocate a `shipment`\r\nwith a `quote` for another `shipment`."
         carrier:
           $ref: '#/components/schemas/Sorted.Shipments.DataContracts.CarrierDetails'
         collection_date:
@@ -3065,22 +3152,29 @@ components:
         price:
           $ref: '#/components/schemas/Sorted.Shipments.DataContracts.Price'
         surcharges:
+          minItems: 0
           type: array
           items:
             $ref: '#/components/schemas/Sorted.Shipments.DataContracts.Surcharge'
+          description: Details of any applicable `surcharge(s)` for this `quote`.
           nullable: true
         created:
           type: string
+          description: The date and time that this `quote` was created.
           format: date-time
         expires:
           type: string
+          description: "The date and time that this `quote` expires. Once a `quote` has expired, it can no longer be used for\r\nallocation."
           format: date-time
         _links:
+          minItems: 0
           type: array
           items:
             $ref: '#/components/schemas/Sorted.Shipments.DataContracts.Link'
+          description: Links to any other related resources.
           nullable: true
       additionalProperties: false
+      description: "A `quote` contains details of the carrier and service that have been confirmed as being capable of handling\r\nthe `shipment`."
     Sorted.Shipments.DataContracts.QuoteResult:
       required:
         - message
@@ -3198,7 +3292,7 @@ components:
         channel:
           maxLength: 50
           type: string
-          description: 'The `channel` that the `shipment` is linked to, if applicable.'
+          description: "The `channel` that the `shipment` is linked to, if applicable.\r\n            \r\n> Note: Must only be provided when `tenant` is also provided and contains a valid `tenant` identifier."
           nullable: true
       additionalProperties: false
       description: "The `update_shipment_request` is used to update an existing `shipment`.\r\n            \r\n> Note: All properties in an `update_shipment_request` should be provided when updating the `shipment`, i.e.\r\ncustomers should provide the full details of the `shipment` rather than just including properties they wish to\r\nupdate. The properties provided will replace the _entire_ `shipment` object. There are some system-generated\r\nproperties of a `shipment` that cannot be modified, such as `allocation` and `_links`."
@@ -3319,6 +3413,7 @@ components:
         - quarantined
         - removed
       type: string
+      description: Represents the current state of a `paperless_document`
     Sorted.Shipments.DataContracts.Enums.PaperlessDocumentType:
       enum:
         - commercial_invoice
@@ -3338,6 +3433,7 @@ components:
         - invoice
         - other
       type: string
+      description: Represents the type of a `paperless_document`
     Sorted.Shipments.DataContracts.Enums.PaperlessFileFormat:
       enum:
         - pdf
@@ -3345,12 +3441,14 @@ components:
         - jpg
         - gif
       type: string
+      description: Represents the format of a `paperless_document`
     Sorted.Shipments.DataContracts.Enums.PaperlessUsage:
       enum:
         - electronic_trade
         - customer_information
         - pricing
       type: string
+      description: Specifies how paperless file uploads should be handled following a successful allocation.
     Sorted.Shipments.DataContracts.PaperlessDocument:
       required:
         - document_state
@@ -3381,7 +3479,9 @@ components:
         - addresses
         - contents
         - created
+        - direction
         - reference
+        - shipment_type
         - source
         - state
       type: object
@@ -3418,6 +3518,8 @@ components:
         label_details:
           $ref: '#/components/schemas/Sorted.Shipments.DataContracts.LabelDetails'
         custom_reference:
+          maxLength: 50
+          minLength: 1
           type: string
           description: 'The custom reference provided for this `shipment`, if applicable.'
           nullable: true
@@ -3499,6 +3601,7 @@ components:
         - pdf
         - zpl
       type: string
+      description: The supported document content types
     Sorted.Shipments.DataContracts.Enums.DocumentType:
       enum:
         - other
@@ -3509,6 +3612,7 @@ components:
         - collection_note
         - hazard_label
       type: string
+      description: Represents the document types recognised by Sorted
     Sorted.Shipments.DataContracts.Document:
       required:
         - content_type
@@ -3559,59 +3663,88 @@ components:
         - locked
         - closed
       type: string
+      description: Represents the current state of a `shipment_group`.
     Sorted.Shipments.DataContracts.ShipmentGroup:
+      required:
+        - created
+        - reference
+        - state
       type: object
       properties:
         reference:
+          maxLength: 35
+          minLength: 35
           type: string
-          nullable: true
+          description: The unique reference for this `shipment_group` generated by Sorted
         shipments:
+          maxItems: 10000
+          minItems: 1
           type: array
           items:
             type: string
+          description: The references of the `shipments` in this group
           nullable: true
         custom_reference:
+          maxLength: 50
+          minLength: 1
           type: string
+          description: The `custom_reference` applied to this `shipment_group` (if applicable)
           nullable: true
         version:
           type: integer
+          description: The version related to the `custom_reference` for this `shipment_group`
           format: int32
         state:
           $ref: '#/components/schemas/Sorted.Shipments.DataContracts.Enums.ShipmentGroupState'
         created:
           type: string
+          description: The date and time that this `shipment_group` was created
           format: date-time
         locked:
           type: string
+          description: "The date and time that this `shipment_group` was locked, if applicable.\r\n            \r\n> Note: a value of `null` indicates that this group has not been locked."
           format: date-time
           nullable: true
         closed:
           type: string
+          description: "The date and time that this `shipment_group` was closed, if applicable.\r\n            \r\n> Note: a value of `null` indicates that this group has not been closed."
           format: date-time
           nullable: true
       additionalProperties: false
+      description: "A `shipment_group` is used to group together `shipments` booked with the same carrier service. This object is\r\nused to manage a `shipment_group` that has already been created."
     Sorted.Shipments.DataContracts.ManifestResult:
+      required:
+        - carrier
+        - message
+        - reference
+        - state
       type: object
       properties:
         reference:
+          maxLength: 35
+          minLength: 35
           type: string
-          nullable: true
+          description: A unique reference for this manifest.
         carrier:
           $ref: '#/components/schemas/Sorted.Shipments.DataContracts.CarrierDetails'
         message:
           type: string
-          nullable: true
+          description: A plain-text message providing details of the result.
         state:
           $ref: '#/components/schemas/Sorted.Shipments.DataContracts.Enums.ShipmentState'
         shipment_count:
           type: integer
+          description: The number of `shipments` identified to be manifested.
           format: int32
         _links:
+          minItems: 0
           type: array
           items:
             $ref: '#/components/schemas/Sorted.Shipments.DataContracts.Link'
+          description: 'A list of related resources, if applicable.'
           nullable: true
       additionalProperties: false
+      description: "A `manifest_result` provides details of the result of a manifest operation for a single `shipment`. Multiple\r\n`manifest_results` are returned as part of a `manifest_response`."
     Sorted.Shipments.DataContracts.ManifestResponse:
       required:
         - manifest_results
@@ -3631,26 +3764,36 @@ components:
       type: object
       properties:
         shipments:
+          maxItems: 100
+          minItems: 1
           type: array
           items:
             type: string
+          description: "References of one or more `shipments` to manifest.\r\n            \r\nMust include 1 or more valid existing `shipment` references. A maximum of 100 `shipments` can be manifested\r\nat once using this method."
       additionalProperties: false
+      description: "A `manifest_request` is used to manually manifest one or more `shipments` that are in a valid `state` to be\r\nmanifested with the carrier."
     Sorted.Shipments.DataContracts.ShipmentStateChangeRequest:
       required:
         - reason
         - reference
+        - state
       type: object
       properties:
         reference:
+          maxLength: 35
+          minLength: 35
           type: string
+          description: "The reference of the `shipment` to change.\r\n            \r\nMust be a valid `shipment` reference for an existing `shipment`."
         state:
           type: string
-          nullable: true
+          description: The desired `shipment_state` to transition to.
         reason:
           maxLength: 100
           minLength: 5
           type: string
+          description: The reason for the change. This forms part of the `shipment's` audit history.
       additionalProperties: false
+      description: "A `shipment_state_change_request` can be used to modify the `state` of a `shipment` manually. Only certain\r\n`state` transitions are permitted. This functionality should be used in exceptional circumstances when Sorted\r\nis unable to transition a `state` automatically (e.g. due to unavailable tracking details)"
   securitySchemes:
     API Key:
       type: apiKey
