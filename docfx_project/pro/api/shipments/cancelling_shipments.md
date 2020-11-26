@@ -7,7 +7,7 @@ created: 06/10/2020
 ---
 # Cancelling Shipments
 
-This page explains how to cancel shipments in PRO.
+This page explains how to cancel and delete shipments in PRO.
 
 ---
 
@@ -52,11 +52,11 @@ PUT https://api.sorted.com/pro/shipments/sp_00792815110958000332875334549504/can
 ```
 ---
 
-<!-- ## Deleting Shipments
+## Deleting Shipments
 
 To delete a cancelled shipment, use the **Delete Shipment** endpoint. You can call **Delete Shipment** by sending a `DELETE` request to `https://api.sorted.com/pro/shipments/{reference}`, where `{reference}` refers to the shipment you want to delete. Once the request has been received, PRO permanently deletes the shipment's data and returns a confirmation message.
 
-You can only delete shipments that are in a `state` of _cancelled_. If you attempt to delete a shipment that has not been cancelled then PRO returns an error
+You can only delete shipments that are in a `state` of _cancelled_. If you attempt to delete a shipment that has not been cancelled then PRO returns an error.
 
 > [!NOTE]
 >
@@ -81,8 +81,6 @@ DELETE https://api.sorted.com/pro/shipments/sp_00595452779180472847666078547968
 }
 ```
 ---
-
--->
 
 ## Next Steps
 

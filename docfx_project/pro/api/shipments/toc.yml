@@ -12,8 +12,10 @@
   - name: Cancelling Shipments
     href: cancelling_shipments.md
   - name: Adding Paperless Docs
-    href: adding_paperless_documents.md    
-  - name: Shipment States
+    href: adding_paperless_documents.md
+  - name: Changing Shipment States Manually
+    href: changing_shipment_states_manually.md      
+  - name: List of Shipment States
     href: shipment_states.md                            
 - name: Allocating Shipments
   href: allocating_shipments.md
