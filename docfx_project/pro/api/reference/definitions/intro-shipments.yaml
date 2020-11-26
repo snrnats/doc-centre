@@ -1,0 +1,71 @@
+description: |
+  # Introduction
+
+  PRO's Shipments functionality was introduced as an extension to the previous Consignments API suite. PRO's Shipments API collection offers unparalleled flexibility, with support for on-demand collections from multiple locations (e.g. a ship-from-store model) as well the regular scheduled fulfilment centre collections supported by Consignments.
+
+  Shipments also offers the ability to group shipments together for ease of management, an improved dangerous goods specification and enhanced customs functionality, among many other features.
+                                                
+  All API calls require a valid `x-api-key` header to be provided; without this header you will receive a `401 Unauthorised` response.
+                                                
+  This API is documented in [OpenAPI format v3.0](https://swagger.io/specification/). If you spot any errors in this documentation, please drop us an email at [support@sorted.com](mailto:support@sorted.com).
+                                                
+  # Errors
+                                                
+  The Shipments API uses standard HTTP response codes to indicate the success or failure of each API call. The body of an unsuccessful response will be in JSON in the following format:
+                                                
+  ```json
+  {
+    "correlation_id": "6c4e6a77-feab-42ab-9d7b-f559dc1b90ca",
+    "code": "validation_error",
+    "message": "A provided property has an invalid format",
+    "details": [
+      {
+        "property": "addresses[0].contact.contact_details.email",
+        "code": "invalid_format",
+        "message": "'test@something' is not a valid email address"
+      }
+    ],
+  "_links": [
+      {
+        "href": "https://api.sorted.com/pro/api/shipments/errors/400_invalid_format.html",
+        "rel": "documentation",
+        "reference": "invalid_format" 
+      }
+    ]
+  }
+  ```
+                                               
+  # Authentication
+                                                
+  This API requires an API key of `x-api-key` with every request.
+                                                
+  You will receive an initial API key your account is created. Requests _without_ an `x-api-key` header will be rejected with a `401 Access Denied` response.
+                                                
+  <SecurityDefinitions />
+                                                
+  # API Version
+                                                
+  The current version of all APIs is `1.1`. **All** requests require a header of `x-api-version` with a value of `1.1`. Any request without this value will be rejected.
+                                                
+  | Required Header | Value |
+  |-----------------|:-----:|
+  | `x-api-version` | `1.1` |
+                                                
+  # Content Types
+                                                
+  The Sorted Shipments API supports `application/json` only.
+                                                
+  All requests should include the following headers:
+                                                
+  | Required Header | Value |
+  |-----------------|:-----:|
+  | `Accept`        | `application/json` |
+  | `Content-Type`  | `application/json` |
+                                                
+  # Compression
+                                                
+  The Sorted Shipments API supports `gzip` compression which can be enabled with the following header:
+                                                
+  | Header | Value |
+  |--------|:-----:|
+  | `Content-Encoding` | `gzip` |

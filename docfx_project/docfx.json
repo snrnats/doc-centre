@@ -43,8 +43,7 @@
           "react/help/images/**",
           "images/**",
           "pro/api/swagger.json",
-          "pro/api/swagger.yaml",
-          "pro/api/swagger-temp.yaml"
+          "pro/api/reference/definitions/*.yaml"
         ]
       },
       {
