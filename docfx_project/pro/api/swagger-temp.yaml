@@ -12,397 +12,6 @@ servers:
   - url: https://api.sorted.com/prosandbox/
     description: Sandbox
 paths:
-  '/shipment_groups/custom_reference/{customReference}/latest/shipments/{shipmentReference}':
-    put:
-      tags:
-        - Shipment Groups
-      summary: Add Shipment to Shipment Group by Custom Reference
-      description: This endpoint provides the simplest possible method of adding a single `shipment` to an existing `shipment_group`.
-      parameters:
-        - name: customReference
-          in: path
-          description: The custom reference of the `shipment_group` to add the `shipment` to
-          required: true
-          schema:
-            type: string
-            description: The custom reference of the `shipment_group` to add the `shipment` to
-        - name: shipmentReference
-          in: path
-          description: The reference of the `shipment` to add to the `shipment_group`
-          required: true
-          schema:
-            type: string
-            description: The reference of the `shipment` to add to the `shipment_group`
-        - name: x-api-version
-          in: header
-          description: The version of the API to use.  Version `1.1` should be supplied with all requests.
-          required: true
-          style: simple
-          schema:
-            type: string
-            description: The version of the API to use. Version `1.1` should be supplied with all requests.
-      responses:
-        '200':
-          description: The `shipment_group` has been updated successfully
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ShipmentGroupResponse'
-        '304':
-          description: The `shipment` already exists in the `shipment_group`
-        '400':
-          description: There is a validation error in your request
-        '403':
-          description: You do not have permission to update a `shipment_group`
-        '404':
-          description: The `shipment_group` could not be found
-        '409':
-          description: The `shipment_group` is locked or closed and cannot be updated
-    delete:
-      tags:
-        - Shipment Groups
-      summary: Remove Shipment from Shipment Group by Custom Reference
-      description: This endpoint allows you to remove a `shipment` from a `shipment_group` using your own `custom_reference` for the group.
-      parameters:
-        - name: customReference
-          in: path
-          description: The custom reference of `shipment_group`
-          required: true
-          schema:
-            type: string
-            description: The custom reference of `shipment_group`
-        - name: shipmentReference
-          in: path
-          description: The reference of the `shipment` to remove from the `shipment_group`
-          required: true
-          schema:
-            type: string
-            description: The reference of the `shipment` to remove from the `shipment_group`
-        - name: x-api-version
-          in: header
-          description: The version of the API to use.  Version `1.1` should be supplied with all requests.
-          required: true
-          style: simple
-          schema:
-            type: string
-            description: The version of the API to use. Version `1.1` should be supplied with all requests.
-      responses:
-        '200':
-          description: The `shipment_group` has been updated successfully
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ShipmentGroupResponse'
-        '304':
-          description: The `shipment` is not a member of the `shipment_group`
-        '400':
-          description: There is a validation error in your request
-        '403':
-          description: You do not have permission to update a `shipment_group`
-        '404':
-          description: The `shipment_group` could not be found
-        '409':
-          description: The `shipment_group` is locked or closed and cannot be updated
-  '/shipment_groups/custom_reference/{customReference}/{version}/shipments/{shipmentReference}':
-    put:
-      tags:
-        - Shipment Groups
-      summary: Add Shipment to Shipment Group by Custom Reference and Version
-      description: This endpoint allows you to add a `shipment` to a `shipment_group` using your own custom reference for the group.
-      parameters:
-        - name: customReference
-          in: path
-          description: The custom reference of the `shipment_group` to add the `shipment` to
-          required: true
-          schema:
-            type: string
-            description: The custom reference of the `shipment_group` to add the `shipment` to
-        - name: version
-          in: path
-          description: The `version` of the `shipment_group` to add the `shipment` to
-          required: true
-          schema:
-            type: integer
-            description: The `version` of the `shipment_group` to add the `shipment` to
-            format: int32
-        - name: shipmentReference
-          in: path
-          description: The `reference` of the `shipment` to add to the `shipment_group`
-          required: true
-          schema:
-            type: string
-            description: The `reference` of the `shipment` to add to the `shipment_group`
-        - name: x-api-version
-          in: header
-          description: The version of the API to use.  Version `1.1` should be supplied with all requests.
-          required: true
-          style: simple
-          schema:
-            type: string
-            description: The version of the API to use. Version `1.1` should be supplied with all requests.
-      responses:
-        '200':
-          description: The `shipment_group` has been updated successfully
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ShipmentGroupResponse'
-        '304':
-          description: The `shipment` already exists in the `shipment_group`
-        '400':
-          description: There is a validation error in your request
-        '403':
-          description: You do not have permission to update a `shipment_group`
-        '404':
-          description: The `shipment_group` could not be found
-        '409':
-          description: The `shipment_group` is locked or closed and cannot be updated
-    delete:
-      tags:
-        - Shipment Groups
-      summary: Remove Shipment from Shipment Group by Custom Reference
-      description: This endpoint allows you to remove a `shipment` from a `shipment_group` using your own `custom_reference` for the group.
-      parameters:
-        - name: customReference
-          in: path
-          description: The custom reference of `shipment_group`
-          required: true
-          schema:
-            type: string
-            description: The custom reference of `shipment_group`
-        - name: version
-          in: path
-          description: The version of the `shipment_group`
-          required: true
-          schema:
-            type: integer
-            description: The version of the `shipment_group`
-            format: int32
-        - name: shipmentReference
-          in: path
-          description: The `reference` of the `shipment` to remove from the `shipment_group`
-          required: true
-          schema:
-            type: string
-            description: The `reference` of the `shipment` to remove from the `shipment_group`
-        - name: x-api-version
-          in: header
-          description: The version of the API to use.  Version `1.1` should be supplied with all requests.
-          required: true
-          style: simple
-          schema:
-            type: string
-            description: The version of the API to use. Version `1.1` should be supplied with all requests.
-      responses:
-        '200':
-          description: The `shipment_group` has been updated successfully
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ShipmentGroupResponse'
-        '304':
-          description: The `shipment` is not a member of the `shipment_group`
-        '400':
-          description: There is a validation error in your request
-        '403':
-          description: You do not have permission to update a `shipment_group`
-        '404':
-          description: The `shipment_group` could not be found
-        '409':
-          description: The `shipment_group` is locked or is closed and cannot be updated
-  '/shipment_groups/{shipmentGroupReference}/shipments/{shipmentReference}':
-    put:
-      tags:
-        - Shipment Groups
-      summary: Add Shipment to Shipment Group
-      description: This endpoint allows you to add a `shipment` to an exist `shipment_group`.
-      parameters:
-        - name: shipmentGroupReference
-          in: path
-          description: The reference of the `shipment_group` to add the `shipment` to
-          required: true
-          schema:
-            type: string
-            description: The reference of the `shipment_group` to add the `shipment` to
-        - name: shipmentReference
-          in: path
-          description: The `reference` of the `shipment` to add to the `shipment_group`
-          required: true
-          schema:
-            type: string
-            description: The `reference` of the `shipment` to add to the `shipment_group`
-        - name: x-api-version
-          in: header
-          description: The version of the API to use.  Version `1.1` should be supplied with all requests.
-          required: true
-          style: simple
-          schema:
-            type: string
-            description: The version of the API to use. Version `1.1` should be supplied with all requests.
-      responses:
-        '200':
-          description: The `shipment_group` has been updated successfully
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ShipmentGroupResponse'
-        '304':
-          description: The `shipment` already exists in the `shipment_group`
-        '400':
-          description: There is a validation error in your request
-        '403':
-          description: You do not have permission to update a `shipment_group`
-        '404':
-          description: The `shipment_group` could not be found
-        '409':
-          description: The `shipment_group` is locked or closed and cannot be updated
-    delete:
-      tags:
-        - Shipment Groups
-      summary: Remove Shipment from Shipment Group
-      description: This endpoint allows you to remove a `shipment` from a `shipment_group`.
-      parameters:
-        - name: shipmentGroupReference
-          in: path
-          description: The `reference` of the `shipment_group`
-          required: true
-          schema:
-            type: string
-            description: The `reference` of the `shipment_group`
-        - name: shipmentReference
-          in: path
-          description: The `reference` of the `shipment` to remove from the `shipment_group`
-          required: true
-          schema:
-            type: string
-            description: The `reference` of the `shipment` to remove from the `shipment_group`
-        - name: x-api-version
-          in: header
-          description: The version of the API to use.  Version `1.1` should be supplied with all requests.
-          required: true
-          style: simple
-          schema:
-            type: string
-            description: The version of the API to use. Version `1.1` should be supplied with all requests.
-      responses:
-        '200':
-          description: The `shipment_group` has been updated successfully
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ShipmentGroupResponse'
-        '304':
-          description: The `shipment` is not a member of the `shipment_group`
-        '400':
-          description: There is a validation error in your request
-        '403':
-          description: You do not have permission to update a `shipment_group`
-        '404':
-          description: The `shipment_group` could not be found
-        '409':
-          description: The `shipment_group` is locked or closed and cannot be updated
-  '/shipments/{shipmentReference}/allocate':
-    put:
-      tags:
-        - Allocation
-      summary: Allocate Shipment with Default Rules
-      description: "This endpoint is used when you wish to allocate a single `shipment` using Sorted's allocation engine. If you require allocation of multiple `shipments`\r\nin a single operation, you should use the Allocate Shipments endpoint.\r\n            \r\nWhen allocating using this endpoint, Sorted will automatically determine the most appropriate carrier service based on several factors, including:\r\n            \r\n- Configured shipping rules\r\n- Configured shipping modes\r\n- Required shipping dates (if specified)\r\n- Required delivery dates (if specified)\r\n- Carrier availability\r\n- Carrier service price"
-      parameters:
-        - name: shipmentReference
-          in: path
-          description: The reference of the `shipment` to allocate
-          required: true
-          schema:
-            type: string
-            description: The reference of the `shipment` to allocate
-        - name: x-api-version
-          in: header
-          description: The version of the API to use.  Version `1.1` should be supplied with all requests.
-          required: true
-          style: simple
-          schema:
-            type: string
-            description: The version of the API to use. Version `1.1` should be supplied with all requests.
-      responses:
-        '200':
-          description: The `shipment` has been allocated successfully
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult'
-              example: {
-  "shipment_reference": "sp_00872754269501937581214694113280",
-  "state": "allocated",
-  "price": {
-    "net": 10.0,
-    "gross": 12.0,
-    "taxes": [
-      {
-        "rate": {
-          "reference": "gb_standard",
-          "country_iso_code": "GB",
-          "type": "standard",
-          "value": 0.2
-        },
-        "amount": 0.0
-      }
-    ],
-    "currency": "GBP"
-  },
-  "message": "Shipment sp_00872754269501937581214694113280 has been allocated successfully",
-  "carrier": {
-    "reference": "DNQ",
-    "name": "DNQ Worldwide",
-    "service_reference": "DNQ72",
-    "service_name": "DNQ 72-Hour Express"
-  },
-  "tracking_details": {
-    "shipment": {
-      "reference": "sp_00872754269501937581214694113280",
-      "tracking_references": [
-        "te_00872754269501937581214694113281"
-      ],
-      "_links": []
-    },
-    "contents": [
-      {
-        "reference": "sc_00872754269501937581214694113282",
-        "tracking_references": [
-          "te_00872754269501937581214694113283"
-        ],
-        "_links": []
-      }
-    ]
-  },
-  "_links": [
-    {
-      "href": "https://api.sorted.com/pro/labels/sp_00872754269501937581214694113280/pdf",
-      "rel": "label",
-      "reference": "sp_00872754269501937581214694113280",
-      "type": "label"
-    },
-    {
-      "href": "https://api.sorted.com/pro/labels/sp_00872754269501937581214694113280/zpl",
-      "rel": "label",
-      "reference": "sp_00872754269501937581214694113280",
-      "type": "label"
-    },
-    {
-      "href": "https://api.sorted.com/pro/shipments/sp_00872754269501937581214694113280",
-      "rel": "shipment",
-      "reference": "sp_00872754269501937581214694113280",
-      "type": "shipment"
-    }
-  ]
-}
-        '202':
-          description: The `shipment` has been queued for allocation
-        '400':
-          description: There is a validation error in your request
-        '404':
-          description: No `shipment` could be found with the provided reference
-        '521':
-          description: Allocation has failed - the `shipment` could not be allocated
   /shipments/allocate:
     put:
       tags:
@@ -592,7 +201,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult'
               example: {
-  "shipment_reference": "sp_00872754271014570595258877345796",
+  "shipment_reference": "sp_00873967816802791740917076197376",
   "state": "allocated",
   "price": {
     "net": 10.0,
@@ -610,7 +219,7 @@ paths:
     ],
     "currency": "GBP"
   },
-  "message": "Shipment sp_00872754271014570595258877345796 has been allocated successfully",
+  "message": "Shipment sp_00873967816802791740917076197376 has been allocated successfully",
   "carrier": {
     "reference": "DNQ",
     "name": "DNQ Worldwide",
@@ -619,17 +228,17 @@ paths:
   },
   "tracking_details": {
     "shipment": {
-      "reference": "sp_00872754271014570595258877345796",
+      "reference": "sp_00873967816802791740917076197376",
       "tracking_references": [
-        "te_00872754271014570595258877345797"
+        "te_00873967816821238484990785748992"
       ],
       "_links": []
     },
     "contents": [
       {
-        "reference": "sc_00872754271014570595258877345798",
+        "reference": "sc_00873967816821238484990785748993",
         "tracking_references": [
-          "te_00872754271014570595258877345799"
+          "te_00873967816821238484990785748994"
         ],
         "_links": []
       }
@@ -637,21 +246,21 @@ paths:
   },
   "_links": [
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00872754271014570595258877345796/pdf",
+      "href": "https://api.sorted.com/pro/labels/sp_00873967816802791740917076197376/pdf",
       "rel": "label",
-      "reference": "sp_00872754271014570595258877345796",
+      "reference": "sp_00873967816802791740917076197376",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00872754271014570595258877345796/zpl",
+      "href": "https://api.sorted.com/pro/labels/sp_00873967816802791740917076197376/zpl",
       "rel": "label",
-      "reference": "sp_00872754271014570595258877345796",
+      "reference": "sp_00873967816802791740917076197376",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/shipments/sp_00872754271014570595258877345796",
+      "href": "https://api.sorted.com/pro/shipments/sp_00873967816802791740917076197376",
       "rel": "shipment",
-      "reference": "sp_00872754271014570595258877345796",
+      "reference": "sp_00873967816802791740917076197376",
       "type": "shipment"
     }
   ]
@@ -701,7 +310,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult'
               example: {
-  "shipment_reference": "sp_00872754271162144547848553758724",
+  "shipment_reference": "sp_00873967816876578717211914403844",
   "state": "allocated",
   "price": {
     "net": 10.0,
@@ -719,7 +328,7 @@ paths:
     ],
     "currency": "GBP"
   },
-  "message": "Shipment sp_00872754271162144547848553758724 has been allocated successfully",
+  "message": "Shipment sp_00873967816876578717211914403844 has been allocated successfully",
   "carrier": {
     "reference": "DNQ",
     "name": "DNQ Worldwide",
@@ -728,17 +337,17 @@ paths:
   },
   "tracking_details": {
     "shipment": {
-      "reference": "sp_00872754271162144547848553758724",
+      "reference": "sp_00873967816876578717211914403844",
       "tracking_references": [
-        "te_00872754271162144547848553758725"
+        "te_00873967816895025461285623955456"
       ],
       "_links": []
     },
     "contents": [
       {
-        "reference": "sc_00872754271162144547848553758726",
+        "reference": "sc_00873967816895025461285623955457",
         "tracking_references": [
-          "te_00872754271162144547848553758727"
+          "te_00873967816895025461285623955458"
         ],
         "_links": []
       }
@@ -746,21 +355,21 @@ paths:
   },
   "_links": [
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00872754271162144547848553758724/pdf",
+      "href": "https://api.sorted.com/pro/labels/sp_00873967816876578717211914403844/pdf",
       "rel": "label",
-      "reference": "sp_00872754271162144547848553758724",
+      "reference": "sp_00873967816876578717211914403844",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00872754271162144547848553758724/zpl",
+      "href": "https://api.sorted.com/pro/labels/sp_00873967816876578717211914403844/zpl",
       "rel": "label",
-      "reference": "sp_00872754271162144547848553758724",
+      "reference": "sp_00873967816876578717211914403844",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/shipments/sp_00872754271162144547848553758724",
+      "href": "https://api.sorted.com/pro/shipments/sp_00873967816876578717211914403844",
       "rel": "shipment",
-      "reference": "sp_00872754271162144547848553758724",
+      "reference": "sp_00873967816876578717211914403844",
       "type": "shipment"
     }
   ]
@@ -810,7 +419,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult'
               example: {
-  "shipment_reference": "sp_00872754271309718500438230171652",
+  "shipment_reference": "sp_00873967816931918949433043058692",
   "state": "allocated",
   "price": {
     "net": 10.0,
@@ -828,7 +437,7 @@ paths:
     ],
     "currency": "GBP"
   },
-  "message": "Shipment sp_00872754271309718500438230171652 has been allocated successfully",
+  "message": "Shipment sp_00873967816931918949433043058692 has been allocated successfully",
   "carrier": {
     "reference": "DNQ",
     "name": "DNQ Worldwide",
@@ -837,17 +446,17 @@ paths:
   },
   "tracking_details": {
     "shipment": {
-      "reference": "sp_00872754271309718500438230171652",
+      "reference": "sp_00873967816931918949433043058692",
       "tracking_references": [
-        "te_00872754271309718500438230171653"
+        "te_00873967816950365693506752610304"
       ],
       "_links": []
     },
     "contents": [
       {
-        "reference": "sc_00872754271309718500438230171654",
+        "reference": "sc_00873967816950365693506752610305",
         "tracking_references": [
-          "te_00872754271309718500438230171655"
+          "te_00873967816950365693506752610306"
         ],
         "_links": []
       }
@@ -855,21 +464,21 @@ paths:
   },
   "_links": [
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00872754271309718500438230171652/pdf",
+      "href": "https://api.sorted.com/pro/labels/sp_00873967816931918949433043058692/pdf",
       "rel": "label",
-      "reference": "sp_00872754271309718500438230171652",
+      "reference": "sp_00873967816931918949433043058692",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00872754271309718500438230171652/zpl",
+      "href": "https://api.sorted.com/pro/labels/sp_00873967816931918949433043058692/zpl",
       "rel": "label",
-      "reference": "sp_00872754271309718500438230171652",
+      "reference": "sp_00873967816931918949433043058692",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/shipments/sp_00872754271309718500438230171652",
+      "href": "https://api.sorted.com/pro/shipments/sp_00873967816931918949433043058692",
       "rel": "shipment",
-      "reference": "sp_00872754271309718500438230171652",
+      "reference": "sp_00873967816931918949433043058692",
       "type": "shipment"
     }
   ]
@@ -919,7 +528,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult'
               example: {
-  "shipment_reference": "sp_00872754271438845708954197032964",
+  "shipment_reference": "sp_00873967817005705925727881265152",
   "state": "allocated",
   "price": {
     "net": 10.0,
@@ -937,7 +546,7 @@ paths:
     ],
     "currency": "GBP"
   },
-  "message": "Shipment sp_00872754271438845708954197032964 has been allocated successfully",
+  "message": "Shipment sp_00873967817005705925727881265152 has been allocated successfully",
   "carrier": {
     "reference": "DNQ",
     "name": "DNQ Worldwide",
@@ -946,17 +555,17 @@ paths:
   },
   "tracking_details": {
     "shipment": {
-      "reference": "sp_00872754271438845708954197032964",
+      "reference": "sp_00873967817005705925727881265152",
       "tracking_references": [
-        "te_00872754271438845708954197032965"
+        "te_00873967817005705925727881265153"
       ],
       "_links": []
     },
     "contents": [
       {
-        "reference": "sc_00872754271438845708954197032966",
+        "reference": "sc_00873967817005705925727881265154",
         "tracking_references": [
-          "te_00872754271438845708954197032967"
+          "te_00873967817005705925727881265155"
         ],
         "_links": []
       }
@@ -964,21 +573,21 @@ paths:
   },
   "_links": [
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00872754271438845708954197032964/pdf",
+      "href": "https://api.sorted.com/pro/labels/sp_00873967817005705925727881265152/pdf",
       "rel": "label",
-      "reference": "sp_00872754271438845708954197032964",
+      "reference": "sp_00873967817005705925727881265152",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00872754271438845708954197032964/zpl",
+      "href": "https://api.sorted.com/pro/labels/sp_00873967817005705925727881265152/zpl",
       "rel": "label",
-      "reference": "sp_00872754271438845708954197032964",
+      "reference": "sp_00873967817005705925727881265152",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/shipments/sp_00872754271438845708954197032964",
+      "href": "https://api.sorted.com/pro/shipments/sp_00873967817005705925727881265152",
       "rel": "shipment",
-      "reference": "sp_00872754271438845708954197032964",
+      "reference": "sp_00873967817005705925727881265152",
       "type": "shipment"
     }
   ]
@@ -1101,50 +710,6 @@ paths:
           description: You do not have permission to create `quotes`
         '531':
           description: The request was valid but there are no `quotes` available.
-  '/shipments/quote/service_group/{group_ref}':
-    post:
-      tags:
-        - Quotes
-      summary: Create Quote by Service Group
-      description: "This endpoint is used to retrieve a list of carrier service within a specific service group that are\r\ncapable of carrying a `shipment`, based on the properties of the `shipment` such as `dimensions`, `weight`,\r\n`addresses`, and delivery promise. `Quotes` will be generated according to the \"default rules\" in the\r\ncustomer's account for the services included in the specified `service_group`.\r\n            \r\n> Note: although not used to create an actual `shipment`, this endpoint uses the same request type\r\n(`create_shipment_request`) as the Create Shipment operation in order to allow customers to re-use the\r\nsame object in the flow: create `quote`, identify suitable `quote`, create `shipment`, allocate `shipment`."
-      parameters:
-        - name: group_ref
-          in: path
-          description: The reference of the carrier service group to quote with
-          required: true
-          schema:
-            type: string
-            description: The reference of the carrier service group to quote with
-            nullable: true
-        - name: x-api-version
-          in: header
-          description: The version of the API to use.  Version `1.1` should be supplied with all requests.
-          required: true
-          style: simple
-          schema:
-            type: string
-            description: The version of the API to use. Version `1.1` should be supplied with all requests.
-      requestBody:
-        description: A `create_shipment_request`.
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Sorted.Shipments.DataContracts.CreateShipmentRequest'
-      responses:
-        '201':
-          description: The request was successful. The response will include the `quote` details
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.QuoteResult'
-        '400':
-          description: There is a validation error in your request
-        '404':
-          description: The `service_group` could not be found
-        '403':
-          description: You do not have permission to create `quotes`
-        '531':
-          description: The request was valid but could not be fulfilled
   /shipments:
     post:
       tags:
@@ -1177,39 +742,6 @@ paths:
           description: There is a validation error in your request
         '403':
           description: You do not have permission to create a `shipment`
-    put:
-      tags:
-        - Shipments
-      summary: Update Shipment
-      description: "This endpoint is used to update an existing `shipment` within SortedPRO. The `shipment` must already exist,\r\nand the account used to perform the API request must have permission to update `shipments`."
-      parameters:
-        - name: x-api-version
-          in: header
-          description: The version of the API to use.  Version `1.1` should be supplied with all requests.
-          required: true
-          style: simple
-          schema:
-            type: string
-            description: The version of the API to use. Version `1.1` should be supplied with all requests.
-      requestBody:
-        description: An `update_shipment_request`
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Sorted.Shipments.DataContracts.UpdateShipmentRequest'
-      responses:
-        '200':
-          description: The `shipment` has been updated successfully.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ResourceResult'
-        '400':
-          description: There is a validation error in your request
-        '403':
-          description: You do not have permission to update the `shipment`
-        '404':
-          description: The `shipment` could not be found
   /shipment_groups:
     post:
       tags:
@@ -1634,43 +1166,6 @@ paths:
           description: The `shipment_group` could not be found
         '409':
           description: The `shipment_group` is already unlocked or is closed and cannot be locked
-  '/shipment_groups/{shipmentGroupReference}/manifest':
-    post:
-      tags:
-        - Manifest
-      summary: Manifest Shipments by Shipment Group
-      description: "This endpoint can be used to manifest all `shipments` within a `shipment_group` as a single operation.\r\n            \r\n> Note: it is still possible to manifest `shipments` within a group via other methods, as this endpoint's\r\nimplementation will only attempt to manifest `shipments` that are not already manifested. This endpoint is\r\nnot idempotent, as multiple calls can have different results."
-      parameters:
-        - name: shipmentGroupReference
-          in: path
-          description: The reference of the `shipment_group`
-          required: true
-          schema:
-            type: string
-            description: The reference of the `shipment_group`
-        - name: x-api-version
-          in: header
-          description: The version of the API to use.  Version `1.1` should be supplied with all requests.
-          required: true
-          style: simple
-          schema:
-            type: string
-            description: The version of the API to use. Version `1.1` should be supplied with all requests.
-      responses:
-        '202':
-          description: The `shipments` have been queued for manifest successfully.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ManifestResponse'
-        '200':
-          description: The `shipments` have been manifested successfully.
-        '400':
-          description: There is a validation error in your request
-        '403':
-          description: You do not have permission to access the `shipment_group` or to manifest `shipments`
-        '404':
-          description: The `shipment_group` could not be found
   '/shipments/{shipmentReference}/manifest':
     put:
       tags:
@@ -1782,85 +1277,20 @@ paths:
           description: The `shipment` could not be found
 components:
   schemas:
-    Sorted.Shipments.DataContracts.ApiErrorMessage:
+    Sorted.Shipments.DataContracts.AllocateRequest:
       required:
-        - code
-        - message
+        - shipments
       type: object
       properties:
-        property:
-          type: string
-          description: "The path to the affected property, if applicable.\r\n            \r\n> Note: this will be expressed in JSON Path format e.g. `$.addresses[0].address_type` indicates an issue\r\nwith the property `address_type` for the first provided address."
-          nullable: true
-        message:
-          type: string
-          description: A plain-text summary of the error.
-        code:
-          type: string
-          description: A pre-defined code for this error.
-      additionalProperties: false
-      description: The `api_error_message` object provides further information relating to errors.
-    Sorted.Shipments.DataContracts.Link:
-      required:
-        - href
-        - rel
-        - type
-      type: object
-      properties:
-        href:
-          type: string
-          description: The URL of the resource
-        rel:
-          type: string
-          description: "A string representing the relationship of the linked resource to the current resource. For example, a\r\n`link` to a `shipment` will have a value of `shipment`. Links to the current object will have a `rel` of\r\n`self`."
-        reference:
-          type: string
-          description: "When a `link` is a pointer to a resource with a unique reference, this property will contain the reference.\r\nFor instance, a `link` for a `shipment` will contain the `shipment's` reference in this field."
-          nullable: true
-        type:
-          type: string
-          description: The type of resource that this `link` points to.
-      additionalProperties: false
-      description: "A `link` object that provides a pointer to a resource. Links are provided, for example, following the\r\ncreation of a new resource (such as a `shipment`). The `link` will provide access to the created resource."
-    Sorted.Shipments.DataContracts.ShipmentGroupResponse:
-      required:
-        - reference
-      type: object
-      properties:
-        errors:
-          minItems: 0
+        shipments:
+          maxItems: 100
+          minItems: 1
           type: array
           items:
-            $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiErrorMessage'
-          description: Any error(s) relating to the operation
-          nullable: true
-        reference:
-          maxLength: 35
-          minLength: 35
-          type: string
-          description: The unique reference for this resource generated by Sorted at the point of creation.
-        custom_reference:
-          type: string
-          description: 'Your own custom reference for this object, if applicable.'
-          nullable: true
-        message:
-          type: string
-          description: An optional message relating to the result of the operation.
-          nullable: true
-        version:
-          type: integer
-          description: 'An optional version for this resource, if applicable.'
-          format: int32
-          nullable: true
-        _links:
-          minItems: 0
-          type: array
-          items:
-            $ref: '#/components/schemas/Sorted.Shipments.DataContracts.Link'
-          description: 'Links to the current resource and any related resources, if applicable.'
-          nullable: true
+            type: string
+          description: "The reference(s) of the `shipment(s)` to be allocated.\r\n            \r\nAt least one valid reference must be provided. A maximum of 100 `shipments` can be allocated at once using\r\nthis method. This is to ensure the continued optimal performance of the Sorted platform."
       additionalProperties: false
-      description: Provides details of the result of an operation relating to a `shipment_group`
+      description: "An `allocate_request` is used to request allocation of one or more `shipments` with a carrier. This object is\r\nintended for use when allowing Sorted's allocation engine to determine the most appropriate carrier based on:\r\n            \r\n- Configured allocation/shipping rules\r\n- Configured shipping modes\r\n- Carrier availability for required shipping and/or delivery dates\r\n- The price of each carrier service"
     Sorted.Shipments.DataContracts.Enums.ShipmentState:
       enum:
         - unallocated
@@ -1999,6 +1429,28 @@ components:
           nullable: true
       additionalProperties: false
       description: "The `carrier_details` object provides details of a carrier and carrier service and is usually (but not\r\nalways) linked to an `allocation`."
+    Sorted.Shipments.DataContracts.Link:
+      required:
+        - href
+        - rel
+        - type
+      type: object
+      properties:
+        href:
+          type: string
+          description: The URL of the resource
+        rel:
+          type: string
+          description: "A string representing the relationship of the linked resource to the current resource. For example, a\r\n`link` to a `shipment` will have a value of `shipment`. Links to the current object will have a `rel` of\r\n`self`."
+        reference:
+          type: string
+          description: "When a `link` is a pointer to a resource with a unique reference, this property will contain the reference.\r\nFor instance, a `link` for a `shipment` will contain the `shipment's` reference in this field."
+          nullable: true
+        type:
+          type: string
+          description: The type of resource that this `link` points to.
+      additionalProperties: false
+      description: "A `link` object that provides a pointer to a resource. Links are provided, for example, following the\r\ncreation of a new resource (such as a `shipment`). The `link` will provide access to the created resource."
     Sorted.Shipments.DataContracts.TrackingReference:
       required:
         - reference
@@ -2039,6 +1491,24 @@ components:
           nullable: true
       additionalProperties: false
       description: "This object provides details of tracking provided by the carrier at the point of allocation. Depending on\r\nthe carrier, tracking references may be provided for the whole `shipment`, or for the whole `shipment` and/or\r\nfor individual `shipment_contents`."
+    Sorted.Shipments.DataContracts.ApiErrorMessage:
+      required:
+        - code
+        - message
+      type: object
+      properties:
+        property:
+          type: string
+          description: "The path to the affected property, if applicable.\r\n            \r\n> Note: this will be expressed in JSON Path format e.g. `$.addresses[0].address_type` indicates an issue\r\nwith the property `address_type` for the first provided address."
+          nullable: true
+        message:
+          type: string
+          description: A plain-text summary of the error.
+        code:
+          type: string
+          description: A pre-defined code for this error.
+      additionalProperties: false
+      description: The `api_error_message` object provides further information relating to errors.
     Sorted.Shipments.DataContracts.ApiError:
       required:
         - code
@@ -2185,20 +1655,6 @@ components:
           $ref: '#/components/schemas/Sorted.Shipments.DataContracts.PaperlessDocuments'
       additionalProperties: false
       description: "An `allocate_result` is returned for all requests to allocate a `shipment`. The object contains details of the operation\r\nresult, as well as the details of the allocation or, in the case of a failed allocation, details of the allocation failure."
-    Sorted.Shipments.DataContracts.AllocateRequest:
-      required:
-        - shipments
-      type: object
-      properties:
-        shipments:
-          maxItems: 100
-          minItems: 1
-          type: array
-          items:
-            type: string
-          description: "The reference(s) of the `shipment(s)` to be allocated.\r\n            \r\nAt least one valid reference must be provided. A maximum of 100 `shipments` can be allocated at once using\r\nthis method. This is to ensure the continued optimal performance of the Sorted platform."
-      additionalProperties: false
-      description: "An `allocate_request` is used to request allocation of one or more `shipments` with a carrier. This object is\r\nintended for use when allowing Sorted's allocation engine to determine the most appropriate carrier based on:\r\n            \r\n- Configured allocation/shipping rules\r\n- Configured shipping modes\r\n- Carrier availability for required shipping and/or delivery dates\r\n- The price of each carrier service"
     Sorted.Shipments.DataContracts.AllocationFilters:
       required:
         - direction
@@ -3228,94 +2684,6 @@ components:
           nullable: true
       additionalProperties: false
       description: A `quote_result` is returned when you request `quotes` for a `shipment`.
-    Sorted.Shipments.DataContracts.UpdateShipmentRequest:
-      required:
-        - addresses
-        - contents
-        - direction
-        - reference
-        - shipment_type
-      type: object
-      properties:
-        reference:
-          maxLength: 35
-          minLength: 35
-          type: string
-          description: The unique Sorted reference for the `shipment`.
-        custom_reference:
-          maxLength: 50
-          minLength: 1
-          type: string
-          description: Your own custom reference for this `shipment`.
-          nullable: true
-        required_delivery_date:
-          $ref: '#/components/schemas/Sorted.Shipments.DataContracts.DateRange'
-        required_shipping_date:
-          $ref: '#/components/schemas/Sorted.Shipments.DataContracts.DateRange'
-        tags:
-          maxItems: 10
-          type: array
-          items:
-            type: string
-          description: "Custom tags to apply to the `shipment`\r\n            \r\nIf provided, each `tag` is limited to 50 characters. There is a limit of 10 tags per `shipment`"
-          nullable: true
-        order_date:
-          type: string
-          description: "The date that the items in the `shipment` were ordered.\r\nThis can be used to tracking `shipments` vs order dates in customers' own systems.\r\n            \r\nIf provided, must be a valid `ISO8601` date time, including offset. Sorted will _not_ validate the logic\r\nof the date value compared to other relevant dates."
-          format: date-time
-          nullable: true
-        metadata:
-          maxItems: 10
-          type: array
-          items:
-            $ref: '#/components/schemas/Sorted.Shipments.DataContracts.Metadata'
-          description: "Addition properties to apply to a `shipment`. Additional functionality can be linked to properties\r\nspecified in `metadata`."
-          nullable: true
-        customs_documentation:
-          $ref: '#/components/schemas/Sorted.Shipments.DataContracts.CustomsDocumentation'
-        direction:
-          type: string
-          description: 'Indicates the `direction` of the `shipment`, e.g. `outbound`, `inbound`'
-        shipment_type:
-          minLength: 1
-          type: string
-          description: 'Indicates the type of `shipment`, e.g. `scheduled`, `on_demand`'
-        contents:
-          minItems: 1
-          type: array
-          items:
-            $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ShipmentContents'
-          description: "The contents of the `shipment`\r\n            \r\nAt least one `shipment_contents` is required."
-        addresses:
-          minItems: 2
-          type: array
-          items:
-            $ref: '#/components/schemas/Sorted.Shipments.DataContracts.Address'
-          description: "The addresses for this `shipment`.\r\n            \r\nMust contain at least an `origin` and a `destination` address. Only one of each type of address may be\r\nprovided."
-        label_properties:
-          maxItems: 10
-          type: array
-          items:
-            $ref: '#/components/schemas/Sorted.Shipments.DataContracts.LabelProperty'
-          description: Values to be used in the generation or decoration of labels.
-          nullable: true
-        source:
-          maxLength: 50
-          type: string
-          description: "Indicates the source of the `shipment`.\r\n            \r\nIf not provided, will default to `api`. If provided, a maximum length of 50 characters is permitted."
-          nullable: true
-        tenant:
-          maxLength: 50
-          type: string
-          description: 'The `tenant` that the `shipment` is linked to, if applicable.'
-          nullable: true
-        channel:
-          maxLength: 50
-          type: string
-          description: "The `channel` that the `shipment` is linked to, if applicable.\r\n            \r\n> Note: Must only be provided when `tenant` is also provided and contains a valid `tenant` identifier."
-          nullable: true
-      additionalProperties: false
-      description: "The `update_shipment_request` is used to update an existing `shipment`.\r\n            \r\n> Note: All properties in an `update_shipment_request` should be provided when updating the `shipment`, i.e.\r\ncustomers should provide the full details of the `shipment` rather than just including properties they wish to\r\nupdate. The properties provided will replace the _entire_ `shipment` object. There are some system-generated\r\nproperties of a `shipment` that cannot be modified, such as `allocation` and `_links`."
     Sorted.Shipments.DataContracts.CreateShipmentGroupRequest:
       required:
         - shipments
@@ -3336,6 +2704,45 @@ components:
           nullable: true
       additionalProperties: false
       description: This object is used to create a new `shipment_group`.
+    Sorted.Shipments.DataContracts.ShipmentGroupResponse:
+      required:
+        - reference
+      type: object
+      properties:
+        errors:
+          minItems: 0
+          type: array
+          items:
+            $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiErrorMessage'
+          description: Any error(s) relating to the operation
+          nullable: true
+        reference:
+          maxLength: 35
+          minLength: 35
+          type: string
+          description: The unique reference for this resource generated by Sorted at the point of creation.
+        custom_reference:
+          type: string
+          description: 'Your own custom reference for this object, if applicable.'
+          nullable: true
+        message:
+          type: string
+          description: An optional message relating to the result of the operation.
+          nullable: true
+        version:
+          type: integer
+          description: 'An optional version for this resource, if applicable.'
+          format: int32
+          nullable: true
+        _links:
+          minItems: 0
+          type: array
+          items:
+            $ref: '#/components/schemas/Sorted.Shipments.DataContracts.Link'
+          description: 'Links to the current resource and any related resources, if applicable.'
+          nullable: true
+      additionalProperties: false
+      description: Provides details of the result of an operation relating to a `shipment_group`
     Sorted.Shipments.DataContracts.UpdateShipmentGroupRequest:
       required:
         - reference
