@@ -133,8 +133,9 @@ The example below shows a simple **Create Shipment** request containing only a `
 
 ```json
 
+
 {
-    "shipment_type": "scheduled",
+    "shipment_type": "on_demand",
     "contents": [
         {
             "custom_reference": "b9fa91b0-0dd0-4dd5-986f-363fa8cb2386",
@@ -174,8 +175,26 @@ The example below shows a simple **Create Shipment** request containing only a `
     ],
     "addresses": [
         {
-            "address_type": "origin",
-            "shipping_location_reference": "SLOC001"
+            "address_type": "Origin",
+            "contact": {
+                "reference": "co_9953035290535460864",
+                "title": "Mr",
+                "first_name": "Mark",
+                "last_name": "Brunell",
+                "contact_details": {
+                    "mobile": "+447495747987",
+                    "email": "mark@62-7.com"
+                }
+            },
+            "property_number": "1",
+            "property_name": "Frank's Place",
+            "address_line1": "Zappa Avenue",
+            "address_line2": "Off Rock Road",
+            "address_line3": "Off Heavy Crescent",
+            "locality": "Manchester",
+            "region": "Greater Manchester",
+            "postal_code": "M2 6LW",
+            "country_iso_code": "GB"
         },
         {
             "address_type": "destination",
