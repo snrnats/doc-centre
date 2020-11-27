@@ -2,59 +2,7 @@
 uid: shipments-api-reference
 title: Shipments API Reference
 ---
-<style type="text/css">
-    .sideaffix {
-        display: none;
-    }
-
-    .subnav {
-        display: none !important;
-    }
-
-    .page-stats {
-        display: none !important;
-    }
-
-    .container.body-content {
-      width: 100%;
-    }
-
-    .docs-body {
-      width: 100%;
-      padding-left: 0;
-      padding-right: 0;
-    }
-
-    .article {
-      margin-top: 0px;
-      margin-bottom: 0px;
-    }
-
-    header {
-      position: relative;
-    }
-
-    .article img {
-      border: 0 none;
-    }
-
-    body {
-      background-color: #ffffff;
-    }
-
-    pre {
-      margin: 0;
-    }
-
-    article h1 {
-      margin-bottom: 0;
-    }
-
-    h2 {
-      margin-top: 0;
-    }
-
-</style>
+<link href="/styles/api-reference.css" rel="stylesheet">
 <div id="redoc"></div>
 <script src="/styles/redoc.standalone.js"></script>
 <script type="text/javascript" defer>

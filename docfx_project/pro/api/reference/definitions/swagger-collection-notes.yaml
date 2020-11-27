@@ -1,14 +1,14 @@
 openapi: 3.0.1
 info:
   title: Collection Notes API
-  version: version 1.0
+  version:
+    $ref: ./shared.yaml#/version
   description:
     $ref: ./intro-collection-notes.yaml#/description
+  contact:
+    $ref: ./shared.yaml#/contact
 servers:
-  - url: https://api.sorted.com/pro/
-    description: Production (live)
-  - url: https://api.sorted.com/prosandbox/
-    description: Sandbox
+  $ref: ./shared.yaml#/servers
 paths:
   "/collection_notes/shipment_group/custom_reference/{reference}/latest":
     get:

@@ -1,0 +1,69 @@
+.sideaffix {
+  display: none;
+}
+
+.subnav {
+  display: none !important;
+}
+
+.page-stats {
+  display: none !important;
+}
+
+.container.body-content {
+  width: 100%;
+}
+
+.docs-body {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.article {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+header {
+  position: relative;
+}
+
+.article img {
+  border: 0 none;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+pre {
+  margin: 0;
+}
+
+article h1 {
+  margin-bottom: 0;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+blockquote {
+  font-size: 14px;
+}
+
+button p {
+  margin-top: -2px !important;
+}
+
+button:hover,
+button:focus,
+a:hover,a:focus {
+  color: unset;
+}
+
+.react-tabs__tab-list > li {
+  border-radius: 0px !important;
+  border: none !important;
+}
