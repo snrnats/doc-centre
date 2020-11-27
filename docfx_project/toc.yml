@@ -4,7 +4,20 @@
   - name: API User Guide
     href: /pro/api/shipments/introduction.html
   - name: API Reference
-    href: /pro/api/reference/shipments-api-ref.html  
+    href: /pro/api/reference/api-reference.html
+    items:
+    - name: Shipments
+      href: /pro/api/reference/shipments.html
+    - name: Collection Notes
+      href: /pro/api/reference/collection-notes.html
+    - name: Labels         
+      href: /pro/api/reference/labels.html
+    - name: Customs Documents         
+      href: /pro/api/reference/customs-documents.html
+    - name: Paperless Documents         
+      href: /pro/api/reference/paperless-documents.html
+    - name: Tracking         
+      href: /pro/api/reference/tracking.html
   - name: Release Notes
     href: pro/release-notes/
     homepage: pro/release-notes/index.md               

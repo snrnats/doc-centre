@@ -582,10 +582,15 @@ ul.level1 {
     display: block;
 }
 
-/* .navbar-nav .level2:hover .level3 li {
-    position: absolute;
-    left: 100px;
-}*/
+ul.level2 span.expand-stub::before{
+    display: block !important;
+    content: ">";
+    position: relative;
+    left: 245px;
+    bottom: -8px;
+    color: var(--colour-tab-active);
+    font-size: 1em;
+}
 
 a.active,
 a.active:hover {
@@ -1711,6 +1716,7 @@ ul.tags > li:hover {
   padding: 30px;
   background: rgba(0,0,0,.05);
   border-radius: 3px;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.23);
 }
   
 .message-block h4 {
@@ -1727,6 +1733,12 @@ ul.tags > li:hover {
 .message-block:hover {
   text-decoration: none;
   background: rgba(0,0,0,.15);
+  -webkit-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
+  -webkit-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.15);
+  cursor: pointer;  
 }
 
 @media (min-width: 998px){
@@ -1748,7 +1760,7 @@ ul.tags > li:hover {
   
   .header-info {
     padding: 0px 135px;
-    text-align: left;
+    text-align: center;
     margin: auto;
     max-width: 998px;
     margin-bottom: 30px;
