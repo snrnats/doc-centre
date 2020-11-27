@@ -1,3 +1,7 @@
+<head>
+    <link href="../fonts/css/all.css" rel="stylesheet"> 
+</head>
+
 <style type="text/css">
     .col-md-10 {
         width: 100%;

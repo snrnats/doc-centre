@@ -1552,9 +1552,6 @@ input:checked + .slider:before {
   
 .slider.round:before {
     border-radius: 50%;
-    -webkit-box-shadow:  var(--slider-right-offset) 0px 0px 0px var(--slider-shadow);
-    -moz-box-shadow:  var(--slider-right-offset) 0px 0px 0px var(--slider-shadow);
-    box-shadow:  var(--slider-right-offset) 0px 2px 0px var(--slider-shadow);
 }
 
 .spot {
