@@ -41,7 +41,9 @@
           "pro/images/**",
           "pro/how-to/images/**",
           "react/help/images/**",
-          "images/**"
+          "images/**",
+          "pro/api/swagger.json",
+          "pro/api/reference/definitions/*.yaml"
         ]
       },
       {
