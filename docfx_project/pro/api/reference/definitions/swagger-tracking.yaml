@@ -1,0 +1,292 @@
+openapi: 3.0.1
+info:
+  title: Sorted Tracking API
+  version:
+    $ref: ./shared.yaml#/version
+  description:
+    $ref: ./intro-tracking.yaml#/description
+  contact:
+    $ref: ./shared.yaml#/contact
+servers:
+  $ref: ./shared.yaml#/servers
+paths:
+  "/tracking/{shipmentRef}":
+    get:
+      tags:
+        - Tracking
+      summary: Get Tracking Events
+      description: This endpoint can be used to retrieve tracking events for a `shipment`
+      parameters:
+        - name: shipmentRef
+          in: path
+          description: The reference of the `shipment` to retrieve tracking events for
+          required: true
+          schema:
+            type: string
+            description: The reference of the `shipment` to retrieve tracking events for
+        - name: x-api-version
+          in: header
+          description: The version of the API to use.  Version `1.1` should be supplied with all requests.
+          required: true
+          style: simple
+          schema:
+            type: string
+            description: The version of the API to use. Version `1.1` should be supplied with all requests.
+      responses:
+        "200":
+          description: "Returned when the request was successful. The `tracking_response` will include the\r\ntracking events available for the `shipment`."
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TrackingResponse"
+        "400":
+          description: Returned when the request is badly-formed or there is a validation error in the request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+        "403":
+          description: Returned when you do not have permission to retrieve tracking events
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+        "404":
+          description: Returned when the query does not identify a valid `shipment`
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+components:
+  schemas:
+    CarrierDetails:
+      required:
+        - reference
+        - service_reference
+      type: object
+      properties:
+        reference:
+          type: string
+          description: The Sorted reference for this carrier.
+        name:
+          type: string
+          description: The name of this carrier
+          nullable: true
+        service_reference:
+          type: string
+          description: The Sorted reference for this carrier service.
+        service_name:
+          type: string
+          description: The name of this carrier service.
+          nullable: true
+        tags:
+          minItems: 0
+          type: array
+          items:
+            type: string
+          description: Any `tags` that apply to this carrier service
+          nullable: true
+      additionalProperties: false
+      description: The `carrier_details` object provides details of a carrier and carrier service.
+    TrackingEventCode:
+      enum:
+        - action_required
+        - at_customs
+        - awaiting_drop_off
+        - carrier_changed
+        - cleared_through_customs
+        - collected_by_carrier
+        - collection_failed
+        - damaged
+        - delayed
+        - delivered
+        - delivered_damaged
+        - delivery_failed
+        - delivery_failed_card_left
+        - destroyed
+        - dropped_off
+        - exchange_failed
+        - exchange_succeeded
+        - failed_to_collect
+        - for_information
+        - held_by_carrier
+        - in_transit
+        - in_transit_waiting
+        - lost
+        - missing
+        - out_for_delivery
+        - partially_delivered
+        - returned_to_sender
+      type: string
+    LatLong:
+      required:
+        - latitude
+        - longitude
+      type: object
+      properties:
+        latitude:
+          type: number
+          description: "The latitude value, e.g. `51.5014`.\r\n            \r\nMust be a valid latitude value (`-90` to `+90`)"
+          format: double
+        longitude:
+          type: number
+          description: "The longitude value, e.g. `0.1246`/\r\n            \r\nMust be a valid longitude value (`-180` to `+180`)"
+          format: double
+      additionalProperties: false
+      description: "The `lat_long` property is used to capture the latitude and longitude of an `address`, if applicable. Although\r\nindividual properties can be set to zero, `0,0` is **not** a valid value for the object."
+    TrackingEvent:
+      required:
+        - description
+        - event_code
+        - received_timestamp
+        - reference
+        - timestamp
+      type: object
+      properties:
+        reference:
+          type: string
+          description: The unique reference for this event.
+        timestamp:
+          type: string
+          description: The timestamp of when this event occurred as provided by the carrier
+          format: date-time
+        received_timestamp:
+          type: string
+          description: The date and time that this event was received and processed by Sorted
+          format: date-time
+        event_code:
+          $ref: "#/components/schemas/TrackingEventCode"
+        description:
+          type: string
+          description: A plain-text description of this event
+        signee:
+          type: string
+          description: "Details of the signee of an event, if applicable"
+          nullable: true
+        location:
+          type: string
+          description: "A summarised version of the location of an event, if provided"
+          nullable: true
+        lat_long:
+          $ref: "#/components/schemas/LatLong"
+      additionalProperties: false
+      description: "Contains the details of a tracking event.\r\n            \r\nAll tracking events received from carriers will be \"normalised\" by Sorted into standardised language and codes."
+    Link:
+      type: object
+      properties:
+        rel:
+          type: string
+          nullable: true
+        href:
+          type: string
+          nullable: true
+        type:
+          type: string
+          nullable: true
+        reference:
+          type: string
+          nullable: true
+      additionalProperties: false
+    TrackingResponse:
+      required:
+        - carrier
+        - carrier_references
+        - shipment_reference
+      type: object
+      properties:
+        shipment_reference:
+          maxLength: 35
+          minLength: 35
+          type: string
+          description: The unique reference of the `shipment` that this response relates to
+        custom_reference:
+          type: string
+          description: "The customer's own `custom_reference` for this `shipment`, if applicable"
+          nullable: true
+        carrier_references:
+          minItems: 1
+          type: array
+          items:
+            type: string
+          description: The tracking reference(s) assigned to this `shipment` by the carrier
+        carrier:
+          $ref: "#/components/schemas/CarrierDetails"
+        events:
+          minItems: 0
+          type: array
+          items:
+            $ref: "#/components/schemas/TrackingEvent"
+          description: The details of the tracking event(s)
+          nullable: true
+        expected_delivery_date:
+          type: string
+          description: "The updated `expected_delivery_date` for the `shipment`, if applicable."
+          format: date-time
+          nullable: true
+        _links:
+          minItems: 0
+          type: array
+          items:
+            $ref: "#/components/schemas/Link"
+          description: Links to related resources
+          nullable: true
+      additionalProperties: false
+    ApiErrorMessage:
+      required:
+        - code
+        - message
+      type: object
+      properties:
+        property:
+          type: string
+          description: "The path to the affected property, if applicable.\r\n            \r\n> Note: this will be expressed in JSON Path format e.g. `$.addresses[0].address_type` indicates an issue\r\nwith the property `address_type` for the first provided address."
+          nullable: true
+          readOnly: true
+        message:
+          type: string
+          description: A plain-text summary of the error.
+          readOnly: true
+        code:
+          type: string
+          description: A pre-defined code for this error.
+          readOnly: true
+      additionalProperties: false
+      description: The `api_error_message` object provides further information relating to errors.
+    ApiError:
+      required:
+        - code
+        - correlation_id
+        - message
+        - reference
+      type: object
+      properties:
+        reference:
+          maxLength: 35
+          minLength: 35
+          type: string
+          description: A unique reference for this error
+        correlation_id:
+          type: string
+          description: "The correlation id for this error. Customers can use this property when reporting issues to Sorted and this\r\nwill aid with problem discovery and resolution."
+        code:
+          type: string
+          description: A pre-defined `code` for this error.
+        message:
+          type: string
+          description: A plain-text summary of the error.
+        details:
+          minItems: 0
+          type: array
+          items:
+            $ref: "#/components/schemas/ApiErrorMessage"
+          description: "A collection of `api_error_messages` which provide further details of the error(s), if applicable."
+          nullable: true
+      additionalProperties: false
+      description: "This object is returned by Sorted whenever an error occurs during a request. Errors can have many causes, such\r\nas badly-formed requests, incorrect permissions, or unforeseen issues during request processing."
+  securitySchemes:
+    API Key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+  - API Key: []
