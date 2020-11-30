@@ -23,7 +23,7 @@ Once the request is received, PRO attempts to manifest any unmanifested shipment
 
 > [!NOTE]
 >
-> * For full reference information on the **Manifest Shipments by Shipment Group** endpoint, see the [Shipments data contract](/pro/api/reference/shipments-api-ref.html#tag/Manifest/paths/~1shipment_groups~1{shipmentGroupReference}~1manifest/post).
+> * For full reference information on the **Manifest Shipments by Shipment Group** endpoint, see the [PRO v2 API reference](/pro/api/reference/shipments-api-ref.html#tag/Manifest/paths/~1shipment_groups~1{shipmentGroupReference}~1manifest/post).
 > * For a user guide on with working shipment groups, see the [Managing Shipment Groups](/pro/api/shipments/managing_shipment_groups.html) section.
 
 ## Manifest Shipments by Shipment Group Example

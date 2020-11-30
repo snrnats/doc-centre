@@ -33,12 +33,12 @@
                 <a href="/pro/api/shipments/introduction.html" class="message-block">
                     <i class="fas fa-book"></i>
                     <h4>API User Guide</h4>
-                    <p class="link-pink" href="/pro/api/shipments/introduction.html">PRO's APIs, explained</p>
+                    <p class="link-pink" href="/pro/api/shipments/introduction.html">PRO v2's APIs, explained</p>
                 </a>
                 <a href="/pro/api/reference/api-reference.html" class="message-block">
                     <i class="fas fa-code"></i>
                     <h4>API Reference</h4>
-                    <p class="link-pink" href="/pro/api/reference/api-reference.html">PRO's API reference</p>
+                    <p class="link-pink" href="/pro/api/reference/api-reference.html">PRO v2's API reference</p>
                 </a>
                 <a href="/pro/release-notes/index.html" class="message-block">
                     <i class="fas fa-exclamation-circle"></i>
@@ -57,8 +57,8 @@
                 </a>                
                 <a href="/pro/api/help/introduction.html" class="message-block">
                     <i class="fas fa-truck-loading"></i>
-                    <h4>Consignments Help</h4>
-                    <p class="link-pink" href="/pro/api/help/introduction.html">Help for PRO's legacy Consignments APIs</p>
+                    <h4>Version 1 Help</h4>
+                    <p class="link-pink" href="/pro/api/help/introduction.html">Help for PRO version 1 (Consignments)</p>
                 </a>
             </div>
         </div>

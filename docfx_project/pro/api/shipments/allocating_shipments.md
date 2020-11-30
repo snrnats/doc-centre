@@ -17,7 +17,7 @@ In the context of SortedPRO, **allocation** is the process of selecting the carr
 
 > [!NOTE]
 >
-> You can only allocate shipments that are in a `{state}` of either _unallocated_ or _allocation_failed_. If you attempt to allocate a shipment that is not in one of those states, PRO returns an error.
+> You can only allocate shipments that are in a `{state}` of either _unallocated_ or _allocation_failed_. If you attempt to allocate a shipment that is not in one of those states, then PRO returns an error.
 
 To allocate shipments in PRO, you'll need to call one of PRO's allocation endpoints. <!-- can specify a carrier service or service group to allocate to, allocate based on a quote you received, or have PRO select the cheapest eligible carrier service for you. You can also use custom filters to narrow down the pool of available services on a per-shipment basis.--> PRO uses pre-defined allocation rules to ensure that your shipment is allocated to a suitable carrier service.
 
@@ -52,7 +52,7 @@ PRO offers the following allocation endpoints:
 
     `https://api.sorted.com/pro/shipments/allocate/{reference}/quote/{quote_reference}` - Allocates a single shipment with the carrier service referenced in a specific pre-existing quote. -->
 
-The action PRO takes once the allocation request is received depends on the type of endpoint you used. If you used an endpoint that allocated individual shipments, then PRO allocates the shipment immediately and returns an Allocation Summary listing details of the allocation, such as prices, dates and tracking information. However, if you used an endpoint that can allocate multiple shipments at once, then PRO queues the shipments for allocation at a later time in order to maintain performance. When PRO queues shipments, it returns an Allocate Shipments Result confirming the shipments that were queued.
+The action PRO takes once the allocation request is received depends on the type of endpoint you used. If you used an endpoint that allocates individual shipments, then PRO allocates the shipment immediately and returns an Allocation Summary listing details of the allocation, such as prices, dates and tracking information. However, if you used an endpoint that can allocate multiple shipments at once, then PRO queues the shipments for allocation at a later time in order to maintain performance. When PRO queues shipments, it returns an Allocate Shipments Result confirming the shipments that were queued.
 
 When a shipment is allocated to a carrier service, its status changes to _allocated_, enabling you to retrieve its package labels and (where applicable) customs documentation.
 
@@ -87,7 +87,7 @@ For example, you could specify that a particular carrier service should only be 
 
 ### Using Dangerous Goods Rules
 
-PRO enables you to manage which carrier services can carry which types of dangerous goods by setting up "dangerous goods rulesets" in the UI. This is a change from the original PRO's consignments-based implementation, in which dangerous goods specifications were directly tied in to each carrier service.
+PRO version 2 enables you to manage which carrier services can carry which types of dangerous goods by setting up "dangerous goods rulesets" in the UI. This is a change from PRO version 1's consignments-based implementation, in which dangerous goods specifications are directly tied in to each carrier service.
 
 When setting up dangerous goods rules, you configure a ruleset independently of any carrier services and then link those rules to the services you require. This is especially useful if you have non-standard agreements with your carriers (that is, carriers will allow you to ship dangerous goods on a carrier service that would not normally take that class of goods).
 

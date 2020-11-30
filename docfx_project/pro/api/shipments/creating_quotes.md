@@ -352,7 +352,7 @@ The example below shows a quote request for a shipment. Note that  PRO has retur
 
 > [!NOTE]
 >
-> * For full reference information on the **Create Quote** and **Create Quote by Service Group** endpoints, see the [Shipments API reference](/pro/api/reference/shipments-api-ref.html#tag/Quotes).
+> * For full reference information on the **Create Quote** and **Create Quote by Service Group** endpoints, see the [PRO v2 API reference](/pro/api/reference/shipments-api-ref.html#tag/Quotes).
 
 ## Next Steps
 

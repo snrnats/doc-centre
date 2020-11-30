@@ -1,35 +1,35 @@
 ---
 uid: pro-api-help-shipments-consignments_vs_shipments
 title: Consignments vs Shipments
-tags: shipments,pro,api,getting started,consignments
+tags: shipments,pro,api,getting started,consignments,v1
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 02/07/2020
 ---
 # Consignments vs Shipments
 
-PRO's Shipments model represents a significant overhaul to the Sorted service, with a new data contract and UI enabling the system to offer enhancements such as on-demand shipping and bulk grouping of shipments. This page is intended for users who are familiar with the older Consignments model, explaining what has changed and how the new system works.
+PRO version 2's Shipments model represents a significant overhaul to the Sorted service, with a new data contract and UI enabling the system to offer enhancements such as on-demand shipping and bulk grouping of shipments. This page is intended for users who are familiar with the Consignments model used in version 1, explaining what has changed and how the new system works.
 
 ---
 
 ## How Does On-Demand Shipping Work?
 
-The Consignments model was based around high volume shipping from warehouses to end consumers. In this model, PRO could ship thousands of items for a customer daily, with carriers making regular scheduled collections from a small number of fulfilment centres before taking the goods to their own hubs and then shipping out to the end customer.
+PRO v1's Consignments model was based around high volume shipping from warehouses to end consumers. In this model, PRO could ship thousands of items for a customer daily, with carriers making regular scheduled collections from a small number of fulfilment centres before taking the goods to their own hubs and then shipping out to the end customer.
 
 In order to ship a consignment in a scheduled workflow, PRO requires a shipping location and a scheduled collection datetime. An example scheduled workflow is given below:
 
 ![consignments-workflow.png](/pro/images/consignments-workflow.png)
 
-Shipments extends this functionality, giving you greater control over the collection part of the delivery cycle. PRO can now offer ad-hoc collections and deliveries from distributed stock locations, such as a ship-from-store model. 
+PRO v2's Shipments model extends this functionality, giving you greater control over the collection part of the delivery cycle. PRO can now offer ad-hoc collections and deliveries from distributed stock locations, such as a ship-from-store model. 
 
-On-demand shipping enables you to be more flexible in the way that goods are collected, and helps you to avoid the risk that warehousing from a single location can bring in a modern retail environment. Shipments gives you the ability to ship from thousands of locations all over the world.
+On-demand shipping enables you to be more flexible in the way that goods are collected, and helps you to avoid the risk that warehousing from a single location can bring in a modern retail environment. PRO v2 gives you the ability to ship from thousands of locations all over the world.
 
 ![shipments-workflow.png](/pro/images/shipments-workflow.png)
 
-However, PRO hasn't lost any functionality. The Shipments API suite can also handle high volume traditional scheduled shipments just as well as consignments. 
+However, PRO hasn't lost any functionality. The PRO v2 API suite can also handle high volume traditional scheduled shipments just as well as v1. 
 
 ## New Features
 
-As well as support for on-demand shipping, the enhancements to PRO's data contract have enabled us to add several additional new features to PRO. The Shipments API suite also includes:
+As well as support for on-demand shipping, the enhancements to PRO's data contract have enabled us to add several additional new features to PRO. The PRO v2 API suite also includes:
 
 * **Shipment Groups and Collection Notes** – A shipment group is a group of one or more shipments, allocated to the same carrier service, that can be operated on together. Grouping shipments fulfils several workflow needs, such as letting a driver use a collection note to sign off the shipments they've just collected from a store or manifesting shipments by trailer in a warehouse.            
 * **Auto-Manifest** - PRO can now automatically manifest shipments with carriers using a pre-configured schedule.
@@ -40,11 +40,11 @@ As well as support for on-demand shipping, the enhancements to PRO's data contra
 
 ## Shipment Structure
 
-To facilitate these changes, the _shipment_ has replaced the _consignment_ as PRO's basic delivery unit. 
+To facilitate these changes, the _shipment_ has replaced the _consignment_ as PRO's basic delivery unit in v2. 
 
 > [!NOTE]
 >
-> Currently, Consignments customers will need to re-integrate in order to use Shipments. To aid this process, we have designed the Shipments API suite as an extension and enhancement to Consignments, keeping it as close as possible to the original structure. 
+> Currently, PRO v1 customers will need to re-integrate in order to use the features introduced in PRO v2. To aid this process, we have designed the v2 API suite as an extension and enhancement to v1, keeping it as close as possible to the original structure. 
 
 Like consignments, shipments are a collection of one or more packages that are shipped from the same origin address, to the same destination address, on behalf of the same Sorted customer, using the same carrier service, on the same day. However, the `shipment` object contains some new and reworked properties, including:
 
@@ -56,7 +56,7 @@ Like consignments, shipments are a collection of one or more packages that are s
 
 > [!NOTE]
 >
-> For full reference information on the new Shipments data contract, see the [API reference](/pro/api/reference/shipments-api-ref.html). 
+> For full reference information on the PRO v2 data contract, see the [API reference](/pro/api/reference/shipments-api-ref.html). 
 
 ## Next Steps
 

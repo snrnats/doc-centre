@@ -31,14 +31,14 @@
       href: /pro/how-to/ups-guide.html
     - name: Brexit Shipping Data Guide
       href: /pro/how-to/brexit-guide.html   
-  - name: Consignments Help
+  - name: Version 1 (Consignments) Help
     href: /pro/api/help/introduction.html
     items: 
-    - name: Consignments API User Guide
+    - name: V1 (Consignments) API User Guide
       href: /pro/api/help/introduction.html      
-    - name: Consignments API Reference
+    - name: V1 (Consignments) API Reference
       href: https://docs.electioapp.com/#/api
-    - name: Example Consignments Call Flows
+    - name: Example V1 (Consignments) Call Flows
       href: /pro/api/help/flows.html        
     homepage: pro/release-notes/index.md
 - name: REACT 

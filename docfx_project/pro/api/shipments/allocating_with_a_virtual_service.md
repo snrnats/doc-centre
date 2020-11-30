@@ -25,7 +25,7 @@ Once it has received the request, PRO takes the following action:
 * When the `{virtual_service_reference}` parameter does not match either a carrier service or a service group, PRO returns a _404 (Not Found)_ error response.
 
 > [!TIP]
-> When PRO returns a _400 (Bad Request)_ error response due to the `{virtual_service_reference}` parameter matching both a carrier service and a service group, you can still use the **Allocate Shipment with Carrier Service** or **Allocate Shipment with Service Group** to allocate the shipment.
+> If PRO returns a _400 (Bad Request)_ error response due to the `{virtual_service_reference}` parameter matching both a carrier service and a service group, you can still use the **Allocate Shipment with Carrier Service** or **Allocate Shipment with Service Group** to allocate the shipment.
 
 [!include[_shipments_allocate_result](../includes/_shipments_allocate_result.md)]
 

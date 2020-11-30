@@ -106,7 +106,7 @@ PUT https://api.sorted.com/pro/shipments/sp_9233500258180005889777767900009/allo
 
 > [!NOTE]
 >
->  For full reference information on the **Allocate Shipment** endpoint, see the [Shipments data contract](/pro/api/reference/shipments-api-ref.html#tag/Allocation/paths/~1shipments~1{shipmentReference}~1allocate/put). 
+>  For full reference information on the **Allocate Shipment** endpoint, see the [PRO v2 API reference](/pro/api/reference/shipments-api-ref.html#tag/Allocation/paths/~1shipments~1{shipmentReference}~1allocate/put). 
 
 ## Allocating Multiple Shipments At Once
 
@@ -117,7 +117,7 @@ To call **Allocate Shipments**, send a `PUT` request to `https://api.sorted.com/
 Optionally, you can also include a list of service `capabilities`. Where capabilities are provided, then PRO only allocated the shipment to a carrier service that meets those capabilities. Each capability should list the `type` of service capability specified and the `value` that that capability should have.
 
 > [!NOTE]
-> For information on available service capabilities and values, see the [Shipments data contract](/pro/api/reference/shipments-api-ref.html#tag/Allocation/paths/~1shipments~1allocation/put)
+> For information on available service capabilities and values, see the [PRO v2 API reference](/pro/api/reference/shipments-api-ref.html#tag/Allocation/paths/~1shipments~1allocation/put)
 
 Once the request is received, PRO takes each shipment in turn and attempts to queue it for allocation to the cheapest eligible carrier, as per the process detailed in the [Overview](#overview). It then returns an Allocate Shipments result. 
 
@@ -171,7 +171,7 @@ The example shows a request to queue three shipments for allocation. Two shipmen
 
 > [!NOTE]
 >
->  For full reference information on the **Allocate Shipments** endpoint, see the [Shipments data contract](/pro/api/reference/shipments-api-ref.html#tag/Allocation/paths/~1shipments~1allocation/put). 
+>  For full reference information on the **Allocate Shipments** endpoint, see the [PRO v2 API reference](/pro/api/reference/shipments-api-ref.html#tag/Allocation/paths/~1shipments~1allocation/put). 
 
 ## Next Steps
 

@@ -217,7 +217,7 @@ The example shows a request to get quotes for shipment _sp_006620892979714052040
 
 > [!NOTE]
 >
-> For full reference information on the **Get Quote** endpoint, see the [Shipments API reference](/pro/api/reference/shipments-api-ref.html#tag/Quotes/paths/~1shipments~1{shipmentReference}~1quote/post).
+> For full reference information on the **Get Quote** endpoint, see the [PRO v2 API reference](/pro/api/reference/shipments-api-ref.html#tag/Quotes/paths/~1shipments~1{shipmentReference}~1quote/post).
 
 ## Next Steps
 
