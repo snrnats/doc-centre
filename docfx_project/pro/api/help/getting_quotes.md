@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-getting-quotes
 title: Getting Quotes
-tags: quotes,pro,api,consignments
+tags: v1,quotes,pro,api,consignments
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 29/05/2020
 ---

@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-managing-orders
 title: Managing Orders
-tags: orders,pro,api,consignments
+tags: v1,orders,pro,api,consignments
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 02/06/2020
 ---

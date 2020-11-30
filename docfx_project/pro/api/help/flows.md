@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-flows
 title: PRO Call Flows
-tags: consignments,pro,api,flows
+tags: v1,consignments,pro,api,flows
 contributors: andy.walton@sorted.com
 created: 28/02/2020
 ---

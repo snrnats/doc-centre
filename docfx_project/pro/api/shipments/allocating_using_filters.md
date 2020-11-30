@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-shipments-allocating-using-filters
 title: Allocating Using Filters
-tags: shipments,pro,api,allocation,filters
+tags: v2,shipments,pro,api,allocation,filters
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 02/07/2020
 ---

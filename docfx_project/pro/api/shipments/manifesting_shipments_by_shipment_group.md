@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-shipments-manifesting-shipments-by-shipment-groups
 title: Manifesting Shipments by Shipment Groups
-tags: shipments,pro,api,manifesting,shipment groups
+tags: v2,shipments,pro,api,manifesting,shipment groups
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 02/07/2020
 ---

@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-allocating-consignments
 title: Allocating Consignments
-tags: allocation,pro,api,consignments
+tags: v1,allocation,pro,api,consignments
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 02/06/2020
 ---

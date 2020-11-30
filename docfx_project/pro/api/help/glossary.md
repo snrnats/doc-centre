@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-glossary
 title: Glossary
-tags: glossary,terms,pro,api,consignments
+tags: v1,glossary,terms,pro,api,consignments
 contributors: andy.walton@sorted.com
 created: 16/10/2020
 ---

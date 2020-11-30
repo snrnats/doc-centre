@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-consignment-states
 title: Consignment States
-tags: states,consignment states,pro,api,consignments
+tags: v1,states,consignment states,pro,api,consignments
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 29/05/2020
 ---

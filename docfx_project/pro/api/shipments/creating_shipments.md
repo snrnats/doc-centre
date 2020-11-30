@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-shipments-creating-shipments
 title: Creating Shipments
-tags: shipments,pro,api
+tags: v2,shipments,pro,api
 contributors: andy.walton@sorted.com
 created: 05/10/2020
 ---

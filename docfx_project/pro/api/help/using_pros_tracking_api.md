@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-using-pros-tracking-api
 title: Using PRO's Tracking API
-tags: tracking,pro,api,consignments
+tags: v1,tracking,pro,api,consignments
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 29/05/2020
 ---

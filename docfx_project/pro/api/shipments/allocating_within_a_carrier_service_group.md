@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-shipments-allocating-within-a-carrier-service-group
 title: Allocating Within A Carrier Service Group
-tags: shipments,pro,api,allocation,service group
+tags: v2,shipments,pro,api,allocation,service group
 contributors: andy.walton@sorted.com
 created: 07/10/2020
 ---

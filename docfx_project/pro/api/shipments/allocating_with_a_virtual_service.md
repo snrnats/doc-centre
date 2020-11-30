@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-shipments-allocating-with-a-virtual-service
 title: Allocating with a Virtual Service
-tags: shipments,pro,api,allocation,virtual service
+tags: v2,shipments,pro,api,allocation,virtual service
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 08/07/2020
 ---

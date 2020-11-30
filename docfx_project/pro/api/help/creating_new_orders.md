@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-creating-new-orders
 title: Creating New Orders
-tags: orders,pro,api,consignments,EORI number
+tags: v1,orders,pro,api,consignments,EORI number
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 29/05/2020
 ---

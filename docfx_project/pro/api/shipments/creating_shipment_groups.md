@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-shipments-creating-shipment-groups
 title: Creating Shipment Groups
-tags: shipments,pro,api,shipment groups
+tags: v2,shipments,pro,api,shipment groups
 contributors: andy.walton@sorted.com
 created: 08/10/2020
 ---

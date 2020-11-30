@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-tags
 title: Tags
-tags: tags,pro,api,consignments
+tags: v1,tags,pro,api,consignments
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 29/05/2020
 ---

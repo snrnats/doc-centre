@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-selecting-options
 title: Selecting Options
-tags: options,pro,api,consignments,pickup options,delivery options
+tags: v1,options,pro,api,consignments,pickup options,delivery options
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 29/05/2020
 ---

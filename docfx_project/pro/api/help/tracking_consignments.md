@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-tracking-consignments
 title: Tracking Consignments
-tags: tracking,pro,react,api,consignments
+tags: v1,tracking,pro,react,api,consignments
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 02/06/2020
 ---

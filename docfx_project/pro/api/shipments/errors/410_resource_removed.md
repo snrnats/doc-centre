@@ -1,7 +1,7 @@
 ---
 uid: pro-api-shipments-errors-410-resource-removed
 title: 410 - Resource Removed
-tags: gone,pro,api,shipments,error,410
+tags: v2,gone,pro,api,shipments,error,410
 contributors: andy.walton@sorted.com
 created: 13/11/2020
 ---

@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-shipments-changing-shipment-states-manually
 title: Changing Shipment States Manually
-tags: shipments,pro,api,shipment states
+tags: v2,shipments,pro,api,shipment states
 contributors: andy.walton@sorted.com
 created: 26/11/2020
 ---

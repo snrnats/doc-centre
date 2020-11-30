@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-shipments-using-paperless-documents
 title: Adding Paperless Documents
-tags: shipments,pro,api,paperless,documents
+tags: v2,shipments,pro,api,paperless,documents
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 08/07/2020
 ---

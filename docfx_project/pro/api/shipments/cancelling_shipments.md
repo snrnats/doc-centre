@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-shipments-cancelling-shipments
 title: Cancelling Shipments
-tags: shipments,pro,api
+tags: v2,shipments,pro,api
 contributors: andy.walton@sorted.com
 created: 06/10/2020
 ---

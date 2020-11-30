@@ -1,7 +1,7 @@
 ---
 uid: pro-api-shipments-shipment-errors
 title: Shipment Error Codes
-tags: pro,api,shipments,errors
+tags: v2,pro,api,shipments,errors
 contributors: andy.walton@sorted.com
 created: 07/10/2020
 ---

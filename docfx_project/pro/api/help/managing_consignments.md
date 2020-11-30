@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-managing-consignments
 title: Managing Consignments
-tags: consignments,pro,api
+tags: v1,consignments,pro,api
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 02/06/2020
 ---

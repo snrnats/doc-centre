@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-getting-consignment-data
 title: Getting Consignment Data
-tags: consignments,pro,api
+tags: v1,consignments,pro,api
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 08/06/2020
 ---

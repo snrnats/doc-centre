@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-flows-consumer-options-flow
 title: Consumer Options Flow
-tags: pro,api,consignments,flows,options,delivery
+tags: v1,pro,api,consignments,flows,options,delivery
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 29/05/2020
 ---

@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-shipments-managing-shipments
 title: Managing Shipments
-tags: shipments,pro,api,v2
+tags: v2,shipments,pro,api,v2
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 02/07/2020
 ---

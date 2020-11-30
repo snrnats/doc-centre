@@ -1,13 +1,13 @@
 ---
 uid: pro-api-help-shipments-introduction
 title: Introduction
-tags: shipments,pro,api,getting started
+tags: v2,shipments,pro,api,getting started
 contributors: andy.walton@sorted.com
 created: 05/10/2020
 ---
 # Getting Started with PRO's APIs
 
-Welcome to SortedPRO! This page contains a brief overview of PRO's APIs and explains how you can use them.
+Welcome to SortedPRO! This page contains a brief overview of PRO version 2's APIs and explains how you can use them.
 
 ---
 

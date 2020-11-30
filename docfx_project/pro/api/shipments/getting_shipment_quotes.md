@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-shipments-getting-shipment-quotes
 title: Getting Shipment Quotes
-tags: shipments,pro,api,quotes
+tags: v2,shipments,pro,api,quotes
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 02/07/2020
 ---

@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-shipments-getting-collection-notes
 title: Getting Collection Notes
-tags: shipments,pro,api,shipment groups,collection notes
+tags: v2,shipments,pro,api,shipment groups,collection notes
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 02/07/2020
 ---

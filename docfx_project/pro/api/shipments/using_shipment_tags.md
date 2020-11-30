@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-shipments-using_shipment_tags
 title: Using Shipment Tags
-tags: shipments,pro,api,allocation,filters,tags
+tags: v2,shipments,pro,api,allocation,filters,tags
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 13/07/2020
 ---

@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-getting-pickup-options
 title: Getting Pickup Options
-tags: options,pro,api,consignments,pickup options
+tags: v1,options,pro,api,consignments,pickup options
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 29/05/2020
 ---

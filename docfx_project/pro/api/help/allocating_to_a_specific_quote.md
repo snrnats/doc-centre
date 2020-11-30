@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-allocating-to-a-specific-quote
 title: Allocating to a Specific Quote
-tags: allocation,pro,api,consignments
+tags: v1,allocation,pro,api,consignments
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 28/05/2020
 ---

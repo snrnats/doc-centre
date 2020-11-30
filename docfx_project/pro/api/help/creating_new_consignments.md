@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-creating-new-consignments
 title: Creating New Consignments
-tags: consignments,pro,api,EORI number
+tags: v1,consignments,pro,api,EORI number
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 04/06/2020
 ---

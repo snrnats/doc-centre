@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-shipments-getting-shipments
 title: Getting Shipments
-tags: shipments,pro,api,retrieving
+tags: v2,shipments,pro,api,retrieving
 contributors: andy.walton@sorted.com
 created: 06/10/2020
 ---

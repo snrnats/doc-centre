@@ -1,7 +1,7 @@
 ---
 uid: pro-api-shipments-errors-400-virtual-service-not-found
 title: 400 - Virtual Service Not Found
-tags: validation,pro,api,shipments,error,400
+tags: v2,validation,pro,api,shipments,error,400
 contributors: andy.walton@sorted.com
 created: 13/11/2020
 ---

@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-getting-customs-docs-and-invoices
 title: Getting Customs Docs and Invoices
-tags: customs,docs,documents,pro,api,consignments
+tags: v1,customs,docs,documents,pro,api,consignments
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 02/06/2020
 ---

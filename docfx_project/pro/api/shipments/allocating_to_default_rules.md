@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-shipments-allocating-to-default-rules
 title: Allocating to Default Rules
-tags: shipments,pro,api,allocation,rules
+tags: v2,shipments,pro,api,allocation,rules
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 02/07/2020
 ---

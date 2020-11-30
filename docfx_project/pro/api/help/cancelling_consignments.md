@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-cancelling-consignments
 title: Cancelling Consignments
-tags: consignments,pro,api
+tags: v1,consignments,pro,api
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 28/05/2020
 ---

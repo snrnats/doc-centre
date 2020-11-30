@@ -1,7 +1,7 @@
 ---
 uid: pro-api-shipments-errors-405-method-not-supported
 title: 405 - Method Not Supported
-tags: not allowed,pro,api,shipments,error,405
+tags: v2,not allowed,pro,api,shipments,error,405
 contributors: andy.walton@sorted.com
 created: 13/11/2020
 ---

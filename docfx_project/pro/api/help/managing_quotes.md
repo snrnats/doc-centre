@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-managing-quotes
 title: Managing Quotes
-tags: quotes,pro,api,consignments
+tags: v1,quotes,pro,api,consignments
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 02/06/2020
 ---

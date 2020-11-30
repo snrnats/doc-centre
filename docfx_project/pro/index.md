@@ -32,13 +32,13 @@
             <div class="dual-quad">
                 <a href="/pro/api/shipments/introduction.html" class="message-block">
                     <i class="fas fa-book"></i>
-                    <h4>API User Guide</h4>
-                    <p class="link-pink" href="/pro/api/shipments/introduction.html">PRO v2's APIs, explained</p>
+                    <h4>API User Guide (v2)</h4>
+                    <p class="link-pink" href="/pro/api/shipments/introduction.html">PRO APIs, explained</p>
                 </a>
                 <a href="/pro/api/reference/api-reference.html" class="message-block">
                     <i class="fas fa-code"></i>
-                    <h4>API Reference</h4>
-                    <p class="link-pink" href="/pro/api/reference/api-reference.html">PRO v2's API reference</p>
+                    <h4>API Reference (v2)</h4>
+                    <p class="link-pink" href="/pro/api/reference/api-reference.html">PRO API reference</p>
                 </a>
                 <a href="/pro/release-notes/index.html" class="message-block">
                     <i class="fas fa-exclamation-circle"></i>
@@ -58,7 +58,7 @@
                 <a href="/pro/api/help/introduction.html" class="message-block">
                     <i class="fas fa-truck-loading"></i>
                     <h4>Version 1 Help</h4>
-                    <p class="link-pink" href="/pro/api/help/introduction.html">Help for PRO version 1 (Consignments)</p>
+                    <p class="link-pink" href="/pro/api/help/introduction.html">Help for PRO v1 (Consignments)</p>
                 </a>
             </div>
         </div>

@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-shipments-getting-shipment-documents
 title: Getting Shipment Documents
-tags: shipments,pro,api,customs,documents,dangerous,hazardous,collection note
+tags: v2,shipments,pro,api,customs,documents,dangerous,hazardous,collection note
 contributors: andy.walton@sorted.com
 created: 08/10/2020
 ---

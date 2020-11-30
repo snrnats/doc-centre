@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-shipments-consignments_vs_shipments
 title: Consignments vs Shipments
-tags: shipments,pro,api,getting started,consignments,v1
+tags: v2,shipments,pro,api,getting started,consignments,v1
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 02/07/2020
 ---

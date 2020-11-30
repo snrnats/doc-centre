@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-introduction
 title: Getting Started with Consignments APIs
-tags: consignments,pro,api
+tags: v1,consignments,pro,api
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 28/02/2020
 ---

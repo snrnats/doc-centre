@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-using-delivery-and-pickup-options
 title: Using Delivery and Pickup Options
-tags: options,pro,api,consignments,delivery options,pickup options
+tags: v1,options,pro,api,consignments,delivery options,pickup options
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 02/06/2020
 ---

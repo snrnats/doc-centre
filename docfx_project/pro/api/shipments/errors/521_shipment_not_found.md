@@ -1,7 +1,7 @@
 ---
 uid: pro-api-shipments-errors-521-shipment-not-found
 title: 521 - Shipment Not Found
-tags: allocation,pro,api,shipments,error,521
+tags: v2,allocation,pro,api,shipments,error,521
 contributors: andy.walton@sorted.com
 created: 13/11/2020
 ---

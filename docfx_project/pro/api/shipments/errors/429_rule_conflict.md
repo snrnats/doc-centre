@@ -1,7 +1,7 @@
 ---
 uid: pro-api-shipments-errors-429-rule-conflict
 title: 429 - Rule Conflict
-tags: too many requests,pro,api,shipments,error,429
+tags: v2,too many requests,pro,api,shipments,error,429
 contributors: andy.walton@sorted.com
 created: 13/11/2020
 ---

@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-shipments-allocating-with-a-specific-carrier-service
 title: Allocating with a Specific Carrier Service
-tags: shipments,pro,api,allocation,carrier service
+tags: v2,shipments,pro,api,allocation,carrier service
 contributors: andy.walton@sorted.com
 created: 07/10/2020
 ---

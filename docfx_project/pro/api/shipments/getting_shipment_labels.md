@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-shipments-getting-shipment-labels
 title: Getting Shipment Labels
-tags: shipments,pro,api,labels
+tags: v2,shipments,pro,api,labels
 contributors: andy.walton@sorted.com
 created: 08/10/2020
 ---

@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-shipments-shipment-states
 title: Shipment States
-tags: shipments,pro,api
+tags: v2,shipments,pro,api
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 02/07/2020
 ---

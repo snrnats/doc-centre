@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-getting-delivery-options
 title: Getting Delivery Options
-tags: options,pro,api,consignments,delivery options
+tags: v1,options,pro,api,consignments,delivery options
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 29/05/2020
 ---

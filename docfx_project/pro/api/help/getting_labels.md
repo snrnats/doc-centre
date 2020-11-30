@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-getting-labels
 title: Getting Labels
-tags: labels,pro,api,consignments
+tags: v1,labels,pro,api,consignments
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 02/06/2020
 ---

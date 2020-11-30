@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-shipments-managing-documents
 title: Managing Documents
-tags: shipments,pro,api,customs,documents,paperless
+tags: v2,shipments,pro,api,customs,documents,paperless
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 02/07/2020
 ---

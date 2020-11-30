@@ -1,7 +1,7 @@
 ---
 uid: pro-api-shipments-errors-531-no-quotes-available
 title: 531 - No Quotes Available
-tags: no quotes available,pro,api,shipments,error,531
+tags: v2,no quotes available,pro,api,shipments,error,531
 contributors: andy.walton@sorted.com
 created: 13/11/2020
 ---

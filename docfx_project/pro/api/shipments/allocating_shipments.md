@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-shipments-allocating-shipments
 title: Allocating Shipments
-tags: shipments,pro,api,allocation
+tags: v2,shipments,pro,api,allocation
 contributors: andy.walton@sorted.com
 created: 07/10/2020
 ---

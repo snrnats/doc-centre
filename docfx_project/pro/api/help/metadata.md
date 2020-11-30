@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-metadata
 title: Metadata
-tags: metadata,pro,api,consignments
+tags: v1,metadata,pro,api,consignments
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 29/05/2020
 ---

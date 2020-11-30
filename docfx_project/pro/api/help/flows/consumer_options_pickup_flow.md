@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-flows-consumer-options-pickup-flow
 title: Consumer Options Pickup Flow
-tags: pro,api,consignments,flows,options,delivery,pickup
+tags: v1,pro,api,consignments,flows,options,delivery,pickup
 contributors: andy.walton@sorted.com,michael.rose@sorted.com
 created: 29/05/2020
 ---
