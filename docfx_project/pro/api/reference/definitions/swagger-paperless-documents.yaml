@@ -293,7 +293,7 @@ components:
       additionalProperties: false
       description: "This object is returned by Sorted whenever an error occurs during a request. Errors can have many causes, such\r\nas badly-formed requests, incorrect permissions, or unforeseen issues during request processing."
   securitySchemes:
-    jwt:
+    API Key:
       type: apiKey
       name: x-api-key
       in: header
