@@ -136,30 +136,38 @@ The example shows a successful  **Get Paperless Document** request for the paper
 
 <!-- ## Removing Paperless Documents from Shipments
 
-<span class="highlight">THIS CURRENTLY RUNS OFF A DOCUMENT REFERENCE PROPERTY THAT ISN'T MENTIONED IN THE DATA CONTRACT. LEAVING THIS FOR NOW</span>
+The **Remove Paperless Document** endpoint enables you to remove an existing paperless document from a shipment.
 
-This endpoint is used to remove an existing paperless_document from a shipment.
+> [!WARNING]
+> It is only possible to remove a paperless document to a shipment prior to allocation, i.e. when the shipment is in a state of _unallocated_ or _allocation_failed_.
 
-WARNING
-It is only possible to remove a paperless_document to a shipment prior to allocation, i.e. when the shipment is in a state of unallocated or allocation_failed.
+To call **Remove Paperless Document**, send a `DELETE` request to `https://api.sorted.com/pro/documents/paperless/{document_reference}`, where `{document_reference}` is the unique identifier of the paperless document you want to delete.
 
-`DELETE https://api.sorted.com/pro/documents/paperless/{document_reference}`
+Once it has received the request, PRO deletes the document and returns a standard Resource Result object.
 
 ### Example Remove Paperless Document Call
 
-The example shows
+The example shows a successful request to remove a paperless document with a `{document_reference}` of pd_00797582543150236528252876881920. PRO has removed the document and returned a confirmation message and a link to the relevant shipment.
 
 # [Example Remove Paperless Document Request](#tab/example-remove-paperless-document-request)
 
-```json
-DELETE https://api.sorted.com/pro/documents/paperless/{document_reference}
-```
-
+`DELETE https://api.sorted.com/pro/documents/paperless/pd_00797582543150236528252876881920`
 
 # [Example Remove Paperless Document Response](#tab/example-remove-paperless-document-response)
 
 ```json
-
+{
+    "reference": "pd_00797582543150236528252876881920",
+    "message": "Paperless Document pd_00797582543150236528252876881920 deleted successfully",
+    "_links": [
+        {
+            "href": "https://api-int.sorted.com/pro/shipments/sp_00797580869643167594270016798720",
+            "rel": "shipment",
+            "reference": "sp_00797580869643167594270016798720",
+            "type": "shipment"
+        }
+    ]
+}
 ```
 ---
 

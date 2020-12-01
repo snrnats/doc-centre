@@ -11,8 +11,6 @@
     href: getting_shipments.md    
   - name: Cancelling Shipments
     href: cancelling_shipments.md
-  - name: Adding Paperless Docs
-    href: adding_paperless_documents.md
   - name: Changing Shipment States Manually
     href: changing_shipment_states_manually.md      
   - name: List of Shipment States
@@ -27,7 +25,9 @@
   - name: Allocating with a Virtual Service
     href: allocating_with_a_virtual_service.md    
 - name: Getting Labels
-  href: getting_shipment_labels.md    
+  href: getting_shipment_labels.md
+- name: Adding Paperless Docs
+  href: adding_paperless_documents.md      
 - name: Getting Shipment Docs
   href: getting_shipment_documents.md 
 - name: Manifesting Shipments
