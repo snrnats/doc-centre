@@ -22,7 +22,7 @@ PRO's Quotes API enables you to get delivery quotes for as-yet uncreated shipmen
 The **Allocate Shipment with Quote** endpoint is a key part of all PRO quotes workflows, enabling you to allocate a shipment to the carrier service returned in a particular quote. It is covered in the **Allocation** section of this site, as it is part of the Allocation API:
 
 > [!NOTE]
-> * For reference information on **Allocate With Quote**, see the [PRO v2 API reference](/pro/api/reference/shipments-api-ref.html#tag/Allocation/paths/~1shipments~1{shipmentReference}~1allocate/put).
+> * For reference information on **Allocate With Quote**, see the [PRO v2 API reference](/pro/api/reference/shipments.html#tag/Allocation/paths/~1shipments~1{shipmentReference}~1allocate~1quote~1{quoteReference}/put).
 > * For a user guide on the **Allocate With Quote** endpoint, see the [Allocating with a Quote](/pro/api/shipments/allocating_via_a_quote.html) page, in the **Allocating Shipments** section.
 
 ## Section Contents

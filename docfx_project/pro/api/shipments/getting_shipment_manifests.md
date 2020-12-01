@@ -19,7 +19,7 @@ PRO returns the requested manifest file. The manifest lists the shipments that w
 
 > [!NOTE]
 >
-> * For full reference information on the **Get Manifest** endpoint, see the [PRO v2 API reference](/pro/api/reference/shipments-api-ref.html#tag/Manifest/paths/~1shipments~1manifests~1{manifestReference}/get).
+> * For full reference information on the **Get Manifest** endpoint, see the [PRO v2 API reference](/pro/api/reference/shipments.html#tag/Manifest/paths/~1shipments~1manifests~1{manifestReference}/get).
 
 ## Get Manifest Example
 

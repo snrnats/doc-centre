@@ -7,20 +7,25 @@ created: 02/07/2020
 ---
 # Getting Shipment Events
 
-This page explains how to retrieve carrier tracking events for a shipment.
+SortedPRO's tracking features enable you to provide package tracking updates for your customers without having to pass them off to a carrier portal. This page explains how to retrieve carrier tracking events for a shipment.
+
+> [!NOTE]
+> Sorted's dedicated tracking product, REACT, enables you to provide a richer tracking experience to your customers. For more information on using REACT, see the [REACT](/react/index.html?v2) section.
 
 ---
 
-## Shipment-Level Tracking Overview
+<!-- ## Shipment-Level Tracking Overview
 
 In shipment-level tracking, PRO returns tracking events for the entire shipment, without making a distinction between individual items of contents within that shipment. 
 
 PRO offers two endpoints that enable you to get shipment-level tracking events: 
 
 * **Get Tracking Events** - Returns shipment-level tracking events by unique shipment `{reference}`.
-* **Get Tracking Events by Custom Reference** - Returns shipment-level tracking events by `{custom_reference}`.
+* **Get Tracking Events by Custom Reference** - Returns shipment-level tracking events by `{custom_reference}`. -->
 
 ## Getting Tracking Events by Shipment Reference
+
+PRO's **Get Tracking Events** endpoint is intended to drive simple web-based tracking pages. When the API is called, PRO returns a response listing the tracking events that have occurred since that shipment was dispatched. 
 
 To call the **Get Tracking Events** endpoint, send a `GET` request to `https://api.sorted.com/pro/tracking/{reference}`, where `{reference}` is the unique reference of the shipment you want to track.
 
@@ -31,10 +36,19 @@ PRO returns a `tracking_response` object for the shipment. The `tracking_respons
 * An updated expected delivery date for the shipment, where available.
 * A list of tracking events for the shipment.
 
+Each tracking event is an informational message returned from the carrier, providing details about the status of the consignment. It contains the following properties:
+
+* `reference` - A unique identifier for the tracking event.
+* `timestamp` - The time and date that the tracking event occurred.
+* `received_timestamp` - The time and date that the tracking event was received by Sorted.
+* `event_code` - A unique identifier for the type of tracking event (for example _delivered_).
+* `description` - A description of the tracking event.
+* `signee` - The name of the person who signed for the package, if applicable.
+* `location` - The location of the tracking event, if applicable.
+* `lat_long` The latitude and longitude of the location at which the event took place, where provided.
+
 > [!NOTE]
->
-> * For more information on the structure of PRO shipment tracking events, see the [What Is a Tracking Event?](/pro/api/shipments/tracking_pro_shipments.html#what-is-a-tracking-event) section of the [Tracking PRO Shipments](/pro/api/shipments/tracking_pro_shipments.html) page.
-> * For full reference information on the **Get Tracking Events** endpoint, see the Shipments data contract.
+> For full reference information on the **Get Tracking Events** endpoint, see the [PRO v2 API reference](/pro/api/reference/tracking.html#tag/Tracking/paths/~1tracking~1{shipmentRef}/get).
 
 ### Example Get Tracking Events Call
 
@@ -112,7 +126,7 @@ GET https://api.sorted.com/pro/tracking/sp_00695767408794862515340410880000
 ```
 ---
 
-## Getting Tracking Events by Custom Reference
+<!--## Getting Tracking Events by Custom Reference
 
 The **Get Tracking Events by Custom Reference** endpoint enables you to retrieve tracking details by your own internal order reference numbers. Your shipments must be tagged with the relevant references via the `{custom_reference}` property. 
 
@@ -230,6 +244,8 @@ GET https://api.sorted.com/pro/tracking/custom_reference/CR1234
 }
 ```
 ---
+
+--->
 
 ## Next Steps
 

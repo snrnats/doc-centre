@@ -20,7 +20,7 @@ PRO's Quotes endpoints return one or more `quote` objects, of which each represe
 > [!NOTE]
 >
 > * For a full user guide on working with quotes, see the [Managing Shipment Quotes](/pro/api/shipments/managing_shipment_quotes.html) section.
-> * For reference information on the Quotes API, see the [PRO v2 API reference](/pro/api/reference/shipments-api-ref.html#tag/Quotes).
+> * For reference information on the Quotes API, see the [PRO v2 API reference](/pro/api/reference/shipments.html#tag/Quotes).
 
 ## Using Allocate Shipment With Quote
 
@@ -34,7 +34,7 @@ Once the request is received PRO attempts to allocate the shipment to the carrie
 [!include[_shipments_allocate_result](../includes/_shipments_allocate_result.md)]
 
 > [!NOTE]
-> For full reference information on the **Allocate Shipment with Quote** endpoint, see the [PRO v2 API reference](/pro/api/reference/shipments-api-ref.html#tag/Allocation/paths/~1shipments~1allocate~1{shipmentReference}~1quote~1{quoteReference}/put).
+> For full reference information on the **Allocate Shipment with Quote** endpoint, see the [PRO v2 API reference]/pro/api/reference/shipments.html#tag/Allocation/paths/~1shipments~1{shipmentReference}~1allocate~1quote~1{quoteReference}/put).
 
 ### Allocate Shipment with Quote Example
 

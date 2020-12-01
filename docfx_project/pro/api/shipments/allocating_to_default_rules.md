@@ -7,11 +7,11 @@ created: 02/07/2020
 ---
 # Allocating to Default Rules
 
-To page explains how to use the **Allocate Shipment**  and **Allocate Shipments** endpoints to allocate shipments based on your pre-defined allocation rules.
+To page explains how to use the **Allocate Shipments** endpoint to allocate shipments based on your pre-defined allocation rules.
 
 ---
 
-## Overview
+<!--## Overview
 
 The **Allocate Shipment** and **Allocate Shipments** endpoints enable you to allocate shipments to the cheapest eligible carrier service. PRO selects a service for you when you use these endpoints, rather than requiring you to select a service or service group manually. **Allocate Shipment** allocates a single shipment, while **Allocate Shipments** enables you to queue multiple shipments for allocation at once.
 
@@ -106,20 +106,20 @@ PUT https://api.sorted.com/pro/shipments/sp_9233500258180005889777767900009/allo
 
 > [!NOTE]
 >
->  For full reference information on the **Allocate Shipment** endpoint, see the [PRO v2 API reference](/pro/api/reference/shipments-api-ref.html#tag/Allocation/paths/~1shipments~1{shipmentReference}~1allocate/put). 
+>  For full reference information on the **Allocate Shipment** endpoint, see the [PRO v2 API reference](/pro/api/reference/shipments-api-ref.html#tag/Allocation/paths/~1shipments~1{shipmentReference}~1allocate/put).--> 
 
 ## Allocating Multiple Shipments At Once
 
-The **Allocate Shipments** endpoint enables you to queue multiple shipments for to the cheapest eligible carrier service in one request. 
+The **Allocate Shipments** endpoint enables you to allocate multiple shipments to the cheapest eligible carrier service. PRO selects a service for you when you use these endpoints, rather than requiring you to select a service or service group manually.
 
 To call **Allocate Shipments**, send a `PUT` request to `https://api.sorted.com/pro/shipments/allocate`. The request body should contain an array of one or more shipment `{reference}`s to be allocated. 
 
-Optionally, you can also include a list of service `capabilities`. Where capabilities are provided, then PRO only allocated the shipment to a carrier service that meets those capabilities. Each capability should list the `type` of service capability specified and the `value` that that capability should have.
+<!--Optionally, you can also include a list of service `capabilities`. If you provide a list of `capabilities`, then PRO only allocates the shipment to a carrier service that meets those capabilities. Each capability should list the `type` of service capability specified and the `value` that that capability should have.
 
 > [!NOTE]
-> For information on available service capabilities and values, see the [PRO v2 API reference](/pro/api/reference/shipments-api-ref.html#tag/Allocation/paths/~1shipments~1allocation/put)
+> For information on available service capabilities and values, see the [PRO v2 API reference](/pro/api/reference/shipments.html#tag/Allocation/paths/~1shipments~1allocate/put)-->
 
-Once the request is received, PRO takes each shipment in turn and attempts to queue it for allocation to the cheapest eligible carrier, as per the process detailed in the [Overview](#overview). It then returns an Allocate Shipments result. 
+Once the request is received, PRO takes each shipment in turn and attempts to queue it for allocation to the cheapest eligible carrier, as per the process detailed on the [Allocating Shipments](/pro/api/shipments/allocating_shipments.html#selecting-a-carrier-service) page. It then returns an Allocate Shipments result. 
 
 [!include[_shipments_allocate_shipments_result](../includes/_shipments_allocate_shipments_result.md)]
 
@@ -171,7 +171,7 @@ The example shows a request to queue three shipments for allocation. Two shipmen
 
 > [!NOTE]
 >
->  For full reference information on the **Allocate Shipments** endpoint, see the [PRO v2 API reference](/pro/api/reference/shipments-api-ref.html#tag/Allocation/paths/~1shipments~1allocation/put). 
+>  For full reference information on the **Allocate Shipments** endpoint, see the [PRO v2 API reference](/pro/api/reference/shipments.html#tag/Allocation/paths/~1shipments~1allocate/put). 
 
 ## Next Steps
 

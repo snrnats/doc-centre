@@ -11,9 +11,9 @@ This page explains how got get delivery quotes based on shipment details.
 
 ---
 
-## Overview
+## Making a Create Quote Request
 
-PRO has two endpoints that take the details of an as-yet uncreated shipment and return quotes:
+<!--PRO has two endpoints that take the details of an as-yet uncreated shipment and return quotes:
 
 * **Create Quote** can return quotes from any suitable carrier service. To call **Create Quote**, send a `POST` request to `https://api.sorted.com/pro/shipments/quote`.
 * **Create Quote by Service Group** returns quotes from eligible services in the specified carrier service group.  To call **Create Quote by Service Group**, send a `POST` request to `https://api.sorted.com/pro/shipments/quote/service_group/{group_ref}`, where `{group_ref}` is the unique `reference` of the service group you want to get quotes within. 
@@ -24,9 +24,11 @@ The body of the request should contain a shipment object.
 >
 > Both the **Create Quote** and **Create Quote by Service Group** endpoints take a shipment object in the body of the request. However, they do not create shipments in and of themselves. In order to allocate to one of the quotes returned by these endpoints, you would need to first create the shipment. 
 >
-> For more information on creating shipments, see the [Creating Shipments](/pro/api/shipments/creating_shipments.html) page.
+> For more information on creating shipments, see the [Creating Shipments](/pro/api/shipments/creating_shipments.html) page.-->
 
-As a minimum, the **Create Quote** and **Create Quote by Service Group** endpoints require you to send the following information in the request body:
+PRO's **Create Quote** endpoint takes the details of an as-yet uncreated shipment and returns quotes for it. To call **Create Quote**, send a `POST` request to `https://api.sorted.com/pro/shipments/quote`.
+
+As a minimum, the **Create Quote** endpoint requires you to send the following information in the request body:
 
 * `shipment_type` - Specifies whether the shipment will be `on_demand` (i.e. will require an ad-hoc carrier collection to be booked) or `scheduled` (i.e. will be picked up as part of a regularly scheduled carrier collection ).
 * `contents` - The contents of the shipment itself.
@@ -71,13 +73,11 @@ At this point, you would be able to display the relevant quote information to yo
 
 ## Example Quotes
 
-The example below shows a quote request for a shipment. Note that  PRO has returned two quotes, with a further service excluded as it cannot meet the delivery promise.
+The example below shows a quote request for a shipment. Note that PRO has returned two quotes, with a further service excluded as it cannot meet the delivery promise.
 
 # [Quote Requests](#tab/create-quote-request)
 
 `POST https://api.sorted.com/pro/shipments/quote`
-
-`POST https://api.sorted.com/pro/shipments/quote/service_group/SG123`
 
 ```json
 {
@@ -352,7 +352,7 @@ The example below shows a quote request for a shipment. Note that  PRO has retur
 
 > [!NOTE]
 >
-> * For full reference information on the **Create Quote** and **Create Quote by Service Group** endpoints, see the [PRO v2 API reference](/pro/api/reference/shipments-api-ref.html#tag/Quotes).
+> For full reference information on the **Create Quote** endpoint, see the [PRO v2 API reference](/pro/api/reference/shipments.html#tag/Quotes/paths/~1shipments~1quote/post).
 
 ## Next Steps
 
