@@ -35,10 +35,10 @@
                     <h4>API User Guide (v2)</h4>
                     <p class="link-pink" href="/pro/api/shipments/introduction.html">PRO APIs, explained</p>
                 </a>
-                <a href="/pro/api/reference/api-reference.html" class="message-block">
+                <a href="/pro/api/reference/index.html" class="message-block">
                     <i class="fas fa-code"></i>
                     <h4>API Reference (v2)</h4>
-                    <p class="link-pink" href="/pro/api/reference/api-reference.html">PRO API reference</p>
+                    <p class="link-pink" href="/pro/api/reference/index.html">PRO API reference</p>
                 </a>
                 <a href="/pro/release-notes/index.html" class="message-block">
                     <i class="fas fa-exclamation-circle"></i>

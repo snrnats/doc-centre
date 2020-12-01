@@ -1,14 +1,14 @@
 openapi: 3.0.1
 info:
   title: Collection Notes API
-  version: version 1.0
+  version:
+    $ref: ./shared.yaml#/version
   description:
     $ref: ./intro-collection-notes.yaml#/description
+  contact:
+    $ref: ./shared.yaml#/contact
 servers:
-  - url: https://api.sorted.com/pro/
-    description: Production (live)
-  - url: https://api.sorted.com/prosandbox/
-    description: Sandbox
+  $ref: ./shared.yaml#/servers
 paths:
   "/collection_notes/shipment_group/custom_reference/{reference}/latest":
     get:
@@ -24,6 +24,7 @@ paths:
           schema:
             type: string
             description: The `shipment_group` custom reference.
+            example: TXD998982323
       responses:
         "200":
           description: Success
@@ -57,6 +58,7 @@ paths:
           schema:
             type: string
             description: The `shipment_group` custom reference.
+            example: TXD998982323
         - name: version
           in: path
           description: The `shipment_group` version.
@@ -65,6 +67,7 @@ paths:
             type: integer
             description: The `shipment_group` version.
             format: int32
+            example: 9
       responses:
         "200":
           description: Success
@@ -98,6 +101,7 @@ paths:
           schema:
             type: string
             description: The `shipment_group` reference.
+            example: sg_00880362752005794848905455730688
       responses:
         "200":
           description: Success

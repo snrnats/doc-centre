@@ -1,17 +1,14 @@
 openapi: 3.0.1
 info:
   title: Sorted Shipments API
+  version:
+    $ref: ./shared.yaml#/version
   description:
     $ref: ./intro-shipments.yaml#/description
   contact:
-    name: Sorted Support
-    email: support@sorted.com
-  version: '1.1'
+    $ref: ./shared.yaml#/contact
 servers:
-  - url: https://api.sorted.com/pro/
-    description: Production (Live)
-  - url: https://api.sorted.com/prosandbox/
-    description: Sandbox
+  $ref: ./shared.yaml#/servers
 paths:
   /shipments/allocate:
     put:
@@ -43,16 +40,36 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult'
-        '200':
-          description: The `shipments` have been allocated successfully
         '400':
           description: There is a validation error in your request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
+        '403':
+          description: You do not have permission to allocate `shipments`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '404':
           description: No `shipment(s)` could be found with the provided reference(s)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '407':
           description: "One or more `shipments` have been allocated successfully, but one or more `shipments` could not be\r\nallocated. The response will include details of the status for relevant `shipments`."
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '521':
           description: Allocation has failed - the `shipment(s)` could not be allocated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
   /shipments/allocate/filters:
     put:
       tags:
@@ -81,12 +98,24 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Sorted.Shipments.DataContracts.AllocateWithFiltersResult'
-        '200':
-          description: One or more `shipments` have been identified and allocated successfully
         '400':
-          description: There is a validation error in your request
+          description: You do not have permission to allocate `shipments`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '521':
           description: Allocation has failed - the `shipment(s)` could not be allocated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
   /shipments/allocate/service:
     put:
       tags:
@@ -119,12 +148,36 @@ paths:
                   $ref: '#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult'
         '207':
           description: "One or more `shipments` have been allocated successfully, but one or more `shipments` could not be\r\nallocated. The response will include details of the status for relevant `shipments`."
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult'
         '400':
           description: There is a validation error in your request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
+        '403':
+          description: You do not have permission to allocate `shipments`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '404':
           description: "Either no `shipment(s)` could be found with the provided reference(s) or there is no carrier service\r\nwith the provided reference."
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '521':
           description: Allocation has failed - the `shipment(s)` could not be allocated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
   /shipments/allocate/service_group:
     put:
       tags:
@@ -155,16 +208,38 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult'
-        '200':
-          description: The `shipments` have been allocated successfully
         '400':
           description: There is a validation error in your request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
+        '403':
+          description: You do not have permission to allocate `shipments`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '404':
           description: "No `shipments` could be found with the provided reference or a `service_group` could not be found\r\nwith the provided reference"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '407':
           description: "One or more `shipments` have been allocated successfully, but one or more `shipments` could not be\r\nallocated. The response will include details of the status for relevant `shipments`."
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult'
         '521':
           description: Allocation has failed - the `shipments` could not be allocated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
   '/shipments/{shipmentReference}/allocate/quote/{quoteReference}':
     put:
       tags:
@@ -179,6 +254,7 @@ paths:
           schema:
             type: string
             description: The reference of the `shipment` to be allocated
+            example: sp_00880362751987348104831746179081
         - name: quoteReference
           in: path
           description: The reference of the previously-generated `quote`
@@ -186,6 +262,7 @@ paths:
           schema:
             type: string
             description: The reference of the previously-generated `quote`
+            example: qu_00880362752005794848905455730699
         - name: x-api-version
           in: header
           description: The version of the API to use.  Version `1.1` should be supplied with all requests.
@@ -202,7 +279,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult'
               example: {
-  "shipment_reference": "sp_00873967816802791740917076197376",
+  "shipment_reference": "sp_00880399001222958749628887990276",
   "state": "allocated",
   "price": {
     "net": 10.0,
@@ -220,7 +297,7 @@ paths:
     ],
     "currency": "GBP"
   },
-  "message": "Shipment sp_00873967816802791740917076197376 has been allocated successfully",
+  "message": "Shipment sp_00880399001222958749628887990276 has been allocated successfully",
   "carrier": {
     "reference": "DNQ",
     "name": "DNQ Worldwide",
@@ -229,17 +306,17 @@ paths:
   },
   "tracking_details": {
     "shipment": {
-      "reference": "sp_00873967816802791740917076197376",
+      "reference": "sp_00880399001222958749628887990276",
       "tracking_references": [
-        "te_00873967816821238484990785748992"
+        "te_00880399001222958749628887990277"
       ],
       "_links": []
     },
     "contents": [
       {
-        "reference": "sc_00873967816821238484990785748993",
+        "reference": "sc_00880399001222958749628887990278",
         "tracking_references": [
-          "te_00873967816821238484990785748994"
+          "te_00880399001222958749628887990279"
         ],
         "_links": []
       }
@@ -247,33 +324,120 @@ paths:
   },
   "_links": [
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00873967816802791740917076197376/pdf",
+      "href": "https://api.sorted.com/pro/labels/sp_00880399001222958749628887990276/pdf",
       "rel": "label",
-      "reference": "sp_00873967816802791740917076197376",
+      "reference": "sp_00880399001222958749628887990276",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00873967816802791740917076197376/zpl",
+      "href": "https://api.sorted.com/pro/labels/sp_00880399001222958749628887990276/zpl",
       "rel": "label",
-      "reference": "sp_00873967816802791740917076197376",
+      "reference": "sp_00880399001222958749628887990276",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/shipments/sp_00873967816802791740917076197376",
+      "href": "https://api.sorted.com/pro/shipments/sp_00880399001222958749628887990276",
       "rel": "shipment",
-      "reference": "sp_00873967816802791740917076197376",
+      "reference": "sp_00880399001222958749628887990276",
       "type": "shipment"
     }
   ]
 }
         '202':
           description: The `shipment` has been queued for allocation with the `quote`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult'
+              example: {
+  "shipment_reference": "sp_00880399001241405493702597541888",
+  "state": "allocated",
+  "price": {
+    "net": 10.0,
+    "gross": 12.0,
+    "taxes": [
+      {
+        "rate": {
+          "reference": "gb_standard",
+          "country_iso_code": "GB",
+          "type": "standard",
+          "value": 0.2
+        },
+        "amount": 0.0
+      }
+    ],
+    "currency": "GBP"
+  },
+  "message": "Shipment sp_00880399001241405493702597541888 has been allocated successfully",
+  "carrier": {
+    "reference": "DNQ",
+    "name": "DNQ Worldwide",
+    "service_reference": "DNQ72",
+    "service_name": "DNQ 72-Hour Express"
+  },
+  "tracking_details": {
+    "shipment": {
+      "reference": "sp_00880399001241405493702597541888",
+      "tracking_references": [
+        "te_00880399001241405493702597541889"
+      ],
+      "_links": []
+    },
+    "contents": [
+      {
+        "reference": "sc_00880399001241405493702597541890",
+        "tracking_references": [
+          "te_00880399001241405493702597541891"
+        ],
+        "_links": []
+      }
+    ]
+  },
+  "_links": [
+    {
+      "href": "https://api.sorted.com/pro/labels/sp_00880399001241405493702597541888/pdf",
+      "rel": "label",
+      "reference": "sp_00880399001241405493702597541888",
+      "type": "label"
+    },
+    {
+      "href": "https://api.sorted.com/pro/labels/sp_00880399001241405493702597541888/zpl",
+      "rel": "label",
+      "reference": "sp_00880399001241405493702597541888",
+      "type": "label"
+    },
+    {
+      "href": "https://api.sorted.com/pro/shipments/sp_00880399001241405493702597541888",
+      "rel": "shipment",
+      "reference": "sp_00880399001241405493702597541888",
+      "type": "shipment"
+    }
+  ]
+}
         '400':
           description: There is a validation error in your request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
+        '403':
+          description: You do not have permission to allocate `shipments`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '404':
           description: The `shipment` could not be found or the `quote` reference could not be found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '521':
           description: Allocation has failed - the `shipment` could not be allocated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
   '/shipments/{shipmentReference}/allocate/service/{serviceReference}':
     put:
       tags:
@@ -288,6 +452,7 @@ paths:
           schema:
             type: string
             description: The reference of the `shipment` to allocate
+            example: sp_00880362751987348104831746179081
         - name: serviceReference
           in: path
           description: The reference of the carrier service to allocate with
@@ -295,6 +460,7 @@ paths:
           schema:
             type: string
             description: The reference of the carrier service to allocate with
+            example: CL_DNQ_WW_001
         - name: x-api-version
           in: header
           description: The version of the API to use.  Version `1.1` should be supplied with all requests.
@@ -311,7 +477,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult'
               example: {
-  "shipment_reference": "sp_00873967816876578717211914403844",
+  "shipment_reference": "sp_00880399001425872934439693058052",
   "state": "allocated",
   "price": {
     "net": 10.0,
@@ -329,7 +495,7 @@ paths:
     ],
     "currency": "GBP"
   },
-  "message": "Shipment sp_00873967816876578717211914403844 has been allocated successfully",
+  "message": "Shipment sp_00880399001425872934439693058052 has been allocated successfully",
   "carrier": {
     "reference": "DNQ",
     "name": "DNQ Worldwide",
@@ -338,17 +504,17 @@ paths:
   },
   "tracking_details": {
     "shipment": {
-      "reference": "sp_00873967816876578717211914403844",
+      "reference": "sp_00880399001425872934439693058052",
       "tracking_references": [
-        "te_00873967816895025461285623955456"
+        "te_00880399001425872934439693058053"
       ],
       "_links": []
     },
     "contents": [
       {
-        "reference": "sc_00873967816895025461285623955457",
+        "reference": "sc_00880399001425872934439693058054",
         "tracking_references": [
-          "te_00873967816895025461285623955458"
+          "te_00880399001425872934439693058055"
         ],
         "_links": []
       }
@@ -356,33 +522,120 @@ paths:
   },
   "_links": [
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00873967816876578717211914403844/pdf",
+      "href": "https://api.sorted.com/pro/labels/sp_00880399001425872934439693058052/pdf",
       "rel": "label",
-      "reference": "sp_00873967816876578717211914403844",
+      "reference": "sp_00880399001425872934439693058052",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00873967816876578717211914403844/zpl",
+      "href": "https://api.sorted.com/pro/labels/sp_00880399001425872934439693058052/zpl",
       "rel": "label",
-      "reference": "sp_00873967816876578717211914403844",
+      "reference": "sp_00880399001425872934439693058052",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/shipments/sp_00873967816876578717211914403844",
+      "href": "https://api.sorted.com/pro/shipments/sp_00880399001425872934439693058052",
       "rel": "shipment",
-      "reference": "sp_00873967816876578717211914403844",
+      "reference": "sp_00880399001425872934439693058052",
       "type": "shipment"
     }
   ]
 }
         '202':
           description: The `shipment` has been queued for allocation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult'
+              example: {
+  "shipment_reference": "sp_00880399001425872934439693058056",
+  "state": "allocated",
+  "price": {
+    "net": 10.0,
+    "gross": 12.0,
+    "taxes": [
+      {
+        "rate": {
+          "reference": "gb_standard",
+          "country_iso_code": "GB",
+          "type": "standard",
+          "value": 0.2
+        },
+        "amount": 0.0
+      }
+    ],
+    "currency": "GBP"
+  },
+  "message": "Shipment sp_00880399001425872934439693058056 has been allocated successfully",
+  "carrier": {
+    "reference": "DNQ",
+    "name": "DNQ Worldwide",
+    "service_reference": "DNQ72",
+    "service_name": "DNQ 72-Hour Express"
+  },
+  "tracking_details": {
+    "shipment": {
+      "reference": "sp_00880399001425872934439693058056",
+      "tracking_references": [
+        "te_00880399001425872934439693058057"
+      ],
+      "_links": []
+    },
+    "contents": [
+      {
+        "reference": "sc_00880399001425872934439693058058",
+        "tracking_references": [
+          "te_00880399001425872934439693058059"
+        ],
+        "_links": []
+      }
+    ]
+  },
+  "_links": [
+    {
+      "href": "https://api.sorted.com/pro/labels/sp_00880399001425872934439693058056/pdf",
+      "rel": "label",
+      "reference": "sp_00880399001425872934439693058056",
+      "type": "label"
+    },
+    {
+      "href": "https://api.sorted.com/pro/labels/sp_00880399001425872934439693058056/zpl",
+      "rel": "label",
+      "reference": "sp_00880399001425872934439693058056",
+      "type": "label"
+    },
+    {
+      "href": "https://api.sorted.com/pro/shipments/sp_00880399001425872934439693058056",
+      "rel": "shipment",
+      "reference": "sp_00880399001425872934439693058056",
+      "type": "shipment"
+    }
+  ]
+}
         '400':
-          description: There is a validation error in your request
+          description: You do not have permission to allocate `shipments`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '404':
           description: No `shipment` could be found with the provided reference or the carrier service reference provided does not exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '521':
           description: Allocation has failed - the `shipment` could not be allocated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
   '/shipments/{shipmentReference}/allocate/service_group/{groupReference}':
     put:
       tags:
@@ -397,6 +650,7 @@ paths:
           schema:
             type: string
             description: The reference of the `shipment` to allocate
+            example: sp_00880362751987348104831746179081
         - name: groupReference
           in: path
           description: The reference of the carrier service group to allocate with
@@ -404,6 +658,7 @@ paths:
           schema:
             type: string
             description: The reference of the carrier service group to allocate with
+            example: sg_00880362751895114384463198421005
         - name: x-api-version
           in: header
           description: The version of the API to use.  Version `1.1` should be supplied with all requests.
@@ -420,7 +675,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult'
               example: {
-  "shipment_reference": "sp_00873967816931918949433043058692",
+  "shipment_reference": "sp_00880399001591893631103079022600",
   "state": "allocated",
   "price": {
     "net": 10.0,
@@ -438,7 +693,7 @@ paths:
     ],
     "currency": "GBP"
   },
-  "message": "Shipment sp_00873967816931918949433043058692 has been allocated successfully",
+  "message": "Shipment sp_00880399001591893631103079022600 has been allocated successfully",
   "carrier": {
     "reference": "DNQ",
     "name": "DNQ Worldwide",
@@ -447,17 +702,17 @@ paths:
   },
   "tracking_details": {
     "shipment": {
-      "reference": "sp_00873967816931918949433043058692",
+      "reference": "sp_00880399001591893631103079022600",
       "tracking_references": [
-        "te_00873967816950365693506752610304"
+        "te_00880399001591893631103079022601"
       ],
       "_links": []
     },
     "contents": [
       {
-        "reference": "sc_00873967816950365693506752610305",
+        "reference": "sc_00880399001591893631103079022602",
         "tracking_references": [
-          "te_00873967816950365693506752610306"
+          "te_00880399001591893631103079022603"
         ],
         "_links": []
       }
@@ -465,33 +720,120 @@ paths:
   },
   "_links": [
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00873967816931918949433043058692/pdf",
+      "href": "https://api.sorted.com/pro/labels/sp_00880399001591893631103079022600/pdf",
       "rel": "label",
-      "reference": "sp_00873967816931918949433043058692",
+      "reference": "sp_00880399001591893631103079022600",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00873967816931918949433043058692/zpl",
+      "href": "https://api.sorted.com/pro/labels/sp_00880399001591893631103079022600/zpl",
       "rel": "label",
-      "reference": "sp_00873967816931918949433043058692",
+      "reference": "sp_00880399001591893631103079022600",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/shipments/sp_00873967816931918949433043058692",
+      "href": "https://api.sorted.com/pro/shipments/sp_00880399001591893631103079022600",
       "rel": "shipment",
-      "reference": "sp_00873967816931918949433043058692",
+      "reference": "sp_00880399001591893631103079022600",
       "type": "shipment"
     }
   ]
 }
         '202':
           description: The `shipment` has been queued for allocation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult'
+              example: {
+  "shipment_reference": "sp_00880399001591893631103079022604",
+  "state": "allocated",
+  "price": {
+    "net": 10.0,
+    "gross": 12.0,
+    "taxes": [
+      {
+        "rate": {
+          "reference": "gb_standard",
+          "country_iso_code": "GB",
+          "type": "standard",
+          "value": 0.2
+        },
+        "amount": 0.0
+      }
+    ],
+    "currency": "GBP"
+  },
+  "message": "Shipment sp_00880399001591893631103079022604 has been allocated successfully",
+  "carrier": {
+    "reference": "DNQ",
+    "name": "DNQ Worldwide",
+    "service_reference": "DNQ72",
+    "service_name": "DNQ 72-Hour Express"
+  },
+  "tracking_details": {
+    "shipment": {
+      "reference": "sp_00880399001591893631103079022604",
+      "tracking_references": [
+        "te_00880399001591893631103079022605"
+      ],
+      "_links": []
+    },
+    "contents": [
+      {
+        "reference": "sc_00880399001591893631103079022606",
+        "tracking_references": [
+          "te_00880399001610340375176788574208"
+        ],
+        "_links": []
+      }
+    ]
+  },
+  "_links": [
+    {
+      "href": "https://api.sorted.com/pro/labels/sp_00880399001591893631103079022604/pdf",
+      "rel": "label",
+      "reference": "sp_00880399001591893631103079022604",
+      "type": "label"
+    },
+    {
+      "href": "https://api.sorted.com/pro/labels/sp_00880399001591893631103079022604/zpl",
+      "rel": "label",
+      "reference": "sp_00880399001591893631103079022604",
+      "type": "label"
+    },
+    {
+      "href": "https://api.sorted.com/pro/shipments/sp_00880399001591893631103079022604",
+      "rel": "shipment",
+      "reference": "sp_00880399001591893631103079022604",
+      "type": "shipment"
+    }
+  ]
+}
         '400':
-          description: There is a validation error in your request
+          description: You do not have permission to allocate `shipments`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '404':
           description: No `shipment` could be found with the provided reference or the service group reference provided does not exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '521':
           description: Allocation has failed - the `shipment` could not be allocated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
   '/shipments/{shipmentReference}/allocate/virtual_service/{virtualService}':
     put:
       tags:
@@ -506,6 +848,7 @@ paths:
           schema:
             type: string
             description: The reference of the `shipment` to allocate
+            example: sp_00880362751987348104831746179081
         - name: virtualService
           in: path
           description: The reference of the carrier service or carrier service group to allocate with
@@ -513,6 +856,7 @@ paths:
           schema:
             type: string
             description: The reference of the carrier service or carrier service group to allocate with
+            example: CL_DNQ_WW_002
         - name: x-api-version
           in: header
           description: The version of the API to use.  Version `1.1` should be supplied with all requests.
@@ -529,7 +873,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Sorted.Shipments.DataContracts.AllocateResult'
               example: {
-  "shipment_reference": "sp_00873967817005705925727881265152",
+  "shipment_reference": "sp_00880399001757914327766464987140",
   "state": "allocated",
   "price": {
     "net": 10.0,
@@ -547,7 +891,7 @@ paths:
     ],
     "currency": "GBP"
   },
-  "message": "Shipment sp_00873967817005705925727881265152 has been allocated successfully",
+  "message": "Shipment sp_00880399001757914327766464987140 has been allocated successfully",
   "carrier": {
     "reference": "DNQ",
     "name": "DNQ Worldwide",
@@ -556,17 +900,17 @@ paths:
   },
   "tracking_details": {
     "shipment": {
-      "reference": "sp_00873967817005705925727881265152",
+      "reference": "sp_00880399001757914327766464987140",
       "tracking_references": [
-        "te_00873967817005705925727881265153"
+        "te_00880399001757914327766464987141"
       ],
       "_links": []
     },
     "contents": [
       {
-        "reference": "sc_00873967817005705925727881265154",
+        "reference": "sc_00880399001757914327766464987142",
         "tracking_references": [
-          "te_00873967817005705925727881265155"
+          "te_00880399001757914327766464987143"
         ],
         "_links": []
       }
@@ -574,33 +918,49 @@ paths:
   },
   "_links": [
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00873967817005705925727881265152/pdf",
+      "href": "https://api.sorted.com/pro/labels/sp_00880399001757914327766464987140/pdf",
       "rel": "label",
-      "reference": "sp_00873967817005705925727881265152",
+      "reference": "sp_00880399001757914327766464987140",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/labels/sp_00873967817005705925727881265152/zpl",
+      "href": "https://api.sorted.com/pro/labels/sp_00880399001757914327766464987140/zpl",
       "rel": "label",
-      "reference": "sp_00873967817005705925727881265152",
+      "reference": "sp_00880399001757914327766464987140",
       "type": "label"
     },
     {
-      "href": "https://api.sorted.com/pro/shipments/sp_00873967817005705925727881265152",
+      "href": "https://api.sorted.com/pro/shipments/sp_00880399001757914327766464987140",
       "rel": "shipment",
-      "reference": "sp_00873967817005705925727881265152",
+      "reference": "sp_00880399001757914327766464987140",
       "type": "shipment"
     }
   ]
 }
         '400':
           description: There is a validation error in your request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '403':
-          description: You do not have permission to allocate a `shipment`
+          description: You do not have permission to allocate `shipments`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '404':
           description: "No `shipment` could be found with the provided reference or a service group or service could not be found\r\nwith the provided reference"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '521':
           description: Allocation has failed - the `shipment` could not be allocated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
   '/shipments/{shipmentReference}/cancel':
     put:
       tags:
@@ -615,6 +975,7 @@ paths:
           schema:
             type: string
             description: The reference of the `shipment` to cancel
+            example: sp_00880362751987348104831746179081
         - name: x-api-version
           in: header
           description: The version of the API to use.  Version `1.1` should be supplied with all requests.
@@ -632,14 +993,34 @@ paths:
                 $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ResourceResult'
         '202':
           description: The request to cancel the `shipment` has been received successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ResourceResult'
         '400':
           description: There is a validation error in your request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '403':
           description: You do not have permission to cancel a `shipment`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '404':
           description: The `shipment` could not be found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '409':
           description: The `shipment` is not in a valid state to be cancelled
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
   '/shipment_groups/{shipmentGroupReference}/close':
     post:
       tags:
@@ -654,6 +1035,7 @@ paths:
           schema:
             type: string
             description: The `reference` of the `shipment_group` to close
+            example: sg_00880362752005794848905455730688
         - name: x-api-version
           in: header
           description: The version of the API to use.  Version `1.1` should be supplied with all requests.
@@ -671,12 +1053,28 @@ paths:
                 $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ResourceResult'
         '400':
           description: There is a validation error in your request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '403':
           description: You do not have permission to close the `shipment_group`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '404':
           description: The `shipment_group` could not be found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '409':
           description: 'There is a conflict that prevents the `shipment_group` from being `closed`, e.g. it has not yet been `locked`'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
   /shipments/quote:
     post:
       tags:
@@ -707,10 +1105,22 @@ paths:
                 $ref: '#/components/schemas/Sorted.Shipments.DataContracts.QuoteResult'
         '400':
           description: There is a validation error in your request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '403':
           description: You do not have permission to create `quotes`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '531':
           description: The request was valid but there are no `quotes` available.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
   /shipments:
     post:
       tags:
@@ -741,8 +1151,16 @@ paths:
                 $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ResourceResult'
         '400':
           description: There is a validation error in your request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '403':
           description: You do not have permission to create a `shipment`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
   /shipment_groups:
     post:
       tags:
@@ -773,12 +1191,28 @@ paths:
                 $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ShipmentGroupResponse'
         '207':
           description: The `shipment_group` has been created successfully but one or more `shipments` could not be added to the group.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ShipmentGroupResponse'
         '400':
           description: There is a validation error in your request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '403':
           description: You do not have permission to create a `shipment_group`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '404':
           description: One or more `shipments` could not be found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
     put:
       tags:
         - Shipment Groups
@@ -808,14 +1242,34 @@ paths:
                 $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ShipmentGroupResponse'
         '207':
           description: The `shipment_group` has been updated successfully but one or more `shipments` could not be added to the group.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ShipmentGroupResponse'
         '400':
           description: There is a validation error in your request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '403':
           description: You do not have permission to update a `shipment_group`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '404':
           description: The `shipment_group` could not be found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '409':
           description: The `shipment_group` is locked or closed and cannot be updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
   '/shipments/{shipmentReference}':
     delete:
       tags:
@@ -830,6 +1284,7 @@ paths:
           schema:
             type: string
             description: The reference of the `shipment` to delete
+            example: sp_00880362751987348104831746179081
         - name: x-api-version
           in: header
           description: The version of the API to use.  Version `1.1` should be supplied with all requests.
@@ -847,12 +1302,28 @@ paths:
                 $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ResourceResult'
         '202':
           description: The request to delete the `shipment` has been received and will be processed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ResourceResult'
         '400':
           description: There is a validation error in your request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '403':
           description: You do not have permission to delete a `shipment`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '404':
           description: The `shipment` could not be found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
     get:
       tags:
         - Shipments
@@ -866,6 +1337,7 @@ paths:
           schema:
             type: string
             description: The reference of the `shipment` to retrieve
+            example: sp_00880362751987348104831746179081
         - name: x-api-version
           in: header
           description: The version of the API to use.  Version `1.1` should be supplied with all requests.
@@ -883,115 +1355,22 @@ paths:
                 $ref: '#/components/schemas/Sorted.Shipments.DataContracts.Shipment'
         '400':
           description: There is a validation error in your request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '403':
           description: You do not have permission to retrieve the `shipment`
-        '404':
-          description: The `shipment` could not be found
-  '/labels/{shipmentReference}/{contentType}/{dpi}':
-    get:
-      tags:
-        - Labels
-      summary: Get Labels
-      parameters:
-        - name: shipmentReference
-          in: path
-          description: The reference of the `shipment` to retrieve the labels for
-          required: true
-          schema:
-            type: string
-            description: The reference of the `shipment` to retrieve the labels for
-        - name: contentType
-          in: path
-          description: The format of document to return
-          required: true
-          schema:
-            $ref: '#/components/schemas/Sorted.Shipments.DataContracts.Enums.ContentType'
-        - name: dpi
-          in: path
-          description: The dpi of the document to return. Has a default value of `203`
-          required: true
-          schema:
-            type: integer
-            description: The dpi of the document to return. Has a default value of `203`
-            format: int32
-        - name: x-api-version
-          in: header
-          description: The version of the API to use.  Version `1.1` should be supplied with all requests.
-          required: true
-          style: simple
-          schema:
-            type: string
-            description: The version of the API to use. Version `1.1` should be supplied with all requests.
-      responses:
-        '200':
-          description: The request was successful. The response will include the label
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.Document'
-        '400':
-          description: There is a validation error in your request
-        '403':
-          description: You do not have permission to retrieve labels for a `shipment`
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '404':
           description: The `shipment` could not be found
-  '/labels/{shipmentReference}/contents/{contentsReference}/{contentType}/{dpi}':
-    get:
-      tags:
-        - Labels
-      summary: Get Contents Label
-      parameters:
-        - name: shipmentReference
-          in: path
-          description: The reference of the `shipment` to retrieve the label for
-          required: true
-          schema:
-            type: string
-            description: The reference of the `shipment` to retrieve the label for
-        - name: contentsReference
-          in: path
-          description: The reference of the `shipment_contents` to retrieve the label for
-          required: true
-          schema:
-            type: string
-            description: The reference of the `shipment_contents` to retrieve the label for
-        - name: contentType
-          in: path
-          description: The format of document to return
-          required: true
-          schema:
-            $ref: '#/components/schemas/Sorted.Shipments.DataContracts.Enums.ContentType'
-        - name: dpi
-          in: path
-          description: The dpi of the document to return
-          required: true
-          schema:
-            type: integer
-            description: The dpi of the document to return
-            format: int32
-        - name: x-api-version
-          in: header
-          description: The version of the API to use.  Version `1.1` should be supplied with all requests.
-          required: true
-          style: simple
-          schema:
-            type: string
-            description: The version of the API to use. Version `1.1` should be supplied with all requests.
-      responses:
-        '200':
-          description: The request was successful. The response will include the label
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Sorted.Shipments.DataContracts.Document'
-        '400':
-          description: There is a validation error in your request
-        '403':
-          description: You do not have permission to retrieve labels for a `shipment`
-        '404':
-          description: The `shipment` could not be found
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
   '/shipments/manifests/{manifestReference}':
     get:
       tags:
@@ -1006,6 +1385,7 @@ paths:
           schema:
             type: string
             description: The reference of the `manifest` to retrieve
+            example: ma_00880362751987348104831746179082
         - name: x-api-version
           in: header
           description: The version of the API to use.  Version `1.1` should be supplied with all requests.
@@ -1023,8 +1403,16 @@ paths:
                 $ref: '#/components/schemas/Sorted.Shipments.DataContracts.Manifest'
         '403':
           description: You do not have permission to access the `manifest`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '404':
           description: The `manifest` could not be found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
   '/shipments/{shipmentReference}/quote':
     post:
       tags:
@@ -1039,6 +1427,7 @@ paths:
           schema:
             type: string
             description: The reference of the `shipment` to retrieve `quotes` for
+            example: sp_00880362751987348104831746179081
         - name: x-api-version
           in: header
           description: The version of the API to use.  Version `1.1` should be supplied with all requests.
@@ -1056,12 +1445,28 @@ paths:
                 $ref: '#/components/schemas/Sorted.Shipments.DataContracts.QuoteResult'
         '400':
           description: There is a validation error in your request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '403':
           description: You do not have permission to retrieve the `shipment` or generate `quotes`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '404':
           description: The `shipment` could not be found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '531':
           description: The request was valid but no `quotes` could be found for the `shipment`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
   '/shipment_groups/{shipmentGroupReference}':
     get:
       tags:
@@ -1076,6 +1481,7 @@ paths:
           schema:
             type: string
             description: The `reference` of the `shipment_group` to retrieve
+            example: sg_00880362752005794848905455730688
         - name: x-api-version
           in: header
           description: The version of the API to use.  Version `1.1` should be supplied with all requests.
@@ -1091,12 +1497,18 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ShipmentGroup'
-        '401':
-          description: The user is not authorized
         '403':
           description: You do not have permission to retrieve a `shipment_group`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '404':
           description: The `shipment_group` could not be found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
   '/shipment_groups/{shipmentGroupReference}/lock':
     post:
       tags:
@@ -1111,6 +1523,7 @@ paths:
           schema:
             type: string
             description: The reference of the `shipment_group` to lock
+            example: sg_00880362752005794848905455730688
         - name: x-api-version
           in: header
           description: The version of the API to use.  Version `1.1` should be supplied with all requests.
@@ -1128,10 +1541,22 @@ paths:
                 $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ResourceResult'
         '403':
           description: You do not have permission to lock a `shipment_group`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '404':
           description: The `shipment_group` could not be found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '409':
           description: The `shipment_group` is already locked or is closed and cannot be locked
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
   '/shipment_groups/{shipmentGroupReference}/unlock':
     post:
       tags:
@@ -1146,6 +1571,7 @@ paths:
           schema:
             type: string
             description: The reference of the `shipment_group` to unlock
+            example: sg_00880362752005794848905455730688
         - name: x-api-version
           in: header
           description: The version of the API to use.  Version `1.1` should be supplied with all requests.
@@ -1163,10 +1589,22 @@ paths:
                 $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ResourceResult'
         '403':
           description: You do not have permission to unlock a `shipment_group`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '404':
           description: The `shipment_group` could not be found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '409':
           description: The `shipment_group` is already unlocked or is closed and cannot be locked
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
   '/shipments/{shipmentReference}/manifest':
     put:
       tags:
@@ -1181,6 +1619,7 @@ paths:
           schema:
             type: string
             description: The reference of the `shipment` to manifest
+            example: sp_00880362751987348104831746179081
         - name: x-api-version
           in: header
           description: The version of the API to use.  Version `1.1` should be supplied with all requests.
@@ -1198,10 +1637,22 @@ paths:
                 $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ManifestResponse'
         '400':
           description: There is a validation error in your request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '403':
           description: You do not have permission to access the `shipment` or to manifest `shipments`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '404':
           description: The `shipment` could not be found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
   /shipments/manifest:
     put:
       tags:
@@ -1230,14 +1681,24 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ManifestResponse'
-        '200':
-          description: The `shipments` have been manifested successfully.
         '400':
           description: There is a validation error in your request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '403':
           description: You do not have permission to access or manifest `shipments`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '404':
           description: One or more `shipments` could not be found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
   /shipments/state:
     put:
       tags:
@@ -1265,17 +1726,33 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.QuoteResult'
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ResourceResult'
         '202':
           description: The request to update the `state` has been received successfully and will be processed
-        '304':
-          description: The `state` of the `shipment` has not been modified - the current `state` matches the `desired` state already
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ResourceResult'
         '400':
           description: There is a validation error in your request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '403':
           description: You do not have permission to change the `state` of the `shipment`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
         '404':
           description: The `shipment` could not be found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sorted.Shipments.DataContracts.ApiError'
+        '304':
+          description: The `state` of the `shipment` has not been modified - the current `state` matches the `desired` state already
 components:
   schemas:
     Sorted.Shipments.DataContracts.AllocateRequest:

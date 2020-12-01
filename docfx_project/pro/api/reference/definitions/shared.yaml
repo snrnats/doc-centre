@@ -1,0 +1,9 @@
+contact:
+  name: Sorted Support
+  email: support@sorted.com
+version: "API Version 1.1"
+servers:
+  - url: https://api.sorted.com/pro/
+    description: Production (live)
+  - url: https://api.sorted.com/prosandbox/
+    description: Sandbox

@@ -1716,7 +1716,8 @@ ul.tags > li:hover {
   padding: 30px;
   background: rgba(0,0,0,.05);
   border-radius: 3px;
-  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.23);
+  -webkit-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.16);
 }
   
 .message-block h4 {

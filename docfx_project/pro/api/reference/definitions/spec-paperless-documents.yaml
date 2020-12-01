@@ -1,0 +1,301 @@
+openapi: 3.0.1
+info:
+  title: Sorted Paperless Documents API
+  version:
+    $ref: ./shared.yaml#/version
+  description:
+    $ref: ./intro-paperless-documents.yaml#/description
+  contact:
+    $ref: ./shared.yaml#/contact
+servers:
+  $ref: ./shared.yaml#/servers
+paths:
+  "/documents/paperless/{shipment_reference}":
+    post:
+      tags:
+        - Paperless Documents
+      summary: Add Paperless Document
+      description: This endpoint is used to enable customers to add paperless documents to existing `shipments`.
+      parameters:
+        - name: shipment_reference
+          in: path
+          description: The reference of the `shipment` to add the paperless document to
+          required: true
+          schema:
+            type: string
+            description: The reference of the `shipment` to add the paperless document to
+            example: sp_00880362751987348104831746179081
+      requestBody:
+        description: The paperless document model to add to the shipment
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PaperlessDocument"
+      responses:
+        "202":
+          description: The paperless document was accepted for processing
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ResourceResult"
+        "400":
+          description: There is a validation error in your request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+        "403":
+          description: You do not have permission to add a paperless document
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+        "404":
+          description: A `shipment` with the provided reference was not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+        "409":
+          description: "Returned when a conflict prevents the paperless document from being added. For example, the `shipment` has\r\nalready been allocated."
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+  "/documents/paperless/{document_reference}":
+    delete:
+      tags:
+        - Paperless Documents
+      summary: Remove Paperless Document
+      description: This endpoint is used to remove an existing paperless document from a `shipment`.
+      parameters:
+        - name: document_reference
+          in: path
+          description: The reference of the paperless document to delete.
+          required: true
+          schema:
+            type: string
+            description: The reference of the paperless document to delete.
+      responses:
+        "202":
+          description: The request to delete the document has been accepted.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ResourceResult"
+        "400":
+          description: There is a validation error in your request.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+        "403":
+          description: You do not have permission to remove a paperless document.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+        "404":
+          description: Returned when a paperless document with the provided reference is not found.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+        "409":
+          description: The related `shipment` is not in a valid state for this document to be deleted.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+    get:
+      tags:
+        - Paperless Documents
+      summary: Get Paperless Document
+      description: This endpoint is used to retrieve paperless documents.
+      parameters:
+        - name: document_reference
+          in: path
+          description: The paperless document reference to retrieve
+          required: true
+          schema:
+            type: string
+            description: The paperless document reference to retrieve
+      responses:
+        "200":
+          description: The request was successful. The response will include the document
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PaperlessDocument"
+        "221":
+          description: The document is processing
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PaperlessDocument"
+        "400":
+          description: There is a validation error in your request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+        "403":
+          description: You do not have permission to retrieve the document
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+        "404":
+          description: The document could not be found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+        "410":
+          description: The document has been removed and is no longer retrievable
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+components:
+  schemas:
+    PaperlessDocument:
+      required:
+        - document_type
+        - file_content
+        - file_format
+        - usage
+      type: object
+      properties:
+        file_content:
+          type: string
+          description: "The contents of the the file as a base64-encoded byte array.\r\n            \r\n> Note: A maximum file size of 5MB is permitted for uploaded documents."
+        expiration:
+          type: string
+          description: "The date and time that the document expires, if applicable.\r\n            \r\nIf provided, this value **must** be a value greater than the current date and time.\r\n            \r\n> Note: Document expiry is currently only supported for FedEx carrier services."
+          format: date-time
+          nullable: true
+        file_format:
+          maxLength: 3
+          minLength: 3
+          type: string
+          description: "The format of the file. Must be one of:\r\n            \r\n- `pdf`\r\n- `png`\r\n- `jpg`\r\n- `gif`"
+        document_type:
+          type: string
+          description: "The type of paperless document. Must be one of the following types:\r\n            \r\n- `commercial_invoice`\r\n- `certificate_of_origin`\r\n- `nafta_certificate_of_origin`\r\n- `pro_forma_invoice`\r\n- `authorisation_form`\r\n- `export_document`\r\n- `export_licence`\r\n- `import_permit`\r\n- `power_of_attorney`\r\n- `packing_list`\r\n- `sed_document`\r\n- `letter_of_instruction`\r\n- `customs_declaration`\r\n- `air_waybill`\r\n- `invoice`\r\n- `other`"
+        usage:
+          type: string
+          description: "The intended usage of the document. Must be one of the following values:\r\n            \r\n- `electronic_trade`\r\n- `customer_information`\r\n- `pricing`"
+      additionalProperties: false
+      description: "This object allows customers to supply documents when creating `shipments`.\r\n            \r\nThese documents can then be provided to the carrier to aid with fast-track customs clearance."
+    Link:
+      required:
+        - href
+        - rel
+        - type
+      type: object
+      properties:
+        href:
+          type: string
+          description: The URL of the resource
+        rel:
+          type: string
+          description: "A string representing the relationship of the linked resource to the current resource. For example, a\r\n`link` to a `shipment` will have a value of `shipment`. Links to the current object will have a `rel` of\r\n`self`."
+        reference:
+          type: string
+          description: "When a `link` is a pointer to a resource with a unique reference, this property will contain the reference.\r\nFor instance, a `link` for a `shipment` will contain the `shipment's` reference in this field."
+          nullable: true
+        type:
+          type: string
+          description: The type of resource that this `link` points to.
+      additionalProperties: false
+      description: "A `link` object that provides a pointer to a resource. Links are provided, for example, following the\r\ncreation of a new resource (such as a `shipment`). The `link` will provide access to the created resource."
+    ResourceResult:
+      required:
+        - reference
+      type: object
+      properties:
+        reference:
+          maxLength: 35
+          minLength: 35
+          type: string
+          description: The unique reference for this resource generated by Sorted at the point of creation.
+        custom_reference:
+          type: string
+          description: "Your own custom reference for this object, if applicable."
+          nullable: true
+        message:
+          type: string
+          description: An optional message relating to the result of the operation.
+          nullable: true
+        version:
+          type: integer
+          description: "An optional version for this resource, if applicable."
+          format: int32
+          nullable: true
+        _links:
+          minItems: 0
+          type: array
+          items:
+            $ref: "#/components/schemas/Link"
+          description: "Links to the current resource and any related resources, if applicable."
+          nullable: true
+      additionalProperties: false
+      description: A `resource_result` is generally returned for all successful requests to create or modify resources.
+    ApiErrorMessage:
+      required:
+        - code
+        - message
+      type: object
+      properties:
+        property:
+          type: string
+          description: "The path to the affected property, if applicable.\r\n            \r\n> Note: this will be expressed in JSON Path format e.g. `$.addresses[0].address_type` indicates an issue\r\nwith the property `address_type` for the first provided address."
+          nullable: true
+        code:
+          type: string
+          description: A pre-defined code for this error.
+        message:
+          type: string
+          description: A plain-text summary of the error.
+      additionalProperties: false
+      description: The `api_error_message` object provides further information relating to errors.
+    ApiError:
+      required:
+        - code
+        - correlation_id
+        - message
+      type: object
+      properties:
+        correlation_id:
+          type: string
+          description: "The correlation id for this error. Customers can use this property when reporting issues to Sorted and this\r\nwill aid with problem discovery and resolution."
+        code:
+          type: string
+          description: A pre-defined `code` for this error.
+        message:
+          type: string
+          description: A plain-text summary of the error.
+        details:
+          minItems: 0
+          type: array
+          items:
+            $ref: "#/components/schemas/ApiErrorMessage"
+          description: "A collection of `api_error_messages` which provide further details of the error(s), if applicable."
+          nullable: true
+        _links:
+          minItems: 0
+          type: array
+          items:
+            $ref: "#/components/schemas/Link"
+          description: Provides links to further relevant information such as links to documentation.
+          nullable: true
+      additionalProperties: false
+      description: "This object is returned by Sorted whenever an error occurs during a request. Errors can have many causes, such\r\nas badly-formed requests, incorrect permissions, or unforeseen issues during request processing."
+  securitySchemes:
+    API Key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+  - API Key: []

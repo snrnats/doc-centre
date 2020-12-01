@@ -1,0 +1,317 @@
+openapi: 3.0.1
+info:
+  title: Sorted Customs Documents API
+  version:
+    $ref: ./shared.yaml#/version
+  description:
+    $ref: ./intro-customs-docs.yaml#/description
+  contact:
+    $ref: ./shared.yaml#/contact
+servers:
+  $ref: ./shared.yaml#/servers
+paths:
+  "/documents/{shipmentReference}":
+    get:
+      tags:
+        - Customs Documents
+      summary: Get Customs Documents
+      description: This endpoint is used to retrieve all applicable customs documents for a `shipment`.
+      parameters:
+        - name: shipmentReference
+          in: path
+          description: The reference of the `shipment` to retrieve documents for
+          required: true
+          schema:
+            type: string
+            description: The reference of the `shipment` to retrieve documents for
+            example: sp_00880362751987348104831746179081
+      responses:
+        "200":
+          description: The request was successful. The response includes the relevant `document(s)`.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Document"
+        "204":
+          description: Returned when there are no applicable `documents` to be returned. The response body will be empty.
+        "400":
+          description: Returned when the request is not valid.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+        "403":
+          description: Returned when you do not have permission to retrieve `documents`.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+        "404":
+          description: Returned when a `shipment` with the provided reference is not found.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+  "/documents/{shipmentReference}/cn22":
+    get:
+      tags:
+        - Customs Documents
+      summary: Get CN22
+      description: Returns a CN22 document for the provided `shipment`.
+      parameters:
+        - name: shipmentReference
+          in: path
+          description: The reference of the `shipment` to retrieve a CN22 for
+          required: true
+          schema:
+            type: string
+            description: The reference of the `shipment` to retrieve a CN22 for
+            example: sp_00880362751987348104831746179081
+        - name: format
+          in: query
+          description: "The format of the `document` to return (e.g. `PDF`, `ZPL`). This parameter is not case-sensitive and you may\r\ntherefore provide values such as `pdf`, `zpl`, `ZPL`, or `PDF`.\r\n            \r\nWill default to `PDF` if not provided."
+          schema:
+            type: string
+            description: The format of the document to generate/return
+            nullable: true
+      responses:
+        "200":
+          description: Returned when the document has been located and returned successfully.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Document"
+        "204":
+          description: Returned when there is no applicable CN22 `document` to be returned. The response body will be empty.
+        "400":
+          description: "Returned when the request is not valid. This could be, for example, an invalid `document_type` route parameter."
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+        "403":
+          description: Returned when you do not have permission to retrieve `documents`.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+        "404":
+          description: Returned when a `shipment` with the provided reference is not found.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+  "/documents/{shipmentReference}/cn23":
+    get:
+      tags:
+        - Customs Documents
+      summary: Get CN23
+      description: Returns a CN23 document for the provided `shipment`.
+      parameters:
+        - name: shipmentReference
+          in: path
+          description: The reference of the `shipment` to retrieve a CN23 for.
+          required: true
+          schema:
+            type: string
+            description: The reference of the `shipment` to retrieve a CN23 for.
+            example: sp_00880362751987348104831746179081
+        - name: format
+          in: query
+          description: "The format of the `document` to return (e.g. `PDF`, `ZPL`). This parameter is not case-sensitive and you may\r\ntherefore provide values such as `pdf`, `zpl`, `ZPL`, or `PDF`.\r\n            \r\nWill default to `PDF` if not provided."
+          schema:
+            type: string
+            description: The format of the document to generate/return
+            nullable: true
+      responses:
+        "200":
+          description: Returned when the document has been located and returned successfully.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Document"
+        "204":
+          description: Returned when there is no applicable CN23 `document` to be returned. The response body will be empty.
+        "400":
+          description: "Returned when the request is not valid. This could be, for example, an invalid `document_type` route parameter."
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+        "403":
+          description: Returned when you do not have permission to retrieve `documents`.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+        "404":
+          description: Returned when a `shipment` with the provided reference is not found.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+  "/documents/{shipmentReference}/commercial_invoice":
+    get:
+      tags:
+        - Customs Documents
+      summary: Get Commercial Invoice
+      description: Returns a Commercial Invoice document for the provided `shipment`.
+      parameters:
+        - name: shipmentReference
+          in: path
+          description: The reference of the `shipment` to retrieve a Commercial Invoice for.
+          required: true
+          schema:
+            type: string
+            description: The reference of the `shipment` to retrieve a Commercial Invoice for.
+            example: sp_00880362751987348104831746179081
+        - name: format
+          in: query
+          description: "The format of the `document` to return (e.g. `PDF`, `ZPL`). This parameter is not case-sensitive and you may\r\ntherefore provide values such as `pdf`, `zpl`, `ZPL`, or `PDF`.\r\n            \r\nWill default to `PDF` if not provided."
+          schema:
+            type: string
+            description: The format of the document to generate/return
+            nullable: true
+      responses:
+        "200":
+          description: Returned when the document has been located and returned successfully.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Document"
+        "204":
+          description: Returned when there is no applicable Commercial Invoice `document` to be returned. The response body will be empty.
+        "400":
+          description: "Returned when the request is not valid. This could be, for example, an invalid `document_type` route parameter."
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+        "403":
+          description: Returned when you do not have permission to retrieve `documents`.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+        "404":
+          description: Returned when a `shipment` with the provided reference is not found.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+components:
+  schemas:
+    DocumentType:
+      enum:
+        - no_document
+        - commercial_invoice
+        - cn22
+        - cn23
+      type: string
+    ContentType:
+      enum:
+        - application/pdf
+      type: string
+    Document:
+      required:
+        - content_type
+        - copies
+        - document_type
+        - file
+      type: object
+      properties:
+        file:
+          type: string
+          description: The contents of the file encoded in base64
+        document_type:
+          $ref: "#/components/schemas/DocumentType"
+        content_type:
+          $ref: "#/components/schemas/ContentType"
+        copies:
+          type: integer
+          description: The number of copies of the document that should be printed.
+          format: int32
+      additionalProperties: false
+      description: This object represents a single `document`.
+    ApiErrorMessage:
+      required:
+        - code
+        - message
+      type: object
+      properties:
+        property:
+          type: string
+          description: "The path to the affected property, if applicable.\r\n            \r\n> Note: this will be expressed in JSON Path format e.g. `$.addresses[0].address_type` indicates an issue\r\nwith the property `address_type` for the first provided address."
+          nullable: true
+        code:
+          type: string
+          description: A pre-defined code for this error.
+        message:
+          type: string
+          description: A plain-text summary of the error.
+      additionalProperties: false
+      description: The `api_error_message` object provides further information relating to errors.
+    Link:
+      required:
+        - href
+        - rel
+        - type
+      type: object
+      properties:
+        href:
+          type: string
+          description: The URL of the resource
+          format: uri
+        rel:
+          type: string
+          description: "A string representing the relationship of the linked resource to the current resource. For example, a\r\n`link` to a `shipment` will have a value of `shipment`. Links to the current object will have a `rel` of\r\n`self`."
+        reference:
+          type: string
+          description: "When a `link` is a pointer to a resource with a unique reference, this property will contain the reference.\r\nFor instance, a `link` for a `shipment` will contain the `shipment's` reference in this field."
+          nullable: true
+        type:
+          type: string
+          description: The type of resource that this `link` points to.
+      additionalProperties: false
+      description: "A `link` object that provides a pointer to a resource. Links are provided, for example, following the\r\ncreation of a new resource (such as a `shipment`). The `link` will provide access to the created resource."
+    ApiError:
+      required:
+        - code
+        - correlation_id
+        - message
+      type: object
+      properties:
+        correlation_id:
+          type: string
+          description: "The correlation id for this error. Customers can use this property when reporting issues to Sorted and this\r\nwill aid with problem discovery and resolution."
+        code:
+          type: string
+          description: A pre-defined `code` for this error.
+        message:
+          type: string
+          description: A plain-text summary of the error.
+        details:
+          minItems: 0
+          type: array
+          items:
+            $ref: "#/components/schemas/ApiErrorMessage"
+          description: "A collection of `api_error_messages` which provide further details of the error(s), if applicable."
+          nullable: true
+        links:
+          minItems: 0
+          type: array
+          items:
+            $ref: "#/components/schemas/Link"
+          description: Provides links to further relevant information such as links to documentation.
+          nullable: true
+      additionalProperties: false
+      description: "This object is returned by Sorted whenever an error occurs during a request. Errors can have many causes, such\r\nas badly-formed requests, incorrect permissions, or unforeseen issues during request processing."
+  securitySchemes:
+    API Key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+  - API Key: []

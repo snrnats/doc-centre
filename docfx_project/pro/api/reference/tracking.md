@@ -1,6 +1,6 @@
 ---
-uid: shipments-api-reference
-title: Shipments API Reference
+uid: tracking-api-reference
+title: Tracking API Reference
 ---
 <link href="/styles/api-reference.css" rel="stylesheet">
 <div id="redoc"></div>
@@ -8,6 +8,6 @@ title: Shipments API Reference
 <script src="/styles/sorted-api-reference.js"></script>
 <script defer type="text/javascript">
   document.addEventListener("DOMContentLoaded", function() {
-    setOpenApiSpec('spec-shipments.yaml');
+    setOpenApiSpec('spec-tracking.yaml');
   }, false);
 </script>
