@@ -21,7 +21,7 @@ Once a shipment has been cancelled, then no further changes can be made to it. I
 
 > [!NOTE]
 >
-> For full reference information on the **Cancel Shipment** endpoint, see the [PRO v2 API reference](/pro/api/reference/shipments-api-ref.html#tag/Shipments/paths/~1shipments~1{shipmentReference}~1cancel/put).
+> For full reference information on the **Cancel Shipment** endpoint, see the [PRO v2 API reference](/pro/api/reference/shipments.html#tag/Shipments/paths/~1shipments~1{shipmentReference}~1cancel/put).
 
 ### Cancel Shipment Example
 
@@ -60,7 +60,7 @@ You can only delete shipments that are in a `state` of _cancelled_. If you attem
 
 > [!NOTE]
 >
-> For full reference information on the **Delete Shipment** endpoint, see the [PRO v2 API reference](/pro/api/reference/shipments-api-ref.html#tag/Shipments/paths/~1shipments~1{shipmentReference}/delete).
+> For full reference information on the **Delete Shipment** endpoint, see the [PRO v2 API reference](/pro/api/reference/shipments.html#tag/Shipments/paths/~1shipments~1{shipmentReference}/delete).
 
 ### Delete Shipment Example
 

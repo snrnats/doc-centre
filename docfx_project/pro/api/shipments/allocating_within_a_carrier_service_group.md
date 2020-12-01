@@ -164,7 +164,7 @@ PUT https://api.sorted.com/pro/shipments/sp_00794403010635468411384028069888/all
 ---
 
 > [!NOTE]
-> For full reference information on the **Allocate Shipment with Service Group** endpoint, see the [PRO v2 API reference](/pro/api/reference/shipments-api-ref.html#tag/Allocation/paths/~1shipments~1{shipmentReference}~1allocate~1service_group~1{groupReference}/put). 
+> For full reference information on the **Allocate Shipment with Service Group** endpoint, see the [PRO v2 API reference](/pro/api/reference/shipments.html#tag/Allocation/paths/~1shipments~1{shipmentReference}~1allocate~1service_group~1{groupReference}/put). 
 
 ## Allocating Multiple Shipments with a Carrier Service Group
 
@@ -175,7 +175,7 @@ To call **Allocate with Service Group**, send a `PUT` request to `https://api.so
 Optionally, you can also include a list of service `capabilities`. Where capabilities are provided, then PRO only allocated the shipment to a carrier service that meets those capabilities. Each capability should list the `type` of service capability specified and the `value` that that capability should have.
 
 > [!NOTE]
-> For information on available service capabilities and values, see the [PRO v2 API reference](/pro/api/reference/shipments-api-ref.html#tag/Allocation/paths/~1shipments~1allocate~1service_group/put).
+> For information on available service capabilities and values, see the [PRO v2 API reference](/pro/api/reference/shipments.html#tag/Allocation/paths/~1shipments~1allocate~1service_group/put).
 
 PRO takes each shipment in turn, uses allocation rules to eliminate any carrier services in the group that would not be suitable to take the shipment, and the queues the shipment for allocation to the cheapest remaining service. It then returns an Allocate Shipments result detailing the results of the request.
 
@@ -224,7 +224,7 @@ The example shows a request to queue four shipments for allocation within carrie
 ---
 
 > [!NOTE]
-> For full reference information on the **Allocate with Service Group** endpoint, see the [PRO v2 API reference](/pro/api/reference/shipments-api-ref.html#tag/Allocation/paths/~1shipments~1allocate~1service_group/put). 
+> For full reference information on the **Allocate with Service Group** endpoint, see the [PRO v2 API reference](/pro/api/reference/shipments.html#tag/Allocation/paths/~1shipments~1allocate~1service_group/put). 
 
 ## Next Steps
 

@@ -4,7 +4,7 @@
   - name: API User Guide
     href: /pro/api/shipments/introduction.html
   - name: API Reference
-    href: /pro/api/reference/api-reference.html
+    href: /pro/api/reference/index.html
     items:
     - name: Shipments
       href: /pro/api/reference/shipments.html

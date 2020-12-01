@@ -99,7 +99,7 @@ All shipments require both `origin` and `destination` addresses. In PRO, address
 * `postal_code` - Required for countries with official postcode systems, such as the UK.
 * `country_iso_code` - The ISO 3166 Alpha 2 code for the country.
 
-In addition, PRO supports several optional address properties, including custom references, company details, and latitude / longitude. See the [PRO v2 API reference](/pro/api/reference/shipments-api-ref.html#tag/Shipments/paths/~1shipments/post) for details.
+In addition, PRO supports several optional address properties, including custom references, company details, and latitude / longitude. See the [PRO v2 API reference](/pro/api/reference/shipments.html#tag/Shipments/paths/~1shipments/post) for details.
 
 ### Optional Shipment Properties
 
@@ -125,7 +125,7 @@ Adding optional properties when you create a shipment can help you to ensure tha
 
 ### Example Create Shipment Request
 
-The example below shows a simple **Create Shipment** request containing only a `shipment_type`, `contents`, and `addresses`. For an example of a full **Create Shipment** request, see the [PRO v2 API reference](/pro/api/reference/shipments-api-ref.html#tag/Shipments/paths/~1shipments/post).
+The example below shows a simple **Create Shipment** request containing only a `shipment_type`, `contents`, and `addresses`. For an example of a full **Create Shipment** request, see the [PRO v2 API reference](/pro/api/reference/shipments.html#tag/Shipments/paths/~1shipments/post).
 
 # [Create Shipment Request](#tab/create-shipment-request)
 
@@ -259,7 +259,7 @@ All PRO shipments have a `{state}`, indicating the point in the delivery process
 
 > [!NOTE]
 >
-> For full reference information on the **Create Shipments** endpoint, including the properties accepted and the structure required, see the [PRO v2 API reference](/pro/api/reference/shipments-api-ref.html#tag/Shipments/paths/~1shipments/post).
+> For full reference information on the **Create Shipments** endpoint, including the properties accepted and the structure required, see the [PRO v2 API reference](/pro/api/reference/shipments.html#tag/Shipments/paths/~1shipments/post).
 
 <!--## Cloning Shipments
 
@@ -358,7 +358,7 @@ The example shows a simple **Update Shipment** request for a shipment with a `{r
 
 > [!NOTE]
 >
-> For full reference information on the **Update Shipment** endpoint, see the [PRO v2 API reference](/pro/api/reference/shipments-api-ref.html#tag/Shipments/paths/~1shipments/put). -->
+> For full reference information on the **Update Shipment** endpoint, see the [PRO v2 API reference](/pro/api/reference/shipments.html#tag/Shipments/paths/~1shipments/put). -->
 
 ## Next Steps
 

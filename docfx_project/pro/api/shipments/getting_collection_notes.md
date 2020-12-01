@@ -38,7 +38,7 @@ PRO returns a collection note listing the contents of all of the shipments in th
 
 > [!NOTE]
 > * For an explanation of versioning in PRO shipment groups, see the [Versioning in Shipment Groups](/pro/api/shipments/getting_shipment_groups.html#versioning-in-shipment-groups) section of the [Getting Shipment Groups](/pro/api/shipments/getting_shipment_groups.html) page.
-> * For full reference information on the **Get Shipment Group Collection Note** endpoint, see the Shipments data contract.
+> * For full reference information on the Collection Notes API, see the [PRO v2 API reference](/pro/api/reference/collection-notes.html).
 
 All Collection Notes endpoints return a collection note as a `document` object with a `document_type` of *collection_note*.
 

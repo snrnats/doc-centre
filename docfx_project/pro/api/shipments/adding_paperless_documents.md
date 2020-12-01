@@ -106,6 +106,9 @@ The example shows a successful request to add a `commercial_invoice` paperless d
 ```
 ---
 
+> [!NOTE]
+> For full reference information on the **Add Paperless Document** endpoint, see the [PRO v2 API reference](/pro/api/reference/paperless-documents.html#tag/Paperless-Documents/paths/~1documents~1paperless~1{shipment_reference}/post)
+
 ## Getting Paperless Documents
 
 The **Get Paperless Document** endpoint takes a paperless document `reference` and returns details of the relevant paperless document. To call **Get Paperless Document**, send a `GET` request to `https://api.sorted.com/pro/documents/paperless/{document_reference}`.
@@ -133,6 +136,9 @@ The example shows a successful  **Get Paperless Document** request for the paper
 }
 ```
 ---
+
+> [!NOTE]
+> For full reference information on the **Get Paperless Document** endpoint, see the [PRO v2 API reference](/pro/api/reference/paperless-documents.html#tag/Paperless-Documents/paths/~1documents~1paperless~1{document_reference}/get)
 
 <!-- ## Removing Paperless Documents from Shipments
 
@@ -170,6 +176,9 @@ The example shows a successful request to remove a paperless document with a `{d
 }
 ```
 ---
+
+> [!NOTE]
+> For full reference information on the **Remove Paperless Document** endpoint, see the [PRO v2 API reference](/pro/api/reference/paperless-documents.html#tag/Paperless-Documents/paths/~1documents~1paperless~1{document_reference}/delete)
 
 -->
 

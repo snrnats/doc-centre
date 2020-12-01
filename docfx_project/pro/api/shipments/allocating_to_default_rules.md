@@ -106,7 +106,7 @@ PUT https://api.sorted.com/pro/shipments/sp_9233500258180005889777767900009/allo
 
 > [!NOTE]
 >
->  For full reference information on the **Allocate Shipment** endpoint, see the [PRO v2 API reference](/pro/api/reference/shipments-api-ref.html#tag/Allocation/paths/~1shipments~1{shipmentReference}~1allocate/put).--> 
+>  For full reference information on the **Allocate Shipment** endpoint, see the [PRO v2 API reference](/pro/api/reference/shipments.html#tag/Allocation/paths/~1shipments~1{shipmentReference}~1allocate/put).--> 
 
 ## Allocating Multiple Shipments At Once
 

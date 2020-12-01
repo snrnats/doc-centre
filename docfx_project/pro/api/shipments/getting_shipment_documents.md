@@ -45,7 +45,7 @@ If the specified shipment has a document of the specified type, then PRO returns
 > If you use the **Get Document** endpoint to get a *collection_note* for a shipment, then PRO returns a collection note for the contents of that shipment only. If you need collection notes for multiple shipments being picked up by the same carrier (as part of a scheduled collection, for example), you should use one of PRO's dedicated Collection Notes endpoints instead.
 > 
 > * For more information on using collection notes in PRO, see the [Getting Collection Notes](/pro/api/shipments/getting_collection_notes.html) page.
-> * For full reference information on the **Get Document** endpoint, see the Shipments data contract.
+> * For full reference information on the **Get Document** endpoint, see the [PRO v2 API reference](/pro/api/reference/customs-documents.html#tag/Customs-Documents).
 
 ## Getting All of a Shipment's Customs Documents
 
@@ -55,7 +55,7 @@ If the specified shipment has customs documents (that is, it is an international
 
 > [!NOTE]
 >
-> For full reference information on the **Get Customs Documents** endpoint, see the Shipments data contract.
+> For full reference information on the **Get Customs Documents** endpoint, see the [PRO v2 API reference](/pro/api/reference/customs-documents.html#tag/Customs-Documents/paths/~1documents~1{shipmentReference}/get).
 
 ## The Document Response
 

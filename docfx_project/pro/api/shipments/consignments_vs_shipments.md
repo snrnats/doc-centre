@@ -56,7 +56,7 @@ Like consignments, shipments are a collection of one or more packages that are s
 
 > [!NOTE]
 >
-> For full reference information on the PRO v2 data contract, see the [API reference](/pro/api/reference/shipments-api-ref.html). 
+> For full reference information on the PRO v2 data contract, see the [API reference](/pro/api/reference/index.html). 
 
 ## Next Steps
 

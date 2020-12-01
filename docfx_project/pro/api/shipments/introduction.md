@@ -35,7 +35,7 @@ PRO's APIs enable you to:
 
 > [!NOTE]
 >
-> For example API call flows and reference information, see the [PRO v2 API reference](/pro/api/reference/shipments-api-ref.html).
+> For example API call flows and reference information, see the [PRO v2 API reference](/pro/api/reference/index.html).
 
 ## Making an API Request in PRO
 

@@ -25,32 +25,32 @@ PRO offers label extensions, which enable customers to specify custom text, imag
 
 ### Getting All Labels for a Shipment
 
-The **Get Labels** endpoint retrieves all labels for the specified shipment. To call **Get Labels**, send a `GET` request to `https://api.sorted.com/pro/labels/{shipment_reference}/{format}(/dpi)`, where `{shipment_reference}` is the unique reference of the shipment you want to get labels for, `{format}` is the file format required (either PDF or ZPL), and `{dpi}` is an optional parameter indicating the resolution required. If no `{dpi}` parameter is provided then PRO returns a label at 203 DPI.
+The **Get Labels** endpoint retrieves all labels for the specified shipment. To call **Get Labels**, send a `GET` request to `https://api.sorted.com/pro/labels/{shipment_reference}/{format}(/dpi)`, where `{shipment_reference}` is the unique reference of the shipment you want to get labels for, `{format}` is the file format required (either PDF or ZPL), and `{dpi}` indicates the resolution required.
 
-**Get Labels** also has an optional `?include_extension=bool` boolean (true/false) query enabling you to specify whether you want the returned labels to include your custom label extensions. If you do not provide an `include_extension` query then PRO returns label extensions by default.
+<!--**Get Labels** also has an optional `?include_extension=bool` boolean (true/false) query enabling you to specify whether you want the returned labels to include your custom label extensions. If you do not provide an `include_extension` query then PRO returns label extensions by default.-->
 
-### Example Get Labels Calls
+> [!NOTE]
+> For full reference information on the **Get Labels** endpoint, see the [PRO v2 API reference](/pro/api/reference/labels.html#tag/Labels/paths/~1labels~1{shipmentReference}~1{contentType}~1{dpi}/get)
 
-* `GET https://api.sorted.com/pro/labels/sp_00668400124857422605561635799040/pdf` - Get all labels for shipment _sp_00668400124857422605561635799040_ in PDF format.
-* `GET https://api.sorted.com/pro/labels/sp_00668400124857422605561635799040/zpl/300` - Get all labels for shipment _sp_00668400124857422605561635799040_ in ZPL format at 300 DPI resolution.
-* `GET https://api.sorted.com/pro/labels/sp_00668400124857422605561635799040/pdf?include_extension=false` - Get all labels for shipment _sp_00668400124857422605561635799040_ in PDF format without label extensions.
-* `GET https://api.sorted.com/pro/labels/sp_00668400124857422605561635799040/zpl/300&include_extension=false` - Get all labels for shipment _sp_00668400124857422605561635799040_ in ZPL format at 300 DPI resolution without label extensions.
+### Example Get Labels Call
+
+`GET https://api.sorted.com/pro/labels/sp_00668400124857422605561635799040/zpl/300` - Get all labels for shipment _sp_00668400124857422605561635799040_ in ZPL format at 300 DPI resolution.
 
 ### Getting a Label for a Specific Item of Contents
 
-The **Get Contents Label** endpoint retrieves the label for a specific item of shipment contents. To call **Get Contents Label**, send a `GET` request to `https://api.sorted.com/pro/labels/{shipment_reference}/{contents_reference}/{format}`, where `{shipment_reference}` is the unique reference of the shipment that the contents belong to, `{contents_reference}` is the unique reference of the contents object you want to get the label for, `{format}` is the file format required (either PDF or ZPL), and `{dpi}` is an optional parameter indicating the resolution required. If no `{dpi}` parameter is provided then PRO returns a label at 203 DPI.
+The **Get Contents Label** endpoint retrieves the label for a specific item of shipment contents. To call **Get Contents Label**, send a `GET` request to `https://api.sorted.com/pro/labels/{shipment_reference}/contents/{contents_reference}/{format}/{dpi}`, where `{shipment_reference}` is the unique reference of the shipment that the contents belong to, `{contents_reference}` is the unique reference of the contents object you want to get the label for, `{format}` is the file format required (either PDF or ZPL), and `{dpi}` indicates the resolution required.
 
 > [!NOTE]
 > The contents object's unique reference begins with _sc_ and is located in the shipment's `contents.reference` property. It is not to be confused with the shipment's own `reference`, which begins with _sp_ and is a unique identifier for the entire shipment.
 
-**Get Contents Label** also has an optional `?include_extension=bool` boolean (true/false) query enabling you to specify whether you want the returned labels to include your custom label extensions. If you do not provide an `include_extension` query then PRO returns label extensions by default.
+<!--**Get Contents Label** also has an optional `?include_extension=bool` boolean (true/false) query enabling you to specify whether you want the returned labels to include your custom label extensions. If you do not provide an `include_extension` query then PRO returns label extensions by default.-->
 
-### Example Get Contents Label Calls
+> [!NOTE]
+> For full reference information on the **Get Contents Label** endpoint, see the [PRO v2 API reference](/pro/api/reference/labels.html#tag/Labels/paths/~1labels~1{shipmentReference}~1contents~1{contentsReference}~1{contentType}~1{dpi}/get)
 
-* `GET https://api.sorted.com/pro/labels/sp_00668400124857422605561635799040/sc_00668412927930827428118192193538/pdf` - Get all labels for contents _sc_00668412927930827428118192193538_ (located within shipment _sp_00668400124857422605561635799040_) in PDF format. 
-* `GET https://api.sorted.com/pro/labels/sp_00668400124857422605561635799040/sc_00668412927930827428118192193538/zpl/300` - Get all labels for contents _sc_00668412927930827428118192193538_ (located within shipment _sp_00668400124857422605561635799040_) in ZPL format at 300 DPI resolution. 
-* `GET https://api.sorted.com/pro/labels/sp_00668400124857422605561635799040/sc_00668412927930827428118192193538/pdf?include_extension=false` - Get all labels for contents _sc_00668412927930827428118192193538_ (located within shipment _sp_00668400124857422605561635799040_) in PDF format without label extensions. 
-* `GET https://api.sorted.com/pro/labels/sp_00668400124857422605561635799040/sc_00668412927930827428118192193538/zpl/300&include_extension=false` - Get all labels for contents _sc_00668412927930827428118192193538_ (located within shipment _sp_00668400124857422605561635799040_) in ZPL format at 300 DPI resolution without label extensions. 
+### Example Get Contents Label Call
+
+`GET https://api.sorted.com/pro/labels/sp_00668400124857422605561635799040/contents/sc_00668412927930827428118192193538/zpl/300` - Get all labels for contents _sc_00668412927930827428118192193538_ (located within shipment _sp_00668400124857422605561635799040_) in ZPL format at 300 DPI resolution. 
 
 ## The Labels Response
 
