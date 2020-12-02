@@ -71,10 +71,12 @@ This section shows the consignment data required to ship internationally with sp
 * **PARCELFORCE INTL** - Customs document required. 
 * **YODEL** - Customs document not required.  GB to Northern Ireland & Channel Islands. Northern Ireland Addresses will have a Country of GB & the postcode prefix (Postcode Area) will always be "BT".
 * **ROYAL MAIL INTL** - CN22 and CN23 customs documents required. GB to all non-GB destinations.
+* **DHL** -  Commercial invoice or PLT required. GB to all non GB destinations and GB to Northern Ireland.
+* **P2P** - Customs document required. GB to all non-GB destinations.
 
 ### Data Required
 
-| PRO Data   Element | DPD  | HERMES ROTW | PARCELFORCE INTL | YODEL | ROYAL MAIL |
+| PRO Data   Element | DPD  | HERMES ROTW | PARCELFORCE INTL | YODEL | ROYAL MAIL | DHL EXPRESS | P2P |
 |:-:|:-:|:-:|:-:|:-:|:-:|
 | `Addresses` ><br/> `Destination Address` > `Town` |   |   |   |   | Mandatory |
 | `Addresses` > `Exporter` |      Must be provided if different from the Origin Address. If required please   provide either Shipping Location Reference or all of AddressLine1, Region,   Postcode, Country, Email  and one or   more of Telephone, Mobile and Landline<br/><br/> If an Exporter Address has not been provided then PRO uses the Origin Address. |   |   |   |   |
@@ -82,19 +84,19 @@ This section shows the consignment data required to ship internationally with sp
 | `CustomsDocumentation` ><br/> `DesignatedPersonResponsible` |   |   |   |   | Mandatory |
 | `CustomsDocumentation` ><br/> `ReceiversShippingCost` |   |   |   | Mandatory - total   consignment carriage value |   |
 | `CustomsDocumentation` ><br/> `ShippersVatNumber` | Mandatory for EU   and Rest of World<br/>     Pass "GBUNREG" if not VAT registered | Mandatory   for EU and Rest of World | Mandatory for EU and   ROW | Mandatory   if DDP Shipping Term is selected, otherwise conditional |   |
-| `CustomsDocumentation` ><br/> `ShippingTerms` | Mandatory. Only values of DAP or DDP are accepted. | Mandatory.   Home Delivery must use values of DDU or DDP or DAP. Parcelshop services should use DDP only | Mandatory.   Must use values of DDU or DDP<br/>     <br/>      | Mandatory.   Must use a value of DDU only |   |
+| `CustomsDocumentation` ><br/> `ShippingTerms` | Mandatory. Only values of DAP or DDP are accepted. | Mandatory.   Home Delivery must use values of DDU or DDP or DAP. Parcelshop services should use DDP only | Mandatory.   Must use values of DDU or DDP<br/>     <br/>      | Mandatory.   Must use a value of DDU only |   | Mandatory | Mandatory |
 | `Order` ><br/> `Metadata`<br/><br/> `Consignment` ><br/> `Metadata` <br/><br/>  Key Value: `ReceiversEORI`<br/><br/> See [Adding Metadata Properties](#adding-metadata-properties)<br/> for info on using<br/> `Metadata` to record properties | Mandatory if the destination address is a business, otherwise conditional |   | Required if the   receiver is a business, otherwise optional |   |   |
-| `Order` ><br/> `Metadata`<br/><br/> `Consignment` ><br/> `Metadata` <br/><br/>  Key Value: `ShippersEORI`<br/><br/> See [Adding Metadata Properties](#adding-metadata-properties)<br/> for info on using<br/> `Metadata` to record properties | Mandatory for EU   and Rest of World<br/>     Pass "GBUNREG" if not VAT registered<br/>     <br/>      | Mandatory   for Commercial Invoice | Mandatory   for EU and Rest of World | Mandatory | Mandatory |
+| `Order` ><br/> `Metadata`<br/><br/> `Consignment` ><br/> `Metadata` <br/><br/>  Key Value: `ShippersEORI`<br/><br/> See [Adding Metadata Properties](#adding-metadata-properties)<br/> for info on using<br/> `Metadata` to record properties | Mandatory for EU   and Rest of World<br/>     Pass "GBUNREG" if not VAT registered<br/>     <br/>      | Mandatory   for Commercial Invoice | Mandatory   for EU and Rest of World | Mandatory | Mandatory | Recommended for EU | Recommended for EU |
 | `Order` ><br/> `Metadata`<br/><br/> `Consignment` ><br/> `Metadata` <br/><br/>  Key Value: `CarriageCurrency`<br/><br/> See [Adding Metadata Properties](#adding-metadata-properties)<br/> for info on using<br/> `Metadata` to record properties |   |   |   | The currency of the   Carriage Value provided | The currency of the Carriage Value   provided |
 | `Package` > `Description` | Mandatory  |   | Mandatory |   |   |
 | `Package` > `Item` | Unbounded | Unbounded | Unbounded | 10 |   |
 | `Package` > `Item` | 1 | 1 | 1 | 1 |   |
-| `Package` > `Item` ><br/> `CountryOfOrigin` | Mandatory | Mandatory | Mandatory | Mandatory | Mandatory |
-| `Package` > `Item` ><br/> `Description` | Mandatory | Mandatory | Mandatory | Mandatory | Mandatory |
-| `Package` > `Item` ><br/> `HarmonisationCode` | Mandatory | Mandatory | Mandatory | Manadatory | Mandatory |
-| `Package` > `Item` ><br/> `Quantity` | Mandatory | Mandatory | Mandatory | Mandatory | Mandatory |
-| `Package` > `Item` ><br/> `Value` > `Money` ><br/> `Amount` | Mandatory |   | Mandatory | Mandatory | Mandatory |
-| `Package` > `Item` ><br/> `Value` > `Money` ><br/> `Currency` > `IsoCode` | Mandatory |   | Mandatory | Mandatory | Mandatory |
+| `Package` > `Item` ><br/> `CountryOfOrigin` | Mandatory | Mandatory | Mandatory | Mandatory | Mandatory | | Mandatory |
+| `Package` > `Item` ><br/> `Description` | Mandatory | Mandatory | Mandatory | Mandatory | Mandatory | Mandatory | Mandatory |
+| `Package` > `Item` ><br/> `HarmonisationCode` | Mandatory | Mandatory | Mandatory | Mandatory | Mandatory | Mandatory if dutiable | Mandatory |
+| `Package` > `Item` ><br/> `Quantity` | Mandatory | Mandatory | Mandatory | Mandatory | Mandatory | Mandatory | Mandatory |
+| `Package` > `Item` ><br/> `Value` > `Money` ><br/> `Amount` | Mandatory |   | Mandatory | Mandatory | Mandatory | Mandatory | Mandatory |
+| `Package` > `Item` ><br/> `Value` > `Money` ><br/> `Currency` > `IsoCode` | Mandatory |   | Mandatory | Mandatory | Mandatory | Mandatory | Mandatory |
 | `Package` > `Item` ><br/> `Weight` > `Value` | Mandatory | Mandatory | Mandatory |   | Mandatory |
 | `Package` > `Item` ><br/> `Weight` > `Weight Unit` | Mandatory  |   | Mandatory |   |   |
 | `Package` > `Metadata` <br/> Key Value: `DutyPaidValue`<br/><br/> See [Adding Metadata Properties](#adding-metadata-properties)<br/> for info on using<br/> `Metadata` to record properties |   | Conditional.   Must be provided if the ShippingTerms = "DDP" |   |   |   |
