@@ -162,4 +162,4 @@ The example below shows a `ShippersEORI` value recorded using the `Metadata` pro
 * Learn how to get and print delivery labels at the [Getting Labels](/pro/api/help/getting_labels.html) page.
 * Learn how to add consignments to a carrier manifest at the [Manifesting Consignments](/pro/api/help/manifesting_consignments.html) page.
 
-<script src="../scripts/modal.js"></script>
+<script src="/templates/sorted/scripts/modal.js"></script>
