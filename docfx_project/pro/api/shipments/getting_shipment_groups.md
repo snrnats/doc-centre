@@ -73,6 +73,9 @@ GET https://api.sorted.com/pro/shipment_groups/sg_000134646489469152647892088917
 ```
 ---
 
+> [!NOTE]
+> For full reference information on the **Get Shipment Group** endpoint, see the [PRO v2 API reference](/pro/api/reference/shipments.html#tag/Shipment-Groups/paths/~1shipment_groups~1{shipmentGroupReference}/get).
+
 ## Getting Shipment Groups by Custom Reference
 
 To call **Get Shipment Groups by Custom Reference**, send a `GET` request to `https://api.sorted.com/pro/shipment_groups/custom_reference/{custom_reference}`.

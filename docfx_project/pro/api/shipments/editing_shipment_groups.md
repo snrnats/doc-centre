@@ -182,7 +182,7 @@ You can unlock shipment groups using the **Unlock Shipment Group** endpoint. To 
 PRO unlocks the group and returns a standard resource result object with links to the shipment group that was updated.
 
 > [!NOTE]
-> For full reference information on the **Unlock Shipment Group** endpoint, see the [Shipments data contract#(/pro/api/reference/shipments.html#tag/Shipment-Groups/paths/~1shipment_groups~1{shipmentGroupReference}~1unlock/post).
+> For full reference information on the **Unlock Shipment Group** endpoint, see the [Shipments data contract](/pro/api/reference/shipments.html#tag/Shipment-Groups/paths/~1shipment_groups~1{shipmentGroupReference}~1unlock/post).
 
 ### Example
 

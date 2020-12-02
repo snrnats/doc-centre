@@ -125,6 +125,9 @@ Like the first example, this example response shows the successful creation of a
 ```
 ---
 
+> [!NOTE]
+> For full reference information on the **Create Shipment Group** endpoint, see the [PRO v2 API reference](/pro/api/reference/shipments.html#tag/Shipment-Groups/paths/~1shipment_groups/post).
+
 ## Next Steps
 
 * Learn how to retrieve existing shipment groups: [Getting Shipment Groups](/pro/api/shipments/getting_shipment_groups.html)

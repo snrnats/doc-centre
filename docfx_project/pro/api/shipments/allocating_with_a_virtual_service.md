@@ -102,6 +102,9 @@ This example shows a successful **Allocate Shipment with Virtual Service** reque
 ```
 ---
 
+> [!NOTE]
+> For full reference information on the **Allocate Shipment with Virtual Service** endpoint, see the [PRO v2 API reference](/pro/api/reference/shipments.html#tag/Allocation/paths/~1shipments~1{shipmentReference}~1allocate~1virtual_service~1{virtualService}/put).
+
 ## Next Steps
 
 * Learn how to retrieve shipment data: [Getting Shipments](/pro/api/shipments/getting_shipments.html)

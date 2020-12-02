@@ -58,6 +58,9 @@ The example below shows a request to put shipment _sp_00874350842266620068172088
 ```
 ---
 
+> [!NOTE]
+> For full reference information on the **Change Shipment State** endpoint, see the [PRO v2 API reference](/pro/api/reference/shipments.html#tag/Shipments/paths/~1shipments~1state/put).
+
 ## Next Steps
 
 * Learn how to retrieve existing shipment groups: [Getting Shipment Groups](/pro/api/shipments/getting_shipment_groups.html)
