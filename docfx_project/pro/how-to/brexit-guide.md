@@ -74,7 +74,13 @@ This section shows the consignment data required to ship internationally with sp
 * **DHL** -  Commercial invoice or PLT required. GB to all non GB destinations and GB to Northern Ireland.
 * **P2P** - Customs document required. GB to all non-GB destinations.
 
-### Data Required
+### Data 
+
+<button id="myBtn">Open Modal</button>
+
+<div id="myModal" class="modal">
+<div class="modal-content">
+<span class="close">&times;</span>
 
 | PRO Data   Element | DPD  | HERMES ROTW | PARCELFORCE INTL | YODEL | ROYAL MAIL | DHL EXPRESS | P2P |
 |:-:|:-:|:-:|:-:|:-:|:-:|
@@ -103,6 +109,10 @@ This section shows the consignment data required to ship internationally with sp
 | `Package` > `Metadata` <br/> Key Value: `VatValue`<br/><br/> See [Adding Metadata Properties](#adding-metadata-properties)<br/> for info on using<br/> `Metadata` to record properties |   | Conditional.   Must be provided if the ShippingTerms = "DDP" |   |   |   |
 | `Package` > `Value` > `Money` ><br/> `Amount` | Mandatory |   | Mandatory |   |   |
 | `Package` > `Value` > `Money` ><br/> `Currency` > `IsoCode` | Mandatory |   | Mandatory |   |   |
+
+
+</div>
+</div>
 
 ## Adding Metadata Properties 
 
@@ -151,3 +161,5 @@ The example below shows a `ShippersEORI` value recorded using the `Metadata` pro
 * Learn how to allocate consignments at the [Allocating Consignments](/pro/api/help/allocating_consignments.html) page.
 * Learn how to get and print delivery labels at the [Getting Labels](/pro/api/help/getting_labels.html) page.
 * Learn how to add consignments to a carrier manifest at the [Manifesting Consignments](/pro/api/help/manifesting_consignments.html) page.
+
+<script src="../scripts/modal.js"></script>
