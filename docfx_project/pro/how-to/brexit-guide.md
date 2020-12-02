@@ -76,7 +76,9 @@ This section shows the consignment data required to ship internationally with sp
 
 ### Data 
 
-<button id="myBtn">Open Modal</button>
+Click the image below to view the Brexit shipping data table at full width.
+
+<img src="/pro/images/brexit-table-clickable.png" id="myBtn"/>
 
 <div id="myModal" class="modal">
 <div class="modal-content">
@@ -162,4 +164,4 @@ The example below shows a `ShippersEORI` value recorded using the `Metadata` pro
 * Learn how to get and print delivery labels at the [Getting Labels](/pro/api/help/getting_labels.html) page.
 * Learn how to add consignments to a carrier manifest at the [Manifesting Consignments](/pro/api/help/manifesting_consignments.html) page.
 
-<script src="/templates/sorted/scripts/modal.js"></script>
+<script src="/pro/scripts/modal.js"></script>
