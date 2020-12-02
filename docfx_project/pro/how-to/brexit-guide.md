@@ -78,7 +78,7 @@ This section shows the consignment data required to ship internationally with sp
 
 Click the image below to view the Brexit shipping data table at full width.
 
-<img src="/pro/images/brexit-table-clickable.png" id="myBtn"/>
+<img src="/pro/images/brexit-table-clickable.png" id="myBtn" class="modalImage"/>
 
 <div id="myModal" class="modal">
 <div class="modal-content">

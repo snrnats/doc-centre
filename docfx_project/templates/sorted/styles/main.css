@@ -1928,3 +1928,6 @@ span.fa-li .fa, span.fa-li .fas, span.fa-li .far {
     cursor: pointer;
   }
 
+  img.modalImage {
+      cursor: pointer;
+  }
