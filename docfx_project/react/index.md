@@ -1,5 +1,5 @@
 <head>
-    <link href="../fonts/css/all.css" rel="stylesheet"> 
+    <link href="/styles/fa.css" rel="stylesheet">
 </head>
 
 <style type="text/css">
