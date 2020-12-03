@@ -1,7 +1,7 @@
 ---
 uid: pro-api-help-brexit-guide
 title: Brexit Data Guide
-tags: allocation,pro,api,consignments,brexit
+tags: v1,allocation,pro,api,consignments,brexit
 contributors: andy.walton@sorted.com
 created: 24/09/2020
 ---
