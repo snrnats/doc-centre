@@ -65,14 +65,20 @@ This section shows the consignment data required to ship internationally with sp
      * DPD INTERNATIONAL: GB to EU & Non-EU
      * DPD UK DOMESTIC: GB to IE, JE & GG
      * DPD LOCAL: GB to IE, JE & GG
-* **HERMES INTL** - Commercial Invoice document required. HERMES rest of the world routes:
+* **HERMES INTL** - Commercial Invoice document required. The following routes are affected:
      * GB to Non-GB Destinations
      * Non-GB Origin to GB
-* **PARCELFORCE INTL** - Customs document required. 
-* **YODEL** - Customs document not required.  GB to Northern Ireland & Channel Islands. Northern Ireland Addresses will have a Country of GB & the postcode prefix (Postcode Area) will always be "BT".
-* **ROYAL MAIL INTL** - CN22 and CN23 customs documents required. GB to all non-GB destinations.
-* **DHL** -  Commercial invoice or PLT required. GB to all non GB destinations and GB to Northern Ireland.
-* **P2P** - Customs document required. GB to all non-GB destinations.
+     * GB to Northern Ireland
+* **PARCELFORCE INTL** - Customs document required. Affects GB to all non-GB destinations
+    > [!NOTE]
+    > Parcelforce's **Euro Priority Business** and **Euro Priority Home** services have been renamed to **Euro Business** and **Euro Home** respectively. This name change does not affect the service in any way.
+
+* **YODEL** - Customs document not required. Affects all GB to Northern Ireland & Channel Islands routes. 
+    > [!NOTE]
+    > Northern Ireland Addresses will have a Country of GB & the postcode prefix (Postcode Area) will always be "BT".
+* **ROYAL MAIL INTL** - CN22 and CN23 customs documents required. Affects GB to all non-GB destinations.
+* **DHL** -  Commercial invoice or PLT required. Affects GB to all non GB destinations, and GB to Northern Ireland.
+* **P2P** - Customs document required. Affects GB to all non-GB destinations.
 
 ### Data 
 
