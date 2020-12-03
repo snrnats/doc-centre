@@ -1,4 +1,4 @@
-- name: Introduction
+- name: Getting Started
   href: introduction.md
 - name: Consignments vs Shipments
   href: consignments_vs_shipments.md

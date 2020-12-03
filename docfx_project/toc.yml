@@ -4,6 +4,8 @@
   - name: API User Guide
     href: /pro/api/shipments/introduction.html
     items:
+    - name: Getting Started
+      href: /pro/api/shipments/introduction.html      
     - name: Consignments vs Shipments
       href: /pro/api/shipments/consignments_vs_shipments.html
     - name: Managing Shipments
