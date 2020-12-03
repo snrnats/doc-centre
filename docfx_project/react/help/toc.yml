@@ -32,6 +32,8 @@
     href: error-codes.md
   - name: Calculated Events
     href: calc-events.md
+  - name: Using Simulated Tracking
+    href: using-simulated-tracking.md  
 - name: API Reference
   href: https://docs.sorted.com/react/api
 - name: Shipment State List

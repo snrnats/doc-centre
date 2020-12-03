@@ -268,11 +268,12 @@ The **Register Shipments** endpoint enables you to register:
 * **Shipment Types** - The `shipment_type` property enables you to record whether a shipment is a delivery, return, pick up, drop off, combined drop off / pick up, or return drop off. 
 * **Custom Metadata** - You can specify custom metadata properties using the `metadata` array. Each property requires a `key`, `value`, and data `type`. 
 
-    > <span class="note-header">More Information:</span>
+    > [!NOTE]
     > Adding metadata enables you to group shipments together so that they can be tracked from the same page, and to use custom properties to enrich the notifications that you send to your customers.
     >
     > * For more information on grouping shipments, see the [Grouping Shipments](/react/help/grouping-shipments.html) page.
     > * For more information on configuring notifications, see the [Configuring Notifications](/react/help/notifications.html) page.
+* **Simulated Tracking** - Simulated tracking is a means of generating dummy tracking events for testing or demonstration purposes. For a user guide on working with simulated tracking, see the [Using Simulated Tracking](/react/help/using-simulated-tracking.html).     
 
 ### Why Register Additional Information?
 
