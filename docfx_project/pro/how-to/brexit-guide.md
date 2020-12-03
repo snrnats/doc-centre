@@ -7,7 +7,7 @@ created: 24/09/2020
 ---
 # Brexit Data Guide
 
-The UK's departure from the EU has resulted in some changes to the data required for international shipments in PRO. This page details the consignment data needed to generate customs documentation in PRO and allocate international shipments to DPD, Hermes, Parcelforce, Yodel, or Royal Mail.
+The UK's departure from the EU has resulted in some changes to the data required for international shipments in PRO. This page details the consignment data needed to generate customs documentation in PRO and allocate international shipments to DPD, Hermes, Parcelforce, Yodel, Royal Mail, DHL, or P2P.
 
 ---
 
