@@ -1931,3 +1931,7 @@ span.fa-li .fa, span.fa-li .fas, span.fa-li .far {
   img.modalImage {
       cursor: pointer;
   }
+
+  img.modalImage:hover {
+      border: 2px solid var(--colour-main);
+  }
