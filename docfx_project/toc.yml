@@ -3,6 +3,31 @@
   items:
   - name: API User Guide
     href: /pro/api/shipments/introduction.html
+    items:
+    - name: Consignments vs Shipments
+      href: /pro/api/shipments/consignments_vs_shipments.html
+    - name: Managing Shipments
+      href: /pro/api/shipments/managing_shipments.html                      
+    - name: Allocating Shipments
+      href: /pro/api/shipments/allocating_shipments.html
+    - name: Getting Labels
+      href: /pro/api/shipments/getting_shipment_labels.html
+    - name: Adding Paperless Docs
+      href: /pro/api/shipments/adding_paperless_documents.html      
+    - name: Getting Shipment Docs
+      href: /pro/api/shipments/getting_shipment_documents.html 
+    - name: Manifesting Shipments
+      href: /pro/api/shipments/manifesting_shipments.html   
+    - name: Managing Shipment Groups
+      href: /pro/api/shipments/managing_shipment_groups.html
+    - name: Getting Collection Notes
+      href: /pro/api/shipments/getting_collection_notes.html    
+    - name: Using Shipment Tags
+      href: /pro/api/shipments/using_shipment_tags.html      
+    - name: Glossary
+      href: /pro/api/shipments/shipments_glossary.html
+    - name: Error Codes
+      href: /pro/api/shipments/shipment_errors.html
   - name: API Reference
     href: /pro/api/reference/index.html
     items:
