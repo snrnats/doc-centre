@@ -11,7 +11,15 @@ created: 29/05/2020
 
 ---
 
+Set up carrier connector
 
+Register simulated_tracking property
+
+After a short delay REACT generates tracking events & associated shipment events & returns them
+
+Returned events can be used as POC or as means of testing integrations set up to receive tracking / shipment events
+
+Prod examples: sp_4238450550120644608, sp_4253405941824815104, tracking_ref "sim_tracking_test"
 
 ## Next Steps
 
