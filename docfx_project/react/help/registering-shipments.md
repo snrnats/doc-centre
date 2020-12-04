@@ -434,6 +434,9 @@ The following examples represent the same data structure:
 ```
 ---
 
+> [!NOTE]
+> By default, shipments are archived 35 days after registration. Archived shipments are no longer available on the REACT platform.
+
 ## Next Steps
 
 Learn more about integrating with REACT:
