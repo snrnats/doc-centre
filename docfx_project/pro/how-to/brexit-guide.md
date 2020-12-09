@@ -71,7 +71,7 @@ This section shows the consignment data required to ship internationally with sp
      * GB to Northern Ireland
 * **PARCELFORCE INTL** - Customs document required. Affects GB to all non-GB destinations
     > [!NOTE]
-    > Parcelforce's **Euro Priority Business** and **Euro Priority Home** services have been renamed to **Euro Business** and **Euro Home** respectively. This name change does not affect the service in any way.
+    > Parcelforce's **Euro Priority Business** and **Euro Priority Home** services have been renamed to **Euro Priority** and **Euro Economy Home** respectively. This name change does not affect the services in any way.
 
 * **YODEL** - Customs document not required. Affects all GB to Northern Ireland & Channel Islands routes. 
     > [!NOTE]
