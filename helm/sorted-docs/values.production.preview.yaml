@@ -1,4 +1,5 @@
 serviceName: sorted-docs-preview
+nameOverride: sorted-docs-preview
 namespace: docs
 
 deployment:
