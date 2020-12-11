@@ -10,6 +10,11 @@ created: 07/10/2020
 
 Service groups enable you to specify a custom pool of carrier services to allocate a shipment from. This page explains how to <!--configure service groups, and how to-->use the **Allocate Shipment with Service Group** and **Allocate with Service Group** endpoints to allocate from within a specified shipping group.
 
+> [!NOTE]
+> This page provides help and support for PRO version 2 (Shipments). As PRO v2 is currently in development, content may be removed or edited without warning.
+>
+> For support on PRO v1 (Consignments), [click here](/pro/api/help/introduction.html).  
+
 ---
 
 ## What Is a Carrier Service Group?

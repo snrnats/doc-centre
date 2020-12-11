@@ -9,6 +9,11 @@ created: 02/07/2020
 
 PRO version 2's Shipments model represents a significant overhaul to the Sorted service, with a new data contract and UI enabling the system to offer enhancements such as on-demand shipping and bulk grouping of shipments. This page is intended for users who are familiar with the Consignments model used in version 1, explaining what has changed and how the new system works.
 
+> [!NOTE]
+> This page provides help and support for PRO version 2 (Shipments). As PRO v2 is currently in development, content may be removed or edited without warning.
+>
+> For support on PRO v1 (Consignments), [click here](/pro/api/help/introduction.html).  
+
 ---
 
 ## How Does On-Demand Shipping Work?

@@ -9,6 +9,11 @@ created: 06/10/2020
 
 This page explains how to retrieve consignment data by shipment reference<!--, custom reference, and carrier tracking reference-->.
 
+> [!NOTE]
+> This page provides help and support for PRO version 2 (Shipments). As PRO v2 is currently in development, content may be removed or edited without warning.
+>
+> For support on PRO v1 (Consignments), [click here](/pro/api/help/introduction.html).  
+
 ---
 
 ## Getting Shipments by Shipment Reference

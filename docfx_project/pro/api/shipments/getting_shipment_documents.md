@@ -10,7 +10,9 @@ created: 08/10/2020
 SortedPRO can automatically generate customs documentation, collection notes, and hazard labels for shipments. This page explains the various way in which SortedPRO can return this documentation.
 
 > [!NOTE]
-> PRO also generates delivery labels, which have the same data structure as shipment documents and are also created after allocation. However, labels are managed through their own dedicated endpoints, and cannot be returned through PRO's Documents endpoints. For information on using delivery labels in PRO, see the [Getting Shipment Labels](/pro/api/shipments/getting_shipment_labels.html) page. 
+> This page provides help and support for PRO version 2 (Shipments). As PRO v2 is currently in development, content may be removed or edited without warning.
+>
+> For support on PRO v1 (Consignments), [click here](/pro/api/help/introduction.html).  
 
 ---
 
@@ -23,6 +25,9 @@ Once a shipment is allocated, PRO automatically determines what documentation is
 * `commercial_invoice` - Customs documentation. Only generated for applicable international shipments.
 * `hazard_label` - Generated for shipments containing dangerous goods. 
 * `collection_note` - A driver's manifest for the shipment. Generated for all shipments.
+
+> [!NOTE]
+> PRO also generates delivery labels, which have the same data structure as shipment documents and are also created after allocation. However, labels are managed through their own dedicated endpoints, and cannot be returned through PRO's Documents endpoints. For information on using delivery labels in PRO, see the [Getting Shipment Labels](/pro/api/shipments/getting_shipment_labels.html) page. 
 
 PRO offers two endpoints to retrieve documents once they have been generated:
 

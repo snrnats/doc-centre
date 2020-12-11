@@ -9,6 +9,11 @@ created: 02/07/2020
 
 In SortedPRO, a _shipment_ represents a collection of goods that are to be shipped together. This section explains how to create, retrieve and edit shipments.
 
+> [!NOTE]
+> This page provides help and support for PRO version 2 (Shipments). As PRO v2 is currently in development, content may be removed or edited without warning.
+>
+> For support on PRO v1 (Consignments), [click here](/pro/api/help/introduction.html).  
+
 ---
 
 ## What Is a Shipment?

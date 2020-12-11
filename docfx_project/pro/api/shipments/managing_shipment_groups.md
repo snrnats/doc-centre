@@ -9,7 +9,13 @@ created: 02/07/2020
 
 Shipment groups enable you to perform manifest operations on a number of shipments at once. This section explains how to create, edit and use shipment groups.
 
+> [!NOTE]
+> This page provides help and support for PRO version 2 (Shipments). As PRO v2 is currently in development, content may be removed or edited without warning.
+>
+> For support on PRO v1 (Consignments), [click here](/pro/api/help/introduction.html).  
+
 ---
+
 ## What is a Shipment Group?
 
 In SortedPRO, a shipment group is a collection of one or more shipments, all of which must be allocated with the same carrier service. PRO enables you to manifest all shipments in a group simultaneously, as well as getting a collection note for the entire shipment group.

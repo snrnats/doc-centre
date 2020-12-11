@@ -10,6 +10,11 @@ created: 08/07/2020
 
 Paperless documents are customer-generated documents that are transmitted to carriers as part of a shipment's data, as opposed to being generated separately by the carrier. This page explains how to add paperless documents to a shipment, retrieve a shipment's paperless documents, and remove a paperless document from a shipment.
 
+> [!NOTE]
+> This page provides help and support for PRO version 2 (Shipments). As PRO v2 is currently in development, content may be removed or edited without warning.
+>
+> For support on PRO v1 (Consignments), [click here](/pro/api/help/introduction.html).  
+
 ---
 
 ## What are Paperless Documents?

@@ -9,6 +9,11 @@ created: 05/10/2020
 
 Welcome to SortedPRO! This page contains a brief overview of PRO version 2's APIs and explains how you can use them.
 
+> [!NOTE]
+> This page provides help and support for PRO version 2 (Shipments). As PRO v2 is currently in development, content may be removed or edited without warning.
+>
+> For support on PRO v1 (Consignments), [click here](/pro/api/help/introduction.html).  
+
 ---
 
 ## API Collection Overview

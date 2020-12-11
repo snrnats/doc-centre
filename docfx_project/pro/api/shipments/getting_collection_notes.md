@@ -9,6 +9,11 @@ created: 02/07/2020
 
 PRO's Collection Notes functionality enables you to generate driver's manifest documents for your shipments. This page explains how to retrieve collection notes.
 
+> [!NOTE]
+> This page provides help and support for PRO version 2 (Shipments). As PRO v2 is currently in development, content may be removed or edited without warning.
+>
+> For support on PRO v1 (Consignments), [click here](/pro/api/help/introduction.html).  
+
 ---
 
 ## Making a Collection Note Request

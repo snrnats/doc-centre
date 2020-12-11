@@ -9,6 +9,11 @@ created: 08/10/2020
 
 SortedPRO can generate its own despatch labels, enabling PRO customers to download labels without having to request them directly from the carrier. This page explains how to get labels for a specific shipment or an individual package within a shipment.
 
+> [!NOTE]
+> This page provides help and support for PRO version 2 (Shipments). As PRO v2 is currently in development, content may be removed or edited without warning.
+>
+> For support on PRO v1 (Consignments), [click here](/pro/api/help/introduction.html).  
+
 ---
 
 ## The Labels Request

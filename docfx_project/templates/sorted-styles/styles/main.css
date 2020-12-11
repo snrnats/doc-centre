@@ -1083,6 +1083,11 @@ div.header-container {
   padding: 30px 0;
 }
 
+div.header-container .NOTE.alert.alert-info {
+  text-align: left;
+  max-width: 880px;
+}
+
 div.landing-button {
   cursor: pointer;
   display: block;

@@ -9,6 +9,11 @@ created: 02/07/2020
 
 Once you've created a shipment and allocated it to a carrier service, you're ready to manifest it. This section explains how to <!--manifest shipments and how to view existing customer manifests --> use the **Manifest Shipment** endpoint.
 
+> [!NOTE]
+> This page provides help and support for PRO version 2 (Shipments). As PRO v2 is currently in development, content may be removed or edited without warning.
+>
+> For support on PRO v1 (Consignments), [click here](/pro/api/help/introduction.html).  
+
 ---
 
 ## Manifesting Overview

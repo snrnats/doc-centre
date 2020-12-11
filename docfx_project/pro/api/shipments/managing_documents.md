@@ -10,6 +10,11 @@ created: 02/07/2020
 
 Shipping internationally? This section explains how to retrieve customs documentation for your shipments, and how to add, retrieve, and remove paperless shipment documents.
 
+> [!NOTE]
+> This page provides help and support for PRO version 2 (Shipments). As PRO v2 is currently in development, content may be removed or edited without warning.
+>
+> For support on PRO v1 (Consignments), [click here](/pro/api/help/introduction.html).  
+
 ---
 
 ## Customs Documents

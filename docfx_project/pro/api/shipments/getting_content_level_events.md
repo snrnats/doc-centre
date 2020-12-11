@@ -9,6 +9,11 @@ created: 02/07/2020
 
 In contents-level tracking, PRO returns separate tracking responses for every item of contents within the specified shipment, rather than a single response per shipment. This page explains how to retrieve contents-level tracking events.
 
+> [!NOTE]
+> This page provides help and support for PRO version 2 (Shipments). As PRO v2 is currently in development, content may be removed or edited without warning.
+>
+> For support on PRO v1 (Consignments), [click here](/pro/api/help/introduction.html).  
+
 ---
 
 ## Contents-Level Tracking Overview

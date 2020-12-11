@@ -9,6 +9,11 @@ created: 02/07/2020
 
 This page explains how to manifest those shipments that meet a particular set of criteria.
 
+> [!NOTE]
+> This page provides help and support for PRO version 2 (Shipments). As PRO v2 is currently in development, content may be removed or edited without warning.
+>
+> For support on PRO v1 (Consignments), [click here](/pro/api/help/introduction.html).  
+
 ---
 
 ## The Manifest Shipments by Query Endpoint

@@ -998,6 +998,17 @@ div.header-container {
     text-align: center;
 }
 
+div.header-container .NOTE.alert.alert-info {
+    text-align: left;
+    max-width: 680px;
+}
+
+@media all and (min-width: 1500px) {
+    div.header-container .NOTE.alert.alert-info {
+        max-width: 1180px;
+    }
+}
+
 @media all and (max-width: 768px) {
     div.header-container {
         padding: 5px 0;

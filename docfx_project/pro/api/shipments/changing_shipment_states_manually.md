@@ -9,6 +9,11 @@ created: 26/11/2020
 
 This page explains how to use the **Change Shipment State** endpoint to make manual alterations to a shipment's `state`.
 
+> [!NOTE]
+> This page provides help and support for PRO version 2 (Shipments). As PRO v2 is currently in development, content may be removed or edited without warning.
+>
+> For support on PRO v1 (Consignments), [click here](/pro/api/help/introduction.html).  
+
 ---
 
 ## Using the Change Shipment State Endpoint
