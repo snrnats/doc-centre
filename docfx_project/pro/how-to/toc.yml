@@ -1,3 +1,5 @@
+- name: Guides Home
+  href: articles.md
 - name: UPS Onboarding Guide
   href: ups-guide.md
 - name: Brexit Data Guide
