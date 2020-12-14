@@ -564,6 +564,34 @@ ul.level1 {
     font-size: 0.9rem;
 }
 
+.navbar-nav .level2 {
+    position: relative;
+}
+
+.navbar-nav .level2 .level3 {
+    display: none;
+    position: absolute;
+    left: 250px;
+    top: 0px;
+    width: 220px;
+    background-color: var(--colour-top-nav);
+    border-left: 1px solid var(--colour-tab-active);
+}
+
+.navbar-nav .level2 li:hover .level3 {
+    display: block;
+}
+
+ul.level2 span.expand-stub::before{
+    display: block !important;
+    content: ">";
+    position: relative;
+    left: 245px;
+    bottom: -8px;
+    color: var(--colour-tab-active);
+    font-size: 1em;
+}
+
 a.active,
 a.active:hover {
     font-weight: normal;

@@ -3,20 +3,48 @@
   items:
   - name: API User Guide
     href: /pro/api/help/introduction.html
+    items:
+    - name: Getting Started
+      href: /pro/api/help/introduction.html
+    - name: Managing Consignments
+      href: /pro/api/help/managing_consignments.html
+    - name: Allocating Consignments
+      href: /pro/api/help/allocating_consignments.html
+    - name: Getting Labels
+      href: /pro/api/help/getting_labels.html
+    - name: Manifesting Consignments
+      href: /pro/api/help/manifesting_consignments.html
+    - name: Managing Orders
+      href: /pro/api/help/managing_orders.html
+    - name: Using Delivery and Pickup Options
+      href: /pro/api/help/using_delivery_and_pickup_options.html
+    - name: Tracking Consignments
+      href: /pro/api/help/tracking_consignments.html
+    - name: Getting Customs Docs and Invoices
+      href: /pro/api/help/getting_customs_docs_and_invoices.html  
+    - name: Managing Quotes
+      href: /pro/api/help/managing_quotes.html
+    - name: Consignment States
+      href: /pro/api/help/consignment_states.html
+    - name: Glossary
+      href: /pro/api/help/glossary.html
   - name: API Reference
     href: https://docs.electioapp.com/#/api
   - name: Example Call Flows
     href: /pro/api/help/flows.html      
-  - name: Reports
+  - name: Reports User Guide
     href: pro/reports/
     homepage: pro/reports/index.md
-  - name: Brexit Guide
-    href: /pro/how-to/brexit-guide.html
-  - name: UPS Onboarding Guide
-    href: /pro/how-to/ups-guide.html
   - name: Release Notes
     href: pro/release-notes/
-    homepage: pro/release-notes/index.md  
+    homepage: pro/release-notes/index.md      
+  - name: Articles
+    href: /pro/how-to/articles.html
+    items:
+    - name: UPS Onboarding Guide
+      href: /pro/how-to/ups-guide.html
+    - name: Brexit Shipping Data Guide
+      href: /pro/how-to/brexit-guide.html   
 - name: REACT 
   href: /react/index.html?v2
   items:
@@ -24,7 +52,33 @@
     href: /react/help/quick-start.html
   - name: API User Guide
     href: /react/help/integration-guide.html
+    items:
+    - name: Registering Shipments
+      href: /react/help/registering-shipments.html
+    - name: Retrieving Shipment and Event Data
+      href: /react/help/retrieving-data.html
+    - name: Updating Shipments
+      href: /react/help/updating-shipments.html
+    - name: Error Codes
+      href: /react/help/error-codes.html
+    - name: Calculated Events
+      href: /react/help/calc-events.html
   - name: API Reference
     href: https://docs.sorted.com/react/api
   - name: UI Help
-    href: /react/help/ui-help.html          
+    href: /react/help/ui-help.html
+    items:
+    - name: Managing Webhooks
+      href: /react/help/managing-webhooks.html
+    - name: Settings
+      href: /react/help/settings.html
+    - name: User Management
+      href: /react/help/user-management.html
+    - name: Monitoring Shipments
+      href: /react/help/monitoring-shipments.html
+    - name: Creating Tracking Pages
+      href: /react/help/tracking-pages.html        
+    - name: Configuring Notifications
+      href: /react/help/notifications.html
+    - name: Grouping Shipments
+      href: /react/help/grouping-shipments.html            
