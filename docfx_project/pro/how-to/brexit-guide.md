@@ -90,12 +90,13 @@ Click the image below to view the Brexit shipping data table at full width.
 <div class="modal-content">
 <span class="close">&times;</span>
 
-| PRO Data   Element | DPD  | HERMES ROTW | PARCELFORCE INTL | YODEL | ROYAL MAIL | DHL EXPRESS | P2P |
+| PRO Data Element | DPD  | HERMES ROTW | PARCELFORCE INTL | YODEL | ROYAL MAIL | DHL EXPRESS | P2P |
 |:-:|:-:|:-:|:-:|:-:|:-:|
 | `Addresses` ><br/> `Destination Address` > `Town` |   |   |   |   | Mandatory |
 | `Addresses` > `Exporter` |      Must be provided if different from the Origin Address. If required please   provide either Shipping Location Reference or all of AddressLine1, Region,   Postcode, Country, Email  and one or   more of Telephone, Mobile and Landline<br/><br/> If an Exporter Address has not been provided then PRO uses the Origin Address. |   |   |   |   |
 | `CustomsDocumentation` ><br/> `CategoryType` | Mandatory.   Permitted values:<br/>     <br/>     - Gift<br/>     - ReturnedGoods<br/>     - SaleOfGoods:  To be made available   in Q1, 2020<br/>     - Documents<br/>     - Other<br/>     - None |   | Mandatory.   Permitted values:<br/>     <br/>     - Gift<br/>     - Commercial Sample<br/>     - Documents<br/>     - Other | Mandatory.   Permitted values:<br/>     <br/>     - Gift<br/>     - Sales<br/>     - Sample<br/>     - Personal | Mandatory.   Permitted values:<br/>     <br/>     - Gift<br/>     - Commercial Sample<br/>     - Documents<br/>     - Other |
-| `CustomsDocumentation` ><br/> `DesignatedPersonResponsible` |   |   |   |   | Mandatory |
+| `CustomsDocumentation` ><br/> `DesignatedPersonResponsible` |   |   |   |   | Mandatory | 
+| `CustomsDocumentation` ><br/> `InvoiceDate` |   |   | Mandatory for Euro Priority service | |   |   |   |   |
 | `CustomsDocumentation` ><br/> `ReceiversShippingCost` |   |   |   | Mandatory - total   consignment carriage value |   |
 | `CustomsDocumentation` ><br/> `ShippersVatNumber` | Mandatory for EU   and Rest of World<br/>     Pass "GBUNREG" if not VAT registered | Mandatory   for EU and Rest of World | Mandatory for EU and   ROW | Mandatory   if DDP Shipping Term is selected, otherwise conditional |   |
 | `CustomsDocumentation` ><br/> `ShippingTerms` | Mandatory. Only values of DAP or DDP are accepted. | Mandatory.   Home Delivery must use values of DDU or DDP or DAP. Parcelshop services should use DDP only | Mandatory.   Must use values of DDU or DDP<br/>     <br/>      | Mandatory.   Must use a value of DDU only |   | Mandatory | Mandatory |
