@@ -21,10 +21,14 @@
 </style>
 
 <div class="header-container">
-    <h1 id="big-header" class="text--underlined text--header"><span>SortedPRO </span><span>Docs</span></h1>
-    <p class="header-info">
-        PRO is Sorted's carrier and delivery management platform. Featuring both a DIY API toolkit and a lightweight UI, PRO helps you manage your shipping from checkout to the customer's doorstep. 
-    </p>
+<h1 id="big-header" class="text--underlined text--header"><span>SortedPRO </span><span>Docs</span></h1>
+<p class="header-info">
+PRO is Sorted's carrier and delivery management platform. Featuring both a DIY API toolkit and a lightweight UI, PRO helps you manage your shipping from checkout to the customer's doorstep. 
+
+> [!NOTE]
+> This site provides help and support for PRO version 1 (Consignments). We are about to launch a major update, adding support for PRO version 2 (Shipments). For a preview of the new content, click [here](https://docs-preview.sorted.com/pro/).
+
+</p>
 </div>
 <div class="landing-container">
     <h2>Get Started</h2>

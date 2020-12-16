@@ -9,6 +9,9 @@ created: 28/02/2020
 
 Welcome to SortedPRO! Here you'll find a brief overview of PRO's Consignments APIs and how you can call them.
 
+> [!NOTE]
+> This site provides help and support for PRO version 1 (Consignments). We are about to launch a major update, adding support for PRO version 2 (Shipments). For a preview of the new content, click [here](https://docs-preview.sorted.com/pro/).
+
 ---
 
 ## Consignments Overview
