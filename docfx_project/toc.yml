@@ -57,7 +57,7 @@
     - name: UPS Onboarding Guide
       href: /pro/how-to/ups-guide.html
     - name: Brexit Shipping Data Guide
-      href: /pro/how-to/brexit-guide.html   
+      href: /pro/how-to/brexit-guide.html 
   - name: Version 1 (Consignments) Help
     href: /pro/api/help/introduction.html
     items: 
@@ -75,7 +75,33 @@
     href: /react/help/quick-start.html
   - name: API User Guide
     href: /react/help/integration-guide.html
+    items:
+    - name: Registering Shipments
+      href: /react/help/registering-shipments.html
+    - name: Retrieving Shipment and Event Data
+      href: /react/help/retrieving-data.html
+    - name: Updating Shipments
+      href: /react/help/updating-shipments.html
+    - name: Error Codes
+      href: /react/help/error-codes.html
+    - name: Calculated Events
+      href: /react/help/calc-events.html
   - name: API Reference
     href: https://docs.sorted.com/react/api
   - name: UI Help
-    href: /react/help/ui-help.html          
+    href: /react/help/ui-help.html
+    items:
+    - name: Managing Webhooks
+      href: /react/help/managing-webhooks.html
+    - name: Settings
+      href: /react/help/settings.html
+    - name: User Management
+      href: /react/help/user-management.html
+    - name: Monitoring Shipments
+      href: /react/help/monitoring-shipments.html
+    - name: Creating Tracking Pages
+      href: /react/help/tracking-pages.html        
+    - name: Configuring Notifications
+      href: /react/help/notifications.html
+    - name: Grouping Shipments
+      href: /react/help/grouping-shipments.html            

@@ -33,10 +33,9 @@ You must have a REACT account set up in order to log in to the UI. If you do not
 The PRO UI enables you to perform the following tasks:
 
 * [Managing Webhooks](managing-webhooks.md) - REACT's webhooks notify you of shipping events proactively. Whenever a shipment enters a selected state, REACT will send that shipment’s data to you, thereby enabling you to build services such as push notifications as email alerts.
+* [Configuring Settings](settings.md) - The UI's **Settings** page enables you to configure API keys, SFTP accounts, carrier connectors and custom state labels.
+* [User Management](user-management.md) - The UI's **User Management** page enables admin users to invite new users within their organisation, define user permissions, and revoke user access.
 * [Monitoring Shipments](monitoring-shipments.md) - The dashboard offers advanced monitoring features, enabling you to view shipment locations on a map and drill down to get information on individual shipments.
 * [Creating Tracking Pages](tracking-pages.md) - REACT's Create Tracking Page feature enables you to build branded shipment tracking pages in minutes, with no coding required.        
 * [Configuring Notifications](notifications.md) - REACT's Notifications feature enables you to set up automated email and SMS delivery notifications for your customers without any development work.
-* [Configuring Settings](settings.md) - The UI's **Settings** page enables you to configure API keys, SFTP accounts, carrier connectors and custom state labels.
-* [User Management](user-management.md) - The UI's **User Management** page enables admin users to invite new users within their organisation, define user permissions, and revoke user access.
-
-
+* [Grouping Shipments](grouping-shipments.md) - REACT shipment groups help you to track orders that will take more than one shipment to fulfil.
