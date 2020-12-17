@@ -262,9 +262,64 @@ The full merge tag structure is:
    "MiddleName": "MiddleName",
    "Title": "Title"
  },
+ "Carrier": "Carrier",
+ "CarrierService": "CarrierService",
+ "TrackingReference": "TrackingReference",
+ "RetailerName": "RetailerName",
+ "Signee": "Signee",
+ "Addresses": {
+   "From": "<See Address structure below>",
+   "To": "<See Address structure below>"
+ },
+ "PromisedDate": {
+   "Start": "<See Date structure below>",
+   "End": "<See Date structure below>"
+ },
+ "ExpectedDeliveryDate": {
+   "Start": "<See Date structure below>",
+   "End": "<See Date structure below>"
+ },
+ "DeliverySlotInterval": {
+   "Start": "<See Date structure below>",
+   "End": "<See Date structure below>"
+ },
+ "ShippedDate": "<See Date structure below>",
+ "OrderDate": "<See Date structure below>",
+ "DeliveredDate": "<See Date structure below>",
  "TrackingPageUrl": "TrackingPageUrl",
  "Key1": "Value1",
  "Key2": "Value2"
+}
+```
+---
+
+# [Address structure](#tab/address-merge-tag)
+```json
+{
+ "PropertyName": "PropertyName",
+ "PropertyNumber": "PropertyNumber",
+ "AddressLine1": "AddressLine1",
+ "AddressLine2": "AddressLine2",
+ "AddressLine3": "AddressLine3",
+ "Locality": "Locality",
+ "Region": "Region",
+ "PostalCode": "PostalCode",
+ "CountryIsoCode": "CountryIsoCode"
+}
+```
+---
+
+# [Date structure](#tab/address-merge-tag)
+```json
+{
+ "Second": "14",
+ "Minute": "32",
+ "Hour": "21",
+ "Day": "17",
+ "Month": "2",
+ "Year": "2020",
+ "ShortDate": "15/06/2009",
+ "GeneralDateShortTime": "24/11/2020 08:15"
 }
 ```
 ---
