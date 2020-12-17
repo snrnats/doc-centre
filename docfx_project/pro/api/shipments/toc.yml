@@ -2,6 +2,8 @@
   href: introduction.md
 - name: Consignments vs Shipments
   href: consignments_vs_shipments.md
+- name: Integration Design Guide
+  href: integration_design_guide.md
 - name: Managing Shipments
   href: managing_shipments.md
   items:
